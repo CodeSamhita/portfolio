@@ -210,7 +210,23 @@ body.loaded {
   font-weight: 900;
   letter-spacing: 0.5px;
   transition: color 0.25s ease;
+  position: relative; /* Needed for pseudo-element underline */
+  padding-bottom: 10px; /* Space for the underline */
 }
+
+/* Underline for section titles */
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px; /* Adjust width of the underline */
+  height: 3px; /* Thickness of the underline */
+  background: var(--accent); /* Accent color for the underline */
+  border-radius: 2px; /* Slightly rounded corners for the underline */
+}
+
 
 /* Profile image styling */
 .rounded-profile {

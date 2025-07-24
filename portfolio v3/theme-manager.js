@@ -149,8 +149,8 @@ const themes = [
     }
 ];
 
-let currentThemeIndex = 0; // Will be set randomly on load
-let isLightMode = false; // Will be loaded from localStorage
+let currentThemeIndex; // Will be set randomly or from sessionStorage
+let isLightMode; // Will be loaded from localStorage
 
 const modeBtn = document.getElementById('toggleModeBtn');
 const icon = modeBtn?.querySelector('i');
@@ -162,12 +162,14 @@ const backToTopBtn = document.getElementById('backToTopBtn');
 function applyTheme(themeMode) {
     const selectedTheme = themes[currentThemeIndex];
     const colors = selectedTheme[themeMode];
+    const root = document.documentElement;
 
     for (const [key, value] of Object.entries(colors)) {
-        document.documentElement.style.setProperty(key, value);
+        root.style.setProperty(key, value);
     }
 
     // Update background gradient based on new primary, secondary, accent
+    // Ensure this matches the gradient definition in style.css
     document.body.style.backgroundImage = `linear-gradient(-45deg, var(--primary), var(--secondary), var(--accent))`;
 
     // Adjust specific elements that might need class changes
@@ -194,7 +196,7 @@ function applyTheme(themeMode) {
 function toggleMode() {
     isLightMode = !isLightMode;
     document.body.classList.toggle('light-mode', isLightMode);
-    localStorage.setItem('light-mode', isLightMode);
+    localStorage.setItem('light-mode', isLightMode); // Persist mode choice
 
     if (icon) {
         if (isLightMode) {
@@ -210,13 +212,13 @@ function toggleMode() {
 
 // Initialize theme on page load
 window.addEventListener('DOMContentLoaded', () => {
-    // 1. Randomly select a theme for this session
-    const storedThemeIndex = localStorage.getItem('current-theme-index');
+    // 1. Randomly select a theme or load from sessionStorage
+    const storedThemeIndex = sessionStorage.getItem('current-theme-index');
     if (storedThemeIndex !== null && !isNaN(parseInt(storedThemeIndex))) {
         currentThemeIndex = parseInt(storedThemeIndex);
     } else {
         currentThemeIndex = Math.floor(Math.random() * themes.length);
-        localStorage.setItem('current-theme-index', currentThemeIndex); // Persist selected theme for the session
+        sessionStorage.setItem('current-theme-index', currentThemeIndex); // Persist selected theme for the session
     }
 
     // 2. Load mode preference from localStorage
@@ -226,8 +228,8 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.classList.toggle('light-mode', isLightMode); // Apply light-mode class if needed
     applyTheme(isLightMode ? 'light' : 'dark');
 
-    // 4. Set initial icon
-    if (icon) {
+    // 4. Set initial icon (if modeBtn exists)
+    if (modeBtn) {
         if (isLightMode) {
             icon.classList.add('fa-sun');
             icon.classList.remove('fa-moon');
@@ -237,6 +239,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Attach toggle button listener
+    // Attach toggle button listener (if modeBtn exists)
     modeBtn?.addEventListener('click', toggleMode);
 });
