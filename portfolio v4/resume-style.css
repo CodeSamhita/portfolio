@@ -1,0 +1,323 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --decorator-color: #e9ecef;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem;
+}
+
+.resume-container {
+    display: flex;
+    width: 8.5in; /* Fixed A4 width */
+    min-height: 11in; /* Minimum A4 height, can grow */
+    height: auto; /* Allow content to determine height */
+    margin: 2rem auto;
+    background: var(--white);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.left-column {
+    background-color: #f4f6f8;
+    width: 35%;
+    padding: 2rem;
+    color: var(--secondary-color);
+    border-right: 1px solid var(--decorator-color);
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.resume-profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 6px solid var(--white);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--accent-color);
+    margin-top: 0.25rem;
+}
+
+.left-column h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--decorator-color);
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s;
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+
+.contact-info a:hover {
+    color: var(--accent-color);
+}
+
+.contact-info i {
+    margin-right: 0.6rem;
+    width: 18px; /* Align icons */
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.left-column .entry h4 {
+    font-size: 0.95rem;
+    margin: 0;
+    color: var(--secondary-color);
+}
+.left-column .entry p {
+    font-size: 0.85rem;
+    margin: 0;
+}
+.left-column .entry {
+    margin-bottom: 0.8rem;
+}
+
+.skills p {
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+}
+
+.right-column {
+    width: 65%;
+    padding: 2rem;
+}
+
+.right-column h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.right-column h2 i {
+    margin-right: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.summary-section p {
+    font-size: 0.95rem;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+.right-column .entry {
+    margin-bottom: 1rem;
+}
+
+.right-column .entry h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.2rem;
+}
+
+.right-column .entry ul {
+    padding-left: 1.2rem;
+    margin: 0.3rem 0 0 0;
+}
+
+.right-column .entry ul li {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.download-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.download-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.download-btn i {
+    margin-right: 0.5rem;
+}
+
+/* Download Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.modal-content {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative;
+}
+.modal-content h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+    color: var(--primary-color);
+}
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.modal-btn {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.modal-btn:hover {
+    background-color: var(--primary-color);
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #aaa;
+}
+
+/* Print-specific styles for A4 */
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        -webkit-print-color-adjust: exact; /* Ensures background colors print in Chrome */
+        print-color-adjust: exact; /* Standard */
+    }
+
+    /* Hide buttons and modals when printing */
+    .download-btn, .modal-overlay {
+        display: none !important;
+    }
+
+    /* Force the resume container to be the print target */
+    body > *:not(.resume-container) {
+        display: none;
+    }
+
+    .resume-container {
+        display: flex !important;
+        /* Remove screen styles */
+        margin: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        /* Allow content to break across pages naturally */
+        page-break-inside: avoid;
+    }
+
+    .left-column {
+        background-color: #f4f6f8 !important; /* Force background color */
+        border-right: 1px solid var(--decorator-color) !important;
+        /* Prevent this column from breaking mid-way if possible */
+        page-break-inside: avoid;
+    }
+
+    .right-column .entry, .right-column section {
+        /* Allow entries to break across pages if they are too long */
+        page-break-inside: avoid;
+    }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 992px) {
+    body {
+        padding: 0;
+    }
+    .resume-container {
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+        width: 100%;
+        height: auto;
+    }
+    .left-column, .right-column {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.5rem;
+    }
+    .left-column {
+        border-right: none;
+        border-bottom: 1px solid var(--decorator-color);
+    }
+}

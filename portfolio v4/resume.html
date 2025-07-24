@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Aditya Sharma</title>
+    <link rel="stylesheet" href="resume-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- This is the main container that will be converted to an image/PDF -->
+    <div class="resume-container" id="resume-container">
+        <aside class="left-column">
+            <div class="profile-section">
+                <img src="profile.jpg" alt="Aditya Sharma" class="resume-profile-img">
+                <h1 class="name">ADITYA SHARMA</h1>
+                <h2 class="title">Full Stack Developer & Innovator</h2>
+            </div>
+
+            <section class="contact-section">
+                <h3>Contact</h3>
+                <div class="contact-info">
+                    <a href="mailto:adityasharma@example.com"><i class="fas fa-envelope"></i> adityasharma@example.com</a>
+                    <a href="https://www.linkedin.com/in/aditya-sharma-8679802b3" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/CodeSamhita" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="index.html" target="_blank"><i class="fas fa-globe"></i> Portfolio</a>
+                </div>
+            </section>
+
+            <section>
+                <h3>Education</h3>
+                <div class="entry">
+                    <h4>B.Tech in CS&E</h4>
+                    <p><em>Presidency University, Bengaluru</em></p>
+                    <p>Expected 2026</p>
+                </div>
+                <div class="entry">
+                    <h4>Diploma in CS&E</h4>
+                    <p><em>RR Polytechnic, Bengaluru</em></p>
+                    <p>2018 – 2022</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Skills</h3>
+                <div class="entry skills">
+                   <p><strong>Languages:</strong> C, C++, Java, Python, HTML5, CSS3, JavaScript</p>
+                   <p><strong>Web Tech:</strong> Full-Stack Development, Flask, Bootstrap, React</p>
+                   <p><strong>Hardware:</strong> Arduino, ESP32, Raspberry Pi, Jetson Nano, ROS</p>
+                   <p><strong>AI/ML:</strong> OpenAI APIs, Whisper, Hugging Face, NLTK</p>
+                   <p><strong>Tools:</strong> Git, VS Code, Tinkercad, Adobe Creative Suite</p>
+                </div>
+            </section>
+        </aside>
+
+        <main class="right-column">
+            <section class="summary-section">
+                <h2><i class="fas fa-user-circle"></i> Summary</h2>
+                <p>
+                    Innovative and passionate Full Stack Developer and Computer Science student with a strong foundation in programming, embedded systems, and AI. Adept at building end-to-end solutions that merge hardware and software, with experience ranging from system-level programming on Linux to deploying lightweight AI models on edge devices. A collaborative team player with a proven ability to learn quickly and tackle complex challenges in fast-paced environments.
+                </p>
+            </section>
+            
+            <section>
+                <h2><i class="fas fa-cogs"></i> Key Projects</h2>
+                <div class="entry">
+                    <h3>Humanoid Bot with Voice-Controlled Lip Sync</h3>
+                    <ul>
+                        <li>Developed a humanoid robot featuring voice-activated mouth movements precisely synchronized with audio input using Whisper AI on a Raspberry Pi 5.</li>
+                        <li>Engineered real-time audio processing and low-latency servo control to achieve natural human-robot interaction.</li>
+                    </ul>
+                </div>
+                <div class="entry">
+                    <h3>Lab Management System with AI Chatbot</h3>
+                     <ul>
+                        <li>Built a full-stack web application to streamline laboratory operations, featuring an integrated AI chatbot for intelligent user assistance and report generation.</li>
+                    </ul>
+                </div>
+                 <div class="entry">
+                    <h3>Obstacle Avoidance Robot</h3>
+                     <ul>
+                        <li>Designed and constructed an autonomous robot capable of navigating complex environments by detecting and avoiding obstacles using IR and Ultrasonic sensors.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2><i class="fas fa-certificate"></i> Certifications & Achievements</h2>
+                <div class="entry">
+                    <ul>
+                        <li><strong>Best Mentor, WALL-E Project</strong> – Presidency Univ. (2024)</li>
+                        <li><strong>1st Prize, Coding & Photo Editing</strong> – TekBiz@SJP-2k22 (2022)</li>
+                        <li><strong>1st Prize, Treasure Hunt</strong> – TekBiz@SJP-2k22 (2022)</li>
+                        <li><strong>30 Days of Python</strong> – Udemy (2024)</li>
+                        <li><strong>AWS Workshop</strong> – Brainovision (2022)</li>
+                        <li><strong>Cyber Security (Hands-On)</strong> – RRIMS (2021)</li>
+                        <li><strong>Python and Application Development</strong> – Rediron (2020)</li>
+                        <li><strong>NCC 'A' Certificate</strong> (2013)</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2><i class="fas fa-users"></i> Clubs & Activities</h2>
+                <div class="entry">
+                    <ul>
+                        <li>Core Build Club member at MakerSpace @ Presidency University</li>
+                        <li>Envision Program 2025 – innovation workshop @IITM</li>
+                        <li>ANVESHNA 2024 (Zonal Level Student Research Convention) @ M S Ramaiah University</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Download Modal -->
+    <div id="download-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Choose Download Format</h3>
+            <p>Select your preferred format to download the resume.</p>
+            <div class="modal-buttons">
+                <button id="download-png-btn" class="modal-btn"><i class="fas fa-image"></i> Download PNG</button>
+                <button id="download-pdf-btn" class="modal-btn"><i class="fas fa-file-pdf"></i> Download PDF</button>
+            </div>
+            <button id="close-modal-btn" class="close-btn">&times;</button>
+        </div>
+    </div>
+
+    <button id="downloadBtn" class="download-btn">
+        <i class="fas fa-download"></i> <span id="btn-text">Download Resume</span>
+    </button>
+
+    <!-- Libraries for generating PDF and Image -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+        const downloadBtn = document.getElementById('downloadBtn');
+        const modal = document.getElementById('download-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const downloadPngBtn = document.getElementById('download-png-btn');
+        const downloadPdfBtn = document.getElementById('download-pdf-btn');
+        const resumeContainer = document.getElementById('resume-container');
+        const btnText = document.getElementById('btn-text');
+
+        // Show the modal when the main download button is clicked
+        downloadBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+
+        // Hide the modal
+        const closeModal = () => {
+            modal.style.display = 'none';
+        };
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        const showLoadingState = (isloading) => {
+            const mainBtnIcon = downloadBtn.querySelector('i');
+            if (isloading) {
+                btnText.textContent = 'Generating...';
+                mainBtnIcon.className = 'fas fa-spinner fa-spin';
+                downloadBtn.disabled = true;
+                downloadPngBtn.disabled = true;
+                downloadPdfBtn.disabled = true;
+            } else {
+                btnText.textContent = 'Download Resume';
+                mainBtnIcon.className = 'fas fa-download';
+                downloadBtn.disabled = false;
+                downloadPngBtn.disabled = false;
+                downloadPdfBtn.disabled = false;
+                closeModal();
+            }
+        };
+
+        const captureResume = () => {
+            return html2canvas(resumeContainer, {
+                scale: 3,
+                useCORS: true,
+                logging: false,
+                width: resumeContainer.offsetWidth, // Capture the exact width
+                height: resumeContainer.offsetHeight // Capture the exact height
+            });
+        };
+
+        // Handle PNG Download
+        downloadPngBtn.addEventListener('click', () => {
+            showLoadingState(true);
+            captureResume().then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'Aditya-Sharma-Resume.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                showLoadingState(false);
+            }).catch(err => {
+                console.error("PNG generation failed:", err);
+                showLoadingState(false);
+            });
+        });
+
+        // Handle PDF Download
+        downloadPdfBtn.addEventListener('click', () => {
+            showLoadingState(true);
+            const { jsPDF } = window.jspdf;
+            
+            captureResume().then(canvas => {
+                const canvasWidth = canvas.width;
+                const canvasHeight = canvas.height;
+                
+                // A4 page dimensions in pixels at 96 DPI are roughly 794x1123
+                // We'll use this as a reference for aspect ratio
+                const A4_RATIO = 1.414; 
+                const a4Height = canvasWidth * A4_RATIO;
+                
+                const pdf = new jsPDF({
+                    orientation: 'portrait',
+                    unit: 'px',
+                    format: [canvasWidth, a4Height] // Use canvas width and A4 aspect ratio
+                });
+
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = pdf.internal.pageSize.getHeight();
+                
+                let yPos = 0;
+                let remainingHeight = canvasHeight;
+                
+                // Add the first page
+                pdf.addImage(canvas, 'PNG', 0, yPos, pdfWidth, canvasHeight);
+                remainingHeight -= pdfHeight;
+
+                // Add more pages if content overflows
+                while (remainingHeight > 0) {
+                    pdf.addPage();
+                    yPos -= pdfHeight;
+                    pdf.addImage(canvas, 'PNG', 0, yPos, pdfWidth, canvasHeight);
+                    remainingHeight -= pdfHeight;
+                }
+
+                pdf.save('Aditya-Sharma-Resume.pdf');
+                showLoadingState(false);
+            }).catch(err => {
+                console.error("PDF generation failed:", err);
+                showLoadingState(false);
+            });
+        });
+    </script>
+</body>
+</html>
