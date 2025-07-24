@@ -14,7 +14,7 @@ const themes = [
             "--text-main": "#e5e5e7",
             "--text-dim": "#a0a0a0",
             "--border-divider": "#3a3a3c",
-            "--shadow": "0 8px 30px rgba(0, 0, 0, 0.4)",
+            "--shadow": "0 0.8rem 3rem rgba(0, 0, 0, 0.4)", /* Converted to rem */
             "--overlay-bg": "rgba(28, 28, 30, 0.95)"
         },
         light: {
@@ -27,7 +27,7 @@ const themes = [
             "--text-main": "#1a1a1a",
             "--text-dim": "#6b6e76",
             "--border-divider": "#dcdde1",
-            "--shadow": "0 6px 28px rgba(0, 0, 0, 0.15)",
+            "--shadow": "0 0.6rem 2.8rem rgba(0, 0, 0, 0.15)", /* Converted to rem */
             "--overlay-bg": "rgba(255, 255, 255, 0.95)"
         }
     },
@@ -43,7 +43,7 @@ const themes = [
             "--text-main": "#f5f5f5",
             "--text-dim": "#d1d1d1",
             "--border-divider": "#444444",
-            "--shadow": "0 8px 30px rgba(0, 0, 0, 0.6)",
+            "--shadow": "0 0.8rem 3rem rgba(0, 0, 0, 0.6)", /* Converted to rem */
             "--overlay-bg": "rgba(13, 13, 13, 0.95)"
         },
         light: {
@@ -56,7 +56,7 @@ const themes = [
             "--text-main": "#111111",
             "--text-dim": "#888888",
             "--border-divider": "#d0d0d0",
-            "--shadow": "0 6px 28px rgba(0, 0, 0, 0.1)",
+            "--shadow": "0 0.6rem 2.8rem rgba(0, 0, 0, 0.1)", /* Converted to rem */
             "--overlay-bg": "rgba(255, 255, 255, 0.95)"
         }
     },
@@ -72,7 +72,7 @@ const themes = [
             "--text-main": "#f3e6e4",
             "--text-dim": "#d1a7a0",
             "--border-divider": "#70393f",
-            "--shadow": "0 8px 30px rgba(0, 0, 0, 0.4)",
+            "--shadow": "0 0.8rem 3rem rgba(0, 0, 0, 0.4)", /* Converted to rem */
             "--overlay-bg": "rgba(27, 18, 18, 0.95)"
         },
         light: {
@@ -85,7 +85,7 @@ const themes = [
             "--text-main": "#2a2a2a",
             "--text-dim": "#c78f85",
             "--border-divider": "#e2c6c0",
-            "--shadow": "0 6px 28px rgba(0, 0, 0, 0.1)",
+            "--shadow": "0 0.6rem 2.8rem rgba(0, 0, 0, 0.1)", /* Converted to rem */
             "--overlay-bg": "rgba(253, 246, 243, 0.95)"
         }
     },
@@ -101,7 +101,7 @@ const themes = [
             "--text-main": "#d8dee9",
             "--text-dim": "#9ea9b3",
             "--border-divider": "#3c4752",
-            "--shadow": "0 8px 30px rgba(0, 0, 0, 0.4)",
+            "--shadow": "0 0.8rem 3rem rgba(0, 0, 0, 0.4)", /* Converted to rem */
             "--overlay-bg": "rgba(18, 24, 33, 0.95)"
         },
         light: {
@@ -114,7 +114,7 @@ const themes = [
             "--text-main": "#1c1f23",
             "--text-dim": "#5b6e84",
             "--border-divider": "#d0d4d8",
-            "--shadow": "0 6px 28px rgba(0, 0, 0, 0.1)",
+            "--shadow": "0 0.6rem 2.8rem rgba(0, 0, 0, 0.1)", /* Converted to rem */
             "--overlay-bg": "rgba(240, 242, 245, 0.95)"
         }
     },
@@ -130,7 +130,7 @@ const themes = [
             "--text-main": "#eaeaea",
             "--text-dim": "#bfbfbf",
             "--border-divider": "#2a2d32",
-            "--shadow": "0 8px 30px rgba(0, 0, 0, 0.6)",
+            "--shadow": "0 0.8rem 3rem rgba(0, 0, 0, 0.6)", /* Converted to rem */
             "--overlay-bg": "rgba(10, 12, 16, 0.95)"
         },
         light: {
@@ -143,7 +143,7 @@ const themes = [
             "--text-main": "#1e1e1e",
             "--text-dim": "#6e6e6e",
             "--border-divider": "#dddddd",
-            "--shadow": "0 6px 28px rgba(0, 0, 0, 0.1)",
+            "--shadow": "0 0.6rem 2.8rem rgba(0, 0, 0, 0.1)", /* Converted to rem */
             "--overlay-bg": "rgba(253, 253, 253, 0.95)"
         }
     }
@@ -213,6 +213,7 @@ function toggleMode() {
 // Initialize theme on page load
 window.addEventListener('DOMContentLoaded', () => {
     // 1. Randomly select a theme or load from sessionStorage
+    // Using sessionStorage for theme persistence within a session, new random on new session
     const storedThemeIndex = sessionStorage.getItem('current-theme-index');
     if (storedThemeIndex !== null && !isNaN(parseInt(storedThemeIndex))) {
         currentThemeIndex = parseInt(storedThemeIndex);
