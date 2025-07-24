@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Aditya Sharma - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="90" tabindex="0">
+
+  <div id="progressBar"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">ADITYA SHARMA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#clubs">Clubs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <button id="toggleModeBtn" class="mode-toggle-btn">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <section id="about" class="section fadein" style="margin-top:92px;">
+    <h2 class="section-title">About Me</h2>
+    <div class="container">
+      <div class="row justify-content-center align-items-center g-4">
+        <div class="col-md-4 text-center">
+          <img src="profile.png" class="rounded-profile mb-4" alt="Aditya Sharma’s profile image" loading="lazy" />
+        </div>
+        <div class="col-md-8" style="text-align: justify;">
+          <h1 class="display-6 fw-bold mb-1 text-light">
+            Hey! I'm <span style="color:var(--primary)">ADITYA SHARMA</span><br />
+          </h1>
+          <h2>- <span id="typed-text" class="typed-text"></span><span class="cursor">|</span></h2>
+
+          <br />
+          <p class="lead mb-3">
+            Passionate Full Stack Developer and Innovator with a strong foundation in programming,
+            embedded systems, Designing and 3D printing.
+            <span id="funFact" class="text-info"></span> <!-- Fun Fact Rotator -->
+          </p>
+          <p>
+            As a Computer Science student with a deep interest in intelligent systems, I work at the intersection of code and hardware. Using platforms like
+            <b><i>Raspberry Pi (Zero 2W, 4, 5), ESP32 (DevKit, NodeMCU, S3), Arduino (Mega, UNO, Nano), and Jetson Nano,</i></b>
+            I build end-to-end solutions that combine embedded computing with real-time decision-making. My experience includes integrating spatial and environmental sensing units, resolving signal integrity challenges, and optimizing PWM-based actuator control. From syncing servo motion to live audio using Whisper AI to designing systems that run offline with low-latency responsiveness, I focus on creating software-driven hardware that is stable, scalable, and ready for real-world deployment.
+          </p>
+          <p>
+            My foundation in Computer Science extends beyond hardware integration into the core principles of computing—data structures, algorithms, operating systems, computer networks, and software architecture. I’m equally comfortable managing system-level programming on Linux-based environments, optimizing performance at the OS layer, and working with APIs and multithreading for concurrent tasks. I’ve explored AI and NLP concepts through projects involving speech recognition, classification, and text analysis, and I actively experiment with deploying lightweight models on edge devices. My interest in scalable computing has also led me to explore cloud platforms and containerized environments, giving me a holistic view of how intelligent systems operate—from the sensor to the server.
+          </p>
+          <p>
+            I enjoy building systems that are efficient, responsive, and dependable-whether it’s a real-time robotics project, an AI-powered tool, or a sensor-driven device. I focus on clarity, usability, and performance, ensuring each solution is designed to work seamlessly in practical, offline, and often resource-constrained environments.
+          </p>
+          <p>
+            I thrive in practical, collaborative environments where ideas are exchanged freely, challenges are tackled together, and learning happens through doing. Working with others allows me to see problems from new perspectives, adapt quickly, and build more thoughtful, effective solutions. For me, collaboration isn't just about teamwork-it's a key part of how I grow and innovate.
+          </p>
+          <h3><b>I don’t just build things to work - I build them to matter.</b></h3>
+          <a href="resume.html" class="resume-btn mt-4">
+            <i class="fas fa-file-alt me-2"></i> View Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Stats Section -->
+  <section id="stats" class="section fadein">
+    <h2 class="section-title">My Journey in Numbers</h2>
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 col-sm-6">
+          <div class="stat-widget">
+            <h3><span id="projectCount">0</span>+</h3>
+            <p>Projects Completed</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="stat-widget">
+            <h3><span id="githubRepos">0</span>+</h3>
+            <p>GitHub Repositories</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="stat-widget">
+            <h3><span id="yearsExperience">0</span>+</h3>
+            <p>Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section fadein">
+    <h2 class="section-title">Skills &amp; Tools</h2>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5 class="fw-bold mb-3" style="color:var(--accent);">Technical Skills:</h5>
+          <ul class="custom-list list-unstyled" id="technical-skills-list">
+            <li data-skill="Programming Languages"><i class="fas fa-code"></i><span><b>Programming Languages:</b> C, C++ (Standard & Arduino/ESP-based), Java, Python, HTML5, CSS3, JavaScript</span></li>
+            <li data-skill="Web Technologies"><i class="fas fa-globe"></i><span><b>Web Technologies:</b> Full-Stack Development, Responsive Design, Flask, Bootstrap, React</span></li>
+            <li data-skill="Embedded Systems & Hardware"><i class="fas fa-microchip"></i><span><b>Embedded Systems & Hardware:</b> Arduino (UNO, Mega, Nano - Coding & Integration), ESP32 (DevKit, NodeMCU, S3 - Arduino & ESP-IDF), Raspberry Pi (Zero 2W, 4, 5 - GPIO, I2C, UART, System Integration), Jetson Nano, ROS (Robot Operating System - Nodes, Topics, Services), 3D Printing</span></li>
+            <li data-skill="AI/ML & NLP"><i class="fas fa-brain"></i><span><b>AI/ML & NLP:</b> Prompt Engineering, OpenAI APIs, Whisper, Hugging Face Transformers, NLTK, SpaCy</span></li>
+            <li data-skill="Tools & Platforms"><i class="fas fa-tools"></i><span><b>Tools & Platforms:</b> Ubuntu (GUI & Terminal), Windows (GUI & CMD), Git, VS Code, Tinkercad</span></li>
+            <li data-skill="Creative & Media Tools"><i class="fas fa-palette"></i><span><b>Creative & Media Tools:</b> Adobe Photoshop, Premiere Pro, After Effects, Media Encoder</span></li>
+            <li data-skill="UI/UX & Interfacing"><i class="fas fa-palette"></i><span><b>UI/UX & Interfacing:</b> UI/UX Design, Audio & Camera Integration</span></li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5 class="fw-bold mb-3" style="color:var(--accent);">Soft Skills:</h5>
+          <ul class="custom-list list-unstyled" id="soft-skills-list">
+            <li data-skill="Problem Solving"><i class="fas fa-lightbulb"></i> Problem Solving &amp; Critical Thinking</li>
+            <li data-skill="Creative Design"><i class="fas fa-pencil-ruler"></i> Creative Design Thinking</li>
+            <li data-skill="Team Collaboration"><i class="fas fa-users"></i> Team Collaboration &amp; Communication</li>
+            <li data-skill="Adaptability"><i class="fas fa-seedling"></i> Adaptability &amp; Fast Learning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section fadein">
+    <h2 class="section-title">Key Projects</h2>
+    <div class="container">
+      <div class="projects-grid row row-cols-1 row-cols-md-2 g-4" id="projects-container">
+        <!-- Projects will be dynamically loaded here -->
+        <p class="text-center text-muted w-100" id="loading-projects"><span class="spinner"></span> Loading projects...</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section fadein">
+    <h2 class="section-title">Education</h2>
+    <div class="container">
+      <div class="timeline">
+        <div class="timeline-event">
+          <b>B.Tech in Computer Science &amp; Engineering</b>
+          <div class="text-secondary">
+            Presidency University, Bengaluru - 2023-Expected 2026
+          </div>
+        </div>
+        <div class="timeline-event">
+          <b>Diploma in Computer Science &amp; Engineering</b>
+          <div class="text-secondary">
+            RR Polytechnic, Bengaluru - 2018–2022 <i>(covid delays)</i>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <b>Sri Chaitanya Techno School(XII)</b>
+          <div class="text-secondary">
+            Seshadripuram, Bengaluru - 2016-2018
+          </div>
+        </div>
+        <div class="timeline-event">
+          <b>Secondary School Examination (X)</b>
+          <div class="text-secondary">
+            Air Force School, Jorhat, Assam - May 2015
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="section fadein">
+    <h2 class="section-title">Certifications &amp; Achievements</h2>
+    <div class="container">
+      <ul class="custom-list list-unstyled">
+        <li><i class="fas fa-medal"></i> NCC Camp (2012, 2013), NCC 'A' Certificate (2013)</li>
+        <li><i class="fas fa-medal"></i> National Schools CS Competition – IICT (2014)</li>
+        <li><i class="fas fa-code"></i> Python and Application Development – Rediron (2020)</li>
+        <li><i class="fas fa-shield-alt"></i> Cyber Security (Hands-On) – RRIMS (2021)</li>
+        <li><i class="fas fa-shield-alt"></i> Footprints &amp; Countermeasures in Ethical Hacking – SREC (2021)</li>
+        <li><i class="fas fa-chart-bar"></i> Data Exploration &amp; Visualization – SREC (2021)</li>
+        <li><i class="fas fa-laptop-code"></i> In-plant Training in Python – Knowx Innovations (2022)</li>
+        <li><i class="fas fa-cloud"></i> AWS Workshop – Brainovision (2022)</li>
+        <li><i class="fas fa-award"></i> 1st Prize, Treasure Hunt – TekBiz@SJP-2k22 (2022)</li>
+        <li><i class="fas fa-award"></i> 1st Prize, Coding &amp; Photo Editing – TekBiz@SJP-2k22 (2022)</li>
+        <li><i class="fas fa-award"></i> Best Mentor, WALL-E Project – Presidency Univ. (2024)</li>
+        <li><i class="fas fa-code"></i> 30 Days of Python – Udemy (2024)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="clubs" class="section fadein">
+    <h2 class="section-title">Clubs &amp; Activities</h2>
+    <div class="container">
+      <ul class="custom-list list-unstyled">
+        <li><i class="fas fa-users"></i> Core Build Club member at MakerSpace (formerly Build Club) @ Presidency University</li>
+        <li><i class="fas fa-lightbulb"></i>Envision Program 2025 – innovation workshop @IITM</li>
+        <li><i class="fas fa-flask"></i>ANVESHNA 2024 (Zonal Level Student Research Convention) @ M S Ramaiah University</li>
+        <li><i class="fas fa-laptop-code"></i>Innovate X 2025 National Level Tech Fest @ Presidency University</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="gallery" class="section fadein">
+    <h2 class="section-title">Photo Albums</h2>
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <a href="album-tech-lab.html" class="text-decoration-none">
+            <div class="album-card">
+              <img src="https://placehold.co/600x400/333333/dddddd?text=Tech+Lab+Insights" alt="Tech Event & Lab Work" loading="lazy">
+              <div class="overlay">
+                <h5>Tech & Lab Insights</h5>
+                <p>Moments from technical events and lab sessions.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="album-robotics-projects.html" class="text-decoration-none">
+            <div class="album-card">
+              <img src="https://placehold.co/600x400/555555/eeeeee?text=Robotics+Projects" alt="Robotics Projects" loading="lazy">
+              <div class="overlay">
+                <h5>Robotics & Project Builds</h5>
+                <p>Capturing the journey of building innovative projects.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="album-meta-quest.html" class="text-decoration-none">
+            <div class="album-card">
+              <img src="https://placehold.co/600x400/777777/ffffff?text=Virtualization+Projects" alt="Meta Quest Experience" loading="lazy">
+              <div class="overlay">
+                <h5>Virtualization Projects</h5>
+                <p>Exploring the world of VR and simulations.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section fadein">
+    <h2 class="section-title">Contact</h2>
+    <div class="container text-center">
+      <p class="mb-4 fs-5">Let’s build something cool together! Feel free to reach out:</p>
+      <form id="contact-form" class="mb-5">
+        <div class="mb-3 text-start">
+          <label for="contactName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="contactName" required>
+        </div>
+        <div class="mb-3 text-start">
+          <label for="contactEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="contactEmail" required>
+        </div>
+        <div class="mb-3 text-start">
+          <label for="contactMessage" class="form-label">Message</label>
+          <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        <div id="form-message" class="mt-3 text-center"></div>
+      </form>
+
+      <ul class="custom-list list-unstyled align-items-center justify-content-center mb-3 gx-2" style="max-width:450px;margin:auto;">
+        <li><i class="fab fa-github"></i><a href="https://github.com/CodeSamhita" target="_blank" class="contact-link">github</a></li>
+        <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/aditya-sharma-8679802b3" target="_blank" class="contact-link">linkedin</a></li>
+        <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/visionary_adi?igsh=MjI4Z2N3MzZxYnFk" target="_blank" class="contact-link">Instagram</a></li>
+        <li><i class="fas fa-envelope"></i><a href="mailto:example@example.com" class="contact-link">example@gmail.com</a></li>
+        <li><i class="fas fa-phone"></i><a href="tel:+91 xxxxx xxxxx" class="contact-link">+91 xxxxx xxxxx</a></li>
+      </ul>
+      <a href="resume.html" class=" btn btn-primary">
+        Download Resume
+      </a>
+    </div>
+  </section>
+
+  <button id="backToTopBtn" class="btn btn-primary position-fixed bottom-0 end-0 m-3 shadow rounded-circle"
+    title="Back to Top">
+    &#8593;
+  </button>
+
+  <footer>
+    <div class="container">
+      <div>&copy; 2025 Aditya Sharma | Portfolio</div>
+      <div>Designed with <i class="fas fa-heart"></i> by Aditya</div>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div class="modal fade project-modal" id="projectDetailModal" tabindex="-1" aria-labelledby="projectDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="projectDetailModalLabel">Project Title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalProjectImage" src="" alt="Project Image" class="img-fluid mb-3">
+          <p id="modalProjectDescription"></p>
+          <h6>Technologies Used:</h6>
+          <ul id="modalProjectTech"></ul>
+          <h6>Challenges:</h6>
+          <p id="modalProjectChallenges"></p>
+          <h6>Impact:</h6>
+          <p id="modalProjectImpact"></p>
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <a id="modalProjectDemoLink" href="#" target="_blank" class="btn btn-sm btn-outline-primary me-2"><i class="fas fa-external-link-alt me-1"></i> Live Demo</a>
+            <a id="modalProjectGithubLink" href="#" target="_blank" class="btn btn-sm btn-outline-secondary"><i class="fab fa-github me-1"></i> GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skill Detail Modal -->
+  <div class="modal fade skill-modal" id="skillDetailModal" tabindex="-1" aria-labelledby="skillDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="skillDetailModalLabel">Skill Title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="skillModalDescription"></p>
+          <div id="skillModalRelatedContent">
+            <h6>Related Projects:</h6>
+            <ul id="skillModalRelatedProjects"></ul>
+            <h6>Related Certifications:</h6>
+            <ul id="skillModalRelatedCertifications"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message Box for notifications -->
+  <div id="messageBox" class="message-box"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="typed-text.js"></script>
+  <script src="theme-manager.js"></script> <!-- Updated to new theme-manager.js -->
+  <script src="back-to-top.js"></script>
+  <script src="project-modal.js"></script>
+  <script src="contact-form.js"></script>
+  <script src="stats.js"></script>
+  <script src="skills-interactivity.js"></script>
+  <script>
+    // Page Transition: Add 'loaded' class to body on DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add('loaded');
+    });
+
+    // Scroll progress bar logic
+    window.addEventListener('scroll', () => {
+      const progressBar = document.getElementById('progressBar');
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      progressBar.style.width = progress + '%';
+    });
+
+    // Section fade-in on scroll
+    const faders = document.querySelectorAll('.fadein');
+
+    const appearOptions = {
+      threshold: 0.1, // Trigger when 10% of the element is visible
+      rootMargin: "0px 0px -50px 0px" // Adjust to trigger slightly before element reaches viewport bottom
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add('active');
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+
+  </script>
+</body>
+
+</html>
