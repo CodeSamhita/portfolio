@@ -21,6 +21,16 @@
   --btn-close-color: #fff;
 }
 
+/* Apply this to your main body tag to prevent long-press menus on mobile */
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Safari */
+  -khtml-user-select: none;    /* Konqueror HTML */
+  -moz-user-select: none;      /* Old versions of Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
 body.light-mode {
   /* Color Scheme - Light Mode */
   --primary: #6a11cb;
@@ -560,7 +570,7 @@ body.light-mode .btn-close-white { filter: none; }
 /* In your style.css file, find and replace the old lightbox styles with these */
 
 .lightbox {
-  display: none; /* This will be changed to 'flex' by the JS */
+  display: none; 
   position: fixed;
   z-index: 1060;
   left: 0;
@@ -569,8 +579,7 @@ body.light-mode .btn-close-white { filter: none; }
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
-  /* The padding-top was removed to allow for true centering */
-  flex-direction: column; /* Stack image and caption vertically */
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
 }
@@ -578,19 +587,12 @@ body.light-mode .btn-close-white { filter: none; }
 .lightbox-content {
   margin: auto;
   display: block;
-  /* NEW styles for responsive sizing */
-  max-width: 90vw; /* 90% of viewport width */
-  max-height: 85vh; /* 85% of viewport height to leave room for caption */
-  object-fit: contain; /* This maintains the image's aspect ratio */
+  max-width: 90vw; 
+  max-height: 85vh; 
+  object-fit: contain; 
   animation-name: zoom;
   animation-duration: 0.4s;
-  /* NEW style to make downloading harder */
-  pointer-events: none; /* Disables right-click context menu on the image */
-  /* NEW styles to prevent selection on all platforms */
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;      /* IE 10+ and Edge */
-  user-select: none;          /* Standard syntax */
+  /* pointer-events: none; has been REMOVED to allow clicks to be detected */
 }
 
 @keyframes zoom {
@@ -602,10 +604,9 @@ body.light-mode .btn-close-white { filter: none; }
   text-align: center;
   color: #ccc;
   padding: 10px 20px;
-  /* NEW styles for responsive caption */
-  height: auto; /* Allow height to adjust to content */
+  height: auto; 
   width: 100%;
-  max-width: 70vw; /* Keep caption from being too wide on large screens */
+  max-width: 70vw; 
 }
 
 .lightbox-close {

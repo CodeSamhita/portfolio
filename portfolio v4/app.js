@@ -357,7 +357,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxCaption = document.getElementById('lightbox-caption');
-        const closeBtn = lightbox.querySelector('.lightbox-close');
         
         const openLightbox = (imgSrc, caption) => {
             if (!lightboxImg || !lightboxCaption) return;
@@ -378,24 +377,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const init = () => {
             document.querySelectorAll('.gallery-lightbox-item').forEach(item => {
-                item.addEventListener('click', () => {
+                item.addEventListener('click', (e) => {
+                    // Prevent the card click from triggering when clicking the image
+                    e.stopPropagation(); 
                     openLightbox(item.src, item.dataset.caption || item.alt);
                 });
             });
             
-            // This single click listener on the background handles closing the lightbox
-            // for left-clicks, and because of the global contextmenu listener,
-            // right-clicks are prevented and won't interfere.
-            lightbox.addEventListener('click', (e) => {
-                if (e.target !== lightboxImg) {
-                    closeLightbox();
-                }
-            });
-            
-            // The global contextmenu listener handles all right-click prevention.
-            // When the lightbox is open, a right-click on the background will
-            // not show a menu. A right-click on the image area will also not
-            // show a menu due to pointer-events:none and the global prevention.
+            // NEW: Close the lightbox when it is clicked (left-click)
+            lightbox.addEventListener('click', closeLightbox);
         };
         
         return { init };
