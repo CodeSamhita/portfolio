@@ -557,6 +557,8 @@ footer .social-buttons {
 body.light-mode .btn-close-white { filter: none; }
 /* In your style.css file, find and replace the old lightbox styles with these */
 
+/* In your style.css file, find and replace the old lightbox styles with these */
+
 .lightbox {
   display: none; /* This will be changed to 'flex' by the JS */
   position: fixed;
@@ -582,6 +584,13 @@ body.light-mode .btn-close-white { filter: none; }
   object-fit: contain; /* This maintains the image's aspect ratio */
   animation-name: zoom;
   animation-duration: 0.4s;
+  /* NEW style to make downloading harder */
+  pointer-events: none; /* Disables right-click context menu on the image */
+  /* NEW styles to prevent selection on all platforms */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;      /* IE 10+ and Edge */
+  user-select: none;          /* Standard syntax */
 }
 
 @keyframes zoom {
@@ -611,6 +620,7 @@ body.light-mode .btn-close-white { filter: none; }
 }
 
 .lightbox-close:hover, .lightbox-close:focus { color: #bbb; }
+
 
 
 /* Utilities */

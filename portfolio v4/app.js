@@ -15,6 +15,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Global Right-Click Prevention ---
+    // This will disable the right-click context menu across the entire page.
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
     // --- Element Selectors ---
     const body = document.body;
     const progressBar = document.getElementById('progressBar');
@@ -64,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Typed.js Text Animation ---
     const typedTextHandler = (() => {
         const init = () => {
-            // The check for 'Typed' and the element ID is already safe.
             if (typeof Typed !== 'undefined' && document.getElementById('typed-text')) {
                 new Typed('#typed-text', {
                     strings: [
@@ -108,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const init = () => {
             const statsSection = document.getElementById('stats');
-            // The check for statsSection makes this safe.
             if (statsSection) {
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
@@ -134,9 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Project Loader, Filter & Likes ---
     const projectHandler = (() => {
         const container = document.getElementById('projects-container');
-        // **FIX**: If the projects container doesn't exist, this handler is not needed.
         if (!container) {
-            return { init: () => {} }; // Return a dummy init function.
+            return { init: () => {} };
         }
 
         const loadingMsg = document.getElementById('loading-projects');
@@ -255,7 +256,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Skills Modal ---
     const skillsHandler = (() => {
         const skillsSection = document.getElementById('skills');
-        // **FIX**: If the skills section doesn't exist, this handler is not needed.
         if (!skillsSection) {
             return { init: () => {} };
         }
@@ -313,7 +313,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Contact Form ---
     const contactFormHandler = (() => {
         const form = document.getElementById('contact-form');
-        // **FIX**: If the form doesn't exist, this handler is not needed.
         if (!form) {
             return { init: () => {} };
         }
@@ -352,7 +351,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Gallery Lightbox ---
     const lightboxHandler = (() => {
         const lightbox = document.getElementById('lightbox');
-        // This handler is safe because it checks for the lightbox element.
         if (!lightbox) {
             return { init: () => {} };
         }
@@ -363,7 +361,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const openLightbox = (imgSrc, caption) => {
             if (!lightboxImg || !lightboxCaption) return;
-            // Use flexbox for centering
             lightbox.style.display = "flex";
             lightbox.style.alignItems = "center";
             lightbox.style.justifyContent = "center";
@@ -371,13 +368,11 @@ document.addEventListener('DOMContentLoaded', () => {
             lightboxImg.src = imgSrc;
             lightboxCaption.innerHTML = caption;
             
-            // Prevent body from scrolling
             document.body.style.overflow = 'hidden';
         };
         
         const closeLightbox = () => {
             lightbox.style.display = "none";
-            // Restore body scrolling
             document.body.style.overflow = 'auto';
         };
 
@@ -387,13 +382,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     openLightbox(item.src, item.dataset.caption || item.alt);
                 });
             });
-            closeBtn?.addEventListener('click', closeLightbox);
+            
+            // This single click listener on the background handles closing the lightbox
+            // for left-clicks, and because of the global contextmenu listener,
+            // right-clicks are prevented and won't interfere.
             lightbox.addEventListener('click', (e) => {
-                // Close when clicking anywhere outside the image itself
                 if (e.target !== lightboxImg) {
                     closeLightbox();
                 }
             });
+            
+            // The global contextmenu listener handles all right-click prevention.
+            // When the lightbox is open, a right-click on the background will
+            // not show a menu. A right-click on the image area will also not
+            // show a menu due to pointer-events:none and the global prevention.
         };
         
         return { init };
@@ -401,14 +403,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scroll-based UI Handlers ---
     const scrollHandler = () => {
-        // Progress Bar
         if (progressBar) {
             const totalHeight = body.scrollHeight - window.innerHeight;
             const progress = (window.scrollY / totalHeight) * 100;
             progressBar.style.width = `${progress}%`;
         }
 
-        // Back to Top Button
         if (backToTopBtn) {
             const shouldShow = window.scrollY > 300;
             backToTopBtn.classList.toggle('show', shouldShow);
