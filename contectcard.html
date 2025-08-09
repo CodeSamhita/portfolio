@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Sharma - Personal Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #111827;
+            overflow: auto; 
+        }
+
+        /* --- Main Content Styles --- */
+        #main-content {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        /* Interactive particle background canvas */
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2; /* Behind the content */
+            background: linear-gradient(-45deg, #111827, #1f2937, #374151, #4b556341);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .icon-hover {
+            transition: transform 0.2s ease;
+        }
+
+        .icon-hover:hover {
+            transform: scale(1.1);
+        }
+
+        /* Static ripple effect for the profile picture */
+        .profile-ripple {
+            border-color: #6365f149;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.4), 
+                        0 0 0 12px rgba(99, 102, 241, 0.2), 
+                        0 0 0 20px rgba(99, 102, 241, 0.1);
+        }
+    </style>
+</head>
+<body class="text-white">
+    
+    <!-- Main Content Wrapper -->
+    <div id="main-content">
+        <canvas id="particle-canvas"></canvas>
+        
+        <!-- Visiting Card -->
+        <div class="relative w-full max-w-2xl bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-2xl shadow-indigo-500/20 overflow-hidden border border-gray-700 grid grid-cols-1 md:grid-cols-3">
+            
+            <!-- Left Column -->
+            <div class="p-8 md:col-span-2 flex flex-col justify-between">
+                <div>
+               
+                    <!-- Name and Title -->
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                    <div>
+                        <h1 class="text-3xl font-bold text-white mb-1 tracking-wide">Aditya Sharma</h1>
+                        <p class="text-lg text-indigo-300">Innovator & Creative Coder</p>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-8">
+                    <div class="bg-gray-900/40 border border-gray-700 rounded-lg p-4">
+                        <div class="flex items-center justify-center space-x-5">
+                            <!-- Social Icons -->
+                            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" title="LinkedIn" class="icon-hover text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg></a>
+                            <a href="https://github.com/CodeSamhita" title="GitHub" class="icon-hover text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.852 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg></a>
+                            <a href="https://wa.me/918217450041?text=Hello%20Aditya,%20I'm%20reaching%20out%20from%20your%20portfolio%20page." title="WhatsApp" class="icon-hover text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.902-.539-5.57-1.502L.057 24zM7.327 21.16l.494.297c1.492.896 3.23.142 4.595.142 5.465 0 9.908-4.444 9.908-9.908s-4.444-9.908-9.908-9.908c-5.465 0-9.908 4.444-9.908 9.908 0 2.021.607 3.926 1.719 5.574l.32.484-1.059 3.865 3.956-1.04zM12.273 14.12l-1.612-2.043c-.418-.529-.117-.834.188-1.111.262-.24.438-.297.588-.529.15-.232.15-.418.105-.588-.045-.17-.465-1.112-1.059-2.648-.594-1.536-1.188-1.29-1.662-1.32-.422-.023-.902-.045-1.375.211-.529.256-1.004.834-1.004 1.968s.375 3.488 1.53 4.842c1.154 1.354 2.443 3.03 5.207 4.536 2.764 1.506 3.646 1.205 4.23 1.057.582-.15 1.809-.747 2.066-1.492.256-.747.256-1.383.188-1.536-.068-.15-.465-.24-.947-.465z"/></svg></a>
+                            <a href="https://x.com/Aditya85946983?t=5cYQMowlU6HTMXjzK6CZcg&s=09" title="X" class="icon-hover text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                            <a href="https://www.instagram.com/visionary_adi?igsh=MjI4Z2N3MzZxYnFk" title="Instagram" class="icon-hover text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="p-8 flex flex-col items-center justify-center bg-gray-900/30 md:rounded-r-2xl">
+                <!-- QR Code Holder -->
+                <div class="w-40 h-40 bg-white rounded-lg flex items-center justify-center border-4 border-indigo-300 p-1">
+                    <!-- You can replace this with your QR code image -->
+                     <img src="image/QR.png" alt="QR Code Placeholder" class="rounded-md">
+                </div>
+                <!-- NFC and Text -->
+                <div class="text-center mt-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mx-auto mb-2 text-indigo-200" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM18 20H6V4h12v16z"/>
+                        <path d="M15.5 14.5c0-2.5-2-4.5-4.5-4.5V6.5c3.6 0 6.5 2.9 6.5 6.5h-2z"/>
+                        <path d="M15.5 14.5c0-1.4-1.1-2.5-2.5-2.5v-1.5c2.2 0 4 1.8 4 4h-1.5z"/>
+                    </svg>
+                    <p class="text-sm text-indigo-200 leading-tight">Tap or Scan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Start of Script ---
+        let canvas, ctx, particles, mouse;
+
+        // Particle class for creating individual particles
+        class Particle {
+            constructor(x, y, directionX, directionY, size, color) {
+                this.x = x;
+                this.y = y;
+                this.directionX = directionX;
+                this.directionY = directionY;
+                this.size = size;
+                this.color = color;
+            }
+            // Method to draw a single particle
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+            // Method to update particle's position and handle interactions
+            update() {
+                // Bounce off edges
+                if (this.x > canvas.width || this.x < 0) {
+                    this.directionX = -this.directionX;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.directionY = -this.directionY;
+                }
+                // Mouse interaction: push particles away
+                if (mouse.x && mouse.y) {
+                    let dx = mouse.x - this.x;
+                    let dy = mouse.y - this.y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < mouse.radius + this.size) {
+                        if (mouse.x < this.x && this.x < canvas.width - this.size * 10) this.x += 3;
+                        if (mouse.x > this.x && this.x > this.size * 10) this.x -= 3;
+                        if (mouse.y < this.y && this.y < canvas.height - this.size * 10) this.y += 3;
+                        if (mouse.y > this.y && this.y > this.size * 10) this.y -= 3;
+                    }
+                }
+                // Move particle
+                this.x += this.directionX;
+                this.y += this.directionY;
+                this.draw();
+            }
+        }
+
+        // Function to initialize the particle array
+        function initParticles() {
+            particles = [];
+            let numberOfParticles = (canvas.height * canvas.width) / 12000;
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = (Math.random() * 2) + 1;
+                let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                let directionX = (Math.random() * .4) - .2;
+                let directionY = (Math.random() * .4) - .2;
+                let color = 'rgba(165, 180, 252, 0.5)';
+                particles.push(new Particle(x, y, directionX, directionY, size, color));
+            }
+        }
+
+        // Function to draw lines between nearby particles
+        function connectParticles() {
+            let opacityValue = 1;
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a; b < particles.length; b++) {
+                    let distance = ((particles[a].x - particles[b].x) * (particles[a].x - particles[b].x)) +
+                        ((particles[a].y - particles[b].y) * (particles[a].y - particles[b].y));
+                    if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+                        opacityValue = 1 - (distance / 20000);
+                        ctx.strokeStyle = `rgba(199, 210, 254, ${opacityValue})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[a].x, particles[a].y);
+                        ctx.lineTo(particles[b].x, particles[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        // Animation loop
+        function animateParticles() {
+            requestAnimationFrame(animateParticles);
+            ctx.clearRect(0, 0, innerWidth, innerHeight);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+            }
+            connectParticles();
+        }
+
+        // Resize canvas and re-initialize particles on window resize
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            mouse.radius = (canvas.height / 80) * (canvas.width / 80);
+            initParticles(); 
+        }
+
+        // --- Main execution on window load ---
+        window.onload = () => {
+            canvas = document.getElementById('particle-canvas');
+            ctx = canvas.getContext('2d');
+            mouse = { x: null, y: null, radius: (canvas.height / 80) * (canvas.width / 80) };
+            
+            window.addEventListener('resize', resizeCanvas);
+            window.addEventListener('mousemove', (e) => {
+                mouse.x = e.x;
+                mouse.y = e.y;
+            });
+            window.addEventListener('mouseout', () => {
+                mouse.x = null;
+                mouse.y = null;
+            });
+
+            resizeCanvas();
+            animateParticles();
+        };
+    </script>
+</body>
+</html>
