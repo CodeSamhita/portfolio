@@ -363,13 +363,22 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const openLightbox = (imgSrc, caption) => {
             if (!lightboxImg || !lightboxCaption) return;
-            lightbox.style.display = "block";
+            // Use flexbox for centering
+            lightbox.style.display = "flex";
+            lightbox.style.alignItems = "center";
+            lightbox.style.justifyContent = "center";
+            
             lightboxImg.src = imgSrc;
             lightboxCaption.innerHTML = caption;
+            
+            // Prevent body from scrolling
+            document.body.style.overflow = 'hidden';
         };
         
         const closeLightbox = () => {
             lightbox.style.display = "none";
+            // Restore body scrolling
+            document.body.style.overflow = 'auto';
         };
 
         const init = () => {
@@ -380,7 +389,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             closeBtn?.addEventListener('click', closeLightbox);
             lightbox.addEventListener('click', (e) => {
-                if (e.target === lightbox) closeLightbox();
+                // Close when clicking anywhere outside the image itself
+                if (e.target !== lightboxImg) {
+                    closeLightbox();
+                }
             });
         };
         
