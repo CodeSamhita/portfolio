@@ -1,124 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Under Construction-ish...</title>
-  <style>
-    body {
-      background-color: #0d0d0d;
-      color: #eeeeee;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-      overflow: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Animated Gradient Background */
+            background: linear-gradient(-45deg, #111827, #1f2937, #374151, #4b5563);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
 
-    h1 {
-      font-size: 3rem;
-      color: #ff4c4c;
-      text-shadow: 0 0 20px #ff4c4c;
-      animation: shake 0.4s infinite alternate;
-    }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 20px;
-      color: #ccc;
-    }
+        /* Floating animation for the main card */
+        .card-float {
+            animation: float 6s ease-in-out infinite;
+        }
 
-    .emoji {
-      font-size: 2.5rem;
-      margin: 10px;
-      animation: bounce 1.5s infinite;
-    }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
 
-    .loading-bar {
-      width: 300px;
-      height: 20px;
-      background-color: #333;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 10px #00ffc3;
-      margin-bottom: 30px;
-    }
+        /* Glowing pulse animation for the profile picture */
+        .profile-pulse {
+            animation: pulse-glow 3s infinite alternate;
+            border-color: #3b82f6; /* Tailwind's blue-600 */
+        }
 
-    .loading-progress {
-      height: 100%;
-      width: 0;
-      background: linear-gradient(to right, #00ffc3, #00ff94);
-      animation: load 4s infinite;
-    }
-
-    button {
-      background-color: #00ffc3;
-      color: #000;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 15px #00ffc3;
-    }
-
-    button:hover {
-      background-color: #00ff94;
-      transform: scale(1.1) rotate(-2deg);
-    }
-
-    @keyframes shake {
-      from { transform: rotate(-2deg); }
-      to { transform: rotate(2deg); }
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    @keyframes load {
-      0% { width: 0%; }
-      50% { width: 80%; }
-      100% { width: 0%; }
-    }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.8rem;
-      color: #666;
-    }
-  </style>
+        @keyframes pulse-glow {
+            from {
+                box-shadow: 0 0 10px #1e40af, 0 0 20px #3b82f6;
+            }
+            to {
+                box-shadow: 0 0 20px #1e40af, 0 0 40px #3b82f6;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="text-white flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
 
-  <h1>🛠️ Portfolio Under Construction-ish 🚧</h1>
-  <div class="emoji">🤖💥🧪</div>
-  <p>
-    This portfolio is still in the lab!<br>
-    We accidentally hired a cat to do the coding and now everything's in Comic Sans...<br>
-    But hey, you're welcome to peek behind the curtain 👀
-  </p>
+    <!-- Added 'card-float' class for animation -->
+    <div class="w-full max-w-md mx-auto bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-2xl shadow-blue-500/20 overflow-hidden border border-gray-700 card-float">
+        <div class="p-8 sm:p-10 text-center">
+            <!-- Added 'profile-pulse' class for animation -->
+            <img class="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto mb-5 border-4 profile-pulse" 
+                 src="image/profile.jpg" 
+                 alt="Profile Picture"
+                 onerror="this.onerror=null;this.src='https://placehold.co/200x200/1f2937/a5b4fc?text=Error';">
+            
+            <!-- Name and Title -->
+            <h1 class="text-3xl sm:text-4xl font-bold text-white mb-1">Aditya Sharma</h1>
+            <p class="text-md sm:text-lg text-blue-300 mb-6">Innovator & Creative Coder</p>
 
-  <div class="loading-bar">
-    <div class="loading-progress"></div>
-  </div>
+            <!-- Link Buttons -->
+            <div class="space-y-4">
+                <!-- Enhanced hover effects with duration-300 -->
+                <a href="portfolio v4/index.html" class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-md">
+                    My Portfolio
+                </a>
+                <a href="https://bubbl.cards/profile/729c6379-6979-47e7-adec-a77b2011ee10" class="block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-md">
+                    Contact Me
+                    <p>Powered By Bubble Cards</p>
+                </a>
+            </div>
+        </div>
 
-  <button onclick="continueAnyway()">I dare you to continue 😎</button>
-
-  <footer><H2>Built with 🧠, ☕, and mild panic.</H2></footer>
-
-  <script>
-    function continueAnyway() {
-      window.location.href = "portfolio%20v4/index.html";
-    }
-  </script>
+        <!-- Footer -->
+        <footer class="bg-gray-900/70 text-center py-4">
+            <p class="text-sm text-gray-400">&copy; 2024 Aditya Sharma. All Rights Reserved.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
