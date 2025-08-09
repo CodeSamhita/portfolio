@@ -50,9 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const init = () => {
+            if (!toggleModeBtn) return; // Exit if the button isn't on the page
             const isLightModeStored = localStorage.getItem('light-mode') === 'true';
             applyTheme(isLightModeStored);
-            toggleModeBtn?.addEventListener('click', () => {
+            toggleModeBtn.addEventListener('click', () => {
                 applyTheme(!body.classList.contains('light-mode'));
             });
         };
@@ -63,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Typed.js Text Animation ---
     const typedTextHandler = (() => {
         const init = () => {
+            // The check for 'Typed' and the element ID is already safe.
             if (typeof Typed !== 'undefined' && document.getElementById('typed-text')) {
                 new Typed('#typed-text', {
                     strings: [
@@ -105,24 +107,24 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const init = () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const projectCountEl = document.getElementById('projectCount');
-                        const githubReposEl = document.getElementById('githubRepos');
-                        const yearsExperienceEl = document.getElementById('yearsExperience');
-                        
-                        animateCounter(projectCountEl, 12);
-                        animateCounter(githubReposEl, 25);
-                        animateCounter(yearsExperienceEl, new Date().getFullYear() - 2018);
-                        
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-
             const statsSection = document.getElementById('stats');
+            // The check for statsSection makes this safe.
             if (statsSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const projectCountEl = document.getElementById('projectCount');
+                            const githubReposEl = document.getElementById('githubRepos');
+                            const yearsExperienceEl = document.getElementById('yearsExperience');
+                            
+                            animateCounter(projectCountEl, 12);
+                            animateCounter(githubReposEl, 25);
+                            animateCounter(yearsExperienceEl, new Date().getFullYear() - 2018);
+                            
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
                 observer.observe(statsSection);
             }
         };
@@ -132,6 +134,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Project Loader, Filter & Likes ---
     const projectHandler = (() => {
         const container = document.getElementById('projects-container');
+        // **FIX**: If the projects container doesn't exist, this handler is not needed.
+        if (!container) {
+            return { init: () => {} }; // Return a dummy init function.
+        }
+
         const loadingMsg = document.getElementById('loading-projects');
         const filters = document.getElementById('project-filters');
         const modal = new bootstrap.Modal(document.getElementById('projectDetailModal'));
@@ -247,6 +254,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Skills Modal ---
     const skillsHandler = (() => {
+        const skillsSection = document.getElementById('skills');
+        // **FIX**: If the skills section doesn't exist, this handler is not needed.
+        if (!skillsSection) {
+            return { init: () => {} };
+        }
+        
         const modal = new bootstrap.Modal(document.getElementById('skillDetailModal'));
         const skillData = {
             "Programming Languages": { description: "Proficient in C, C++, Java, Python, HTML5, CSS3, and JavaScript.", relatedProjects: ["Interactive Portfolio Website", "Humanoid Bot"], relatedCertifications: ["30 Days of Python"] },
@@ -284,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const init = () => {
-            document.querySelectorAll('#skills .custom-list li').forEach(item => {
+            skillsSection.querySelectorAll('.custom-list li').forEach(item => {
                 item.addEventListener('click', () => {
                     const skillName = item.dataset.skill;
                     if (skillName) {
@@ -300,10 +313,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Contact Form ---
     const contactFormHandler = (() => {
         const form = document.getElementById('contact-form');
+        // **FIX**: If the form doesn't exist, this handler is not needed.
+        if (!form) {
+            return { init: () => {} };
+        }
+
         const formMessage = document.getElementById('form-message');
 
         const init = () => {
-            form?.addEventListener('submit', async (e) => {
+            form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const formData = new FormData(form);
                 formMessage.innerHTML = '<div class="text-info">Sending...</div>';
@@ -334,19 +352,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Gallery Lightbox ---
     const lightboxHandler = (() => {
         const lightbox = document.getElementById('lightbox');
+        // This handler is safe because it checks for the lightbox element.
+        if (!lightbox) {
+            return { init: () => {} };
+        }
+
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxCaption = document.getElementById('lightbox-caption');
-        const closeBtn = lightbox?.querySelector('.lightbox-close');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
         
         const openLightbox = (imgSrc, caption) => {
-            if (!lightbox || !lightboxImg || !lightboxCaption) return;
+            if (!lightboxImg || !lightboxCaption) return;
             lightbox.style.display = "block";
             lightboxImg.src = imgSrc;
             lightboxCaption.innerHTML = caption;
         };
         
         const closeLightbox = () => {
-            if (lightbox) lightbox.style.display = "none";
+            lightbox.style.display = "none";
         };
 
         const init = () => {
@@ -356,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
             closeBtn?.addEventListener('click', closeLightbox);
-            lightbox?.addEventListener('click', (e) => {
+            lightbox.addEventListener('click', (e) => {
                 if (e.target === lightbox) closeLightbox();
             });
         };
@@ -381,6 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     const intersectionObserverHandler = () => {
+        if (faders.length === 0) return;
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
