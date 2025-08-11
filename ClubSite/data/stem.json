@@ -3,7 +3,7 @@
     "primaryColor": "#FFB400",
     "textColor": "#E8E8E8",
     "clubBio": "The STEM Club is committed to fostering curiosity and passion for Science, Technology, Engineering, and Mathematics through interactive workshops, competitions, and speaker sessions.",
-    "clubImage": "image/stem/logo.jpg",
+    "clubImage": "image/Stem/logo.jpg",
     "officials": [
         { "position": "President", "name": "BHRIGU GUPTA", "contact": "+917006901099", "photo": "https://placehold.co/120x120/333/efefef?text=BG", "bio": "A visionary leader passionate about promoting STEM education.", "social": { "linkedin": "https://www.linkedin.com/in/bhrigugupta?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", "email": "mailto:bhrigu.20221cse0068@presidencyuniversity.in" } },
         { "position": "Vice President", "name": "SAKSHI KUMARI", "contact": "+919430743975", "photo": "https://placehold.co/120x120/333/efefef?text=SK", "bio": "Dedicated to creating engaging and educational STEM activities.", "social": { "linkedin": "https://www.linkedin.com/in/sakshi-kumari-103b52212", "email": "mailto:sakshi.20221cse0388@presidencyuniversity.in" } },
