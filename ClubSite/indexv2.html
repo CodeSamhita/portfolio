@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- This viewport meta tag is crucial for responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Build Club Collective</title>
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <!-- Google Fonts for a modern look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -308,6 +305,7 @@
         .fa-envelope:hover { color: #f2a60c; }
         .fa-phone:hover { color: #66d9ff; }
         .fa-whatsapp:hover { color: #25D366; }
+        .fa-youtube:hover { color: #FF0000; }
 
         .event-card { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;}
         .event-title { font-weight: 600; }
@@ -496,6 +494,25 @@
 
                 const defaultWhatsappMsg = encodeURIComponent("Hey, I'm contacting you from the Club Page portal.");
 
+                // --- CHANGE HERE: Build the club's main social links dynamically ---
+                const clubSocialLinksConfig = [
+                    { key: 'whatsapp', icon: 'fab fa-whatsapp', text: 'WhatsApp' },
+                    { key: 'instagram', icon: 'fab fa-instagram', text: 'Instagram' },
+                    { key: 'linkedin', icon: 'fab fa-linkedin', text: 'LinkedIn' },
+                    { key: 'youtube', icon: 'fab fa-youtube', text: 'YouTube' }
+                ];
+
+                let clubSocialLinksHtml = '';
+                if (data.links) {
+                    clubSocialLinksConfig.forEach(linkInfo => {
+                        const url = data.links[linkInfo.key];
+                        // Check if the URL exists, is not "N/A", and is not just a placeholder "#"
+                        if (url && url.toLowerCase() !== 'n/a' && url.trim() !== '#') {
+                            clubSocialLinksHtml += `<a href="${url}" target="_blank"><i class="${linkInfo.icon}"></i><span>${linkInfo.text}</span></a>`;
+                        }
+                    });
+                }
+                
                 const leftPanelHtml = `
                     <div class="left-panel">
                         <div class="club-header">
@@ -505,10 +522,7 @@
                         <div class="club-social-links">
                             <h3 class="section-title">Connect</h3>
                             <div class="club-social-icons">
-                                <a href="${data.links.whatsapp}" target="_blank"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
-                                <a href="${data.links.instagram}" target="_blank"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-                                <a href="${data.links.linkedin}" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
-                                <a href="${data.links.email}"><i class="fas fa-envelope"></i><span>Email</span></a>
+                                ${clubSocialLinksHtml}
                             </div>
                         </div>
                     </div>`;
@@ -518,8 +532,27 @@
                     ${data.officials.map(p => {
                         const hasContact = p.contact && p.contact.toLowerCase() !== 'n/a';
                         const phoneLink = hasContact ? `tel:${p.contact}` : '#';
-                        const whatsappLink = hasContact ? `https://wa.me/${p.contact}?text=${defaultWhatsappMsg}` : '#';
-
+                        const whatsappLink = hasContact ? `https://wa.me/${p.contact.replace(/[^0-9]/g, '')}?text=${defaultWhatsappMsg}` : '#';
+                        
+                        const socialIconsMap = {
+                            linkedin: 'fab fa-linkedin',
+                            email: 'fas fa-envelope',
+                            youtube: 'fab fa-youtube',
+                            github: 'fab fa-github',
+                            twitter: 'fab fa-twitter'
+                        };
+                        
+                        let socialIconsHtml = '';
+                        if (p.social) {
+                            for (const [key, value] of Object.entries(p.social)) {
+                                const iconClass = socialIconsMap[key] || 'fas fa-link';
+                                const title = key.charAt(0).toUpperCase() + key.slice(1);
+                                if (value && value.toLowerCase() !== 'n/a' && value.trim() !== '#') {
+                                     socialIconsHtml += `<a href="${value}" target="_blank" title="${title}"><i class="${iconClass}"></i></a>`;
+                                }
+                            }
+                        }
+                        
                         return `
                             <div class="official-card">
                                 <img src="${p.photo}" alt="${p.name}" class="official-photo" onerror="this.onerror=null;this.src='https.placehold.co/60x60/333/efefef?text=:)';">
@@ -530,8 +563,7 @@
                                     <div class="official-social-icons">
                                         ${hasContact ? `<a href="${phoneLink}" title="Call"><i class="fas fa-phone"></i></a>` : ''}
                                         ${hasContact ? `<a href="${whatsappLink}" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>` : ''}
-                                        <a href="${p.social.linkedin}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                        <a href="${p.social.email}" title="Email"><i class="fas fa-envelope"></i></a>
+                                        ${socialIconsHtml}
                                     </div>
                                 </div>
                             </div>`;
@@ -594,7 +626,7 @@
                     if (clubDataCache[clubId]) {
                         renderClubInfo(clubId, clubDataCache[clubId]);
                     } else {
-                        // Fetch new data
+                        // Fetch new data. Assumes a 'data' folder exists next to the HTML file.
                         fetch(`./data/${clubId}.json`)
                             .then(response => {
                                 if (!response.ok) throw new Error(`Could not load ${clubId}.json`);
