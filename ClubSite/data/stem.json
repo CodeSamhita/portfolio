@@ -1,7 +1,7 @@
 {
-    "theme": "linear-gradient(-45deg, #0F0E0E, #2c2c2c, #0F0E0E, #2c2c2c)",
-    "primaryColor": "#FFB400",
-    "textColor": "#E8E8E8",
+    "theme": "linear-gradient(-45deg, #0B0F0C, #1E2B22, #0B0F0C, #1E2B22)",
+    "primaryColor": "#00B86B",
+    "textColor": "#D6FFD9",
     "clubBio": "The STEM Club is committed to fostering curiosity and passion for Science, Technology, Engineering, and Mathematics through interactive workshops, competitions, and speaker sessions.",
     "clubImage": "image/Stem/logo.jpg",
     "officials": [

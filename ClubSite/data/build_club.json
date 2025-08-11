@@ -1,7 +1,7 @@
 {
-    "theme": "linear-gradient(-45deg, #0B0D13, #1f222e, #0B0D13, #1f222e)",
-    "primaryColor": "#6C63FF",
-    "textColor": "#F0F0F0",
+    "theme": "linear-gradient(-45deg, #0F0E0E, #2c2c2c, #0F0E0E, #2c2c2c)",
+    "primaryColor": "#FFB400",
+    "textColor": "#E8E8E8",
     "clubBio": "The BUILD Club is the cornerstone of innovation at Presidency University, fostering a hands-on approach to technology. We empower students to turn ideas into reality through workshops, projects, and collaborative events.",
     "clubImage": "https://github.com/CodeSamhita/portfolio/blob/main/ClubSite/image/Build/build.png",
     "officials": [
