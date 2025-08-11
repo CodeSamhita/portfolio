@@ -27,7 +27,7 @@
             height: 100%;
             font-family: 'Poppins', sans-serif;
             color: var(--text-color);
-            overflow-x: hidden;
+            overflow-x: auto; /* Allow horizontal scrolling if needed */
         }
 
         body {
@@ -35,6 +35,7 @@
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
             transition: background 0.8s ease-in-out;
+            min-width: 900px; /* Force a minimum width to maintain desktop layout */
         }
 
         @keyframes gradientBG {
@@ -55,6 +56,7 @@
             top: 0;
             left: 0;
             width: 100%;
+            min-width: 900px;
             height: var(--header-height);
             display: flex;
             justify-content: center;
@@ -163,8 +165,8 @@
             border-radius: 15px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            width: 800px;
-            max-width: 95vw;
+            width: 90%;
+            max-width: 1100px; /* Increased max-width */
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             opacity: 0;
             transform: translateY(50px);
@@ -194,7 +196,7 @@
         }
 
         .card-layout { display: flex; gap: 20px; }
-        .left-panel { flex: 0 0 250px; display: flex; flex-direction: column; align-items: center; }
+        .left-panel { flex: 0 0 300px; display: flex; flex-direction: column; align-items: center; }
         .right-panel { flex: 1 1 auto; min-width: 0; }
         
         .club-header {
@@ -277,6 +279,7 @@
             display: flex; justify-content: center; align-items: center;
             background-color: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px);
             border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.8em; color: #aaa; z-index: 1000;
+            min-width: 900px;
         }
 
     </style>
