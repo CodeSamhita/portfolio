@@ -7,7 +7,7 @@
     "officials": [
         { "position": "President", "name": "BHRIGU GUPTA", "contact": "+917006901099", "photo": "https://placehold.co/120x120/333/efefef?text=BG", "bio": "A visionary leader passionate about promoting STEM education.", "social": { "linkedin": "#", "email": "mailto:bhrigu@example.com" } },
         { "position": "Vice President", "name": "SAKSHI KUMARI", "contact": "+919430743975", "photo": "https://placehold.co/120x120/333/efefef?text=SK", "bio": "Dedicated to creating engaging and educational STEM activities.", "social": { "linkedin": "#", "email": "mailto:sakshi@example.com" } },
-        { "position": "Secretary", "name": "HEMANTH G", "contact": "N/A", "photo": "https://placehold.co/120x120/333/efefef?text=HG", "bio": "A key member ensuring the smooth functioning of STEM club events.", "social": { "linkedin": "#", "email": "mailto:hemanth@example.com" } },
+        { "position": "Secretary", "name": "HEMANTH G", "contact": "+919353000578", "photo": "https://placehold.co/120x120/333/efefef?text=HG", "bio": "A key member ensuring the smooth functioning of STEM club events.", "social": { "linkedin": "https://www.linkedin.com/in/hemanth-g-782881256/", "email": "mailto:HEMANTH.20221CSE0075@presidencyuniversity.in" } },
         { "position": "Joint-Secretary", "name": "ANWIN DILIP", "contact": "N/A", "photo": "https://placehold.co/120x120/333/efefef?text=AD", "bio": "Assisting in the organization and promotion of STEM activities.", "social": { "linkedin": "#", "email": "mailto:anwin@example.com" } }
     ],
     "events": [
@@ -15,5 +15,5 @@
         { "title": "Educational Kit Workshop & Volunteer Training", "date": "03-09-2025" },
         { "title": "Idea to Impact: The X-RS Prototype", "date": "10-09-2025" }
     ],
-    "links": { "whatsapp": "#", "instagram": "https://instagram.com/stem_club", "linkedin": "#", "email": "mailto:stem.club@presidencyuniversity.in" }
+    "links": { "whatsapp": "#", "instagram": "https://www.instagram.com/stemclub_presidencyuniversity?utm_source=qr&igsh=MWdhaDJoNDY4YjNxdg==", "linkedin": "https://www.linkedin.com/company/stem-club-presidency-university/", "email": "mailto:stem.club@presidencyuniversity.in" }
 }
