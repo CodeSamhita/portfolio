@@ -1,0 +1,19 @@
+{
+    "theme": "linear-gradient(-45deg, #0B0D13, #1f222e, #0B0D13, #1f222e)",
+    "primaryColor": "#6C63FF",
+    "textColor": "#F0F0F0",
+    "clubBio": "The STEM Club is committed to fostering curiosity and passion for Science, Technology, Engineering, and Mathematics through interactive workshops, competitions, and speaker sessions.",
+    "clubImage": "https://placehold.co/120x120/6C63FF/0B0D13?text=STEM",
+    "officials": [
+        { "position": "President", "name": "BHRIGU GUPTA", "contact": "+917006901099", "photo": "https://placehold.co/120x120/333/efefef?text=BG", "bio": "A visionary leader passionate about promoting STEM education.", "social": { "linkedin": "#", "email": "mailto:bhrigu@example.com" } },
+        { "position": "Vice President", "name": "SAKSHI KUMARI", "contact": "+919430743975", "photo": "https://placehold.co/120x120/333/efefef?text=SK", "bio": "Dedicated to creating engaging and educational STEM activities.", "social": { "linkedin": "#", "email": "mailto:sakshi@example.com" } },
+        { "position": "Secretary", "name": "HEMANTH G", "contact": "N/A", "photo": "https://placehold.co/120x120/333/efefef?text=HG", "bio": "A key member ensuring the smooth functioning of STEM club events.", "social": { "linkedin": "#", "email": "mailto:hemanth@example.com" } },
+        { "position": "Joint-Secretary", "name": "ANWIN DILIP", "contact": "N/A", "photo": "https://placehold.co/120x120/333/efefef?text=AD", "bio": "Assisting in the organization and promotion of STEM activities.", "social": { "linkedin": "#", "email": "mailto:anwin@example.com" } }
+    ],
+    "events": [
+        { "title": "ALL CLUB DIV ORIENTATION", "date": "20-08-2025" },
+        { "title": "Educational Kit Workshop & Volunteer Training", "date": "03-09-2025" },
+        { "title": "Idea to Impact: The X-RS Prototype", "date": "10-09-2025" }
+    ],
+    "links": { "whatsapp": "#", "instagram": "https://instagram.com/stem_club", "linkedin": "#", "email": "mailto:stem.club@presidencyuniversity.in" }
+}

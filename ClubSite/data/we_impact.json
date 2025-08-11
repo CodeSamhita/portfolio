@@ -1,0 +1,20 @@
+{
+    "theme": "linear-gradient(-45deg, #121212, #282828, #121212, #282828)",
+    "primaryColor": "#FF4F5A",
+    "textColor": "#E0E0E0",
+    "clubBio": "WE IMPACT is a community-driven club focused on leveraging technology for social good. We aim to empower women in tech and create solutions that make a real-world difference.",
+    "clubImage": "https://placehold.co/120x120/FF4F5A/121212?text=WE",
+    "officials": [
+        { "position": "President", "name": "ANNIE MARY JOSEPH", "contact": "9902080950", "photo": "https://placehold.co/120x120/333/efefef?text=AJ", "bio": "A compassionate leader focused on creating a positive social impact.", "social": { "linkedin": "#", "email": "mailto:annie@example.com" } },
+        { "position": "Vice President", "name": "SAKSHI NAGARAJ", "contact": "9036552751", "photo": "https://placehold.co/120x120/333/efefef?text=SN", "bio": "Driving meaningful change and empowering members to contribute.", "social": { "linkedin": "#", "email": "mailto:sakshin@example.com" } },
+        { "position": "Secretary", "name": "V JEMIMAH", "contact": "N/A", "photo": "https://placehold.co/120x120/333/efefef?text=VJ", "bio": "Dedicated to the club's mission of social good through technology.", "social": { "linkedin": "#", "email": "mailto:jemimah@example.com" } },
+        { "position": "Joint-Secretary", "name": "SANJANA", "contact": "N/A", "photo": "https://placehold.co/120x120/333/efefef?text=S", "bio": "Supporting the club's vision and helping to organize impactful events.", "social": { "linkedin": "#", "email": "mailto:sanjana@example.com" } }
+    ],
+    "events": [
+        { "title": "Orientation", "date": "22-08-2025" },
+        { "title": "Tap to Empower", "date": "30-08-2025" },
+        { "title": "SheWell: A Talk on Hygiene & Confidence", "date": "05-09-2025" },
+        { "title": "BugBlitz: Code. Catch. Create.", "date": "20-09-2025" }
+    ],
+    "links": { "whatsapp": "#", "instagram": "https://instagram.com/we_impact_club", "linkedin": "#", "email": "mailto:weimpact.club@presidencyuniversity.in" }
+}
