@@ -1,14 +1,14 @@
 {
-    "theme": "linear-gradient(-45deg, #0B0D13, #1f222e, #0B0D13, #1f222e)",
-    "primaryColor": "#6C63FF",
-    "textColor": "#F0F0F0",
+    "theme": "linear-gradient(-45deg, #0F0E0E, #2c2c2c, #0F0E0E, #2c2c2c)",
+    "primaryColor": "#FFB400",
+    "textColor": "#E8E8E8",
     "clubBio": "The STEM Club is committed to fostering curiosity and passion for Science, Technology, Engineering, and Mathematics through interactive workshops, competitions, and speaker sessions.",
     "clubImage": "image/stem/logo.jpg",
     "officials": [
         { "position": "President", "name": "BHRIGU GUPTA", "contact": "+917006901099", "photo": "https://placehold.co/120x120/333/efefef?text=BG", "bio": "A visionary leader passionate about promoting STEM education.", "social": { "linkedin": "https://www.linkedin.com/in/bhrigugupta?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", "email": "mailto:bhrigu.20221cse0068@presidencyuniversity.in" } },
-        { "position": "Vice President", "name": "SAKSHI KUMARI", "contact": "+919430743975", "photo": "https://placehold.co/120x120/333/efefef?text=SK", "bio": "Dedicated to creating engaging and educational STEM activities.", "social": { "linkedin": "#", "email": "mailto:sakshi@example.com" } },
+        { "position": "Vice President", "name": "SAKSHI KUMARI", "contact": "+919430743975", "photo": "https://placehold.co/120x120/333/efefef?text=SK", "bio": "Dedicated to creating engaging and educational STEM activities.", "social": { "linkedin": "https://www.linkedin.com/in/sakshi-kumari-103b52212", "email": "mailto:sakshi.20221cse0388@presidencyuniversity.in" } },
         { "position": "Secretary", "name": "HEMANTH G", "contact": "+919353000578", "photo": "https://placehold.co/120x120/333/efefef?text=HG", "bio": "I ensure smooth operations by managing communications, organizing meetings, and maintaining records. Passionate about fostering STEM education, I support our club’s mission to inspire innovation and collaboration among members. Let’s explore, learn, and grow together!", "social": { "linkedin": "https://www.linkedin.com/in/hemanth-g-782881256/", "email": "mailto:HEMANTH.20221CSE0075@presidencyuniversity.in" } },
-        { "position": "Joint-Secretary", "name": "ANWIN DILIP", "contact": "N/A", "photo": "https://placehold.co/120x120/333/efefef?text=AD", "bio": "Assisting in the organization and promotion of STEM activities.", "social": { "linkedin": "#", "email": "mailto:anwin@example.com" } }
+        { "position": "Joint-Secretary", "name": "ANWIN DILIP", "contact": "N/A", "photo": "https://placehold.co/120x120/333/efefef?text=AD", "bio": "Assisting in the organization and promotion of STEM activities.", "social": { "linkedin": "https://www.linkedin.com/in/anwin-dilip", "email": "mailto:anwin.20221cse0081@presidencyuniversity.in" } }
     ],
     "events": [
         { "title": "ALL CLUB DIV ORIENTATION", "date": "20-08-2025" },

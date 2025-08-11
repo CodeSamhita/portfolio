@@ -1,9 +1,9 @@
 {
-    "theme": "linear-gradient(-45deg, #0F0E0E, #2c2c2c, #0F0E0E, #2c2c2c)",
-    "primaryColor": "#FFB400",
-    "textColor": "#E8E8E8",
+    "theme": "linear-gradient(-45deg, #0B0D13, #1f222e, #0B0D13, #1f222e)",
+    "primaryColor": "#6C63FF",
+    "textColor": "#F0F0F0",
     "clubBio": "The BUILD Club is the cornerstone of innovation at Presidency University, fostering a hands-on approach to technology. We empower students to turn ideas into reality through workshops, projects, and collaborative events.",
-    "clubImage": "image/Build/build.png",
+    "clubImage": "ClubSite/image/Build/build.png",
     "officials": [
         { "position": "President", "name": "FAIZAN AHMED", "contact": "+918095287273", "photo": "https://placehold.co/120x120/333/efefef?text=FA", "bio": "A dedicated leader with a passion for technology and innovation.", "social": { "linkedin": "#", "email": "mailto:faizan@example.com" } },
         { "position": "Vice President", "name": "SATVIK KR", "contact": "+919482380560", "photo": "https://placehold.co/120x120/333/efefef?text=SK", "bio": "Strategic thinker and problem-solver, supporting the club's growth.", "social": { "linkedin": "#", "email": "mailto:satvik@example.com" } },
