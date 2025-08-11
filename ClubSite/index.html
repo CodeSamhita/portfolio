@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Club Collective</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Google Fonts for a modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS for styling the page */
+        :root {
+            --primary-color: #00aaff;
+            --card-bg: rgba(0, 0, 0, 0.4);
+            --dark-bg: #1a1a2e;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            background-color: var(--dark-bg);
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .club-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .club-nav a {
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .club-nav a:hover, .club-nav a.active {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+            border-color: var(--primary-color);
+        }
+        
+        .initial-message {
+            padding: 40px;
+            transition: opacity 0.4s ease-out, display 0.4s;
+        }
+        
+        .initial-message.hidden {
+            opacity: 0;
+            display: none;
+        }
+
+        .contact-card {
+            display: none;
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+        
+        .contact-card.visible { display: block; }
+        .contact-card.fade-in { opacity: 1; }
+        
+        .club-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+        .club-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-color);
+            flex-shrink: 0;
+        }
+        .club-bio {
+            text-align: left;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        .office-bearers-container {
+            max-height: 45vh;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .official-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .official-photo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            flex-shrink: 0;
+        }
+        .official-details { flex-grow: 1; }
+        .official-details h4 { margin: 0 0 2px 0; }
+        .official-details strong {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: block;
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
+        .official-bio {
+            font-size: 0.85em;
+            line-height: 1.5;
+            margin: 8px 0 12px 0;
+            color: #ccc;
+        }
+        .official-social-icons { display: flex; gap: 15px; align-items: center; }
+        .official-social-icons a {
+            color: #ccc;
+            font-size: 1.2em;
+            transition: all 0.2s;
+        }
+        .official-social-icons a:hover { transform: scale(1.15); }
+        .fa-linkedin:hover { color: #0A66C2; }
+        .fa-envelope:hover { color: #f2a60c; }
+        .fa-phone:hover { color: #66d9ff; }
+        .fa-whatsapp:hover { color: #25D366; }
+
+        .club-social-links {
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .club-social-links h3 { margin: 0 0 15px 0; font-weight: 300; text-transform: uppercase; letter-spacing: 2px; font-size: 1em; }
+        .club-social-icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .club-social-icons a {
+            color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+            padding: 8px 15px; border-radius: 25px; background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+        .club-social-icons a:hover { background-color: var(--primary-color); transform: translateY(-2px); }
+        .club-social-icons span { font-size: 0.8em; }
+        .club-social-icons i { font-size: 1.4em; }
+
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="main-container">
+        <nav class="club-nav">
+            <ul>
+                <li><a href="#" class="club-link" data-club="build_club">BUILD CLUB</a></li>
+                <li><a href="#" class="club-link" data-club="aerodrone">AERODRONE</a></li>
+                <li><a href="#" class="club-link" data-club="stem">STEM</a></li>
+                <li><a href="#" class="club-link" data-club="we_impact">WE IMPACT</a></li>
+            </ul>
+        </nav>
+        <div class="initial-message" id="initial-message">
+            <h2>Select a club to continue</h2>
+        </div>
+        <div class="contact-card" id="contact-card"></div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            particlesJS("particles-js", {
+                particles: { number: { value: 80 }, color: { value: "#ffffff" }, shape: { type: "circle" }, opacity: { value: 0.5 }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4 }, move: { enable: true, speed: 4 } },
+                interactivity: { events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } } },
+            });
+
+            const clubLinks = document.querySelectorAll('.club-link');
+            const contactCard = document.getElementById('contact-card');
+            const initialMessage = document.getElementById('initial-message');
+
+            const placeholderImg = (text) => `https://placehold.co/100x100/333/efefef?text=${encodeURIComponent(text)}`;
+
+            const clubData = {
+                build_club: {
+                    clubBio: "The BUILD Club is the cornerstone of innovation at Presidency University, fostering a hands-on approach to technology. We empower students to turn ideas into reality through workshops, projects, and collaborative events.",
+                    clubImage: placeholderImg('BUILD'),
+                    officials: [
+                        { position: "President", name: "FAIZAN AHMED", contact: "8095287273", photo: placeholderImg('FA'), bio: "A dedicated leader with a passion for technology and innovation.", social: { linkedin: "#", email: "mailto:faizan@example.com" } },
+                        { position: "Vice President", name: "SATVIK KR", contact: "9482380560", photo: placeholderImg('SK'), bio: "Strategic thinker and problem-solver, supporting the club's growth.", social: { linkedin: "#", email: "mailto:satvik@example.com" } },
+                        { position: "Secretary", name: "GAGANA S", contact: "8310820700", photo: placeholderImg('GS'), bio: "Organized and efficient, managing the club's administrative tasks.", social: { linkedin: "#", email: "mailto:gagana@example.com" } },
+                        { position: "Joint-Secretary", name: "PAVAN K", contact: "7760895008", photo: placeholderImg('PK'), bio: "Proactive and resourceful, assisting in club management.", social: { linkedin: "#", email: "mailto:pavan@example.com" } }
+                    ],
+                    links: { whatsapp: "https://chat.whatsapp.com/JcZ2tY5Z6XF9xG8jB9kH7Y", instagram: "https://instagram.com/build_clubpresidencyuniversity", linkedin: "https://www.linkedin.com/company/build-club-presidency-university/", email: "mailto:build.club@presidencyuniversity.in" }
+                },
+                aerodrone: {
+                    clubBio: "Exploring the skies and beyond, the Aerodrone Club is dedicated to the design, construction, and flight of unmanned aerial vehicles. Join us to innovate in the exciting field of drone technology.",
+                    clubImage: placeholderImg('AERO'),
+                    officials: [
+                        { position: "President", name: "KOUSHIK YJ", contact: "7204668124", photo: placeholderImg('KY'), bio: "An aviation enthusiast leading the charge in drone technology.", social: { linkedin: "#", email: "mailto:koushik@example.com" } },
+                        { position: "Vice President", name: "SUHAS A SALUNKE", contact: "6364743539", photo: placeholderImg('SS'), bio: "Detail-oriented and analytical, ensuring project success.", social: { linkedin: "#", email: "mailto:suhas@example.com" } },
+                        { position: "Secretary", name: "POOJA METRI", contact: "7204817859", photo: placeholderImg('PM'), bio: "Ensuring smooth operations and communication for the Aerodrone club.", social: { linkedin: "#", email: "mailto:pooja@example.com" } },
+                        { position: "Joint-Secretary", name: "ADITYA D NAIK", contact: "9886622848", photo: placeholderImg('AN'), bio: "Supporting the club's initiatives with dedication and enthusiasm.", social: { linkedin: "#", email: "mailto:aditya@example.com" } }
+                    ],
+                    links: { whatsapp: "#", instagram: "https://instagram.com/aerodrone_club", linkedin: "#", email: "mailto:aerodrone.club@presidencyuniversity.in" }
+                },
+                stem: {
+                    clubBio: "The STEM Club is committed to fostering curiosity and passion for Science, Technology, Engineering, and Mathematics through interactive workshops, competitions, and speaker sessions.",
+                    clubImage: placeholderImg('STEM'),
+                    officials: [
+                        { position: "President", name: "BHRIGU GUPTA", contact: "7006901099", photo: placeholderImg('BG'), bio: "A visionary leader passionate about promoting STEM education.", social: { linkedin: "#", email: "mailto:bhrigu@example.com" } },
+                        { position: "Vice President", name: "SAKSHI KUMARI", contact: "9430743975", photo: placeholderImg('SK'), bio: "Dedicated to creating engaging and educational STEM activities.", social: { linkedin: "#", email: "mailto:sakshi@example.com" } },
+                        { position: "Secretary", name: "HEMANTH G", contact: "N/A", photo: placeholderImg('HG'), bio: "A key member ensuring the smooth functioning of STEM club events.", social: { linkedin: "#", email: "mailto:hemanth@example.com" } },
+                        { position: "Joint-Secretary", name: "ANWIN DILIP", contact: "N/A", photo: placeholderImg('AD'), bio: "Assisting in the organization and promotion of STEM activities.", social: { linkedin: "#", email: "mailto:anwin@example.com" } }
+                    ],
+                    links: { whatsapp: "#", instagram: "https://instagram.com/stem_club", linkedin: "#", email: "mailto:stem.club@presidencyuniversity.in" }
+                },
+                we_impact: {
+                    clubBio: "WE IMPACT is a community-driven club focused on leveraging technology for social good. We aim to empower women in tech and create solutions that make a real-world difference.",
+                    clubImage: placeholderImg('WE'),
+                    officials: [
+                        { position: "President", name: "ANNIE MARY JOSEPH", contact: "9902080950", photo: placeholderImg('AJ'), bio: "A compassionate leader focused on creating a positive social impact.", social: { linkedin: "#", email: "mailto:annie@example.com" } },
+                        { position: "Vice President", name: "SAKSHI NAGARAJ", contact: "9036552751", photo: placeholderImg('SN'), bio: "Driving meaningful change and empowering members to contribute.", social: { linkedin: "#", email: "mailto:sakshin@example.com" } },
+                        { position: "Secretary", name: "V JEMIMAH", contact: "N/A", photo: placeholderImg('VJ'), bio: "Dedicated to the club's mission of social good through technology.", social: { linkedin: "#", email: "mailto:jemimah@example.com" } },
+                        { position: "Joint-Secretary", name: "SANJANA", contact: "N/A", photo: placeholderImg('S'), bio: "Supporting the club's vision and helping to organize impactful events.", social: { linkedin: "#", email: "mailto:sanjana@example.com" } }
+                    ],
+                    links: { whatsapp: "#", instagram: "https://instagram.com/we_impact_club", linkedin: "#", email: "mailto:weimpact.club@presidencyuniversity.in" }
+                }
+            };
+
+            function showClubInfo(clubId) {
+                const data = clubData[clubId];
+                if (!data) {
+                    console.error("No data found for clubId:", clubId);
+                    return;
+                }
+
+                initialMessage.classList.add('hidden');
+                contactCard.classList.remove('fade-in');
+                
+                setTimeout(() => {
+                    const defaultWhatsappMsg = encodeURIComponent("I'm contacting you from the webpage.");
+                    
+                    const clubHeaderHtml = `
+                        <div class="club-header">
+                            <img src="${data.clubImage}" alt="${clubId} Logo" class="club-logo">
+                            <p class="club-bio">${data.clubBio}</p>
+                        </div>
+                    `;
+
+                    const officialsHtml = data.officials.map(p => {
+                        const hasContact = p.contact && p.contact.toLowerCase() !== 'n/a';
+                        const phoneLink = hasContact ? `tel:${p.contact}` : '#';
+                        const whatsappLink = hasContact ? `https://wa.me/${p.contact}?text=${defaultWhatsappMsg}` : '#';
+
+                        return `
+                            <div class="official-card">
+                                <img src="${p.photo}" alt="${p.name}" class="official-photo">
+                                <div class="official-details">
+                                    <h4>${p.name}</h4>
+                                    <strong>${p.position}</strong>
+                                    <p class="official-bio">${p.bio}</p>
+                                    <div class="official-social-icons">
+                                        ${hasContact ? `<a href="${phoneLink}" title="Call"><i class="fas fa-phone"></i></a>` : ''}
+                                        ${hasContact ? `<a href="${whatsappLink}" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>` : ''}
+                                        <a href="${p.social.linkedin}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                        <a href="${p.social.email}" title="Email"><i class="fas fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>`;
+                    }).join('');
+
+                    const clubSocialsHtml = `
+                        <div class="club-social-links">
+                             <h3>Connect With The Club</h3>
+                             <div class="club-social-icons">
+                                <a href="${data.links.whatsapp}" target="_blank"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+                                <a href="${data.links.instagram}" target="_blank"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+                                <a href="${data.links.linkedin}" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                                <a href="${data.links.email}"><i class="fas fa-envelope"></i><span>Email</span></a>
+                            </div>
+                        </div>
+                    `;
+
+                    contactCard.innerHTML = clubHeaderHtml + `<div class="office-bearers-container">${officialsHtml}</div>` + clubSocialsHtml;
+                    
+                    contactCard.classList.add('visible');
+                    setTimeout(() => contactCard.classList.add('fade-in'), 10);
+                }, 300);
+            }
+
+            clubLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const clubId = e.currentTarget.dataset.club;
+                    if (clubId && clubData[clubId]) {
+                        clubLinks.forEach(l => l.classList.remove('active'));
+                        e.currentTarget.classList.add('active');
+                        showClubInfo(clubId);
+                    } else {
+                        console.error("Invalid clubId from club link:", clubId);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
