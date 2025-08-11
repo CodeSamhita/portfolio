@@ -27,7 +27,7 @@
             height: 100%;
             font-family: 'Poppins', sans-serif;
             color: var(--text-color);
-            overflow-x: auto; /* Allow horizontal scrolling if needed */
+            overflow-x: hidden;
         }
 
         body {
@@ -35,7 +35,6 @@
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
             transition: background 0.8s ease-in-out;
-            min-width: 900px; /* Force a minimum width to maintain desktop layout */
         }
 
         @keyframes gradientBG {
@@ -56,7 +55,6 @@
             top: 0;
             left: 0;
             width: 100%;
-            min-width: 900px;
             height: var(--header-height);
             display: flex;
             justify-content: center;
@@ -71,7 +69,7 @@
 
         .site-header h1 {
             margin: 0;
-            font-size: 1.5em;
+            font-size: 1.2em;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #fff;
@@ -98,7 +96,7 @@
 
         .club-nav ul {
             list-style: none;
-            padding: 0;
+            padding: 0 20px;
             margin: 30px 0;
             display: flex;
             flex-wrap: wrap;
@@ -166,7 +164,7 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             width: 90%;
-            max-width: 1100px; /* Increased max-width */
+            max-width: 1100px;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             opacity: 0;
             transform: translateY(50px);
@@ -279,7 +277,30 @@
             display: flex; justify-content: center; align-items: center;
             background-color: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px);
             border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.8em; color: #aaa; z-index: 1000;
-            min-width: 900px;
+        }
+
+        @media (max-width: 900px) {
+            .card-layout {
+                flex-direction: column;
+            }
+            .left-panel {
+                flex-basis: auto;
+                border-right: none;
+                padding-right: 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+            }
+            .main-content-container {
+                max-height: 40vh;
+            }
+            .club-social-icons {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .club-social-icons a {
+                width: auto;
+            }
         }
 
     </style>
