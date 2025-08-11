@@ -16,6 +16,8 @@
             --primary-color: #00aaff;
             --card-bg: rgba(0, 0, 0, 0.4);
             --dark-bg: #1a1a2e;
+            --header-height: 80px;
+            --footer-height: 50px;
         }
 
         body, html {
@@ -33,6 +35,29 @@
             height: 100%;
             z-index: -1;
         }
+        
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(26, 26, 46, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        .site-header h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
         .main-container {
             display: flex;
@@ -41,7 +66,7 @@
             align-items: center;
             min-height: 100vh;
             text-align: center;
-            padding: 40px 20px;
+            padding: var(--header-height) 20px var(--footer-height) 20px;
             box-sizing: border-box;
         }
 
@@ -89,11 +114,29 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            max-width: 700px;
+            max-width: 800px;
             width: 100%;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             opacity: 0;
             transition: opacity 0.5s ease-in;
+            max-height: calc(100vh - var(--header-height) - var(--footer-height) - 100px);
+        }
+        
+        .card-layout {
+            display: flex;
+            gap: 20px;
+        }
+
+        .left-panel {
+            flex: 0 0 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .right-panel {
+            flex: 1 1 auto;
+            min-width: 0; /* Prevents flexbox overflow */
         }
         
         .contact-card.visible { display: block; }
@@ -101,45 +144,70 @@
         
         .club-header {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
             padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             margin-bottom: 20px;
+            width: 100%;
         }
         .club-logo {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid var(--primary-color);
+            border: 3px solid var(--primary-color);
             flex-shrink: 0;
         }
         .club-bio {
-            text-align: left;
+            text-align: center;
             font-size: 0.9em;
             color: #ccc;
         }
 
-        .office-bearers-container {
-            max-height: 45vh;
+        .main-content-container {
+            height: 100%;
+            max-height: calc(100vh - var(--header-height) - var(--footer-height) - 150px);
             overflow-y: auto;
-            padding-right: 10px;
+            padding-right: 15px;
+        }
+
+        .section-title {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 5px;
+            text-align: left;
+        }
+
+        .official-card, .event-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: left;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        .official-card.is-visible, .event-card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .official-card {
             display: flex;
             align-items: center;
             gap: 15px;
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            text-align: left;
         }
+
         .official-photo {
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid rgba(255, 255, 255, 0.2);
@@ -172,26 +240,83 @@
         .fa-phone:hover { color: #66d9ff; }
         .fa-whatsapp:hover { color: #25D366; }
 
+        .event-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .event-title {
+            font-weight: 600;
+        }
+        .event-date {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
         .club-social-links {
             padding-top: 20px;
-            margin-top: 20px;
+            margin-top: auto; /* Pushes to the bottom */
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
         }
-        .club-social-links h3 { margin: 0 0 15px 0; font-weight: 300; text-transform: uppercase; letter-spacing: 2px; font-size: 1em; }
-        .club-social-icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .club-social-icons { display: flex; flex-direction: column; align-items: center; gap: 10px; }
         .club-social-icons a {
             color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
             padding: 8px 15px; border-radius: 25px; background-color: rgba(255, 255, 255, 0.1);
             transition: all 0.3s;
+            width: 100%;
+            box-sizing: border-box;
+            justify-content: center;
         }
         .club-social-icons a:hover { background-color: var(--primary-color); transform: translateY(-2px); }
         .club-social-icons span { font-size: 0.8em; }
         .club-social-icons i { font-size: 1.4em; }
 
+        .site-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: var(--footer-height);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(26, 26, 46, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8em;
+            color: #aaa;
+            z-index: 1000;
+        }
+        
+        @media (max-width: 768px) {
+            .card-layout {
+                flex-direction: column;
+            }
+            .left-panel {
+                flex-basis: auto;
+            }
+            .main-content-container {
+                max-height: 40vh;
+            }
+            .club-social-icons {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .club-social-icons a {
+                width: auto;
+            }
+        }
+
     </style>
 </head>
 <body>
     <div id="particles-js"></div>
+    <header class="site-header">
+        <h1>Build Club Collective</h1>
+    </header>
     <div class="main-container">
         <nav class="club-nav">
             <ul>
@@ -206,6 +331,9 @@
         </div>
         <div class="contact-card" id="contact-card"></div>
     </div>
+    <footer class="site-footer">
+        <p>&copy; 2025 Presidency University Build Club. All Rights Reserved.</p>
+    </footer>
     
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
@@ -231,6 +359,12 @@
                         { position: "Secretary", name: "GAGANA S", contact: "8310820700", photo: placeholderImg('GS'), bio: "Organized and efficient, managing the club's administrative tasks.", social: { linkedin: "#", email: "mailto:gagana@example.com" } },
                         { position: "Joint-Secretary", name: "PAVAN K", contact: "7760895008", photo: placeholderImg('PK'), bio: "Proactive and resourceful, assisting in club management.", social: { linkedin: "#", email: "mailto:pavan@example.com" } }
                     ],
+                    events: [
+                        { title: "Breadboard Mastery: No Code Logic Builds", date: "29-08-2025" },
+                        { title: "Circuit Design & Simulation Session", date: "05-09-2025" },
+                        { title: "3D Design & Print Workshop", date: "12-09-2025" },
+                        { title: "Microcontroller Tech Bytes (Arduino/ESP32 Series)", date: "19-09-2025" }
+                    ],
                     links: { whatsapp: "https://chat.whatsapp.com/JcZ2tY5Z6XF9xG8jB9kH7Y", instagram: "https://instagram.com/build_clubpresidencyuniversity", linkedin: "https://www.linkedin.com/company/build-club-presidency-university/", email: "mailto:build.club@presidencyuniversity.in" }
                 },
                 aerodrone: {
@@ -241,6 +375,11 @@
                         { position: "Vice President", name: "SUHAS A SALUNKE", contact: "6364743539", photo: placeholderImg('SS'), bio: "Detail-oriented and analytical, ensuring project success.", social: { linkedin: "#", email: "mailto:suhas@example.com" } },
                         { position: "Secretary", name: "POOJA METRI", contact: "7204817859", photo: placeholderImg('PM'), bio: "Ensuring smooth operations and communication for the Aerodrone club.", social: { linkedin: "#", email: "mailto:pooja@example.com" } },
                         { position: "Joint-Secretary", name: "ADITYA D NAIK", contact: "9886622848", photo: placeholderImg('AN'), bio: "Supporting the club's initiatives with dedication and enthusiasm.", social: { linkedin: "#", email: "mailto:aditya@example.com" } }
+                    ],
+                    events: [
+                        { title: "INTRODUCTION TO UAV / UAS", date: "16-08-2025" },
+                        { title: "FLYING SIMULATION TRAINING", date: "20-08-2025" },
+                        { title: "BUILDING DRONES", date: "30-08-2025" }
                     ],
                     links: { whatsapp: "#", instagram: "https://instagram.com/aerodrone_club", linkedin: "#", email: "mailto:aerodrone.club@presidencyuniversity.in" }
                 },
@@ -253,6 +392,11 @@
                         { position: "Secretary", name: "HEMANTH G", contact: "N/A", photo: placeholderImg('HG'), bio: "A key member ensuring the smooth functioning of STEM club events.", social: { linkedin: "#", email: "mailto:hemanth@example.com" } },
                         { position: "Joint-Secretary", name: "ANWIN DILIP", contact: "N/A", photo: placeholderImg('AD'), bio: "Assisting in the organization and promotion of STEM activities.", social: { linkedin: "#", email: "mailto:anwin@example.com" } }
                     ],
+                    events: [
+                        { title: "ALL CLUB DIV ORIENTATION", date: "20-08-2025" },
+                        { title: "Educational Kit Workshop & Volunteer Training", date: "03-09-2025" },
+                        { title: "Idea to Impact: The X-RS Prototype", date: "10-09-2025" }
+                    ],
                     links: { whatsapp: "#", instagram: "https://instagram.com/stem_club", linkedin: "#", email: "mailto:stem.club@presidencyuniversity.in" }
                 },
                 we_impact: {
@@ -264,9 +408,23 @@
                         { position: "Secretary", name: "V JEMIMAH", contact: "N/A", photo: placeholderImg('VJ'), bio: "Dedicated to the club's mission of social good through technology.", social: { linkedin: "#", email: "mailto:jemimah@example.com" } },
                         { position: "Joint-Secretary", name: "SANJANA", contact: "N/A", photo: placeholderImg('S'), bio: "Supporting the club's vision and helping to organize impactful events.", social: { linkedin: "#", email: "mailto:sanjana@example.com" } }
                     ],
+                    events: [
+                        { title: "Orientation", date: "22-08-2025" },
+                        { title: "Tap to Empower", date: "30-08-2025" },
+                        { title: "SheWell: A Talk on Hygiene & Confidence", date: "05-09-2025" }
+                    ],
                     links: { whatsapp: "#", instagram: "https://instagram.com/we_impact_club", linkedin: "#", email: "mailto:weimpact.club@presidencyuniversity.in" }
                 }
             };
+            
+            const scrollObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
 
             function showClubInfo(clubId) {
                 const data = clubData[clubId];
@@ -281,48 +439,75 @@
                 setTimeout(() => {
                     const defaultWhatsappMsg = encodeURIComponent("I'm contacting you from the webpage.");
                     
-                    const clubHeaderHtml = `
-                        <div class="club-header">
-                            <img src="${data.clubImage}" alt="${clubId} Logo" class="club-logo">
-                            <p class="club-bio">${data.clubBio}</p>
-                        </div>
-                    `;
-
-                    const officialsHtml = data.officials.map(p => {
-                        const hasContact = p.contact && p.contact.toLowerCase() !== 'n/a';
-                        const phoneLink = hasContact ? `tel:${p.contact}` : '#';
-                        const whatsappLink = hasContact ? `https://wa.me/${p.contact}?text=${defaultWhatsappMsg}` : '#';
-
-                        return `
-                            <div class="official-card">
-                                <img src="${p.photo}" alt="${p.name}" class="official-photo">
-                                <div class="official-details">
-                                    <h4>${p.name}</h4>
-                                    <strong>${p.position}</strong>
-                                    <p class="official-bio">${p.bio}</p>
-                                    <div class="official-social-icons">
-                                        ${hasContact ? `<a href="${phoneLink}" title="Call"><i class="fas fa-phone"></i></a>` : ''}
-                                        ${hasContact ? `<a href="${whatsappLink}" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>` : ''}
-                                        <a href="${p.social.linkedin}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                        <a href="${p.social.email}" title="Email"><i class="fas fa-envelope"></i></a>
-                                    </div>
+                    const leftPanelHtml = `
+                        <div class="left-panel">
+                            <div class="club-header">
+                                <img src="${data.clubImage}" alt="${clubId} Logo" class="club-logo">
+                                <div class="club-bio">
+                                    <p>${data.clubBio}</p>
                                 </div>
-                            </div>`;
-                    }).join('');
-
-                    const clubSocialsHtml = `
-                        <div class="club-social-links">
-                             <h3>Connect With The Club</h3>
-                             <div class="club-social-icons">
-                                <a href="${data.links.whatsapp}" target="_blank"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
-                                <a href="${data.links.instagram}" target="_blank"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-                                <a href="${data.links.linkedin}" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
-                                <a href="${data.links.email}"><i class="fas fa-envelope"></i><span>Email</span></a>
+                            </div>
+                            <div class="club-social-links">
+                                 <h3>Connect</h3>
+                                 <div class="club-social-icons">
+                                    <a href="${data.links.whatsapp}" target="_blank"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+                                    <a href="${data.links.instagram}" target="_blank"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+                                    <a href="${data.links.linkedin}" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                                    <a href="${data.links.email}"><i class="fas fa-envelope"></i><span>Email</span></a>
+                                </div>
                             </div>
                         </div>
                     `;
 
-                    contactCard.innerHTML = clubHeaderHtml + `<div class="office-bearers-container">${officialsHtml}</div>` + clubSocialsHtml;
+                    const officialsHtml = `
+                        <h3 class="section-title">Our Team</h3>
+                        ${data.officials.map(p => {
+                            const hasContact = p.contact && p.contact.toLowerCase() !== 'n/a';
+                            const phoneLink = hasContact ? `tel:${p.contact}` : '#';
+                            const whatsappLink = hasContact ? `https://wa.me/${p.contact}?text=${defaultWhatsappMsg}` : '#';
+
+                            return `
+                                <div class="official-card">
+                                    <img src="${p.photo}" alt="${p.name}" class="official-photo">
+                                    <div class="official-details">
+                                        <h4>${p.name}</h4>
+                                        <strong>${p.position}</strong>
+                                        <p class="official-bio">${p.bio}</p>
+                                        <div class="official-social-icons">
+                                            ${hasContact ? `<a href="${phoneLink}" title="Call"><i class="fas fa-phone"></i></a>` : ''}
+                                            ${hasContact ? `<a href="${whatsappLink}" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>` : ''}
+                                            <a href="${p.social.linkedin}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                            <a href="${p.social.email}" title="Email"><i class="fas fa-envelope"></i></a>
+                                        </div>
+                                    </div>
+                                </div>`;
+                        }).join('')}
+                    `;
+
+                    const eventsHtml = `
+                        <h3 class="section-title">Upcoming Events</h3>
+                        ${data.events.map(event => `
+                            <div class="event-card">
+                                <span class="event-title">${event.title}</span>
+                                <span class="event-date">${event.date}</span>
+                            </div>
+                        `).join('')}
+                    `;
+                    
+                    const rightPanelHtml = `
+                        <div class="right-panel">
+                            <div class="main-content-container">
+                                ${officialsHtml}
+                                ${eventsHtml}
+                            </div>
+                        </div>
+                    `;
+
+                    contactCard.innerHTML = `<div class="card-layout">${leftPanelHtml}${rightPanelHtml}</div>`;
+                    
+                    document.querySelectorAll('.official-card, .event-card').forEach(el => {
+                        scrollObserver.observe(el);
+                    });
                     
                     contactCard.classList.add('visible');
                     setTimeout(() => contactCard.classList.add('fade-in'), 10);
