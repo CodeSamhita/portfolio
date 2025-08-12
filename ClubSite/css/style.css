@@ -1,0 +1,530 @@
+/* CSS/style.css */
+:root {
+    --primary-color: #00aaff;
+    --text-color: #ffffff;
+    --card-bg: rgba(0, 0, 0, 0.4);
+    --dark-bg: #1a1a2e;
+    --header-height: 70px;
+    --footer-height: 50px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(-45deg, #232526, #414345, #232526, #414345);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    transition: background 0.8s ease-in-out;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* --- Loader Styles --- */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 46, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+#loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* --- Header & Navigation Styles --- */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(26, 26, 46, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logo-img {
+    height: 70px;
+    width: auto;
+}
+
+.logo-container h1 {
+    margin: 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--primary-color);
+}
+
+/* --- Main Content --- */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: var(--header-height) 20px var(--footer-height);
+    box-sizing: border-box;
+    transition: padding-top 0.5s ease;
+}
+
+/* --- Club Navigation (Home Page) --- */
+.club-nav {
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    position: relative;
+}
+
+.club-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.5s ease-in-out;
+    flex-wrap: wrap;
+}
+
+.club-nav a {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px 25px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.club-nav a:hover, .club-nav a.active {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    border-color: var(--primary-color);
+}
+ 
+/* --- Home Page Specific Transitions --- */
+.initial-message {
+    padding: 40px;
+    transition: opacity 0.4s ease-out, transform 0.5s ease-in-out, height 0.5s ease;
+}
+
+body.viewing-club .initial-message {
+    opacity: 0;
+    transform: scale(0.9);
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body.viewing-club .club-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    background-color: rgba(20, 20, 35, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 10px 0;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+body.viewing-club .club-nav ul {
+    margin: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    padding: 0 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+body.viewing-club .club-nav ul::-webkit-scrollbar {
+    display: none;
+}
+
+body.viewing-club .club-nav a {
+    padding: 8px 18px;
+    font-size: 0.9em;
+}
+
+body.viewing-club .main-container {
+    padding-top: calc(var(--header-height) + 80px);
+}
+
+/* --- Main Content Card --- */
+.contact-card {
+    display: none;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 1100px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out 0.2s, transform 0.5s ease-out 0.2s;
+    box-sizing: border-box;
+}
+
+.contact-card.visible { 
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-layout { display: flex; gap: 20px; }
+.left-panel { flex: 0 0 300px; display: flex; flex-direction: column; align-items: center; }
+.right-panel { flex: 1; min-width: 0; }
+ 
+.club-header {
+    display: flex; flex-direction: column; align-items: center; gap: 15px;
+    padding-bottom: 20px; margin-bottom: 20px; width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.club-logo {
+    width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+    border: 3px solid var(--primary-color); flex-shrink: 0;
+}
+.club-bio {
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.main-content-container {
+    height: 100%;
+    max-height: calc(100vh - var(--header-height) - var(--footer-height) - 150px);
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+/* Custom Scrollbar */
+.main-content-container::-webkit-scrollbar { width: 5px; }
+.main-content-container::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 10px; }
+.main-content-container::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 10px; }
+
+.section-title {
+    font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-color);
+    margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px;
+    text-align: left;
+}
+
+/* --- Reusable Cards (for Officials, Events, Faculty, Team) --- */
+.official-card, .event-card {
+    background-color: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 10px;
+    margin-bottom: 15px; text-align: left; opacity: 0; transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.official-card.is-visible, .event-card.is-visible { opacity: 1; transform: translateY(0); }
+.official-card { display: flex; align-items: center; gap: 15px; }
+.official-photo {
+    width: 60px; height: 60px; border-radius: 50%; object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2); flex-shrink: 0;
+}
+.official-details { flex-grow: 1; }
+.official-details h4 { margin: 0 0 2px 0; }
+.official-details strong {
+    color: var(--primary-color); font-weight: 600; display: block;
+    font-size: 0.8em; text-transform: uppercase;
+}
+.official-bio {
+    font-size: 0.85em; line-height: 1.5; margin: 8px 0 12px 0;
+    color: var(--text-color); opacity: 0.8;
+}
+.official-social-icons { display: flex; gap: 15px; align-items: center; }
+.official-social-icons a { color: var(--text-color); opacity: 0.8; font-size: 1.2em; transition: all 0.2s; }
+.official-social-icons a:hover { transform: scale(1.15); opacity: 1; }
+.fa-linkedin:hover { color: #0A66C2; }
+.fa-envelope:hover { color: #f2a60c; }
+.fa-phone:hover { color: #66d9ff; }
+.fa-whatsapp:hover { color: #25D366; }
+.fa-youtube:hover { color: #FF0000; }
+.fa-twitter:hover { color: #1DA1F2; }
+
+.event-card { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;}
+.event-title { font-weight: 600; }
+.event-date { font-style: italic; font-size: 0.9em; color: var(--text-color); opacity: 0.8; white-space: nowrap; }
+
+/* --- Club Social Links --- */
+.club-social-links {
+    padding-top: 20px; margin-top: 20px; width: 100%;
+}
+.club-social-icons { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.club-social-icons a {
+    color: var(--text-color); text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 15px; border-radius: 25px; background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s; width: 100%; box-sizing: border-box; justify-content: center;
+}
+.club-social-icons a:hover { background-color: var(--primary-color); transform: translateY(-2px); }
+.club-social-icons span { font-size: 0.8em; }
+.club-social-icons i { font-size: 1.4em; }
+
+/* --- Site Footer --- */
+.site-footer {
+    position: fixed; bottom: 0; left: 0; width: 100%; height: var(--footer-height);
+    display: flex; justify-content: center; align-items: center;
+    background-color: rgba(26, 26, 46, 0.8); backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.8em; color: #aaa; z-index: 1000;
+    text-align: center; padding: 0 15px;
+}
+
+/* --- Grid for Content Pages (Faculty, Team) --- */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 0;
+}
+.content-grid .official-card {
+    margin-bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.content-grid .official-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================================== */
+/* == RESPONSIVE MEDIA QUERIES == */
+/* ================================== */
+@media (max-width: 992px) {
+    .card-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .left-panel {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+    .main-content-container {
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 60px;
+    }
+    .site-header {
+        padding: 0 15px;
+    }
+    .logo-container h1 {
+        display: none; /* Hide title on small screens */
+    }
+    .main-nav {
+        display: none; /* A more advanced implementation would use a hamburger menu */
+    }
+    .site-header h1 {
+        font-size: 1em;
+    }
+    .club-nav a {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .official-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .official-social-icons {
+        justify-content: center;
+    }
+    .event-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* --- Gallery Page Styles --- */
+.gallery-container {
+    width: 100%;
+    max-width: 1100px; /* Match other content cards */
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between each gallery project */
+    padding: 20px 0;
+}
+
+.gallery-item {
+    display: flex;
+    gap: 30px;
+    background-color: var(--card-bg); /* Use same card background */
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: left;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    /* Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.gallery-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-image-container {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.gallery-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.gallery-details-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-details-container h3 { /* Project Title */
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.gallery-details-container p.description { /* Description */
+    opacity: 0.9;
+    line-height: 1.7;
+    flex-grow: 1; /* Pushes the team details to the bottom */
+}
+
+.gallery-team-details {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9em;
+}
+
+.gallery-team-details strong {
+    font-weight: 600;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Make gallery responsive */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex-direction: column; /* Stack image on top of details */
+    }
+
+    .gallery-image-container {
+        max-width: 100%;
+    }
+}

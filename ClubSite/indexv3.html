@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maker Space - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    <div id="particles-js"></div>
+
+    <header class="site-header" id="site-header">
+        <a href="indexv3.html" class="logo-container">
+            <img src="image/logo.png" alt="MakerSpace Logo" class="logo-img">
+            <h1>PRESIDENCY MAKERSPACE</h1>
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="indexv3.html" class="active">Home</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="team.html">Core Team</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container" id="main-container">
+        <div class="initial-message" id="initial-message">
+            <h1>SELECT A CLUB</h1>
+        </div>
+        <nav class="club-nav" id="club-nav">
+            <ul>
+                <li><a href="#" class="club-link" data-club="build_club">BUILD CLUB</a></li>
+                <li><a href="#" class="club-link" data-club="humonoid">HUMONOID CLUB</a></li>              
+                <li><a href="#" class="club-link" data-club="aerodrone">AERODRONE CLUB</a></li>
+                <li><a href="#" class="club-link" data-club="stem">STEM CLUB</a></li>
+                <li><a href="#" class="club-link" data-club="we_impact">WE IMPACT CLUB</a></li>
+    </ul>
+</nav>
+        <div class="contact-card" id="contact-card"></div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 All Rights Reserved.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const loader = document.getElementById('loader');
+    function showLoader() { loader.classList.remove('hidden'); }
+    function hideLoader() { loader.classList.add('hidden'); }
+    
+    particlesJS("particles-js", {"particles":{"number":{"value":60,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle"},"opacity":{"value":0.5,"random":true},"size":{"value":3,"random":true},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1.5,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"repulse":{"distance":100,"duration":0.4},"push":{"particles_nb":4}}},"retina_detect":true});
+    
+    setTimeout(hideLoader, 500);
+
+    const clubLinks = document.querySelectorAll('.club-link');
+    const contactCard = document.getElementById('contact-card');
+    const siteHeader = document.getElementById('site-header');
+    let currentClubId = null;
+    const clubDataCache = {};
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    function renderClubInfo(clubId, data) {
+        if (!data) return;
+
+        document.documentElement.style.setProperty('--primary-color', data.primaryColor);
+        document.body.style.background = data.theme;
+        document.body.style.backgroundSize = '400% 400%';
+        document.body.style.animation = 'gradientBG 15s ease infinite';
+        document.body.classList.add('viewing-club');
+
+        const clubSocialLinksConfig = [
+            { key: 'whatsapp', icon: 'fab fa-whatsapp', text: 'WhatsApp' },
+            { key: 'instagram', icon: 'fab fa-instagram', text: 'Instagram' },
+            { key: 'linkedin', icon: 'fab fa-linkedin', text: 'LinkedIn' },
+            { key: 'youtube', icon: 'fab fa-youtube', text: 'YouTube' }
+        ];
+
+        let clubSocialLinksHtml = '';
+        if (data.links) {
+            clubSocialLinksConfig.forEach(linkInfo => {
+                const url = data.links[linkInfo.key];
+                if (url && url.toLowerCase() !== 'n/a' && url.trim() !== '#') {
+                    clubSocialLinksHtml += `<a href="${url}" target="_blank"><i class="${linkInfo.icon}"></i><span>${linkInfo.text}</span></a>`;
+                }
+            });
+        }
+        
+        const leftPanelHtml = `<div class="left-panel"><div class="club-header"><img src="${data.clubImage}" alt="${clubId} Logo" class="club-logo" onerror="this.onerror=null;this.src='https.placehold.co/120x120/333/efefef?text=Error';"><div class="club-bio"><p>${data.clubBio}</p></div></div><div class="club-social-links"><h3 class="section-title">Join & Connect</h3><div class="club-social-icons">${clubSocialLinksHtml}</div></div></div>`;
+        
+        const defaultWhatsappMsg = encodeURIComponent("Hey, I'm contacting you from the Makerspace portal.");
+        const officialsHtml = `<h3 class="section-title">Our Team</h3>${data.officials.map(p => {
+            // This logic checks if the "contact" field exists and is not "N/A"
+            const hasContact = p.contact && p.contact.toString().toLowerCase() !== 'n/a';
+            const phoneLink = hasContact ? `tel:${p.contact}` : '#';
+            // This prepares the WhatsApp link by removing "+" and spaces from the number
+            const whatsappLink = hasContact ? `https://wa.me/${p.contact.toString().replace(/[^0-9]/g, '')}?text=${defaultWhatsappMsg}` : '#';
+
+            const socialIconsMap = { linkedin: 'fab fa-linkedin', email: 'fas fa-envelope', youtube: 'fab fa-youtube', github: 'fab fa-github', twitter: 'fab fa-twitter' };
+            let socialIconsHtml = '';
+            if (p.social) {
+                for (const [key, value] of Object.entries(p.social)) {
+                    if (value && value.toLowerCase() !== 'n/a' && value.trim() !== '#') {
+                        socialIconsHtml += `<a href="${value}" target="_blank" title="${key.charAt(0).toUpperCase() + key.slice(1)}"><i class="${socialIconsMap[key] || 'fas fa-link'}"></i></a>`;
+                    }
+                }
+            }
+            return `<div class="official-card"><img src="${p.photo}" alt="${p.name}" class="official-photo" onerror="this.onerror=null;this.src='https.placehold.co/60x60/333/efefef?text=:)';"><div class="official-details"><h4>${p.name}</h4><strong>${p.position}</strong><p class="official-bio">${p.bio}</p><div class="official-social-icons">
+                ${hasContact ? `<a href="${phoneLink}" title="Call"><i class="fas fa-phone"></i></a>` : ''}
+                ${hasContact ? `<a href="${whatsappLink}" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>` : ''}
+                ${socialIconsHtml}
+            </div></div></div>`;
+        }).join('')}`;
+
+        const eventsHtml = `<h3 class="section-title">Upcoming Events</h3>${data.events.map(event => `<div class="event-card"><span class="event-title">${event.title}</span><span class="event-date">${event.date}</span></div>`).join('')}`;
+
+        const rightPanelHtml = `<div class="right-panel"><div class="main-content-container">${officialsHtml}${eventsHtml}</div></div>`;
+
+        contactCard.innerHTML = `<div class="card-layout">${leftPanelHtml}${rightPanelHtml}</div>`;
+        document.querySelectorAll('.official-card, .event-card').forEach(el => scrollObserver.observe(el));
+
+        setTimeout(() => {
+            contactCard.classList.add('visible');
+            hideLoader();
+        }, 10);
+    }
+
+    function hideClubInfo() {
+        document.body.classList.remove('viewing-club');
+        contactCard.classList.remove('visible');
+        setTimeout(() => {
+            if (!document.body.classList.contains('viewing-club')) {
+                document.body.style.background = 'linear-gradient(-45deg, #232526, #414345, #232526, #414345)';
+                document.body.style.backgroundSize = '400% 400%';
+                document.body.style.animation = 'gradientBG 15s ease infinite';
+                document.documentElement.style.setProperty('--primary-color', '#00aaff');
+            }
+        }, 500);
+        clubLinks.forEach(l => l.classList.remove('active'));
+        currentClubId = null;
+    }
+
+    clubLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const clubId = e.currentTarget.dataset.club;
+            if (clubId === currentClubId) return;
+            showLoader();
+            currentClubId = clubId;
+            clubLinks.forEach(l => l.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+
+            if (clubDataCache[clubId]) {
+                renderClubInfo(clubId, clubDataCache[clubId]);
+            } else {
+                fetch(`./data/clubs/${clubId}.json`)
+                    .then(response => { if (!response.ok) throw new Error(`Could not load ${clubId}.json`); return response.json(); })
+                    .then(data => { clubDataCache[clubId] = data; renderClubInfo(clubId, data); })
+                    .catch(error => {
+                        console.error('Error fetching club data:', error);
+                        contactCard.innerHTML = `<p style="color: var(--primary-color);">Could not load club information.</p>`;
+                        contactCard.classList.add('visible');
+                        hideLoader();
+                    });
+            }
+        });
+    });
+
+    siteHeader.addEventListener('click', (e) => { if (!e.target.closest('a')) { hideClubInfo(); } });
+});
+</script>
+</body>
+</html>

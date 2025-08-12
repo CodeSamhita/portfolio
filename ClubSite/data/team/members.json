@@ -1,0 +1,49 @@
+{
+  "core_team": [
+    {
+      "name": "Arjun Menon",
+      "position": "Student President, Makerspace",
+      "photo": "images/team/arjun_m.jpg",
+      "bio": "As the Student President, Arjun leads the overall vision and coordination of all clubs. He is a final-year Computer Science student passionate about fostering a collaborative and innovative environment for all makers.",
+      "contact": "+919123456780",
+      "social": {
+        "linkedin": "https://linkedin.com/in/arjunmenon-example",
+        "email": "mailto:arjun.m@example.com",
+        "twitter": "https://twitter.com/arjunmenon-example"
+      }
+    },
+    {
+      "name": "Diya Sharma",
+      "position": "Head of Technical Operations",
+      "photo": "images/team/diya_s.jpg",
+      "bio": "Diya manages the labs, equipment inventory, and technical workshops. She is an expert in IoT and rapid prototyping, and is always ready to help students with their most complex hardware projects.",
+      "contact": "+919123456781",
+      "social": {
+        "linkedin": "https://linkedin.com/in/diyasharma-example",
+        "github": "https://github.com/diyasharma-example"
+      }
+    },
+    {
+      "name": "Sameer Ali",
+      "position": "Events & Outreach Coordinator",
+      "photo": "images/team/sameer_a.jpg",
+      "bio": "Sameer is the driving force behind our workshops, competitions, and tech talks. He excels at organizing large-scale events and building partnerships with industry professionals to bring them to campus.",
+      "contact": "+919123456782",
+      "social": {
+        "linkedin": "https://linkedin.com/in/sameerali-example",
+        "instagram": "https://instagram.com/sameerali-example"
+      }
+    },
+    {
+      "name": "Anika Rao",
+      "position": "Marketing & Communications Head",
+      "photo": "images/team/anika_r.jpg",
+      "bio": "Anika manages the Makerspace's online presence, social media channels, and member communications. Her creative campaigns ensure that everyone on campus knows about our latest achievements and events.",
+      "contact": "N/A",
+      "social": {
+        "linkedin": "https://linkedin.com/in/anikarao-example",
+        "email": "mailto:anika.r@example.com"
+      }
+    }
+  ]
+}

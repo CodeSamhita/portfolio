@@ -3,7 +3,7 @@
     "primaryColor": "#FF4F5A",
     "textColor": "#E0E0E0",
     "clubBio": "WE IMPACT is a community-driven club focused on leveraging technology for social good. We aim to empower women in tech and create solutions that make a real-world difference.",
-    "clubImage": "https://placehold.co/120x120/FF4F5A/121212?text=WE",
+    "clubImage": "image/WeImpact/WeImpact.jpg",
     "officials": [
         { "position": "President", "name": "ANNIE MARY JOSEPH", "contact": "9902080950", "photo": "https://placehold.co/120x120/333/efefef?text=AJ", "bio": "A compassionate leader focused on creating a positive social impact.", "social": { "linkedin": "#", "email": "mailto:annie@example.com" } },
         { "position": "Vice President", "name": "SAKSHI NAGARAJ", "contact": "9036552751", "photo": "https://placehold.co/120x120/333/efefef?text=SN", "bio": "Driving meaningful change and empowering members to contribute.", "social": { "linkedin": "#", "email": "mailto:sakshin@example.com" } },

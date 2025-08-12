@@ -1,0 +1,18 @@
+{"theme": "linear-gradient(-45deg, #0E0E0E, #2A2A2A, #0E0E0E, #2A2A2A)",
+    "primaryColor": "#C0C0C0",
+    "textColor": "#E6E6E6",
+    "clubBio": "N/A",
+    "clubImage": "N/A",
+    "officials": [
+        { "position": "President", "name": "N/A", "contact": "N/A", "photo": "N/A", "bio": "N/A", "social": { "linkedin": "N/A", "email": "mailto:bhrigu.20221cse0068@presidencyuniversity.in" } },
+        { "position": "Vice President", "name": "N/A", "contact": "N/A", "photo": "N/A", "bio": "N/A", "social": { "linkedin": "N/A", "email": "mailto:sakshi.20221cse0388@presidencyuniversity.in" } },
+        { "position": "Secretary", "name": "N/A", "contact": "N/A", "photo": "N/A", "bio": "N/A", "social": { "linkedin": "N/A", "email": "mailto:N/A" } },
+        { "position": "Joint-Secretary", "name": "N/A", "contact": "N/A", "photo": "N/A", "bio": "N/A", "social": { "linkedin": "N/A", "email": "mailto:N/A" } }
+    ],
+    "events": [
+        { "title": "N/A", "date": "N/A" },
+        { "title": "N/A", "date": "N/A" },
+        { "title": "N/A", "date": "N/A" }
+    ],
+    "links": { "whatsapp": "#", "instagram": "N/A", "linkedin": "N/A", "email": "mailto:N/A" }
+}

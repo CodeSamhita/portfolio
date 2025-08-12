@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maker Space - Core Team</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header class="site-header" id="site-header">
+        <a href="index.html" class="logo-container">
+            <img src="image/logo.png" alt="MakerSpace Logo" class="logo-img">
+            <h1>PRESIDENCY MAKERSPACE</h1>
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="team.html" class="active">Core Team</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container" id="main-container">
+        <div class="initial-message">
+            <h1>Core Team</h1>
+            <p>The student leaders dedicated to running the Makerspace community.</p>
+        </div>
+        <div id="team-grid" class="content-grid">
+            <div class="spinner"></div> </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 All Rights Reserved.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            particlesJS("particles-js", {"particles":{"number":{"value":60,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle"},"opacity":{"value":0.5,"random":true},"size":{"value":3,"random":true},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1.5,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"repulse":{"distance":100,"duration":0.4},"push":{"particles_nb":4}}},"retina_detect":true});
+
+            const teamGrid = document.getElementById('team-grid');
+
+            // Fetch data from the new team JSON file
+            fetch('./data/team/members.json')
+                .then(response => { if (!response.ok) throw new Error('Network response was not ok'); return response.json(); })
+                .then(data => {
+                    let htmlContent = '';
+                    if (data.core_team && data.core_team.length > 0) {
+                        const defaultWhatsappMsg = encodeURIComponent("Hey, I'm contacting you from the Makerspace portal.");
+
+                        data.core_team.forEach(p => {
+                            const hasContact = p.contact && p.contact.toLowerCase() !== 'n/a';
+                            const phoneLink = hasContact ? `tel:${p.contact}` : '#';
+                            const whatsappLink = hasContact ? `https://wa.me/${p.contact.replace(/[^0-9]/g, '')}?text=${defaultWhatsappMsg}` : '#';
+
+                            const socialIconsMap = { linkedin: 'fab fa-linkedin', email: 'fas fa-envelope', twitter: 'fab fa-twitter', github: 'fab fa-github', instagram: 'fab fa-instagram' };
+                            
+                            let socialIconsHtml = '';
+                            if (p.social) {
+                                for (const [key, value] of Object.entries(p.social)) {
+                                    if (value && value.toLowerCase() !== 'n/a' && value.trim() !== '#') {
+                                        const iconClass = socialIconsMap[key] || 'fas fa-link';
+                                        const title = key.charAt(0).toUpperCase() + key.slice(1);
+                                        socialIconsHtml += `<a href="${value}" target="_blank" title="${title}"><i class="${iconClass}"></i></a>`;
+                                    }
+                                }
+                            }
+
+                            // Reusing the .official-card style
+                            htmlContent += `
+                                <div class="official-card">
+                                    <img src="${p.photo}" alt="${p.name}" class="official-photo" onerror="this.onerror=null;this.src='https.placehold.co/60x60/333/efefef?text=:)';">
+                                    <div class="official-details">
+                                        <h4>${p.name}</h4>
+                                        <strong>${p.position}</strong>
+                                        <p class="official-bio">${p.bio}</p>
+                                        <div class="official-social-icons">
+                                            ${hasContact ? `<a href="${phoneLink}" title="Call"><i class="fas fa-phone"></i></a>` : ''}
+                                            ${hasContact ? `<a href="${whatsappLink}" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>` : ''}
+                                            ${socialIconsHtml}
+                                        </div>
+                                    </div>
+                                </div>`;
+                        });
+                    } else {
+                        htmlContent = '<p>No team information is available.</p>';
+                    }
+                    
+                    teamGrid.innerHTML = htmlContent;
+
+                    // Trigger the fade-in animation for each card
+                    document.querySelectorAll('.content-grid .official-card').forEach((card, index) => {
+                        setTimeout(() => { card.classList.add('is-visible'); }, index * 100);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching team data:', error);
+                    teamGrid.innerHTML = '<p style="color: var(--primary-color);">Could not load team information.</p>';
+                });
+        });
+    </script>
+</body>
+</html>

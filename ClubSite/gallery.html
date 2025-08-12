@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maker Space - Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header class="site-header" id="site-header">
+        <a href="indexv3.html" class="logo-container">
+            <img src="image/logo.png" alt="MakerSpace Logo" class="logo-img">
+            <h1>PRESIDENCY MAKERSPACE</h1>
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="indexv3.html">Home</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="team.html">Core Team</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container" id="main-container">
+        <div class="initial-message">
+            <h1>Our Projects</h1>
+            <p>A showcase of the creativity and hard work from our members.</p>
+        </div>
+        
+        <div class="gallery-container">
+
+            <div class="gallery-item">
+                <div class="gallery-image-container">
+                    <img src="images/gallery/project_drone.jpg" alt="Autonomous Delivery Drone">
+                </div>
+                <div class="gallery-details-container">
+                    <h3>Autonomous Delivery Drone</h3>
+                    <p class="description">
+                        This project, developed by the Aerodrone Club, is an autonomous quadcopter capable of navigating a predefined GPS path to deliver a small payload. It features custom-built hardware and a flight controller running open-source software.
+                    </p>
+                    <div class="gallery-team-details">
+                        <strong>Team:</strong> Aarav Patel, Sneha Reddy, Jaspreet Singh
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-image-container">
+                    <img src="images/gallery/project_robotic_arm.jpg" alt="AI-Powered Robotic Arm">
+                </div>
+                <div class="gallery-details-container">
+                    <h3>AI-Powered Robotic Arm</h3>
+                    <p class="description">
+                        A project from the Build Club that combines robotics and machine learning. This 5-axis robotic arm uses a camera and a neural network to identify and sort objects by color and shape, showcasing the practical application of AI.
+                    </p>
+                    <div class="gallery-team-details">
+                        <strong>Team:</strong> Priya Sharma, Rohan Gupta, Fatima Khan
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 All Rights Reserved.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize particles.js
+            particlesJS("particles-js", {"particles":{"number":{"value":60,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle"},"opacity":{"value":0.5,"random":true},"size":{"value":3,"random":true},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1.5,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"repulse":{"distance":100,"duration":0.4},"push":{"particles_nb":4}}},"retina_detect":true});
+
+            // Intersection Observer to animate items on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>

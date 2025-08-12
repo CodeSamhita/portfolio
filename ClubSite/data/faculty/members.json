@@ -1,0 +1,24 @@
+{
+  "faculty_members": [
+    {
+      "name": "Dr. Ananya Sharma",
+      "position": "Head of Department, Mechanical Engineering",
+      "photo": "images/faculty/ananya_sharma.jpg",
+      "bio": "Specializes in robotics and automation. Passionate about guiding students in hands-on projects and fostering innovation.",
+      "social": {
+        "linkedin": "#",
+        "email": "#"
+      }
+    },
+    {
+      "name": "Prof. Vikram Singh",
+      "position": "Professor, Electronics & Communication",
+      "photo": "images/faculty/vikram_singh.jpg",
+      "bio": "Expert in embedded systems and IoT. Mentors the Aerodrone club and works on drone technology for societal applications.",
+      "social": {
+        "linkedin": "#",
+        "email": "#"
+      }
+    }
+  ]
+}

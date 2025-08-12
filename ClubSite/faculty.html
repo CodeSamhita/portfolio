@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidency Maker Space - Faculty</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header class="site-header" id="site-header">
+        <a href="indexv3.html" class="logo-container">
+            <img src="image/logo.png" alt="MakerSpace Logo" class="logo-img">
+            <h1>PRESIDENCY MAKERSPACE</h1>
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="indexv3.html">Home</a></li>
+                <li><a href="faculty.html" class="active">Faculty</a></li>
+                <li><a href="team.html">Core Team</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container" id="main-container">
+        <div class="initial-message">
+            <h1>Faculty Mentors</h1>
+            <p>Our guiding lights and pillars of support.</p>
+        </div>
+        <div id="faculty-grid" class="content-grid">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 All Rights Reserved.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            particlesJS("particles-js", {"particles":{"number":{"value":60,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle"},"opacity":{"value":0.5,"random":true},"size":{"value":3,"random":true},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1.5,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"repulse":{"distance":100,"duration":0.4},"push":{"particles_nb":4}}},"retina_detect":true});
+
+            const facultyGrid = document.getElementById('faculty-grid');
+
+            fetch('./data/faculty/members.json')
+                .then(response => { if (!response.ok) throw new Error('Network response was not ok'); return response.json(); })
+                .then(data => {
+                    let htmlContent = '';
+                    if (data.faculty_members && data.faculty_members.length > 0) {
+                        data.faculty_members.forEach(p => {
+                            const socialIconsMap = { linkedin: 'fab fa-linkedin', email: 'fas fa-envelope', twitter: 'fab fa-twitter', github: 'fab fa-github' };
+                            let socialIconsHtml = '';
+                            if (p.social) {
+                                for (const [key, value] of Object.entries(p.social)) {
+                                    if (value && value.toLowerCase() !== 'n/a' && value.trim() !== '#') {
+                                        socialIconsHtml += `<a href="${value}" target="_blank" title="${key.charAt(0).toUpperCase() + key.slice(1)}"><i class="${socialIconsMap[key] || 'fas fa-link'}"></i></a>`;
+                                    }
+                                }
+                            }
+                            htmlContent += `<div class="official-card"><img src="${p.photo}" alt="${p.name}" class="official-photo" onerror="this.onerror=null;this.src='https.placehold.co/60x60/333/efefef?text=:)';"><div class="official-details"><h4>${p.name}</h4><strong>${p.position}</strong><p class="official-bio">${p.bio}</p><div class="official-social-icons">${socialIconsHtml}</div></div></div>`;
+                        });
+                    } else {
+                        htmlContent = '<p>No faculty information is available.</p>';
+                    }
+                    facultyGrid.innerHTML = htmlContent;
+                    document.querySelectorAll('.content-grid .official-card').forEach((card, index) => {
+                        setTimeout(() => { card.classList.add('is-visible'); }, index * 100);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching faculty data:', error);
+                    facultyGrid.innerHTML = '<p style="color: var(--primary-color);">Could not load faculty information.</p>';
+                });
+        });
+    </script>
+</body>
+</html>

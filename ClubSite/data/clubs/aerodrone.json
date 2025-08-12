@@ -3,7 +3,7 @@
     "primaryColor": "#00A8E8",
     "textColor": "#EAEAEA",
     "clubBio": "Exploring the skies and beyond, the Aerodrone Club is dedicated to the design, construction, and flight of unmanned aerial vehicles. Join us to innovate in the exciting field of drone technology.",
-    "clubImage": "https://placehold.co/120x120/00A8E8/0B0F17?text=AERO",
+    "clubImage": "image/Aero/AeroLOGO.jpg",
     "officials": [
         { "position": "President", "name": "KOUSHIK YJ", "contact": "+917204668124", "photo": "https://placehold.co/120x120/333/efefef?text=KY", "bio": "An aviation enthusiast leading the charge in drone technology.", "social": { "linkedin": "#", "email": "mailto:koushik@example.com" } },
         { "position": "Vice President", "name": "SUHAS A SALUNKE", "contact": "+916364743539", "photo": "https://placehold.co/120x120/333/efefef?text=SS", "bio": "Detail-oriented and analytical, ensuring project success.", "social": { "linkedin": "#", "email": "mailto:suhas@example.com" } },
