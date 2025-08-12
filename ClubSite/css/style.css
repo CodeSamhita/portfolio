@@ -96,24 +96,24 @@ body {
     gap: 15px;
     text-decoration: none;
     color: var(--text-color);
+    /* Allow container to shrink if needed */
+    flex-shrink: 1;
+    min-width: 0;
 }
 
 .logo-img {
-    height: 70px;
+    height: 60px; /* Slightly smaller for better balance */
     width: auto;
+    flex-shrink: 0;
 }
 
 .logo-container h1 {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-transform: uppercase;
     letter-spacing: 2px;
+    white-space: nowrap;
 }
-
-/* Default title visibility */
-.title-mobile { display: none; }
-.title-desktop { display: inline; }
-
 
 .main-nav ul {
     margin: 0;
@@ -640,20 +640,18 @@ body.viewing-club .main-container {
         --header-height: 60px;
     }
     .site-header {
-        padding: 0 15px;
+        padding: 0 10px; /* Reduced padding */
     }
     
+    .logo-img {
+        height: 50px; /* Reduced logo size */
+    }
     .logo-container {
-        gap: 10px; /* Reduce gap on mobile */
+        gap: 8px; /* Reduced gap */
     }
     .logo-container h1 {
-        font-size: 1em; /* Reduce font size for mobile title */
-    }
-    .title-desktop {
-        display: none; /* Hide desktop title */
-    }
-    .title-mobile {
-        display: inline; /* Show mobile title */
+        font-size: 0.9em; /* Reduced font size */
+        letter-spacing: 1px; /* Reduced letter spacing */
     }
     
     /* -- Mobile Navigation -- */
