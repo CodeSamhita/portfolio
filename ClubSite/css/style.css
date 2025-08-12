@@ -110,6 +110,11 @@ body {
     letter-spacing: 2px;
 }
 
+/* Default title visibility */
+.title-mobile { display: none; }
+.title-desktop { display: inline; }
+
+
 .main-nav ul {
     margin: 0;
     padding: 0;
@@ -637,8 +642,18 @@ body.viewing-club .main-container {
     .site-header {
         padding: 0 15px;
     }
+    
+    .logo-container {
+        gap: 10px; /* Reduce gap on mobile */
+    }
     .logo-container h1 {
-        display: none;
+        font-size: 1em; /* Reduce font size for mobile title */
+    }
+    .title-desktop {
+        display: none; /* Hide desktop title */
+    }
+    .title-mobile {
+        display: inline; /* Show mobile title */
     }
     
     /* -- Mobile Navigation -- */
