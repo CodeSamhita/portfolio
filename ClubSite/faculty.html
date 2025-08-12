@@ -26,57 +26,196 @@
                 <li><a href="gallery.html">Gallery</a></li>
             </ul>
         </nav>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
     </header>
 
     <div class="main-container" id="main-container">
         <div class="initial-message">
             <h1>Faculty Mentors</h1>
-            <p>Our guiding lights and pillars of support.</p>
+            <p>Our Guiding Lights and Pillars of Support.</p>
         </div>
-        <div id="faculty-grid" class="content-grid">
+        <div id="faculty-groups">
             <div class="spinner"></div>
         </div>
     </div>
+
+    <div id="whatsapp-modal" class="modal-overlay modal-hidden">
+        <div class="modal-content">
+            <button id="close-modal" class="close-button">&times;</button>
+            <h3>Contact via WhatsApp</h3>
+            <p>Please provide your details to compose the message.</p>
+            <form id="whatsapp-form">
+                <div class="form-group">
+                    <label for="user-name">Your Name:</label>
+                    <input type="text" id="user-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-purpose">Purpose of Contact:</label>
+                    <textarea id="contact-purpose" name="purpose" rows="3" required></textarea>
+                </div>
+                <div id="modal-error" class="error-message"></div>
+                <div class="form-actions">
+                    <button type="submit" class="button-primary">Compose Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
 
     <footer class="site-footer">
         <p>&copy; 2025 All Rights Reserved.</p>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            particlesJS("particles-js", {"particles":{"number":{"value":60,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle"},"opacity":{"value":0.5,"random":true},"size":{"value":3,"random":true},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1.5,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"repulse":{"distance":100,"duration":0.4},"push":{"particles_nb":4}}},"retina_detect":true});
+            const facultyContainer = document.getElementById('faculty-groups');
+            const modal = document.getElementById('whatsapp-modal');
+            const closeModalBtn = document.getElementById('close-modal');
+            const whatsappForm = document.getElementById('whatsapp-form');
+            const modalError = document.getElementById('modal-error');
+            let facultyWhatsappNumber = '';
 
-            const facultyGrid = document.getElementById('faculty-grid');
+            function showModal() {
+                modal.classList.remove('modal-hidden');
+            }
+            function hideModal() {
+                modal.classList.add('modal-hidden');
+                whatsappForm.reset();
+                modalError.textContent = '';
+            }
+
+            function createFacultyCard(member) {
+                const socialIconsMap = { 
+                    email: 'fas fa-envelope', 
+                    contact: 'fas fa-phone',
+                    whatsapp: 'fab fa-whatsapp',
+                    office_phone: 'fas fa-building',
+                    linkedin: 'fab fa-linkedin', 
+                    twitter: 'fab fa-twitter',
+                    github: 'fab fa-github',
+                    website: 'fas fa-globe',
+                    scholar: 'fas fa-graduation-cap',
+                    researchgate: 'fab fa-researchgate',
+                    skype: 'fab fa-skype',
+                    zoom: 'fas fa-video'
+                };
+                
+                let socialIconsHtml = '';
+
+                function generateIconHtml(key, value) {
+                    const iconClass = socialIconsMap[key] || 'fas fa-link';
+                    const title = key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, ' ');
+                    
+                    if (key === 'whatsapp') {
+                        return `<a href="#" class="whatsapp-contact-link" data-whatsapp-number="${value}" title="${title}"><i class="${iconClass}"></i></a>`;
+                    } else {
+                        let linkHref = value;
+                        if (key === 'email' && !value.startsWith('mailto:')) linkHref = `mailto:${value}`;
+                        else if (key === 'contact' && !value.startsWith('tel:')) linkHref = `tel:${value}`;
+                        else if (key === 'office_phone' && !value.startsWith('tel:')) linkHref = `tel:${value}`;
+                        else if (key === 'skype' && !value.startsWith('skype:')) linkHref = `skype:${value}?call`;
+                        
+                        return `<a href="${linkHref}" target="_blank" title="${title}"><i class="${iconClass}"></i></a>`;
+                    }
+                }
+
+                if (member.social) {
+                    const preferredOrder = ['email', 'whatsapp', 'contact'];
+                    const socialLinks = { ...member.social };
+
+                    preferredOrder.forEach(key => {
+                        const value = socialLinks[key];
+                        if (value && value.toLowerCase() !== 'n/a' && value.trim() !== '#') {
+                            socialIconsHtml += generateIconHtml(key, value);
+                            delete socialLinks[key];
+                        }
+                    });
+
+                    for (const key in socialLinks) {
+                        const value = socialLinks[key];
+                        if (value && value.toLowerCase() !== 'n/a' && value.trim() !== '#') {
+                            socialIconsHtml += generateIconHtml(key, value);
+                        }
+                    }
+                }
+
+                return `
+                    <div class="official-card fade-in-on-scroll">
+                        <img src="${member.photo}" alt="${member.name}" class="official-photo" onerror="this.onerror=null;this.src='https.placehold.co/150x150/333/efefef?text=${member.name.charAt(0)}';">
+                        <div class="official-details">
+                            <h4>${member.name}</h4>
+                            <strong>${member.position}</strong>
+                            <p class="official-bio">${member.bio}</p>
+                            <div class="official-social-icons">${socialIconsHtml}</div>
+                        </div>
+                    </div>`;
+            }
+            
+            facultyContainer.addEventListener('click', (e) => {
+                const link = e.target.closest('.whatsapp-contact-link');
+                if (link) {
+                    e.preventDefault();
+                    facultyWhatsappNumber = link.dataset.whatsappNumber;
+                    showModal();
+                }
+            });
+
+            whatsappForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const userName = document.getElementById('user-name').value.trim();
+                const contactPurpose = document.getElementById('contact-purpose').value.trim();
+
+                if (!userName || !contactPurpose) {
+                    modalError.textContent = 'Both fields are mandatory.';
+                    return;
+                }
+                
+                const message = `I'm reaching out to you from the maker space portal. My name is ${userName}. My purpose of contact is: ${contactPurpose}`;
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappUrl = `https://wa.me/${facultyWhatsappNumber}?text=${encodedMessage}`;
+                
+                window.open(whatsappUrl, '_blank');
+                hideModal();
+            });
+
+            closeModalBtn.addEventListener('click', hideModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    hideModal();
+                }
+            });
 
             fetch('./data/faculty/members.json')
                 .then(response => { if (!response.ok) throw new Error('Network response was not ok'); return response.json(); })
                 .then(data => {
                     let htmlContent = '';
-                    if (data.faculty_members && data.faculty_members.length > 0) {
-                        data.faculty_members.forEach(p => {
-                            const socialIconsMap = { linkedin: 'fab fa-linkedin', email: 'fas fa-envelope', twitter: 'fab fa-twitter', github: 'fab fa-github' };
-                            let socialIconsHtml = '';
-                            if (p.social) {
-                                for (const [key, value] of Object.entries(p.social)) {
-                                    if (value && value.toLowerCase() !== 'n/a' && value.trim() !== '#') {
-                                        socialIconsHtml += `<a href="${value}" target="_blank" title="${key.charAt(0).toUpperCase() + key.slice(1)}"><i class="${socialIconsMap[key] || 'fas fa-link'}"></i></a>`;
-                                    }
-                                }
-                            }
-                            htmlContent += `<div class="official-card"><img src="${p.photo}" alt="${p.name}" class="official-photo" onerror="this.onerror=null;this.src='https.placehold.co/60x60/333/efefef?text=:)';"><div class="official-details"><h4>${p.name}</h4><strong>${p.position}</strong><p class="official-bio">${p.bio}</p><div class="official-social-icons">${socialIconsHtml}</div></div></div>`;
-                        });
-                    } else {
-                        htmlContent = '<p>No faculty information is available.</p>';
+                    if (!data.faculty_sections || data.faculty_sections.length === 0) {
+                        facultyContainer.innerHTML = '<p>No faculty information is available.</p>';
+                        return;
                     }
-                    facultyGrid.innerHTML = htmlContent;
-                    document.querySelectorAll('.content-grid .official-card').forEach((card, index) => {
-                        setTimeout(() => { card.classList.add('is-visible'); }, index * 100);
+
+                    data.faculty_sections.forEach(section => {
+                        if (section.members && section.members.length > 0) {
+                            htmlContent += `<h2 class="faculty-group-title">${section.section_name}</h2>`;
+                            htmlContent += '<div class="content-grid">';
+                            section.members.forEach(member => {
+                                htmlContent += createFacultyCard(member);
+                            });
+                            htmlContent += '</div>';
+                        } else {
+                            htmlContent += '<hr class="section-divider">';
+                        }
                     });
+                    
+                    facultyContainer.innerHTML = htmlContent;
                 })
                 .catch(error => {
                     console.error('Error fetching faculty data:', error);
-                    facultyGrid.innerHTML = '<p style="color: var(--primary-color);">Could not load faculty information.</p>';
+                    facultyContainer.innerHTML = '<p style="color: var(--primary-color);">Could not load faculty information.</p>';
                 });
         });
     </script>

@@ -1,24 +1,140 @@
 {
-  "faculty_members": [
+  "faculty_sections": [
     {
-      "name": "Dr. Ananya Sharma",
-      "position": "Head of Department, Mechanical Engineering",
-      "photo": "images/faculty/ananya_sharma.jpg",
-      "bio": "Specializes in robotics and automation. Passionate about guiding students in hands-on projects and fostering innovation.",
-      "social": {
-        "linkedin": "#",
-        "email": "#"
-      }
+      "section_name": "Academics & Mentorship",
+      "members": [
+        {
+          "name": "Dr. Divyarani M.S.",
+          "position": "Professor & Head Innovative Projects",
+          "photo": "image/faculty/DivyaRani.jpg",
+          "bio": "With over 17 years+ of academic and research experience. She holds a Ph.D., M.Tech., and B.E., and her primary research focus is in Wireless Communication.",
+          "social": {
+            "email": "divyarani@presidencyuniversity.in",
+            "contact": "+919480313352",
+            "whatsapp": "919480313352",
+            "office_phone": "#",
+            "linkedin": "https://www.linkedin.com/in/dr-divya-rani-95323a75/",
+            "twitter": "#",
+            "github": "#",
+            "website": "#",
+            "scholar": "#",
+            "researchgate": "#",
+            "skype": "#",
+            "zoom": "#"
+          }
+        },
+        {
+          "name": "Dr. Manaswini R.",
+          "position": "Assistant Professor",
+          "photo": "image/faculty/Manaswini.jpg",
+          "bio": "Holds a Ph.D., M.Tech., and B.E. With 5 years of academic and research experience, her areas of expertise encompass VLSI & Embedded Systems, Remote Sensing and Navigation, Image Processing, and Artificial Intelligence.",
+          "social": {
+            "email": "manaswini.r@presidencyuniversity.in",
+            "contact": "+917022327464",
+            "whatsapp": "917022327464",
+            "office_phone": "#",
+            "linkedin": "https://www.linkedin.com/in/dr-manaswini-r-9a9b91203/",
+            "twitter": "#",
+            "github": "#",
+            "website": "#",
+            "scholar": "#",
+            "researchgate": "#",
+            "skype": "#",
+            "zoom": "#"
+          }
+        },
+        {
+          "name": "Dr. M. Manikandan",
+          "position": "Assistant Professor - Senior Scale",
+          "photo": "image/faculty/Manikandan.jpg",
+          "bio": "Holds a Ph.D., M.Tech., and B.Tech., and brings 12 years of academic and research experience to his role. His areas of expertise include VLSI Design, Device-Level Modeling, and Visible Light Communication (VLC) Systems.",
+          "social": {
+            "email": "#",
+            "contact": "+919886622848",
+            "whatsapp": "919886622848",
+            "office_phone": "#",
+            "linkedin": "#",
+            "twitter": "#",
+            "github": "#",
+            "website": "#",
+            "scholar": "#",
+            "researchgate": "#",
+            "skype": "#",
+            "zoom": "#"
+          }
+        }
+      ]
     },
     {
-      "name": "Prof. Vikram Singh",
-      "position": "Professor, Electronics & Communication",
-      "photo": "images/faculty/vikram_singh.jpg",
-      "bio": "Expert in embedded systems and IoT. Mentors the Aerodrone club and works on drone technology for societal applications.",
-      "social": {
-        "linkedin": "#",
-        "email": "#"
-      }
+      "section_name": "Lab & Innovation Support",
+      "members": [
+        {
+          "name": "Mrs Hemawathi",
+          "position": "Innovation Lab 1 Instructor",
+          "photo": "N/A",
+          "bio": "Manages and facilitates student projects in Innovation Lab 1, providing hands-on guidance and support.",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "office_phone": "#",
+            "linkedin": "#",
+            "twitter": "#",
+            "github": "#",
+            "website": "#",
+            "scholar": "#",
+            "researchgate": "#",
+            "skype": "#",
+            "zoom": "#"
+          }
+        },
+        {
+          "name": "Miss ",
+          "position": "Innovation Lab 2 Instructor",
+          "photo": "N/A",
+          "bio": "Manages and facilitates student projects in Innovation Lab 1, providing hands-on guidance and support.",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "office_phone": "#",
+            "linkedin": "#",
+            "twitter": "#",
+            "github": "#",
+            "website": "#",
+            "scholar": "#",
+            "researchgate": "#",
+            "skype": "#",
+            "zoom": "#"
+          }
+        }
+      ]
+    },
+
+    {
+      "section_name": "other",
+      "members": [
+        {
+          "name": "#",
+          "position": "#",
+          "photo": "N/A",
+          "bio": "#",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "office_phone": "#",
+            "linkedin": "#",
+            "twitter": "#",
+            "github": "#",
+            "website": "#",
+            "scholar": "#",
+            "researchgate": "#",
+            "skype": "#",
+            "zoom": "#"
+          }
+        }
+      ]
     }
   ]
 }

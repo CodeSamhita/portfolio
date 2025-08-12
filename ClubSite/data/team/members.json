@@ -1,49 +1,426 @@
 {
-  "core_team": [
+  "team_sections": [
     {
-      "name": "Arjun Menon",
-      "position": "Student President, Makerspace",
-      "photo": "images/team/arjun_m.jpg",
-      "bio": "As the Student President, Arjun leads the overall vision and coordination of all clubs. He is a final-year Computer Science student passionate about fostering a collaborative and innovative environment for all makers.",
-      "contact": "+919123456780",
-      "social": {
-        "linkedin": "https://linkedin.com/in/arjunmenon-example",
-        "email": "mailto:arjun.m@example.com",
-        "twitter": "https://twitter.com/arjunmenon-example"
-      }
+      "section_name": "Core Members",
+      "members": [
+        {
+          "name": "ADITYA SHARAMA",
+          "position": "CORE, BUILD Club",
+          "photo": "https://placehold.co/150x150/333/efefef?text=AS",
+          "bio": "A Full Stack Developer and Embedded Systems Innovator, specializing in AI at the edge, NLP, and 3D-printed robotics. Currently pursuing a B.Tech in CSE, he focuses on creating impactful hardware–software solutions.",
+          "social": {
+            "email": "aditya.20231cse3057@presidencyuniversity.in",
+            "contact": "#",
+            "whatsapp": "918217450041",
+            "linkedin": "",
+            "github": "#",
+            "twitter": "#",
+            "website": "https://codesamhita.github.io/portfolio/index.html"
+          }
+        },
+        {
+          "name": "DASHAMI",
+          "position": "CORE, BUILD Club",
+          "photo": "https://placehold.co/150x150/333/efefef?text=D",
+          "bio": "Strategic thinker and problem-solver, a passionate robotics and systems enthusiast, dedicated to designing innovative solutions that blend mechanical precision with intelligent control. With a strong drive for experimentation and problem-solving, [Name] aims to push the boundaries of automation and technology.",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        }
+      ]
     },
+
+
     {
-      "name": "Diya Sharma",
-      "position": "Head of Technical Operations",
-      "photo": "images/team/diya_s.jpg",
-      "bio": "Diya manages the labs, equipment inventory, and technical workshops. She is an expert in IoT and rapid prototyping, and is always ready to help students with their most complex hardware projects.",
-      "contact": "+919123456781",
-      "social": {
-        "linkedin": "https://linkedin.com/in/diyasharma-example",
-        "github": "https://github.com/diyasharma-example"
-      }
+      "section_name": "EVENT CO-ORDINATOR",
+      "members": [
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        }
+      ]
     },
+
+
     {
-      "name": "Sameer Ali",
-      "position": "Events & Outreach Coordinator",
-      "photo": "images/team/sameer_a.jpg",
-      "bio": "Sameer is the driving force behind our workshops, competitions, and tech talks. He excels at organizing large-scale events and building partnerships with industry professionals to bring them to campus.",
-      "contact": "+919123456782",
-      "social": {
-        "linkedin": "https://linkedin.com/in/sameerali-example",
-        "instagram": "https://instagram.com/sameerali-example"
-      }
+      "section_name": "VOLUNTER HEAD ",
+      "members": [
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        }
+      ]
     },
+
+
     {
-      "name": "Anika Rao",
-      "position": "Marketing & Communications Head",
-      "photo": "images/team/anika_r.jpg",
-      "bio": "Anika manages the Makerspace's online presence, social media channels, and member communications. Her creative campaigns ensure that everyone on campus knows about our latest achievements and events.",
-      "contact": "N/A",
-      "social": {
-        "linkedin": "https://linkedin.com/in/anikarao-example",
-        "email": "mailto:anika.r@example.com"
-      }
+      "section_name": "SOCIAL MEDIA HEAD ",
+      "members": [
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        }
+      ]
+    },
+
+    {
+      "section_name": "VIDEO EDITOR ",
+      "members": [
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        }
+      ]
+    },
+
+    {
+      "section_name": "GRAPHICS EDITOR",
+      "members": [
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        }
+      ]
+    },
+
+    {
+      "section_name": "TECHNICAL LEAD",
+      "members": [
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        },
+        {
+          "name": "#",
+          "position": "$",
+          "photo": "#",
+          "bio": "",
+          "social": {
+            "email": "#",
+            "contact": "#",
+            "whatsapp": "#",
+            "linkedin": "#",
+            "github": "#",
+            "twitter": "#",
+            "website": "#"
+          }
+        }
+      ]
     }
+
+    
+
   ]
 }
