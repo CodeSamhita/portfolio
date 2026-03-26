@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const store = window.portfolioStore;
   const page = document.body.dataset.page || "home";
-  const data = store ? store.load() : null;
+  const data = store ? await store.init() : null;
 
   const progressBar = document.getElementById("progressBar");
   const backToTopBtn = document.getElementById("backToTopBtn");
@@ -182,7 +182,12 @@ document.addEventListener("DOMContentLoaded", () => {
             </article>
           `
         )
-        .join("");
+        .join("") + (data.profile.languages && data.profile.languages.length ? `
+        <article class="glass-panel insight-card" style="grid-column: 1 / -1; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 1rem;">
+          <i class="fas fa-language text-primary" style="font-size: 1.5rem;"></i>
+          <h3 style="margin: 0;">Languages: <span style="font-weight: 400;">${escapeHtml(data.profile.languages.join(", "))}</span></h3>
+        </article>
+      ` : "");
     }
 
     const capabilityGrid = document.getElementById("capability-grid");
@@ -236,9 +241,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const preview = document.getElementById("gallery-preview");
     if (preview) {
-      preview.innerHTML = orderProjects(data.projects)
+      preview.innerHTML = (data.gallery || [])
         .slice(0, 3)
-        .map((project) => buildProjectCard(project, false))
+        .map(
+          (item) => `
+            <article class="project-card">
+              <img class="project-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" />
+              <div class="project-content">
+                <h3 style="margin-top: 0;">${escapeHtml(item.title)}</h3>
+                <p style="margin-bottom: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">${escapeHtml(item.description)}</p>
+              </div>
+            </article>
+          `
+        )
         .join("");
     }
 
@@ -358,41 +373,21 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    container.innerHTML = data.projects.length
-      ? orderProjects(data.projects)
+    container.innerHTML = data.gallery && data.gallery.length
+      ? data.gallery
           .map(
-            (project) => `
-              <article class="project-card ${project.featured ? "featured-project-card" : ""}">
-                ${buildProjectImage(project)}
+            (item) => `
+              <article class="project-card">
+                <img class="project-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" />
                 <div class="project-content">
-                  <div class="project-top">
-                    <span class="project-type">${escapeHtml(project.type)}</span>
-                    <h3>${escapeHtml(project.galleryTitle || project.title)}</h3>
-                  </div>
-                  <p>${escapeHtml(project.galleryDescription || project.description)}</p>
-                  ${
-                    project.upgradeNotes?.length
-                      ? `
-                        <ul class="project-evolution">
-                          ${project.upgradeNotes.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
-                        </ul>
-                      `
-                      : ""
-                  }
-                  <div class="tech-list">
-                    ${project.technologies.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
-                  </div>
-                  <div class="project-actions">
-                    ${buildLinkButton(project.githubUrl, "GitHub", "fab fa-github")}
-                    ${buildLinkButton(project.linkedinUrl, "LinkedIn", "fab fa-linkedin")}
-                    ${buildLinkButton(project.liveUrl, "Open", "fas fa-arrow-up-right-from-square")}
-                  </div>
+                  <h3 style="margin-top: 0;">${escapeHtml(item.title)}</h3>
+                  <p style="margin-bottom: 0;">${escapeHtml(item.description)}</p>
                 </div>
               </article>
             `
           )
           .join("")
-      : `<article class="glass-panel empty-card"><h3>No gallery projects yet</h3><p>Project showcases will appear here once content is added.</p></article>`;
+      : `<article class="glass-panel empty-card"><h3>No gallery images yet</h3><p>Standalone images will appear here once content is added.</p></article>`;
   };
 
   const initCounters = () => {
@@ -526,12 +521,19 @@ document.addEventListener("DOMContentLoaded", () => {
     revealItems.forEach((item) => observer.observe(item));
   };
 
+  const hideLoader = () => {
+    const loader = document.getElementById("global-loader");
+    if (loader) loader.classList.add("hidden");
+  };
+  if (document.readyState === "complete") hideLoader();
+  else window.addEventListener("load", hideLoader);
+
   if (page === "home") {
-    setTimeout(renderHome, 800);
+    renderHome();
   }
 
   if (page === "gallery") {
-    setTimeout(renderGallery, 800);
+    renderGallery();
   }
 
   initTheme();

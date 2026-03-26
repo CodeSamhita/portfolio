@@ -1,0 +1,24 @@
+{
+  "name": "Aditya Sharma",
+  "label": "Full Stack Developer & Innovator",
+  "heroEyebrow": "Full Stack Developer",
+  "heroTitle": "Hey! I'm Aditya Sharma",
+  "heroLead": "Passionate Full Stack Developer and Innovator with a strong foundation in programming, embedded systems, Designing and 3D printing.",
+  "statusLabel": "Currently",
+  "statusText": "B.Tech CSE student at Presidency University",
+  "locationLabel": "Based in",
+  "locationText": "Bengaluru, Karnataka, India",
+  "portrait": "profile.png",
+  "resumeUrl": "resume.html",
+  "email": "adisharma102000@gmail.com",
+  "githubUrl": "https://github.com/CodeSamhita",
+  "linkedinUrl": "https://www.linkedin.com/in/aditya-sharma-8679802b3",
+  "instagramUrl": "https://www.instagram.com/visionary_adi?igsh=MjI4Z2N3MzZxYnFk",
+  "languages": ["English", "Hindi"],
+  "focusAreas": [
+    "A Full Stack Developer.",
+    "An Innovator.",
+    "A Hardware Enthusiast.",
+    "A Problem Solver."
+  ]
+}

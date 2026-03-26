@@ -2,224 +2,137 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aditya Sharma | Launchpad</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya Sharma | Upgrading</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="portfolio v6/style.css" />
+</head>
+
+<body class="dark-mode"
+  style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+
+  <div class="ambient-background" aria-hidden="true">
+    <div class="glow-orb orb-primary"></div>
+    <div class="glow-orb orb-secondary"></div>
+    <div class="glow-orb orb-accent"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <main class="container reveal-up is-visible" style="max-width: 800px; z-index: 10;">
+    <article class="glass-panel text-center" style="padding: 4rem 2rem;">
+      <i class="fas fa-hammer text-gradient mb-4" style="font-size: 3rem;"></i>
+      <h1 class="hero-title text-gradient" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem;">System
+        Upgrades in Progress</h1>
+      <p class="section-description mx-auto" style="font-size: 1.1rem; max-width: 600px;">
+        I am currently engineering <strong>New Portfolio </strong>. It introduces a modernized glassmorphic design system
+        and completely overhauled backend logic.
+      </p>
+
+      <div class="mt-5" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+        <a href="portfolio v4/index.html" class="btn btn-outline" style="min-width: 180px;"><i
+            class="fas fa-history"></i> Visit Old page</a>
+        <a href="portfolio v6/index.html" class="btn btn-glow" style="min-width: 180px;"><i class="fas fa-flask"></i>
+          new page(Beta)</a>
+      </div>
+
+      <div style="margin-top: 3rem;">
+        <div class="loader-spinner mx-auto"
+          style="width: 32px; height: 32px; border-width: 3px; border-top-color: var(--cyan);"></div>
+        <p class="admin-note mt-3">Executing UI changes. Please stand by.</p>
+      </div>
+    </article>
+  </main>
+
   <style>
-    :root {
-      --line: rgba(129, 194, 255, 0.16);
-      --text: #f6f8ff;
-      --muted: #a0b4ca;
-      --cyan: #7df9ff;
-      --gold: #ffbf69;
-      --shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-      font-family: "Space Grotesk", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at left top, rgba(125, 249, 255, 0.14), transparent 26%),
-        radial-gradient(circle at right 20%, rgba(255, 191, 105, 0.15), transparent 24%),
-        linear-gradient(160deg, #040a14 0%, #07111f 48%, #0b1831 100%);
+      background-color: #050505;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
       overflow: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-      background-size: 44px 44px;
-      opacity: 0.18;
-      pointer-events: none;
-    }
-
-    .shell {
-      width: min(1100px, 100%);
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 24px;
-      padding: 22px;
-      border-radius: 36px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(20px);
-    }
-
-    .panel {
-      background: rgba(10, 24, 43, 0.76);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 28px;
-    }
-
-    .eyebrow {
-      margin: 0 0 12px;
-      color: var(--cyan);
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-
-    h1 {
       margin: 0;
-      font-family: "Syne", sans-serif;
-      font-size: clamp(2.7rem, 5vw, 4.8rem);
-      line-height: 0.98;
-      letter-spacing: -0.04em;
     }
 
-    .lead,
-    .mini-note,
-    .launch-card p,
-    .signal {
-      color: var(--muted);
-      line-height: 1.75;
-    }
-
-    .profile-row {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin: 26px 0;
-    }
-
-    .profile-row img {
-      width: 96px;
-      height: 96px;
-      object-fit: cover;
-      border-radius: 24px;
-      border: 1px solid rgba(125, 249, 255, 0.2);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.24);
-    }
-
-    .signal-list,
-    .links-panel {
-      display: grid;
-      gap: 14px;
-    }
-
-    .signal,
-    .launch-card {
-      padding: 16px 18px;
+    .glass-panel {
+      background: rgba(10, 25, 47, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: 20px;
-      background: rgba(5, 13, 24, 0.66);
-      border: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     }
 
-    .signal strong,
-    .launch-card h2 {
-      color: var(--text);
+    .text-gradient {
+      background: linear-gradient(135deg, #fff 0%, #87eeff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
     }
 
-    .launch-card {
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
       text-decoration: none;
-      transition: transform 0.25s ease, border-color 0.25s ease;
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
 
-    .launch-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(125, 249, 255, 0.32);
+    .btn-glow {
+      background: rgba(135, 238, 255, 0.1);
+      color: #87eeff;
+      border: 1px solid rgba(135, 238, 255, 0.3);
+      box-shadow: 0 0 15px rgba(135, 238, 255, 0.1);
     }
 
-    .launch-card small {
-      display: block;
-      margin-bottom: 10px;
-      color: var(--cyan);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-weight: 700;
+    .btn-glow:hover {
+      background: rgba(135, 238, 255, 0.2);
+      box-shadow: 0 0 25px rgba(135, 238, 255, 0.3);
+      transform: translateY(-2px);
     }
 
-    .socials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    .btn-outline {
+      background: transparent;
+      color: #a8b2d1;
+      border: 1px solid rgba(168, 178, 209, 0.3);
     }
 
-    .socials a {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(125, 249, 255, 0.08);
-      color: var(--text);
-      text-decoration: none;
+    .btn-outline:hover {
+      border-color: #87eeff;
+      color: #87eeff;
+      transform: translateY(-2px);
     }
 
-    @media (max-width: 860px) {
-      .shell {
-        grid-template-columns: 1fr;
-      }
+    .admin-note {
+      color: #8892b0;
+      font-size: 0.9rem;
+    }
 
-      body {
-        overflow: auto;
+    .loader-spinner {
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      border-top-color: #87eeff;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
       }
     }
   </style>
-</head>
 
-<body>
-  <main class="shell">
-    <section class="panel">
-      <p class="eyebrow">Digital Landing Page..</p>
-      <h1>One visual language. One live portfolio experience.</h1>
-
-      <div class="profile-row">
-        <img src="image/profile.jpg" alt="Aditya Sharma profile" />
-        <div>
-          <strong>Aditya Sharma</strong><br />
-          <span style="color: var(--gold);">Developer, builder, innovator</span>
-        </div>
-      </div>
-      <!--<div class="signal-list">
-        <div class="signal"><strong>Main experience</strong><br />Portfolio V5</div>
-        <div class="signal"><strong>Previous build</strong><br />Portfolio V4 remains available</div>
-        <div class="signal"><strong>Quick access</strong><br />Launchpad, contact card, and portfolio share one theme</div>
-      </div>-->
-      <br>
-
-      <br>
-      <div class="mini-note">Reach me directly through the portfolio or here:</div>
-      <div class="socials">
-        <a href="https://github.com/CodeSamhita">GitHub</a>
-        <a href="https://www.linkedin.com/in/aditya-sharma-8679802b3">LinkedIn</a>
-        <a href="mailto:adisharma102000@gmail.com">Email</a>
-      </div>
-    </section>
-    <section class="panel links-panel">
-      <a class="launch-card" href="portfolio v6/index.html">
-        <small>Primary</small>
-        <h2>Open Portfolio</h2>
-        <p>The refreshed animated portfolio with cleaner structure, stronger hierarchy, and more polished presentation.
-        </p>
-      </a>
-      <a class="launch-card" href="contectcard.html">
-        <small>Quick Connect</small>
-        <h2>Open Contact Card</h2>
-        <p>A matching share card for mobile-friendly reach-out and quick scanning.</p>
-      </a>
-
-
-    </section>
-  </main>
 </body>
 
 </html>
