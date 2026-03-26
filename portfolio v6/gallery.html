@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Sharma | Project Gallery</title>
+  <meta name="description" content="Extended visual gallery of projects by Aditya Sharma." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="gallery" class="dark-mode">
+  <div class="ambient-background" aria-hidden="true">
+    <div class="glow-orb orb-primary"></div>
+    <div class="glow-orb orb-secondary"></div>
+    <div class="glow-orb orb-accent"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <div id="progressBar" aria-hidden="true"></div>
+
+  <nav class="glass-nav">
+    <div class="nav-container container">
+      <a class="brand-logo" href="index.html">Aditya.</a>
+      <div class="nav-links" id="site-nav">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#skills" class="nav-link">Skills</a>
+        <a href="index.html#projects" class="nav-link">Work</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-controls">
+        <button id="themeToggleBtn" class="icon-button" type="button" aria-label="Toggle dark and light mode">
+          <i class="fas fa-sun"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="section container reveal-up" style="padding-top: 10rem; padding-bottom: 2rem;">
+      <div class="section-header text-center max-w-2xl mx-auto">
+        <span class="section-subtitle">Showcase</span>
+        <h1 class="hero-title text-gradient" style="font-size: clamp(2.5rem, 5vw, 4rem);">Visual Gallery</h1>
+        <p class="section-description mt-4">
+          A deeper look into the interfaces, systems, and hardware builds that bring my projects to life.
+        </p>
+        <div class="mt-12 flex-center" style="display: flex; justify-content: center; margin-top: 2rem;">
+          <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container reveal-up" style="padding-top: 2rem;">
+      <div class="project-grid" id="gallery-projects">
+        <article class="project-card skeleton-card">
+          <div class="skeleton-img"></div>
+          <div class="project-content">
+            <div class="skeleton-text skeleton-title" style="width: 40%"></div>
+            <div class="skeleton-text skeleton-line"></div>
+            <div class="skeleton-text skeleton-line" style="width: 80%"></div>
+            <div class="skeleton-text skeleton-line" style="width: 60%"></div>
+          </div>
+        </article>
+        <article class="project-card skeleton-card">
+          <div class="skeleton-img"></div>
+          <div class="project-content">
+            <div class="skeleton-text skeleton-title" style="width: 50%"></div>
+            <div class="skeleton-text skeleton-line"></div>
+            <div class="skeleton-text skeleton-line" style="width: 90%"></div>
+            <div class="skeleton-text skeleton-line" style="width: 50%"></div>
+          </div>
+        </article>
+        <article class="project-card skeleton-card">
+          <div class="skeleton-img"></div>
+          <div class="project-content">
+            <div class="skeleton-text skeleton-title" style="width: 35%"></div>
+            <div class="skeleton-text skeleton-line"></div>
+            <div class="skeleton-text skeleton-line" style="width: 75%"></div>
+            <div class="skeleton-text skeleton-line" style="width: 45%"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h3>Aditya.</h3>
+        <p>Building intuitive digital experiences.</p>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; 2026 Aditya Sharma. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div id="messageBox" class="message-box" role="status" aria-live="polite"></div>
+
+  <script src="data-store.js"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
