@@ -35,6 +35,9 @@
   <div class="orb orb-one" aria-hidden="true"></div>
   <div class="orb orb-two" aria-hidden="true"></div>
   <div id="progressBar" aria-hidden="true"></div>
+  <button id="themeToggleBtn" class="theme-toggle" type="button" aria-label="Toggle dark and light mode">
+    <i class="fas fa-sun"></i>
+  </button>
 
   <header class="site-header">
     <nav class="topbar container" aria-label="Primary">
@@ -50,7 +53,6 @@
         <a href="#journey">Journey</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
-        <a href="admin.html">Studio</a>
       </div>
     </nav>
   </header>
@@ -60,6 +62,7 @@
       <div class="hero-copy">
         <p class="eyebrow" id="hero-eyebrow"></p>
         <h1 id="hero-title"></h1>
+        <p class="hero-role" id="hero-role"></p>
         <p class="hero-lead" id="hero-lead"></p>
         <div class="hero-signals">
           <div class="signal-pill"><span id="status-label"></span><strong class="signal-text" id="status-text"></strong></div>
@@ -68,7 +71,6 @@
         <div class="hero-actions">
           <a href="#projects" class="button button-primary">Explore Projects</a>
           <a id="resume-link" href="resume.html" class="button button-secondary" target="_blank" rel="noreferrer">View Resume</a>
-          <a href="admin.html" class="button button-secondary">Open Studio</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -117,6 +119,10 @@
       <div class="section-heading">
         <p class="eyebrow">Projects</p>
         <h2>Selected work with a strong technical spine.</h2>
+        <p class="section-copy">
+          This portfolio is also one of the featured projects here. Each major upgrade adds new implementation work,
+          from responsive structure and reusable UI systems to editable data and gallery-driven project presentation.
+        </p>
       </div>
       <div class="filter-row" id="project-filters"></div>
       <div class="project-grid" id="projects-container"></div>
@@ -193,7 +199,10 @@
   </main>
 
   <footer class="site-footer container">
-    <p>Designed to feel live, focused, and unmistakably personal.</p>
+    <div class="site-footer-copy">
+      <p>Designed to feel live, focused, and unmistakably personal.</p>
+      <p class="footer-credit">Partially shaped with OpenAI Codex.</p>
+    </div>
     <p>&copy; 2026 Aditya Sharma. All rights reserved.</p>
   </footer>
 

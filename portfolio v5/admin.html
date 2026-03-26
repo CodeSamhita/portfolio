@@ -21,6 +21,9 @@
   <div class="page-noise" aria-hidden="true"></div>
   <div class="orb orb-one" aria-hidden="true"></div>
   <div class="orb orb-two" aria-hidden="true"></div>
+  <button id="themeToggleBtn" class="theme-toggle" type="button" aria-label="Toggle dark and light mode">
+    <i class="fas fa-sun"></i>
+  </button>
 
   <header class="site-header">
     <nav class="topbar container" aria-label="Primary">
@@ -159,10 +162,81 @@
         </p>
       </article>
     </section>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Image Optimizer</p>
+        <h2>Resize and compress images before using them.</h2>
+      </div>
+      <div class="studio-grid image-lab-grid">
+        <article class="glass-card studio-panel">
+          <h3>Optimize image</h3>
+          <p class="studio-note">
+            The image is resized in the browser, converted to a lighter format, and can be assigned directly to your portrait or a project card.
+          </p>
+          <div class="admin-form-grid">
+            <label class="full-width">
+              Choose image
+              <input type="file" id="image-file-input" accept="image/*" />
+            </label>
+            <label>
+              Preset
+              <select id="image-preset">
+                <option value="portrait">Portrait</option>
+                <option value="project">Project Card</option>
+                <option value="gallery">Gallery Wide</option>
+              </select>
+            </label>
+            <label>
+              Target field
+              <select id="image-target"></select>
+            </label>
+            <label class="full-width">
+              Quality
+              <div class="range-row">
+                <input type="range" id="image-quality" min="65" max="95" value="84" />
+                <span id="image-quality-value">84%</span>
+              </div>
+            </label>
+          </div>
+          <div class="studio-toolbar">
+            <button type="button" class="button button-primary" id="process-image-btn">Process Image</button>
+            <button type="button" class="button button-secondary" id="apply-image-btn">Use In Portfolio</button>
+            <button type="button" class="button button-secondary" id="download-image-btn">Download Optimized</button>
+          </div>
+          <p class="studio-note" id="image-status">
+            Use this to keep images smaller while preserving good visual quality across devices.
+          </p>
+        </article>
+
+        <article class="glass-card studio-panel">
+          <h3>Preview and output</h3>
+          <div class="image-preview-grid">
+            <div class="image-preview-card">
+              <strong>Original</strong>
+              <div class="image-preview-frame" id="original-image-frame">
+                <span>No image loaded</span>
+              </div>
+              <p class="studio-note" id="original-image-meta"></p>
+            </div>
+            <div class="image-preview-card">
+              <strong>Optimized</strong>
+              <div class="image-preview-frame" id="optimized-image-frame">
+                <span>Processed result will appear here</span>
+              </div>
+              <p class="studio-note" id="optimized-image-meta"></p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer container">
-    <p>V5 Studio stores data in your browser.</p>
+    <div class="site-footer-copy">
+      <p>V5 Studio stores data in your browser.</p>
+      <p class="footer-credit">Partially shaped with OpenAI Codex.</p>
+    </div>
     <p>Export your JSON if you want a backup or want to move it elsewhere.</p>
   </footer>
 

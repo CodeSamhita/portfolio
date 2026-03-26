@@ -4,8 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  const THEME_KEY = "portfolio-v5-theme";
   let data = store.load();
 
+  const themeToggleBtn = document.getElementById("themeToggleBtn");
   const navToggle = document.querySelector(".nav-toggle");
   const navPanel = document.querySelector(".nav-panel");
   const navLinks = [...document.querySelectorAll(".nav-panel a")];
@@ -18,6 +20,50 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectList = document.getElementById("studio-project-list");
   const projectStats = document.getElementById("studio-stats");
   const importFileInput = document.getElementById("import-json-file");
+  const imageFileInput = document.getElementById("image-file-input");
+  const imagePreset = document.getElementById("image-preset");
+  const imageTarget = document.getElementById("image-target");
+  const imageQuality = document.getElementById("image-quality");
+  const imageQualityValue = document.getElementById("image-quality-value");
+  const processImageBtn = document.getElementById("process-image-btn");
+  const applyImageBtn = document.getElementById("apply-image-btn");
+  const downloadImageBtn = document.getElementById("download-image-btn");
+  const imageStatus = document.getElementById("image-status");
+  const originalImageFrame = document.getElementById("original-image-frame");
+  const optimizedImageFrame = document.getElementById("optimized-image-frame");
+  const originalImageMeta = document.getElementById("original-image-meta");
+  const optimizedImageMeta = document.getElementById("optimized-image-meta");
+
+  const imagePresets = {
+    portrait: { width: 1400, height: 1600, quality: 0.88, label: "Portrait" },
+    project: { width: 1600, height: 1000, quality: 0.84, label: "Project Card" },
+    gallery: { width: 1800, height: 1200, quality: 0.86, label: "Gallery Wide" }
+  };
+
+  let optimizedAsset = null;
+  let originalPreviewUrl = "";
+
+  const applyTheme = (theme) => {
+    const isLight = theme === "light";
+    document.body.classList.toggle("light-mode", isLight);
+    if (themeToggleBtn) {
+      const icon = themeToggleBtn.querySelector("i");
+      if (icon) {
+        icon.className = isLight ? "fas fa-moon" : "fas fa-sun";
+      }
+      themeToggleBtn.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+    }
+  };
+
+  const initTheme = () => {
+    const savedTheme = window.localStorage.getItem(THEME_KEY) || "dark";
+    applyTheme(savedTheme);
+    themeToggleBtn?.addEventListener("click", () => {
+      const nextTheme = document.body.classList.contains("light-mode") ? "dark" : "light";
+      window.localStorage.setItem(THEME_KEY, nextTheme);
+      applyTheme(nextTheme);
+    });
+  };
 
   const quickFields = {
     name: document.getElementById("studio-name"),
@@ -49,6 +95,106 @@ document.addEventListener("DOMContentLoaded", () => {
     target.style.color = isError ? "#ff9b9b" : "";
   };
 
+  const formatBytes = (bytes) => {
+    if (!Number.isFinite(bytes)) {
+      return "";
+    }
+    if (bytes < 1024) {
+      return `${bytes} B`;
+    }
+    if (bytes < 1024 * 1024) {
+      return `${(bytes / 1024).toFixed(1)} KB`;
+    }
+    return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
+  };
+
+  const loadImageElement = (src) =>
+    new Promise((resolve, reject) => {
+      const image = new Image();
+      image.onload = () => resolve(image);
+      image.onerror = reject;
+      image.src = src;
+    });
+
+  const blobToDataUrl = (blob) =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(blob);
+    });
+
+  const canvasToBlob = (canvas, type, quality) =>
+    new Promise((resolve, reject) => {
+      canvas.toBlob(
+        (blob) => {
+          if (blob) {
+            resolve(blob);
+          } else {
+            reject(new Error("Unable to create optimized image."));
+          }
+        },
+        type,
+        quality
+      );
+    });
+
+  const optimizeImageFile = async (file, presetName, qualityPercent) => {
+    const preset = imagePresets[presetName] || imagePresets.project;
+    const inputUrl = URL.createObjectURL(file);
+
+    try {
+      const image = await loadImageElement(inputUrl);
+      const widthRatio = preset.width / image.width;
+      const heightRatio = preset.height / image.height;
+      const ratio = Math.min(widthRatio, heightRatio, 1);
+      const outputWidth = Math.max(1, Math.round(image.width * ratio));
+      const outputHeight = Math.max(1, Math.round(image.height * ratio));
+
+      const canvas = document.createElement("canvas");
+      canvas.width = outputWidth;
+      canvas.height = outputHeight;
+
+      const context = canvas.getContext("2d", { alpha: true });
+      context.imageSmoothingEnabled = true;
+      context.imageSmoothingQuality = "high";
+      context.drawImage(image, 0, 0, outputWidth, outputHeight);
+
+      const quality = Math.min(Math.max(qualityPercent / 100, 0.5), 0.96);
+      let blob = await canvasToBlob(canvas, "image/webp", quality);
+
+      if (blob.size > file.size && quality > 0.72) {
+        blob = await canvasToBlob(canvas, "image/webp", Math.max(0.72, quality - 0.1));
+      }
+
+      const dataUrl = await blobToDataUrl(blob);
+
+      return {
+        blob,
+        dataUrl,
+        width: outputWidth,
+        height: outputHeight,
+        originalWidth: image.width,
+        originalHeight: image.height,
+        originalSize: file.size,
+        outputSize: blob.size,
+        fileName: file.name.replace(/\.[^.]+$/, "") || "optimized-image",
+        mimeType: blob.type || "image/webp"
+      };
+    } finally {
+      URL.revokeObjectURL(inputUrl);
+    }
+  };
+
+  const renderPreview = (frame, meta, source, infoText) => {
+    if (source) {
+      frame.innerHTML = `<img src="${source}" alt="Preview" />`;
+    } else {
+      frame.innerHTML = "<span>No image loaded</span>";
+    }
+    meta.textContent = infoText || "";
+  };
+
   const syncQuickFields = () => {
     quickFields.name.value = data.profile.name || "";
     quickFields.label.value = data.profile.label || "";
@@ -77,6 +223,27 @@ document.addEventListener("DOMContentLoaded", () => {
       `Tools: ${data.skills.tools.length}`
     ];
     projectStats.innerHTML = stats.map((item) => `<span class="studio-stat">${escapeHtml(item)}</span>`).join("");
+  };
+
+  const syncImageTargets = () => {
+    if (!imageTarget) {
+      return;
+    }
+
+    const previous = imageTarget.value;
+    const options = [
+      `<option value="profile.portrait">Profile Portrait</option>`,
+      ...data.projects.map(
+        (project) =>
+          `<option value="project:${escapeHtml(project.id)}">Project Image: ${escapeHtml(project.title)}</option>`
+      )
+    ];
+
+    imageTarget.innerHTML = options.join("");
+
+    if ([...imageTarget.options].some((option) => option.value === previous)) {
+      imageTarget.value = previous;
+    }
   };
 
   const syncProjectList = () => {
@@ -114,6 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
     syncEditor();
     syncStats();
     syncProjectList();
+    syncImageTargets();
   };
 
   const persistData = (nextData, message) => {
@@ -275,6 +443,135 @@ document.addEventListener("DOMContentLoaded", () => {
     setStatus(quickStatus, "Portfolio V5 reset to defaults.", false);
   });
 
+  const updateQualityFromPreset = () => {
+    const preset = imagePresets[imagePreset.value] || imagePresets.project;
+    imageQuality.value = String(Math.round(preset.quality * 100));
+    imageQualityValue.textContent = `${imageQuality.value}%`;
+  };
+
+  imagePreset?.addEventListener("change", updateQualityFromPreset);
+  imageQuality?.addEventListener("input", () => {
+    imageQualityValue.textContent = `${imageQuality.value}%`;
+  });
+
+  imageFileInput?.addEventListener("change", async () => {
+    const file = imageFileInput.files?.[0];
+    optimizedAsset = null;
+
+    if (originalPreviewUrl) {
+      URL.revokeObjectURL(originalPreviewUrl);
+      originalPreviewUrl = "";
+    }
+
+    if (!file) {
+      renderPreview(originalImageFrame, originalImageMeta, "", "");
+      renderPreview(optimizedImageFrame, optimizedImageMeta, "", "");
+      setStatus(imageStatus, "Select an image to begin processing.", false);
+      return;
+    }
+
+    const previewUrl = URL.createObjectURL(file);
+    originalPreviewUrl = previewUrl;
+    const previewImage = await loadImageElement(previewUrl);
+    renderPreview(
+      originalImageFrame,
+      originalImageMeta,
+      previewUrl,
+      `${previewImage.width} x ${previewImage.height} • ${formatBytes(file.size)}`
+    );
+    renderPreview(optimizedImageFrame, optimizedImageMeta, "", "");
+    setStatus(imageStatus, "Image loaded. Click Process Image to optimize it.", false);
+  });
+
+  processImageBtn?.addEventListener("click", async () => {
+    const file = imageFileInput?.files?.[0];
+    if (!file) {
+      setStatus(imageStatus, "Choose an image first.", true);
+      return;
+    }
+
+    setStatus(imageStatus, "Processing image...", false);
+
+    try {
+      optimizedAsset = await optimizeImageFile(file, imagePreset.value, Number(imageQuality.value));
+      renderPreview(
+        optimizedImageFrame,
+        optimizedImageMeta,
+        optimizedAsset.dataUrl,
+        `${optimizedAsset.width} x ${optimizedAsset.height} • ${formatBytes(optimizedAsset.outputSize)}`
+      );
+
+      const savings = optimizedAsset.originalSize - optimizedAsset.outputSize;
+      const savingsText =
+        savings > 0 ? `Saved ${formatBytes(savings)} compared to the original.` : "Optimized version is ready.";
+
+      setStatus(
+        imageStatus,
+        `${imagePresets[imagePreset.value].label} preset applied. ${savingsText}`,
+        false
+      );
+    } catch (error) {
+      optimizedAsset = null;
+      setStatus(imageStatus, "Image processing failed. Try a different file.", true);
+    }
+  });
+
+  applyImageBtn?.addEventListener("click", () => {
+    if (!optimizedAsset) {
+      setStatus(imageStatus, "Process an image before applying it.", true);
+      return;
+    }
+
+    const target = imageTarget.value;
+    if (!target) {
+      setStatus(imageStatus, "Choose where the image should be used.", true);
+      return;
+    }
+
+    let nextData = { ...data };
+
+    if (target === "profile.portrait") {
+      nextData = {
+        ...data,
+        profile: {
+          ...data.profile,
+          portrait: optimizedAsset.dataUrl
+        }
+      };
+    } else if (target.startsWith("project:")) {
+      const projectId = target.replace("project:", "");
+      nextData = {
+        ...data,
+        projects: data.projects.map((project) =>
+          project.id === projectId
+            ? {
+                ...project,
+                image: optimizedAsset.dataUrl
+              }
+            : project
+        )
+      };
+    }
+
+    persistData(nextData, "Optimized image applied to the selected target.");
+    setStatus(imageStatus, "Optimized image applied to the selected target.", false);
+  });
+
+  downloadImageBtn?.addEventListener("click", () => {
+    if (!optimizedAsset) {
+      setStatus(imageStatus, "Process an image before downloading it.", true);
+      return;
+    }
+
+    const url = URL.createObjectURL(optimizedAsset.blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `${optimizedAsset.fileName}-optimized.webp`;
+    link.click();
+    URL.revokeObjectURL(url);
+    setStatus(imageStatus, "Optimized image downloaded.", false);
+  });
+
   if (!("IntersectionObserver" in window)) {
     revealItems.forEach((item) => item.classList.add("active"));
   } else {
@@ -304,5 +601,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  initTheme();
+  updateQualityFromPreset();
   syncAll();
 });

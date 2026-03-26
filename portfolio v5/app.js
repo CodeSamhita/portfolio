@@ -6,12 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const progressBar = document.getElementById("progressBar");
   const backToTopBtn = document.getElementById("backToTopBtn");
   const messageBox = document.getElementById("messageBox");
+  const themeToggleBtn = document.getElementById("themeToggleBtn");
   const navToggle = document.querySelector(".nav-toggle");
   const navPanel = document.querySelector(".nav-panel");
   const navLinks = [...document.querySelectorAll(".nav-panel a")];
   const revealItems = document.querySelectorAll(".reveal");
   const contactForm = document.getElementById("contact-form");
   const formMessage = document.getElementById("form-message");
+  const THEME_KEY = "portfolio-v5-theme";
 
   if (!store || !data) {
     return;
@@ -52,6 +54,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2600);
   };
 
+  const applyTheme = (theme) => {
+    const isLight = theme === "light";
+    document.body.classList.toggle("light-mode", isLight);
+    if (themeToggleBtn) {
+      const icon = themeToggleBtn.querySelector("i");
+      if (icon) {
+        icon.className = isLight ? "fas fa-moon" : "fas fa-sun";
+      }
+      themeToggleBtn.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+    }
+  };
+
+  const initTheme = () => {
+    const savedTheme = window.localStorage.getItem(THEME_KEY) || "dark";
+    applyTheme(savedTheme);
+    themeToggleBtn?.addEventListener("click", () => {
+      const nextTheme = document.body.classList.contains("light-mode") ? "dark" : "light";
+      window.localStorage.setItem(THEME_KEY, nextTheme);
+      applyTheme(nextTheme);
+    });
+  };
+
   const toLabel = (value) =>
     String(value || "")
       .replace(/[-_]+/g, " ")
@@ -71,6 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return `<div class="project-image project-image-fallback">No image</div>`;
   };
 
+  const orderProjects = (projects) =>
+    [...projects].sort((left, right) => Number(Boolean(right.featured)) - Number(Boolean(left.featured)));
+
   const buildProjectCard = (project, withGalleryLink = true) => {
     const actionLinks = [
       buildLinkButton(project.githubUrl, "GitHub", "fab fa-github"),
@@ -82,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("");
 
     return `
-      <article class="project-card">
+      <article class="project-card ${project.featured ? "featured-project-card" : ""}">
         ${buildProjectImage(project)}
         <div class="project-top">
           <div>
@@ -91,6 +118,15 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
         <p>${escapeHtml(project.description)}</p>
+        ${
+          project.upgradeNotes?.length
+            ? `
+              <ul class="project-evolution">
+                ${project.upgradeNotes.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+              </ul>
+            `
+            : ""
+        }
         <div class="tech-list">
           ${project.technologies.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
         </div>
@@ -105,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const renderHome = () => {
     setText("hero-eyebrow", data.profile.heroEyebrow);
     setText("hero-title", data.profile.heroTitle);
+    setText("hero-role", data.profile.label);
     setText("hero-lead", data.profile.heroLead);
     setText("status-label", data.profile.statusLabel);
     setText("status-text", data.profile.statusText);
@@ -197,7 +234,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const preview = document.getElementById("gallery-preview");
     if (preview) {
-      preview.innerHTML = data.projects.slice(0, 3).map((project) => buildProjectCard(project, false)).join("");
+      preview.innerHTML = orderProjects(data.projects)
+        .slice(0, 3)
+        .map((project) => buildProjectCard(project, false))
+        .join("");
     }
 
     const contactLinks = document.getElementById("contact-links");
@@ -270,7 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const categories = ["all", ...new Set(projects.map((project) => project.category))];
+    const categories = ["all", ...new Set(orderProjects(projects).map((project) => project.category))];
     container.innerHTML = categories
       .map(
         (category, index) => `
@@ -301,11 +341,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const visible =
-      filter === "all" ? projects : projects.filter((project) => project.category === filter);
+      filter === "all"
+        ? orderProjects(projects)
+        : orderProjects(projects).filter((project) => project.category === filter);
 
     container.innerHTML = visible.length
       ? visible.map((project) => buildProjectCard(project)).join("")
-      : `<article class="glass-card empty-card"><h3>No projects yet</h3><p>Add projects from the Studio page.</p></article>`;
+      : `<article class="glass-card empty-card"><h3>No projects yet</h3><p>Projects will appear here once content is added.</p></article>`;
   };
 
   const renderGallery = () => {
@@ -315,10 +357,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     container.innerHTML = data.projects.length
-      ? data.projects
+      ? orderProjects(data.projects)
           .map(
             (project) => `
-              <article class="gallery-project-card">
+              <article class="gallery-project-card ${project.featured ? "featured-project-card" : ""}">
                 ${buildProjectImage(project)}
                 <div class="gallery-project-copy">
                   <div class="gallery-project-header">
@@ -326,6 +368,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h3>${escapeHtml(project.galleryTitle || project.title)}</h3>
                   </div>
                   <p>${escapeHtml(project.galleryDescription || project.description)}</p>
+                  ${
+                    project.upgradeNotes?.length
+                      ? `
+                        <ul class="project-evolution">
+                          ${project.upgradeNotes.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+                        </ul>
+                      `
+                      : ""
+                  }
                   <div class="tech-list">
                     ${project.technologies.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
                   </div>
@@ -339,7 +390,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `
           )
           .join("")
-      : `<article class="glass-card empty-card"><h3>No gallery projects yet</h3><p>Add them from the Studio page.</p></article>`;
+      : `<article class="glass-card empty-card"><h3>No gallery projects yet</h3><p>Project showcases will appear here once content is added.</p></article>`;
   };
 
   const initCounters = () => {
@@ -481,6 +532,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderGallery();
   }
 
+  initTheme();
   initReveal();
   updateScrollUi();
 

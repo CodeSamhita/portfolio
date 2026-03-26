@@ -1,23 +1,24 @@
 (function () {
   const STORAGE_KEY = "portfolio-v5-content";
+  let memoryData = null;
 
   const createId = () => `project-${Date.now()}-${Math.random().toString(16).slice(2, 8)}`;
 
   const defaultData = {
     profile: {
       name: "Aditya Sharma",
-      label: "Developer, builder, innovator",
-      heroEyebrow: "Software x Robotics x Product Thinking",
-      heroTitle: "Building systems that feel alive, useful, and memorable.",
+      label: "B.Tech Computer Science Student | Developer | Robotics Builder",
+      heroEyebrow: "B.Tech Student x Software x Intelligent Systems",
+      heroTitle: "B.Tech Computer Science student building software, systems, and robotics.",
       heroLead:
-        "I am Aditya Sharma, a developer and innovator focused on full-stack products, embedded systems, intelligent automation, and hands-on engineering that works in the real world.",
-      statusLabel: "Now building",
-      statusText: "Robotics, AI tools, hardware-first workflows",
+        "I am Aditya Sharma, a B.Tech Computer Science student at Presidency University, Bengaluru. I focus on software development, embedded systems, robotics, and product-style builds that solve practical problems and keep improving with each version.",
+      statusLabel: "Currently",
+      statusText: "B.Tech CSE student at Presidency University",
       locationLabel: "Based in",
       locationText: "Bengaluru, Karnataka, India",
       portrait: "profile.png",
       resumeUrl: "resume.html",
-      email: "adi.sharma102000@gmail.com",
+      email: "adisharma102000@gmail.com",
       githubUrl: "https://github.com/CodeSamhita",
       linkedinUrl: "https://www.linkedin.com/in/aditya-sharma-8679802b3",
       instagramUrl: "https://www.instagram.com/visionary_adi?igsh=MjI4Z2N3MzZxYnFk",
@@ -131,20 +132,26 @@
     projects: [
       {
         id: "project-portfolio",
-        title: "Interactive Portfolio System",
+        title: "Portfolio V5: Responsive Content Platform",
         category: "software",
-        type: "Software",
+        type: "Flagship Build",
         description:
-          "A portfolio experience designed as a live product surface with structured storytelling, motion, and responsive presentation.",
-        technologies: ["HTML", "CSS", "JavaScript", "UI Motion"],
-        highlight: "Showcases frontend craft and interface thinking.",
+          "This portfolio is also a product project. Each major version upgrade introduces new structure, responsive layout behavior, editable content systems, and presentation improvements instead of being only a visual refresh.",
+        technologies: ["HTML", "CSS", "JavaScript", "Responsive CSS", "Local JSON Store", "Content Studio"],
+        highlight: "Each upgrade adds new technology and makes the portfolio behave more like a maintainable product.",
         image: "image/LAB.JPG",
-        galleryTitle: "Interactive Portfolio System",
+        galleryTitle: "Portfolio V5: Responsive Content Platform",
         galleryDescription:
-          "A polished portfolio version focused on structure, visual identity, responsiveness, and live-feeling motion.",
+          "A versioned portfolio build where every upgrade introduces new implementation layers such as improved responsiveness, structured data rendering, editor tooling, and cleaner project storytelling.",
         githubUrl: "https://github.com/CodeSamhita",
         linkedinUrl: "https://www.linkedin.com/in/aditya-sharma-8679802b3",
-        liveUrl: "index.html"
+        liveUrl: "index.html",
+        featured: true,
+        upgradeNotes: [
+          "Early versions focused on static presentation and section layout.",
+          "Later upgrades introduced stronger responsiveness, reusable styling, and animated UI patterns.",
+          "V5 adds shared data rendering, a gallery system, and an editor studio for add, edit, delete, import, and export workflows."
+        ]
       },
       {
         id: "project-humanoid",
@@ -161,7 +168,9 @@
           "A robotics build focused on voice-linked motion, low-latency response, and expressive interaction.",
         githubUrl: "",
         linkedinUrl: "https://www.linkedin.com/in/aditya-sharma-8679802b3",
-        liveUrl: ""
+        liveUrl: "",
+        featured: false,
+        upgradeNotes: []
       },
       {
         id: "project-navigation",
@@ -178,7 +187,9 @@
           "A practical hardware system built to reduce navigation effort through sensor-driven logic.",
         githubUrl: "",
         linkedinUrl: "",
-        liveUrl: ""
+        liveUrl: "",
+        featured: false,
+        upgradeNotes: []
       },
       {
         id: "project-lab",
@@ -195,12 +206,24 @@
           "A software concept designed to streamline operations while adding AI-supported guidance for users.",
         githubUrl: "",
         linkedinUrl: "",
-        liveUrl: ""
+        liveUrl: "",
+        featured: false,
+        upgradeNotes: []
       }
     ]
   };
 
   const deepClone = (value) => JSON.parse(JSON.stringify(value));
+  const defaultProjectsById = Object.fromEntries(defaultData.projects.map((project) => [project.id, project]));
+  const legacyProfileDefaults = {
+    label: "Developer, builder, innovator",
+    heroEyebrow: "Software x Robotics x Product Thinking",
+    heroTitle: "Building systems that feel alive, useful, and memorable.",
+    heroLead:
+      "I am Aditya Sharma, a developer and innovator focused on full-stack products, embedded systems, intelligent automation, and hands-on engineering that works in the real world.",
+    statusLabel: "Now building",
+    statusText: "Robotics, AI tools, hardware-first workflows"
+  };
 
   const normalizeStringArray = (value) =>
     Array.isArray(value)
@@ -210,19 +233,32 @@
   const normalizeProjects = (projects) =>
     Array.isArray(projects)
       ? projects.map((project) => ({
-          id: String(project.id || createId()),
-          title: String(project.title || "Untitled Project"),
-          category: String(project.category || "software").toLowerCase(),
-          type: String(project.type || "Project"),
-          description: String(project.description || ""),
-          technologies: normalizeStringArray(project.technologies),
-          highlight: String(project.highlight || ""),
-          image: String(project.image || ""),
-          galleryTitle: String(project.galleryTitle || project.title || ""),
-          galleryDescription: String(project.galleryDescription || project.description || ""),
-          githubUrl: String(project.githubUrl || ""),
-          linkedinUrl: String(project.linkedinUrl || ""),
-          liveUrl: String(project.liveUrl || "")
+          ...(() => {
+            const id = String(project.id || createId());
+            const defaultsForProject = defaultProjectsById[id] || {};
+            const title = String(project.title || defaultsForProject.title || "Untitled Project");
+            const description = String(project.description || defaultsForProject.description || "");
+
+            return {
+              id,
+              title,
+              category: String(project.category || defaultsForProject.category || "software").toLowerCase(),
+              type: String(project.type || defaultsForProject.type || "Project"),
+              description,
+              technologies: normalizeStringArray(project.technologies || defaultsForProject.technologies),
+              highlight: String(project.highlight || defaultsForProject.highlight || ""),
+              image: String(project.image || defaultsForProject.image || ""),
+              galleryTitle: String(project.galleryTitle || defaultsForProject.galleryTitle || title),
+              galleryDescription: String(
+                project.galleryDescription || defaultsForProject.galleryDescription || description
+              ),
+              githubUrl: String(project.githubUrl || defaultsForProject.githubUrl || ""),
+              linkedinUrl: String(project.linkedinUrl || defaultsForProject.linkedinUrl || ""),
+              liveUrl: String(project.liveUrl || defaultsForProject.liveUrl || ""),
+              featured: "featured" in project ? Boolean(project.featured) : Boolean(defaultsForProject.featured),
+              upgradeNotes: normalizeStringArray(project.upgradeNotes || defaultsForProject.upgradeNotes)
+            };
+          })()
         }))
       : deepClone(defaultData.projects);
 
@@ -235,6 +271,12 @@
       ...(source.profile || {}),
       focusAreas: normalizeStringArray(source.profile?.focusAreas || normalized.profile.focusAreas)
     };
+
+    Object.entries(legacyProfileDefaults).forEach(([key, legacyValue]) => {
+      if (!source.profile?.[key] || source.profile?.[key] === legacyValue) {
+        normalized.profile[key] = defaultData.profile[key];
+      }
+    });
 
     normalized.about = {
       ...normalized.about,
@@ -290,22 +332,32 @@
     try {
       const raw = window.localStorage.getItem(STORAGE_KEY);
       if (!raw) {
-        return deepClone(defaultData);
+        return memoryData ? normalizeData(memoryData) : deepClone(defaultData);
       }
       return normalizeData(JSON.parse(raw));
     } catch (error) {
-      return deepClone(defaultData);
+      return memoryData ? normalizeData(memoryData) : deepClone(defaultData);
     }
   };
 
   const save = (data) => {
     const normalized = normalizeData(data);
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(normalized));
+    memoryData = deepClone(normalized);
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(normalized));
+    } catch (error) {
+      // Fallback keeps the page functional even when storage is restricted.
+    }
     return normalized;
   };
 
   const reset = () => {
-    window.localStorage.removeItem(STORAGE_KEY);
+    memoryData = null;
+    try {
+      window.localStorage.removeItem(STORAGE_KEY);
+    } catch (error) {
+      // Ignore storage cleanup failures and fall back to defaults in memory.
+    }
     return deepClone(defaultData);
   };
 
