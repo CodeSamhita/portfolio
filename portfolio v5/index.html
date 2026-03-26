@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Sharma | Portfolio V5</title>
+  <meta
+    name="description"
+    content="Portfolio of Aditya Sharma, a developer and builder working across software, robotics, embedded systems, and interactive product experiences."
+  />
+  <meta name="author" content="Aditya Sharma" />
+  <meta property="og:title" content="Aditya Sharma | Portfolio V5" />
+  <meta
+    property="og:description"
+    content="Interactive portfolio showcasing software, robotics, embedded systems, and real-world builds."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="profile.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="home">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="orb orb-one" aria-hidden="true"></div>
+  <div class="orb orb-two" aria-hidden="true"></div>
+  <div id="progressBar" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="topbar container" aria-label="Primary">
+      <a class="brand" href="../index.html">Aditya Sharma</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-panel" id="site-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="admin.html">Studio</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero container reveal">
+      <div class="hero-copy">
+        <p class="eyebrow" id="hero-eyebrow"></p>
+        <h1 id="hero-title"></h1>
+        <p class="hero-lead" id="hero-lead"></p>
+        <div class="hero-signals">
+          <div class="signal-pill"><span id="status-label"></span><strong class="signal-text" id="status-text"></strong></div>
+          <div class="signal-pill"><span id="location-label"></span><strong class="signal-text" id="location-text"></strong></div>
+        </div>
+        <div class="hero-actions">
+          <a href="#projects" class="button button-primary">Explore Projects</a>
+          <a id="resume-link" href="resume.html" class="button button-secondary" target="_blank" rel="noreferrer">View Resume</a>
+          <a href="admin.html" class="button button-secondary">Open Studio</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="portrait-shell">
+          <div class="portrait-ring" aria-hidden="true"></div>
+          <img id="hero-portrait" src="profile.png" alt="Portrait of Aditya Sharma" class="hero-portrait" />
+        </div>
+        <div class="hero-metrics">
+          <article class="metric-card">
+            <p>Projects built</p>
+            <h2><span id="project-count" data-counter="0">0</span>+</h2>
+          </article>
+          <article class="metric-card">
+            <p>Tools and platforms</p>
+            <h2><span id="tool-count" data-counter="0">0</span>+</h2>
+          </article>
+          <article class="metric-card">
+            <p>Focus area</p>
+            <h2 class="metric-text" id="typed-text">Full-stack systems</h2>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2 id="about-heading"></h2>
+      </div>
+      <div class="about-grid">
+        <article class="glass-card story-card" id="about-paragraphs"></article>
+        <div class="insight-stack" id="about-insights"></div>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">Capabilities</p>
+        <h2 id="skills-heading"></h2>
+      </div>
+      <div class="capability-grid" id="capability-grid"></div>
+      <div class="tool-ribbon" id="tool-ribbon" aria-label="Tools and platforms"></div>
+    </section>
+
+    <section class="section container reveal" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected work with a strong technical spine.</h2>
+      </div>
+      <div class="filter-row" id="project-filters"></div>
+      <div class="project-grid" id="projects-container"></div>
+    </section>
+
+    <section class="section container reveal" id="journey">
+      <div class="section-heading">
+        <p class="eyebrow">Journey</p>
+        <h2 id="journey-heading"></h2>
+      </div>
+      <div class="journey-grid">
+        <article class="glass-card timeline-card">
+          <h3>Education</h3>
+          <div class="timeline" id="education-list"></div>
+        </article>
+        <article class="glass-card list-card">
+          <h3>Highlights</h3>
+          <ul class="detail-list" id="highlights-list"></ul>
+        </article>
+        <article class="glass-card list-card">
+          <h3>Clubs and Activities</h3>
+          <ul class="detail-list" id="activities-list"></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="gallery">
+      <div class="section-heading">
+        <p class="eyebrow">Gallery</p>
+        <h2>Project visuals and proof of work.</h2>
+      </div>
+      <div class="album-grid" id="gallery-preview"></div>
+      <div class="section-actions">
+        <a href="gallery.html" class="button button-primary">Open Full Gallery</a>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-heading"></h2>
+      </div>
+      <div class="contact-grid">
+        <article class="glass-card contact-card">
+          <h3>Send a message</h3>
+          <p id="contact-intro"></p>
+          <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label>
+              Name
+              <input type="text" id="contactName" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" id="contactEmail" name="email" required />
+            </label>
+            <label>
+              Message
+              <textarea id="contactMessage" name="message" rows="5" required></textarea>
+            </label>
+            <button type="submit" class="button button-primary form-button">Send Message</button>
+            <p id="form-message" class="form-message" aria-live="polite"></p>
+          </form>
+        </article>
+        <article class="glass-card connect-card">
+          <h3>Connect directly</h3>
+          <div class="connect-stack" id="contact-links"></div>
+          <div class="availability-note">
+            <strong>Best fit:</strong>
+            <p id="availability-text"></p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>Designed to feel live, focused, and unmistakably personal.</p>
+    <p>&copy; 2026 Aditya Sharma. All rights reserved.</p>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div id="messageBox" class="message-box" role="status" aria-live="polite"></div>
+
+  <script src="data-store.js"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
