@@ -1,138 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aditya Sharma | Upgrading</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="portfolio v6/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Sharma - Personal Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #050505; /* Solid background matching current theme */
+            overflow: hidden; /* Prevent scrollbars */
+        }
+
+        /* --- Ambient Background matching current theme --- */
+        .ambient-background {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            overflow: hidden;
+            background-color: #050505;
+        }
+
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.4;
+            animation: float 20s infinite alternate ease-in-out;
+        }
+
+        .orb-primary {
+            width: 600px;
+            height: 600px;
+            top: -10%;
+            right: -10%;
+            background: radial-gradient(circle, #8b5cf6 0%, transparent 70%); /* Violet */
+        }
+
+        .orb-secondary {
+            width: 500px;
+            height: 500px;
+            bottom: -5%;
+            left: -10%;
+            background: radial-gradient(circle, #0ea5e9 0%, transparent 70%); /* Sky Blue */
+            animation-delay: -5s;
+        }
+
+        .orb-accent {
+            width: 400px;
+            height: 400px;
+            top: 40%;
+            left: 40%;
+            background: radial-gradient(circle, #87eeff 0%, transparent 70%); /* Cyan */
+            opacity: 0.2;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+
+        /* --- Preloader Styles --- */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #050505;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #87eeff; /* Cyan */
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            transition: opacity 0.75s ease, visibility 0.75s ease;
+        }
+
+        #preloader.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-text {
+            animation: pulse-text 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse-text {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* --- Main Content Styles --- */
+        #main-content {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 1s ease;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        #main-content.loaded {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Interactive particle background canvas */
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Using transparent background so the ambient orbs show through */
+            background: transparent;
+        }
+
+        /* Floating animation for the main card */
+        .card-float {
+            animation: float-card 6s ease-in-out infinite;
+            transition: transform 0.4s ease-out;
+        }
+
+        @keyframes float-card {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Glowing pulse animation for the profile picture */
+        .profile-pulse {
+            animation: pulse-glow 3s infinite alternate;
+            border-color: #87eeff; /* Cyan color */
+        }
+
+        @keyframes pulse-glow {
+            from { box-shadow: 0 0 10px rgba(135,238,255,0.4), 0 0 20px #87eeff; }
+            to { box-shadow: 0 0 20px rgba(135,238,255,0.6), 0 0 40px #87eeff; }
+        }
+
+        /* -- Icon Animations (with delay) -- */
+        @keyframes wave-jump {
+            0% { transform: translateY(0); }
+            20% { transform: translateY(-15px); }
+            40% { transform: translateY(0); }
+            100% { transform: translateY(0); }
+        }
+        
+        .social-icon {
+            animation: wave-jump 2.5s ease-in-out infinite;
+            transition: transform 0.2s ease;
+        }
+
+        .social-icon:nth-child(1) { animation-delay: 0s; }
+        .social-icon:nth-child(2) { animation-delay: 0.2s; }
+        .social-icon:nth-child(3) { animation-delay: 0.4s; }
+        .social-icon:nth-child(4) { animation-delay: 0.6s; }
+        .social-icon:nth-child(5) { animation-delay: 0.8s; }
+
+        .social-icon:hover {
+            animation: none;
+            transform: translateY(0) scale(1.1);
+        }
+
+        /* --- Share Confirmation Toast --- */
+        #share-toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(10, 25, 47, 0.9); /* Dark blue/gray matching theme */
+            border: 1px solid rgba(135, 238, 255, 0.3); /* Cyan border */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        #share-toast.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Webkit scrollbar for main content */
+        #main-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        #main-content::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.1);
+        }
+        #main-content::-webkit-scrollbar-thumb {
+            background: rgba(135,238,255,0.3);
+            border-radius: 4px;
+        }
+        #main-content::-webkit-scrollbar-thumb:hover {
+            background: rgba(135,238,255,0.6);
+        }
+    </style>
 </head>
+<body class="text-white">
+    
+    <!-- Ambient Background matching current theme -->
+    <div class="ambient-background" aria-hidden="true">
+        <div class="glow-orb orb-primary"></div>
+        <div class="glow-orb orb-secondary"></div>
+        <div class="glow-orb orb-accent"></div>
+    </div>
 
-<body class="dark-mode"
-  style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+    <!-- Preloader Element -->
+    <div id="preloader">
+        <div class="loader-text">Loading landing page...</div>
+    </div>
 
-  <div class="ambient-background" aria-hidden="true">
-    <div class="glow-orb orb-primary"></div>
-    <div class="glow-orb orb-secondary"></div>
-    <div class="glow-orb orb-accent"></div>
-    <div class="noise-overlay"></div>
-  </div>
+    <!-- Main Content Wrapper -->
+    <div id="main-content">
+        <canvas id="particle-canvas"></canvas>
+        <div id="tilt-card" class="w-full max-w-md mx-auto bg-[#0a192f]/40 backdrop-blur-md rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden border border-white/10 card-float my-8">
+            <div class="p-8 sm:p-10 text-center">
+                <img class="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto mb-5 border-4 profile-pulse" 
+                     src="portfolio v6/assets/profile.jpg" 
+                     alt="Profile Picture"
+                     onerror="this.onerror=null;this.src='https://placehold.co/200x200/050505/87eeff?text=Profile';">
+                
+                <h1 class="text-3xl sm:text-4xl font-bold text-white mb-1 tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-300">Aditya Sharma</h1>
+                <p class="text-md sm:text-lg text-cyan-300 mb-6">Innovator & Creative Coder</p>
 
-  <main class="container reveal-up is-visible" style="max-width: 800px; z-index: 10;">
-    <article class="glass-panel text-center" style="padding: 4rem 2rem;">
-      <i class="fas fa-hammer text-gradient mb-4" style="font-size: 3rem;"></i>
-      <h1 class="hero-title text-gradient" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem;">System
-        Upgrades in Progress</h1>
-      <p class="section-description mx-auto" style="font-size: 1.1rem; max-width: 600px;">
-        I am currently engineering <strong>New Portfolio </strong>. It introduces a modernized glassmorphic design system
-        and completely overhauled backend logic.
-      </p>
+                <div class="space-y-4">
+                    <a href="portfolio v6/index.html" class="block w-full bg-cyan-600/20 border border-cyan-400/40 hover:bg-cyan-600/40 text-cyan-100 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-[0_0_15px_rgba(135,238,255,0.1)] hover:shadow-[0_0_25px_rgba(135,238,255,0.3)]">
+                        New Portfolio (Beta)
+                    </a>
+                    
+                    <a href="portfolio v4/index.html" class="block w-full bg-gray-800/60 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 border border-white/10">
+                        Old Portfolio (v4)
+                    </a>
+                    
+                    <!-- Share Button -->
+                    <button id="share-button" class="block w-full bg-transparent hover:bg-white/5 border border-white/20 text-gray-300 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-share-alt mr-2"></i> Share this Page
+                    </button>
+                </div>
 
-      <div class="mt-5" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-        <a href="portfolio v4/index.html" class="btn btn-outline" style="min-width: 180px;"><i
-            class="fas fa-history"></i> Visit Old page</a>
-        <a href="portfolio v6/index.html" class="btn btn-glow" style="min-width: 180px;"><i class="fas fa-flask"></i>
-          new page(Beta)</a>
-      </div>
+                <div class="social-links-box bg-[#050505]/60 border border-white/10 rounded-lg p-4 mt-8">
+                    <h3 class="text-gray-300 text-sm tracking-wider uppercase">Click to Contact</h3>
+                    <div class="flex justify-center items-center space-x-6 mt-4 opacity-90">
+                        <!-- Social Icons -->
+                        <a href="https://www.linkedin.com/in/adityasharmaportfolio" title="LinkedIn" class="social-icon text-gray-400 hover:text-cyan-400"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg></a>
+                        <a href="https://github.com/CodeSamhita" title="GitHub" class="social-icon text-gray-400 hover:text-cyan-400"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.852 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg></a>
+                        <a href="https://wa.me/918217450041?text=Hello%20Aditya,%20I'm%20reaching%20out%20from%20your%20portfolio%20page." title="WhatsApp" class="social-icon text-gray-400 hover:text-cyan-400"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.902-.539-5.57-1.502L.057 24zM7.327 21.16l.494.297c1.492.896 3.23.142 4.595.142 5.465 0 9.908-4.444 9.908-9.908s-4.444-9.908-9.908-9.908c-5.465 0-9.908 4.444-9.908 9.908 0 2.021.607 3.926 1.719 5.574l.32.484-1.059 3.865 3.956-1.04zM12.273 14.12l-1.612-2.043c-.418-.529-.117-.834.188-1.111.262-.24.438-.297.588-.529.15-.232.15-.418.105-.588-.045-.17-.465-1.112-1.059-2.648-.594-1.536-1.188-1.29-1.662-1.32-.422-.023-.902-.045-1.375.211-.529.256-1.004.834-1.004 1.968s.375 3.488 1.53 4.842c1.154 1.354 2.443 3.03 5.207 4.536 2.764 1.506 3.646 1.205 4.23 1.057.582-.15 1.809-.747 2.066-1.492.256-.747.256-1.383.188-1.536-.068-.15-.465-.24-.947-.465z"/></svg></a>
+                        <a href="https://x.com/Aditya85946983?t=5cYQMowlU6HTMXjzK6CZcg&s=09" title="X" class="social-icon text-gray-400 hover:text-cyan-400"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        <a href="https://www.instagram.com/visionary_adi?igsh=MjI4Z2N3MzZxYnFk" title="Instagram" class="social-icon text-gray-400 hover:text-cyan-400"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                    </div>
+                </div>
 
-      <div style="margin-top: 3rem;">
-        <div class="loader-spinner mx-auto"
-          style="width: 32px; height: 32px; border-width: 3px; border-top-color: var(--cyan);"></div>
-        <p class="admin-note mt-3">Executing UI changes. Please stand by.</p>
-      </div>
-    </article>
-  </main>
+                <div class="mt-6 space-y-3">
+                    <a href="contectcard.html" class="block w-full bg-[#050505]/80 hover:bg-[#111] text-gray-300 hover:text-cyan-300 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 border border-white/10 hover:border-cyan-400/30">
+                        Contact Card
+                    </a>
+                    
+                    <a href="ClubSite/indexv3.html" class="block w-full bg-[#050505]/80 hover:bg-[#111] text-gray-300 hover:text-cyan-300 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 border border-white/10 hover:border-cyan-400/30">
+                        Club Page
+                    </a>
+                </div>
+            </div>
+            
 
-  <style>
-    body {
-      background-color: #050505;
-      color: #e2e8f0;
-      font-family: 'Inter', sans-serif;
-      overflow: hidden;
-      margin: 0;
-    }
+            <footer class="bg-[#050505]/90 border-t border-white/5 text-center py-4 px-6 relative z-10">
+              <p class="text-xs text-gray-500 mb-2">Some information is currently being upgraded due to backend logic updates. Stay tuned!</p>
+                <p class="text-sm text-gray-400 font-medium">&copy; 2026 Aditya Sharma. All Rights Reserved.</p>
+            </footer>
+        </div>
+    </div>
 
-    .glass-panel {
-      background: rgba(10, 25, 47, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    }
+    <!-- Share Confirmation Toast -->
+    <div id="share-toast">Link Copied Successfully!</div>
 
-    .text-gradient {
-      background: linear-gradient(135deg, #fff 0%, #87eeff 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      display: inline-block;
-    }
+    <script>
+        // --- Start of Script ---
+        let canvas, ctx, particles, mouse;
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 500;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
+        class Particle {
+            constructor(x, y, directionX, directionY, size, color) {
+                this.x = x;
+                this.y = y;
+                this.directionX = directionX;
+                this.directionY = directionY;
+                this.size = size;
+                this.color = color;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+            update() {
+                if (this.x > canvas.width || this.x < 0) {
+                    this.directionX = -this.directionX;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.directionY = -this.directionY;
+                }
+                // Mouse interaction
+                if (mouse.x && mouse.y) {
+                    let dx = mouse.x - this.x;
+                    let dy = mouse.y - this.y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < mouse.radius + this.size) {
+                        if (mouse.x < this.x && this.x < canvas.width - this.size * 10) this.x += 3;
+                        if (mouse.x > this.x && this.x > this.size * 10) this.x -= 3;
+                        if (mouse.y < this.y && this.y < canvas.height - this.size * 10) this.y += 3;
+                        if (mouse.y > this.y && this.y > this.size * 10) this.y -= 3;
+                    }
+                }
+                this.x += this.directionX;
+                this.y += this.directionY;
+                this.draw();
+            }
+        }
 
-    .btn-glow {
-      background: rgba(135, 238, 255, 0.1);
-      color: #87eeff;
-      border: 1px solid rgba(135, 238, 255, 0.3);
-      box-shadow: 0 0 15px rgba(135, 238, 255, 0.1);
-    }
+        function initParticles() {
+            particles = [];
+            let numberOfParticles = (canvas.height * canvas.width) / 9000;
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = (Math.random() * 2) + 1;
+                let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                let directionX = (Math.random() * .4) - .2;
+                let directionY = (Math.random() * .4) - .2;
+                let color = 'rgba(135, 238, 255, 0.4)'; /* Cyan particles */
+                particles.push(new Particle(x, y, directionX, directionY, size, color));
+            }
+        }
 
-    .btn-glow:hover {
-      background: rgba(135, 238, 255, 0.2);
-      box-shadow: 0 0 25px rgba(135, 238, 255, 0.3);
-      transform: translateY(-2px);
-    }
+        function connectParticles() {
+            let opacityValue = 1;
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a; b < particles.length; b++) {
+                    let distance = ((particles[a].x - particles[b].x) * (particles[a].x - particles[b].x)) +
+                        ((particles[a].y - particles[b].y) * (particles[a].y - particles[b].y));
+                    if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+                        opacityValue = 1 - (distance / 20000);
+                        ctx.strokeStyle = `rgba(135, 238, 255, ${opacityValue * 0.3})`; /* Cyan connecting lines */
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[a].x, particles[a].y);
+                        ctx.lineTo(particles[b].x, particles[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
 
-    .btn-outline {
-      background: transparent;
-      color: #a8b2d1;
-      border: 1px solid rgba(168, 178, 209, 0.3);
-    }
+        function animateParticles() {
+            requestAnimationFrame(animateParticles);
+            ctx.clearRect(0, 0, innerWidth, innerHeight);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+            }
+            connectParticles();
+        }
 
-    .btn-outline:hover {
-      border-color: #87eeff;
-      color: #87eeff;
-      transform: translateY(-2px);
-    }
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            initParticles(); 
+        }
 
-    .admin-note {
-      color: #8892b0;
-      font-size: 0.9rem;
-    }
+        window.onload = () => {
+            const preloader = document.getElementById('preloader');
+            const mainContent = document.getElementById('main-content');
+            const tiltCard = document.getElementById('tilt-card');
+            const shareButton = document.getElementById('share-button');
+            const shareToast = document.getElementById('share-toast');
+            
+            canvas = document.getElementById('particle-canvas');
+            ctx = canvas.getContext('2d');
+            mouse = { x: null, y: null, radius: 150 };
 
-    .loader-spinner {
-      border-radius: 50%;
-      border: 3px solid rgba(255, 255, 255, 0.1);
-      border-top-color: #87eeff;
-      animation: spin 1s linear infinite;
-    }
+            preloader.classList.add('fade-out');
+            mainContent.classList.add('loaded');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 750);
+            
+            tiltCard.addEventListener('mousemove', (e) => {
+                const { left, top, width, height } = tiltCard.getBoundingClientRect();
+                const x = e.clientX - left - width / 2;
+                const y = e.clientY - top - height / 2;
+                const rotateX = (y / height) * -20;
+                const rotateY = (x / width) * 20;
+                tiltCard.style.transform = `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
 
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-  </style>
+            tiltCard.addEventListener('mouseleave', () => {
+                tiltCard.style.transform = 'perspective(1500px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+            });
 
+            // Share Button Logic
+            shareButton.addEventListener('click', async () => {
+                const shareData = {
+                    title: 'Aditya Sharma - Portfolio',
+                    text: 'Check out Aditya Sharma\'s personal landing page!',
+                    url: window.location.href
+                };
+                
+                if (navigator.share) {
+                    try {
+                        await navigator.share(shareData);
+                    } catch (err) {
+                        console.log('Share was cancelled or failed');
+                    }
+                } else {
+                    // Fallback: Copy to clipboard
+                    const textArea = document.createElement('textarea');
+                    textArea.value = window.location.href;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+
+                    // Show toast notification
+                    shareToast.classList.add('show');
+                    setTimeout(() => {
+                        shareToast.classList.remove('show');
+                    }, 2000);
+                }
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                mouse.x = e.x;
+                mouse.y = e.y;
+            });
+            window.addEventListener('mouseout', () => {
+                mouse.x = null;
+                mouse.y = null;
+            });
+            
+            window.addEventListener('resize', resizeCanvas);
+
+            resizeCanvas();
+            animateParticles();
+        };
+    </script>
 </body>
-
 </html>
