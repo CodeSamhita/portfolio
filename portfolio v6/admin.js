@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   const THEME_KEY = "portfolio-v5-theme";
+  const TAB_KEY = "portfolio-v6-admin-tab";
+  const DRAFT_KEY = "portfolio-v6-admin-draft";
   let data = await store.init();
 
   const themeToggleBtn = document.getElementById("themeToggleBtn");
@@ -12,6 +14,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const navPanel = document.querySelector(".nav-links");
   const navLinks = [...document.querySelectorAll(".nav-link")];
   const revealItems = document.querySelectorAll(".reveal-up");
+  const progressBar = document.getElementById("progressBar");
+  const backToTopBtn = document.getElementById("backToTopBtn");
 
   const masterForm = document.getElementById("master-form");
   const quickStatus = document.getElementById("quick-status");
@@ -20,8 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   
   const projectList = document.getElementById("studio-project-list");
   const projectStats = document.getElementById("studio-stats");
-  const galleryList = document.getElementById("studio-gallery-list");
-  const addGalleryBtn = document.getElementById("add-gallery-btn");
+  const overviewStats = document.getElementById("admin-overview-stats");
   
   const importFileInput = document.getElementById("import-json-file");
   const imageFileInput = document.getElementById("image-file-input");
@@ -75,25 +78,36 @@ document.addEventListener("DOMContentLoaded", async () => {
     eyebrow: document.getElementById("studio-eyebrow"),
     title: document.getElementById("studio-title"),
     lead: document.getElementById("studio-lead"),
+    statusLabel: document.getElementById("studio-status-label"),
     status: document.getElementById("studio-status"),
+    locationLabel: document.getElementById("studio-location-label"),
     location: document.getElementById("studio-location"),
     email: document.getElementById("studio-email"),
     resume: document.getElementById("studio-resume"),
     github: document.getElementById("studio-github"),
     linkedin: document.getElementById("studio-linkedin"),
+    instagram: document.getElementById("studio-instagram"),
+    whatsappNumber: document.getElementById("studio-whatsapp-number"),
+    whatsappMessage: document.getElementById("studio-whatsapp-message"),
     availability: document.getElementById("studio-availability"),
     languages: document.getElementById("studio-languages"),
     focusAreas: document.getElementById("studio-focus-areas"),
 
     aboutHeading: document.getElementById("studio-about-heading"),
     aboutParagraphs: document.getElementById("studio-about-paragraphs"),
-    
+    aboutInsights: document.getElementById("studio-about-insights"),
+
     skillsHeading: document.getElementById("studio-skills-heading"),
+    skillsCapabilities: document.getElementById("studio-skills-capabilities"),
     skillsTools: document.getElementById("studio-skills-tools"),
-    
+
     journeyHeading: document.getElementById("studio-journey-heading"),
+    journeyEducation: document.getElementById("studio-journey-education"),
     journeyHighlights: document.getElementById("studio-journey-highlights"),
     journeyActivities: document.getElementById("studio-journey-activities"),
+
+    contactHeading: document.getElementById("studio-contact-heading"),
+    contactIntro: document.getElementById("studio-contact-intro"),
   };
 
   const escapeHtml = (value) =>
@@ -103,6 +117,20 @@ document.addEventListener("DOMContentLoaded", async () => {
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#39;");
+
+  const getGalleryImages = (item) => {
+    const normalized = Array.isArray(item?.images)
+      ? item.images.map((image) => String(image || "").trim()).filter(Boolean)
+      : [];
+
+    if (!normalized.length && item?.image) {
+      normalized.push(String(item.image || "").trim());
+    }
+
+    return normalized;
+  };
+
+  const getGalleryImageCount = (item) => getGalleryImages(item).length;
 
   const setStatus = (target, text, isError = false) => {
     if(!target) return;
@@ -184,25 +212,45 @@ document.addEventListener("DOMContentLoaded", async () => {
     if(quickFields.eyebrow) quickFields.eyebrow.value = data.profile.heroEyebrow || "";
     if(quickFields.title) quickFields.title.value = data.profile.heroTitle || "";
     if(quickFields.lead) quickFields.lead.value = data.profile.heroLead || "";
+    if(quickFields.statusLabel) quickFields.statusLabel.value = data.profile.statusLabel || "";
     if(quickFields.status) quickFields.status.value = data.profile.statusText || "";
+    if(quickFields.locationLabel) quickFields.locationLabel.value = data.profile.locationLabel || "";
     if(quickFields.location) quickFields.location.value = data.profile.locationText || "";
     if(quickFields.email) quickFields.email.value = data.profile.email || "";
     if(quickFields.resume) quickFields.resume.value = data.profile.resumeUrl || "";
     if(quickFields.github) quickFields.github.value = data.profile.githubUrl || "";
     if(quickFields.linkedin) quickFields.linkedin.value = data.profile.linkedinUrl || "";
+    if(quickFields.instagram) quickFields.instagram.value = data.profile.instagramUrl || "";
+    // Parse existing wa.me URL back into number + message for friendly display
+    if(quickFields.whatsappNumber || quickFields.whatsappMessage) {
+      const waUrl = data.profile.whatsappUrl || "";
+      const numMatch = waUrl.match(/wa\.me\/(\d+)/);
+      const msgMatch = waUrl.match(/[?&]text=([^&]*)/);
+      if(quickFields.whatsappNumber) quickFields.whatsappNumber.value = numMatch ? numMatch[1] : "";
+      if(quickFields.whatsappMessage) quickFields.whatsappMessage.value = msgMatch ? decodeURIComponent(msgMatch[1].replace(/\+/g, " ")) : "";
+    }
     if(quickFields.availability) quickFields.availability.value = data.contact.availability || "";
     if(quickFields.languages) quickFields.languages.value = (data.profile.languages || []).join(", ");
     if(quickFields.focusAreas) quickFields.focusAreas.value = (data.profile.focusAreas || []).join("\n");
 
     if(quickFields.aboutHeading) quickFields.aboutHeading.value = data.about.heading || "";
     if(quickFields.aboutParagraphs) quickFields.aboutParagraphs.value = (data.about.paragraphs || []).join("\n\n");
+    if(quickFields.aboutInsights) quickFields.aboutInsights.value = (data.about.insights || [])
+      .map(i => `${i.tag} | ${i.title} | ${i.text}`).join("\n");
 
     if(quickFields.skillsHeading) quickFields.skillsHeading.value = data.skills.heading || "";
+    if(quickFields.skillsCapabilities) quickFields.skillsCapabilities.value = (data.skills.capabilities || [])
+      .map(c => `${c.icon} | ${c.title} | ${c.text}`).join("\n");
     if(quickFields.skillsTools) quickFields.skillsTools.value = (data.skills.tools || []).join(", ");
 
     if(quickFields.journeyHeading) quickFields.journeyHeading.value = data.journey.heading || "";
+    if(quickFields.journeyEducation) quickFields.journeyEducation.value = (data.journey.education || [])
+      .map(e => `${e.title} | ${e.place} | ${e.year}`).join("\n");
     if(quickFields.journeyHighlights) quickFields.journeyHighlights.value = (data.journey.highlights || []).join("\n");
     if(quickFields.journeyActivities) quickFields.journeyActivities.value = (data.journey.activities || []).join("\n");
+
+    if(quickFields.contactHeading) quickFields.contactHeading.value = data.contact.heading || "";
+    if(quickFields.contactIntro) quickFields.contactIntro.value = data.contact.intro || "";
   };
 
   const syncEditor = () => {
@@ -210,21 +258,46 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   const syncStats = () => {
-    if (!projectStats) return;
+    const totalGalleryImages = (data.gallery || []).reduce((sum, item) => sum + getGalleryImageCount(item), 0);
     const stats = [
       `Projects: ${data.projects?.length || 0}`,
+      `Gallery Collections: ${data.gallery?.length || 0}`,
+      `Gallery Images: ${totalGalleryImages}`,
       `Capabilities: ${data.skills?.capabilities?.length || 0}`,
       `Tools: ${data.skills?.tools?.length || 0}`
     ];
-    projectStats.innerHTML = stats.map((item) => `<span class="badge" style="margin-right: 1rem;"><i class="fas fa-database mb-1"></i> ${escapeHtml(item)}</span>`).join("");
+
+    if (projectStats) {
+      projectStats.innerHTML = stats.map((item) => `<span class="badge" style="margin-right: 1rem;"><i class="fas fa-database mb-1"></i> ${escapeHtml(item)}</span>`).join("");
+    }
+
+    if (overviewStats) {
+      overviewStats.innerHTML = [
+        { label: "Projects", value: data.projects?.length || 0 },
+        { label: "Gallery Sets", value: data.gallery?.length || 0 },
+        { label: "Gallery Images", value: totalGalleryImages },
+        { label: "Tools", value: data.skills?.tools?.length || 0 }
+      ]
+        .map(
+          (item) => `
+            <article class="admin-overview-card">
+              <strong>${escapeHtml(String(item.value).padStart(2, "0"))}</strong>
+              <span>${escapeHtml(item.label)}</span>
+            </article>
+          `
+        )
+        .join("");
+    }
   };
 
   const syncImageTargets = () => {
     if (!imageTarget) return;
     const previous = imageTarget.value;
     const pOpts = data.projects.map((p) => `<option value="proj|${escapeHtml(p.id)}">Project: ${escapeHtml(p.title)}</option>`).join("");
-    const gOpts = (data.gallery || []).map((g) => `<option value="gal|${escapeHtml(g.id)}">Gallery: ${escapeHtml(g.title)}</option>`).join("");
-    imageTarget.innerHTML = `<option value="profile">Profile Portrait</option><optgroup label="Projects">${pOpts}</optgroup><optgroup label="Gallery Items">${gOpts}</optgroup>`;
+    const gOpts = (data.gallery || [])
+      .map((g) => `<option value="gal|${escapeHtml(g.id)}">Gallery: ${escapeHtml(g.title)} (${getGalleryImageCount(g)} imgs)</option>`)
+      .join("");
+    imageTarget.innerHTML = `<option value="profile">Profile Portrait</option><optgroup label="Projects">${pOpts}</optgroup><optgroup label="Gallery Collections">${gOpts}</optgroup>`;
     
     if ([...imageTarget.options].some((option) => option.value === previous)) {
       imageTarget.value = previous;
@@ -256,38 +329,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       .join("");
   };
 
-  const syncGalleryList = () => {
-    if (!galleryList) return;
-    if (!data.gallery || !data.gallery.length) {
-      galleryList.innerHTML = `<article class="studio-project-item" style="padding:1rem;"><strong>No gallery images yet</strong></article>`;
-      return;
-    }
-    galleryList.innerHTML = data.gallery
-      .map(
-        (item) => `
-          <div class="project-list-item" style="flex-direction: column; gap: 1rem; padding: 1rem;" data-gallery-id="${escapeHtml(item.id)}">
-            <img src="${escapeHtml(item.image)}" alt="Gallery Image" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; border: 1px dashed var(--line);" />
-            <div class="project-list-top" style="width: 100%;">
-              <strong style="font-size: 1rem;">${escapeHtml(item.title)}</strong>
-              <p class="admin-note" style="margin: 0; margin-top: 0.5rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 0.8rem;">${escapeHtml(item.description)}</p>
-            </div>
-            <div class="project-actions" style="margin-top: auto; padding-top: 1rem; width: 100%; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.05); display: flex;">
-              <button type="button" class="btn btn-outline btn-sm" style="padding: 6px 10px; font-size: 0.75rem;" data-action="focus-gallery" data-id="${escapeHtml(item.id)}"><i class="fas fa-search"></i> Inspect Source</button>
-              <button type="button" class="btn btn-outline btn-sm" style="padding: 6px 10px; font-size: 0.75rem; color: #ff6b6b; border-color: rgba(255,107,107,0.3);" data-action="delete-gallery" data-id="${escapeHtml(item.id)}"><i class="fas fa-trash-alt"></i></button>
-            </div>
-          </div>
-        `
-      )
-      .join("");
-  };
-
   const syncAll = () => {
     syncQuickFields();
     syncEditor();
     syncStats();
     syncProjectList();
-    syncGalleryList();
     syncImageTargets();
+    syncBackupList();
   };
 
   const persistData = (nextData, message) => {
@@ -297,14 +345,79 @@ document.addEventListener("DOMContentLoaded", async () => {
     setStatus(editorStatus, message, false);
   };
 
+  // ── Auto-Backup helpers ───────────────────────────────────────────
+  const BACKUP_KEY_PREFIX = "portfolio-v6-autobak-";
+  const MAX_BACKUPS = 10;
+
+  const saveAutoBackup = (snapshot) => {
+    try {
+      const timestamp = new Date().toISOString();
+      const key = BACKUP_KEY_PREFIX + timestamp;
+      window.localStorage.setItem(key, JSON.stringify(snapshot));
+      // Prune oldest if over limit
+      const allKeys = Object.keys(window.localStorage)
+        .filter(k => k.startsWith(BACKUP_KEY_PREFIX))
+        .sort();
+      while (allKeys.length > MAX_BACKUPS) {
+        window.localStorage.removeItem(allKeys.shift());
+      }
+    } catch(e) {}
+  };
+
+  const syncBackupList = () => {
+    const list = document.getElementById("backup-restore-list");
+    if (!list) return;
+    const allKeys = Object.keys(window.localStorage)
+      .filter(k => k.startsWith(BACKUP_KEY_PREFIX))
+      .sort()
+      .reverse(); // newest first
+    if (!allKeys.length) {
+      list.innerHTML = `<p class="admin-note" style="font-size:0.85rem;">No auto-backups yet. They appear here after your first Save.</p>`;
+      return;
+    }
+    list.innerHTML = allKeys.map(key => {
+      const ts = key.replace(BACKUP_KEY_PREFIX, "");
+      const label = new Date(ts).toLocaleString();
+      return `<div style="display:flex; justify-content:space-between; align-items:center; padding:0.6rem 1rem; border:1px solid var(--line); border-radius:8px; background:rgba(255,255,255,0.02);">
+        <span style="font-size:0.85rem;"><i class="fas fa-clock" style="opacity:0.5; margin-right:0.5rem;"></i>${label}</span>
+        <div style="display:flex; gap:0.5rem;">
+          <button type="button" class="btn btn-outline btn-sm" style="padding:4px 12px; font-size:0.75rem;" data-restore-key="${key}"><i class="fas fa-undo"></i> Restore</button>
+          <button type="button" class="btn btn-outline btn-sm" style="padding:4px 12px; font-size:0.75rem; color:#ff6b6b; border-color:rgba(255,107,107,0.3);" data-delete-backup-key="${key}"><i class="fas fa-times"></i></button>
+        </div>
+      </div>`;
+    }).join("");
+
+    list.querySelectorAll("[data-restore-key]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        if (!confirm("Restore this backup? Your current unsaved changes will be replaced.")) return;
+        try {
+          const restored = store.normalizeData(JSON.parse(window.localStorage.getItem(btn.dataset.restoreKey)));
+          data = store.save(restored);
+          syncAll();
+          syncBackupList();
+          setStatus(quickStatus, "✓ Backup restored successfully.", false);
+        } catch(e) { alert("Could not restore this backup."); }
+      });
+    });
+
+    list.querySelectorAll("[data-delete-backup-key]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        window.localStorage.removeItem(btn.dataset.deleteBackupKey);
+        syncBackupList();
+      });
+    });
+  };
+
   const downloadBackupZip = async (currentData) => {
+    const timestamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
+    const folderName = `backup/backup-${timestamp}/`;
     if (!window.JSZip) {
       window.open("data:text/json;charset=utf-8," + encodeURIComponent(store.exportJson(currentData)));
       return;
     }
     try {
       const zip = new window.JSZip();
-      const folder = zip.folder("data");
+      const folder = zip.folder(folderName);
       folder.file("profile.json", JSON.stringify(currentData.profile || {}, null, 2));
       folder.file("contact.json", JSON.stringify(currentData.contact || {}, null, 2));
       folder.file("about.json", JSON.stringify(currentData.about || {}, null, 2));
@@ -316,7 +429,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = `portfolio-v6-backup-${new Date().toISOString().replace(/[:.]/g, "-")}.zip`;
+      link.download = `portfolio-v6-backup-${timestamp}.zip`;
       link.click();
       URL.revokeObjectURL(url);
     } catch(err) {}
@@ -339,6 +452,21 @@ document.addEventListener("DOMContentLoaded", async () => {
   masterForm?.addEventListener("submit", (event) => {
     event.preventDefault();
 
+    const parseInsights = (raw) => raw.split(/\n+/).filter(Boolean).map(line => {
+      const [tag = "", title = "", ...rest] = line.split("|").map(s => s.trim());
+      return { tag, title, text: rest.join(" | ") };
+    });
+
+    const parseCapabilities = (raw) => raw.split(/\n+/).filter(Boolean).map(line => {
+      const [icon = "", title = "", ...rest] = line.split("|").map(s => s.trim());
+      return { icon, title, text: rest.join(" | ") };
+    });
+
+    const parseEducation = (raw) => raw.split(/\n+/).filter(Boolean).map(line => {
+      const [title = "", place = "", year = ""] = line.split("|").map(s => s.trim());
+      return { title, place, year };
+    });
+
     const nextData = store.normalizeData({
       ...data,
       profile: {
@@ -348,39 +476,55 @@ document.addEventListener("DOMContentLoaded", async () => {
         heroEyebrow: quickFields.eyebrow.value,
         heroTitle: quickFields.title.value,
         heroLead: quickFields.lead.value,
+        statusLabel: quickFields.statusLabel?.value || data.profile.statusLabel,
         statusText: quickFields.status.value,
+        locationLabel: quickFields.locationLabel?.value || data.profile.locationLabel,
         locationText: quickFields.location.value,
         email: quickFields.email.value,
         resumeUrl: quickFields.resume.value,
         githubUrl: quickFields.github.value,
         linkedinUrl: quickFields.linkedin.value,
+        instagramUrl: quickFields.instagram?.value || data.profile.instagramUrl,
+        whatsappUrl: (() => {
+          const num = (quickFields.whatsappNumber?.value || "").replace(/\D/g, "");
+          const msg = (quickFields.whatsappMessage?.value || "").trim();
+          if (num) return `https://wa.me/${num}${msg ? "?text=" + encodeURIComponent(msg) : ""}`;
+          return data.profile.whatsappUrl || "";
+        })(),
         languages: quickFields.languages.value.split(",").map(s => s.trim()).filter(Boolean),
         focusAreas: quickFields.focusAreas.value.split("\n").map(s => s.trim()).filter(Boolean)
       },
       contact: {
         ...data.contact,
+        heading: quickFields.contactHeading?.value || data.contact.heading,
+        intro: quickFields.contactIntro?.value || data.contact.intro,
         availability: quickFields.availability.value
       },
       about: {
         ...data.about,
         heading: quickFields.aboutHeading.value,
-        paragraphs: quickFields.aboutParagraphs.value.split(/\n\n+/).filter(Boolean).map(h => h.trim())
+        paragraphs: quickFields.aboutParagraphs.value.split(/\n\n+/).filter(Boolean).map(h => h.trim()),
+        insights: quickFields.aboutInsights?.value ? parseInsights(quickFields.aboutInsights.value) : data.about.insights
       },
       skills: {
         ...data.skills,
         heading: quickFields.skillsHeading.value,
+        capabilities: quickFields.skillsCapabilities?.value ? parseCapabilities(quickFields.skillsCapabilities.value) : data.skills.capabilities,
         tools: quickFields.skillsTools.value.split(",").map(i => i.trim()).filter(Boolean)
       },
       journey: {
         ...data.journey,
         heading: quickFields.journeyHeading.value,
+        education: quickFields.journeyEducation?.value ? parseEducation(quickFields.journeyEducation.value) : data.journey.education,
         highlights: quickFields.journeyHighlights.value.split(/\n+/).filter(Boolean).map(h => h.trim()),
         activities: quickFields.journeyActivities.value.split(/\n+/).filter(Boolean).map(h => h.trim())
       }
     });
 
-    persistData(nextData, "All standard text sections saved successfully.");
-    downloadBackupZip(nextData);
+    // Auto-backup CURRENT data before overwriting it
+    saveAutoBackup(data);
+    persistData(nextData, "✓ All sections saved. Auto-backup created.");
+    // No auto-download — use the 'Download Backup ZIP' button manually
   });
 
   const focusProjectInJSON = (id) => {
@@ -430,48 +574,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       const nextProjects = data.projects.filter((p) => p.id !== id);
       persistData({ ...data, projects: nextProjects }, "Project deleted.");
     } else if (action === "focus") {
-      focusProjectInJSON(id);
-      if(contentEditor) contentEditor.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-
-  const addGalleryForm = document.getElementById("add-gallery-form");
-  addGalleryForm?.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const title = document.getElementById("new-gallery-title").value;
-    const desc = document.getElementById("new-gallery-desc").value;
-    const file = document.getElementById("new-gallery-file").files[0];
-    if(!file) return;
-    
-    setStatus(quickStatus, "Compressing and uploading image...", false);
-    
-    try {
-        const optimized = await optimizeImageFile(file, "gallery", 85);
-        const id = "gal-" + Date.now();
-        const nextData = store.normalizeData({
-          ...data,
-          gallery: [
-            { id, title, description: desc, image: optimized.dataUrl },
-            ...(data.gallery || [])
-          ]
-        });
-        persistData(nextData, "Upload success! Gallery expanded.");
-        addGalleryForm.reset();
-        setTimeout(() => { if(galleryList) galleryList.scrollIntoView({behavior: "smooth"}); }, 100);
-    } catch (err) {
-        setStatus(quickStatus, "Image compression failed.", true);
-    }
-  });
-
-  galleryList?.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-action]");
-    if (!button) return;
-    const action = button.dataset.action;
-    const id = button.dataset.id;
-    if (action === "delete-gallery" && confirm("Permanently delete this gallery item?")) {
-      const nextGallery = (data.gallery || []).filter((g) => g.id !== id);
-      persistData({ ...data, gallery: nextGallery }, "Gallery item deleted.");
-    } else if (action === "focus-gallery") {
       focusProjectInJSON(id);
       if(contentEditor) contentEditor.scrollIntoView({ behavior: "smooth" });
     }
@@ -566,8 +668,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         nextData.projects = data.projects.map((p) => p.id === id ? { ...p, image: optimizedAsset.dataUrl } : p);
         persistData(nextData, "Project thumbnail updated dynamically.");
       } else if (type === "gal") {
-        nextData.gallery = (data.gallery || []).map((g) => g.id === id ? { ...g, image: optimizedAsset.dataUrl } : g);
-        persistData(nextData, "Gallery frame injected successfully.");
+        nextData.gallery = (data.gallery || []).map((g) => {
+          if (g.id !== id) {
+            return g;
+          }
+
+          const existingImages = getGalleryImages(g);
+          return {
+            ...g,
+            images: existingImages.length ? [optimizedAsset.dataUrl, ...existingImages.slice(1)] : [optimizedAsset.dataUrl]
+          };
+        });
+        persistData(nextData, "Gallery collection cover updated.");
       }
     }
   });
@@ -579,6 +691,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     URL.revokeObjectURL(url); setStatus(imageStatus, "Download initialized.", false);
   });
 
+  const updateScrollUi = () => {
+    const scrollTop = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = documentHeight > 0 ? (scrollTop / documentHeight) * 100 : 0;
+
+    if (progressBar) {
+      progressBar.style.width = `${Math.min(progress, 100)}%`;
+    }
+
+    backToTopBtn?.classList.toggle("visible", scrollTop > 420);
+  };
+
   if (!("IntersectionObserver" in window)) { revealItems.forEach((item) => item.classList.add("is-visible")); }
   else {
     const observer = new IntersectionObserver((entries) => {
@@ -588,24 +712,75 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   navToggle?.addEventListener("click", () => navToggle.setAttribute("aria-expanded", String(Boolean(navPanel?.classList.toggle("open")))));
   navLinks.forEach((link) => link.addEventListener("click", () => { navPanel?.classList.remove("open"); navToggle?.setAttribute("aria-expanded", "false"); }));
+  window.addEventListener("scroll", updateScrollUi, { passive: true });
+  backToTopBtn?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
   const hideLoader = () => document.getElementById("global-loader")?.classList.add("hidden");
   if (document.readyState === "complete") hideLoader();
   else window.addEventListener("load", hideLoader);
 
   const adminTabs = document.querySelectorAll(".tab-btn");
   const tabSections = document.querySelectorAll(".tab-section");
+
+  const activateTab = (tabId) => {
+    adminTabs.forEach(b => b.classList.remove("active"));
+    tabSections.forEach(s => s.classList.remove("active"));
+    const btn = document.querySelector(`[data-tab="${tabId}"]`);
+    const section = document.getElementById(tabId);
+    if (btn) btn.classList.add("active");
+    if (section) section.classList.add("active");
+    try { window.localStorage.setItem(TAB_KEY, tabId); } catch(e) {}
+  };
+
   adminTabs.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const target = btn.dataset.tab;
-      adminTabs.forEach(b => b.classList.remove("active"));
-      tabSections.forEach(s => s.classList.remove("active"));
-      btn.classList.add("active");
-      const activeSection = document.getElementById(target);
-      if(activeSection) activeSection.classList.add("active");
-    });
+    btn.addEventListener("click", () => activateTab(btn.dataset.tab));
   });
+
+  // Restore last active tab
+  const savedTab = (() => { try { return window.localStorage.getItem(TAB_KEY); } catch(e) { return null; } })();
+  if (savedTab && document.getElementById(savedTab)) activateTab(savedTab);
+
+  // ── Auto-save Draft ──────────────────────────────────────────────
+  let draftTimer = null;
+  const saveDraft = () => {
+    try {
+      const draft = {};
+      document.querySelectorAll("[id^='studio-']").forEach(el => {
+        if (el.id) draft[el.id] = el.value;
+      });
+      window.localStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
+    } catch(e) {}
+  };
+
+  const restoreDraft = () => {
+    try {
+      const raw = window.localStorage.getItem(DRAFT_KEY);
+      if (!raw) return;
+      const draft = JSON.parse(raw);
+      Object.entries(draft).forEach(([id, val]) => {
+        const el = document.getElementById(id);
+        if (el && el.value !== val) el.value = val;
+      });
+    } catch(e) {}
+  };
+
+  // Listen for any field change and auto-save draft
+  masterForm?.addEventListener("input", () => {
+    clearTimeout(draftTimer);
+    draftTimer = setTimeout(saveDraft, 1500);
+  });
+
+  // Clear draft after a committed save
+  const originalPersist = persistData;
+  // Hook into submit — draft is cleared after real save
+  masterForm?.addEventListener("submit", () => {
+    try { window.localStorage.removeItem(DRAFT_KEY); } catch(e) {}
+  }, { capture: true });
 
   initTheme();
   updateQualityFromPreset();
   syncAll();
+  restoreDraft(); // restore any unsaved draft from previous session
+  updateScrollUi();
 });

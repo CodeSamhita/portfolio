@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1024" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aditya Sharma | Project Gallery</title>
   <meta name="description" content="Extended visual gallery of projects by Aditya Sharma." />
   
@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="gallery.css" />
 </head>
 <body data-page="gallery" class="dark-mode">
   <div id="global-loader" class="global-loader">
@@ -43,47 +44,90 @@
     </div>
   </nav>
 
-  <main id="main-content">
-    <section class="section container reveal-up" style="padding-top: 10rem; padding-bottom: 2rem;">
-      <div class="section-header text-center max-w-2xl mx-auto">
+  <main id="main-content" class="gallery-page">
+    <section class="section container reveal-up gallery-hero-section">
+      <div class="section-header text-center gallery-hero-header">
         <span class="section-subtitle">Showcase</span>
-        <h1 class="hero-title text-gradient" style="font-size: clamp(2.5rem, 5vw, 4rem);">Visual Gallery</h1>
+        <h1 class="hero-title text-gradient gallery-hero-title">Visual Gallery</h1>
         <p class="section-description mt-4">
           A deeper look into the interfaces, systems, and hardware builds that bring my projects to life.
         </p>
-        <div class="mt-12 flex-center" style="display: flex; justify-content: center; margin-top: 2rem;">
+        <div class="gallery-hero-actions">
           <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+      </div>
+
+      <div class="gallery-overview glass-panel">
+        <div class="gallery-overview-copy">
+          <span class="gallery-overview-label">Curated Moments</span>
+          <h2>Projects, awards, and expo memories in one visual timeline.</h2>
+          <p>
+            This gallery keeps the same glassmorphism theme as the site, but gives each image more breathing room,
+            cleaner cropping, and a better full-size viewing experience across desktop and mobile.
+          </p>
+        </div>
+        <div class="gallery-overview-stats" aria-label="Gallery highlights">
+          <article class="gallery-stat-card">
+            <strong id="gallery-collection-count">00</strong>
+            <span>folder-based collections</span>
+          </article>
+          <article class="gallery-stat-card">
+            <strong id="gallery-image-count">00</strong>
+            <span>images across all folders</span>
+          </article>
+          <article class="gallery-stat-card">
+            <strong>Folder Ready</strong>
+            <span>each gallery item owns its own image folder</span>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section container reveal-up" style="padding-top: 2rem;">
-      <div class="project-grid" id="gallery-projects">
-        <article class="project-card skeleton-card">
-          <div class="skeleton-img"></div>
-          <div class="project-content">
+    <section class="section container reveal-up gallery-collection-section">
+      <div class="gallery-toolbar">
+        <div>
+          <span class="section-subtitle">Collection</span>
+          <h2 class="section-title">Project Collections</h2>
+        </div>
+        <p class="gallery-toolbar-copy">Each card can represent one project folder with multiple images inside it.</p>
+      </div>
+
+      <div class="gallery-structure-note glass-panel">
+        <p>
+          Add new work by creating a folder like <code>image/gallery/interactive-portfolio-website/</code> and then
+          adding its images through Gallery Studio or <code>data/gallery.json</code>.
+        </p>
+      </div>
+
+      <div class="gallery-collection-grid" id="gallery-collections">
+        <article class="gallery-card gallery-card-skeleton">
+          <div class="gallery-card-cover-wrap">
+            <div class="skeleton-img gallery-skeleton-media"></div>
+          </div>
+          <div class="gallery-card-body">
             <div class="skeleton-text skeleton-title" style="width: 40%"></div>
             <div class="skeleton-text skeleton-line"></div>
             <div class="skeleton-text skeleton-line" style="width: 80%"></div>
-            <div class="skeleton-text skeleton-line" style="width: 60%"></div>
           </div>
         </article>
-        <article class="project-card skeleton-card">
-          <div class="skeleton-img"></div>
-          <div class="project-content">
+        <article class="gallery-card gallery-card-skeleton">
+          <div class="gallery-card-cover-wrap">
+            <div class="skeleton-img gallery-skeleton-media"></div>
+          </div>
+          <div class="gallery-card-body">
             <div class="skeleton-text skeleton-title" style="width: 50%"></div>
             <div class="skeleton-text skeleton-line"></div>
             <div class="skeleton-text skeleton-line" style="width: 90%"></div>
-            <div class="skeleton-text skeleton-line" style="width: 50%"></div>
           </div>
         </article>
-        <article class="project-card skeleton-card">
-          <div class="skeleton-img"></div>
-          <div class="project-content">
+        <article class="gallery-card gallery-card-skeleton">
+          <div class="gallery-card-cover-wrap">
+            <div class="skeleton-img gallery-skeleton-media"></div>
+          </div>
+          <div class="gallery-card-body">
             <div class="skeleton-text skeleton-title" style="width: 35%"></div>
             <div class="skeleton-text skeleton-line"></div>
             <div class="skeleton-text skeleton-line" style="width: 75%"></div>
-            <div class="skeleton-text skeleton-line" style="width: 45%"></div>
           </div>
         </article>
       </div>
@@ -106,9 +150,51 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <div id="messageBox" class="message-box" role="status" aria-live="polite"></div>
+  <div id="gallery-modal" class="gallery-modal" aria-hidden="true">
+    <div class="gallery-modal-backdrop" data-gallery-close></div>
+    <div class="gallery-modal-dialog glass-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title">
+      <button class="gallery-modal-close icon-button" type="button" aria-label="Close collection viewer" data-gallery-close>
+        <i class="fas fa-xmark"></i>
+      </button>
+
+      <div class="gallery-modal-media">
+        <button class="gallery-modal-nav gallery-modal-nav-prev" type="button" aria-label="Show previous image" data-image-step="-1">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <img id="gallery-modal-image" class="gallery-modal-image" src="" alt="" />
+        <button class="gallery-modal-nav gallery-modal-nav-next" type="button" aria-label="Show next image" data-image-step="1">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="gallery-modal-sidebar">
+        <span id="gallery-modal-meta" class="gallery-modal-meta"></span>
+        <h3 id="gallery-modal-title"></h3>
+        <p id="gallery-modal-description"></p>
+
+        <div class="gallery-modal-section">
+          <span class="gallery-modal-label">Folder</span>
+          <code id="gallery-modal-folder" class="gallery-modal-folder"></code>
+        </div>
+
+        <div id="gallery-modal-technologies-section" class="gallery-modal-section" hidden>
+          <span class="gallery-modal-label">Technologies Used</span>
+          <div id="gallery-modal-technologies" class="gallery-modal-tags"></div>
+        </div>
+
+        <div id="gallery-modal-tags" class="gallery-modal-tags"></div>
+
+        <div id="gallery-modal-notes-section" class="gallery-modal-section" hidden>
+          <span class="gallery-modal-label">Project Notes</span>
+          <ul id="gallery-modal-notes" class="gallery-modal-notes"></ul>
+        </div>
+
+        <div id="gallery-modal-thumbnails" class="gallery-modal-thumbnails"></div>
+      </div>
+    </div>
+  </div>
 
   <script src="data-store.js"></script>
-  <script src="app.js" defer></script>
+  <script src="gallery.js" defer></script>
 </body>
 </html>

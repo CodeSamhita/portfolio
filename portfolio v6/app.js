@@ -95,6 +95,36 @@ document.addEventListener("DOMContentLoaded", async () => {
     return `<div class="project-image project-image-fallback">No image</div>`;
   };
 
+  const getGalleryImages = (item) => {
+    const normalized = Array.isArray(item?.images)
+      ? item.images.map((image) => String(image || "").trim()).filter(Boolean)
+      : [];
+
+    if (!normalized.length && item?.image) {
+      normalized.push(String(item.image || "").trim());
+    }
+
+    return normalized;
+  };
+
+  const resolveGalleryImage = (item, imageRef) => {
+    const file = String(imageRef || "").trim();
+    if (!file) {
+      return "image/placeholder.jpg";
+    }
+
+    if (/^(data:|https?:|blob:)/i.test(file) || file.includes("/")) {
+      return file;
+    }
+
+    const folder = String(item?.folder || "").replace(/\\/g, "/").replace(/\/$/, "");
+    return folder ? `${folder}/${file}` : file;
+  };
+
+  const getGalleryCover = (item) => resolveGalleryImage(item, getGalleryImages(item)[0]);
+
+  const getGalleryImageCount = (item) => getGalleryImages(item).length;
+
   const orderProjects = (projects) =>
     [...projects].sort((left, right) => Number(Boolean(right.featured)) - Number(Boolean(left.featured)));
 
@@ -245,16 +275,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     const preview = document.getElementById("gallery-preview");
     if (preview) {
       preview.innerHTML = (data.gallery || [])
+        .filter((item) => getGalleryImageCount(item))
         .slice(0, 3)
         .map(
           (item) => `
-            <article class="project-card">
-              <img class="project-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" />
-              <div class="project-content">
-                <h3 style="margin-top: 0;">${escapeHtml(item.title)}</h3>
-                <p style="margin-bottom: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">${escapeHtml(item.description)}</p>
+            <a class="album-card" href="gallery.html" aria-label="Open ${escapeHtml(item.title)} gallery collection">
+              <img src="${escapeHtml(getGalleryCover(item))}" alt="${escapeHtml(item.title)}" />
+              <div class="album-overlay">
+                <div class="album-copy">
+                  <h3>${escapeHtml(item.title)}</h3>
+                  <p>${escapeHtml(`${getGalleryImageCount(item)} image${getGalleryImageCount(item) === 1 ? "" : "s"}`)}</p>
+                </div>
               </div>
-            </article>
+            </a>
           `
         )
         .join("");
@@ -384,13 +417,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    container.innerHTML = data.gallery && data.gallery.length
-      ? data.gallery
+    const galleryItems = (data.gallery || []).filter((item) => getGalleryImageCount(item));
+
+    container.innerHTML = galleryItems.length
+      ? galleryItems
           .map(
             (item) => `
               <article class="project-card">
-                <img class="project-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" />
+                <img class="project-image" src="${escapeHtml(getGalleryCover(item))}" alt="${escapeHtml(item.title)}" />
                 <div class="project-content">
+                  <span class="project-type">${escapeHtml(`${getGalleryImageCount(item)} image${getGalleryImageCount(item) === 1 ? "" : "s"}`)}</span>
                   <h3 style="margin-top: 0;">${escapeHtml(item.title)}</h3>
                   <p style="margin-bottom: 0;">${escapeHtml(item.description)}</p>
                 </div>
@@ -398,7 +434,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             `
           )
           .join("")
-      : `<article class="glass-panel empty-card"><h3>No gallery images yet</h3><p>Standalone images will appear here once content is added.</p></article>`;
+      : `<article class="glass-panel empty-card"><h3>No gallery collections yet</h3><p>Gallery collections will appear here once content is added.</p></article>`;
   };
 
   const initCounters = () => {

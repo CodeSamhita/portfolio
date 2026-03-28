@@ -1,0 +1,115 @@
+[
+    {
+        "id":  "wall-e-build",
+        "title":  "WALL-E Robotics Build",
+        "description":  "Mechanical assembly, body detailing, and close-up progress from the WALL-E robot build journey.",
+        "folder":  "image/gallery/wall-e-build",
+        "technologies":  {
+
+                         },
+        "tags":  [
+                     "Robotics",
+                     "Hardware",
+                     "Build"
+                 ],
+        "notes":  {
+
+                  },
+        "images":  [
+                       "walle.jpg",
+                       "walle-1.JPG"
+                   ]
+    },
+    {
+        "id":  "humanoid-prototype",
+        "title":  "Humanoid Motion Prototype",
+        "description":  "A focused collection around the humanoid project, highlighting structure, components, and visual detailing.",
+        "folder":  "image/gallery/humanoid-prototype",
+        "technologies":  {
+
+                         },
+        "tags":  [
+                     "Humanoid",
+                     "Prototype",
+                     "Engineering"
+                 ],
+        "notes":  {
+
+                  },
+        "images":  [
+                       "Humonoid.jpg",
+                       "humonoid eye.jpg"
+                   ]
+    },
+    {
+        "id":  "iitm-innovation-visit",
+        "title":  "Innovation Visit at IITM",
+        "description":  "Snapshots from the IITM visit, including group moments, discussions, and memorable innovation-focused interactions.",
+        "folder":  "image/gallery/iitm-innovation-visit",
+        "technologies":  {
+
+                         },
+        "tags":  [
+                     "IITM",
+                     "Innovation",
+                     "Event"
+                 ],
+        "notes":  {
+
+                  },
+        "images":  [
+                       "IITM.jpg",
+                       "IITM 2.jpeg",
+                       "IITM 3.jpg",
+                       "phunsukh wangdu group photo.jpg"
+                   ]
+    },
+    {
+        "id":  "awards-and-research",
+        "title":  "Awards and Research Milestones",
+        "description":  "Recognition moments, convention highlights, and certificate snapshots that capture major academic and innovation milestones.",
+        "folder":  "image/gallery/awards-and-research",
+        "technologies":  {
+
+                         },
+        "tags":  [
+                     "Awards",
+                     "Research",
+                     "Recognition"
+                 ],
+        "notes":  {
+
+                  },
+        "images":  [
+                       "Ambasdor meet.jpg",
+                       "Best Innovator.jpg",
+                       "Anveshan.jpg",
+                       "Anveshan Certificate.jpg"
+                   ]
+    },
+    {
+        "id":  "expo-and-lab-showcase",
+        "title":  "Expo and Lab Showcase",
+        "description":  "Project demonstrations, school and university expos, lab activity, and supporting project display visuals in one collection.",
+        "folder":  "image/gallery/expo-and-lab-showcase",
+        "technologies":  {
+
+                         },
+        "tags":  [
+                     "Expo",
+                     "Lab",
+                     "Showcase"
+                 ],
+        "notes":  {
+
+                  },
+        "images":  [
+                       "Project Expo at school.jpg",
+                       "Project Expo Orientation.jpg",
+                       "LAB.JPG",
+                       "Lab Deligate visit.png",
+                       "Path finder bot.jpg",
+                       "IMG_20250122_141050.jpg"
+                   ]
+    }
+]
