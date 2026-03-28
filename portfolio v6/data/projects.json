@@ -5,9 +5,14 @@
     "category": "Web",
     "type": "Software",
     "description": "A modern, responsive portfolio website showcasing full-stack capabilities.",
-    "technologies": ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Bootstrap"
+    ],
     "highlight": "Created a highly interactive online presence with clean UI.",
-    "image": "image/Best Innovator.jpg",
+    "image": "image/gallery/interactive-portfolio-website/Screenshot-2026-03-28-152522.png",
     "galleryTitle": "Portfolio Platform",
     "galleryDescription": "A from-scratch web project.",
     "githubUrl": "https://github.com/CodeSamhita",
@@ -22,7 +27,12 @@
     "category": "AI",
     "type": "Robotics",
     "description": "A humanoid robot with voice-activated mouth movements, precisely synced using Whisper AI.",
-    "technologies": ["Raspberry Pi 5", "Python", "Whisper AI", "Servos"],
+    "technologies": [
+      "Raspberry Pi 5",
+      "Python",
+      "Whisper AI",
+      "Servos"
+    ],
     "highlight": "Demonstrates advanced embedded AI and robotics integration with low-latency servo control.",
     "image": "image/Humonoid.jpg",
     "galleryTitle": "Humanoid Bot",
@@ -39,7 +49,12 @@
     "category": "Hardware",
     "type": "Robotics",
     "description": "An autonomous robot designed to navigate complex environments using multiple sensors.",
-    "technologies": ["Arduino", "L298N Motor Driver", "IR Sensors", "Ultrasonic Sensors"],
+    "technologies": [
+      "Arduino",
+      "L298N Motor Driver",
+      "IR Sensors",
+      "Ultrasonic Sensors"
+    ],
     "highlight": "A practical application of robust sensor fusion algorithms.",
     "image": "image/Path finder bot.jpg",
     "galleryTitle": "Path Finder Bot",
@@ -56,7 +71,12 @@
     "category": "Web",
     "type": "Software",
     "description": "A web-based application for lab management, integrated with an AI chatbot for assistance.",
-    "technologies": ["Flask", "Python", "HTML/CSS", "AI Chatbot API"],
+    "technologies": [
+      "Flask",
+      "Python",
+      "HTML/CSS",
+      "AI Chatbot API"
+    ],
     "highlight": "Streamlines laboratory operations and ensures data consistency.",
     "image": "image/LAB.JPG",
     "galleryTitle": "Lab Management Tool",

@@ -32,12 +32,14 @@
 
   <nav class="glass-nav">
     <div class="nav-container container">
-      <a class="brand-logo" href="main.html">Aditya</a>
+      <a class="brand-logo" href="main.html">Aditya Sharma</a>
       <div class="nav-links" id="site-nav">
+        <a href="main.html" class="nav-link">Home</a>
         <a href="main.html#about" class="nav-link">About</a>
         <a href="main.html#skills" class="nav-link">Skills</a>
         <a href="main.html#projects" class="nav-link">Work</a>
-        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="main.html#journey" class="nav-link">Journey</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="main.html#contact" class="nav-link">Contact</a>
       </div>
       <div class="nav-controls">
@@ -52,39 +54,21 @@
     <section class="section container reveal-up gallery-hero-section">
       <div class="section-header text-center gallery-hero-header">
         <span class="section-subtitle">Showcase</span>
-        <h1 class="hero-title text-gradient gallery-hero-title">Visual Gallery</h1>
+        <h1 class="hero-title text-gradient gallery-hero-title">Gallery</h1>
         <p class="section-description mt-4">
           A deeper look into the interfaces, systems, and hardware builds that bring my projects to life.
+        </p>
+        <h2>Projects, awards, and expo memories in one visual timeline.</h2>
+        <p>
+          This gallery keeps the same glassmorphism theme as the site, but gives each image more breathing room,
+          cleaner cropping, and a better full-size viewing experience across desktop and mobile.
         </p>
         <div class="gallery-hero-actions">
           <a href="main.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Home</a>
         </div>
       </div>
 
-      <div class="gallery-overview glass-panel">
-        <div class="gallery-overview-copy">
-          <span class="gallery-overview-label">Curated Moments</span>
-          <h2>Projects, awards, and expo memories in one visual timeline.</h2>
-          <p>
-            This gallery keeps the same glassmorphism theme as the site, but gives each image more breathing room,
-            cleaner cropping, and a better full-size viewing experience across desktop and mobile.
-          </p>
-        </div>
-        <div class="gallery-overview-stats" aria-label="Gallery highlights">
-          <article class="gallery-stat-card">
-            <strong id="gallery-collection-count">00</strong>
-            <span>folder-based collections</span>
-          </article>
-          <article class="gallery-stat-card">
-            <strong id="gallery-image-count">00</strong>
-            <span>images across all folders</span>
-          </article>
-          <article class="gallery-stat-card">
-            <strong>Folder Ready</strong>
-            <span>each gallery item owns its own image folder</span>
-          </article>
-        </div>
-      </div>
+
     </section>
 
     <section class="section container reveal-up gallery-collection-section">
@@ -93,7 +77,6 @@
           <span class="section-subtitle">Collection</span>
           <h2 class="section-title">Project Collections</h2>
         </div>
-        <p class="gallery-toolbar-copy">Each card can represent one project folder with multiple images inside it.</p>
       </div>
 
 
@@ -174,10 +157,7 @@
         <h3 id="gallery-modal-title"></h3>
         <p id="gallery-modal-description"></p>
 
-        <div class="gallery-modal-section">
-          <span class="gallery-modal-label">Folder</span>
-          <code id="gallery-modal-folder" class="gallery-modal-folder"></code>
-        </div>
+
 
         <div id="gallery-modal-technologies-section" class="gallery-modal-section" hidden>
           <span class="gallery-modal-label">Technologies Used</span>

@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const getCollectionFolder = (item) =>
     String(
       item?.folder ||
-        (typeof store?.buildGalleryFolder === "function" ? store.buildGalleryFolder(item?.title || "") : "")
+      (typeof store?.buildGalleryFolder === "function" ? store.buildGalleryFolder(item?.title || "") : "")
     )
       .replace(/\\/g, "/")
       .replace(/\/$/, "");
@@ -140,19 +140,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     return `
       <div class="gallery-card-thumbs">
         ${previewItems
-          .map(
-            (image) => `
+        .map(
+          (image) => `
               <div class="gallery-card-thumb">
                 <img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt)}" loading="lazy" decoding="async" />
               </div>
             `
-          )
-          .join("")}
-        ${
-          hiddenCount
-            ? `<div class="gallery-card-thumb gallery-card-thumb-more">+${hiddenCount}</div>`
-            : ""
-        }
+        )
+        .join("")}
+        ${hiddenCount
+        ? `<div class="gallery-card-thumb gallery-card-thumb-more">+${hiddenCount}</div>`
+        : ""
+      }
       </div>
     `;
   };
@@ -165,9 +164,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     collectionsRoot.innerHTML = collections.length
       ? collections
-          .map((collection, index) => {
-            const cover = collection.images[0];
-            return `
+        .map((collection, index) => {
+          const cover = collection.images[0];
+          return `
               <article class="gallery-card reveal-up">
                 <div class="gallery-card-button" role="button" tabindex="0" data-collection-index="${index}" aria-label="Open ${escapeHtml(collection.title)} collection">
                   <div class="gallery-card-cover-wrap">
@@ -185,23 +184,21 @@ document.addEventListener("DOMContentLoaded", async () => {
                       <span class="gallery-card-open">Open</span>
                     </div>
                     <p>${escapeHtml(collection.description)}</p>
-                    <code class="gallery-card-folder">${escapeHtml(collection.folder)}</code>
-                    ${
-                      collection.technologies.length
-                        ? `<div class="gallery-card-tech">${collection.technologies.map((technology) => `<span>${escapeHtml(technology)}</span>`).join("")}</div>`
-                        : ""
-                    }
-                    ${
-                      collection.tags.length
-                        ? `<div class="gallery-card-tags">${collection.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>`
-                        : ""
-                    }
+                    
+                    ${collection.technologies.length
+              ? `<div class="gallery-card-tech">${collection.technologies.map((technology) => `<span>${escapeHtml(technology)}</span>`).join("")}</div>`
+              : ""
+            }
+                    ${collection.tags.length
+              ? `<div class="gallery-card-tags">${collection.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>`
+              : ""
+            }
                   </div>
                 </div>
               </article>
             `;
-          })
-          .join("")
+        })
+        .join("")
       : `<article class="glass-panel gallery-empty-card"><h3>No gallery collections yet</h3><p>Create a collection in Gallery Studio or add one to <code>data/gallery.json</code> and it will appear here.</p></article>`;
   };
 
