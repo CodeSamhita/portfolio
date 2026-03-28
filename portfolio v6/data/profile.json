@@ -12,10 +12,14 @@
   "resumeUrl": "resume.html",
   "email": "adisharma102000@gmail.com",
   "githubUrl": "https://github.com/CodeSamhita",
-  "linkedinUrl": "https://www.linkedin.com/in/aditya-sharma-8679802b3",
+  "linkedinUrl": "https://www.linkedin.com/in/aditya-sharma-profile",
   "instagramUrl": "https://www.instagram.com/visionary_adi?igsh=MjI4Z2N3MzZxYnFk",
   "whatsappUrl": "https://wa.me/918217450041?text=Hello%20Aditya,%20I'm%20reaching%20out%20from%20your%20portfolio.",
-  "languages": ["English", "Hindi", "Himachali Native"],
+  "languages": [
+    "English",
+    "Hindi",
+    "Himachali Native"
+  ],
   "focusAreas": [
     "A Full Stack Developer.",
     "An Innovator.",
