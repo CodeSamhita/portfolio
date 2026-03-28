@@ -13,13 +13,13 @@ files, making edits as simple as updating a config.
 | Feature | Details |
 |---|---|
 | **Glassmorphism UI** | Dark-mode-first design with frosted glass panels, ambient glow orbs, and smooth micro-animations |
-| **100 % Data-Driven** | Zero hardcoded content — everything is fetched from JSON files in `data/` and `image/` |
+| **100% Data-Driven** | Zero hardcoded content — everything is fetched from JSON files in `data/` and `image/` |
 | **Portfolio Studio** | Visual admin panel (`admin.html`) for editing profile, about, skills, journey, and projects |
-| **Gallery Studio** | Dedicated manager (`admin-gallery.html`) for gallery collections with history / restore |
+| **Gallery Studio** | Dedicated manager (`admin-gallery.html`) for gallery collections with image management and history/restore |
 | **Image Optimizer** | Built-in canvas-based WebP compressor for portfolio assets |
 | **Folder-Based Gallery** | Each collection maps to its own `image/gallery/<slug>/` folder |
 | **Auto-Backup** | Every save auto-snapshots the previous version for one-click restore |
-| **Offline-First** | Runs entirely from the filesystem — no server, no build step |
+| **Offline-First** | Runs entirely from the filesystem — no server, no build step, no batch files |
 
 ---
 
@@ -56,9 +56,7 @@ portfolio v6/
 │   └── gallery/            # Image folders, one per collection
 │       ├── wall-e-build/
 │       ├── humanoid-prototype/
-│       ├── iitm-innovation-visit/
-│       ├── awards-and-research/
-│       └── expo-and-lab-showcase/
+│       └── ...
 │
 └── profile.png             # Portrait image
 ```
@@ -85,7 +83,7 @@ All content lives in JSON files. The site never hardcodes portfolio data in HTML
 | File | What it controls |
 |---|---|
 | `gallery.json` | Active gallery collections (title, description, folder, tags, images) |
-| `gallery-history.json` | Deleted collections with timestamp — restorable from Gallery Studio |
+| `gallery-history.json` | Deleted collections with deletion timestamp — restorable from Gallery Studio |
 
 ### How data flows
 
@@ -97,9 +95,6 @@ data-store.js  ←→  localStorage (browser edits)
 app.js / gallery.js / admin.js  →  rendered HTML
 ```
 
-`data-store.js` loads JSON files, normalizes them into a consistent schema, merges with
-any browser-saved edits from `localStorage`, and exposes a shared `window.portfolioStore` API.
-
 ---
 
 ## 🛠️ Admin Tools
@@ -109,7 +104,7 @@ any browser-saved edits from `localStorage`, and exposes a shared `window.portfo
 Tabbed interface for editing all text content:
 
 - **Profile** — name, hero text, social links, focus areas
-- **About** — paragraphs, insight cards (pipe-delimited format)
+- **About** — paragraphs, insight cards
 - **Skills** — capability cards, tool badges
 - **Journey** — education, highlights, activities
 - **Projects** — add / edit / delete project cards
@@ -118,15 +113,14 @@ Tabbed interface for editing all text content:
 
 ### Gallery Studio (`admin-gallery.html`)
 
-Dedicated collection manager:
+User-friendly collection manager designed for non-developers:
 
-- **Collections tab** — view all active collections, edit metadata, add/remove entries
-- **History tab** — browse deleted collections, restore or permanently purge
-- **Slide-in editor** — form panel with live image preview, auto-slug folder paths
-- **Download-based save** — generates updated JSON for you to replace on disk
-
-> **Note:** Since the site runs from the filesystem (no server), saving works by downloading
-> updated JSON files. Replace the original file with the downloaded version to apply changes.
+- **Collections tab** — big cards showing cover image, title, image count
+- **Edit button** — opens a slide-in panel with all fields + visual image manager
+- **Image Manager** — click any image to set as cover, hover to see remove button, add new images via file picker or manual entry
+- **Delete** — moves collection to History tab with timestamp
+- **History tab** — restore deleted collections or permanently purge them
+- **Save buttons** — downloads updated JSON files to replace on disk
 
 ---
 
@@ -142,35 +136,27 @@ Dedicated collection manager:
 1. Clone or download this repository
 2. Open `portfolio v6/index.html` in your browser
 3. To manage content, open `portfolio v6/admin.html`
-4. To manage gallery collections, open `portfolio v6/admin-gallery.html`
+4. To manage gallery, open `portfolio v6/admin-gallery.html`
 
 ### Adding a New Gallery Collection
 
 1. Create a folder: `image/gallery/my-project-name/`
 2. Drop your images into it
 3. Open Gallery Studio → click **New Collection**
-4. Fill in the title, description, and image filenames
-5. Click **Save gallery.json** → replace `image/gallery.json` with the download
-
-### Editing Portfolio Content
-
-1. Open Portfolio Studio (`admin.html`)
-2. Switch to the relevant tab (Profile, About, Skills, etc.)
-3. Make your changes
-4. Click **Save Global Text** — data is saved to browser `localStorage`
-5. Use the **JSON** tab to export and replace `data/*.json` files for permanent changes
+4. Fill in the title and description
+5. Click **Add Images** → pick the files or type filenames
+6. Click **Save Collection** then **Save gallery.json**
+7. Replace `image/gallery.json` with the downloaded file
 
 ---
 
 ## 🎨 Design System
 
-The portfolio uses a custom CSS design system defined in `style.css`:
-
 - **Colors** — HSL-based tokens with dark/light mode support
 - **Typography** — Inter (body) + Outfit (headings) from Google Fonts
-- **Components** — `.glass-panel`, `.btn`, `.btn-glow`, `.btn-outline`, `.form-input`, `.section-subtitle`
+- **Components** — `.glass-panel`, `.btn`, `.btn-glow`, `.form-input`
 - **Effects** — Ambient glow orbs, noise overlay, reveal-on-scroll animations
-- **Layout** — CSS Grid + Flexbox, container-based responsive design
+- **Layout** — CSS Grid + Flexbox, responsive design
 
 ---
 

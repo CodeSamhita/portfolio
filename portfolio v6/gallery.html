@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aditya Sharma | Project Gallery</title>
   <meta name="description" content="Extended visual gallery of projects by Aditya Sharma." />
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="gallery.css" />
 </head>
+
 <body data-page="gallery" class="dark-mode">
   <div id="global-loader" class="global-loader">
     <div class="loader-spinner"></div>
@@ -28,13 +32,13 @@
 
   <nav class="glass-nav">
     <div class="nav-container container">
-      <a class="brand-logo" href="index.html">Aditya.</a>
+      <a class="brand-logo" href="main.html">Aditya</a>
       <div class="nav-links" id="site-nav">
-        <a href="index.html#about" class="nav-link">About</a>
-        <a href="index.html#skills" class="nav-link">Skills</a>
-        <a href="index.html#projects" class="nav-link">Work</a>
+        <a href="main.html#about" class="nav-link">About</a>
+        <a href="main.html#skills" class="nav-link">Skills</a>
+        <a href="main.html#projects" class="nav-link">Work</a>
         <a href="gallery.html" class="nav-link active">Gallery</a>
-        <a href="index.html#contact" class="nav-link">Contact</a>
+        <a href="main.html#contact" class="nav-link">Contact</a>
       </div>
       <div class="nav-controls">
         <button id="themeToggleBtn" class="icon-button" type="button" aria-label="Toggle dark and light mode">
@@ -53,7 +57,7 @@
           A deeper look into the interfaces, systems, and hardware builds that bring my projects to life.
         </p>
         <div class="gallery-hero-actions">
-          <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Home</a>
+          <a href="main.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Home</a>
         </div>
       </div>
 
@@ -92,12 +96,7 @@
         <p class="gallery-toolbar-copy">Each card can represent one project folder with multiple images inside it.</p>
       </div>
 
-      <div class="gallery-structure-note glass-panel">
-        <p>
-          Add new work by creating a folder like <code>image/gallery/interactive-portfolio-website/</code> and then
-          adding its images through Gallery Studio or <code>data/gallery.json</code>.
-        </p>
-      </div>
+
 
       <div class="gallery-collection-grid" id="gallery-collections">
         <article class="gallery-card gallery-card-skeleton">
@@ -153,16 +152,19 @@
   <div id="gallery-modal" class="gallery-modal" aria-hidden="true">
     <div class="gallery-modal-backdrop" data-gallery-close></div>
     <div class="gallery-modal-dialog glass-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title">
-      <button class="gallery-modal-close icon-button" type="button" aria-label="Close collection viewer" data-gallery-close>
+      <button class="gallery-modal-close icon-button" type="button" aria-label="Close collection viewer"
+        data-gallery-close>
         <i class="fas fa-xmark"></i>
       </button>
 
       <div class="gallery-modal-media">
-        <button class="gallery-modal-nav gallery-modal-nav-prev" type="button" aria-label="Show previous image" data-image-step="-1">
+        <button class="gallery-modal-nav gallery-modal-nav-prev" type="button" aria-label="Show previous image"
+          data-image-step="-1">
           <i class="fas fa-chevron-left"></i>
         </button>
         <img id="gallery-modal-image" class="gallery-modal-image" src="" alt="" />
-        <button class="gallery-modal-nav gallery-modal-nav-next" type="button" aria-label="Show next image" data-image-step="1">
+        <button class="gallery-modal-nav gallery-modal-nav-next" type="button" aria-label="Show next image"
+          data-image-step="1">
           <i class="fas fa-chevron-right"></i>
         </button>
       </div>
@@ -197,4 +199,5 @@
   <script src="data-store.js"></script>
   <script src="gallery.js" defer></script>
 </body>
+
 </html>
