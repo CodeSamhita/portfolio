@@ -279,7 +279,7 @@
         fetchJson("data/skills.json"),
         fetchJson("data/journey.json"),
         fetchJson("data/projects.json"),
-        fetchJson("data/gallery.json")
+        fetchJson("image/gallery.json")
       ]);
 
       const fetchedData = normalizeData({ 
