@@ -1,29 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1024" />
   <title>Aditya Sharma | Portfolio Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
   <style>
     /* Admin overrides */
-    .admin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    .content-editor { width: 100%; height: 500px; background: rgba(0,0,0,0.4); color: var(--text); border: 1px dashed var(--line); border-radius: 12px; padding: 1rem; font-family: monospace; font-size: 0.9rem; resize: vertical; margin-bottom: 1rem; }
-    .project-list-item { display: flex; justify-content: space-between; align-items: flex-start; padding: 1.5rem; border: 1px solid var(--line); border-radius: 16px; margin-bottom: 1rem; background: rgba(255,255,255,0.03); transition: transform 0.2s ease, border-color 0.2s ease; }
-    .project-list-item:hover { border-color: rgba(255, 255, 255, 0.1); transform: translateY(-2px); }
-    .admin-stats-row { display: flex; gap: 1rem; justify-content: flex-start; flex-wrap: wrap; margin-bottom: 2rem; }
-    .preview-card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
-    .image-preview-box { border: 1px dashed var(--line); border-radius: 12px; padding: 1rem; min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(255,255,255,0.02); text-align: center; }
-    .image-preview-box img { max-width: 100%; max-height: 200px; border-radius: 8px; margin-bottom: 1rem; object-fit: contain; }
-    .admin-note { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; line-height: 1.6; }
-    .badge { background: var(--surface-glass); display: inline-block; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; width: fit-content; border: 1px solid var(--line); color: var(--text); font-weight: 500;}
-    @media (max-width: 900px) { .admin-grid, .preview-card-grid { grid-template-columns: 1fr; } }
+    body[data-page="admin"] {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    body[data-page="admin"] #main-content {
+      flex: 1 0 auto;
+    }
+
+    .admin-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .content-editor {
+      width: 100%;
+      height: 500px;
+      background: rgba(0, 0, 0, 0.4);
+      color: var(--text);
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+      padding: 1rem;
+      font-family: monospace;
+      font-size: 0.9rem;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+
+    .project-list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 1.5rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-list-item:hover {
+      border-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .admin-stats-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .preview-card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .image-preview-box {
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+      padding: 1rem;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.02);
+      text-align: center;
+    }
+
+    .image-preview-box img {
+      max-width: 100%;
+      max-height: 200px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      object-fit: contain;
+    }
+
+    .admin-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+
+    .badge {
+      background: var(--surface-glass);
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      width: fit-content;
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .admin-tabs-container {
+      margin-bottom: 2rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      position: sticky;
+      top: 80px;
+      z-index: 50;
+      background: var(--bg-color);
+      padding: 1rem 0;
+      box-shadow: 0 10px 30px -10px var(--bg-color);
+    }
+
+    .admin-tabs-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .admin-tabs {
+      display: flex;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border-glass);
+      padding-bottom: 1rem;
+      width: max-content;
+      margin: 0 auto;
+    }
+
+    .tab-btn {
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .tab-btn.active {
+      color: var(--bg-color);
+      background: var(--text-main);
+      border-color: var(--text-main);
+    }
+
+    .tab-section {
+      display: none;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .tab-section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+
+      .admin-grid,
+      .preview-card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body data-page="admin" class="dark-mode">
   <div id="global-loader" class="global-loader">
     <div class="loader-spinner"></div>
@@ -37,16 +211,10 @@
 
   <nav class="glass-nav">
     <div class="nav-container container">
-      <a class="brand-logo" href="index.html">Aditya.</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span></span>
-        <span></span>
-      </button>
-      <div class="nav-links" id="site-nav">
-        <a href="index.html" class="nav-link">Portfolio</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="admin.html" class="nav-link active">Studio</a>
-      </div>
+      <h1 class="hero-title text-gradient" style="font-size: clamp(2rem, 4vw, 3rem);">Manage Your Content</h1>
+
+
+
       <div class="nav-controls">
         <button id="themeToggleBtn" class="icon-button" type="button" aria-label="Toggle dark and light mode">
           <i class="fas fa-sun"></i>
@@ -59,18 +227,30 @@
     <section class="section container reveal-up" style="padding-top: 8rem; padding-bottom: 2rem;">
       <div class="section-header text-center max-w-2xl mx-auto">
         <span class="section-subtitle">Portfolio Studio</span>
-        <h1 class="hero-title text-gradient" style="font-size: clamp(2rem, 4vw, 3rem);">Manage Your Content</h1>
-        <p class="section-description mt-4">
-          Dedicated control panels for each section of your portfolio making layout modifications safe, easy, and completely disconnected from each other.
-        </p>
       </div>
     </section>
 
+    <!-- ADMIN TABS -->
+    <div class="admin-tabs-container container">
+      <div class="admin-tabs" id="adminTabs">
+        <button type="button" class="tab-btn active" data-tab="tab-profile"><i class="fas fa-user-edit"></i>
+          Profile</button>
+        <button type="button" class="tab-btn" data-tab="tab-about"><i class="fas fa-address-card"></i> About</button>
+        <button type="button" class="tab-btn" data-tab="tab-skills"><i class="fas fa-laptop-code"></i> Skills</button>
+        <button type="button" class="tab-btn" data-tab="tab-journey"><i class="fas fa-route"></i> Journey</button>
+        <button type="button" class="tab-btn" data-tab="tab-projects"><i class="fas fa-rocket"></i> Projects</button>
+        <button type="button" class="tab-btn" data-tab="tab-gallery"><i class="fas fa-images"></i> Gallery</button>
+        <button type="button" class="tab-btn" data-tab="tab-advanced"><i class="fas fa-database"></i> JSON</button>
+        <button type="button" class="tab-btn" data-tab="tab-tools"><i class="fas fa-magic"></i> Image Tools</button>
+      </div>
+    </div>
+
     <!-- CONTENT CONFIGURATION FORM -->
     <form id="master-form" class="modern-form">
-      
+
       <!-- 1. Profile Config -->
-      <section class="section container reveal-up" style="padding-top: 0; padding-bottom: 2rem;">
+      <section id="tab-profile" class="section container reveal-up tab-section active"
+        style="padding-top: 0; padding-bottom: 2rem;">
         <article class="glass-panel text-left">
           <h2 class="card-title text-gradient"><i class="fas fa-user-edit"></i> 1. Profile & Contact details</h2>
           <div class="admin-grid" style="gap: 1rem; margin-top: 1.5rem;">
@@ -116,6 +296,10 @@
               <input type="text" id="studio-languages" class="form-input" placeholder=" " />
               <label for="studio-languages" class="form-label">Spoken Languages (comma separated, e.g. English, Hindi)</label>
             </div>
+            <div class="form-group mt-3" style="grid-column: 1 / -1;">
+              <textarea id="studio-focus-areas" class="form-input form-textarea" rows="3" placeholder=" "></textarea>
+              <label for="studio-focus-areas" class="form-label">Focus Areas (Separate by striking Enter)</label>
+            </div>
           </div>
           <div class="admin-grid" style="gap: 1rem; margin-top: 1rem;">
             <div class="form-group">
@@ -135,7 +319,8 @@
       </section>
 
       <!-- 2. About Config -->
-      <section class="section container reveal-up" style="padding-top: 0; padding-bottom: 2rem;">
+      <section id="tab-about" class="section container reveal-up tab-section"
+        style="padding-top: 0; padding-bottom: 2rem;">
         <article class="glass-panel text-left">
           <h2 class="card-title text-gradient"><i class="fas fa-address-card"></i> 2. About Me Section</h2>
           <div class="form-group mb-4 mt-6">
@@ -150,7 +335,8 @@
       </section>
 
       <!-- 3. Skills Config -->
-      <section class="section container reveal-up" style="padding-top: 0; padding-bottom: 2rem;">
+      <section id="tab-skills" class="section container reveal-up tab-section"
+        style="padding-top: 0; padding-bottom: 2rem;">
         <article class="glass-panel text-left">
           <h2 class="card-title text-gradient"><i class="fas fa-laptop-code"></i> 3. Skills & Tools</h2>
           <div class="form-group mb-4 mt-6">
@@ -161,12 +347,14 @@
             <textarea id="studio-skills-tools" class="form-input form-textarea" rows="3" placeholder=" "></textarea>
             <label for="studio-skills-tools" class="form-label">Active Tools array (Separate by commas)</label>
           </div>
-          <p class="admin-note"><i class="fas fa-info-circle"></i> For detailed skill capabilities folders ("AI", "Web Tech", etc), use the Advanced JSON section below.</p>
+          <p class="admin-note"><i class="fas fa-info-circle"></i> For detailed skill capabilities folders ("AI", "Web
+            Tech", etc), use the Advanced JSON section below.</p>
         </article>
       </section>
 
       <!-- 4. Journey Config -->
-      <section class="section container reveal-up" style="padding-top: 0; padding-bottom: 2rem;">
+      <section id="tab-journey" class="section container reveal-up tab-section"
+        style="padding-top: 0; padding-bottom: 2rem;">
         <article class="glass-panel text-left">
           <h2 class="card-title text-gradient"><i class="fas fa-route"></i> 4. Journey & Extracurriculars</h2>
           <div class="form-group mb-4 mt-6">
@@ -175,86 +363,113 @@
           </div>
           <div class="admin-grid" style="gap: 1rem;">
             <div class="form-group">
-              <textarea id="studio-journey-highlights" class="form-input form-textarea" rows="5" placeholder=" "></textarea>
+              <textarea id="studio-journey-highlights" class="form-input form-textarea" rows="5"
+                placeholder=" "></textarea>
               <label for="studio-journey-highlights" class="form-label">Highlights (Separate by striking Enter)</label>
             </div>
             <div class="form-group">
-              <textarea id="studio-journey-activities" class="form-input form-textarea" rows="5" placeholder=" "></textarea>
+              <textarea id="studio-journey-activities" class="form-input form-textarea" rows="5"
+                placeholder=" "></textarea>
               <label for="studio-journey-activities" class="form-label">Activities (Separate by striking Enter)</label>
             </div>
           </div>
-          <p class="admin-note"><i class="fas fa-info-circle"></i> Edit structured Education history (Year, Degree) directly in the JSON editor below.</p>
+          <p class="admin-note"><i class="fas fa-info-circle"></i> Edit structured Education history (Year, Degree)
+            directly in the JSON editor below.</p>
         </article>
       </section>
 
       <!-- Floating Save Bar -->
-      <div style="position: sticky; bottom: 20px; z-index: 100; text-align: center; margin-bottom: 2rem; pointer-events: none;">
-        <div style="display: inline-block; padding: 10px 20px; border-radius: 50px; background: rgba(10,24,43,0.95); border: 1px solid rgba(135, 238, 255, 0.3); box-shadow: 0 10px 30px -5px rgba(0,0,0,0.8); backdrop-filter: blur(10px); pointer-events: auto; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem; width: max-content; margin: 0 auto;">
-          <button type="submit" class="btn btn-glow" style="margin: 0; padding: 10px 24px;"><i class="fas fa-save"></i> Save Global Text</button>
-          <button type="button" class="btn btn-outline" id="floating-backup-btn" style="margin: 0; padding: 10px 24px; border-color: rgba(135, 238, 255, 0.4);"><i class="fas fa-download"></i> Auto-Backup ZIP</button>
+      <div
+        style="position: sticky; bottom: 20px; z-index: 100; text-align: center; margin-bottom: 2rem; pointer-events: none;">
+        <div
+          style="display: inline-block; padding: 10px 20px; border-radius: 50px; background: rgba(10,24,43,0.95); border: 1px solid rgba(135, 238, 255, 0.3); box-shadow: 0 10px 30px -5px rgba(0,0,0,0.8); backdrop-filter: blur(10px); pointer-events: auto; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem; width: max-content; margin: 0 auto;">
+          <button type="submit" class="btn btn-glow" style="margin: 0; padding: 10px 24px;"><i class="fas fa-save"></i>
+            Save Global Text</button>
+          <button type="button" class="btn btn-outline" id="floating-backup-btn"
+            style="margin: 0; padding: 10px 24px; border-color: rgba(135, 238, 255, 0.4);"><i
+              class="fas fa-download"></i> Auto-Backup ZIP</button>
           <span id="quick-status" style="margin-left: 1rem; font-size: 0.9rem;" class="text-gradient"></span>
         </div>
       </div>
     </form>
 
     <!-- 5. Project Hub -->
-    <section class="section container reveal-up" style="padding-top: 0; padding-bottom: 2rem;">
+    <section id="tab-projects" class="section container reveal-up tab-section"
+      style="padding-top: 0; padding-bottom: 2rem;">
       <article class="glass-panel text-left">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+        <div
+          style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
           <div>
             <h2 class="card-title text-gradient"><i class="fas fa-rocket"></i> 5. Project Configurator</h2>
             <p class="admin-note mt-0 mb-4">Add, preview, and delete standalone projects directly.</p>
           </div>
-          <button type="button" class="btn btn-outline" id="add-project-btn"><i class="fas fa-plus"></i> New Project</button>
+          <button type="button" class="btn btn-outline" id="add-project-btn"><i class="fas fa-plus"></i> New
+            Project</button>
         </div>
         <div class="admin-stats-row text-gradient" id="studio-stats"></div>
-        <div id="studio-project-list" style="max-height: 500px; overflow-y: auto; padding-right: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem;"></div>
+        <div id="studio-project-list"
+          style="max-height: 500px; overflow-y: auto; padding-right: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+        </div>
       </article>
     </section>
 
     <!-- 6. Gallery Hub -->
-    <section class="section container reveal-up" style="padding-top: 0; padding-bottom: 2rem;">
+    <section id="tab-gallery" class="section container reveal-up tab-section"
+      style="padding-top: 0; padding-bottom: 2rem;">
       <article class="glass-panel text-left">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+        <div
+          style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
           <div>
             <h2 class="card-title text-gradient"><i class="fas fa-images"></i> 6. Gallery Manager</h2>
             <p class="admin-note mt-0 mb-4">Control standalone photos showing up in your dedicated gallery.</p>
           </div>
         </div>
 
-        <form id="add-gallery-form" class="modern-form mt-2 mb-6" style="padding: 1.5rem; border: 1px dashed var(--line); border-radius: 12px; background: rgba(255,255,255,0.02);">
+        <form id="add-gallery-form" class="modern-form mt-2 mb-6"
+          style="padding: 1.5rem; border: 1px dashed var(--line); border-radius: 12px; background: rgba(255,255,255,0.02);">
           <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Upload New Image</h3>
           <div class="form-group mb-4">
             <input type="text" id="new-gallery-title" class="form-input" placeholder=" " required />
             <label for="new-gallery-title" class="form-label">Image Title</label>
           </div>
           <div class="form-group mb-4">
-            <textarea id="new-gallery-desc" class="form-input form-textarea" rows="2" placeholder=" " required></textarea>
+            <textarea id="new-gallery-desc" class="form-input form-textarea" rows="2" placeholder=" "
+              required></textarea>
             <label for="new-gallery-desc" class="form-label">Caption / Description</label>
           </div>
           <div class="form-group mb-4">
-            <input type="file" id="new-gallery-file" class="form-input" accept="image/*" required style="padding-top: 0.8rem;" />
+            <input type="file" id="new-gallery-file" class="form-input" accept="image/*" required
+              style="padding-top: 0.8rem;" />
             <p class="admin-note mt-1">Image will be auto-compressed to WebP format instantly.</p>
           </div>
           <button type="submit" class="btn btn-glow"><i class="fas fa-upload"></i> Upload to Gallery</button>
         </form>
 
-        <div id="studio-gallery-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; max-height: 500px; overflow-y: auto; padding-right: 0.5rem;"></div>
+        <div id="studio-gallery-list"
+          style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; max-height: 500px; overflow-y: auto; padding-right: 0.5rem;">
+        </div>
       </article>
     </section>
 
     <!-- 7. Advanced JSON -->
-    <section class="section container reveal-up" style="padding-top: 0; padding-bottom: 2rem;">
+    <section id="tab-advanced" class="section container reveal-up tab-section"
+      style="padding-top: 0; padding-bottom: 2rem;">
       <article class="glass-panel text-left">
         <h2 class="card-title text-gradient"><i class="fas fa-database"></i> 7. Advanced Core JSON</h2>
-        <p class="admin-note mb-6">Modify deeply nested items like Education and Capabilities sets. This gives you exact text-based manipulation of `data-store.js`.</p>
-        
+        <p class="admin-note mb-6">Modify deeply nested items like Education and Capabilities sets. This gives you exact
+          text-based manipulation of `data-store.js`.</p>
+
         <div class="flex-center mb-4" style="gap: 1rem; flex-wrap: wrap; justify-content: flex-start;">
           <button type="button" class="btn btn-glow" id="save-json-btn">Deploy Core JSON</button>
-          <button type="button" class="btn btn-outline btn-sm" id="format-json-btn"><i class="fas fa-align-left"></i> Auto-Format</button>
-          <button type="button" class="btn btn-outline btn-sm" id="export-json-btn"><i class="fas fa-download"></i> Backup Backup</button>
-          <button type="button" class="btn btn-outline btn-sm" id="import-json-btn"><i class="fas fa-upload"></i> Restore Array</button>
-          <button type="button" class="btn btn-outline btn-sm" id="reset-json-btn" style="color: #ff6b6b; border-color: rgba(255,107,107,0.3);"><i class="fas fa-trash-alt"></i> Hard Reset to DB</button>
+          <button type="button" class="btn btn-outline btn-sm" id="format-json-btn"><i class="fas fa-align-left"></i>
+            Auto-Format</button>
+          <button type="button" class="btn btn-outline btn-sm" id="export-json-btn"><i class="fas fa-download"></i>
+            Backup Backup</button>
+          <button type="button" class="btn btn-outline btn-sm" id="import-json-btn"><i class="fas fa-upload"></i>
+            Restore Array</button>
+          <button type="button" class="btn btn-outline btn-sm" id="reset-json-btn"
+            style="color: #ff6b6b; border-color: rgba(255,107,107,0.3);"><i class="fas fa-trash-alt"></i> Hard Reset to
+            DB</button>
           <input type="file" id="import-json-file" style="display: none;" accept="application/json" />
         </div>
 
@@ -264,16 +479,18 @@
     </section>
 
     <!-- 8. Optimizer -->
-    <section class="section container reveal-up" style="padding-top: 0; padding-bottom: 2rem;">
+    <section id="tab-tools" class="section container reveal-up tab-section"
+      style="padding-top: 0; padding-bottom: 2rem;">
       <article class="glass-panel text-left">
         <h2 class="card-title text-gradient"><i class="fas fa-magic"></i> 8. Asset Optimization Engine</h2>
-        <p class="admin-note mb-6">Compress heavy imagery to 85% Webp inside your browser using canvas APIs entirely local to your machine.</p>
-        
+        <p class="admin-note mb-6">Compress heavy imagery to 85% Webp inside your browser using canvas APIs entirely
+          local to your machine.</p>
+
         <div class="modern-form" style="max-width: 600px;">
           <div class="form-group" style="padding: 1rem; border: 1px dashed var(--line); border-radius: 8px;">
             <input type="file" id="image-file-input" accept="image/*" style="width: 100%; color: var(--text);" />
           </div>
-          
+
           <div class="admin-grid" style="gap: 1rem; grid-template-columns: 1fr 1fr; margin-top: 1.5rem;">
             <div class="form-group">
               <select id="image-preset" class="form-input" style="background: rgba(10,24,43,0.8); color: white;">
@@ -283,31 +500,39 @@
               </select>
               <label class="form-label" style="top: -10px; font-size: 0.8rem;">Auto-Crop Profile</label>
             </div>
-            
+
             <div class="form-group">
-              <select id="image-target" class="form-input" style="background: rgba(10,24,43,0.8); color: white;"></select>
+              <select id="image-target" class="form-input"
+                style="background: rgba(10,24,43,0.8); color: white;"></select>
               <label class="form-label" style="top: -10px; font-size: 0.8rem;">Auto-Inject Target JSON</label>
             </div>
           </div>
 
           <div class="flex-center mt-6" style="gap: 1rem; flex-wrap: wrap; justify-content: flex-start;">
-            <button type="button" class="btn btn-glow" id="process-image-btn"><i class="fas fa-microchip"></i> Compress Engine</button>
-            <button type="button" class="btn btn-outline" id="apply-image-btn"><i class="fas fa-link"></i> Sync active to JSON</button>
-            <button type="button" class="btn btn-outline" id="download-image-btn"><i class="fas fa-download"></i> Save as Webp</button>
+            <button type="button" class="btn btn-glow" id="process-image-btn"><i class="fas fa-microchip"></i> Compress
+              Engine</button>
+            <button type="button" class="btn btn-outline" id="apply-image-btn"><i class="fas fa-link"></i> Sync active
+              to JSON</button>
+            <button type="button" class="btn btn-outline" id="download-image-btn"><i class="fas fa-download"></i> Save
+              as Webp</button>
           </div>
-          
+
           <p class="form-message mt-4 text-gradient" id="image-status" aria-live="polite"></p>
         </div>
 
         <div class="preview-card-grid">
           <div class="image-preview-box">
             <strong class="mb-4 d-block">Source File</strong>
-            <div id="original-image-frame" style="width: 100%; display: flex; align-items: center; justify-content: center;"><span>Pending File Selection</span></div>
+            <div id="original-image-frame"
+              style="width: 100%; display: flex; align-items: center; justify-content: center;"><span>Pending File
+                Selection</span></div>
             <p id="original-image-meta" class="admin-note mt-2"></p>
           </div>
           <div class="image-preview-box">
             <strong class="mb-4 d-block">Compiled WebP Output</strong>
-            <div id="optimized-image-frame" style="width: 100%; display: flex; align-items: center; justify-content: center;"><span>Awaiting optimization...</span></div>
+            <div id="optimized-image-frame"
+              style="width: 100%; display: flex; align-items: center; justify-content: center;"><span>Awaiting
+                optimization...</span></div>
             <p id="optimized-image-meta" class="admin-note mt-2"></p>
           </div>
         </div>
@@ -326,7 +551,7 @@
       </div>
     </div>
   </footer>
-  
+
   <button id="backToTopBtn" class="back-to-top" type="button" aria-label="Back to top">
     <i class="fas fa-arrow-up"></i>
   </button>
@@ -335,4 +560,5 @@
   <script src="data-store.js"></script>
   <script src="admin.js" defer></script>
 </body>
+
 </html>

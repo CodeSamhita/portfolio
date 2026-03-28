@@ -149,6 +149,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     setText("status-text", data.profile.statusText);
     setText("location-label", data.profile.locationLabel);
     setText("location-text", data.profile.locationText);
+    if (data.profile.languages && data.profile.languages.length) {
+      setText("language-text", data.profile.languages.join(", "));
+    }
     setImage("hero-portrait", data.profile.portrait, "profile.png");
 
     const resumeLink = document.getElementById("resume-link");
@@ -290,6 +293,14 @@ document.addEventListener("DOMContentLoaded", async () => {
           href: data.profile.instagramUrl,
           icon: "fab fa-instagram",
           label: "Instagram"
+        });
+      }
+
+      if (data.profile.whatsappUrl) {
+        links.push({
+          href: data.profile.whatsappUrl,
+          icon: "fab fa-whatsapp",
+          label: "WhatsApp"
         });
       }
 
@@ -454,8 +465,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         return;
       }
 
-      if (deleting && charIndex < 0) {
+      if (deleting && charIndex <= 0) {
         deleting = false;
+        charIndex = 1;
         phraseIndex = (phraseIndex + 1) % phrases.length;
       }
 

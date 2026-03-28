@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     linkedin: document.getElementById("studio-linkedin"),
     availability: document.getElementById("studio-availability"),
     languages: document.getElementById("studio-languages"),
+    focusAreas: document.getElementById("studio-focus-areas"),
 
     aboutHeading: document.getElementById("studio-about-heading"),
     aboutParagraphs: document.getElementById("studio-about-paragraphs"),
@@ -191,6 +192,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if(quickFields.linkedin) quickFields.linkedin.value = data.profile.linkedinUrl || "";
     if(quickFields.availability) quickFields.availability.value = data.contact.availability || "";
     if(quickFields.languages) quickFields.languages.value = (data.profile.languages || []).join(", ");
+    if(quickFields.focusAreas) quickFields.focusAreas.value = (data.profile.focusAreas || []).join("\n");
 
     if(quickFields.aboutHeading) quickFields.aboutHeading.value = data.about.heading || "";
     if(quickFields.aboutParagraphs) quickFields.aboutParagraphs.value = (data.about.paragraphs || []).join("\n\n");
@@ -352,7 +354,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         resumeUrl: quickFields.resume.value,
         githubUrl: quickFields.github.value,
         linkedinUrl: quickFields.linkedin.value,
-        languages: quickFields.languages.value.split(",").map(s => s.trim()).filter(Boolean)
+        languages: quickFields.languages.value.split(",").map(s => s.trim()).filter(Boolean),
+        focusAreas: quickFields.focusAreas.value.split("\n").map(s => s.trim()).filter(Boolean)
       },
       contact: {
         ...data.contact,
@@ -588,6 +591,19 @@ document.addEventListener("DOMContentLoaded", async () => {
   const hideLoader = () => document.getElementById("global-loader")?.classList.add("hidden");
   if (document.readyState === "complete") hideLoader();
   else window.addEventListener("load", hideLoader);
+
+  const adminTabs = document.querySelectorAll(".tab-btn");
+  const tabSections = document.querySelectorAll(".tab-section");
+  adminTabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const target = btn.dataset.tab;
+      adminTabs.forEach(b => b.classList.remove("active"));
+      tabSections.forEach(s => s.classList.remove("active"));
+      btn.classList.add("active");
+      const activeSection = document.getElementById(target);
+      if(activeSection) activeSection.classList.add("active");
+    });
+  });
 
   initTheme();
   updateQualityFromPreset();
