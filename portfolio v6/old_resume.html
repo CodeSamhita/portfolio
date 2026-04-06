@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Resume - Aditya Sharma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Embedded CSS from resume-style.css --- */
+        :root {
+          --bg-color: #050505;
+          --bg-surface: #121214;
+          --border-glass: rgba(255, 255, 255, 0.08);
+          --text-main: #fcfcfc;
+          --text-muted: #a1a1aa;
+          --accent-primary: #8b5cf6;
+          --accent-secondary: #0ea5e9;
+          --radius-md: 16px;
+        }
+
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: 'Inter', sans-serif;
+          background-color: var(--bg-color);
+          color: var(--text-main);
+          line-height: 1.6;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 3rem 1rem;
+        }
+
+        h1, h2, h3, h4 {
+          font-family: 'Outfit', sans-serif;
+          color: var(--text-main);
+          margin-bottom: 0.5rem;
+        }
+
+        a {
+          color: var(--accent-secondary);
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+
+        a:hover {
+          color: var(--accent-primary);
+        }
+
+        /* Nav Panel Settings */
+        .nav-panel {
+            position: fixed; top: 15px; right: 15px;
+            background: #ffffff; border: 1px solid #ddd;
+            padding: 8px 15px; border-radius: 20px; font-size: 13px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000;
+            color: #333;
+        }
+        .nav-panel a { text-decoration: none; color: #666; margin: 0 5px; }
+        .nav-panel a.active { color: #000; font-weight: bold; pointer-events: none; }
+        @media print { .nav-panel { display: none !important; } }
+
+        /* Container to be exported */
+        .resume-container {
+          width: 100%;
+          max-width: 900px;
+          background: var(--bg-surface);
+          border: 1px solid var(--border-glass);
+          border-radius: var(--radius-md);
+          display: flex;
+          flex-direction: row;
+          overflow: hidden;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        /* Left Column */
+        .left-column {
+          width: 35%;
+          background: rgba(255, 255, 255, 0.02);
+          padding: 3rem 2rem;
+          border-right: 1px solid var(--border-glass);
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .profile-section {
+          text-align: center;
+        }
+
+        .resume-profile-img {
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 1.5rem;
+          border: 4px solid var(--bg-surface);
+          box-shadow: 0 0 0 2px var(--accent-primary);
+        }
+
+        .name {
+          font-size: 1.5rem;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+        }
+
+        .title {
+          font-size: 1rem;
+          color: var(--accent-secondary);
+          font-weight: 500;
+        }
+
+        .left-column section h3 {
+          font-size: 1.1rem;
+          text-transform: uppercase;
+          color: var(--accent-primary);
+          margin-bottom: 1rem;
+          letter-spacing: 0.05em;
+          border-bottom: 1px solid var(--border-glass);
+          padding-bottom: 0.5rem;
+        }
+
+        .contact-info {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          font-size: 0.875rem;
+        }
+
+        .contact-info a {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: var(--text-muted);
+        }
+
+        .contact-info a i {
+          color: var(--text-main);
+          width: 16px;
+          text-align: center;
+        }
+
+        .entry {
+          margin-bottom: 1.5rem;
+        }
+
+        .entry h4 {
+          font-size: 1rem;
+        }
+
+        .entry p {
+          font-size: 0.875rem;
+          color: var(--text-muted);
+        }
+
+        .skills p {
+          margin-bottom: 0.5rem;
+        }
+
+        .skills strong {
+          color: var(--text-main);
+          display: block;
+        }
+
+        /* Right Column */
+        .right-column {
+          width: 65%;
+          padding: 3rem 2.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 2.5rem;
+        }
+
+        .right-column section h2 {
+          font-size: 1.5rem;
+          color: var(--accent-secondary);
+          border-bottom: 2px solid var(--border-glass);
+          padding-bottom: 0.5rem;
+          margin-bottom: 1.5rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .summary-section p {
+          font-size: 0.95rem;
+          color: var(--text-muted);
+          margin-bottom: 0.5rem;
+        }
+
+        .right-column h3 {
+          font-size: 1.125rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .right-column ul {
+          padding-left: 1.2rem;
+          margin-top: 0.5rem;
+        }
+
+        .right-column li {
+          font-size: 0.95rem;
+          color: var(--text-muted);
+          margin-bottom: 0.4rem;
+        }
+
+        .right-column li strong {
+          color: var(--text-main);
+        }
+
+        /* Buttons */
+        .download-btn {
+          margin-top: 3rem;
+          padding: 1rem 2rem;
+          background: var(--text-main);
+          color: var(--bg-color);
+          border: none;
+          border-radius: 99px;
+          font-family: 'Inter', sans-serif;
+          font-weight: 600;
+          font-size: 1rem;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .download-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+        }
+
+        /* Modal */
+        .modal-overlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(0,0,0,0.8);
+          backdrop-filter: blur(5px);
+          display: none;
+          align-items: center;
+          justify-content: center;
+          z-index: 1000;
+        }
+
+        .modal-content {
+          background: var(--bg-surface);
+          padding: 2.5rem;
+          border-radius: var(--radius-md);
+          border: 1px solid var(--border-glass);
+          text-align: center;
+          position: relative;
+          max-width: 400px;
+          width: 90%;
+        }
+
+        .modal-content h3 {
+          margin-bottom: 1rem;
+        }
+
+        .modal-content p {
+          color: var(--text-muted);
+          margin-bottom: 2rem;
+          font-size: 0.95rem;
+        }
+
+        .modal-buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .modal-btn {
+          padding: 1rem;
+          background: rgba(255,255,255,0.05);
+          border: 1px solid var(--border-glass);
+          border-radius: var(--radius-md);
+          color: var(--text-main);
+          font-family: inherit;
+          font-weight: 600;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          transition: all 0.2s;
+        }
+
+        .modal-btn:hover {
+          background: var(--text-main);
+          color: var(--bg-color);
+        }
+
+        .close-btn {
+          position: absolute;
+          top: 1rem;
+          right: 1.5rem;
+          background: none;
+          border: none;
+          color: var(--text-muted);
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+
+        .close-btn:hover {
+          color: var(--text-main);
+        }
+
+        @media (max-width: 768px) {
+          .resume-container {
+            flex-direction: column;
+          }
+          .left-column, .right-column {
+            width: 100%;
+            border-right: none;
+          }
+          .left-column {
+            border-bottom: 1px solid var(--border-glass);
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-panel">
+        <span class="text-gray-500">Theme:</span>
+        <a href="resume.html">📄 Old School</a> |
+        <!-- <a href="old_resume.html" class="active">📄✨ Standard</a> | -->
+        <a href="resume_modern.html">✨ Creative Split</a>
+    </div>
+
+    <!-- This is the main container that will be converted to an image/PDF -->
+    <div class="resume-container" id="resume-container">
+        <aside class="left-column">
+            <div class="profile-section">
+                <!-- Added fallback to hide broken image icon -->
+                <img id="resume-portrait" src="profile.png" alt="Profile" class="resume-profile-img" onerror="this.style.display='none'">
+                <h1 class="name" id="resume-name"></h1>
+                <h2 class="title" id="resume-label"></h2>
+            </div>
+
+            <section class="contact-section">
+                <h3>Contact</h3>
+                <div class="contact-info" id="resume-contact-info"></div>
+            </section>
+
+            <section>
+                <h3>Languages</h3>
+                <div class="entry skills" id="resume-languages"></div>
+            </section>
+
+            <section>
+                <h3>Education</h3>
+                <div id="resume-education"></div>
+            </section>
+
+            <section>
+                <h3>Skills</h3>
+                <div class="entry skills" id="resume-skills"></div>
+            </section>
+        </aside>
+
+        <main class="right-column">
+            <section class="summary-section">
+                <h2><i class="fas fa-user-circle"></i> Summary</h2>
+                <div id="resume-summary"></div>
+            </section>
+            
+            <section>
+                <h2><i class="fas fa-cogs"></i> Key Projects</h2>
+                <div id="resume-projects"></div>
+            </section>
+            
+            <section>
+                <h2><i class="fas fa-certificate"></i> Certifications & Achievements</h2>
+                <div class="entry">
+                    <ul id="resume-achievements"></ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2><i class="fas fa-users"></i> Experience & Activities</h2>
+                <div class="entry">
+                    <ul id="resume-activities"></ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Download Modal -->
+    <div id="download-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Choose Download Format</h3>
+            <p>Select your preferred format to download the resume.</p>
+            <div class="modal-buttons">
+                <button id="download-png-btn" class="modal-btn"><i class="fas fa-image"></i> Download PNG</button>
+                <button id="download-pdf-btn" class="modal-btn"><i class="fas fa-file-pdf"></i> Download PDF</button>
+            </div>
+            <button id="close-modal-btn" class="close-btn">&times;</button>
+        </div>
+    </div>
+
+    <button id="downloadBtn" class="download-btn">
+        <i class="fas fa-download"></i> <span id="btn-text">Download Resume</span>
+    </button>
+
+    <!-- Embedded Data Logic -->
+    <script>
+        window.portfolioStore = {
+            init: async function() {
+                return {
+                    profile: {
+                        name: "ADITYA SHARMA",
+                        label: "Full Stack Developer & Innovator",
+                        portrait: "profile.png",
+                        email: "adisharma102000@gmail.com",
+                        linkedinUrl: "https://linkedin.com/in/aditya-sharma-8679802b3",
+                        githubUrl: "https://github.com/CodeSamhita",
+                        languages: ["English", "Hindi", "Himachali (Native)"]
+                    },
+                    about: {
+                        paragraphs: [
+                            "Motivated Computer Science & Engineering student seeking an entry-level role in Full Stack Engineering, Embedded Systems, IoT, or Robotics.",
+                            "Experienced with Python, C++, ROS 2, sensor integration, and advanced AI models. Highly passionate about software–hardware integration, rapidly prototyping intelligent applications, and delivering scalable real-time technical solutions."
+                        ]
+                    },
+                    journey: {
+                        education: [
+                            { title: "B.Tech - Computer Science & Engineering", place: "Presidency University (CGPA: 7.56)", year: "Aug 2023 – Present" },
+                            { title: "Diploma in Computer Science & Engineering", place: "RR Polytechnic (68%)", year: "2018 – 2022" },
+                            { title: "Matriculation", place: "Air Force School (CGPA: 5.6)", year: "2014 – 2015" }
+                        ],
+                        highlights: [
+                            "Winner at Inventra'25 - Capstone Project Expo, Presidency University (Nov 2025).",
+                            "Research Paper Presented — NQComp-2026, MIT Bengaluru (Mar 2026).",
+                            "Anveshan 2024 (South Zone) - Represented Presidency University for robotics research (Feb 2025).",
+                            "Best Mentor Award (2024) - Awarded for the WALL-E project at the 5th Innovative Project Expo (Dec 2024).",
+                            "The Complete Front-End Web Development Course — Udemy (Apr 2025).",
+                            "Data Visualization Techniques — Infosys Springboard (Apr 2025).",
+                            "EnVision 2025 Energy Festival Participant — IITM Research Park (Feb 2025).",
+                            "30 Days of Python — Udemy (Feb 2024).",
+                            "TekBiz@SJP 2K22 - Secured 1st Prize in Treasure Hunt, and won prizes in Coding and Photo Editing (Jul 2022).",
+                            "Amazon Web Services (AWS) Workshop — Brain O Vision & R.R Polytechnic (Jul 2022).",
+                            "Python In-Plant Training — Knowx Innovations (May 2022).",
+                            "Cyber Security (Hands-On) SDP — R.R. Institute of Management Studies (Dec 2021).",
+                            "Data Exploration and Visualization — Sri Ramakrishna Eng. College (Jun 2021).",
+                            "Footprints & Counter Measures in Ethical Hacking — Sri Ramakrishna Eng. College (May 2021).",
+                            "Python & Application Development — RedTron (Jan 2020).",
+                            "Certificate of Merit (NSCSC) - National Schools Computer Science Competition (Jan 2014).",
+                            "NCC 'A' Certificate - 51 Assam Air (T) Sqn NCC (2013)."
+                        ],
+                        activities: [
+                            "Maker Space (BuildClub) — Core Member & Robotics Developer/Mentor (Aug 2024 – Mar 2026): Mentored 50+ members on programming and debugging. Led concurrent engineering of major projects including AI Humanoid, WALL·E, and RoboDog.",
+                            "KnowX Innovations Pvt. Ltd. — Machine Learning Intern (Sep 2022): Developed and tested a Sign Language Detection System utilizing custom ML pipelines and computer vision datasets."
+                        ]
+                    },
+                    skills: {
+                        capabilities: [
+                            { title: "Languages", text: "Python, C, C++, Java, JavaScript, HTML, CSS, PHP, SQL, Arduino C." },
+                            { title: "Frameworks & Libraries", text: "Bootstrap, NodeJS, React.js, Flask, TensorFlow, PyTorch, OpenCV, Pandas, Numpy, LangChain, Whisper." },
+                            { title: "Tools & Platforms", text: "Git, GitHub, ROS 2, Arduino, Raspberry Pi, Ubuntu, MySQL, Power BI, Tinkercad." },
+                            { title: "Concepts", text: "RESTful APIs, Machine Learning, Agile Methodology, Real-time Systems Automation." },
+                            { title: "Soft Skills", text: "Leadership, Mentorship, Problem-Solving, Team Collaboration." }
+                        ]
+                    },
+                    projects: [
+                        {
+                            title: "AI-Driven Smart Traffic Management (Jan 2026 – Present)",
+                            description: "Final Semester Project: \"Implementation of an Artificial Intelligence Driven Smart Traffic Management System for Urban Congestion Mitigation.\"",
+                            highlight: "Developing AI and vision-based models to dynamically optimize traffic flow."
+                        },
+                        {
+                            title: "Concurrent Robotics: Humanoid, WALL·E & RoboDog (Feb 2024 – Present)",
+                            description: "Simultaneous development of three major robotics platforms.",
+                            highlight: "The Humanoid (7th Semester Capstone Project) features voice-activated mouth movements precisely synced using Whisper AI."
+                        },
+                        {
+                            title: "Obstacle Avoidance Robot (Aug 2023 – Nov 2023)",
+                            description: "An autonomous robot designed to navigate complex environments utilizing multiple sensors.",
+                            highlight: "Serves as a practical application of robust sensor fusion algorithms."
+                        },
+                        {
+                            title: "Interactive Portfolio Website (May 2024 – Jun 2024)",
+                            description: "A modern, responsive portfolio website showcasing full-stack capabilities.",
+                            highlight: "Created a highly interactive online presence with a clean, user-friendly UI."
+                        },
+                        {
+                            title: "Smart Tank Monitoring (Oct 2023 – Dec 2023)",
+                            description: "A real implementation of monitoring water level at home tanks.",
+                            highlight: "Includes smart cutoff and device notification over home Wi-Fi."
+                        },
+                        {
+                            title: "Smart Traffic Analysis System (Jan 2022 – May 2022)",
+                            description: "Adaptive algorithm leveraging sensor arrays to evaluate traffic density for emergency routing.",
+                            highlight: "Final Year Project (2022) using UNO, Ultrasonic Sensor, RFID, IR Sensor, and Arduino."
+                        },
+                        {
+                            title: "Public Network Safety Demo (Mar 2022)",
+                            description: "Demonstrated network vulnerabilities and packet manipulation to raise cybersecurity awareness.",
+                            highlight: "Diploma Project (2022) utilizing OpenWrt and Sniffer Tools."
+                        }
+                    ]
+                };
+            }
+        };
+    </script>
+
+    <!-- Libraries for generating PDF and Image -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+        const downloadBtn = document.getElementById('downloadBtn');
+        const modal = document.getElementById('download-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const downloadPngBtn = document.getElementById('download-png-btn');
+        const downloadPdfBtn = document.getElementById('download-pdf-btn');
+        const resumeContainer = document.getElementById('resume-container');
+        const btnText = document.getElementById('btn-text');
+
+        // Show the modal when the main download button is clicked
+        downloadBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+
+        // Hide the modal
+        const closeModal = () => {
+            modal.style.display = 'none';
+        };
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        const showLoadingState = (isloading) => {
+            const mainBtnIcon = downloadBtn.querySelector('i');
+            if (isloading) {
+                btnText.textContent = 'Generating...';
+                mainBtnIcon.className = 'fas fa-spinner fa-spin';
+                downloadBtn.disabled = true;
+                downloadPngBtn.disabled = true;
+                downloadPdfBtn.disabled = true;
+            } else {
+                btnText.textContent = 'Download Resume';
+                mainBtnIcon.className = 'fas fa-download';
+                downloadBtn.disabled = false;
+                downloadPngBtn.disabled = false;
+                downloadPdfBtn.disabled = false;
+                closeModal();
+            }
+        };
+
+        const captureResume = () => {
+            return html2canvas(resumeContainer, {
+                scale: 3,
+                useCORS: true,
+                logging: false,
+                width: resumeContainer.offsetWidth,
+                height: resumeContainer.offsetHeight
+            });
+        };
+
+        // Handle PNG Download
+        downloadPngBtn.addEventListener('click', () => {
+            showLoadingState(true);
+            captureResume().then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'Aditya-Sharma-Resume.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                showLoadingState(false);
+            }).catch(err => {
+                showLoadingState(false);
+            });
+        });
+
+        // Handle PDF Download
+        downloadPdfBtn.addEventListener('click', () => {
+            showLoadingState(true);
+            const { jsPDF } = window.jspdf;
+            
+            captureResume().then(canvas => {
+                const canvasWidth = canvas.width;
+                const canvasHeight = canvas.height;
+                const A4_RATIO = 1.414; 
+                const a4Height = canvasWidth * A4_RATIO;
+                
+                const pdf = new jsPDF({
+                    orientation: 'portrait',
+                    unit: 'px',
+                    format: [canvasWidth, a4Height]
+                });
+
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = pdf.internal.pageSize.getHeight();
+                
+                let yPos = 0;
+                let remainingHeight = canvasHeight;
+                
+                pdf.addImage(canvas, 'PNG', 0, yPos, pdfWidth, canvasHeight);
+                remainingHeight -= pdfHeight;
+
+                while (remainingHeight > 0) {
+                    pdf.addPage();
+                    yPos -= pdfHeight;
+                    pdf.addImage(canvas, 'PNG', 0, yPos, pdfWidth, canvasHeight);
+                    remainingHeight -= pdfHeight;
+                }
+
+                pdf.save('Aditya-Sharma-Resume.pdf');
+                showLoadingState(false);
+            }).catch(err => {
+                showLoadingState(false);
+            });
+        });
+
+        // -- DATA POPULATION LOGIC --
+        const escapeHtml = (value) => String(value || "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
+        
+        window.addEventListener("DOMContentLoaded", async () => {
+            const store = window.portfolioStore;
+            if(!store) return;
+            const data = await store.init();
+            
+            document.getElementById("resume-name").textContent = data.profile.name;
+            document.getElementById("resume-label").textContent = data.profile.label;
+            document.getElementById("resume-portrait").src = data.profile.portrait || "profile.png";
+            
+            const contactHTML = [];
+            if(data.profile.email) contactHTML.push(`<a href="mailto:${escapeHtml(data.profile.email)}"><i class="fas fa-envelope"></i> ${escapeHtml(data.profile.email)}</a>`);
+            if(data.profile.linkedinUrl) contactHTML.push(`<a href="${escapeHtml(data.profile.linkedinUrl)}" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>`);
+            if(data.profile.githubUrl) contactHTML.push(`<a href="${escapeHtml(data.profile.githubUrl)}" target="_blank"><i class="fab fa-github"></i> GitHub</a>`);
+            document.getElementById("resume-contact-info").innerHTML = contactHTML.join("");
+            
+            if (data.profile && data.profile.languages && data.profile.languages.length) {
+                document.getElementById("resume-languages").innerHTML = `<p>${escapeHtml(data.profile.languages.join(", "))}</p>`;
+            }
+            
+            document.getElementById("resume-education").innerHTML = (data.journey.education || []).map(e => `
+                <div class="entry">
+                    <h4>${escapeHtml(e.title)}</h4>
+                    <p><em>${escapeHtml(e.place)}</em></p>
+                    <p>${escapeHtml(e.year)}</p>
+                </div>
+            `).join("");
+            
+            if (data.skills && data.skills.capabilities) {
+               document.getElementById("resume-skills").innerHTML = data.skills.capabilities.map(c => `<p><strong>${escapeHtml(c.title)}:</strong> ${escapeHtml(c.text)}</p>`).join("");
+            }
+            
+            document.getElementById("resume-summary").innerHTML = (data.about.paragraphs || []).slice(0, 2).map(p => `<p>${escapeHtml(p)}</p>`).join("");
+            
+            const projectsToRender = data.projects || [];
+            
+            document.getElementById("resume-projects").innerHTML = projectsToRender.map(p => `
+                <div class="entry">
+                    <h3>${escapeHtml(p.title)}</h3>
+                    <ul>
+                        <li>${escapeHtml(p.description)}</li>
+                        ${p.highlight ? `<li>${escapeHtml(p.highlight)}</li>` : ""}
+                    </ul>
+                </div>
+            `).join("");
+            
+            document.getElementById("resume-achievements").innerHTML = (data.journey.highlights || []).map(h => `<li>${escapeHtml(h)}</li>`).join("");
+            document.getElementById("resume-activities").innerHTML = (data.journey.activities || []).map(a => `<li>${escapeHtml(a)}</li>`).join("");
+        });
+    </script>
+</body>
+</html>
