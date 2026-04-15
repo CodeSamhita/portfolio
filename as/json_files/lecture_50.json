@@ -1,0 +1,32 @@
+{
+  "id": "Lecture-50",
+  "title": "Lecture 50: Advanced DEM Derivatives - Topographic Roughness",
+  "notes": [
+    {
+      "timestamp": "01:53",
+      "heading": "Topographic Position Index (TPI)",
+      "points": [
+        "TPI is a localized spatial algorithm explicitly mapping localized statistical roughness by exactly scaling a target matrix center point strictly against the mean average grid elevation of its immediate surrounding neighborhood.",
+        "A positive TPI return completely confirms the current central matrix point reads explicitly higher than its surrounding neighbors physically identifying it as a literal 'Ridge' or 'Hilltop'.",
+        "A purely negative TPI value isolates the node strictly as lower elevation, classifying a 'Valley Bottom' or 'Depression'.",
+        "A mathematically true zero designates zero deviation: either an absolute pure flat plateau or a perfectly constant angle 'Mid-Slope'."
+      ]
+    },
+    {
+      "timestamp": "11:32",
+      "heading": "The Danger of TPI Scale Dependency",
+      "points": [
+        "TPI functions are aggressively structurally linked to their physical resolution matrix dimension. Expanding the roving algorithm window size completely upends the structural output.",
+        "At a massive 2000m macro-scale matrix grid, an entire localized mountain range fundamentally renders strictly as one single, solitary, unified Positive Ridge.",
+        "Shattering the exact same analytical window entirely down strictly to a 30m micro-resolution violently breaks the identical dataset apart out into thousands of intensely localized individual Positive Sub-Peaks mapping aggressively against deeply negative localized Micro-Valleys."
+      ]
+    },
+    {
+      "timestamp": "21:50",
+      "heading": "Terrain Roughness Index (TRI)",
+      "points": [
+        "TRI pivots slightly from the standard TPI by not strictly utilizing average mean baselines, but physically isolating specifically the direct absolute literal difference parameters separating the absolute highest grid point value compared exactly against the lowest spatial value strictly within the bounding box array."
+      ]
+    }
+  ]
+}

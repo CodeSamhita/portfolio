@@ -1,0 +1,28 @@
+{
+  "id": "Lecture-35",
+  "title": "Lecture 35: Software Demo - Projections & Hillshading",
+  "notes": [
+    {
+      "timestamp": "04:09",
+      "heading": "Handling Boundaries and NoData Artifacts",
+      "points": [
+        "Demonstrated how isolating a rigid boundary (like a watershed) from an overall global grid forces the software to mathematically compensate by rendering thousands of 'NoData' integer cells in the void outer rectangular corners.",
+        "Displaying NoData pixels as 'Transparent' prevents them from artificially rendering as solid black boxes, allowing the true irregular boundary map to seamlessly float over deeper basemaps."
+      ]
+    },
+    {
+      "timestamp": "11:53",
+      "heading": "Advanced DEM 3D Visualization Tactics",
+      "points": [
+        "Showed a professional layering technique to generate highly realistic 3D topography without using specialized 3D software: Generate a grayscale Hillshade layer, place a violently colored Elevation gradient (DEM) layer directly on top, and instruct the software to make the top layer exactly 50% transparent, instantly fusing the topographic colors with the deep artificial shadows."
+      ]
+    },
+    {
+      "timestamp": "15:56",
+      "heading": "On-The-Fly Projection Rendering",
+      "points": [
+        "Modern GIS software implements 'On-The-Fly' math projection. If the main screen is utilizing UTM zone 44, dragging a raw Lat/Long Geographic Shapefile onto the screen will instantly render and warp the shapes to visually match the UTM projection without permanently altering the underlying raw file data."
+      ]
+    }
+  ]
+}

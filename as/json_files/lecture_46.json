@@ -1,0 +1,32 @@
+{
+  "id": "Lecture-46",
+  "title": "Lecture 46: Common Derivatives of DEMs - Slope & Aspect-03",
+  "notes": [
+    {
+      "timestamp": "01:33",
+      "heading": "Mechanics of the Aspect Algorithm",
+      "points": [
+        "While Slope calculates the strict angle of physical descent, Aspect fundamentally maps the absolute compass bearing that a designated mountain slope literally 'faces' (e.g., a purely North-facing ridge).",
+        "Algorithmically measured precisely starting from absolute True North (locking at strictly 0°), scaling completely clockwise mathematically out to 360°.",
+        "Purely flat map regions displaying completely 0% angled grades intentionally dump a deliberate '-1' fail code into the aspect matrix explicitly to structurally isolate dead zones and visually highlight perfectly flat terrain."
+      ]
+    },
+    {
+      "timestamp": "15:07",
+      "heading": "Actionable Engineering Applications",
+      "points": [
+        "Solar Energy Infrastructure: Mapping explicitly isolated pure south-facing map sectors to mathematically guarantee max-efficiency structural solar farm placement grids.",
+        "Hydrological Snowmelt Flow: Identifies heavily sun-facing micro-slopes specifically mapped to trigger accelerated regional snowfield ablation flooding events.",
+        "Geohazard Assessment: Correlates heavy regional monsoon rainfall paths deliberately striking explicit exposed aspect boundaries, systematically generating catastrophic landslide mass wasting probabilities."
+      ]
+    },
+    {
+      "timestamp": "24:55",
+      "heading": "Advancing the Geodesic Matrix Projection",
+      "points": [
+        "In absolute exact tandem with Geodesic slope rendering operations, the Geodesic Aspect engine actively abandons 2D math, physically projecting raw DEM height blocks deeply out onto the Earth-Centered, Earth-Fixed (ECEF) global ellipsoidal layout.",
+        "Forces an extreme least-squares mathematical interpolation against the 3x3 geometric array directly calculating normal tangents compared locally against the ellipsoid surface itself, virtually terminating false-curve errors across massive maps."
+      ]
+    }
+  ]
+}

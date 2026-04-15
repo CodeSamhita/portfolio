@@ -1,0 +1,32 @@
+{
+  "id": "Lecture-40",
+  "title": "Lecture 40: Software Demo - TINs, Bounds, & Quality",
+  "notes": [
+    {
+      "timestamp": "01:28",
+      "heading": "Generating TIN Parameters and System Barriers",
+      "points": [
+        "Unlike infinitely expanding raster arrays, a Triangulated Irregular Network natively forms hard mathematically enclosed barriers actively spanning the absolute outermost point observations.",
+        "If external data points strictly form an irregular jagged polygon, the TIN is physically barricaded to that precise geometry.",
+        "In extreme opposition, interpolated DEMs (like IDW or Kriging) fundamentally ignore the input border, wildly extrapolating false algorithmic topographies far out to secure a perfectly solid rectangular grid."
+      ]
+    },
+    {
+      "timestamp": "07:22",
+      "heading": "Employing GIS Data Extents & Random Seed Testing",
+      "points": [
+        "High-level GIS testing strictly demands analysts rapidly assess wildly distinct DEM algorithms (Optical vs Radar) utilizing mathematically seeded random points.",
+        "The software is ordered to randomly scatter 100 control markers throughout the study grid. A singular intersection process pulls the predicted elevations from all loaded radar and optical DEM layers and anchors them to the points' unified database tables.",
+        "A statistical regression of the variance against true baseline benchmarks instantly isolates the most computationally superior surface engine for that highly localized geographic pocket."
+      ]
+    },
+    {
+      "timestamp": "15:56",
+      "heading": "Visual Overlay Processing",
+      "points": [
+        "Extreme macro-scale matrix cells (1 km widths) frequently trick analysts with mathematically smooth visual curves when pulled off-screen.",
+        "Overlaying high-fidelity dense models (30m bounds) specifically alongside coarse-scale arrays at extreme visual-zoom parameters instantly exposes catastrophic 'stair-step' alias rendering in the macro grids, actively destroying spatial calculations running slope metrics."
+      ]
+    }
+  ]
+}

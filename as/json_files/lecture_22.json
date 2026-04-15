@@ -1,0 +1,49 @@
+{
+  "id": "Lecture - 22",
+  "title": "Lecture 22: GIS Analysis 03 - Index Overlays & Measurements",
+  "notes": [
+    {
+      "timestamp": "00:58",
+      "heading": "Two-Dimensional Overlay Suitability Tables",
+      "points": [
+        "Advanced overlays create 2-Dimensional Suitability Matrices rather than stark binary cuts. For example, comparing 'Land Use' attributes on the X-axis against 'Geology' attributes on the Y-axis.",
+        "Allows environmental analysts to systematically categorize zone intersections into graded ranks (e.g., 'Highly Suitable', 'Moderately Suitable', 'Unsuitable') based on nested conditions."
+      ]
+    },
+    {
+      "timestamp": "07:03",
+      "heading": "Index Overlays & Weighting Models",
+      "points": [
+        "Index overlays drastically expand analytical capacity, simultaneously stacking 15 to 20 distinct data layers together.",
+        "Rather than literal cuts, analysts assign heavily weighted mathematical Ranks to each individual layer (e.g., scoring lithology safety at 40%, slope safety at 50%, soil safety at 10%).",
+        "Essential for highly complex predictive modelling algorithms like Landslide Hazard Zonation matrices, Groundwater Exploration mapping, and Soil Erosion forecasting."
+      ]
+    },
+    {
+      "timestamp": "11:32",
+      "heading": "Vector Feature Measurements",
+      "points": [
+        "GIS automates thousands of physical geometric calculations instantly. Can calculate basic area, perimeters, straight lengths, and exact coordinate centroids.",
+        "Point Measurements: Calculates distance between individual nodes and assesses macro statistical probability patterns (e.g., if neighborhood events are 'Uniform', 'Clustered', or 'Random').",
+        "Polyline Curves: Evaluates the specific degree of physical curvature within mapped lines. Critical for civil engineering (ensuring highway bends or railway route alignments fall within safe curvature thresholds)."
+      ]
+    },
+    {
+      "timestamp": "18:37",
+      "heading": "Neighborhood Operations & Roving Windows",
+      "points": [
+        "Raster grids utilize 'Roving/Moving Windows' to execute neighborhood operations. This involves sliding a small, odd-numbered matrix (typically 3x3 or 5x5 pixels) systematically across an image.",
+        "The value of the targeted 'Center Cell' is mathematically recalculated based entirely on the dynamic properties of its surrounding grid neighbors, allowing software to scan for localized trends and smooth visual data uniformly."
+      ]
+    },
+    {
+      "timestamp": "24:08",
+      "heading": "Topographic Functions & Terrain Modeling",
+      "points": [
+        "Digital Elevation Models (DEMs) are processed through Neighborhood Roving Windows to rapidly derive key Topographic Functions.",
+        "These include Slope (vertical steepness mathematically tracked in degrees or percentages), Aspect (the compass orientation of the slope), and overall peak gradient.",
+        "Raster DEMs can create data redundancy in flat regions due to fixed grid intervals. Conversely, Triangulated Irregular Networks (TINs) dynamically adapt their polygon scaling perfectly to the physical roughness of the terrain."
+      ]
+    }
+  ]
+}

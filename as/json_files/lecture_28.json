@@ -1,0 +1,38 @@
+{
+  "id": "Lectures 28-30",
+  "title": "Lectures 28-30: Attribute Classification, Databases & Buffer Demo",
+  "notes": [
+    {
+      "timestamp": "Lec 28 - 01:04",
+      "heading": "Attribute Classification Methods",
+      "points": [
+        "Classification discretizes continuous data (like an elevation raster) into distinct, grouped categories to improve human readability and cartographic presentation.",
+        "Method 1 - Equal Interval: Slices the total data range into exactly equal numerical bins (e.g., 0-20, 21-40).",
+        "Method 2 - Natural Breaks (Jenks Formula): A statistical optimization that intrinsically minimizes variance within a class and maximizes the visual gap between different classes.",
+        "Method 3 - Quantile: Frequency-based. Forces an identical number of pixels/features to exist inside every single class. Great for linearly distributed data.",
+        "Method 4 - Equal Area: Similar to quantile, but adjusts the class breakpoints to ensure every color group covers the exact same physical geographic area.",
+        "Method 5 - Standard Deviation: Uses pure statistical plotting to mathematically bound classes at half or whole standard deviations away from the mathematical mean.",
+        "Method 6 - Geometrical Interval: The most modern approach. Minimizes the square sum of elements per class, explicitly designed to intelligently balance skewed, continuous raster data.",
+        "Method 7 - Manual Classification: Density slicing. Artificially masking out data to isolate hyper-specific thresholds (e.g., hiding all map data except elevations mathematically prone to flooding)."
+      ]
+    },
+    {
+      "timestamp": "Lec 29 - 00:00",
+      "heading": "Spatial Database Systems Intro",
+      "points": [
+        "Transitioning from flat, isolated 'File Systems' to dynamic 'Database Management Systems (DBMS)'.",
+        "DBMS eliminates 'Islands of Data' and inherent 'Data Redundancy' by enforcing strict schema relationships in a single, perfectly synchronized central repository.",
+        "A true Spatial DBMS effortlessly links geometric coordinates (Points/Lines/Polygons) with relational non-spatial attribute tables instantly."
+      ]
+    },
+    {
+      "timestamp": "Lec 30 - 01:02",
+      "heading": "Software Demo: Buffering & Dissolving",
+      "points": [
+        "Ran proximity buffer tools over discrete point features.",
+        "Demonstrated the critical difference between raw buffers (which visually overlap, ruining area calculations) and 'Dissolved' buffers.",
+        "Executing 'Dissolve All' melts the overlapping intersections, creating a single continuous multi-polygon indicating exact total proximity range (vital for things like cell-tower coverage modeling)."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "Lecture-48",
+  "title": "Lecture 48: Advanced DEM Derivatives - Curvature & Surface Area",
+  "notes": [
+    {
+      "timestamp": "06:57",
+      "heading": "Planimetric vs. Surface Area Ratios",
+      "points": [
+        "Planimetric Flat Calculations entirely ignore the third Z dimension elevation geometry. Attempting to map rugged terrain strictly using purely flat 2D maps catastrophically underestimates true physical mass parameters.",
+        "Because surface area fundamentally increases dynamically exactly proportionally against increased slope steepness grades, complex non-orthogonal terrain arrays physically map out wildly expansive physical distances hiding directly beneath seemingly minute 2D digital footprint bounding boxes."
+      ]
+    },
+    {
+      "timestamp": "26:59",
+      "heading": "Extracting the Divergent Plan Curvature",
+      "points": [
+        "Plan Curvature structurally acts as the specific mathematical horizontal contour curve layout running straight across a single targeted terrain plane.",
+        "Crucial identifier matrix for lateral movement mappings: Highly concave topological plan curves aggressively physically force flowing liquids together tightly driving aggressive 'Flow Convergence'.",
+        "Convex topological plan grids explicitly structurally stretch flowing substances outward violently generating 'Flow Divergence'."
+      ]
+    },
+    {
+      "timestamp": "29:47",
+      "heading": "Extracting the Kinetic Profile Curvature",
+      "points": [
+        "Profile Curvature tracks the physical vertical elevation slice mapping moving directly straight with the primary downslope fluid path.",
+        "Explicitly regulates literal kinetic momentum velocity models mapping water bodies sliding directly across maps.",
+        "Pronounced Convex profile terrain geometry violently accelerates the fluid dropping down it aggressively generating extreme 'Zone Erosion'. Dense Concave terrain specifically decelerates descending liquids generating heavy sediment 'Deposition'."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "Lecture-59",
+  "title": "Lecture 59: Errors in GIS and Key Map Elements",
+  "notes": [
+    {
+      "timestamp": "00:00",
+      "heading": "Precision vs. Accuracy",
+      "points": [
+        "Precision: Functionally inherently entirely distinctly separate from accuracy. Precision strictly identifies exactly the singular entirely strictly smallest possible mathematically explicit unit of increment entirely fundamentally tracked by essentially a strictly fundamentally explicit recording measurement tool (e.g. tracking absolutely explicitly precise exact tenths of millimeters vs gross inches).",
+        "Accuracy: Entirely utterly utterly entirely specifically essentially explicitly purely fundamentally a pure distinct statistical structural concept purely completely essentially tracking definitively completely how dynamically structurally explicitly extremely strictly specifically closely clustered multiple sequential exactly tracking entirely raw absolute recorded geometric points are physically precisely fundamentally mapped perfectly mapping straight to the entirely strictly single entirely pure fundamentally true explicit spatial anchor goal. Being geometrically extraordinarily precise fundamentally does literally entirely not mathematically inherently explicitly perfectly exactly guarantee you are physically accurate entirely explicitly tracking accurately (i.e., grouping exactly precisely shots explicitly incredibly perfectly close entirely together completely strictly but far entirely away precisely entirely specifically entirely physically from exactly structurally the exact bullseye explicitly completely)."
+      ]
+    },
+    {
+      "timestamp": "10:53",
+      "heading": "The 5 Stages of Data Error Injection",
+      "points": [
+        "1. Missing/Inherent Source Data Error: Base source maps purchased from entirely external agencies natively inherently essentially already specifically house completely raw mapping errors.",
+        "2. Structural Input Mistakes: Humans incorrectly re-typing numbers, physically incorrectly registering specifically fundamentally tracking exactly geometric digitizers, or fundamentally incorrectly assigning perfectly absolute explicit spectral satellite bands.",
+        "3. System Storage Processing Limits: Mathematically explicit structural rounding errors precisely actively natively perfectly specifically destroying absolutely explicitly entirely precision essentially or totally essentially fundamentally mathematically dropping literal exactly precision completely immediately during completely strictly explicitly explicit file format type specifically natively explicitly structural completely entirely exports.",
+        "4. Analysis/Overlay Cascading: Geometrically overlaying inherently purely structurally flawed layers fundamentally algorithmically massively specifically fundamentally explicitly explicitly purely exponentially entirely physically propagates geometry mismatch strictly explicitly mapping directly entirely across strictly completely entirely uniquely newly generated maps.",
+        "5. Output Representation Failures: Pure literal physical exactly extremely poor specific fundamentally entirely specifically display output structural physically strictly device limits perfectly dynamically explicitly degrading entirely perfect pure resolution."
+      ]
+    },
+    {
+      "timestamp": "21:23",
+      "heading": "Cartography: Top 5 Mandatory Map Elements",
+      "points": [
+        "1. The Title: Immediately explains specifically precisely completely exactly exactly exactly thoroughly the map's specifically purely precise content.",
+        "2. Graphical Graphic Scale Bar: Crucially purely inherently precisely uniquely critical explicitly explicitly absolutely specifically specifically specifically exactly never fundamentally entirely definitively use exactly specifically exactly literally a specific written text tracking physically specifically pure ratio scale (like 1:50,000) explicitly visually explicitly purely because mathematically precisely printing/copying physical pages exactly purely immediately drastically completely alters physical geometric size precisely physically entirely thoroughly completely completely ruining completely any literal number text specifically purely purely precisely explicitly absolutely exact strictly mapping tracking physically strictly pure completely purely tracking.",
+        "3. Orientation Marker: Universally clearly indicates strictly explicitly True North limits.",
+        "4. The Neatline (Border): Rigidly essentially visibly cleanly physically frames the strict exact geometric rendering boundaries exactly tracking precisely entirely essentially exactly perfectly perfectly explicit precisely precisely the active explicit explicit exact dataset.",
+        "5. The Legend (Index): Thoroughly exhaustively fundamentally strictly details exact structural meanings for every single specific pure physical mathematical dynamic fundamentally visual completely exactly entirely symbol essentially exactly plotted explicitly strictly physically strictly purely dynamically tracked."
+      ]
+    }
+  ]
+}

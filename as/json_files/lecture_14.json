@@ -1,0 +1,43 @@
+{
+  "id": "Lecture - 14",
+  "title": "Lecture 14 - Pre-processing of spatial datasets - Part 1",
+  "notes": [
+    {
+      "timestamp": "00:00",
+      "heading": "GIS Operations & Measurement Types",
+      "points": [
+        "Analytical GIS operations divide broadly into Primary Pre-processing (basic prep work like formatting and distance checks) and Secondary Processing (complex mathematical modelling).",
+        "Planar Measurement: Calculating distance across standard 2D flat X/Y planes (ideal for standard local maps).",
+        "Geodesic Measurement: Calculating distance factoring in the severe 3-Dimensional curvature of the earth (critical for long-haul airplane routes to avoid massive mathematical errors)."
+      ]
+    },
+    {
+      "timestamp": "08:17",
+      "heading": "Aspect & Slope Parameters",
+      "points": [
+        "Aspect tracks the geographical compass direction that a sloped hill faces (e.g. South, North, East).",
+        "Determining Aspect is vital for terrain analysis. For instance, in the Himalayas, South-facing slopes receive intense sunlight increasing snowmelt velocity, while North-facing slopes stay darker and retain vegetation.",
+        "Flat unbroken terrain holds an artificial Aspect value of '-1' because it mathematically lacks a directional downward face.",
+        "Slope traces the literal steepness of a hill drop (Rise over Run ratio). It is generally plotted as raw degrees (0-90°) or as percentage gradients."
+      ]
+    },
+    {
+      "timestamp": "26:26",
+      "heading": "Generalization and Data Reduction",
+      "points": [
+        "When zooming an ultra-detailed neighborhood map out into a continent-sized macro map, preserving hyper-details physically clutters the screen unreadably.",
+        "Generalization digitally degrades data to keep maps clean. Bending zig-zag rivers are simplified into smoothed curves (Node Removal). Dual-lane highways are collapsed into single abstract lines. Hundreds of clustered neighborhood houses are merged into a unified polygon boundary."
+      ]
+    },
+    {
+      "timestamp": "38:17",
+      "heading": "Digitizing Errors",
+      "points": [
+        "When an operator manually traces vector lines over a scanned physical raster map, human error triggers topological glitches.",
+        "Dangles happen when a drawn line accidentally stops just short of connecting to an intersection point.",
+        "Overshoots happen when an operator accidentally draws a line slightly past the intended intersection target.",
+        "Slivers occur when tracing the shared perimeter of two neighboring polygons poorly, leaving an unintended empty microscopic void gap between them."
+      ]
+    }
+  ]
+}

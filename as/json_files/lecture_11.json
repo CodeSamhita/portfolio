@@ -1,0 +1,62 @@
+{
+  "id": "Lecture - 11",
+  "title": "Lecture 11 - Raster Data Compression Techniques - Part 1",
+  "notes": [
+    {
+      "timestamp": "00:00",
+      "heading": "Introduction to Raster Redundancy",
+      "points": [
+        "Raster architecture stores data in massive rigid matrices. A solid blue ocean map still forces a Raster to save individual 'blue' values for millions of separate cells.",
+        "This inherent trait creates massive data 'Redundancy.' To save physical hard-drive space and accelerate internet transmission, compression algorithms act to mathematically remove this redundancy.",
+        "Compression algorithms should ideally be 'Lossless' (non-destructive) to preserve scientific integrity, avoiding 'Lossy' (destructive) algorithms like JPEG which permanently destroy original mathematical data to save space.",
+        "Core Theory: Tobler's First Law of Geography states that closer things are more related than distant things. Raster grids inherently rely on 'spatial autocorrelation' (neighboring pixels usually have the exact same values, triggering heavy redundancy that can be compacted)."
+      ]
+    },
+    {
+      "timestamp": "12:14",
+      "heading": "Technique 1: Chain Codes",
+      "points": [
+        "Rather than analyzing the interior of a region, Chain Coding algorithms lock onto the exterior perimeter boundary of a homogenous zone.",
+        "The system selects a structural origin point, then traces clockwise around the perimeter by logging directional path codes. For example: assigning 0 for East, 1 for North, 2 for West, and 3 for South.",
+        "Instead of storing the millions of pixels inside the map shape, the system maps a single line parameter dictating the external bounds, drastically crushing file size."
+      ]
+    },
+    {
+      "timestamp": "16:24",
+      "heading": "Technique 2: Run Length Encoding (RLE)",
+      "points": [
+        "RLE operates by running linearly along the length of each individual horizontal 'Row'.",
+        "Instead of saving 10 consecutive identical black units as (Black, Black, Black...), it logs sequence tuples: [Start Column, End Column, Value].",
+        "It flawlessly maps highly complicated colored maps without data destruction. Software like ERDAS comprehensively utilizes this exact background algorithm."
+      ]
+    },
+    {
+      "timestamp": "22:57",
+      "heading": "Technique 3: Block Codes",
+      "points": [
+        "Instead of scanning linear rows, Block Codes search for massive 2-Dimensional homogenous geometric Squares (e.g. 4x4, 2x2).",
+        "The system maps the origin point of the block, the dimensional scale size, and the internal value attribute.",
+        "This algorithm is incredibly powerful for massive unbroken geographical expanses (Antarctica, Sahara Desert), allowing operators to compress huge territories into single blocks."
+      ]
+    },
+    {
+      "timestamp": "29:25",
+      "heading": "Technique 4: Quadtree Compression",
+      "points": [
+        "Divides the entire global image into 4 massive quadrants. The system checks if the quadrant is entirely homogeneous (e.g. all ocean).",
+        "If homogeneous, it halts processing for that entire block and saves it. If the quadrant is heterogeneous (a mix of land and sea), the system shatters that exact quadrant into 4 smaller sub-quadrants.",
+        "This branching mathematical logic spirals continuously deeper until it maps the entire board perfectly. It is essentially an 'Inverted Tree' structure.",
+        "If a map map projection natively fails to be a perfect square, operators temporarily artificially pad the dead zones with 'No Data' to trick the algorithm into running."
+      ]
+    },
+    {
+      "timestamp": "40:12",
+      "heading": "Technique 5: Huffman Coding",
+      "points": [
+        "Huffman operates via statistical frequency analysis.",
+        "The system forcefully analyzes every single cell to tally occurrence rates. If a specific color or number value appears fundamentally more across the map than others, the system rewrites the mathematical code for that specific value to be significantly shorter in length.",
+        "By making the most common values physically smaller to track, total file weight compresses heavily."
+      ]
+    }
+  ]
+}

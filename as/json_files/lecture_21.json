@@ -1,0 +1,43 @@
+{
+  "id": "Lecture - 21",
+  "title": "Lecture 21: GIS Analysis 02 - Overlaying Operations",
+  "notes": [
+    {
+      "timestamp": "00:00",
+      "heading": "Introduction to Overlay Operations",
+      "points": [
+        "Overlaying operations represent the core heart and fundamental analytical power of GIS, utilized immediately after the spatial database is successfully compiled.",
+        "The underlying mechanics rely entirely on Set Theory and mathematical Boolean Logic operations."
+      ]
+    },
+    {
+      "timestamp": "01:25",
+      "heading": "Boolean Overlay Operators",
+      "points": [
+        "These operations are conceptually similar to simple mathematical Venn Diagrams but scale to process massive datasets containing multiple layers and millions of complex polygons simultaneously.",
+        "AND (Intersection): Isolates and selects only the geographic areas that are strictly common to both input layers.",
+        "OR (Union): Aggregates and merges all overlapping spatial dimensions into a newly unified, overarching geographic layer.",
+        "XOR & NOT (Exclusion/Negation): Deliberately filters out and excludes specific designated intersection boundaries."
+      ]
+    },
+    {
+      "timestamp": "06:15",
+      "heading": "Vector Data Overlay Tools",
+      "points": [
+        "Warning: Vector overlay operations inherently divide intersecting boundaries, which can exponentially explode original node counts and create highly fragmented polygon micro-clusters.",
+        "Clip (Extract): Operates precisely like a 'cookie cutter.' Uses a dominant 'Clip Coverage' master polygon to securely extract out (or isolate) everything underneath it, dropping the unnecessary peripheral data. Highly useful for clipping down a massive continental dataset strictly into a smaller local state study boundary to save memory.",
+        "Erase: Functionally the strict opposite of Clip. Operates as an eraser, permanently deleting and omitting any spatial vectors sitting under the defined boundaries."
+      ]
+    },
+    {
+      "timestamp": "19:08",
+      "heading": "Raster Overlays & Map Calculators",
+      "points": [
+        "Raster cells accept broad arrays of analytical operations, often seamlessly compiled inside a 'Map Calculator' query syntax window.",
+        "Arithmetic Logic: Grids can mathematically add, subtract, multiply, and divide raw interval cell values across layers directly.",
+        "Relational Logic: Grids can process true/false conditions (e.g., if Map A cell > Map B cell value). Outputs from these generate stark Binary Maps mapping pure positive and negative spatial zones.",
+        "Cross-Table Mapping: Essential for analyzing multi-decade environmental changes. Creates highly detailed transitional matrices (e.g. quantifying if '1990 Dense Forest' pixels transitioned into '2020 Reclaimed Land' pixels)."
+      ]
+    }
+  ]
+}

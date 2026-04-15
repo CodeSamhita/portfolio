@@ -1,0 +1,31 @@
+{
+  "id": "Lecture - 27",
+  "title": "Lecture 27: GIS Analysis 07 - Multi-Modal & 3D Networks",
+  "notes": [
+    {
+      "timestamp": "00:00",
+      "heading": "Network Databases & Multi-Modal Routing",
+      "points": [
+        "Network Databases structure their logic much differently than standard relational databases. They must map complex multi-modal intersections (e.g. routing a human through a bus network, onto a pedestrian sidewalk, and down an escalator into an underground subway).",
+        "Connectivity Groups: Two crossing networks (like a blue metro grid and a red street grid) will completely ignore each other internally unless they are securely bridged by a shared 'Junction' (like a Metro Platform Entrance point)."
+      ]
+    },
+    {
+      "timestamp": "06:34",
+      "heading": "Data Integrity & The 50% Rule",
+      "points": [
+        "Network Analysis inherently demands extreme data accuracy. If a prediction map operates at only 50% reliability, it is statistically useless for dispatching emergency services.",
+        "GIS engineers must enforce strict topology rules to 'clean' vector errors—ensuring lines officially connect at vertex nodes and resolving graphical overlaps."
+      ]
+    },
+    {
+      "timestamp": "32:37",
+      "heading": "3D Networks & Z-Coordinates",
+      "points": [
+        "In dense urban areas (subways and highways), simply intersecting X and Y coordinates is insufficient. Polylines crossing on a 2D map might actually be overpasses and tunnels separated vertically.",
+        "3D Networks heavily incorporate 'Z-values' representing physical elevation. Vertices sharing identical XY coordinates will NOT establish a junction if their Z elevations mismatch, preventing autonomous vehicles from attempting to merge from a tunnel onto an overpass.",
+        "When modeling indoor pathways (multistory mall walkability), Z-values map virtual elevator shafts and escalators securely connecting independent floor plans."
+      ]
+    }
+  ]
+}

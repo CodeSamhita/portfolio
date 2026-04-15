@@ -1,0 +1,65 @@
+{
+  "id": "Lectures 15-20",
+  "title": "Lectures 15-20: Pre-processing, Interpolation & GIS Analysis",
+  "notes": [
+    {
+      "timestamp": "Lec 15 - 00:00",
+      "heading": "Software Demonstration: Compression & Georeferencing",
+      "points": [
+        "Raster Compression: Demonstrated saving lossless (LZW) versus lossy (JPEG) imagery in ArcGIS. Explored generating raster 'Pyramids' (.aux files) that heavily accelerate screen rendering times when zooming.",
+        "Alternative Compression Software: Demonstrated IrfanView, a lightweight tool for heavy automated batch compression and converting generic raster formats efficiently.",
+        "Georeferencing Workflow: Imported a geometric scanned Toposheet map alongside a geographic target. Collected 4 corner Ground Control Points (GCPs).",
+        "Georeferencing Settings: Used a First-Order Polynomial transformation with 'Nearest Neighbor' resampling to securely retain the exact original pixel values during rubber-sheeting."
+      ]
+    },
+    {
+      "timestamp": "Lec 16 - 02:37",
+      "heading": "Image Fusion & PAN Sharpening",
+      "points": [
+        "Image Fusion merges images to extract complimentary advantages. Commonly PAN Sharpening combines the high spatial resolution of Panchromatic images with the high spectral (color) resolution of Multispectral images.",
+        "IHS Transformation Technique: Splitting an RGB color composite into Intensity, Hue, and Saturation. The intensity layer is replaced by the high-resolution Panchromatic layer, then inversely transformed back into RGB.",
+        "Earthquake Analysis via Pseudo-Color Transformation: Fusing pre-earthquake and post-earthquake data using RGB space. Assigning red to post-earthquake data isolates fresh disaster anomalies (like fresh landslides or moisture upwelling from liquefaction) as distinct bright red zones."
+      ]
+    },
+    {
+      "timestamp": "Lec 17 - 01:07",
+      "heading": "Change Detection & Topographic Perceptions",
+      "points": [
+        "Change Detection: Fused an old 1968 topographical map with a 1998 satellite image of Dal Lake. Anomalous red areas heavily highlighted extreme vegetation encroachment and artificial blockages.",
+        "False Topographic Perception Phenomenon (FTPP): A visual illusion making valleys and rivers appear as inverted ridges due to the sun's natural southeast morning illumination angle.",
+        "Correcting FTPP: Extracted the Intensity layer via IHS Transformation and replaced it with a simulated Shaded Relief Model (derived from a DEM) utilizing an artificial northwest sun angle, forcing correct visual depth perception.",
+        "Edge Matching: Manually editing discontinuous vector map boundaries from adjacent neighboring map sheets to smoothly integrate them."
+      ]
+    },
+    {
+      "timestamp": "Lec 18 - 01:08",
+      "heading": "Introduction to Spatial Interpolation",
+      "points": [
+        "Spatial Interpolation relies on Tobler's Law (closer points share similar traits) to mathematically predict continuous raster surfaces (elevation grids, pollution concentration) strictly from isolated sampled coordinate points.",
+        "Global vs Local: Global models calculate a trend across the entire study area. Local models calculate values heavily biased toward a smaller neighborhood radius.",
+        "Exact vs Approximate: Exact interpolators honor input point values precisely on the generated grid. Approximate interpolators smooth them out to reduce noisy outliers.",
+        "Stochastic vs Deterministic: Stochastic leverages probability to assess randomness. Deterministic applies pure mathematical matrices without probabilistic flexibility."
+      ]
+    },
+    {
+      "timestamp": "Lec 19 - 01:12",
+      "heading": "Non-Linear Interpolation Methods",
+      "points": [
+        "Inverse Distance Weighting (IDW): Local, exact, and deterministic. Close points exhibit extremely high influence. A 'Power' variable can intensify rigid nearest-neighbor influence. Supports polyline 'Barriers' (faults or rivers) to prevent interpolation across natural boundaries.",
+        "Spline Interpolation: Deterministic tool ensuring minimum surface curvature to create highly smoothed grids (akin to drafting with a french curve). Can be set to 'Regularized' for highly smoothed aesthetic blending, or 'Tension' for strict raw stiffness.",
+        "Kriging: Highly advanced Stochastic model relying on three parameters: Structural drift, spatial correlation, and random noise. Kriging is the only interpolation tool capable of generating a quantified 'Uncertainty/Error Prediction Surface'."
+      ]
+    },
+    {
+      "timestamp": "Lec 20 - 03:16",
+      "heading": "Primary GIS Analysis Operations",
+      "points": [
+        "Basic operations involve calculating Area, Perimeter, and Lengths alongside generating Buffers. Advanced Buffers can incorporate external impedance like wind direction vectors instead of standard radial circles.",
+        "Query & Retrieval: Using SQL Map Calculators to filter out specific spatial datasets using layered logical constraints, effectively selecting objects conditionally without structurally changing the source geometry.",
+        "Reclassification: Systematically compressing many complex map intervals into simplified categories.",
+        "One-to-One: Reassigning distinct grid values without lowering class totals.",
+        "Many-to-One: Aggregating intense data (e.g., merging 20 specific geological age polygons visually into 3 simple lithology classes for easier viewing)."
+      ]
+    }
+  ]
+}

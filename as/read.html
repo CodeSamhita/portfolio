@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPTEL Geography Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Load data first so JS has access immediately -->
+    <script src="data.js"></script>
+</head>
+<body>
+    <div class="layoutWrapper">
+        <aside class="sidebar">
+            <div class="sidebarHeader">
+                <h1>NPTEL Geography</h1>
+                <p>Study Guide</p>
+            </div>
+            <div class="lectureList" id="lecture-list">
+                <!-- Sidebar items rendered dynamically -->
+            </div>
+        </aside>
+
+        <main class="mainContent">
+            <div id="content-container">
+                <div class="emptyState">
+                    <h2>Select a lecture</h2>
+                    <p>Click on any lecture from the sidebar to view the structured notes.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

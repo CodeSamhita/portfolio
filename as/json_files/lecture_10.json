@@ -1,0 +1,49 @@
+{
+  "id": "Lecture - 10",
+  "title": "Lecture 10 - Demonstration through GIS software",
+  "notes": [
+    {
+      "timestamp": "00:00",
+      "heading": "Lecture 10 Overview: Software Demonstration",
+      "points": [
+        "This lecture provides a direct practical software demonstration utilizing ArcView GIS tools.",
+        "The primary focus is visualizing the absolute technical rendering differences between Imagery vs. Grid architectures, and understanding boundaries and limitations when generating Triangulated Irregular Networks (TIN)."
+      ]
+    },
+    {
+      "timestamp": "01:38",
+      "heading": "Image vs. Grid Architecture",
+      "points": [
+        "Grid Architecture: Mathematically classified Grid elevation maps track highly precise floating-point or negative decimal number ranges (-/+) stored uniformly across 'cells'. No matter where you probe inside a single grid cell perimeter, it returns identical measurements because it acts as an aerial average.",
+        "Image Architecture: Imported images strictly project discrete positive integer numbers without precision decimals (e.g. integer 124 in red/green/blue color channels) stored inside 'pixels'.",
+        "Terminology Rule: Use the word 'Pixel' strictly when handling Images (+ integers). Use the term 'Cell' exclusively when interacting with Grids (+ or - precise metrics)."
+      ]
+    },
+    {
+      "timestamp": "11:00",
+      "heading": "TIN Generation & Point Data Setup",
+      "points": [
+        "When importing coordinate point data (e.g. surveying pH, terrain elevation, temperature), database values usually shouldn't exceed their realistic measurement limit (e.g. 23.5 degrees, not 23.5678). Keeping raw table values strictly realistic massively improves vector load times.",
+        "Generating TIN (via 3D Analyst Extension) forces the engine to link the individual X, Y, and Z attributes together logically based on Delaunay theorems, spawning contiguous plane facets (triangles)."
+      ]
+    },
+    {
+      "timestamp": "13:00",
+      "heading": "Capabilities & Adaptive Geometry of TIN",
+      "points": [
+        "TIN fundamentally outperforms Rasters when it generates by instantly, natively calculating and storing 'Slope' orientation and directional 'Aspect' mapping concurrently without forcing operators to run manual secondary processing commands.",
+        "Adaptive Structure: Where map terrain datasets are extremely dense, the program forms tiny precise triangles. In data-sparse territories, it stretches massive generic 'facet' triangles across the gap. It flawlessly mathematically molds to terrain severity."
+      ]
+    },
+    {
+      "timestamp": "16:00",
+      "heading": "Boundary Operations: Sub-settings and Extrapolations",
+      "points": [
+        "Raster Extrapolation: Extrapolation strictly forces rasters mathematically to process blind data straight into the dark void outside the actual sampled boundaries just to maintain a perfectly structured geometry loop (A perfect Rectangle/Square).",
+        "TIN Isolation: TIN mathematically refuses to extrapolate data. If a node terminates, the mapped triangle structure dies instantly right on the borderline edge.",
+        "Subsetting Constraints: Generating a custom polygon boundary to isolate or 'extract' a smaller dataset works perfectly on Rasters—masking dropped zones into flat black 'No Data' voids.",
+        "You cannot mathematically subset an already generated TIN graph. To generate focused TIN subsets, operators must mask down the physical base 'mass-points' beforehand and launch a brand new generation sequence."
+      ]
+    }
+  ]
+}

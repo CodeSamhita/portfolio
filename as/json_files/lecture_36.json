@@ -1,0 +1,24 @@
+{
+  "id": "Lecture-36",
+  "title": "Lecture 36: Generating DEMs (Part 1)",
+  "notes": [
+    {
+      "timestamp": "00:00",
+      "heading": "Primary Modalities for Acquiring 3D Data",
+      "points": [
+        "Stereo-Pair Photogrammetry: Highly parallel to human vision. Two satellite images of the exact same ground target are taken at slightly different orbital angles (e.g. SPOT, Cartosat). Software calculates the parallax distortion between the two images to derive 3D terrain height.",
+        "SAR Interferometry (InSAR): Sending heavily energetic microwave radar pulses from space (like SRTM) to blast through cloud cover and bounce off the terrain continuously to map global elevation geometry.",
+        "LiDAR: Extremely rapid pulse-lasers usually flown in low-altitude aircraft to acquire hyper-dense Digital Surface Models capable of resolving individual power-line wires and branches.",
+        "Spatial Interpolation: The legacy method of mathematically predicting and generating a continuous 3D raster grid out of nothing but old, heavily sparse point heights extracted from flat 2D paper Topo-sheets."
+      ]
+    },
+    {
+      "timestamp": "19:22",
+      "heading": "Mathematical Underpinnings of Spatial Interpolation",
+      "points": [
+        "Interpolation estimates unknown continuous grid values exclusively based on the known values of nearby scattered point samples.",
+        "It relies fundamentally on Tobler's First Law of Geography: 'Everything is related to everything else, but near things are more related than distant things.' Therefore, closer sample points mathematically hold substantially more computational weight than distant points when predicting an unknown cell."
+      ]
+    }
+  ]
+}

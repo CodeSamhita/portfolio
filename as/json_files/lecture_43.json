@@ -1,0 +1,24 @@
+{
+  "id": "Lecture-43",
+  "title": "Lecture 43: Software Demo - False Color Composites",
+  "notes": [
+    {
+      "timestamp": "01:15",
+      "heading": "Standard False Color Composite Mapping",
+      "points": [
+        "Because living chlorophyll explicitly saturates the electromagnetic spectrum with a violently massive Near-Infrared spike totally invisible to the natural human eye, engineers use multispectral masking to artificially render the signal.",
+        "In a standard False Color Composite (FCC), analysts systemically void the standard visual 'Blue' optical tracker plane and mathematically bind the raw, invisible Near-Infrared satellite trace directly into the active 'Red' digital projection core.",
+        "Consequently, dense vegetation and crop lands violently render on screen as hyper-intense, deep 'False' reds rather than green. Rivers and deep water columns actively absorb infrared signals and subsequently render as pure, void blacks."
+      ]
+    },
+    {
+      "timestamp": "09:43",
+      "heading": "Histogram Analytics and Matrix Enhancement",
+      "points": [
+        "Because raw 8-bit image data ranges between absolute values 0 to 255 but frequently only leverages weak visual midpoint clusters (e.g. data locked strictly between pixels 100 to 120), engineers deploy algorithmic spatial stretching to aggressively expand matrix contrast.",
+        "Min-Max Stretch: Strictly linear; forces the lowest present data cell in the dataset directly down to 0 (hard black) and mathematically pushes the highest data cell to 255 (hard white), strictly forcing an evenly linear distribution.",
+        "Histogram Equalization: Brutally non-linear. The algorithm aggressively targets, isolates, and artificially shatters massive pixel clusters precisely into perfectly equalized geometric bins across the spectrum, ruthlessly boosting localized contrast but heavily risking total oversaturation across multimodal images."
+      ]
+    }
+  ]
+}

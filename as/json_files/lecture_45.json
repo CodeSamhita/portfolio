@@ -1,0 +1,32 @@
+{
+  "id": "Lecture-45",
+  "title": "Lecture 45: Common Derivatives of DEMs - Slope & Aspect-02",
+  "notes": [
+    {
+      "timestamp": "03:02",
+      "heading": "Planner Method (2D Cartesian Calculation)",
+      "points": [
+        "The absolute standard, default GIS method. Forces the digital elevation model (DEM) projection down onto a perfectly flat 2D plane.",
+        "Calculates the slope exclusively via examining an isolated 3x3 cell roving window matrix. Identifies the most extreme spatial drop between the exact targeted center node and its 8 immediate surrounding edge neighbours.",
+        "Appropriate for highly localized, restricted geographic boundaries where mathematically compensating for planetary curvature introduces unnecessary processing overhead."
+      ]
+    },
+    {
+      "timestamp": "16:04",
+      "heading": "Geodesic Method (3D Cartesian Calculation)",
+      "points": [
+        "The advanced, exponentially more accurate calculation method. Bypasses 2D planes entirely by actively mathematically projecting data directly against a 3D Earth-Centered, Earth-Fixed (ECEF) ellipsoidal reference model.",
+        "Crucial for calculating massively expansive geographic continental slabs, or intensely rugged mountain regions where extreme terrain value deviations aggressively break flat 2D plane assumptions.",
+        "Executes by physically calculating the exact angle created specifically between the topographic surface and the underlying baseline reference datum ellipsoid."
+      ]
+    },
+    {
+      "timestamp": "04:57",
+      "heading": "The 3x3 Neighborhood Constraint Matrix",
+      "points": [
+        "Regardless of selecting Planner or Geodesic geometry, calculating the central target cell fundamentally mandates accessing at minimum 7 adjacent valid cells strictly within the immediate 8-cell perimeter matrix.",
+        "The 'Edge Border Collapse': Because matrices running straight off the very absolute edge boundary of the map physically lack 7 remaining valid neighboring cells to cross-reference against, GIS software automatically forces a mandatory blank 1-pixel 'NoData' dead-zone frame circling the entire exact outer border of every single calculated output map."
+      ]
+    }
+  ]
+}

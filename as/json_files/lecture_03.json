@@ -1,0 +1,82 @@
+{
+  "id": "Lecture - 03-05",
+  "title": "Lecture 03 to 05 - Vector Data Types, Topology, & Software Demonstration",
+  "notes": [
+    {
+      "timestamp": "00:00",
+      "heading": "Lecture 03: Vector Data Types Overview",
+      "points": [
+        "In GIS, spatial data is split into Vector (discrete) and Raster (continuous).",
+        "Vector data distinctly identifies discrete real-world structures representing points, lines, and areas.",
+        "While raster grids uniformly cover space with cells, vectors track strictly specific geographic coordinate matrices."
+      ]
+    },
+    {
+      "timestamp": "03:05",
+      "heading": "Spatial vs Non-Spatial Data Arrays",
+      "points": [
+        "Spatial Data subtypes primarily include Vectors, Rasters, and TIN.",
+        "TIN (Triangulated Irregular Network): A variant spatial structure entirely constructed of geometrically variable triangles (unlike uniform square raster grids).",
+        "Non-Spatial Data (Attribute Data): Organized into 6 categories: Nominal (categories), Ordinal (ranks), Interval, Ratio, Cyclic, and Counts/Amounts."
+      ]
+    },
+    {
+      "timestamp": "09:35",
+      "heading": "Vector Geometry: Points (0-Dimensional)",
+      "points": [
+        "Features stored as a minimal, singular (X, Y) coordinate pair.",
+        "They are zero-dimensional, meaning they possess zero area, length, or perimeter natively.",
+        "Zooming into a point on a GIS map will never expand its geographical boundaries; they are scale-independent anchor markers.",
+        "While typically plotted on an X/Y axis, 3D point data simply attaches a Z-value (elevation/depth) as an appended column in the attribute table, not as literal 3D structural geometry."
+      ]
+    },
+    {
+      "timestamp": "17:13",
+      "heading": "Vector Geometry: Lines / Polylines (1-Dimensional)",
+      "points": [
+        "Nodes & Vertices: Begin Nodes start the line, End Nodes finish it, and Internodes form intermediate bends.",
+        "A straight line only requires 2 nodes. 'Polylines' refer to strings containing internodes.",
+        "Lines are purely 1-dimensional entities. They natively determine length and direction (measuring magnitude from the origin node to destination node).",
+        "Scale Dependent Geometry: At small scales (e.g., viewing a whole country), a river is digitized as a 1D polyline. At high scales (e.g., viewing a town district), the river is digitized as a 2D polygon to capture width."
+      ]
+    },
+    {
+      "timestamp": "25:46",
+      "heading": "Vector Geometry: Polygons (2-Dimensional)",
+      "points": [
+        "A polygon is strictly defined as a polyline where the Begin Node and the End Node are identically the same point (closing the loop).",
+        "Polygons natively calculate enclosed properties including planar Area, Perimeter/Circumference boundaries, and the Centroid (the dead center mathematical anchor point).",
+        "Data isolation bounds: Each polygon stores only one attribute representation; capturing heterogeneous internal elements requires drawing sub-polygons."
+      ]
+    },
+    {
+      "timestamp": "34:34",
+      "heading": "Lecture 04: The Concept of Topology",
+      "points": [
+        "Topology acts as the deep-rooted mathematical logic tracking how adjacent elements (especially polygons) connect and share space.",
+        "Spaghetti Data Model: Non-topological. Features lay completely isolated from one another. Two adjacent plots digitized here will force the operator to draw the boundary line twice. This inherently leads to severe overlapping and gaps due to human error.",
+        "Topological Model: Prevents spatial corruption. Adjacent boundaries are exclusively drawn once as a 'shared wall' between polygons. Ensures total 'planar enforcement' (no accidental overlaps, mathematically distinct relationships).",
+        "Topology heavily drops overall file storage requirements by destroying duplicated boundaries and completely automating clean editing."
+      ]
+    },
+    {
+      "timestamp": "21:41",
+      "heading": "Topological Table Linkage",
+      "points": [
+        "Advanced topological operations function on pure database graphs combining three main table types:",
+        "1. Node Table: Logs unique vertex anchors.",
+        "2. Link/Edge Table: Tracks origin and destination nodes while tracking which polygon IDs lay to its left and right.",
+        "3. Polygon Table: Tracks which edge links loop exactly together to form the boundary."
+      ]
+    },
+    {
+      "timestamp": "07:18",
+      "heading": "Lecture 05: GIS Software Workflow Demonstration",
+      "points": [
+        "Layers & Dynamic Links: Any modifications (e.g. queries) run on the backend database table instantly highlight corresponding spatial vectors on the front-end layout.",
+        "Boolean Queries (SQL): Nested search logic (e.g., 'SELECT District = Kangra AND Head >= 60m') provides granular data extraction.",
+        "ArcView vs ArcGIS: ArcView is lightweight but obsolete, optimized for simple queries natively running offline. ArcGIS manages advanced topological generation in real-time, executing comprehensive topological correction heavily taxing computational resources."
+      ]
+    }
+  ]
+}

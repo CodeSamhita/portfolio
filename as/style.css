@@ -1,0 +1,183 @@
+:root {
+    --bg-main: #ffffff;
+    --bg-sidebar: #f7f7f9;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --accent: #2563eb;
+    --accent-hover: #eff6ff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.layoutWrapper {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: var(--bg-sidebar);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.sidebarHeader {
+    padding: 24px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sidebarHeader h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.sidebarHeader p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.lectureList {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+}
+
+.lecture-item {
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.lecture-item:hover {
+    background-color: #e5e7eb;
+}
+
+.lecture-item.active {
+    background-color: var(--accent-hover);
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.mainContent {
+    flex: 1;
+    overflow-y: auto;
+    padding: 32px 48px;
+    background-color: var(--bg-main);
+}
+
+#content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lecture-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    color: var(--text-muted);
+}
+
+.emptyState h2 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.note-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 32px;
+}
+
+.note-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.note-heading {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text-main);
+}
+
+.note-timestamp {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background: var(--bg-sidebar);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.note-points {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.note-points li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #374151;
+}
+
+@media (max-width: 768px) {
+    .layoutWrapper {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: 250px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .mainContent {
+        padding: 24px 20px;
+    }
+    .note-grid {
+        grid-template-columns: 1fr;
+    }
+}
