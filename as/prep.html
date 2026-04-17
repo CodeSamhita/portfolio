@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIS Mastery | Practice Tests</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar shadow-lg">
+            <div class="sidebar-header">
+                <i class="fas fa-globe-americas logo-icon"></i>
+                <span class="logo-text">GIS Mastery</span>
+            </div>
+            <nav class="set-nav">
+                <p class="nav-label">PRACTICE SETS</p>
+                <div id="setList" class="set-list">
+                    <!-- Dynamic Sets -->
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <p>Derived from Lecture Notes</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1 id="currentSetTitle">Welcome to GIS Practice</h1>
+                <div class="stats-pills">
+                    <div class="pill score-pill"><i class="fas fa-star"></i> Score: <span id="totalScore">0</span></div>
+                </div>
+            </header>
+
+            <div class="container-fluid py-4">
+                <div id="welcomeScreen" class="welcome-screen card shadow-sm text-center p-5">
+                    <div class="icon-circle mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h2>Ready to Test Your GIS Knowledge?</h2>
+                    <p class="text-muted">Select a practice set from the sidebar to begin. Each set contains 10 questions focused on specific GIS topics.</p>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Instant Feedback</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Detailed Explanations</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Score Tracking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary Screen -->
+                <div id="summaryContainer" class="summary-container card shadow-sm p-5 d-none">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="summary-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div>
+                            <h2 id="summaryTitle" class="mb-0">Set Briefing</h2>
+                            <span class="badge bg-primary rounded-pill">10 Questions</span>
+                        </div>
+                    </div>
+                    <div class="summary-body mb-5">
+                        <h5 class="fw-bold mb-3">Key Learning Objectives:</h5>
+                        <ul id="summaryList" class="list-unstyled custom-list">
+                            <!-- Injected -->
+                        </ul>
+                    </div>
+                    <div class="summary-footer">
+                        <button id="startQuizBtn" class="btn btn-primary btn-xl px-5 rounded-pill shadow-lg">
+                            <i class="fas fa-play me-2"></i> Start Practice Test
+                        </button>
+                    </div>
+                </div>
+
+                <div id="quizContainer" class="quiz-container d-none">
+                    <div class="progress mb-4">
+                        <div id="quizProgress" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                    </div>
+
+                    <form id="quizForm" class="questions-stack">
+                        <!-- Questions will be injected here -->
+                    </form>
+
+                    <div class="quiz-footer mt-5 p-4 card shadow-sm">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button id="submitBtn" class="btn btn-primary btn-lg px-5 rounded-pill shadow">
+                                <i class="fas fa-paper-plane me-2"></i> Submit Answers
+                            </button>
+                            <div id="finalScoreDisplay" class="h4 mb-0 fw-bold text-primary"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Data first, then Logic -->
+    <script src="static/js/data.js"></script>
+    <script src="static/js/quiz.js"></script>
+</body>
+</html>
