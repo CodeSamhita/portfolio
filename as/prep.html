@@ -23,6 +23,14 @@
                 <span class="logo-text">GIS Mastery</span>
             </div>
             <nav class="set-nav">
+                <p class="nav-label">QUICK LINKS</p>
+                <div class="set-list mb-4">
+                    <a href="summaries.html" class="set-item text-decoration-none">
+                        <i class="fas fa-book-open"></i>
+                        <div class="set-name">Lecture Summaries</div>
+                    </a>
+                </div>
+
                 <p class="nav-label">PRACTICE SETS</p>
                 <div id="setList" class="set-list">
                     <!-- Dynamic Sets -->
@@ -77,10 +85,22 @@
                         </div>
                     </div>
                     <div class="summary-body mb-5">
-                        <h5 class="fw-bold mb-3">Key Learning Objectives:</h5>
-                        <ul id="summaryList" class="list-unstyled custom-list">
-                            <!-- Injected -->
-                        </ul>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h5 class="fw-bold mb-3"><i class="fas fa-list-check me-2 text-primary"></i>Practice Goals:</h5>
+                                <ul id="summaryList" class="list-unstyled custom-list mb-4">
+                                    <!-- Injected -->
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <div id="theoryReviewSection" class="theory-review-card p-4 rounded-3 d-none">
+                                    <h5 class="fw-bold mb-3"><i class="fas fa-book-open me-2 text-secondary"></i>Detailed Theory Review:</h5>
+                                    <div id="detailedTheoryList" class="theory-list small text-muted">
+                                        <!-- Injected -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="summary-footer">
                         <button id="startQuizBtn" class="btn btn-primary btn-xl px-5 rounded-pill shadow-lg">

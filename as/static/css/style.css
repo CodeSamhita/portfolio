@@ -332,6 +332,60 @@ body {
     font-weight: 700;
 }
 
+/* Theory Specific Styling */
+.theory-review-card {
+    background: #f8fafc;
+    border-left: 4px solid var(--secondary);
+    height: 100%;
+}
+
+.theory-list p {
+    margin-bottom: 12px;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.theory-list p::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.btn-concept {
+    background: white;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    padding: 6px 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-top: 10px;
+    transition: all 0.2s ease;
+}
+
+.btn-concept:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+.concept-box {
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px dashed var(--secondary);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #065f46;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }

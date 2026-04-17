@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const summaryContainer = document.getElementById('summaryContainer');
     const summaryTitle = document.getElementById('summaryTitle');
     const summaryList = document.getElementById('summaryList');
+    const theoryReviewSection = document.getElementById('theoryReviewSection');
+    const detailedTheoryList = document.getElementById('detailedTheoryList');
     const startQuizBtn = document.getElementById('startQuizBtn');
     const quizContainer = document.getElementById('quizContainer');
     const quizForm = document.getElementById('quizForm');
@@ -30,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setList.innerHTML = '';
         allSets.forEach(set => {
             const item = document.createElement('div');
-            item.className = 'set-item';
+            item.className = 'set-item quiz-set-item';
             item.innerHTML = `
                 <i class="fas fa-layer-group"></i>
                 <div class="set-name">${set.setTitle}</div>
@@ -42,14 +44,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function loadSet(setId) {
         currentSet = allSets.find(s => s.setId === setId);
+        if (!currentSet) return;
+
         userAnswers = {};
         isSubmitted = false;
         
-        document.querySelectorAll('.set-item').forEach((item, index) => {
-            item.classList.toggle('active', allSets[index].setId === setId);
+        // Use more specific selector to avoid conflict with Quick Links
+        document.querySelectorAll('.quiz-set-item').forEach((item, index) => {
+            if (allSets[index]) {
+                item.classList.toggle('active', allSets[index].setId === setId);
+            }
         });
         
-        // Show Summary instead of Quiz immediately
+        // UI Navigation
         welcomeScreen.classList.add('d-none');
         quizContainer.classList.add('d-none');
         summaryContainer.classList.remove('d-none');
@@ -62,9 +69,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentSet.description) {
             currentSet.description.forEach(item => {
                 const li = document.createElement('li');
-                li.innerText = item;
+                li.innerHTML = `<span class="fw-normal">${item}</span>`;
                 summaryList.appendChild(li);
             });
+        }
+
+        // Populate Detailed Theory (if available)
+        detailedTheoryList.innerHTML = '';
+        if (currentSet.detailedTheory) {
+            theoryReviewSection.classList.remove('d-none');
+            currentSet.detailedTheory.forEach(note => {
+                const p = document.createElement('p');
+                p.innerText = note;
+                detailedTheoryList.appendChild(p);
+            });
+        } else {
+            theoryReviewSection.classList.add('d-none');
         }
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -85,49 +105,68 @@ document.addEventListener('DOMContentLoaded', () => {
         quizForm.innerHTML = '';
         currentSet.questions.forEach((q, idx) => {
             const card = document.createElement('div');
-            card.className = 'question-card';
-            card.id = `card_${q.id}`;
+            card.className = 'question-card card p-4 mb-4';
+            card.id = `q-card-${idx}`;
             
             let optionsHtml = '';
-            for (let [key, val] of Object.entries(q.options)) {
+            for (const [key, val] of Object.entries(q.options)) {
                 optionsHtml += `
-                    <label class="option-item" for="opt_${q.id}_${key}">
-                        <input type="radio" name="${q.id}" id="opt_${q.id}_${key}" value="${key}" ${userAnswers[q.id] === key ? 'checked' : ''}>
-                        <span class="option-text"><strong>${key.toUpperCase()}.</strong> ${val}</span>
+                    <label class="option-container d-block p-3 rounded mb-2 border" id="label-${idx}-${key}">
+                        <input type="radio" name="q${idx}" value="${key}" class="me-2" 
+                               onchange="window.selectOption(${idx}, '${key}')">
+                        <span class="fw-bold me-1">${key.toUpperCase()}.</span> ${val}
                     </label>
                 `;
             }
 
             card.innerHTML = `
-                <div class="question-text">${idx + 1}. ${q.question}</div>
-                <div class="options-list">
-                    ${optionsHtml}
+                <div class="h5 mb-4">${idx + 1}. ${q.question}</div>
+                <div class="options-grid mb-3">${optionsHtml}</div>
+                
+                <button type="button" class="btn btn-concept" id="hint-btn-${idx}" onclick="window.toggleHint(${idx})">
+                    <i class="fas fa-lightbulb me-1"></i> Read Theory
+                </button>
+                <div id="hint-${idx}" class="concept-box d-none">
+                    ${q.conceptHint || "Examine the spatial data structures mentioned."}
                 </div>
-                <div id="feedback_${q.id}" class="feedback-area d-none"></div>
+
+                <div id="feedback-${idx}" class="feedback-area d-none mt-4 p-3 rounded">
+                    <p id="feedback-text-${idx}" class="fw-bold mb-2"></p>
+                    <p class="small text-muted mb-0"><strong>Explanation:</strong> ${q.explanation}</p>
+                </div>
             `;
-
-            // Add event listener for radio change
-            card.querySelectorAll('input').forEach(input => {
-                input.onchange = (e) => {
-                    if (isSubmitted) return;
-                    userAnswers[q.id] = e.target.value;
-                    updateProgress();
-                    
-                    // Visual feedback for selection
-                    card.querySelectorAll('.option-item').forEach(label => {
-                        label.classList.toggle('selected', label.querySelector('input').checked);
-                    });
-                };
-            });
-
             quizForm.appendChild(card);
         });
     }
 
+    window.selectOption = (questionIdx, optionKey) => {
+        if (isSubmitted) return;
+        userAnswers[questionIdx] = optionKey;
+        updateProgress();
+        
+        // Toggle selected class
+        document.querySelectorAll(`input[name="q${questionIdx}"]`).forEach(input => {
+            const label = document.getElementById(`label-${questionIdx}-${input.value}`);
+            label.classList.toggle('selected', input.checked);
+        });
+    };
+
+    window.toggleHint = (idx) => {
+        const hintBox = document.getElementById(`hint-${idx}`);
+        const hintBtn = document.getElementById(`hint-btn-${idx}`);
+        if(hintBox.classList.contains('d-none')) {
+            hintBox.classList.remove('d-none');
+            hintBtn.innerHTML = '<i class="fas fa-times me-1"></i> Hide Theory';
+        } else {
+            hintBox.classList.add('d-none');
+            hintBtn.innerHTML = '<i class="fas fa-lightbulb me-1"></i> Read Theory';
+        }
+    };
+
     function updateProgress() {
-        const answered = Object.keys(userAnswers).length;
+        const answeredCount = Object.keys(userAnswers).length;
         const total = currentSet.questions.length;
-        const pct = (answered / total) * 100;
+        const pct = (answeredCount / total) * 100;
         quizProgress.style.width = `${pct}%`;
     }
 
@@ -137,43 +176,51 @@ document.addEventListener('DOMContentLoaded', () => {
         let score = 0;
         const total = currentSet.questions.length;
 
-        currentSet.questions.forEach(q => {
-            const selected = userAnswers[q.id];
-            const feedbackDiv = document.getElementById(`feedback_${q.id}`);
+        currentSet.questions.forEach((q, idx) => {
+            const selected = userAnswers[idx];
+            const feedbackDiv = document.getElementById(`feedback-${idx}`);
+            const feedbackText = document.getElementById(`feedback-text-${idx}`);
+            const hintBtn = document.getElementById(`hint-btn-${idx}`);
+            const hintBox = document.getElementById(`hint-${idx}`);
+            
             feedbackDiv.classList.remove('d-none');
+            hintBtn.classList.add('d-none'); // Hide hint btn on submit
+            hintBox.classList.add('d-none');
             
             const isCorrect = selected === q.answer;
             if (isCorrect) score++;
 
-            const feedbackHtml = `
-                <div class="${isCorrect ? 'correct-tag' : 'wrong-tag'}">
-                    <i class="fas ${isCorrect ? 'fa-check-circle' : 'fa-times-circle'} me-2"></i>
-                    ${isCorrect ? 'Correct!' : 'Wrong. Correct: ' + q.answer.toUpperCase()}
-                </div>
-                <div class="explanation">${q.explanation}</div>
-            `;
-            feedbackDiv.innerHTML = feedbackHtml;
+            feedbackText.innerHTML = isCorrect 
+                ? '<span class="text-success"><i class="fas fa-check-circle me-2"></i>Correct!</span>' 
+                : `<span class="text-danger"><i class="fas fa-times-circle me-2"></i>Incorrect. Correct: ${q.answer.toUpperCase()}</span>`;
             
-            // Highlight options
-            const card = document.getElementById(`card_${q.id}`);
-            card.querySelectorAll('.option-item').forEach(label => {
+            feedbackDiv.style.background = isCorrect ? 'rgba(16, 185, 129, 0.05)' : 'rgba(239, 68, 68, 0.05)';
+            feedbackDiv.style.border = `1px solid ${isCorrect ? 'var(--secondary)' : 'var(--wrong)'}`;
+
+            // Highlight labels
+            for (const key of ['a', 'b', 'c', 'd']) {
+                const label = document.getElementById(`label-${idx}-${key}`);
+                if (!label) continue;
+                
                 const input = label.querySelector('input');
-                if (input.value === q.answer) {
-                    label.style.borderColor = 'var(--correct)';
-                    label.style.background = 'rgba(16, 185, 129, 0.05)';
-                } else if (input.checked && input.value !== q.answer) {
-                    label.style.borderColor = 'var(--wrong)';
-                    label.style.background = 'rgba(239, 68, 68, 0.05)';
-                }
                 input.disabled = true;
-            });
+
+                if (key === q.answer) {
+                    label.style.borderColor = 'var(--secondary)';
+                    label.style.background = 'rgba(16, 185, 129, 0.1)';
+                } else if (selected === key) {
+                    label.style.borderColor = 'var(--wrong)';
+                    label.style.background = 'rgba(239, 68, 68, 0.1)';
+                }
+            }
         });
 
         isSubmitted = true;
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fas fa-check-double me-2"></i> Completed';
         
-        totalScoreSpan.innerText = parseInt(totalScoreSpan.innerText) + score;
+        const prevScore = parseInt(totalScoreSpan.innerText) || 0;
+        totalScoreSpan.innerText = prevScore + score;
         finalScoreDisplay.innerText = `Final Score: ${score} / ${total}`;
         
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });

@@ -12,7 +12,8 @@ const GIS_DATA = [
           "c": "Graphical Info Structures"
         },
         "answer": "b",
-        "explanation": "GIS stands for Geographic Information Systems, used to capture, store, analyze, and display geographically referenced data."
+        "explanation": "GIS stands for Geographic Information Systems, used to capture, store, analyze, and display geographically referenced data.",
+        "conceptHint": "Concept: GIS stands for Geographic Information Systems, used to capture, store, analyze, and display geographically referenced data."
       },
       {
         "id": "q1_2",
@@ -23,7 +24,8 @@ const GIS_DATA = [
           "c": "John Snow"
         },
         "answer": "b",
-        "explanation": "Roger Tomlinson developed the first conceptual and practical GIS (CGIS - Canadian GIS) for the Ottawa Municipal Corporation."
+        "explanation": "Roger Tomlinson developed the first conceptual and practical GIS (CGIS - Canadian GIS) for the Ottawa Municipal Corporation.",
+        "conceptHint": "Concept: Roger Tomlinson developed the first conceptual and practical GIS (CGIS - Canadian GIS) for the Ottawa Municipal Corporation."
       },
       {
         "id": "q1_3",
@@ -34,7 +36,8 @@ const GIS_DATA = [
           "c": "ESRI"
         },
         "answer": "c",
-        "explanation": "ESRI (Environmental Science Research Institute), founded by Jack and Laura Dangermond, commercialized early GIS with 'ArcInfo'."
+        "explanation": "ESRI (Environmental Science Research Institute), founded by Jack and Laura Dangermond, commercialized early GIS with 'ArcInfo'.",
+        "conceptHint": "Concept: ESRI (Environmental Science Research Institute), founded by Jack and Laura Dangermond, commercialized early GIS with 'ArcInfo'."
       },
       {
         "id": "q1_4",
@@ -45,7 +48,8 @@ const GIS_DATA = [
           "c": "The blueprints"
         },
         "answer": "b",
-        "explanation": "Data represents the raw materials. Hardware/Software are the tools, and Methods/People are the blueprints and the carpenter."
+        "explanation": "Data represents the raw materials. Hardware/Software are the tools, and Methods/People are the blueprints and the carpenter.",
+        "conceptHint": "Concept: Data represents the raw materials."
       },
       {
         "id": "q1_5",
@@ -56,7 +60,8 @@ const GIS_DATA = [
           "c": "People"
         },
         "answer": "b",
-        "explanation": "If hardware and software are tools, Data is the critical absolute center of GIS. Without accurate data, other components have zero utility."
+        "explanation": "If hardware and software are tools, Data is the critical absolute center of GIS. Without accurate data, other components have zero utility.",
+        "conceptHint": "Concept: If hardware and software are tools, Data is the critical absolute center of GIS."
       },
       {
         "id": "q1_6",
@@ -67,7 +72,8 @@ const GIS_DATA = [
           "c": "Global"
         },
         "answer": "a",
-        "explanation": "'Geographic' refers to data tethered to real-world coordinates on the Earth's surface (latitude, longitude, UTM)."
+        "explanation": "'Geographic' refers to data tethered to real-world coordinates on the Earth's surface (latitude, longitude, UTM).",
+        "conceptHint": "Concept: 'Geographic' refers to data tethered to real-world coordinates on the Earth's surface (latitude, longitude, UTM)."
       },
       {
         "id": "q1_7",
@@ -78,7 +84,8 @@ const GIS_DATA = [
           "c": "Knowledge"
         },
         "answer": "b",
-        "explanation": "Data represents raw, unprocessed facts. Information is analyzed data, and Knowledge is synthesized organized information."
+        "explanation": "Data represents raw, unprocessed facts. Information is analyzed data, and Knowledge is synthesized organized information.",
+        "conceptHint": "Concept: Data represents raw, unprocessed facts."
       },
       {
         "id": "q1_8",
@@ -89,7 +96,8 @@ const GIS_DATA = [
           "c": "Graphical Node Search System"
         },
         "answer": "a",
-        "explanation": "GNSS (Global Navigation Satellite Systems) is the superset term covering systems like GPS (USA), GLONASS (Russia), etc."
+        "explanation": "GNSS (Global Navigation Satellite Systems) is the superset term covering systems like GPS (USA), GLONASS (Russia), etc.",
+        "conceptHint": "Concept: GNSS (Global Navigation Satellite Systems) is the superset term covering systems like GPS (USA), GLONASS (Russia), etc."
       },
       {
         "id": "q1_9",
@@ -100,7 +108,8 @@ const GIS_DATA = [
           "c": "John Snow"
         },
         "answer": "c",
-        "explanation": "John Snow mapped cholera deaths by overlaying street maps with water pump locations to pinpoint the source of contamination."
+        "explanation": "John Snow mapped cholera deaths by overlaying street maps with water pump locations to pinpoint the source of contamination.",
+        "conceptHint": "Concept: John Snow mapped cholera deaths by overlaying street maps with water pump locations to pinpoint the source of contamination."
       },
       {
         "id": "q1_10",
@@ -111,13 +120,21 @@ const GIS_DATA = [
           "c": "To store satellite images"
         },
         "answer": "b",
-        "explanation": "The ultimate aim of GIS is to model reality and predict outcomes (e.g., predicting soil moisture changes after deforestation)."
+        "explanation": "The ultimate aim of GIS is to model reality and predict outcomes (e.g., predicting soil moisture changes after deforestation).",
+        "conceptHint": "Concept: The ultimate aim of GIS is to model reality and predict outcomes (e."
       }
     ],
     "description": [
       "Core GIS definitions and terminology.",
       "History of GIS (Roger Tomlinson, John Snow).",
       "5 Essential components of a GIS system."
+    ],
+    "detailedTheory": [
+      "Lecture 1: Introduction to GIS - Definition of GIS, difference from CAD/AM/FM, components of GIS (Hardware, Software, Data, People, Methods).",
+      "Lecture 2: History & Components - Roger Tomlinson (Father of GIS), John Snow's mapping, data acquisition methods, and GIS lifecycle.",
+      "Lecture 3: Hardware & Software - Workstations, input devices (Scanners, Digitizers), and softcopy photogrammetry requirements.",
+      "Lecture 4: Data Types in GIS - Spatial (Point, Line, Polygon) and Non-Spatial (Attributes). Continuous vs Discrete phenomena.",
+      "Lecture 5: GIS Frameworks - Institutional frameworks, data sharing standards, and the role of stakeholders."
     ]
   },
   {
@@ -133,7 +150,8 @@ const GIS_DATA = [
           "c": "TIN"
         },
         "answer": "a",
-        "explanation": "Vector data distinctly identifies discrete real-world structures representing points, lines, and areas (polygons)."
+        "explanation": "Vector data distinctly identifies discrete real-world structures representing points, lines, and areas (polygons).",
+        "conceptHint": "Concept: Vector data distinctly identifies discrete real-world structures representing points, lines, and areas (polygons)."
       },
       {
         "id": "q2_2",
@@ -144,7 +162,8 @@ const GIS_DATA = [
           "c": "2D"
         },
         "answer": "a",
-        "explanation": "Points are zero-dimensional, meaning they possess zero area, length, or perimeter natively."
+        "explanation": "Points are zero-dimensional, meaning they possess zero area, length, or perimeter natively.",
+        "conceptHint": "Concept: Points are zero-dimensional, meaning they possess zero area, length, or perimeter natively."
       },
       {
         "id": "q2_3",
@@ -155,7 +174,8 @@ const GIS_DATA = [
           "c": "3"
         },
         "answer": "b",
-        "explanation": "A straight line only requires 2 nodes (Begin Node and End Node)."
+        "explanation": "A straight line only requires 2 nodes (Begin Node and End Node).",
+        "conceptHint": "Concept: A straight line only requires 2 nodes (Begin Node and End Node)."
       },
       {
         "id": "q2_4",
@@ -166,7 +186,8 @@ const GIS_DATA = [
           "c": "Topology"
         },
         "answer": "c",
-        "explanation": "Topology acts as the mathematical logic tracking how adjacent elements connect and share space, preventing spatial corruption."
+        "explanation": "Topology acts as the mathematical logic tracking how adjacent elements connect and share space, preventing spatial corruption.",
+        "conceptHint": "Concept: Topology acts as the mathematical logic tracking how adjacent elements connect and share space, preventing spatial corruption."
       },
       {
         "id": "q2_5",
@@ -177,7 +198,8 @@ const GIS_DATA = [
           "c": "A model used for mapping pasta factories"
         },
         "answer": "b",
-        "explanation": "In the Spaghetti Data Model, features lay isolated. It is non-topological and can lead to overlapping and gaps."
+        "explanation": "In the Spaghetti Data Model, features lay isolated. It is non-topological and can lead to overlapping and gaps.",
+        "conceptHint": "Concept: In the Spaghetti Data Model, features lay isolated."
       },
       {
         "id": "q2_6",
@@ -188,7 +210,8 @@ const GIS_DATA = [
           "c": "Nominal tables"
         },
         "answer": "b",
-        "explanation": "Raster data defines continuous spatial variations. Mathematically, it operates as a 2-dimensional matrix grid."
+        "explanation": "Raster data defines continuous spatial variations. Mathematically, it operates as a 2-dimensional matrix grid.",
+        "conceptHint": "Concept: Raster data defines continuous spatial variations."
       },
       {
         "id": "q2_7",
@@ -199,7 +222,8 @@ const GIS_DATA = [
           "c": "Topographic Integrated Node"
         },
         "answer": "b",
-        "explanation": "TIN stands for Triangulated Irregular Network, a spatial structure constructed of geometrically variable triangles."
+        "explanation": "TIN stands for Triangulated Irregular Network, a spatial structure constructed of geometrically variable triangles.",
+        "conceptHint": "Concept: TIN stands for Triangulated Irregular Network, a spatial structure constructed of geometrically variable triangles."
       },
       {
         "id": "q2_8",
@@ -210,7 +234,8 @@ const GIS_DATA = [
           "c": "Geometric Data"
         },
         "answer": "a",
-        "explanation": "Non-Spatial / Tabular / Attribute Data answers the question 'What is it?' and provides descriptive statistics."
+        "explanation": "Non-Spatial / Tabular / Attribute Data answers the question 'What is it?' and provides descriptive statistics.",
+        "conceptHint": "Concept: Non-Spatial / Tabular / Attribute Data answers the question 'What is it?' and provides descriptive statistics."
       },
       {
         "id": "q2_9",
@@ -221,7 +246,8 @@ const GIS_DATA = [
           "c": "Polygons"
         },
         "answer": "a",
-        "explanation": "Points are 0-dimensional; they are scale-independent anchor markers."
+        "explanation": "Points are 0-dimensional; they are scale-independent anchor markers.",
+        "conceptHint": "Concept: Points are 0-dimensional; they are scale-independent anchor markers."
       },
       {
         "id": "q2_10",
@@ -232,13 +258,21 @@ const GIS_DATA = [
           "c": "The dead center mathematical anchor point"
         },
         "answer": "c",
-        "explanation": "The Centroid is the dead center mathematical anchor point of a polygon."
+        "explanation": "The Centroid is the dead center mathematical anchor point of a polygon.",
+        "conceptHint": "Concept: The Centroid is the dead center mathematical anchor point of a polygon."
       }
     ],
     "description": [
       "Vector vs Raster data models.",
       "Topological relationships and logic.",
       "Basic geometric entities (Points, Lines, Polygons)."
+    ],
+    "detailedTheory": [
+      "Lecture 6: Vector Data Model - Geometry storage, spaghetti model vs topological model, vertex and node types.",
+      "Lecture 7: Raster Data Model - Grid structure, cell values (mixed vs predominant), resolution effects on accuracy.",
+      "Lecture 8: Topology Logic - Connectivity, Adjacency, and Containment logic. Importance in spatial analysis.",
+      "Lecture 9: Vector Features - Point (0D), Line (1D), Polygon (2D) detailed attributes and coordinate systems.",
+      "Lecture 10: Attribute Tables - Relational linking between geometry ID and tabular data (Primary/Foreign Keys)."
     ]
   },
   {
@@ -254,7 +288,8 @@ const GIS_DATA = [
           "c": "Rectangle"
         },
         "answer": "b",
-        "explanation": "While the overall frame can be rectangular, the single unit cell within the raster must always be a perfect square."
+        "explanation": "While the overall frame can be rectangular, the single unit cell within the raster must always be a perfect square.",
+        "conceptHint": "Concept: While the overall frame can be rectangular, the single unit cell within the raster must always be a perfect square."
       },
       {
         "id": "q3_2",
@@ -265,7 +300,8 @@ const GIS_DATA = [
           "c": "There is no difference"
         },
         "answer": "b",
-        "explanation": "Images are limited to positive integers. Grids (like DEMs) can store negative integers and floating-point decimals."
+        "explanation": "Images are limited to positive integers. Grids (like DEMs) can store negative integers and floating-point decimals.",
+        "conceptHint": "Concept: Images are limited to positive integers."
       },
       {
         "id": "q3_3",
@@ -276,7 +312,8 @@ const GIS_DATA = [
           "c": "A database row"
         },
         "answer": "b",
-        "explanation": "Spatial Resolution dictates the real-world ground area represented by a single cell (e.g., 1-meter vs 30-meters)."
+        "explanation": "Spatial Resolution dictates the real-world ground area represented by a single cell (e.g., 1-meter vs 30-meters).",
+        "conceptHint": "Concept: Spatial Resolution dictates the real-world ground area represented by a single cell (e."
       },
       {
         "id": "q3_4",
@@ -287,7 +324,8 @@ const GIS_DATA = [
           "c": "TIN"
         },
         "answer": "c",
-        "explanation": "TIN (Triangulated Irregular Network) operates on Delaunay Triangulation to create a mesh of triangles tracking surface elevation."
+        "explanation": "TIN (Triangulated Irregular Network) operates on Delaunay Triangulation to create a mesh of triangles tracking surface elevation.",
+        "conceptHint": "Concept: TIN (Triangulated Irregular Network) operates on Delaunay Triangulation to create a mesh of triangles tracking surface elevation."
       },
       {
         "id": "q3_5",
@@ -298,7 +336,8 @@ const GIS_DATA = [
           "c": "It uses fewer tables"
         },
         "answer": "a",
-        "explanation": "TIN forms huge triangles in flat terrain and micro-triangles in rugged hills, compressing real-world terrain efficiently."
+        "explanation": "TIN forms huge triangles in flat terrain and micro-triangles in rugged hills, compressing real-world terrain efficiently.",
+        "conceptHint": "Concept: TIN forms huge triangles in flat terrain and micro-triangles in rugged hills, compressing real-world terrain efficiently."
       },
       {
         "id": "q3_6",
@@ -309,7 +348,8 @@ const GIS_DATA = [
           "c": "Tables"
         },
         "answer": "b",
-        "explanation": "Use the word 'Pixel' strictly when handling Images (+ integers). Use 'Cell' for Grids (+/- precise metrics)."
+        "explanation": "Use the word 'Pixel' strictly when handling Images (+ integers). Use 'Cell' for Grids (+/- precise metrics).",
+        "conceptHint": "Concept: Use the word 'Pixel' strictly when handling Images (+ integers)."
       },
       {
         "id": "q3_7",
@@ -320,7 +360,8 @@ const GIS_DATA = [
           "c": "It converts to raster"
         },
         "answer": "b",
-        "explanation": "You cannot mathematically subset an already generated TIN graph. It snaps the structural matrices."
+        "explanation": "You cannot mathematically subset an already generated TIN graph. It snaps the structural matrices.",
+        "conceptHint": "Concept: You cannot mathematically subset an already generated TIN graph."
       },
       {
         "id": "q3_8",
@@ -331,7 +372,8 @@ const GIS_DATA = [
           "c": "Buffers"
         },
         "answer": "b",
-        "explanation": "Operators must manually insert 'breaklines' (hard or soft) to prevent stretching impossible slope parameters across sudden drops."
+        "explanation": "Operators must manually insert 'breaklines' (hard or soft) to prevent stretching impossible slope parameters across sudden drops.",
+        "conceptHint": "Concept: Operators must manually insert 'breaklines' (hard or soft) to prevent stretching impossible slope parameters across sudden drops."
       },
       {
         "id": "q3_9",
@@ -342,7 +384,8 @@ const GIS_DATA = [
           "c": "Buffer Area"
         },
         "answer": "b",
-        "explanation": "Surface area calculates slope inclination. Defaulting to 2D Planimetric under-calculates construction costs."
+        "explanation": "Surface area calculates slope inclination. Defaulting to 2D Planimetric under-calculates construction costs.",
+        "conceptHint": "Concept: Surface area calculates slope inclination."
       },
       {
         "id": "q3_10",
@@ -353,13 +396,21 @@ const GIS_DATA = [
           "c": "Name and ID"
         },
         "answer": "b",
-        "explanation": "TIN natively calculates and stores 'Slope' orientation and directional 'Aspect' mapping concurrently."
+        "explanation": "TIN natively calculates and stores 'Slope' orientation and directional 'Aspect' mapping concurrently.",
+        "conceptHint": "Concept: TIN natively calculates and stores 'Slope' orientation and directional 'Aspect' mapping concurrently."
       }
     ],
     "description": [
       "Raster grid structures and cell values.",
       "TIN (Triangulated Irregular Network) modeling.",
       "Delaunay Triangulation and relief adaptability."
+    ],
+    "detailedTheory": [
+      "Lecture 11: Raster Attributes - Integer vs Floating point rasters. Categorical vs Continuous values.",
+      "Lecture 12: Delaunay Triangulation - Circumcircle property, maximizing minimum angles, triangle mesh generation.",
+      "Lecture 13: TIN Structures - Triangle-based surface modeling, irregular distribution of mass points.",
+      "Lecture 14: Raster vs TIN - Comparison of storage efficiency, relief representation, and computational cost.",
+      "Lecture 15: Hybrid Models - Multiresolution rasters and hybrid vector-raster structures."
     ]
   },
   {
@@ -375,7 +426,8 @@ const GIS_DATA = [
           "c": "Cloud storage limits"
         },
         "answer": "a",
-        "explanation": "Tobler's First Law states near things are more related, leading to spatial autocorrelation and redundancy that can be compacted."
+        "explanation": "Tobler's First Law states near things are more related, leading to spatial autocorrelation and redundancy that can be compacted.",
+        "conceptHint": "Concept: Tobler's First Law states near things are more related, leading to spatial autocorrelation and redundancy that can be compacted."
       },
       {
         "id": "q4_2",
@@ -386,7 +438,8 @@ const GIS_DATA = [
           "c": "Incremental"
         },
         "answer": "b",
-        "explanation": "Lossless compression is non-destructive. Lossy (like JPEG) permanently destroys data."
+        "explanation": "Lossless compression is non-destructive. Lossy (like JPEG) permanently destroys data.",
+        "conceptHint": "Concept: Lossless compression is non-destructive."
       },
       {
         "id": "q4_3",
@@ -397,7 +450,8 @@ const GIS_DATA = [
           "c": "Block Codes"
         },
         "answer": "c",
-        "explanation": "Block Codes search for massive 2-Dimensional homogenous geometric Squares (e.g. 4x4, 2x2)."
+        "explanation": "Block Codes search for massive 2-Dimensional homogenous geometric Squares (e.g. 4x4, 2x2).",
+        "conceptHint": "Concept: Block Codes search for massive 2-Dimensional homogenous geometric Squares (e."
       },
       {
         "id": "q4_4",
@@ -408,7 +462,8 @@ const GIS_DATA = [
           "c": "Circular Buffer"
         },
         "answer": "b",
-        "explanation": "Quadtree continuously shatters quadrants into 4 smaller sub-quadrants until homogeneous, acting as an inverted tree."
+        "explanation": "Quadtree continuously shatters quadrants into 4 smaller sub-quadrants until homogeneous, acting as an inverted tree.",
+        "conceptHint": "Concept: Quadtree continuously shatters quadrants into 4 smaller sub-quadrants until homogeneous, acting as an inverted tree."
       },
       {
         "id": "q4_5",
@@ -419,7 +474,8 @@ const GIS_DATA = [
           "c": "Geometric shape"
         },
         "answer": "b",
-        "explanation": "Huffman gives shorter codes to more frequent values to reduce file weight."
+        "explanation": "Huffman gives shorter codes to more frequent values to reduce file weight.",
+        "conceptHint": "Concept: Huffman gives shorter codes to more frequent values to reduce file weight."
       },
       {
         "id": "q4_6",
@@ -430,7 +486,8 @@ const GIS_DATA = [
           "c": "ZIP"
         },
         "answer": "b",
-        "explanation": "LZW is a lossless algorithm that allows operators to run analysis directly on files without manual uncompression."
+        "explanation": "LZW is a lossless algorithm that allows operators to run analysis directly on files without manual uncompression.",
+        "conceptHint": "Concept: LZW is a lossless algorithm that allows operators to run analysis directly on files without manual uncompression."
       },
       {
         "id": "q4_7",
@@ -441,7 +498,8 @@ const GIS_DATA = [
           "c": "It doesn't support color"
         },
         "answer": "b",
-        "explanation": "JPEG is a 'Lossy' standard that destroys absolute pixel metrics by compressing chunks into single unified codes."
+        "explanation": "JPEG is a 'Lossy' standard that destroys absolute pixel metrics by compressing chunks into single unified codes.",
+        "conceptHint": "Concept: JPEG is a 'Lossy' standard that destroys absolute pixel metrics by compressing chunks into single unified codes."
       },
       {
         "id": "q4_8",
@@ -452,7 +510,8 @@ const GIS_DATA = [
           "c": "Set Theory"
         },
         "answer": "a",
-        "explanation": "MrSID (LizardTech) uses Wavelet Theory for monumental lossless compression (e.g., 50x size reduction)."
+        "explanation": "MrSID (LizardTech) uses Wavelet Theory for monumental lossless compression (e.g., 50x size reduction).",
+        "conceptHint": "Concept: MrSID (LizardTech) uses Wavelet Theory for monumental lossless compression (e."
       },
       {
         "id": "q4_9",
@@ -463,7 +522,8 @@ const GIS_DATA = [
           "c": "Chain coding"
         },
         "answer": "a",
-        "explanation": "Spatial Pyramiding uses down-sampling hierarchies to load lower-resolution blocks when zoomed out."
+        "explanation": "Spatial Pyramiding uses down-sampling hierarchies to load lower-resolution blocks when zoomed out.",
+        "conceptHint": "Concept: Spatial Pyramiding uses down-sampling hierarchies to load lower-resolution blocks when zoomed out."
       },
       {
         "id": "q4_10",
@@ -474,13 +534,21 @@ const GIS_DATA = [
           "c": "Block Codes"
         },
         "answer": "b",
-        "explanation": "Freeman Chain Vectors converts coordinates into directional codes to track data around vector margins."
+        "explanation": "Freeman Chain Vectors converts coordinates into directional codes to track data around vector margins.",
+        "conceptHint": "Concept: Freeman Chain Vectors converts coordinates into directional codes to track data around vector margins."
       }
     ],
     "description": [
       "Tobler's First Law and spatial autocorrelation.",
       "Lossless vs Lossy compression (LZW, JPEG).",
       "Advanced algorithms (Quadtrees, MrSID, Wavelets)."
+    ],
+    "detailedTheory": [
+      "Lecture 16: Lossless Compression - Run-length encoding (RLE), Huffman coding, and bit depth reduction.",
+      "Lecture 17: Quadtree Structures - Recursive decomposition, quadrants, and efficiency for uniform areas.",
+      "Lecture 18: Wavelet Compression - Advanced multi-resolution transformations (used in MrSID, JPEG2000).",
+      "Lecture 19: Bit Plane Encoding - Analyzing separate binary layers of multiband imagery for efficiency.",
+      "Lecture 20: Compression Standards - Industry standards for spatial data exchange (GeoTIFF, MrSID)."
     ]
   },
   {
@@ -496,7 +564,8 @@ const GIS_DATA = [
           "c": "Storage size limits"
         },
         "answer": "b",
-        "explanation": "Images of a sphere (Earth) onto 2D sensors through turbulent skies are born misshapen and warped."
+        "explanation": "Images of a sphere (Earth) onto 2D sensors through turbulent skies are born misshapen and warped.",
+        "conceptHint": "Concept: Images of a sphere (Earth) onto 2D sensors through turbulent skies are born misshapen and warped."
       },
       {
         "id": "q5_2",
@@ -507,7 +576,8 @@ const GIS_DATA = [
           "c": "Node-Linking"
         },
         "answer": "a",
-        "explanation": "Georeferencing is also known as Rubber-Sheeting, as it stretches warped imagery to fit a formal coordinate system."
+        "explanation": "Georeferencing is also known as Rubber-Sheeting, as it stretches warped imagery to fit a formal coordinate system.",
+        "conceptHint": "Concept: Georeferencing is also known as Rubber-Sheeting, as it stretches warped imagery to fit a formal coordinate system."
       },
       {
         "id": "q5_3",
@@ -518,7 +588,8 @@ const GIS_DATA = [
           "c": "Geometric Center Points"
         },
         "answer": "b",
-        "explanation": "GCPs (Ground Control Points) are shared landmarks used to align un-referenced images with master maps."
+        "explanation": "GCPs (Ground Control Points) are shared landmarks used to align un-referenced images with master maps.",
+        "conceptHint": "Concept: GCPs (Ground Control Points) are shared landmarks used to align un-referenced images with master maps."
       },
       {
         "id": "q5_4",
@@ -529,7 +600,8 @@ const GIS_DATA = [
           "c": "10"
         },
         "answer": "b",
-        "explanation": "1st-order Polynomial Transformation requires a minimum of 3 points to shift, rotate, and scale."
+        "explanation": "1st-order Polynomial Transformation requires a minimum of 3 points to shift, rotate, and scale.",
+        "conceptHint": "Concept: 1st-order Polynomial Transformation requires a minimum of 3 points to shift, rotate, and scale."
       },
       {
         "id": "q5_5",
@@ -540,7 +612,8 @@ const GIS_DATA = [
           "c": "The file size reduction"
         },
         "answer": "b",
-        "explanation": "Root Mean Square (RMS) dynamically calculates how much mathematical error tension remains in the georeferenced image."
+        "explanation": "Root Mean Square (RMS) dynamically calculates how much mathematical error tension remains in the georeferenced image.",
+        "conceptHint": "Concept: Root Mean Square (RMS) dynamically calculates how much mathematical error tension remains in the georeferenced image."
       },
       {
         "id": "q5_6",
@@ -551,7 +624,8 @@ const GIS_DATA = [
           "c": "Above 20 meters"
         },
         "answer": "b",
-        "explanation": "Your overall RMS Error absolutely must drop below the pixel resolution (e.g., 20m) for the georeferencing to be valid."
+        "explanation": "Your overall RMS Error absolutely must drop below the pixel resolution (e.g., 20m) for the georeferencing to be valid.",
+        "conceptHint": "Concept: Your overall RMS Error absolutely must drop below the pixel resolution (e."
       },
       {
         "id": "q5_7",
@@ -562,7 +636,8 @@ const GIS_DATA = [
           "c": "Cubic Convolution"
         },
         "answer": "a",
-        "explanation": "Nearest Neighbour copies the value of the physically closest pixel, preserving true mathematical source values."
+        "explanation": "Nearest Neighbour copies the value of the physically closest pixel, preserving true mathematical source values.",
+        "conceptHint": "Concept: Nearest Neighbour copies the value of the physically closest pixel, preserving true mathematical source values."
       },
       {
         "id": "q5_8",
@@ -573,7 +648,8 @@ const GIS_DATA = [
           "c": "Cubic Convolution"
         },
         "answer": "b",
-        "explanation": "Bilinear Interpolation casts a net around the 4 closest original pixels and computes a smoothed weighted average."
+        "explanation": "Bilinear Interpolation casts a net around the 4 closest original pixels and computes a smoothed weighted average.",
+        "conceptHint": "Concept: Bilinear Interpolation casts a net around the 4 closest original pixels and computes a smoothed weighted average."
       },
       {
         "id": "q5_9",
@@ -584,7 +660,8 @@ const GIS_DATA = [
           "c": "Cubic Convolution"
         },
         "answer": "c",
-        "explanation": "Cubic Convolution scans massive 16-pixel matrix perimeters to generate the smoothest visual transitions."
+        "explanation": "Cubic Convolution scans massive 16-pixel matrix perimeters to generate the smoothest visual transitions.",
+        "conceptHint": "Concept: Cubic Convolution scans massive 16-pixel matrix perimeters to generate the smoothest visual transitions."
       },
       {
         "id": "q5_10",
@@ -595,13 +672,21 @@ const GIS_DATA = [
           "c": "3rd order (min 10 points)"
         },
         "answer": "c",
-        "explanation": "3rd-order math (minimum 10 points) forcefully wraps heavily corrupted datasets."
+        "explanation": "3rd-order math (minimum 10 points) forcefully wraps heavily corrupted datasets.",
+        "conceptHint": "Concept: 3rd-order math (minimum 10 points) forcefully wraps heavily corrupted datasets."
       }
     ],
     "description": [
       "Georeferencing and Rubber-sheeting.",
       "Ground Control Points (GCPs) and RMS Error.",
       "Resampling methods (Nearest Neighbour, Bilinear, Cubic)."
+    ],
+    "detailedTheory": [
+      "Lecture 21: Coordinate Systems - Geographic (GCS) vs Projected (PCS). WGS84 and local datums.",
+      "Lecture 22: Geometric Correction - Ground Control Points (GCPs), spatial transformation models (Polynomial).",
+      "Lecture 23: RMS Error Calculation - Root Mean Square Error as a measure of georeferencing quality.",
+      "Lecture 24: Resampling Logic - Nearest Neighbor, Bilinear Interpolation, and Cubic Convolution.",
+      "Lecture 25: Rubber-sheeting - Local warping techniques for complex map distortions."
     ]
   },
   {
@@ -617,7 +702,8 @@ const GIS_DATA = [
           "c": "Geometric Measurement"
         },
         "answer": "b",
-        "explanation": "Geodesic Measurement factors in the 3-Dimensional curvature of the Earth, critical for long-haul routes."
+        "explanation": "Geodesic Measurement factors in the 3-Dimensional curvature of the Earth, critical for long-haul routes.",
+        "conceptHint": "Concept: Geodesic Measurement factors in the 3-Dimensional curvature of the Earth, critical for long-haul routes."
       },
       {
         "id": "q6_2",
@@ -628,7 +714,8 @@ const GIS_DATA = [
           "c": "The height of the hill"
         },
         "answer": "b",
-        "explanation": "Aspect tracks the geographical compass direction that a sloped hill faces (e.g., South, North)."
+        "explanation": "Aspect tracks the geographical compass direction that a sloped hill faces (e.g., South, North).",
+        "conceptHint": "Concept: Aspect tracks the geographical compass direction that a sloped hill faces (e."
       },
       {
         "id": "q6_3",
@@ -639,7 +726,8 @@ const GIS_DATA = [
           "c": "360"
         },
         "answer": "b",
-        "explanation": "Flat terrain holds an artificial Aspect value of -1 because it lacks a directional downward face."
+        "explanation": "Flat terrain holds an artificial Aspect value of -1 because it lacks a directional downward face.",
+        "conceptHint": "Concept: Flat terrain holds an artificial Aspect value of -1 because it lacks a directional downward face."
       },
       {
         "id": "q6_4",
@@ -650,7 +738,8 @@ const GIS_DATA = [
           "c": "Compression artifacts"
         },
         "answer": "b",
-        "explanation": "Dangles (stopping short) and Overshoots (going past) are common topological glitches during manual digitization."
+        "explanation": "Dangles (stopping short) and Overshoots (going past) are common topological glitches during manual digitization.",
+        "conceptHint": "Concept: Dangles (stopping short) and Overshoots (going past) are common topological glitches during manual digitization."
       },
       {
         "id": "q6_5",
@@ -661,7 +750,8 @@ const GIS_DATA = [
           "c": "Remote Sensing"
         },
         "answer": "b",
-        "explanation": "IDW is local, exact (honors input points), and deterministic (pure math matrices)."
+        "explanation": "IDW is local, exact (honors input points), and deterministic (pure math matrices).",
+        "conceptHint": "Concept: IDW is local, exact (honors input points), and deterministic (pure math matrices)."
       },
       {
         "id": "q6_6",
@@ -672,7 +762,8 @@ const GIS_DATA = [
           "c": "Kriging"
         },
         "answer": "c",
-        "explanation": "Kriging is a stochastic model that assesses randomness and can generate an uncertainty/error prediction surface."
+        "explanation": "Kriging is a stochastic model that assesses randomness and can generate an uncertainty/error prediction surface.",
+        "conceptHint": "Concept: Kriging is a stochastic model that assesses randomness and can generate an uncertainty/error prediction surface."
       },
       {
         "id": "q6_7",
@@ -683,7 +774,8 @@ const GIS_DATA = [
           "c": "Microscopic void gaps between shared perimeters"
         },
         "answer": "c",
-        "explanation": "Slivers occur when tracing shared perimeters poorly, leaving microscopic unintended gaps."
+        "explanation": "Slivers occur when tracing shared perimeters poorly, leaving microscopic unintended gaps.",
+        "conceptHint": "Concept: Slivers occur when tracing shared perimeters poorly, leaving microscopic unintended gaps."
       },
       {
         "id": "q6_8",
@@ -694,7 +786,8 @@ const GIS_DATA = [
           "c": "Creating new polygons"
         },
         "answer": "b",
-        "explanation": "Many-to-One reclassification aggregates intense data (e.g., 20 geo ages into 3 lithology classes)."
+        "explanation": "Many-to-One reclassification aggregates intense data (e.g., 20 geo ages into 3 lithology classes).",
+        "conceptHint": "Concept: Many-to-One reclassification aggregates intense data (e."
       },
       {
         "id": "q6_9",
@@ -705,7 +798,8 @@ const GIS_DATA = [
           "c": "Finding the centroid"
         },
         "answer": "b",
-        "explanation": "Profile curvature tracks the vertical elevation slice to regulate water flow velocity."
+        "explanation": "Profile curvature tracks the vertical elevation slice to regulate water flow velocity.",
+        "conceptHint": "Concept: Profile curvature tracks the vertical elevation slice to regulate water flow velocity."
       },
       {
         "id": "q6_10",
@@ -716,13 +810,21 @@ const GIS_DATA = [
           "c": "Clustered features (like houses into a boundary)"
         },
         "answer": "c",
-        "explanation": "Generalization simplifies clustered features (merging houses into a unified boundary) to keep maps clear at macro scales."
+        "explanation": "Generalization simplifies clustered features (merging houses into a unified boundary) to keep maps clear at macro scales.",
+        "conceptHint": "Concept: Generalization simplifies clustered features (merging houses into a unified boundary) to keep maps clear at macro scales."
       }
     ],
     "description": [
       "Spatial measurement (Planar vs Geodesic).",
       "Terrain analysis (Slope and Aspect).",
       "Interpolation basics (IDW) and digitizing errors."
+    ],
+    "detailedTheory": [
+      "Lecture 26: Data Input Errors - Overshoots, Undershoots, Slivers, and Dangles in digitizing.",
+      "Lecture 27: Scanning & OCR - Flatbed vs Drum scanners. Vectorization of scanned images.",
+      "Lecture 28: IDW Interpolation - Inverse Distance Weighting theory and the influence of distance.",
+      "Lecture 29: Kriging Basics - Geostatistical interpolation using variograms and spatial correlation.",
+      "Lecture 30: Topology Building - Cleaning geometries to establish consistent spatial relationships."
     ]
   },
   {
@@ -738,7 +840,8 @@ const GIS_DATA = [
           "c": "Geometry"
         },
         "answer": "b",
-        "explanation": "Overlay mechanics rely entirely on Set Theory and mathematical Boolean Logic operations (AND, OR, etc.)."
+        "explanation": "Overlay mechanics rely entirely on Set Theory and mathematical Boolean Logic operations (AND, OR, etc.).",
+        "conceptHint": "Concept: Overlay mechanics rely entirely on Set Theory and mathematical Boolean Logic operations (AND, OR, etc."
       },
       {
         "id": "q7_2",
@@ -749,7 +852,8 @@ const GIS_DATA = [
           "c": "NOT"
         },
         "answer": "a",
-        "explanation": "AND (Intersection) isolates and selects only common geographic areas."
+        "explanation": "AND (Intersection) isolates and selects only common geographic areas.",
+        "conceptHint": "Concept: AND (Intersection) isolates and selects only common geographic areas."
       },
       {
         "id": "q7_3",
@@ -760,7 +864,8 @@ const GIS_DATA = [
           "c": "Erase"
         },
         "answer": "b",
-        "explanation": "Clip extracts everything underneath a master polygon boundary."
+        "explanation": "Clip extracts everything underneath a master polygon boundary.",
+        "conceptHint": "Concept: Clip extracts everything underneath a master polygon boundary."
       },
       {
         "id": "q7_4",
@@ -771,7 +876,8 @@ const GIS_DATA = [
           "c": "Loss of color"
         },
         "answer": "b",
-        "explanation": "Vector overlay divides boundaries, which can exponentially explode node counts and create high fragmentation."
+        "explanation": "Vector overlay divides boundaries, which can exponentially explode node counts and create high fragmentation.",
+        "conceptHint": "Concept: Vector overlay divides boundaries, which can exponentially explode node counts and create high fragmentation."
       },
       {
         "id": "q7_5",
@@ -782,7 +888,8 @@ const GIS_DATA = [
           "c": "Statistical Logic"
         },
         "answer": "b",
-        "explanation": "Relational logic (e.g., if Map A > Map B) generates Binary maps mapping pure positive and negative zones."
+        "explanation": "Relational logic (e.g., if Map A > Map B) generates Binary maps mapping pure positive and negative zones.",
+        "conceptHint": "Concept: Relational logic (e."
       },
       {
         "id": "q7_6",
@@ -793,7 +900,8 @@ const GIS_DATA = [
           "c": "Faster rendering"
         },
         "answer": "b",
-        "explanation": "Index overlays allow stacking 15-20 layers and assigning mathematical weights/ranks to each."
+        "explanation": "Index overlays allow stacking 15-20 layers and assigning mathematical weights/ranks to each.",
+        "conceptHint": "Concept: Index overlays allow stacking 15-20 layers and assigning mathematical weights/ranks to each."
       },
       {
         "id": "q7_7",
@@ -804,7 +912,8 @@ const GIS_DATA = [
           "c": "Network Analysis"
         },
         "answer": "a",
-        "explanation": "Point measurements assess macro statistical probability patterns like clustering."
+        "explanation": "Point measurements assess macro statistical probability patterns like clustering.",
+        "conceptHint": "Concept: Point measurements assess macro statistical probability patterns like clustering."
       },
       {
         "id": "q7_8",
@@ -815,7 +924,8 @@ const GIS_DATA = [
           "c": "Creating shapes"
         },
         "answer": "b",
-        "explanation": "Moving windows slide over pixels to recalculate values based on surroundings."
+        "explanation": "Moving windows slide over pixels to recalculate values based on surroundings.",
+        "conceptHint": "Concept: Moving windows slide over pixels to recalculate values based on surroundings."
       },
       {
         "id": "q7_9",
@@ -826,7 +936,8 @@ const GIS_DATA = [
           "c": "Slicing"
         },
         "answer": "a",
-        "explanation": "Buffering expands the spatial area around a feature to create zones of proximity."
+        "explanation": "Buffering expands the spatial area around a feature to create zones of proximity.",
+        "conceptHint": "Concept: Buffering expands the spatial area around a feature to create zones of proximity."
       },
       {
         "id": "q7_10",
@@ -837,13 +948,21 @@ const GIS_DATA = [
           "c": "A random number"
         },
         "answer": "b",
-        "explanation": "Variable buffers determine width based on a specific attribute (e.g., wider road buffers for more traffic)."
+        "explanation": "Variable buffers determine width based on a specific attribute (e.g., wider road buffers for more traffic).",
+        "conceptHint": "Concept: Variable buffers determine width based on a specific attribute (e."
       }
     ],
     "description": [
       "Boolean Logic and Set Theory in overlays.",
       "Vector and Raster overlay operations.",
       "Proximity analysis and Buffering techniques."
+    ],
+    "detailedTheory": [
+      "Lecture 31: Boolean Logic - AND (Intersect), OR (Union), XOR, and NOT logic in spatial analysis.",
+      "Lecture 32: Vector Overlay - Point-in-polygon, Line-in-polygon, and Polygon-on-polygon methods.",
+      "Lecture 33: Raster Overlay - Map algebra and cell-by-cell mathematical operations.",
+      "Lecture 34: Buffering Techniques - Fixed distance vs Variable distance buffers. Positive and negative buffers.",
+      "Lecture 35: Multi-Criteria Analysis - Weighted overlays for site selection and suitability modeling."
     ]
   },
   {
@@ -859,7 +978,8 @@ const GIS_DATA = [
           "c": "Isolated points"
         },
         "answer": "b",
-        "explanation": "Network analysis evaluates resource flow across linear structures."
+        "explanation": "Network analysis evaluates resource flow across linear structures.",
+        "conceptHint": "Concept: Network analysis evaluates resource flow across linear structures."
       },
       {
         "id": "q8_2",
@@ -870,7 +990,8 @@ const GIS_DATA = [
           "c": "Pixels, Bits, and Bytes"
         },
         "answer": "b",
-        "explanation": "Edges (lines), Junctions (intersections), and Turns (virtual logic) are the core elements."
+        "explanation": "Edges (lines), Junctions (intersections), and Turns (virtual logic) are the core elements.",
+        "conceptHint": "Concept: Edges (lines), Junctions (intersections), and Turns (virtual logic) are the core elements."
       },
       {
         "id": "q8_3",
@@ -881,7 +1002,8 @@ const GIS_DATA = [
           "c": "Facilitators"
         },
         "answer": "b",
-        "explanation": "Impedance represents movement constraint rules like speed limits, delays, or physical roadblocks."
+        "explanation": "Impedance represents movement constraint rules like speed limits, delays, or physical roadblocks.",
+        "conceptHint": "Concept: Impedance represents movement constraint rules like speed limits, delays, or physical roadblocks."
       },
       {
         "id": "q8_4",
@@ -892,7 +1014,8 @@ const GIS_DATA = [
           "c": "Spread"
         },
         "answer": "a",
-        "explanation": "Contiguity identifies and fuses isolated polygons that share common borders and attributes."
+        "explanation": "Contiguity identifies and fuses isolated polygons that share common borders and attributes.",
+        "conceptHint": "Concept: Contiguity identifies and fuses isolated polygons that share common borders and attributes."
       },
       {
         "id": "q8_5",
@@ -903,7 +1026,8 @@ const GIS_DATA = [
           "c": "Satellite orbits"
         },
         "answer": "b",
-        "explanation": "Seek functions evaluate topography to generate digital drainage/water accumulation networks."
+        "explanation": "Seek functions evaluate topography to generate digital drainage/water accumulation networks.",
+        "conceptHint": "Concept: Seek functions evaluate topography to generate digital drainage/water accumulation networks."
       },
       {
         "id": "q8_6",
@@ -914,7 +1038,8 @@ const GIS_DATA = [
           "c": "Z-coordinate (Elevation)"
         },
         "answer": "c",
-        "explanation": "Z-values prevent overpasses and tunnels from incorrectly forming junctions solely on XY intersections."
+        "explanation": "Z-values prevent overpasses and tunnels from incorrectly forming junctions solely on XY intersections.",
+        "conceptHint": "Concept: Z-values prevent overpasses and tunnels from incorrectly forming junctions solely on XY intersections."
       },
       {
         "id": "q8_7",
@@ -925,7 +1050,8 @@ const GIS_DATA = [
           "c": "Manual surveys"
         },
         "answer": "b",
-        "explanation": "Modern algorithms use smartphone GPS data to detect traffic density in real-time."
+        "explanation": "Modern algorithms use smartphone GPS data to detect traffic density in real-time.",
+        "conceptHint": "Concept: Modern algorithms use smartphone GPS data to detect traffic density in real-time."
       },
       {
         "id": "q8_8",
@@ -936,7 +1062,8 @@ const GIS_DATA = [
           "c": "50% of people use GIS"
         },
         "answer": "b",
-        "explanation": "Network analysis demands extreme accuracy. 50% reliability is insufficient for emergency dispatching."
+        "explanation": "Network analysis demands extreme accuracy. 50% reliability is insufficient for emergency dispatching.",
+        "conceptHint": "Concept: Network analysis demands extreme accuracy."
       },
       {
         "id": "q8_9",
@@ -947,7 +1074,8 @@ const GIS_DATA = [
           "c": "A simple color overlap"
         },
         "answer": "a",
-        "explanation": "Shared junctions securely bridge different connectivity groups or multi-modal networks."
+        "explanation": "Shared junctions securely bridge different connectivity groups or multi-modal networks.",
+        "conceptHint": "Concept: Shared junctions securely bridge different connectivity groups or multi-modal networks."
       },
       {
         "id": "q8_10",
@@ -958,13 +1086,21 @@ const GIS_DATA = [
           "c": "Area"
         },
         "answer": "b",
-        "explanation": "Spread functions model outward phenomena that accumulate friction or cost over distance (e.g., flood expansion)."
+        "explanation": "Spread functions model outward phenomena that accumulate friction or cost over distance (e.g., flood expansion).",
+        "conceptHint": "Concept: Spread functions model outward phenomena that accumulate friction or cost over distance (e."
       }
     ],
     "description": [
       "Linear network structures (Edges and Junctions).",
       "Impedance and Route Optimization.",
       "Hydrological modeling (Seek/Stream functions)."
+    ],
+    "detailedTheory": [
+      "Lecture 36: Network Components - Edges, Junctions (Nodes), and Connectivity constraints (Turns, Stops).",
+      "Lecture 37: Impedance & Cost - Defining travel time, friction, and resistance in a network.",
+      "Lecture 38: Shortest Path - Dijkstra's Algorithm and route optimization based on cost.",
+      "Lecture 39: Allocating Services - Location-allocation and service area (p-median) modeling.",
+      "Lecture 40: Hydrological Networks - Flow direction, accumulation, and stream network derivation."
     ]
   },
   {
@@ -980,7 +1116,8 @@ const GIS_DATA = [
           "c": "Network Database Model"
         },
         "answer": "a",
-        "explanation": "Hierarchical models use a rigid parent-child tree structure where children have only one parent."
+        "explanation": "Hierarchical models use a rigid parent-child tree structure where children have only one parent.",
+        "conceptHint": "Concept: Hierarchical models use a rigid parent-child tree structure where children have only one parent."
       },
       {
         "id": "q9_2",
@@ -991,7 +1128,8 @@ const GIS_DATA = [
           "c": "Flat Files"
         },
         "answer": "b",
-        "explanation": "Relational Database Management Systems have been the GIS standard for decades."
+        "explanation": "Relational Database Management Systems have been the GIS standard for decades.",
+        "conceptHint": "Concept: Relational Database Management Systems have been the GIS standard for decades."
       },
       {
         "id": "q9_3",
@@ -1002,7 +1140,8 @@ const GIS_DATA = [
           "c": "Password"
         },
         "answer": "b",
-        "explanation": "RDBMS links tables through shared column identifiers with formatted identical data."
+        "explanation": "RDBMS links tables through shared column identifiers with formatted identical data.",
+        "conceptHint": "Concept: RDBMS links tables through shared column identifiers with formatted identical data."
       },
       {
         "id": "q9_4",
@@ -1013,7 +1152,8 @@ const GIS_DATA = [
           "c": "Human error"
         },
         "answer": "a",
-        "explanation": "Transforming a 3D object to a 2D surface mathematically guarantees distortion in Shape, Area, Distance, or Direction."
+        "explanation": "Transforming a 3D object to a 2D surface mathematically guarantees distortion in Shape, Area, Distance, or Direction.",
+        "conceptHint": "Concept: Transforming a 3D object to a 2D surface mathematically guarantees distortion in Shape, Area, Distance, or Direction."
       },
       {
         "id": "q9_5",
@@ -1024,7 +1164,8 @@ const GIS_DATA = [
           "c": "Azimuthal"
         },
         "answer": "b",
-        "explanation": "Conical projections are most accurate for wide, mid-latitude countries in the Northern Hemisphere."
+        "explanation": "Conical projections are most accurate for wide, mid-latitude countries in the Northern Hemisphere.",
+        "conceptHint": "Concept: Conical projections are most accurate for wide, mid-latitude countries in the Northern Hemisphere."
       },
       {
         "id": "q9_6",
@@ -1035,7 +1176,8 @@ const GIS_DATA = [
           "c": "Conical Projection"
         },
         "answer": "a",
-        "explanation": "Mercator is cylindrical, wrapping a cylinder around the equator, distorting poles."
+        "explanation": "Mercator is cylindrical, wrapping a cylinder around the equator, distorting poles.",
+        "conceptHint": "Concept: Mercator is cylindrical, wrapping a cylinder around the equator, distorting poles."
       },
       {
         "id": "q9_7",
@@ -1046,7 +1188,8 @@ const GIS_DATA = [
           "c": "TIN triangles"
         },
         "answer": "b",
-        "explanation": "Degrees stretch geometrically towards poles; metric planar grids (like UTM) are required for accuracy."
+        "explanation": "Degrees stretch geometrically towards poles; metric planar grids (like UTM) are required for accuracy.",
+        "conceptHint": "Concept: Degrees stretch geometrically towards poles; metric planar grids (like UTM) are required for accuracy."
       },
       {
         "id": "q9_8",
@@ -1057,7 +1200,8 @@ const GIS_DATA = [
           "c": "Relational"
         },
         "answer": "b",
-        "explanation": "OODS uses secure inherited objects but suffers from slower transition speeds and learning curves."
+        "explanation": "OODS uses secure inherited objects but suffers from slower transition speeds and learning curves.",
+        "conceptHint": "Concept: OODS uses secure inherited objects but suffers from slower transition speeds and learning curves."
       },
       {
         "id": "q9_9",
@@ -1068,7 +1212,8 @@ const GIS_DATA = [
           "c": "Empty String"
         },
         "answer": "b",
-        "explanation": "Pixels outside regular study boundaries must be assigned 'NoData' to maintain the geometric matrix loop."
+        "explanation": "Pixels outside regular study boundaries must be assigned 'NoData' to maintain the geometric matrix loop.",
+        "conceptHint": "Concept: Pixels outside regular study boundaries must be assigned 'NoData' to maintain the geometric matrix loop."
       },
       {
         "id": "q9_10",
@@ -1079,13 +1224,21 @@ const GIS_DATA = [
           "c": "NoData is faster to process"
         },
         "answer": "a",
-        "explanation": "Zero represents a measurement; NoData instructs the software to ignore the pixel completely in statistics."
+        "explanation": "Zero represents a measurement; NoData instructs the software to ignore the pixel completely in statistics.",
+        "conceptHint": "Concept: Zero represents a measurement; NoData instructs the software to ignore the pixel completely in statistics."
       }
     ],
     "description": [
       "Database models (Hierarchical, Relational, OODS).",
       "Map Projections and Distortion (Cylindrical, Conic, Azimuthal).",
       "UTM coordinate system zones."
+    ],
+    "detailedTheory": [
+      "Lecture 41: DBMS Models - Evolution from Flat files to Relational (RDBMS) and Object-Oriented (OODBMS).",
+      "Lecture 42: SQL for GIS - Spatial SQL queries, select by attribute, and select by location.",
+      "Lecture 43: Map Projections - Math of flattening the earth. Conic vs Cylindrical vs Planar projections.",
+      "Lecture 44: UTM Zones - Universal Transverse Mercator divisions (60 zones of 6 degrees).",
+      "Lecture 45: Distortion Management - Managing Tissot's Indicatrix and metric preservation (Area vs Shape)."
     ]
   },
   {
@@ -1101,7 +1254,8 @@ const GIS_DATA = [
           "c": "Water depth"
         },
         "answer": "b",
-        "explanation": "DSM (Surface) captures tops of objects; DTM (Terrain) is a 'Bare Earth' model stripping them away."
+        "explanation": "DSM (Surface) captures tops of objects; DTM (Terrain) is a 'Bare Earth' model stripping them away.",
+        "conceptHint": "Concept: DSM (Surface) captures tops of objects; DTM (Terrain) is a 'Bare Earth' model stripping them away."
       },
       {
         "id": "q10_2",
@@ -1112,7 +1266,8 @@ const GIS_DATA = [
           "c": "Color mapping"
         },
         "answer": "b",
-        "explanation": "Hillshading/SRM simulates lighting and shadows to force depth perception."
+        "explanation": "Hillshading/SRM simulates lighting and shadows to force depth perception.",
+        "conceptHint": "Concept: Hillshading/SRM simulates lighting and shadows to force depth perception."
       },
       {
         "id": "q10_3",
@@ -1123,7 +1278,8 @@ const GIS_DATA = [
           "c": "LiDAR"
         },
         "answer": "b",
-        "explanation": "Stereo Photogrammetry calculates depth by cross-referencing varying orbital angles."
+        "explanation": "Stereo Photogrammetry calculates depth by cross-referencing varying orbital angles.",
+        "conceptHint": "Concept: Stereo Photogrammetry calculates depth by cross-referencing varying orbital angles."
       },
       {
         "id": "q10_4",
@@ -1134,7 +1290,8 @@ const GIS_DATA = [
           "c": "Laser pulses"
         },
         "answer": "b",
-        "explanation": "SRTM (Shuttle Radar Topography Mission) uses microwave radar pulses."
+        "explanation": "SRTM (Shuttle Radar Topography Mission) uses microwave radar pulses.",
+        "conceptHint": "Concept: SRTM (Shuttle Radar Topography Mission) uses microwave radar pulses."
       },
       {
         "id": "q10_5",
@@ -1145,7 +1302,8 @@ const GIS_DATA = [
           "c": "A software bug"
         },
         "answer": "b",
-        "explanation": "FTPP is a brain illusion where SE illumination (morning sun) flips valleys into ridges visually."
+        "explanation": "FTPP is a brain illusion where SE illumination (morning sun) flips valleys into ridges visually.",
+        "conceptHint": "Concept: FTPP is a brain illusion where SE illumination (morning sun) flips valleys into ridges visually."
       },
       {
         "id": "q10_6",
@@ -1156,7 +1314,8 @@ const GIS_DATA = [
           "c": "It's the only time sensors work"
         },
         "answer": "b",
-        "explanation": "Nighttime passes (e.g., 2 AM) ensure the environmental lapse rate can be mapped without solar interference."
+        "explanation": "Nighttime passes (e.g., 2 AM) ensure the environmental lapse rate can be mapped without solar interference.",
+        "conceptHint": "Concept: Nighttime passes (e."
       },
       {
         "id": "q10_7",
@@ -1167,7 +1326,8 @@ const GIS_DATA = [
           "c": "Z-axis (Altitude)"
         },
         "answer": "c",
-        "explanation": "Vertical resolution controls the Z-axis data precision (often set to 1-meter intervals)."
+        "explanation": "Vertical resolution controls the Z-axis data precision (often set to 1-meter intervals).",
+        "conceptHint": "Concept: Vertical resolution controls the Z-axis data precision (often set to 1-meter intervals)."
       },
       {
         "id": "q10_8",
@@ -1178,7 +1338,8 @@ const GIS_DATA = [
           "c": "Z-Factor"
         },
         "answer": "b",
-        "explanation": "RMSE acts as the statistical barometer for summarized DEM variance."
+        "explanation": "RMSE acts as the statistical barometer for summarized DEM variance.",
+        "conceptHint": "Concept: RMSE acts as the statistical barometer for summarized DEM variance."
       },
       {
         "id": "q10_9",
@@ -1189,7 +1350,8 @@ const GIS_DATA = [
           "c": "Color brightness"
         },
         "answer": "b",
-        "explanation": "Cut and Fill calculates the volume of earth to be excavated and filled to create a flat grade."
+        "explanation": "Cut and Fill calculates the volume of earth to be excavated and filled to create a flat grade.",
+        "conceptHint": "Concept: Cut and Fill calculates the volume of earth to be excavated and filled to create a flat grade."
       },
       {
         "id": "q10_10",
@@ -1200,13 +1362,21 @@ const GIS_DATA = [
           "c": "Feet"
         },
         "answer": "b",
-        "explanation": "Z-Factor rescales disparate vertical meters to match horizontal degree formats to prevent slope math collapse."
+        "explanation": "Z-Factor rescales disparate vertical meters to match horizontal degree formats to prevent slope math collapse.",
+        "conceptHint": "Concept: Z-Factor rescales disparate vertical meters to match horizontal degree formats to prevent slope math collapse."
       }
     ],
     "description": [
       "Digital Elevation Models (DEM, DTM, DSM).",
       "Shaded Relief (Hillshading) and depth perception.",
       "Data acquisition (SAR, LiDAR, Stereo-pairs)."
+    ],
+    "detailedTheory": [
+      "Lecture 46: DEM, DTM, DSM - Definitions: Digital Elevation Model vs Terrain Model vs Surface Model.",
+      "Lecture 47: Hillshading Logic - Calculating sun angle and shaded relief to visualize 3D terrain.",
+      "Lecture 48: Elevation Accuracies - Vertical vs Horizontal accuracy. Root Mean Square Error (RMSE) in DEMs.",
+      "Lecture 49: LiDAR & SAR - Active remote sensing methods for high-precision elevation mapping.",
+      "Lecture 50: Stereo Photogrammetry - Deriving Z-coordinates from overlapping image pairs (Parallax theory)."
     ]
   },
   {
@@ -1223,7 +1393,8 @@ const GIS_DATA = [
           "d": "Spatial and manual"
         },
         "answer": "c",
-        "explanation": "GIS is fundamentally a digital technology dealing with spatial data."
+        "explanation": "GIS is fundamentally a digital technology dealing with spatial data.",
+        "conceptHint": "Concept: GIS is fundamentally a digital technology dealing with spatial data."
       },
       {
         "id": "a1_2",
@@ -1235,7 +1406,8 @@ const GIS_DATA = [
           "d": "Polyline, Polygon, Raster"
         },
         "answer": "c",
-        "explanation": "The three primitive vector types are Points, Lines (Arcs), and Polygons (Areas)."
+        "explanation": "The three primitive vector types are Points, Lines (Arcs), and Polygons (Areas).",
+        "conceptHint": "Concept: The three primitive vector types are Points, Lines (Arcs), and Polygons (Areas)."
       },
       {
         "id": "a1_3",
@@ -1247,7 +1419,8 @@ const GIS_DATA = [
           "d": "Generic, analogue and spatial"
         },
         "answer": "a",
-        "explanation": "These are modern generic digital technologies for spatial information handling."
+        "explanation": "These are modern generic digital technologies for spatial information handling.",
+        "conceptHint": "Concept: These are modern generic digital technologies for spatial information handling."
       },
       {
         "id": "a1_4",
@@ -1259,7 +1432,8 @@ const GIS_DATA = [
           "d": "Especial"
         },
         "answer": "c",
-        "explanation": "Topology is the mathematical study of spatial relationships like connectivity and adjacency."
+        "explanation": "Topology is the mathematical study of spatial relationships like connectivity and adjacency.",
+        "conceptHint": "Concept: Topology is the mathematical study of spatial relationships like connectivity and adjacency."
       },
       {
         "id": "a1_5",
@@ -1271,7 +1445,8 @@ const GIS_DATA = [
           "d": "Polygons showing the area occupied by a particular land use or variable"
         },
         "answer": "b",
-        "explanation": "Time is temporal data, not spatial data (unless associated with a location)."
+        "explanation": "Time is temporal data, not spatial data (unless associated with a location).",
+        "conceptHint": "Concept: Time is temporal data, not spatial data (unless associated with a location)."
       },
       {
         "id": "a1_6",
@@ -1283,7 +1458,8 @@ const GIS_DATA = [
           "d": "Computer, Timely, Delete, Not"
         },
         "answer": "c",
-        "explanation": "The formal definition specifies a computer-based system for spatial data analysis for user needs."
+        "explanation": "The formal definition specifies a computer-based system for spatial data analysis for user needs.",
+        "conceptHint": "Concept: The formal definition specifies a computer-based system for spatial data analysis for user needs."
       },
       {
         "id": "a1_7",
@@ -1293,7 +1469,8 @@ const GIS_DATA = [
           "b": "False"
         },
         "answer": "b",
-        "explanation": "Attribute data is non-spatial (tabular) data describing properties of spatial features."
+        "explanation": "Attribute data is non-spatial (tabular) data describing properties of spatial features.",
+        "conceptHint": "Concept: Attribute data is non-spatial (tabular) data describing properties of spatial features."
       },
       {
         "id": "a1_8",
@@ -1305,7 +1482,8 @@ const GIS_DATA = [
           "d": "Dual Independent Map model"
         },
         "answer": "a",
-        "explanation": "The segment/path-based approach is used for polygon topology."
+        "explanation": "The segment/path-based approach is used for polygon topology.",
+        "conceptHint": "Concept: The segment/path-based approach is used for polygon topology."
       },
       {
         "id": "a1_9",
@@ -1317,7 +1495,8 @@ const GIS_DATA = [
           "d": "Software, Equations, Maps, Theory, People"
         },
         "answer": "b",
-        "explanation": "Hardware, Software, Data, Methods, and People are the five critical pillars of GIS."
+        "explanation": "Hardware, Software, Data, Methods, and People are the five critical pillars of GIS.",
+        "conceptHint": "Concept: Hardware, Software, Data, Methods, and People are the five critical pillars of GIS."
       },
       {
         "id": "a1_10",
@@ -1329,7 +1508,8 @@ const GIS_DATA = [
           "d": "t-value"
         },
         "answer": "c",
-        "explanation": "Z-values represent the third dimension (elevation/height) in GIS geometry."
+        "explanation": "Z-values represent the third dimension (elevation/height) in GIS geometry.",
+        "conceptHint": "Concept: Z-values represent the third dimension (elevation/height) in GIS geometry."
       }
     ],
     "description": [
@@ -1350,7 +1530,8 @@ const GIS_DATA = [
           "d": "7"
         },
         "answer": "c",
-        "explanation": "Nominal, Ordinal, Interval, Ratio, Cyclic, and Multidimensional (6 types)."
+        "explanation": "Nominal, Ordinal, Interval, Ratio, Cyclic, and Multidimensional (6 types).",
+        "conceptHint": "Concept: Nominal, Ordinal, Interval, Ratio, Cyclic, and Multidimensional (6 types)."
       },
       {
         "id": "a2_2",
@@ -1362,7 +1543,8 @@ const GIS_DATA = [
           "d": "Numeric, alpha-numeric and alphabets"
         },
         "answer": "d",
-        "explanation": "Nominal data uses labels or names which can be numbers or text."
+        "explanation": "Nominal data uses labels or names which can be numbers or text.",
+        "conceptHint": "Concept: Nominal data uses labels or names which can be numbers or text."
       },
       {
         "id": "a2_3",
@@ -1374,7 +1556,8 @@ const GIS_DATA = [
           "d": "Zero or starting point"
         },
         "answer": "d",
-        "explanation": "Ratio scales have an absolute zero point."
+        "explanation": "Ratio scales have an absolute zero point.",
+        "conceptHint": "Concept: Ratio scales have an absolute zero point."
       },
       {
         "id": "a2_4",
@@ -1386,7 +1569,8 @@ const GIS_DATA = [
           "d": "Mass points"
         },
         "answer": "d",
-        "explanation": "Mass points are irregularly distributed elevation points used to construct a TIN."
+        "explanation": "Mass points are irregularly distributed elevation points used to construct a TIN.",
+        "conceptHint": "Concept: Mass points are irregularly distributed elevation points used to construct a TIN."
       },
       {
         "id": "a2_5",
@@ -1398,7 +1582,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "TIN structures require node, edge, and coordinate information."
+        "explanation": "TIN structures require node, edge, and coordinate information.",
+        "conceptHint": "Concept: TIN structures require node, edge, and coordinate information."
       },
       {
         "id": "a2_6",
@@ -1408,7 +1593,8 @@ const GIS_DATA = [
           "b": "False"
         },
         "answer": "a",
-        "explanation": "TIN allows for varying density \u2013 more triangles in rugged terrain, fewer in flat areas."
+        "explanation": "TIN allows for varying density \u2013 more triangles in rugged terrain, fewer in flat areas.",
+        "conceptHint": "Concept: TIN allows for varying density \u2013 more triangles in rugged terrain, fewer in flat areas."
       },
       {
         "id": "a2_7",
@@ -1420,7 +1606,8 @@ const GIS_DATA = [
           "d": "Polylines"
         },
         "answer": "c",
-        "explanation": "Clipping or subsetting a TIN breaks its topological structure."
+        "explanation": "Clipping or subsetting a TIN breaks its topological structure.",
+        "conceptHint": "Concept: Clipping or subsetting a TIN breaks its topological structure."
       },
       {
         "id": "a2_8",
@@ -1432,7 +1619,8 @@ const GIS_DATA = [
           "d": "Spatial resolution"
         },
         "answer": "d",
-        "explanation": "Spatial resolution is the ground area covered by a single pixel."
+        "explanation": "Spatial resolution is the ground area covered by a single pixel.",
+        "conceptHint": "Concept: Spatial resolution is the ground area covered by a single pixel."
       },
       {
         "id": "a2_9",
@@ -1444,7 +1632,8 @@ const GIS_DATA = [
           "d": "3D"
         },
         "answer": "a",
-        "explanation": "Vector models represent distinct objects with boundaries."
+        "explanation": "Vector models represent distinct objects with boundaries.",
+        "conceptHint": "Concept: Vector models represent distinct objects with boundaries."
       },
       {
         "id": "a2_10",
@@ -1456,7 +1645,8 @@ const GIS_DATA = [
           "d": "3D"
         },
         "answer": "a",
-        "explanation": "Vector data maintains precise coordinate geometry compared to cell-averaged raster data."
+        "explanation": "Vector data maintains precise coordinate geometry compared to cell-averaged raster data.",
+        "conceptHint": "Concept: Vector data maintains precise coordinate geometry compared to cell-averaged raster data."
       }
     ],
     "description": [
@@ -1477,7 +1667,8 @@ const GIS_DATA = [
           "d": "14"
         },
         "answer": "a",
-        "explanation": "3rd order transformation calculation requires at least 10 ground control points."
+        "explanation": "3rd order transformation calculation requires at least 10 ground control points.",
+        "conceptHint": "Concept: 3rd order transformation calculation requires at least 10 ground control points."
       },
       {
         "id": "a3_2",
@@ -1489,7 +1680,8 @@ const GIS_DATA = [
           "d": "None of the above"
         },
         "answer": "b",
-        "explanation": "Y-scale is negative as image coordinates (row zero at top) and map coordinates (Y zero at bottom) are inverted."
+        "explanation": "Y-scale is negative as image coordinates (row zero at top) and map coordinates (Y zero at bottom) are inverted.",
+        "conceptHint": "Concept: Y-scale is negative as image coordinates (row zero at top) and map coordinates (Y zero at bottom) are inverted."
       },
       {
         "id": "a3_3",
@@ -1501,7 +1693,8 @@ const GIS_DATA = [
           "d": "Maximum compression"
         },
         "answer": "a",
-        "explanation": "Quadtrees are very efficient for hierarchical spatial data compression."
+        "explanation": "Quadtrees are very efficient for hierarchical spatial data compression.",
+        "conceptHint": "Concept: Quadtrees are very efficient for hierarchical spatial data compression."
       },
       {
         "id": "a3_4",
@@ -1513,7 +1706,8 @@ const GIS_DATA = [
           "d": "60:1"
         },
         "answer": "c",
-        "explanation": "Multi-resolution Seamless Image Database (MrSID) can reach 50:1 or higher compression."
+        "explanation": "Multi-resolution Seamless Image Database (MrSID) can reach 50:1 or higher compression.",
+        "conceptHint": "Concept: Multi-resolution Seamless Image Database (MrSID) can reach 50:1 or higher compression."
       },
       {
         "id": "a3_5",
@@ -1525,7 +1719,8 @@ const GIS_DATA = [
           "d": "None of the above"
         },
         "answer": "c",
-        "explanation": "Generalization simplifies features by removing redundant vertices (nodes)."
+        "explanation": "Generalization simplifies features by removing redundant vertices (nodes).",
+        "conceptHint": "Concept: Generalization simplifies features by removing redundant vertices (nodes)."
       },
       {
         "id": "a3_6",
@@ -1537,7 +1732,8 @@ const GIS_DATA = [
           "d": "Relational Database Management System"
         },
         "answer": "d",
-        "explanation": "RDBMS is the standard system for managing linked data tables."
+        "explanation": "RDBMS is the standard system for managing linked data tables.",
+        "conceptHint": "Concept: RDBMS is the standard system for managing linked data tables."
       },
       {
         "id": "a3_7",
@@ -1549,7 +1745,8 @@ const GIS_DATA = [
           "d": "Object-Oriented"
         },
         "answer": "c",
-        "explanation": "Relational databases use keys to link common characteristics across tables."
+        "explanation": "Relational databases use keys to link common characteristics across tables.",
+        "conceptHint": "Concept: Relational databases use keys to link common characteristics across tables."
       },
       {
         "id": "a3_8",
@@ -1561,7 +1758,8 @@ const GIS_DATA = [
           "d": "It is good at handling geographical concepts"
         },
         "answer": "d",
-        "explanation": "Spatial SQL extensions (like PostGIS) allow for powerful handling of geographic queries."
+        "explanation": "Spatial SQL extensions (like PostGIS) allow for powerful handling of geographic queries.",
+        "conceptHint": "Concept: Spatial SQL extensions (like PostGIS) allow for powerful handling of geographic queries."
       },
       {
         "id": "a3_9",
@@ -1573,7 +1771,8 @@ const GIS_DATA = [
           "d": "Planar"
         },
         "answer": "d",
-        "explanation": "Planar measurements use flat surface geometry (Euclidean geometry)."
+        "explanation": "Planar measurements use flat surface geometry (Euclidean geometry).",
+        "conceptHint": "Concept: Planar measurements use flat surface geometry (Euclidean geometry)."
       },
       {
         "id": "a3_10",
@@ -1585,7 +1784,8 @@ const GIS_DATA = [
           "d": "Geographic"
         },
         "answer": "a",
-        "explanation": "Most standard GIS distance/area calculations default to Planar unless specified otherwise."
+        "explanation": "Most standard GIS distance/area calculations default to Planar unless specified otherwise.",
+        "conceptHint": "Concept: Most standard GIS distance/area calculations default to Planar unless specified otherwise."
       }
     ],
     "description": [
@@ -1606,7 +1806,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "These are fundamental analytical functions in GIS."
+        "explanation": "These are fundamental analytical functions in GIS.",
+        "conceptHint": "Concept: These are fundamental analytical functions in GIS."
       },
       {
         "id": "a4_2",
@@ -1618,7 +1819,8 @@ const GIS_DATA = [
           "d": "Auto query"
         },
         "answer": "c",
-        "explanation": "Spatial analysis combines both 'Where' (spatial) and 'What' (attribute) queries."
+        "explanation": "Spatial analysis combines both 'Where' (spatial) and 'What' (attribute) queries.",
+        "conceptHint": "Concept: Spatial analysis combines both 'Where' (spatial) and 'What' (attribute) queries."
       },
       {
         "id": "a4_3",
@@ -1630,7 +1832,8 @@ const GIS_DATA = [
           "d": "A model is a simplification of reality."
         },
         "answer": "d",
-        "explanation": "A model acts as a simplified abstraction representing real-world systems."
+        "explanation": "A model acts as a simplified abstraction representing real-world systems.",
+        "conceptHint": "Concept: A model acts as a simplified abstraction representing real-world systems."
       },
       {
         "id": "a4_4",
@@ -1642,7 +1845,8 @@ const GIS_DATA = [
           "d": "Tobin Law of Geography"
         },
         "answer": "c",
-        "explanation": "Tobler's First Law of Geography is the foundation for spatial interpolation."
+        "explanation": "Tobler's First Law of Geography is the foundation for spatial interpolation.",
+        "conceptHint": "Concept: Tobler's First Law of Geography is the foundation for spatial interpolation."
       },
       {
         "id": "a4_5",
@@ -1654,7 +1858,8 @@ const GIS_DATA = [
           "d": "Spatial moving average"
         },
         "answer": "c",
-        "explanation": "Thiessen (Voronoi) polygons create abrupt boundaries and are strictly deterministic."
+        "explanation": "Thiessen (Voronoi) polygons create abrupt boundaries and are strictly deterministic.",
+        "conceptHint": "Concept: Thiessen (Voronoi) polygons create abrupt boundaries and are strictly deterministic."
       },
       {
         "id": "a4_6",
@@ -1666,7 +1871,8 @@ const GIS_DATA = [
           "d": "None of the above"
         },
         "answer": "b",
-        "explanation": "Interpolation estimates values for locations where no direct samples exist."
+        "explanation": "Interpolation estimates values for locations where no direct samples exist.",
+        "conceptHint": "Concept: Interpolation estimates values for locations where no direct samples exist."
       },
       {
         "id": "a4_7",
@@ -1678,7 +1884,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "Preprocessing includes format conversion, cleaning, and aggregating data."
+        "explanation": "Preprocessing includes format conversion, cleaning, and aggregating data.",
+        "conceptHint": "Concept: Preprocessing includes format conversion, cleaning, and aggregating data."
       },
       {
         "id": "a4_8",
@@ -1690,7 +1897,8 @@ const GIS_DATA = [
           "d": "None of the above"
         },
         "answer": "d",
-        "explanation": "Georeferencing and Interpolation are usually classified as fundamental Spatial Analysis, not just preprocessing/processing stages in this context."
+        "explanation": "Georeferencing and Interpolation are usually classified as fundamental Spatial Analysis, not just preprocessing/processing stages in this context.",
+        "conceptHint": "Concept: Georeferencing and Interpolation are usually classified as fundamental Spatial Analysis, not just preprocessing/processing stages in this context."
       },
       {
         "id": "a4_9",
@@ -1702,7 +1910,8 @@ const GIS_DATA = [
           "d": "Geometric transformations"
         },
         "answer": "a",
-        "explanation": "Color space transformations (like IHS) are common in image fusion."
+        "explanation": "Color space transformations (like IHS) are common in image fusion.",
+        "conceptHint": "Concept: Color space transformations (like IHS) are common in image fusion."
       },
       {
         "id": "a4_10",
@@ -1714,7 +1923,8 @@ const GIS_DATA = [
           "d": "Cell"
         },
         "answer": "a",
-        "explanation": "Reclassification simplifies data based on attribute values."
+        "explanation": "Reclassification simplifies data based on attribute values.",
+        "conceptHint": "Concept: Reclassification simplifies data based on attribute values."
       }
     ],
     "description": [
@@ -1735,7 +1945,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "a",
-        "explanation": "Set theory and Boolean logic (AND, OR, NOT) drive overlay analysis."
+        "explanation": "Set theory and Boolean logic (AND, OR, NOT) drive overlay analysis.",
+        "conceptHint": "Concept: Set theory and Boolean logic (AND, OR, NOT) drive overlay analysis."
       },
       {
         "id": "a5_2",
@@ -1747,7 +1958,8 @@ const GIS_DATA = [
           "d": "None of the above"
         },
         "answer": "c",
-        "explanation": "Definition of intersection in set theory."
+        "explanation": "Definition of intersection in set theory.",
+        "conceptHint": "Concept: Definition of intersection in set theory."
       },
       {
         "id": "a5_3",
@@ -1759,7 +1971,8 @@ const GIS_DATA = [
           "d": "None of the above"
         },
         "answer": "d",
-        "explanation": "If no common result is highlighted, the operation is undefined in text description."
+        "explanation": "If no common result is highlighted, the operation is undefined in text description.",
+        "conceptHint": "Concept: If no common result is highlighted, the operation is undefined in text description."
       },
       {
         "id": "a5_4",
@@ -1771,7 +1984,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "Raster overlays can be mathematical, comparative, or logical."
+        "explanation": "Raster overlays can be mathematical, comparative, or logical.",
+        "conceptHint": "Concept: Raster overlays can be mathematical, comparative, or logical."
       },
       {
         "id": "a5_5",
@@ -1783,7 +1997,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "Neighborhood operations use surrounding cell values for calculations."
+        "explanation": "Neighborhood operations use surrounding cell values for calculations.",
+        "conceptHint": "Concept: Neighborhood operations use surrounding cell values for calculations."
       },
       {
         "id": "a5_6",
@@ -1795,7 +2010,8 @@ const GIS_DATA = [
           "d": "Merging"
         },
         "answer": "b",
-        "explanation": "Neighbourhood analysis focuses on local spatial proximity."
+        "explanation": "Neighbourhood analysis focuses on local spatial proximity.",
+        "conceptHint": "Concept: Neighbourhood analysis focuses on local spatial proximity."
       },
       {
         "id": "a5_7",
@@ -1807,7 +2023,8 @@ const GIS_DATA = [
           "d": "all of the above"
         },
         "answer": "d",
-        "explanation": "Spatial neighborhood functions require these parameters to operate."
+        "explanation": "Spatial neighborhood functions require these parameters to operate.",
+        "conceptHint": "Concept: Spatial neighborhood functions require these parameters to operate."
       },
       {
         "id": "a5_8",
@@ -1819,7 +2036,8 @@ const GIS_DATA = [
           "d": "all of the above"
         },
         "answer": "a",
-        "explanation": "This is the definition of Spatial Interpolation."
+        "explanation": "This is the definition of Spatial Interpolation.",
+        "conceptHint": "Concept: This is the definition of Spatial Interpolation."
       },
       {
         "id": "a5_9",
@@ -1831,7 +2049,8 @@ const GIS_DATA = [
           "d": "Topology"
         },
         "answer": "c",
-        "explanation": "DEMs map the physical topography (bare earth elevation)."
+        "explanation": "DEMs map the physical topography (bare earth elevation).",
+        "conceptHint": "Concept: DEMs map the physical topography (bare earth elevation)."
       },
       {
         "id": "a5_10",
@@ -1843,7 +2062,8 @@ const GIS_DATA = [
           "d": "Offer analysis"
         },
         "answer": "a",
-        "explanation": "Buffer analysis is a primary method for proximity-based spatial search."
+        "explanation": "Buffer analysis is a primary method for proximity-based spatial search.",
+        "conceptHint": "Concept: Buffer analysis is a primary method for proximity-based spatial search."
       }
     ],
     "description": [
@@ -1864,7 +2084,8 @@ const GIS_DATA = [
           "d": "4"
         },
         "answer": "c",
-        "explanation": "Edges, Junctions, and Turns."
+        "explanation": "Edges, Junctions, and Turns.",
+        "conceptHint": "Concept: Edges, Junctions, and Turns."
       },
       {
         "id": "a6_2",
@@ -1876,7 +2097,8 @@ const GIS_DATA = [
           "d": "None of the above"
         },
         "answer": "b",
-        "explanation": "Junctions are connectivity points between linear network edges."
+        "explanation": "Junctions are connectivity points between linear network edges.",
+        "conceptHint": "Concept: Junctions are connectivity points between linear network edges."
       },
       {
         "id": "a6_3",
@@ -1888,7 +2110,8 @@ const GIS_DATA = [
           "d": "Network system"
         },
         "answer": "d",
-        "explanation": "Network systems manage resource flow across linear connectivity infrastructures."
+        "explanation": "Network systems manage resource flow across linear connectivity infrastructures.",
+        "conceptHint": "Concept: Network systems manage resource flow across linear connectivity infrastructures."
       },
       {
         "id": "a6_4",
@@ -1900,7 +2123,8 @@ const GIS_DATA = [
           "d": "Conceptual optimization"
         },
         "answer": "a",
-        "explanation": "Finding the 'least cost' path is known as route optimization."
+        "explanation": "Finding the 'least cost' path is known as route optimization.",
+        "conceptHint": "Concept: Finding the 'least cost' path is known as route optimization."
       },
       {
         "id": "a6_5",
@@ -1912,7 +2136,8 @@ const GIS_DATA = [
           "d": "Network analysis"
         },
         "answer": "d",
-        "explanation": "Network analysis solves complex allocation and routing problems."
+        "explanation": "Network analysis solves complex allocation and routing problems.",
+        "conceptHint": "Concept: Network analysis solves complex allocation and routing problems."
       },
       {
         "id": "a6_6",
@@ -1924,7 +2149,8 @@ const GIS_DATA = [
           "d": "Ramification"
         },
         "answer": "b",
-        "explanation": "Classification aggregates data into meaningful categories."
+        "explanation": "Classification aggregates data into meaningful categories.",
+        "conceptHint": "Concept: Classification aggregates data into meaningful categories."
       },
       {
         "id": "a6_7",
@@ -1936,7 +2162,8 @@ const GIS_DATA = [
           "d": "6"
         },
         "answer": "d",
-        "explanation": "Nominal, Ordinal, Interval, Ratio, etc. (6 standard categories)."
+        "explanation": "Nominal, Ordinal, Interval, Ratio, etc. (6 standard categories).",
+        "conceptHint": "Concept: Nominal, Ordinal, Interval, Ratio, etc."
       },
       {
         "id": "a6_8",
@@ -1948,7 +2175,8 @@ const GIS_DATA = [
           "d": "Standard Deviations"
         },
         "answer": "b",
-        "explanation": "Quantile classification distributes an equal count of features per class."
+        "explanation": "Quantile classification distributes an equal count of features per class.",
+        "conceptHint": "Concept: Quantile classification distributes an equal count of features per class."
       },
       {
         "id": "a6_9",
@@ -1960,7 +2188,8 @@ const GIS_DATA = [
           "d": "Geometrical interval"
         },
         "answer": "c",
-        "explanation": "Standard Deviation classification builds classes around the mean value."
+        "explanation": "Standard Deviation classification builds classes around the mean value.",
+        "conceptHint": "Concept: Standard Deviation classification builds classes around the mean value."
       },
       {
         "id": "a6_10",
@@ -1972,7 +2201,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "Corruption or unintended errors during data transactions."
+        "explanation": "Corruption or unintended errors during data transactions.",
+        "conceptHint": "Concept: Corruption or unintended errors during data transactions."
       }
     ],
     "description": [
@@ -1993,7 +2223,8 @@ const GIS_DATA = [
           "d": "Object-oriented"
         },
         "answer": "a",
-        "explanation": "Hierarchical models use parent-child tree structures."
+        "explanation": "Hierarchical models use parent-child tree structures.",
+        "conceptHint": "Concept: Hierarchical models use parent-child tree structures."
       },
       {
         "id": "a7_2",
@@ -2005,7 +2236,8 @@ const GIS_DATA = [
           "d": "Object-oriented"
         },
         "answer": "b",
-        "explanation": "Relational models use joined columns with shared characteristics."
+        "explanation": "Relational models use joined columns with shared characteristics.",
+        "conceptHint": "Concept: Relational models use joined columns with shared characteristics."
       },
       {
         "id": "a7_3",
@@ -2017,7 +2249,8 @@ const GIS_DATA = [
           "d": "NoData"
         },
         "answer": "d",
-        "explanation": "NoData is a placeholder in rasters for unknown/null values."
+        "explanation": "NoData is a placeholder in rasters for unknown/null values.",
+        "conceptHint": "Concept: NoData is a placeholder in rasters for unknown/null values."
       },
       {
         "id": "a7_4",
@@ -2029,7 +2262,8 @@ const GIS_DATA = [
           "d": "Some data"
         },
         "answer": "a",
-        "explanation": "Raw SRTM data contained 'voids' tagged as NoData pixels."
+        "explanation": "Raw SRTM data contained 'voids' tagged as NoData pixels.",
+        "conceptHint": "Concept: Raw SRTM data contained 'voids' tagged as NoData pixels."
       },
       {
         "id": "a7_5",
@@ -2041,7 +2275,8 @@ const GIS_DATA = [
           "d": "Map projection"
         },
         "answer": "d",
-        "explanation": "Map projection is the mathematical transformation of 3D to 2D."
+        "explanation": "Map projection is the mathematical transformation of 3D to 2D.",
+        "conceptHint": "Concept: Map projection is the mathematical transformation of 3D to 2D."
       },
       {
         "id": "a7_6",
@@ -2053,7 +2288,8 @@ const GIS_DATA = [
           "d": "Potentiality"
         },
         "answer": "b",
-        "explanation": "A map is fundamentally a simplified model of physical or conceptual reality."
+        "explanation": "A map is fundamentally a simplified model of physical or conceptual reality.",
+        "conceptHint": "Concept: A map is fundamentally a simplified model of physical or conceptual reality."
       },
       {
         "id": "a7_7",
@@ -2065,7 +2301,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "Projection always compromises at least one metric (Shape, Area, or Distance)."
+        "explanation": "Projection always compromises at least one metric (Shape, Area, or Distance).",
+        "conceptHint": "Concept: Projection always compromises at least one metric (Shape, Area, or Distance)."
       },
       {
         "id": "a7_8",
@@ -2077,7 +2314,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "These are the three primary developable surfaces for projection."
+        "explanation": "These are the three primary developable surfaces for projection.",
+        "conceptHint": "Concept: These are the three primary developable surfaces for projection."
       },
       {
         "id": "a7_9",
@@ -2089,7 +2327,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "a",
-        "explanation": "Mercator (cylindrical) is famous for preserving directional bearings."
+        "explanation": "Mercator (cylindrical) is famous for preserving directional bearings.",
+        "conceptHint": "Concept: Mercator (cylindrical) is famous for preserving directional bearings."
       },
       {
         "id": "a7_10",
@@ -2101,7 +2340,8 @@ const GIS_DATA = [
           "d": "80"
         },
         "answer": "b",
-        "explanation": "The UTM system divides the globe into 60 longitudinal zones."
+        "explanation": "The UTM system divides the globe into 60 longitudinal zones.",
+        "conceptHint": "Concept: The UTM system divides the globe into 60 longitudinal zones."
       }
     ],
     "description": [
@@ -2122,7 +2362,8 @@ const GIS_DATA = [
           "d": "None of the above"
         },
         "answer": "c",
-        "explanation": "Resolution dictates the smallest object that can be uniquely identified."
+        "explanation": "Resolution dictates the smallest object that can be uniquely identified.",
+        "conceptHint": "Concept: Resolution dictates the smallest object that can be uniquely identified."
       },
       {
         "id": "a8_2",
@@ -2134,7 +2375,8 @@ const GIS_DATA = [
           "d": "None of the above"
         },
         "answer": "b",
-        "explanation": "Lower numerical values represent higher/better spatial resolution."
+        "explanation": "Lower numerical values represent higher/better spatial resolution.",
+        "conceptHint": "Concept: Lower numerical values represent higher/better spatial resolution."
       },
       {
         "id": "a8_3",
@@ -2146,7 +2388,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "Many global DEMs are made public by government space agencies."
+        "explanation": "Many global DEMs are made public by government space agencies.",
+        "conceptHint": "Concept: Many global DEMs are made public by government space agencies."
       },
       {
         "id": "a8_4",
@@ -2158,7 +2401,8 @@ const GIS_DATA = [
           "d": "USGS-DEM, SRTM-DEM and ASTER-GDEM"
         },
         "answer": "c",
-        "explanation": "SRTM and ASTER have provided global 30m products."
+        "explanation": "SRTM and ASTER have provided global 30m products.",
+        "conceptHint": "Concept: SRTM and ASTER have provided global 30m products."
       },
       {
         "id": "a8_5",
@@ -2170,7 +2414,8 @@ const GIS_DATA = [
           "d": "The process of establishing values for areas between an existing set of discrete observations"
         },
         "answer": "d",
-        "explanation": "Interpolation fills the gaps between known sample points."
+        "explanation": "Interpolation fills the gaps between known sample points.",
+        "conceptHint": "Concept: Interpolation fills the gaps between known sample points."
       },
       {
         "id": "a8_6",
@@ -2182,7 +2427,8 @@ const GIS_DATA = [
           "d": "LiDAR data"
         },
         "answer": "a",
-        "explanation": "ISRO's Cartosat series is optimized for high-res stereo imaging for DEM generation."
+        "explanation": "ISRO's Cartosat series is optimized for high-res stereo imaging for DEM generation.",
+        "conceptHint": "Concept: ISRO's Cartosat series is optimized for high-res stereo imaging for DEM generation."
       },
       {
         "id": "a8_7",
@@ -2192,7 +2438,8 @@ const GIS_DATA = [
           "b": "False"
         },
         "answer": "b",
-        "explanation": "Thiessen polygons create abrupt stepped surfaces, not smooth contour lines."
+        "explanation": "Thiessen polygons create abrupt stepped surfaces, not smooth contour lines.",
+        "conceptHint": "Concept: Thiessen polygons create abrupt stepped surfaces, not smooth contour lines."
       },
       {
         "id": "a8_8",
@@ -2204,7 +2451,8 @@ const GIS_DATA = [
           "d": "Slope aspect"
         },
         "answer": "c",
-        "explanation": "Aspect maps the cardinal direction a face of a hill points."
+        "explanation": "Aspect maps the cardinal direction a face of a hill points.",
+        "conceptHint": "Concept: Aspect maps the cardinal direction a face of a hill points."
       },
       {
         "id": "a8_9",
@@ -2216,7 +2464,8 @@ const GIS_DATA = [
           "d": "Precision"
         },
         "answer": "c",
-        "explanation": "Accuracy relates to how close a measurement is to the true global value."
+        "explanation": "Accuracy relates to how close a measurement is to the true global value.",
+        "conceptHint": "Concept: Accuracy relates to how close a measurement is to the true global value."
       },
       {
         "id": "a8_10",
@@ -2228,7 +2477,8 @@ const GIS_DATA = [
           "d": "Nothing"
         },
         "answer": "a",
-        "explanation": "Software treats 'NoData' as a specific valid flag value in the matrix."
+        "explanation": "Software treats 'NoData' as a specific valid flag value in the matrix.",
+        "conceptHint": "Concept: Software treats 'NoData' as a specific valid flag value in the matrix."
       }
     ],
     "description": [
@@ -2249,7 +2499,8 @@ const GIS_DATA = [
           "d": "Quadtree"
         },
         "answer": "b",
-        "explanation": "Elevation is a spatially continuous phenomenon best mapped by rasters."
+        "explanation": "Elevation is a spatially continuous phenomenon best mapped by rasters.",
+        "conceptHint": "Concept: Elevation is a spatially continuous phenomenon best mapped by rasters."
       },
       {
         "id": "a9_2",
@@ -2259,7 +2510,8 @@ const GIS_DATA = [
           "b": "False"
         },
         "answer": "a",
-        "explanation": "Many multi-sensor techniques exist to derive vertical data."
+        "explanation": "Many multi-sensor techniques exist to derive vertical data.",
+        "conceptHint": "Concept: Many multi-sensor techniques exist to derive vertical data."
       },
       {
         "id": "a9_3",
@@ -2271,7 +2523,8 @@ const GIS_DATA = [
           "d": "Both positive and negative integer or real (floating) numbers"
         },
         "answer": "d",
-        "explanation": "DEMs require wide range support for negative altitudes and fractions."
+        "explanation": "DEMs require wide range support for negative altitudes and fractions.",
+        "conceptHint": "Concept: DEMs require wide range support for negative altitudes and fractions."
       },
       {
         "id": "a9_4",
@@ -2281,7 +2534,8 @@ const GIS_DATA = [
           "b": "True"
         },
         "answer": "b",
-        "explanation": "Precise local DEMs uses Total Stations or RTK-GPS survey points."
+        "explanation": "Precise local DEMs uses Total Stations or RTK-GPS survey points.",
+        "conceptHint": "Concept: Precise local DEMs uses Total Stations or RTK-GPS survey points."
       },
       {
         "id": "a9_5",
@@ -2291,7 +2545,8 @@ const GIS_DATA = [
           "b": "False"
         },
         "answer": "a",
-        "explanation": "Many researchers use these interchangeably despite technical differences."
+        "explanation": "Many researchers use these interchangeably despite technical differences.",
+        "conceptHint": "Concept: Many researchers use these interchangeably despite technical differences."
       },
       {
         "id": "a9_6",
@@ -2303,7 +2558,8 @@ const GIS_DATA = [
           "d": "DES"
         },
         "answer": "c",
-        "explanation": "DEM (Digital Elevation Model) is the most generic and widely used industry term."
+        "explanation": "DEM (Digital Elevation Model) is the most generic and widely used industry term.",
+        "conceptHint": "Concept: DEM (Digital Elevation Model) is the most generic and widely used industry term."
       },
       {
         "id": "a9_7",
@@ -2315,7 +2571,8 @@ const GIS_DATA = [
           "d": "None of the above"
         },
         "answer": "b",
-        "explanation": "Remote sensing (Satellite radar/optical) is the only feasible method for global coverage."
+        "explanation": "Remote sensing (Satellite radar/optical) is the only feasible method for global coverage.",
+        "conceptHint": "Concept: Remote sensing (Satellite radar/optical) is the only feasible method for global coverage."
       },
       {
         "id": "a9_8",
@@ -2327,7 +2584,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "Multiple image/signal sources can derive elevation geometry."
+        "explanation": "Multiple image/signal sources can derive elevation geometry.",
+        "conceptHint": "Concept: Multiple image/signal sources can derive elevation geometry."
       },
       {
         "id": "a9_9",
@@ -2339,7 +2597,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "Interpolation enhances the predictive value of raw point samples."
+        "explanation": "Interpolation enhances the predictive value of raw point samples.",
+        "conceptHint": "Concept: Interpolation enhances the predictive value of raw point samples."
       },
       {
         "id": "a9_10",
@@ -2351,7 +2610,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "Functional surfaces represent any phenomenon that varies across space."
+        "explanation": "Functional surfaces represent any phenomenon that varies across space.",
+        "conceptHint": "Concept: Functional surfaces represent any phenomenon that varies across space."
       }
     ],
     "description": [
@@ -2372,7 +2632,8 @@ const GIS_DATA = [
           "d": "Runoff"
         },
         "answer": "c",
-        "explanation": "Geology maps underground structure, while DEMs map surface elevation."
+        "explanation": "Geology maps underground structure, while DEMs map surface elevation.",
+        "conceptHint": "Concept: Geology maps underground structure, while DEMs map surface elevation."
       },
       {
         "id": "a10_2",
@@ -2384,7 +2645,8 @@ const GIS_DATA = [
           "d": "Gradient slope"
         },
         "answer": "b",
-        "explanation": "Slope is mathematically the rate of change of Z relative to XY."
+        "explanation": "Slope is mathematically the rate of change of Z relative to XY.",
+        "conceptHint": "Concept: Slope is mathematically the rate of change of Z relative to XY."
       },
       {
         "id": "a10_3",
@@ -2396,7 +2658,8 @@ const GIS_DATA = [
           "d": "Slope is the gradient of the fall line relative to vertical, while aspect is the direction of the fall line relative to the line of greatest slope."
         },
         "answer": "b",
-        "explanation": "Slope is the 'how steep', Aspect is the 'which direction'."
+        "explanation": "Slope is the 'how steep', Aspect is the 'which direction'.",
+        "conceptHint": "Concept: Slope is the 'how steep', Aspect is the 'which direction'."
       },
       {
         "id": "a10_4",
@@ -2406,7 +2669,8 @@ const GIS_DATA = [
           "b": "False"
         },
         "answer": "a",
-        "explanation": "Simple difference formulas determine cell-to-cell slope values."
+        "explanation": "Simple difference formulas determine cell-to-cell slope values.",
+        "conceptHint": "Concept: Simple difference formulas determine cell-to-cell slope values."
       },
       {
         "id": "a10_5",
@@ -2418,7 +2682,8 @@ const GIS_DATA = [
           "d": "The overall quality of the data"
         },
         "answer": "c",
-        "explanation": "Precision refers to the level of detail/consistency in measurement storage."
+        "explanation": "Precision refers to the level of detail/consistency in measurement storage.",
+        "conceptHint": "Concept: Precision refers to the level of detail/consistency in measurement storage."
       },
       {
         "id": "a10_6",
@@ -2430,7 +2695,8 @@ const GIS_DATA = [
           "d": "The inherent quality of the data as characterized by its accuracy, precision, bias, level of error, etc."
         },
         "answer": "d",
-        "explanation": "Data quality is a multi-factor assessment of information fitness."
+        "explanation": "Data quality is a multi-factor assessment of information fitness.",
+        "conceptHint": "Concept: Data quality is a multi-factor assessment of information fitness."
       },
       {
         "id": "a10_7",
@@ -2442,7 +2708,8 @@ const GIS_DATA = [
           "d": "Cascading"
         },
         "answer": "a",
-        "explanation": "Error Propagation tracks how inaccuracies multiply during series of analysis."
+        "explanation": "Error Propagation tracks how inaccuracies multiply during series of analysis.",
+        "conceptHint": "Concept: Error Propagation tracks how inaccuracies multiply during series of analysis."
       },
       {
         "id": "a10_8",
@@ -2454,7 +2721,8 @@ const GIS_DATA = [
           "d": "All the above"
         },
         "answer": "d",
-        "explanation": "Standard methods for vertical surface derivation."
+        "explanation": "Standard methods for vertical surface derivation.",
+        "conceptHint": "Concept: Standard methods for vertical surface derivation."
       },
       {
         "id": "a10_9",
@@ -2466,7 +2734,8 @@ const GIS_DATA = [
           "d": "Triangle"
         },
         "answer": "c",
-        "explanation": "Raster cells must be geometrically consistent perfect squares."
+        "explanation": "Raster cells must be geometrically consistent perfect squares.",
+        "conceptHint": "Concept: Raster cells must be geometrically consistent perfect squares."
       },
       {
         "id": "a10_10",
@@ -2478,7 +2747,8 @@ const GIS_DATA = [
           "d": "Only positive real values"
         },
         "answer": "a",
-        "explanation": "Full range numerical support is required for elevation models."
+        "explanation": "Full range numerical support is required for elevation models.",
+        "conceptHint": "Concept: Full range numerical support is required for elevation models."
       }
     ],
     "description": [
@@ -2499,7 +2769,8 @@ const GIS_DATA = [
           "d": "Triangle"
         },
         "answer": "c",
-        "explanation": "Standard raster grids utilize square cells."
+        "explanation": "Standard raster grids utilize square cells.",
+        "conceptHint": "Concept: Standard raster grids utilize square cells."
       },
       {
         "id": "a11_2",
@@ -2511,7 +2782,8 @@ const GIS_DATA = [
           "d": "Triangle and rectangular"
         },
         "answer": "a",
-        "explanation": "The overall extent of a raster matrix is always rectangular or square."
+        "explanation": "The overall extent of a raster matrix is always rectangular or square.",
+        "conceptHint": "Concept: The overall extent of a raster matrix is always rectangular or square."
       },
       {
         "id": "a11_3",
@@ -2523,7 +2795,8 @@ const GIS_DATA = [
           "d": "65536"
         },
         "answer": "c",
-        "explanation": "2^8 equals 256 unique discrete values."
+        "explanation": "2^8 equals 256 unique discrete values.",
+        "conceptHint": "Concept: 2^8 equals 256 unique discrete values."
       },
       {
         "id": "a11_4",
@@ -2535,7 +2808,8 @@ const GIS_DATA = [
           "d": "Poor resolution"
         },
         "answer": "a",
-        "explanation": "Higher resolution captures more granular ground details."
+        "explanation": "Higher resolution captures more granular ground details.",
+        "conceptHint": "Concept: Higher resolution captures more granular ground details."
       },
       {
         "id": "a11_5",
@@ -2547,7 +2821,8 @@ const GIS_DATA = [
           "d": "Block encoding"
         },
         "answer": "a",
-        "explanation": "Spaghetti is a non-topological vector data structure."
+        "explanation": "Spaghetti is a non-topological vector data structure.",
+        "conceptHint": "Concept: Spaghetti is a non-topological vector data structure."
       },
       {
         "id": "a11_6",
@@ -2559,7 +2834,8 @@ const GIS_DATA = [
           "d": "DEMs use a simple data model"
         },
         "answer": "d",
-        "explanation": "The matrix grid of a DEM is mathematically simpler than the complex mesh of a TIN."
+        "explanation": "The matrix grid of a DEM is mathematically simpler than the complex mesh of a TIN.",
+        "conceptHint": "Concept: The matrix grid of a DEM is mathematically simpler than the complex mesh of a TIN."
       },
       {
         "id": "a11_7",
@@ -2569,7 +2845,8 @@ const GIS_DATA = [
           "b": "False"
         },
         "answer": "b",
-        "explanation": "Differential GNSS (DGNSS) provides extremely high-accuracy elevation data."
+        "explanation": "Differential GNSS (DGNSS) provides extremely high-accuracy elevation data.",
+        "conceptHint": "Concept: Differential GNSS (DGNSS) provides extremely high-accuracy elevation data."
       },
       {
         "id": "a11_8",
@@ -2579,7 +2856,8 @@ const GIS_DATA = [
           "b": "False"
         },
         "answer": "b",
-        "explanation": "Surface significant points highlight features that *cannot* be derived purely from surrounding averages (like peaks or pits)."
+        "explanation": "Surface significant points highlight features that *cannot* be derived purely from surrounding averages (like peaks or pits).",
+        "conceptHint": "Concept: Surface significant points highlight features that *cannot* be derived purely from surrounding averages (like peaks or pits)."
       },
       {
         "id": "a11_9",
@@ -2591,7 +2869,8 @@ const GIS_DATA = [
           "d": "None of the above"
         },
         "answer": "c",
-        "explanation": "Grid cell size is a permanent structural parameter of the raster file."
+        "explanation": "Grid cell size is a permanent structural parameter of the raster file.",
+        "conceptHint": "Concept: Grid cell size is a permanent structural parameter of the raster file."
       },
       {
         "id": "a11_10",
@@ -2603,7 +2882,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "Functional surfaces can model any statistical probability or characteristic value."
+        "explanation": "Functional surfaces can model any statistical probability or characteristic value.",
+        "conceptHint": "Concept: Functional surfaces can model any statistical probability or characteristic value."
       }
     ],
     "description": [
@@ -2624,7 +2904,8 @@ const GIS_DATA = [
           "d": "Roger Bannister"
         },
         "answer": "b",
-        "explanation": "Roger Tomlinson developed the first operational GIS for Canada."
+        "explanation": "Roger Tomlinson developed the first operational GIS for Canada.",
+        "conceptHint": "Concept: Roger Tomlinson developed the first operational GIS for Canada."
       },
       {
         "id": "a12_2",
@@ -2636,7 +2917,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "These terms refer to the process of calculating visible territory from an observer point."
+        "explanation": "These terms refer to the process of calculating visible territory from an observer point.",
+        "conceptHint": "Concept: These terms refer to the process of calculating visible territory from an observer point."
       },
       {
         "id": "a12_3",
@@ -2648,7 +2930,8 @@ const GIS_DATA = [
           "d": "Precise, precise"
         },
         "answer": "c",
-        "explanation": "Precision is consistency, accuracy is proximity to truth. Being consistently accurate implies high precision."
+        "explanation": "Precision is consistency, accuracy is proximity to truth. Being consistently accurate implies high precision.",
+        "conceptHint": "Concept: Precision is consistency, accuracy is proximity to truth."
       },
       {
         "id": "a12_4",
@@ -2660,7 +2943,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "These parameters are critical for modeling visibility geometry."
+        "explanation": "These parameters are critical for modeling visibility geometry.",
+        "conceptHint": "Concept: These parameters are critical for modeling visibility geometry."
       },
       {
         "id": "a12_5",
@@ -2672,7 +2956,8 @@ const GIS_DATA = [
           "d": "Propagates"
         },
         "answer": "d",
-        "explanation": "In sequential analysis, minor errors tend to grow (propagate) through the chain."
+        "explanation": "In sequential analysis, minor errors tend to grow (propagate) through the chain.",
+        "conceptHint": "Concept: In sequential analysis, minor errors tend to grow (propagate) through the chain."
       },
       {
         "id": "a12_6",
@@ -2684,7 +2969,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "Global factors must be factored in for long-range intervisibility."
+        "explanation": "Global factors must be factored in for long-range intervisibility.",
+        "conceptHint": "Concept: Global factors must be factored in for long-range intervisibility."
       },
       {
         "id": "a12_7",
@@ -2696,7 +2982,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "Maps require essential identifiers to be cartographically valid and interpretable."
+        "explanation": "Maps require essential identifiers to be cartographically valid and interpretable.",
+        "conceptHint": "Concept: Maps require essential identifiers to be cartographically valid and interpretable."
       },
       {
         "id": "a12_8",
@@ -2708,7 +2995,8 @@ const GIS_DATA = [
           "d": "None of the above"
         },
         "answer": "d",
-        "explanation": "These are usually considered 'Disadvantages' or 'Functional Requirements', not benefits."
+        "explanation": "These are usually considered 'Disadvantages' or 'Functional Requirements', not benefits.",
+        "conceptHint": "Concept: These are usually considered 'Disadvantages' or 'Functional Requirements', not benefits."
       },
       {
         "id": "a12_9",
@@ -2720,7 +3008,8 @@ const GIS_DATA = [
           "d": "Pixels"
         },
         "answer": "a",
-        "explanation": "Reversing the surface logic can assist in identifying complex ridge/drainage contour patterns."
+        "explanation": "Reversing the surface logic can assist in identifying complex ridge/drainage contour patterns.",
+        "conceptHint": "Concept: Reversing the surface logic can assist in identifying complex ridge/drainage contour patterns."
       },
       {
         "id": "a12_10",
@@ -2732,7 +3021,8 @@ const GIS_DATA = [
           "d": "All of the above"
         },
         "answer": "d",
-        "explanation": "Point patterns are analyzed to find underlying spatial forces."
+        "explanation": "Point patterns are analyzed to find underlying spatial forces.",
+        "conceptHint": "Concept: Point patterns are analyzed to find underlying spatial forces."
       }
     ],
     "description": [
