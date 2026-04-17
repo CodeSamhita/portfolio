@@ -1,4 +1,4 @@
-﻿window.notesData = [
+﻿[
     {
         "slug":  "lecture_01",
         "sortOrder":  1,
@@ -1976,4 +1976,4 @@
                       }
                   ]
     }
-];
+]
