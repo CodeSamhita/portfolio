@@ -129,6 +129,29 @@ function renderAssignmentTheoryNotes(notes) {
     return section;
 }
 
+function renderStudyMaterialNotes(notes) {
+    const section = makeElement("section", "study-material-notes");
+    const header = makeElement("div", "learning-summary-header");
+    header.appendChild(makeElement("p", "panel-label", "From study material"));
+    header.appendChild(makeElement("h4", null, notes.title));
+    section.appendChild(header);
+    section.appendChild(makeElement("p", "learning-summary-text", notes.focus));
+    section.appendChild(makeElement("p", "source-line", `Source: ${notes.source}`));
+
+    const grid = makeElement("div", "study-material-grid");
+    notes.extracts.forEach((extract) => {
+        const panel = makeElement("article", "study-material-panel");
+        panel.appendChild(makeElement("h5", null, extract.heading));
+        panel.appendChild(makeList(extract.points || [], "plain-list study-material-list"));
+        panel.appendChild(makeElement("p", "theory-subhead", "How this helps MCQs"));
+        panel.appendChild(makeElement("p", "theory-rule", extract.examUse));
+        grid.appendChild(panel);
+    });
+
+    section.appendChild(grid);
+    return section;
+}
+
 function renderOverview() {
     const about = document.getElementById("course-about");
     const instructor = document.getElementById("course-instructor");
@@ -219,6 +242,7 @@ function renderWeekNotes() {
         const bridge = window.assignmentBridges?.[weekData.week];
         const referenceFramework = window.referenceFrameworks?.[weekData.week];
         const assignmentTheory = window.assignmentTheoryNotes?.[weekData.week];
+        const studyMaterial = window.studyMaterialNotes?.[weekData.week];
 
         const topicGrid = makeElement("div", "topic-grid");
         const quickChecks = guide?.quickChecks || window.weekQuickChecks?.[weekData.week] || [];
@@ -253,6 +277,9 @@ function renderWeekNotes() {
         aside.append(assignmentPanel, termsPanel, referencePanel);
         if (guide) {
             body.appendChild(renderLearningGuide(guide, weekData));
+        }
+        if (studyMaterial) {
+            body.appendChild(renderStudyMaterialNotes(studyMaterial));
         }
         if (assignmentTheory) {
             body.appendChild(renderAssignmentTheoryNotes(assignmentTheory));

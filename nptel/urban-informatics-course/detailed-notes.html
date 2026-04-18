@@ -242,6 +242,7 @@
         }
 
         .learning-summary,
+        .study-material-notes,
         .assignment-theory,
         .assignment-bridge,
         .reference-framework {
@@ -250,6 +251,11 @@
             border-radius: 12px;
             padding: 1.25rem;
             margin-bottom: 2rem;
+        }
+
+        .study-material-notes {
+            background: linear-gradient(180deg, rgba(14, 165, 233, 0.12), rgba(15, 23, 42, 0.22));
+            border-color: rgba(56, 189, 248, 0.30);
         }
 
         .assignment-theory {
@@ -271,6 +277,7 @@
         }
 
         .learning-summary .panel-label,
+        .study-material-notes .panel-label,
         .assignment-theory .panel-label,
         .assignment-bridge .panel-label,
         .reference-framework .panel-label,
@@ -284,6 +291,7 @@
         }
 
         .learning-summary h4,
+        .study-material-notes h4,
         .assignment-theory h4,
         .assignment-bridge h4,
         .reference-framework h4 {
@@ -299,7 +307,8 @@
 
         .guide-grid,
         .bridge-grid,
-        .theory-grid {
+        .theory-grid,
+        .study-material-grid {
             display: grid;
             gap: 0.9rem;
             grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -308,7 +317,8 @@
 
         .guide-panel,
         .bridge-panel,
-        .theory-panel {
+        .theory-panel,
+        .study-material-panel {
             background: rgba(15, 23, 42, 0.58);
             border: 1px solid rgba(148, 163, 184, 0.22);
             border-radius: 8px;
@@ -322,7 +332,8 @@
 
         .guide-panel h5,
         .bridge-panel h5,
-        .theory-panel h5 {
+        .theory-panel h5,
+        .study-material-panel h5 {
             color: #bfdbfe;
             font-size: 0.78rem;
             letter-spacing: 0.1em;
@@ -332,7 +343,8 @@
 
         .guide-panel ul,
         .bridge-panel ul,
-        .theory-panel ul {
+        .theory-panel ul,
+        .study-material-panel ul {
             margin-bottom: 0;
         }
 
@@ -358,6 +370,13 @@
             border-left: 4px solid rgba(45, 212, 191, 0.36);
             border-radius: 0 8px 8px 0;
             padding: 0.75rem 0.85rem;
+        }
+
+        .source-line {
+            color: var(--accent-amber);
+            font-size: 0.86rem;
+            font-weight: 700;
+            margin-top: 0.4rem;
         }
 
         .book-chip-wrap {
@@ -513,7 +532,8 @@
 
             .guide-grid,
             .bridge-grid,
-            .theory-grid {
+            .theory-grid,
+            .study-material-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -543,6 +563,7 @@
             .chapter-summary,
             .official-source-note,
             .learning-summary,
+            .study-material-notes,
             .assignment-theory,
             .assignment-bridge,
             .reference-framework,
@@ -555,6 +576,7 @@
             .guide-panel li,
             .bridge-panel li,
             .theory-panel li,
+            .study-material-panel li,
             .bridge-text,
             .theory-rule,
             .reference-ideas,
@@ -2669,6 +2691,7 @@ void loop() {
     <script src="assignment-bridges.js"></script>
     <script src="reference-frameworks.js"></script>
     <script src="assignment-theory-notes.js"></script>
+    <script src="study-material-notes.js"></script>
     <script>
         const sections = document.querySelectorAll('.week-section');
         const navLinks = document.querySelectorAll('.nav-links a');
@@ -2799,6 +2822,32 @@ void loop() {
             return wrapper;
         }
 
+        function buildStudyMaterialNotes(notes) {
+            const wrapper = makeNode('section', 'study-material-notes');
+            const header = makeNode('div', 'learning-summary-header');
+
+            header.appendChild(makeNode('p', 'panel-label', 'From study material'));
+            header.appendChild(makeNode('h4', null, notes.title));
+            wrapper.appendChild(header);
+            wrapper.appendChild(makeNode('p', 'learning-summary-text', notes.focus));
+            wrapper.appendChild(makeNode('p', 'source-line', `Source: ${notes.source}`));
+
+            const grid = makeNode('div', 'study-material-grid');
+            notes.extracts.forEach(extract => {
+                const panel = makeNode('article', 'study-material-panel');
+                panel.appendChild(makeNode('h5', null, extract.heading));
+                const points = makeGuideList(extract.points || []);
+                points.className = 'study-material-list';
+                panel.appendChild(points);
+                panel.appendChild(makeNode('p', 'theory-subhead', 'How this helps MCQs'));
+                panel.appendChild(makeNode('p', 'theory-rule', extract.examUse));
+                grid.appendChild(panel);
+            });
+
+            wrapper.appendChild(grid);
+            return wrapper;
+        }
+
         function buildQuickTest(check) {
             const test = makeNode('details', 'quick-test');
             test.appendChild(makeNode('p', 'quick-label', `Quick test: ${check.topic}`));
@@ -2822,6 +2871,11 @@ void loop() {
                 const chapterSummary = section.querySelector('.chapter-summary');
                 const guideNode = buildLearningGuide(guide, weekNumber);
                 section.insertBefore(guideNode, chapterSummary || section.children[1] || null);
+
+                const studyMaterial = window.studyMaterialNotes?.[weekNumber];
+                if (studyMaterial) {
+                    section.insertBefore(buildStudyMaterialNotes(studyMaterial), chapterSummary || null);
+                }
 
                 const assignmentTheory = window.assignmentTheoryNotes?.[weekNumber];
                 if (assignmentTheory) {
