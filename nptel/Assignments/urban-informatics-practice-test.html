@@ -421,6 +421,7 @@
             background: rgba(255, 255, 255, 0.7);
             border: 1px solid var(--line);
             border-radius: 12px;
+            min-width: 0;
         }
 
         .empty-state {
@@ -457,6 +458,10 @@
         }
 
         @media (max-width: 680px) {
+            .wrap {
+                padding-inline: 0.9rem;
+            }
+
             .summary-bar {
                 grid-template-columns: 1fr;
                 gap: 0.6rem;
@@ -472,7 +477,7 @@
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.9rem;
             }
         }
 
@@ -481,9 +486,22 @@
                 padding: 0 0.75rem 2rem;
             }
 
+            .hero {
+                padding-top: 1.1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.65rem;
+            }
+
             .question-card {
                 padding: 1rem 0.85rem;
                 border-radius: 14px;
+            }
+
+            .question-top {
+                align-items: flex-start;
+                flex-direction: column;
             }
 
             .option-row {
@@ -493,6 +511,11 @@
 
             .button-row {
                 grid-template-columns: 1fr;
+            }
+
+            .breakdown-item {
+                align-items: flex-start;
+                flex-direction: column;
             }
         }
     </style>
