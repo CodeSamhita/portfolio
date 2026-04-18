@@ -60,6 +60,50 @@ function renderLearningGuide(guide, weekData) {
     return section;
 }
 
+function renderAssignmentBridge(bridge) {
+    const section = makeElement("section", "assignment-bridge");
+    const header = makeElement("div", "learning-summary-header");
+    header.appendChild(makeElement("p", "panel-label", "Assignment-first theory"));
+    header.appendChild(makeElement("h4", null, bridge.title));
+    section.appendChild(header);
+    section.appendChild(makeElement("p", "learning-summary-text", bridge.thesis));
+
+    const grid = makeElement("div", "bridge-grid");
+    bridge.groups.forEach((group) => {
+        const panel = makeElement("article", "bridge-panel");
+        panel.appendChild(makeElement("h5", null, group.heading));
+        panel.appendChild(makeElement("p", "bridge-subhead", "PDF questions test"));
+        panel.appendChild(makeList(group.testedBy, "plain-list"));
+        panel.appendChild(makeElement("p", "bridge-subhead", "Theory"));
+        panel.appendChild(makeElement("p", "bridge-text", group.theory));
+        panel.appendChild(makeElement("p", "bridge-subhead", "Answer logic"));
+        panel.appendChild(makeElement("p", "bridge-text", group.answerLogic));
+        grid.appendChild(panel);
+    });
+
+    section.appendChild(grid);
+    return section;
+}
+
+function renderReferenceFramework(framework) {
+    const section = makeElement("section", "reference-framework");
+    const header = makeElement("div", "learning-summary-header");
+    header.appendChild(makeElement("p", "panel-label", "Reference depth"));
+    header.appendChild(makeElement("h4", null, framework.title));
+    section.appendChild(header);
+
+    const bookWrap = makeElement("div", "book-chip-wrap");
+    framework.books.forEach((book) => {
+        bookWrap.appendChild(makeElement("span", "book-chip", book));
+    });
+    section.appendChild(bookWrap);
+    section.appendChild(makeList(framework.ideas, "plain-list reference-ideas"));
+
+    const use = makeElement("p", "course-flow", framework.assignmentUse);
+    section.appendChild(use);
+    return section;
+}
+
 function renderOverview() {
     const about = document.getElementById("course-about");
     const instructor = document.getElementById("course-instructor");
@@ -135,6 +179,8 @@ function renderWeekNotes() {
         const body = makeElement("div", "week-body");
         const overview = makeElement("p", "week-overview", weekData.overview);
         const guide = window.weekGuides?.[weekData.week];
+        const bridge = window.assignmentBridges?.[weekData.week];
+        const referenceFramework = window.referenceFrameworks?.[weekData.week];
 
         const topicGrid = makeElement("div", "topic-grid");
         const quickChecks = guide?.quickChecks || window.weekQuickChecks?.[weekData.week] || [];
@@ -169,6 +215,12 @@ function renderWeekNotes() {
         aside.append(assignmentPanel, termsPanel, referencePanel);
         if (guide) {
             body.appendChild(renderLearningGuide(guide, weekData));
+        }
+        if (bridge) {
+            body.appendChild(renderAssignmentBridge(bridge));
+        }
+        if (referenceFramework) {
+            body.appendChild(renderReferenceFramework(referenceFramework));
         }
         body.append(overview, topicGrid, aside);
 

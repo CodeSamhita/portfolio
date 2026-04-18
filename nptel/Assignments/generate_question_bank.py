@@ -49,6 +49,48 @@ NOISE_RE = re.compile(
     re.IGNORECASE,
 )
 
+TOPIC_THEORY = {
+    "People-place-technology": "The people dimension is about stakeholders who generate, interpret, govern, and use urban data.",
+    "Time-series data": "Time-series data is valuable because it preserves temporal order, making trends, peaks, seasonality, and shocks visible.",
+    "Big data characteristics": "Big-data characteristics describe scale, speed, diversity, reliability, and value of data; velocity is specifically about rapid data inflow.",
+    "Transit data standards": "Transit data standards such as GTFS organize schedules, stops, routes, and service details so systems can share transport information.",
+    "DataSmart Cities framework": "DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
+    "Data-driven governance": "Data-driven governance means decisions are supported by systematically collected and analyzed evidence rather than intuition alone.",
+    "Citizen participation": "Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
+    "Data formats": "Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+    "Relational databases": "Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
+    "Database normalization": "Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+    "NoSQL databases": "NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+    "SQL query logic": "SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+    "SQL aggregation": "Aggregation summarizes grouped records using functions such as COUNT, AVG, SUM, MIN, and MAX.",
+    "API data access": "APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+    "GIS relationships": "GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+    "Database integration": "Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "Object-oriented programming": "OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+    "Python data analysis": "Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
+    "Pandas DataFrames": "A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
+    "Machine learning types": "Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+    "Decision trees": "Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
+    "Ensemble learning": "Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
+    "Boosting": "Boosting builds learners sequentially so later models focus on errors made by earlier models; XGBoost is a common boosted-tree method.",
+    "Association rules": "Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+    "Clustering": "Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
+    "Density clustering": "DBSCAN identifies dense regions and noise; a core point has enough neighbors within epsilon distance.",
+    "Dimensionality reduction": "Dimensionality reduction summarizes many variables into fewer informative components, often to handle correlation or simplify interpretation.",
+    "Neural networks": "Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+    "Activation functions": "Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
+    "Neural network training": "Backpropagation computes gradients of the loss with respect to weights so the network can update itself during training.",
+    "Model explainability": "Explainability methods such as SHAP connect model predictions back to feature contributions.",
+    "Reinforcement learning": "Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
+    "IoT communication": "IoT communication moves sensor data across networks; IP addresses devices and TCP/IP supports reliable transmission.",
+    "Sensor conversion": "ADC converts continuous analog sensor signals into digital values that embedded systems can process.",
+    "Sensing": "Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
+    "Actuation": "Actuators turn control signals into physical actions such as movement, switching, opening, or closing.",
+    "Arduino prototyping": "Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+    "Hotspot analysis": "Hotspot analysis identifies statistically significant spatial clustering of high or low values, often using z-scores.",
+    "GIS queries": "A GIS query selects spatial features or attribute records that meet defined conditions.",
+}
+
 
 def normalize_text(value: str) -> str:
     replacements = {
@@ -95,18 +137,25 @@ def is_reference_only(explanation: str) -> bool:
     return not lowered or lowered.startswith("refer to lecture")
 
 
-def build_question_explanation(prompt: str, options: list[str], correct_indices: list[int], explanation: str) -> str:
+def build_question_explanation(
+    prompt: str,
+    options: list[str],
+    correct_indices: list[int],
+    explanation: str,
+    topic: str,
+) -> str:
     correct_text = format_answer(correct_indices, options)
     target = prompt_target(prompt)
+    theory = TOPIC_THEORY.get(topic, "The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.")
 
     if is_reference_only(explanation):
         return (
             f"The PDF answer key marks {correct_text}. This answer is suitable because it directly addresses "
-            f"{target}, while the other choices point to different concepts or tools."
+            f"{target}. Theory rule: {theory}"
         )
 
     return (
-        f"{explanation} The PDF-marked answer is {correct_text}, which directly addresses {target}."
+        f"{explanation} The PDF-marked answer is {correct_text}, which directly addresses {target}. Theory rule: {theory}"
     )
 
 
@@ -115,21 +164,23 @@ def build_option_explanations(
     options: list[str],
     correct_indices: list[int],
     explanation: str,
+    topic: str,
 ) -> list[str]:
     correct_text = format_answer(correct_indices, options)
     target = prompt_target(prompt)
+    theory = TOPIC_THEORY.get(topic, "Match the answer to the concept, operation, data type, relationship, or workflow described in the question.")
     feedback: list[str] = []
 
     for index, option in enumerate(options):
         if index in correct_indices:
             feedback.append(
-                f"Suitable: the PDF answer key includes this option. It matches {target}."
+                f"Suitable: the PDF answer key includes this option. It matches {target}. Theory check: {theory}"
             )
             continue
 
         feedback.append(
             f"Not suitable: this option says '{option}', but the PDF-marked answer is {correct_text}. "
-            f"It does not match {target}; it refers to a different concept, tool, layer, or relationship."
+            f"It does not match {target}. Theory check: {theory}"
         )
 
     if not is_reference_only(explanation):
@@ -270,6 +321,7 @@ def build_question_bank() -> list[dict]:
             correct_indices = parse_correct_indices(answer_raw, options)
             if not correct_indices:
                 raise ValueError(f"Could not parse correct answer for week {week}, question {number}")
+            topic = infer_topic(week, prompt, options)
 
             bank.append(
                 {
@@ -279,14 +331,14 @@ def build_question_bank() -> list[dict]:
                     "source": pdf_name,
                     "sourceLabel": f"Week {week} assignment PDF",
                     "pdfDirect": True,
-                    "topic": infer_topic(week, prompt, options),
+                    "topic": topic,
                     "prompt": prompt,
                     "options": options,
                     "correctIndices": correct_indices,
                     "multiSelect": len(correct_indices) > 1 or "select all" in prompt.lower(),
                     "pdfAnswer": answer_raw,
-                    "explanation": build_question_explanation(prompt, options, correct_indices, explanation),
-                    "optionExplanations": build_option_explanations(prompt, options, correct_indices, explanation),
+                    "explanation": build_question_explanation(prompt, options, correct_indices, explanation, topic),
+                    "optionExplanations": build_option_explanations(prompt, options, correct_indices, explanation, topic),
                 }
             )
 

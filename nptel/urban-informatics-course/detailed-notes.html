@@ -212,12 +212,23 @@
             color: var(--accent-green);
         }
 
-        .learning-summary {
+        .learning-summary,
+        .assignment-bridge,
+        .reference-framework {
             background: linear-gradient(180deg, rgba(37, 99, 235, 0.12), rgba(16, 185, 129, 0.08));
             border: 1px solid rgba(96, 165, 250, 0.28);
             border-radius: 12px;
             padding: 1.25rem;
             margin-bottom: 2rem;
+        }
+
+        .assignment-bridge {
+            background: linear-gradient(180deg, rgba(245, 158, 11, 0.12), rgba(15, 23, 42, 0.22));
+            border-color: rgba(245, 158, 11, 0.30);
+        }
+
+        .reference-framework {
+            background: linear-gradient(180deg, rgba(16, 185, 129, 0.11), rgba(37, 99, 235, 0.08));
         }
 
         .learning-summary-header {
@@ -245,14 +256,16 @@
             font-weight: 500;
         }
 
-        .guide-grid {
+        .guide-grid,
+        .bridge-grid {
             display: grid;
             gap: 0.9rem;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             margin-top: 1rem;
         }
 
-        .guide-panel {
+        .guide-panel,
+        .bridge-panel {
             background: rgba(15, 23, 42, 0.58);
             border: 1px solid rgba(148, 163, 184, 0.22);
             border-radius: 8px;
@@ -264,7 +277,8 @@
             border-color: rgba(245, 158, 11, 0.28);
         }
 
-        .guide-panel h5 {
+        .guide-panel h5,
+        .bridge-panel h5 {
             color: #bfdbfe;
             font-size: 0.78rem;
             letter-spacing: 0.1em;
@@ -272,8 +286,40 @@
             text-transform: uppercase;
         }
 
-        .guide-panel ul {
+        .guide-panel ul,
+        .bridge-panel ul {
             margin-bottom: 0;
+        }
+
+        .bridge-subhead {
+            color: var(--accent-amber);
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin: 0.75rem 0 0.35rem;
+            text-transform: uppercase;
+        }
+
+        .bridge-text,
+        .reference-ideas {
+            color: var(--text-muted);
+        }
+
+        .book-chip-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+            margin: 0.75rem 0 0.9rem;
+        }
+
+        .book-chip {
+            background: rgba(96, 165, 250, 0.12);
+            border: 1px solid rgba(96, 165, 250, 0.24);
+            border-radius: 8px;
+            color: #bfdbfe;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.35rem 0.6rem;
         }
 
         .course-flow {
@@ -410,7 +456,8 @@
                 gap: 0.65rem;
             }
 
-            .guide-grid {
+            .guide-grid,
+            .bridge-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -439,6 +486,8 @@
 
             .chapter-summary,
             .learning-summary,
+            .assignment-bridge,
+            .reference-framework,
             .highlight-box,
             .quick-test {
                 padding: 1rem;
@@ -446,6 +495,10 @@
 
             .learning-summary-text,
             .guide-panel li,
+            .bridge-panel li,
+            .bridge-text,
+            .reference-ideas,
+            .book-chip,
             .quick-test summary,
             .quick-answer,
             td,
@@ -2541,6 +2594,8 @@ void loop() {
     </main>
 
     <script src="week-guides.js"></script>
+    <script src="assignment-bridges.js"></script>
+    <script src="reference-frameworks.js"></script>
     <script>
         const sections = document.querySelectorAll('.week-section');
         const navLinks = document.querySelectorAll('.nav-links a');
@@ -2595,6 +2650,52 @@ void loop() {
             return wrapper;
         }
 
+        function buildAssignmentBridge(bridge) {
+            const wrapper = makeNode('section', 'assignment-bridge');
+            const header = makeNode('div', 'learning-summary-header');
+
+            header.appendChild(makeNode('p', 'panel-label', 'Assignment-first theory'));
+            header.appendChild(makeNode('h4', null, bridge.title));
+            wrapper.appendChild(header);
+            wrapper.appendChild(makeNode('p', 'learning-summary-text', bridge.thesis));
+
+            const grid = makeNode('div', 'bridge-grid');
+            bridge.groups.forEach(group => {
+                const panel = makeNode('article', 'bridge-panel');
+                panel.appendChild(makeNode('h5', null, group.heading));
+                panel.appendChild(makeNode('p', 'bridge-subhead', 'PDF questions test'));
+                panel.appendChild(makeGuideList(group.testedBy));
+                panel.appendChild(makeNode('p', 'bridge-subhead', 'Theory'));
+                panel.appendChild(makeNode('p', 'bridge-text', group.theory));
+                panel.appendChild(makeNode('p', 'bridge-subhead', 'Answer logic'));
+                panel.appendChild(makeNode('p', 'bridge-text', group.answerLogic));
+                grid.appendChild(panel);
+            });
+
+            wrapper.appendChild(grid);
+            return wrapper;
+        }
+
+        function buildReferenceFramework(framework) {
+            const wrapper = makeNode('section', 'reference-framework');
+            const header = makeNode('div', 'learning-summary-header');
+
+            header.appendChild(makeNode('p', 'panel-label', 'Reference depth'));
+            header.appendChild(makeNode('h4', null, framework.title));
+            wrapper.appendChild(header);
+
+            const bookWrap = makeNode('div', 'book-chip-wrap');
+            framework.books.forEach(book => {
+                bookWrap.appendChild(makeNode('span', 'book-chip', book));
+            });
+            wrapper.appendChild(bookWrap);
+            const ideas = makeGuideList(framework.ideas);
+            ideas.className = 'reference-ideas';
+            wrapper.appendChild(ideas);
+            wrapper.appendChild(makeNode('p', 'course-flow', framework.assignmentUse));
+            return wrapper;
+        }
+
         function buildQuickTest(check) {
             const test = makeNode('details', 'quick-test');
             test.appendChild(makeNode('p', 'quick-label', `Quick test: ${check.topic}`));
@@ -2618,6 +2719,16 @@ void loop() {
                 const chapterSummary = section.querySelector('.chapter-summary');
                 const guideNode = buildLearningGuide(guide, weekNumber);
                 section.insertBefore(guideNode, chapterSummary || section.children[1] || null);
+
+                const bridge = window.assignmentBridges?.[weekNumber];
+                if (bridge) {
+                    section.insertBefore(buildAssignmentBridge(bridge), chapterSummary || null);
+                }
+
+                const framework = window.referenceFrameworks?.[weekNumber];
+                if (framework) {
+                    section.insertBefore(buildReferenceFramework(framework), chapterSummary || null);
+                }
             });
         }
 
