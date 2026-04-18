@@ -27,6 +27,7 @@
 
         html {
             scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
         }
 
         body {
@@ -93,6 +94,7 @@
             font-size: clamp(2.2rem, 5vw, 4.2rem);
             margin-top: 0.7rem;
             margin-bottom: 0.85rem;
+            overflow-wrap: anywhere;
         }
 
         .hero p {
@@ -171,6 +173,7 @@
         select,
         button {
             font: inherit;
+            max-width: 100%;
         }
 
         select {
@@ -179,6 +182,7 @@
             border-radius: 12px;
             color: var(--ink);
             padding: 0.75rem 0.85rem;
+            width: 100%;
         }
 
         .button-row {
@@ -329,12 +333,14 @@
         .question-text {
             font-size: 1.05rem;
             margin-bottom: 0.9rem;
+            overflow-wrap: anywhere;
         }
 
         .question-source {
             color: var(--muted);
             font-size: 0.9rem;
             margin-bottom: 0.7rem;
+            overflow-wrap: anywhere;
         }
 
         .select-note {
@@ -358,6 +364,8 @@
             border-radius: 14px;
             padding: 0.9rem 1rem;
             cursor: pointer;
+            min-width: 0;
+            overflow-wrap: anywhere;
         }
 
         .option-row input {

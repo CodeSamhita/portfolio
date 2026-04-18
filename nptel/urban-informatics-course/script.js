@@ -19,6 +19,47 @@ function makeList(items, className) {
     return list;
 }
 
+function makeGuidePanel(title, items, className) {
+    const panel = makeElement("article", className || "guide-panel");
+    panel.appendChild(makeElement("h5", null, title));
+    panel.appendChild(makeList(items, "plain-list"));
+    return panel;
+}
+
+function renderQuickTest(check) {
+    const quickTest = makeElement("details", "quick-test");
+    const summary = makeElement("summary", null, check.question);
+    const answer = makeElement("p", "quick-answer", check.answer);
+
+    quickTest.appendChild(makeElement("p", "quick-label", `Quick test: ${check.topic}`));
+    quickTest.append(summary, answer);
+    return quickTest;
+}
+
+function renderLearningGuide(guide, weekData) {
+    const section = makeElement("section", "learning-summary");
+    const header = makeElement("div", "learning-summary-header");
+    const label = guide.label || `Week ${weekData.week} guide`;
+
+    header.appendChild(makeElement("p", "panel-label", "Read this first"));
+    header.appendChild(makeElement("h4", null, label));
+    section.appendChild(header);
+    section.appendChild(makeElement("p", "learning-summary-text", guide.summary));
+
+    const grid = makeElement("div", "guide-grid");
+    grid.appendChild(makeGuidePanel("Subject connection", guide.subjectLinks || []));
+    grid.appendChild(makeGuidePanel("Internal topic links", guide.topicLinks || []));
+    grid.appendChild(makeGuidePanel("Assignment signals", guide.assignmentSignals || weekData.assignmentFocus || [], "guide-panel guide-panel-strong"));
+    section.appendChild(grid);
+
+    if (guide.flow) {
+        const flow = makeElement("p", "course-flow", guide.flow);
+        section.appendChild(flow);
+    }
+
+    return section;
+}
+
 function renderOverview() {
     const about = document.getElementById("course-about");
     const instructor = document.getElementById("course-instructor");
@@ -93,12 +134,17 @@ function renderWeekNotes() {
 
         const body = makeElement("div", "week-body");
         const overview = makeElement("p", "week-overview", weekData.overview);
+        const guide = window.weekGuides?.[weekData.week];
 
         const topicGrid = makeElement("div", "topic-grid");
-        weekData.topics.forEach((topic) => {
+        const quickChecks = guide?.quickChecks || window.weekQuickChecks?.[weekData.week] || [];
+        weekData.topics.forEach((topic, topicIndex) => {
             const card = makeElement("article", "topic-card");
             card.appendChild(makeElement("h4", null, topic.title));
             card.appendChild(makeList(topic.notes, "topic-list"));
+            if (quickChecks[topicIndex]) {
+                card.appendChild(renderQuickTest(quickChecks[topicIndex]));
+            }
             topicGrid.appendChild(card);
         });
 
@@ -121,6 +167,9 @@ function renderWeekNotes() {
         referencePanel.appendChild(makeList(weekData.references, "plain-list"));
 
         aside.append(assignmentPanel, termsPanel, referencePanel);
+        if (guide) {
+            body.appendChild(renderLearningGuide(guide, weekData));
+        }
         body.append(overview, topicGrid, aside);
 
         details.append(summary, body);

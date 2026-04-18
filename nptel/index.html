@@ -25,6 +25,10 @@
             padding: 0;
         }
 
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
         body {
             font-family: 'Outfit', sans-serif;
             background-color: var(--bg);
@@ -63,6 +67,7 @@
             background: linear-gradient(to right, #fff, #94a3b8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            overflow-wrap: anywhere;
         }
 
         .description {
@@ -75,7 +80,7 @@
 
         .portal-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
             gap: 1.5rem;
             max-width: 1100px;
             margin: 0 auto;
@@ -87,7 +92,7 @@
             position: relative;
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 20px;
+            border-radius: 8px;
             padding: 2.5rem 1.8rem;
             text-decoration: none;
             color: inherit;
@@ -96,6 +101,7 @@
             flex-direction: column;
             backdrop-filter: blur(12px);
             overflow: hidden;
+            min-width: 0;
         }
 
         .card::before {
@@ -124,7 +130,7 @@
         .card-icon {
             width: 60px;
             height: 60px;
-            border-radius: 16px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -160,6 +166,7 @@
             line-height: 1.6;
             margin-bottom: 2rem;
             flex-grow: 1;
+            overflow-wrap: anywhere;
         }
 
         .card-footer {
@@ -221,7 +228,7 @@
             }
 
             .card {
-                padding: 2rem 1.5rem;
+                padding: 1.6rem 1.2rem;
             }
 
             .badge {
@@ -237,6 +244,11 @@
 
             .description {
                 font-size: 1.1rem;
+            }
+
+            .card-footer {
+                align-items: flex-start;
+                flex-direction: column;
             }
         }
 
@@ -276,7 +288,7 @@
             <p>Access the complete 12-week study guide, lecture summaries, and technical notes for every topic in the
                 course.</p>
             <div class="card-footer">
-                Explore Lessons <span class="arrow">→</span>
+                Explore Lessons <span class="arrow">&rarr;</span>
             </div>
         </a>
         <a href="urban-informatics-course/index.html" class="card">
@@ -292,7 +304,7 @@
             <p>Access the complete 12-week study guide, lecture summaries, and technical notes for every topic in the
                 course.</p>
             <div class="card-footer">
-                Explore Lessons <span class="arrow">→</span>
+                Explore Lessons <span class="arrow">&rarr;</span>
             </div>
         </a>
 
@@ -310,7 +322,7 @@
             <p>Test your knowledge with 160+ assignment-inspired questions. Custom practice sets with detailed
                 explanations and scoring.</p>
             <div class="card-footer">
-                Start Practicing <span class="arrow">→</span>
+                Start Practicing <span class="arrow">&rarr;</span>
             </div>
         </a>
     </main>
