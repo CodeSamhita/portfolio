@@ -1,0 +1,307 @@
+{
+  "week": 10,
+  "title": "Internet of Things (IoT) Fundamentals",
+  "topicSummary": "IoT architecture, protocols (MQTT/HTTP), sensors, actuators, microcontrollers, firmware, cloud integration, case studies.",
+  "content": [
+    {
+      "type": "section_heading",
+      "text": "1. Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "This module introduces IoT (Internet of Things) as the data acquisition layer in Urban Informatics."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Objective:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Understand how real-world data is collected",
+        "Learn communication between devices and cloud",
+        "Study hardware + software integration"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "2. What is IoT?"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> IoT refers to a network of physical devices that sense the environment, communicate data, and act automatically."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Examples in Cities:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Smart traffic lights",
+        "Air quality sensors",
+        "Smart parking systems"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "3. IoT Architecture"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> IoT architecture defines how components interact from device to cloud."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Layers of IoT:"
+    },
+    {
+      "type": "table",
+      "headers": ["Layer", "Function"],
+      "rows": [
+        ["Perception Layer", "Sensors collect data"],
+        ["Network Layer", "Transmit data"],
+        ["Processing Layer", "Analyze data (cloud)"],
+        ["Application Layer", "User interface"]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Data Flow:</strong> Sensor → Microcontroller → Network → Cloud → Dashboard"
+    },
+    {
+      "type": "section_heading",
+      "text": "4. IoT Communication Protocols"
+    },
+    {
+      "type": "sub_heading",
+      "text": "A. MQTT (Message Queuing Telemetry Transport)"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Features:</strong> Lightweight, Publish/Subscribe model, Efficient for low bandwidth",
+        "<strong>Publisher:</strong> sends data",
+        "<strong>Broker:</strong> manages communication",
+        "<strong>Subscriber:</strong> receives data"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "B. HTTP (HyperText Transfer Protocol)"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Request/Response model",
+        "Widely used",
+        "Higher overhead than MQTT"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "MQTT vs HTTP:"
+    },
+    {
+      "type": "table",
+      "headers": ["Feature", "MQTT", "HTTP"],
+      "rows": [
+        ["Model", "Publish/Subscribe", "Request/Response"],
+        ["Efficiency", "High", "Moderate"],
+        ["Use Case", "IoT devices", "Web services"]
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "5. Sensors"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Sensors are devices that collect data from the environment."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Types of Sensors:"
+    },
+    {
+      "type": "table",
+      "headers": ["Sensor", "Measures", "Urban Use"],
+      "rows": [
+        ["Temperature", "Heat", "Weather monitoring"],
+        ["Gas", "Pollution", "Air quality"],
+        ["Ultrasonic", "Distance", "Parking systems"],
+        ["Camera", "Images", "Traffic monitoring"]
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "6. Actuators"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Actuators perform actions based on data received from sensors/controllers."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Examples:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Traffic light control",
+        "Automatic gates",
+        "Smart street lighting"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Key Difference:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Sensor →</strong> collects data",
+        "<strong>Actuator →</strong> performs action"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "7. Microcontrollers"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Microcontrollers are small computing devices that control sensors and actuators."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Examples:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Arduino Uno",
+        "ESP8266",
+        "Raspberry Pi"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Role:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Read sensor data",
+        "Process signals",
+        "Send data to cloud"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "8. Firmware"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Firmware is the software embedded in hardware devices that controls sensors, handles communication, and executes device logic."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Example:</strong> Code running on Arduino to read temperature and send data to the cloud."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Characteristics:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Low-level programming",
+        "Real-time execution",
+        "Controls sensors and actuators"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "9. Cloud Integration"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Connecting IoT devices to cloud platforms for storage, processing, and visualization."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Platforms:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Amazon Web Services (AWS)",
+        "Microsoft Azure",
+        "Google Cloud"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Benefits:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Scalability",
+        "Remote access",
+        "Real-time analytics"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "10. Case Studies (Urban Applications)"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Smart Traffic System:</strong> Sensors detect vehicles → Microcontroller processes → Cloud optimizes signals.",
+        "<strong>Air Quality Monitoring:</strong> Gas sensors measure pollution → Data sent to cloud → Dashboard displays AQI.",
+        "<strong>Smart Parking:</strong> Ultrasonic sensors detect availability → Mobile app shows free slots.",
+        "<strong>Smart Street Lighting:</strong> Motion sensors detect presence → Lights turn on/off automatically."
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "11. IoT Workflow (Very Important)"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "Sensor collects data",
+        "Microcontroller processes signals",
+        "Data transmitted via MQTT/HTTP",
+        "Cloud stores and analyzes",
+        "Dashboard displays results",
+        "Actuator performs action"
+      ]
+    }
+  ],
+  "examSummary": [
+    "IoT = connected devices collecting and acting on data",
+    "Architecture = Perception → Network → Processing → Application",
+    "MQTT = Publish/Subscribe (lightweight for IoT); HTTP = Request/Response (web)",
+    "Sensors → data collection; Actuators → action execution",
+    "Microcontrollers = control unit (Arduino, ESP8266)",
+    "Firmware = embedded software running on devices",
+    "Cloud = storage + analytics platform"
+  ],
+  "keyInsight": "Week 10 connects the physical world to digital systems. 👉 If Week 9 = 'Advanced intelligence', Week 10 = 'Real-world data collection and automation'."
+}

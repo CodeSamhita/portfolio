@@ -1,0 +1,370 @@
+{
+  "week": 3,
+  "title": "Data Access and Management",
+  "topicSummary": "SQL, APIs, web scraping, data cleaning, cloud storage.",
+  "content": [
+    {
+      "type": "section_heading",
+      "text": "1. Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "After learning what data is (Week 2), this module focuses on how to access, retrieve, process, and store urban data efficiently."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Core Pipeline:</strong> Data Sources → Access (SQL/APIs/Scraping) → Cleaning → Storage (Cloud)"
+    },
+    {
+      "type": "section_heading",
+      "text": "2. SQL (Structured Query Language)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> SQL is used to query and manipulate data stored in relational databases."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Core Operations:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Operation",
+        "Purpose",
+        "Example"
+      ],
+      "rows": [
+        [
+          "SELECT",
+          "Retrieve data",
+          "Get traffic records"
+        ],
+        [
+          "INSERT",
+          "Add data",
+          "Add new sensor data"
+        ],
+        [
+          "UPDATE",
+          "Modify data",
+          "Update vehicle speed"
+        ],
+        [
+          "DELETE",
+          "Remove data",
+          "Delete incorrect entries"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "language": "sql",
+      "code": "-- Example Query\nSELECT location, AVG(speed)\nFROM traffic_data\nWHERE time = '08:00'\nGROUP BY location;"
+    },
+    {
+      "type": "paragraph",
+      "text": "👉 This calculates average speed per location at a specific time."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Key Concepts:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Filtering → <strong>WHERE</strong>",
+        "Aggregation → <strong>AVG(), COUNT()</strong>",
+        "Grouping → <strong>GROUP BY</strong>",
+        "Joining tables → <strong>JOIN</strong>"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Use in Urban Informatics:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Traffic analysis",
+        "Population statistics",
+        "Infrastructure monitoring"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "3. APIs (Application Programming Interfaces)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> APIs allow systems to communicate and exchange data programmatically."
+    },
+    {
+      "type": "paragraph",
+      "text": "👉 Instead of manually downloading data, you request it via API."
+    },
+    {
+      "type": "sub_heading",
+      "text": "How APIs Work:"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "Client sends request",
+        "Server processes request",
+        "Server returns data (usually JSON)"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example (Conceptual):"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "import requests\nresponse = requests.get(\"https://api.weather.com/data\")\ndata = response.json()"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Types of APIs:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "REST APIs (most common)",
+        "SOAP APIs (older, structured)"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Urban Use Cases:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Weather data APIs",
+        "Traffic updates",
+        "Public transport schedules"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "4. Web Scraping"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Web scraping is the process of extracting data from websites automatically."
+    },
+    {
+      "type": "sub_heading",
+      "text": "When to Use:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "No API available",
+        "Data is publicly displayed on websites"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Tools:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python libraries: BeautifulSoup, Scrapy, Selenium."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example (Conceptual):"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "from bs4 import BeautifulSoup\nimport requests\nhtml = requests.get(\"https://example.com\").text\nsoup = BeautifulSoup(html, \"html.parser\")\ndata = soup.find_all(\"table\")"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Caution:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Legal restrictions (respect robots.txt)",
+        "Ethical considerations",
+        "Website structure may change"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "5. Data Cleaning"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Data cleaning is the process of preparing raw data for analysis."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Common Issues:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Missing values",
+        "Duplicate records",
+        "Inconsistent formats",
+        "Outliers"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Techniques:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Problem",
+        "Solution"
+      ],
+      "rows": [
+        [
+          "Missing values",
+          "Fill (mean/median) or remove"
+        ],
+        [
+          "Duplicates",
+          "Drop duplicates"
+        ],
+        [
+          "Inconsistent format",
+          "Standardize"
+        ],
+        [
+          "Noise/outliers",
+          "Filter or smooth"
+        ]
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example (Python - Pandas):"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "import pandas as pd\ndf = pd.read_csv(\"traffic.csv\")\ndf = df.drop_duplicates()\ndf = df.fillna(df.mean())"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Importance:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Improves model accuracy",
+        "Ensures reliable analysis",
+        "Reduces errors"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "6. Cloud Storage"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Cloud storage allows data to be stored and accessed over the internet."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Features:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Scalability",
+        "Remote access",
+        "High availability",
+        "Backup and recovery"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Popular Platforms:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Amazon Web Services (AWS), Microsoft Azure, Google Cloud."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Storage Types:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Object storage (files, images)",
+        "Database storage (structured data)",
+        "Data lakes (raw big data)"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Urban Applications:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Real-time traffic monitoring",
+        "Smart city dashboards",
+        "IoT data storage"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "7. Integrated Workflow (Very Important)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>End-to-End Data Flow:</strong>"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "<strong>Data Collection:</strong> Sensors / APIs / scraping",
+        "<strong>Data Access:</strong> SQL queries / API calls",
+        "<strong>Data Cleaning:</strong> Remove errors, standardize",
+        "<strong>Data Storage:</strong> Cloud databases",
+        "<strong>Usage:</strong> Analytics / dashboards / ML"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "8. Real Urban Example"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Traffic Monitoring System:</strong> Sensors collect vehicle data → API streams data to server → SQL queries analyze congestion → Data cleaned for accuracy → Stored in cloud for scalability."
+    }
+  ],
+  "examSummary": [
+    "SQL → Query structured databases",
+    "APIs → Access real-time data",
+    "Web Scraping → Extract web data",
+    "Data Cleaning → Prepare raw data",
+    "Cloud Storage → Store and scale data"
+  ],
+  "keyInsight": "Week 3 is about data pipeline execution. 👉 If Week 2 = “How data is stored”, 👉 Week 3 = “How to access and transport data for use”."
+}

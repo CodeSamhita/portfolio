@@ -1,0 +1,249 @@
+{
+  "week": 6,
+  "title": "Introduction to Machine Learning",
+  "topicSummary": "Machine learning Basics, Foundational theories, Model building, Model training/testing, Model evaluation.",
+  "content": [
+    {
+      "type": "section_heading",
+      "text": "1. Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "This module introduces Machine Learning (ML) as the analytical engine of Urban Informatics."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Objective:</strong> Understand how machines learn, build predictive models, and evaluate performance."
+    },
+    {
+      "type": "section_heading",
+      "text": "2. Machine Learning Basics"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Machine Learning is a subset of AI where systems learn patterns from data and make predictions without explicit programming."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Types of Machine Learning:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Type",
+        "Description",
+        "Urban Example"
+      ],
+      "rows": [
+        [
+          "Supervised Learning",
+          "Uses labeled data",
+          "Traffic prediction"
+        ],
+        [
+          "Unsupervised Learning",
+          "Finds patterns",
+          "Clustering neighborhoods"
+        ],
+        [
+          "Reinforcement Learning",
+          "Learns via rewards",
+          "Traffic signal control"
+        ]
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Key Terminology:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Dataset → Collection of data",
+        "Features (X) → Input variables",
+        "Target (y) → Output variable",
+        "Model → Mathematical function mapping X → y"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "3. Foundational Theories"
+    },
+    {
+      "type": "paragraph",
+      "text": "Machine Learning is built on concepts from:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Statistics:</strong> Mean, variance, probability distributions.",
+        "<strong>Linear Algebra:</strong> Vectors and matrices, data representation.",
+        "<strong>Optimization:</strong> Minimizing error functions (Gradient descent)."
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example Concept: Linear Relationship"
+    },
+    {
+      "type": "paragraph",
+      "text": "<code>y = mx + b</code> Used in linear regression to predict values (e.g., traffic vs time)."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Loss Function (Error Measurement):"
+    },
+    {
+      "type": "paragraph",
+      "text": "MSE = (1/n) * Σ(yi - ŷi)² 👉 Measures how far predictions are from actual values."
+    },
+    {
+      "type": "section_heading",
+      "text": "4. Model Building"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Creating a mathematical model that captures patterns in data."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Steps:</strong> Select algorithm → Define features → Define target."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Example:</strong> Input (Traffic volume, time) → Output (Predicted congestion level)."
+    },
+    {
+      "type": "section_heading",
+      "text": "5. Model Training and Testing"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Training Phase:</strong> Model learns from training data.",
+        "<strong>Testing Phase:</strong> Model is evaluated on unseen (test) data."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Data Split:</strong> Training set (70–80%), Testing set (20–30%)."
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    from sklearn.model_selection import train_test_split\n    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "paragraph",
+      "text": "👉 <strong>Key Insight:</strong> Training captures patterns; Testing checks generalization."
+    },
+    {
+      "type": "section_heading",
+      "text": "6. Model Evaluation"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Assessing how well a model performs."
+    },
+    {
+      "type": "sub_heading",
+      "text": "A. Regression Metrics:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "MAE: Average absolute error",
+        "MSE: Squared error",
+        "RMSE: Root of MSE"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "B. Classification Metrics:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Accuracy: Correct predictions",
+        "Precision: Correct positive predictions",
+        "Recall: Coverage of actual positives",
+        "F1 Score: Balance of precision & recall"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Overfitting vs Underfitting:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Problem",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Overfitting",
+          "Model memorizes data, poor generalization"
+        ],
+        [
+          "Underfitting",
+          "Model too simple, misses patterns"
+        ]
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example (Conceptual Code):"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    from sklearn.metrics import mean_squared_error\n    error = mean_squared_error(y_test, predictions)\n    print(\"MSE:\", error)\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "section_heading",
+      "text": "7. ML Workflow (Very Important)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>End-to-End Pipeline:</strong> Data collection → Data cleaning → Feature selection → Model building → Training → Testing → Evaluation → Deployment."
+    },
+    {
+      "type": "section_heading",
+      "text": "8. Urban Informatics Applications"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Traffic prediction",
+        "Pollution forecasting",
+        "Crime analysis",
+        "Public transport optimization"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example Scenario:"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Predict traffic congestion:</strong> Input → Time, location, vehicle count | Model → Regression | Output → Congestion level."
+    }
+  ],
+  "examSummary": [
+    "Machine Learning = learning from data, not explicit programming",
+    "Types → supervised (labeled data), unsupervised (patterns), reinforcement (rewards)",
+    "Model building → select algorithm, define features (X) and target (y)",
+    "Train/test split: 70-80% training, 20-30% testing",
+    "Regression metrics = MAE, MSE, RMSE; Classification = Accuracy, Precision, Recall, F1",
+    "Overfitting = memorizes training data; Underfitting = model too simple",
+    "ML Workflow: Collect → Clean → Feature select → Build → Train → Test → Evaluate → Deploy"
+  ],
+  "keyInsight": "Week 6 introduces intelligence into systems. 👉 If Week 5 = 'Understand data', Week 6 = 'Predict and automate decisions using data'."
+}

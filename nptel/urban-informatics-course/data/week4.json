@@ -1,0 +1,316 @@
+{
+  "week": 4,
+  "title": "Programming Fundamentals with Python",
+  "topicSummary": "Python syntax, control structures, functions, file I/O, object-oriented programming and examples.",
+  "content": [
+    {
+      "type": "section_heading",
+      "text": "1. Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "This module introduces Python as the primary programming tool for Urban Informatics."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Objective:</strong> Enable you to write programs to process urban data, build reusable logic, and prepare for data analysis and machine learning."
+    },
+    {
+      "type": "section_heading",
+      "text": "2. Python Syntax (Basics)"
+    },
+    {
+      "type": "sub_heading",
+      "text": "What is Python?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python is a high-level, interpreted programming language known for readability and simplicity."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Key Features:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Easy syntax (close to English)",
+        "Dynamically typed",
+        "Extensive libraries (Pandas, NumPy, etc.)"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Basic Syntax Example:"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    name = input(\"Enter your name: \")\n    print(f\"Hello, {name}\")\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Core Elements:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Variables → store data",
+        "Data types → int, float, string, list, dict",
+        "Indentation → defines code blocks (no braces {})"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "3. Control Structures"
+    },
+    {
+      "type": "paragraph",
+      "text": "Control structures determine program flow."
+    },
+    {
+      "type": "sub_heading",
+      "text": "A. Conditional Statements"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    speed = int(input(\"Enter speed: \"))\n    if speed > 60:\n        print(\"Over-speeding\")\n    elif speed > 30:\n        print(\"Normal speed\")\n    else:\n        print(\"Slow\")\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "sub_heading",
+      "text": "B. Loops"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>For Loop:</strong>"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    for i in range(5):\n        print(\"Sensor reading:\", i)\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>While Loop:</strong>"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    count = 0\n    while count < 3:\n        print(\"Monitoring...\")\n        count += 1\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Use in Urban Informatics:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Iterating over sensor data",
+        "Applying conditions on traffic rules",
+        "Automating repetitive tasks"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "4. Functions"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Functions are reusable blocks of code that perform a specific task."
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    def calculate_average_speed(speeds):\n        return sum(speeds) / len(speeds)\n\n    data = [40, 50, 60]\n    print(calculate_average_speed(data))\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Types of Functions:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Built-in → <code>len()</code>, <code>sum()</code>",
+        "User-defined → custom logic"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Benefits:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Code reuse",
+        "Modularity",
+        "Easier debugging"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "5. File I/O (Input/Output)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> File I/O allows programs to read and write data to files."
+    },
+    {
+      "type": "sub_heading",
+      "text": "A. Writing to a File:"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    with open(\"data.txt\", \"w\") as file:\n        file.write(\"Urban data sample\")\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "sub_heading",
+      "text": "B. Reading from a File:"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    with open(\"data.txt\", \"r\") as file:\n        content = file.read()\n        print(content)\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Use Cases:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Storing sensor data",
+        "Reading datasets",
+        "Logging system activity"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "6. Object-Oriented Programming (OOP)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> OOP organizes code into objects and classes."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Key Concepts:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Concept",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Class",
+          "Blueprint for objects"
+        ],
+        [
+          "Object",
+          "Instance of a class"
+        ],
+        [
+          "Attribute",
+          "Data of object"
+        ],
+        [
+          "Method",
+          "Function inside class"
+        ]
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    class TrafficSensor:\n        def __init__(self, location, speed):\n            self.location = location\n            self.speed = speed\n\n        def display(self):\n            print(f\"Location: {self.location}, Speed: {self.speed}\")\n\n    sensor1 = TrafficSensor(\"MG Road\", 45)\n    sensor1.display()\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Advanced Concepts:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Inheritance",
+        "Encapsulation",
+        "Polymorphism"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Modeling real-world entities: Vehicles, Sensors, Traffic systems."
+    },
+    {
+      "type": "section_heading",
+      "text": "7. Example: Urban Use Case Program"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Scenario:</strong> Analyze traffic speeds and flag violations."
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    class TrafficMonitor:\n        def __init__(self, speeds):\n            self.speeds = speeds\n\n        def check_violations(self):\n            violations = []\n            for s in self.speeds:\n                if s > 60:\n                    violations.append(s)\n            return violations\n\n    data = [45, 70, 55, 80]\n    monitor = TrafficMonitor(data)\n    print(\"Violations:\", monitor.check_violations())\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "section_heading",
+      "text": "8. Key Concepts Integration"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Workflow:</strong> Input data → File/API → Process (Loops + conditions) → Organize (Functions / Classes) → Output (Files / dashboards)."
+    },
+    {
+      "type": "section_heading",
+      "text": "9. Common Errors (Important)"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Error Type",
+        "Cause"
+      ],
+      "rows": [
+        [
+          "Syntax Error",
+          "Wrong indentation / grammar"
+        ],
+        [
+          "Type Error",
+          "Mixing incompatible data types"
+        ],
+        [
+          "Runtime Error",
+          "Invalid input or logic during execution"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "👉 <strong>Using try-except ensures:</strong> Program doesn’t crash, Errors are handled gracefully."
+    }
+  ],
+  "examSummary": [
+    "Python syntax is simple and readable",
+    "Control structures manage logic flow",
+    "Functions improve modularity",
+    "File I/O handles data storage",
+    "OOP models real-world systems"
+  ],
+  "keyInsight": "Week 4 is where you move from understanding data to writing programs that process it."
+}

@@ -1,0 +1,226 @@
+{
+  "week": 9,
+  "title": "Deep Learning and Neural Networks",
+  "topicSummary": "Neural architectures, activation functions, backpropagation, CNN, time series modeling (LSTM) etc., Case studies.",
+  "content": [
+    {
+      "type": "section_heading",
+      "text": "1. Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "This module advances from classical ML (Week 6–8) to Deep Learning for complex pattern recognition and sequential predictions."
+    },
+    {
+      "type": "section_heading",
+      "text": "2. What are Neural Networks?"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> A Neural Network is a computational model inspired by the brain, consisting of interconnected nodes (neurons)."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Basic Structure:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Input Layer → receives data",
+        "Hidden Layers → process information",
+        "Output Layer → produces result"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Mathematical Representation:</strong> <code>y = f(Wx + b)</code> where W is weights, b is bias, and f is the activation function."
+    },
+    {
+      "type": "section_heading",
+      "text": "3. Neural Architectures"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Type",
+        "Description",
+        "Use Case"
+      ],
+      "rows": [
+        [
+          "Feedforward NN",
+          "No loops",
+          "General prediction"
+        ],
+        [
+          "DNN",
+          "Multiple hidden layers",
+          "Complex patterns"
+        ],
+        [
+          "CNN",
+          "Image processing",
+          "Traffic cameras"
+        ],
+        [
+          "RNN/LSTM",
+          "Sequential data",
+          "Time series"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "👉 <strong>Key Idea:</strong> More layers allow learning of complex, nonlinear relationships."
+    },
+    {
+      "type": "section_heading",
+      "text": "4. Activation Functions"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Introduce non-linearity to allow learning of complex patterns."
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Sigmoid:</strong> <code>σ(x) = 1 / (1 + e^-x)</code>",
+        "<strong>ReLU:</strong> <code>f(x) = max(0, x)</code> (Most commonly used)",
+        "<strong>Tanh:</strong> <code>tanh(x)</code>"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "5. Backpropagation"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> The algorithm used to train neural networks by updating weights using gradient descent to minimize error."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Process:</strong> Forward pass → Calculate error → Backward pass (compute gradients) → Update weights."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Error Function Example:</strong> <code>L = ½(y - ŷ)²</code>"
+    },
+    {
+      "type": "section_heading",
+      "text": "6. Convolutional Neural Networks (CNN)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Specialized for image and spatial data processing."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Components:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Convolution layers, Pooling layers, Fully connected layers."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Applications:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Traffic camera analysis, Vehicle detection, Crowd monitoring."
+    },
+    {
+      "type": "section_heading",
+      "text": "7. Time Series Modeling (LSTM)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Long Short-Term Memory (LSTM) is a type of RNN used for sequential/time-dependent data."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Why LSTM?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Captures long-term dependencies that traditional models miss."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Key Gates:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Forget gate, Input gate, Output gate."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Applications:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Traffic prediction over time, Weather forecasting, Energy demand prediction."
+    },
+    {
+      "type": "section_heading",
+      "text": "8. Deep Learning Workflow"
+    },
+    {
+      "type": "paragraph",
+      "text": "Data collection → Preprocessing → Model selection (CNN, LSTM) → Training (backpropagation) → Evaluation → Deployment."
+    },
+    {
+      "type": "section_heading",
+      "text": "9. Case Studies (Urban Applications)"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Case Study 1 (Traffic Monitoring):</strong> CNN analyzes camera images for vehicle count.",
+        "<strong>Case Study 2 (Traffic Forecasting):</strong> LSTM uses historical data for future congestion prediction.",
+        "<strong>Case Study 3 (Crowd Density):</strong> DNN estimates population density.",
+        "<strong>Case Study 4 (Smart Surveillance):</strong> CNN detects anomalies."
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "10. Challenges in Deep Learning"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Challenge",
+        "Explanation"
+      ],
+      "rows": [
+        [
+          "Data requirement",
+          "Needs large datasets"
+        ],
+        [
+          "Computation cost",
+          "Requires GPUs"
+        ],
+        [
+          "Overfitting",
+          "Complex models may memorize data"
+        ],
+        [
+          "Interpretability",
+          "\"Black box\" nature; hard to explain decisions"
+        ]
+      ]
+    }
+  ],
+  "examSummary": [
+    "Neural networks mimic brain structure",
+    "Activation functions add non-linearity",
+    "Backpropagation trains models",
+    "CNN → image data",
+    "LSTM → time series data"
+  ],
+  "keyInsight": "Week 9 introduces high-level intelligence systems. 👉 If Week 7–8 = “Learning patterns”, 👉 Week 9 = “Learning complex real-world representations”."
+}

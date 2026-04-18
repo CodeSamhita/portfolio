@@ -1,0 +1,227 @@
+{
+  "week": 7,
+  "title": "Supervised Learning for Urban Prediction",
+  "topicSummary": "Classification, regression, decision trees, support vector machines (SVM) etc. Case studies.",
+  "content": [
+    {
+      "type": "section_heading",
+      "text": "1. Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "This module focuses on Supervised Learning, the most widely used machine learning paradigm in urban analytics."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Objective:</strong> Predict outcomes using labeled data, understand key algorithms, and apply them to real-world prediction problems."
+    },
+    {
+      "type": "section_heading",
+      "text": "2. What is Supervised Learning?"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Supervised learning uses a dataset where inputs (features) and outputs (labels/targets) are already known."
+    },
+    {
+      "type": "paragraph",
+      "text": "👉 The model learns a mapping: <code>X → y</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Example:</strong> Input (Time, location, vehicle count) → Output (Traffic congestion level)."
+    },
+    {
+      "type": "section_heading",
+      "text": "3. Types of Supervised Learning"
+    },
+    {
+      "type": "sub_heading",
+      "text": "A. Regression"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Used when the output is continuous (numerical)."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Example:</strong> Predict traffic speed, Predict pollution level."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Model Representation:</strong> <code>y = β0 + β1x</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Common Algorithms:</strong> Linear Regression, Polynomial Regression."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Key Idea:</strong> Predict exact values."
+    },
+    {
+      "type": "sub_heading",
+      "text": "B. Classification"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Used when the output is categorical (classes)."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Example:</strong> Traffic condition (Low / Medium / High), Accident risk (Yes / No)."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Output:</strong> Discrete labels."
+    },
+    {
+      "type": "section_heading",
+      "text": "4. Decision Trees"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> A tree-based model that splits data based on conditions."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Structure:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Root node → starting point",
+        "Decision nodes → conditions",
+        "Leaf nodes → final output"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Example:</strong> If traffic > 50 → High congestion; Else → Low congestion."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Advantages/Limitations:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Advantages:</strong> Easy to understand, works with both classification and regression.",
+        "<strong>Limitations:</strong> Can overfit, sensitive to data changes."
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "5. Support Vector Machines (SVM)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> SVM finds the optimal boundary (hyperplane) that separates data into classes by maximizing the margin between them."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Mathematical Representation:</strong> <code>w · x + b = 0</code>"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Features/Limitations:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Features:</strong> Works well in high-dimensional data, effective for classification.",
+        "<strong>Limitations:</strong> Computationally expensive, hard to interpret."
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "6. Regression vs Classification (Comparison)"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Feature",
+        "Regression",
+        "Classification"
+      ],
+      "rows": [
+        [
+          "Output",
+          "Continuous",
+          "Discrete"
+        ],
+        [
+          "Example",
+          "Speed prediction",
+          "Traffic category"
+        ],
+        [
+          "Algorithms",
+          "Linear regression",
+          "SVM, decision tree"
+        ]
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "7. Model Workflow (Supervised Learning)"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "Collect labeled data",
+        "Split into training/testing",
+        "Train model",
+        "Predict outputs",
+        "Evaluate performance"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "8. Case Studies (Urban Applications)"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Case Study 1 (Traffic Congestion):</strong> Input: Vehicle count, time, road type → Model: Regression → Output: Congestion level.",
+        "<strong>Case Study 2 (Accident Risk):</strong> Input: Weather, speed, road condition → Model: Decision Tree / SVM → Output: Risk category.",
+        "<strong>Case Study 3 (Air Quality):</strong> Input: Emissions, weather data → Model: Regression → Output: AQI value."
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "9. Practical Example (Conceptual Code)"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    from sklearn.linear_model import LinearRegression\n    model = LinearRegression()\n    model.fit(X_train, y_train)\n    predictions = model.predict(X_test)\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "section_heading",
+      "text": "10. Common Challenges"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Overfitting:</strong> Model memorizes training data.",
+        "<strong>Underfitting:</strong> Model too simple.",
+        "<strong>Data imbalance:</strong> Unequal class distribution."
+      ]
+    }
+  ],
+  "examSummary": [
+    "Supervised learning uses labeled data",
+    "Regression → continuous output",
+    "Classification → categorical output",
+    "Decision trees → rule-based model",
+    "SVM → optimal boundary classifier"
+  ],
+  "keyInsight": "Week 7 applies ML to real prediction problems. 👉 If Week 6 = “What is ML?”, 👉 Week 7 = “How ML predicts real urban outcomes”."
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +33,7 @@
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 0% 0%, rgba(79, 70, 229, 0.15) 0%, transparent 40%),
                 radial-gradient(circle at 100% 100%, rgba(14, 165, 233, 0.15) 0%, transparent 40%);
         }
@@ -104,7 +105,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent);
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.03), transparent);
             transform: translateX(-100%);
             transition: 0.6s;
         }
@@ -112,7 +113,7 @@
         .card:hover {
             transform: translateY(-10px);
             border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             background: rgba(255, 255, 255, 0.06);
         }
 
@@ -190,8 +191,15 @@
             letter-spacing: 0.05em;
         }
 
-        .study-badge { background: rgba(79, 70, 229, 0.1); color: #818cf8; }
-        .practice-badge { background: rgba(14, 165, 233, 0.1); color: #38bdf8; }
+        .study-badge {
+            background: rgba(79, 70, 229, 0.1);
+            color: #818cf8;
+        }
+
+        .practice-badge {
+            background: rgba(14, 165, 233, 0.1);
+            color: #38bdf8;
+        }
 
         footer {
             margin-top: auto;
@@ -203,28 +211,56 @@
         }
 
         @media (max-width: 600px) {
-            header { padding: 4rem 1.5rem 2rem; }
-            .portal-grid { padding: 0 1.5rem 4rem; }
+            header {
+                padding: 4rem 1.5rem 2rem;
+            }
+
+            .portal-grid {
+                padding: 0 1.5rem 4rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header>
         <span class="eyebrow">NPTEL Course Portal</span>
         <h1>Urban Informatics</h1>
-        <p class="description">Select a module to continue your learning journey. Access structured notes or test your knowledge with assignment-based practice.</p>
+        <p class="description">Select a module to continue your learning journey. Access structured notes or test your
+            knowledge with assignment-based practice.</p>
     </header>
 
     <main class="portal-grid">
         <!-- Study Hub -->
+        <a href="urban-informatics-course/detailed-notes.html" class="card">
+            <span class="badge study-badge">Module 1</span>
+            <div class="card-icon study-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+            </div>
+            <h2>Detailed Notes</h2>
+            <p>Access the complete 12-week study guide, lecture summaries, and technical notes for every topic in the
+                course.</p>
+            <div class="card-footer">
+                Explore Lessons <span class="arrow">→</span>
+            </div>
+        </a>
         <a href="urban-informatics-course/index.html" class="card">
             <span class="badge study-badge">Module 1</span>
             <div class="card-icon study-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
             </div>
             <h2>Curriculum Hub</h2>
-            <p>Access the complete 12-week study guide, lecture summaries, and technical notes for every topic in the course.</p>
+            <p>Access the complete 12-week study guide, lecture summaries, and technical notes for every topic in the
+                course.</p>
             <div class="card-footer">
                 Explore Lessons <span class="arrow">→</span>
             </div>
@@ -234,10 +270,15 @@
         <a href="Assignments/urban-informatics-practice-test.html" class="card">
             <span class="badge practice-badge">Practice</span>
             <div class="card-icon practice-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 11 3 3L22 4"></path>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                </svg>
             </div>
             <h2>Practice Lab</h2>
-            <p>Test your knowledge with 160+ assignment-inspired questions. Custom practice sets with detailed explanations and scoring.</p>
+            <p>Test your knowledge with 160+ assignment-inspired questions. Custom practice sets with detailed
+                explanations and scoring.</p>
             <div class="card-footer">
                 Start Practicing <span class="arrow">→</span>
             </div>
@@ -249,4 +290,5 @@
     </footer>
 
 </body>
+
 </html>

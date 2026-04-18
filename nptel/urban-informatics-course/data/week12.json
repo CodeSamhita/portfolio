@@ -1,0 +1,381 @@
+{
+  "week": 12,
+  "title": "Integrated Urban Systems and Data Platforms",
+  "topicSummary": "Geospatial analysis and dashboards, real-time analytics, PostGIS, Tableau, urban simulation, agent-based simulation, bus service optimization, bicycle sharing systems, opportunities, challenges and limitations, course summary.",
+  "content": [
+    {
+      "type": "section_heading",
+      "text": "1. Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is the final integration module of the course. It combines all previous components — data collection (IoT), storage (databases/cloud), analysis (ML/AI), and visualization (dashboards) — to build complete smart urban systems."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Objective:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Combine all course components into an integrated system",
+        "Apply geospatial analysis to urban problems",
+        "Understand simulation in urban planning",
+        "Evaluate real case studies"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "2. Geospatial Analysis"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Geospatial analysis involves analyzing data with location information (latitude, longitude)."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Key Concepts:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Spatial data (maps, coordinates)",
+        "Layers (roads, buildings, population zones)",
+        "Spatial queries (distance, overlap, intersection)"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Applications:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Traffic flow mapping",
+        "Land use planning",
+        "Disaster management"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "3. Dashboards and Visualization Tools"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Dashboards provide interactive visual insights from data."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Tools:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Tableau:</strong> Drag-and-drop visual analytics platform",
+        "<strong>Power BI:</strong> Microsoft's business intelligence tool"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Features:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Real-time updates",
+        "Interactive filters",
+        "Multi-source data integration"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "4. Real-Time Analytics"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Processing data as it is generated, with no or minimal delay."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Examples:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Live traffic updates",
+        "Emergency response systems",
+        "Pollution monitoring"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Technologies:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Stream processing systems (Apache Kafka, Spark Streaming)",
+        "Cloud-based analytics platforms"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "5. PostGIS"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> PostGIS is an extension of PostgreSQL that adds support for geographic objects, enabling spatial queries."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Features:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Store spatial/geographic data",
+        "Perform geographic queries",
+        "Integrate with GIS tools like QGIS"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example Query:"
+    },
+    {
+      "type": "code",
+      "language": "sql",
+      "code": "SELECT * FROM roads\nWHERE ST_Distance(location, point) < 500;\n\n-- 👉 Finds all roads within 500 meters of a given point."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Use Cases:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Route optimization",
+        "Urban planning (zoning analysis)",
+        "Location-based services"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "6. Urban Simulation"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Simulation models represent real-world urban systems digitally to test scenarios before real implementation."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Types:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Traffic simulation",
+        "Population movement simulation",
+        "Infrastructure planning simulation"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "7. Agent-Based Simulation"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Simulates the behavior of individual agents (people, vehicles) and how their interactions produce system-level behavior."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Key Idea:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Each agent follows simple rules",
+        "Complex system behavior emerges from interactions"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example: Traffic Simulation"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Each car = one agent",
+        "Rules = speed limits, signal behavior, lane changes",
+        "Output = emergent traffic patterns, congestion zones"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Applications:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Crowd movement modeling",
+        "Traffic congestion analysis",
+        "Emergency evacuation planning"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "8. Case Study: Bus Service Optimization"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Objective:</strong> Improve efficiency of public transport networks."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Approach:"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "Collect GPS route data from buses",
+        "Analyze passenger demand patterns",
+        "Optimize routes using ML + GIS"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Outcome:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Reduced travel time",
+        "Better resource utilization",
+        "Improved passenger satisfaction"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "9. Case Study: Bicycle Sharing Systems"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Example:</strong> Public Bicycle Sharing Systems (like Yulu, Rapido Bike)."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Components:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "GPS-enabled bicycles",
+        "Docking stations",
+        "Mobile apps",
+        "Data analytics backend"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Optimization Using Data:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Predict demand at each station",
+        "Balance bike distribution across the city",
+        "Improve station placement using GIS"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "10. Opportunities in Urban Informatics"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Smart city development",
+        "Sustainable urban planning",
+        "AI-driven governance",
+        "Optimized urban mobility"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "11. Challenges and Limitations"
+    },
+    {
+      "type": "table",
+      "headers": ["Category", "Challenges"],
+      "rows": [
+        ["Technical", "Data integration, scalability, real-time processing complexity"],
+        ["Social", "Privacy concerns, digital divide, adoption barriers"],
+        ["Economic", "High infrastructure cost, maintenance requirements"]
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "12. Integrated System Architecture (Very Important)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Complete Workflow:</strong>"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "<strong>Data Collection:</strong> IoT sensors (Week 10–11)",
+        "<strong>Data Storage:</strong> Cloud databases and PostGIS",
+        "<strong>Data Processing:</strong> ML/AI models (Week 6–9)",
+        "<strong>Geospatial Analysis:</strong> GIS tools",
+        "<strong>Visualization:</strong> Dashboards (Tableau, Power BI)",
+        "<strong>Decision Making:</strong> Policy + automation"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "13. Final Course Summary"
+    },
+    {
+      "type": "table",
+      "headers": ["Stage", "Concept"],
+      "rows": [
+        ["Week 1–2", "Data types and urban systems"],
+        ["Week 3–5", "Data access, processing, and analysis"],
+        ["Week 6–9", "Machine learning and AI"],
+        ["Week 10–11", "IoT and hardware"],
+        ["Week 12", "Integration of all systems"]
+      ]
+    }
+  ],
+  "examSummary": [
+    "Geospatial analysis → location-based insights using spatial data",
+    "PostGIS → PostgreSQL extension for geographic queries (ST_Distance, etc.)",
+    "Dashboards → Tableau/Power BI for interactive visualization",
+    "Real-time analytics → live data processing for instant decisions",
+    "Agent-based simulation → each agent has rules, complex behavior emerges",
+    "Bus optimization → ML + GIS to improve route efficiency",
+    "Bicycle sharing → GPS + analytics to balance supply/demand",
+    "Challenges = technical (integration) + social (privacy) + economic (cost)"
+  ],
+  "keyInsight": "Week 12 is the system-level perspective. 👉 Not just tools anymore — you now understand how entire smart city ecosystems are built and governed."
+}

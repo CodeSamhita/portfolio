@@ -1,0 +1,288 @@
+{
+  "week": 5,
+  "title": "Data Analysis and Visualization with Python",
+  "topicSummary": "Python data structures and data access, Introduction to Pandas, Matplotlib, dashboards, exploratory data analysis.",
+  "content": [
+    {
+      "type": "section_heading",
+      "text": "1. Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "This module transitions from writing programs (Week 4) to analyzing real datasets and generating insights."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Objective:</strong> Access and manipulate datasets, perform statistical analysis, visualize patterns/trends, and build dashboards."
+    },
+    {
+      "type": "section_heading",
+      "text": "2. Python Data Structures for Data Analysis"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python provides core structures to store and process data efficiently."
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Lists:</strong> Ordered, mutable collection. <code>data = [45, 60, 30, 80]</code>",
+        "<strong>Dictionaries:</strong> Key-value pairs (useful for structured records). <code>sensor = {\"location\": \"MG Road\", \"speed\": 45}</code>",
+        "<strong>Tuples:</strong> Immutable sequences. <code>coordinates = (12.97, 77.59)</code>",
+        "<strong>Sets:</strong> Unique elements. <code>unique_ids = {101, 102, 103}</code>"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Data Access Examples:"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    data = [10, 20, 30]\n    print(data[1])  # Access element\n\n    sensor = {\"speed\": 50}\n    print(sensor[\"speed\"])\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "section_heading",
+      "text": "3. Introduction to Pandas"
+    },
+    {
+      "type": "sub_heading",
+      "text": "What is Pandas?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A Python library for data manipulation and analysis, especially tabular data."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Core Data Structures:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Structure",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Series",
+          "1D labeled array"
+        ],
+        [
+          "DataFrame",
+          "2D table (like Excel)"
+        ]
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    import pandas as pd\n    data = {\"Location\": [\"MG Road\", \"Indiranagar\"], \"Speed\": [45, 30]}\n    df = pd.DataFrame(data)\n    print(df)\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Common Operations:"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    df.head()        # First rows\n    df.describe()    # Statistical summary\n    df[\"Speed\"]      # Column access\n    df[df[\"Speed\"] > 40]  # Filtering\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Importance:</strong> Efficient handling of large datasets, simplifies cleaning and transformation."
+    },
+    {
+      "type": "section_heading",
+      "text": "4. Matplotlib (Data Visualization)"
+    },
+    {
+      "type": "sub_heading",
+      "text": "What is Matplotlib?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A Python library used to create graphs and plots."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Common Plot Types:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Plot",
+        "Use Case"
+      ],
+      "rows": [
+        [
+          "Line Chart",
+          "Trends over time"
+        ],
+        [
+          "Bar Chart",
+          "Comparisons"
+        ],
+        [
+          "Scatter Plot",
+          "Relationships"
+        ],
+        [
+          "Histogram",
+          "Distribution"
+        ]
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    import matplotlib.pyplot as plt\n    speeds = [40, 50, 60, 70]\n    plt.plot(speeds)\n    plt.title(\"Traffic Speed Trend\")\n    plt.show()\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Use in Urban Informatics:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Traffic flow trends",
+        "Pollution level changes",
+        "Population growth visualization"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "5. Exploratory Data Analysis (EDA)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> EDA is the process of understanding data before applying models."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Key Steps:"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "<strong>Understand Structure:</strong> Columns, data types.",
+        "<strong>Summary Statistics:</strong> Mean, median, standard deviation.",
+        "<strong>Check Missing Values:</strong> Identify gaps.",
+        "<strong>Detect Outliers:</strong> Extreme values.",
+        "<strong>Visualize Data:</strong> Graphs for patterns."
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example:"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    df.describe()\n    df.isnull().sum()\n    df.plot(kind=\"hist\")\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Goal:</strong> Identify trends, detect anomalies, prepare data for ML."
+    },
+    {
+      "type": "section_heading",
+      "text": "6. Dashboards"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Dashboards are interactive visual interfaces that display data insights."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Tools:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Python:</strong> Plotly, Dash",
+        "<strong>BI Tools:</strong> Tableau, Power BI"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Features:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Real-time updates",
+        "Interactive charts",
+        "Data filtering"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Urban Use Cases:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Traffic monitoring dashboards",
+        "Pollution tracking",
+        "Smart city command centers"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "7. Integrated Workflow (Very Important)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>End-to-End Process:</strong> Load data (Pandas) → Clean data → Analyze (Stats, filtering) → Visualize (Matplotlib) → Present (Dashboard)."
+    },
+    {
+      "type": "section_heading",
+      "text": "8. Example: Urban Data Analysis"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Scenario:</strong> Analyze traffic speeds."
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "code": "try:\n    import pandas as pd\n    import matplotlib.pyplot as plt\n    df = pd.DataFrame({\"Speed\": [30, 45, 60, 80]})\n    print(df.describe())\n    plt.hist(df[\"Speed\"])\n    plt.title(\"Speed Distribution\")\n    plt.show()\nexcept Exception as e:\n    print(\"Error:\", e)"
+    },
+    {
+      "type": "section_heading",
+      "text": "9. Common Mistakes"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Ignoring missing data → Incorrect analysis",
+        "Wrong visualization → Misleading insights",
+        "No EDA → Poor model performance"
+      ]
+    }
+  ],
+  "examSummary": [
+    "Python structures → store and access data",
+    "Pandas → data manipulation",
+    "Matplotlib → visualization",
+    "EDA → understanding data",
+    "Dashboards → presenting insights"
+  ],
+  "keyInsight": "Week 5 is where data becomes useful information. 👉 If Week 4 = “Write code”, 👉 Week 5 = “Extract insights from data”."
+}

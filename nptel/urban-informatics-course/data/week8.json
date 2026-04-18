@@ -1,0 +1,232 @@
+{
+  "week": 8,
+  "title": "Unsupervised and Association Learning",
+  "topicSummary": "K-means, hierarchical clustering, PCA, dimensionality reduction, Apriori algorithm, Frequent pattern mining etc., Case studies.",
+  "content": [
+    {
+      "type": "section_heading",
+      "text": "1. Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "This module focuses on learning patterns without labeled data and discovering hidden structures and relationships."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Objective:</strong> Group similar data (clustering), reduce complexity (dimensionality reduction), and discover patterns (association rules)."
+    },
+    {
+      "type": "section_heading",
+      "text": "2. Unsupervised Learning"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Unsupervised learning works on unlabeled data (no predefined output). The model finds patterns automatically."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Key Tasks:</strong> Clustering, Dimensionality reduction."
+    },
+    {
+      "type": "section_heading",
+      "text": "3. K-Means Clustering"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> K-Means groups data into K clusters based on similarity."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Working Steps:"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "Choose number of clusters (K)",
+        "Initialize centroids",
+        "Assign points to nearest centroid",
+        "Update centroids",
+        "Repeat until convergence"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Objective Function:</strong> Σ Σ ||x - μi||²"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Applications/Limitations:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Applications:</strong> Grouping city zones, Identifying traffic patterns, Market segmentation.",
+        "<strong>Limitations:</strong> Need to choose K, sensitive to initial centroids."
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "4. Hierarchical Clustering"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Builds a tree-like structure (dendrogram) of clusters."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Types:</strong> Agglomerative (bottom-up), Divisive (top-down)."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Advantages/Limitations:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Advantages:</strong> No need to predefine K, Visual representation (dendrogram).",
+        "<strong>Limitations:</strong> Computationally expensive."
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "5. Dimensionality Reduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Reducing the number of features while preserving important information."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Why Needed?</strong> High-dimensional data is complex, improves performance and visualization."
+    },
+    {
+      "type": "section_heading",
+      "text": "6. Principal Component Analysis (PCA)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> PCA transforms data into new variables (principal components) capturing maximum variance."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Key Idea:</strong> Reduce dimensions while retaining most important information. <code>Z = XW</code>"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Example:</strong> Reduce 10 variables → 2 principal components."
+    },
+    {
+      "type": "section_heading",
+      "text": "7. Association Learning"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Find relationships between variables in large datasets."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Example:</strong> If high traffic + rain → high accident probability."
+    },
+    {
+      "type": "section_heading",
+      "text": "8. Apriori Algorithm"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> An algorithm used to find frequent itemsets and generate association rules."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Key Metrics:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Support:</strong> Support(A) = (Transactions containing A) / (Total transactions)",
+        "<strong>Confidence:</strong> Confidence(A⇒B) = Support(A∪B) / Support(A)"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Steps:"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "Identify frequent itemsets",
+        "Generate association rules",
+        "Filter using support & confidence"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "9. Frequent Pattern Mining"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Finding patterns that occur frequently in datasets (e.g., peak traffic hours, frequent accident zones)."
+    },
+    {
+      "type": "section_heading",
+      "text": "10. Case Studies (Urban Applications)"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Traffic Patterns:</strong> K-Means grouping of roads.",
+        "<strong>Urban Zone Classification:</strong> Hierarchical clustering of residential/commercial zones.",
+        "<strong>Accident Pattern Analysis:</strong> Apriori rules linking weather and traffic.",
+        "<strong>Pollution Data Reduction:</strong> PCA to reduce variables for analysis."
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "11. Comparison of Techniques"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Technique",
+        "Purpose",
+        "Example"
+      ],
+      "rows": [
+        [
+          "K-Means",
+          "Clustering",
+          "Traffic zones"
+        ],
+        [
+          "Hierarchical",
+          "Cluster hierarchy",
+          "Area classification"
+        ],
+        [
+          "PCA",
+          "Reduce features",
+          "Pollution data"
+        ],
+        [
+          "Apriori",
+          "Find relationships",
+          "Accident patterns"
+        ]
+      ]
+    }
+  ],
+  "examSummary": [
+    "Unsupervised learning → no labels",
+    "K-Means → grouping data",
+    "Hierarchical → cluster tree",
+    "PCA → reduce dimensions",
+    "Apriori → association rules",
+    "Pattern mining → frequent trends"
+  ],
+  "keyInsight": "Week 8 focuses on discovering hidden structure. 👉 If Week 7 = “Predict outcomes”, 👉 Week 8 = “Discover patterns without prediction”."
+}

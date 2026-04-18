@@ -1,0 +1,432 @@
+{
+  "week": 2,
+  "title": "Types of Urban Data and Databases",
+  "topicSummary": "Types of data and data format, Types of databases, Relational databases, Database normalization, NoSQL.",
+  "content": [
+    {
+      "type": "section_heading",
+      "text": "1. Types of Urban Data"
+    },
+    {
+      "type": "paragraph",
+      "text": "Urban data is generated continuously from multiple sources within a city ecosystem."
+    },
+    {
+      "type": "sub_heading",
+      "text": "A. Based on Structure"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Type",
+        "Description",
+        "Example"
+      ],
+      "rows": [
+        [
+          "Structured Data",
+          "Organized in rows/columns",
+          "Traffic counts, census tables"
+        ],
+        [
+          "Semi-Structured Data",
+          "Partial structure (tags/keys)",
+          "JSON from APIs, XML"
+        ],
+        [
+          "Unstructured Data",
+          "No predefined format",
+          "Images, CCTV footage, social media"
+        ]
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "B. Based on Source"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Sensor Data (IoT):</strong> Traffic sensors, pollution monitors",
+        "<strong>Administrative Data:</strong> Government records (tax, land use)",
+        "<strong>Crowdsourced Data:</strong> Social media, citizen reports",
+        "<strong>Geospatial Data:</strong> Maps, satellite imagery"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "C. Based on Time Dimension"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Static Data:</strong> Census, infrastructure maps",
+        "<strong>Dynamic Data:</strong> Live traffic, weather updates"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "2. Data Formats"
+    },
+    {
+      "type": "paragraph",
+      "text": "Data format defines how data is stored and exchanged."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Common Formats:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Format",
+        "Use Case",
+        "Characteristics"
+      ],
+      "rows": [
+        [
+          "CSV",
+          "Tabular data",
+          "Simple, lightweight"
+        ],
+        [
+          "JSON",
+          "APIs, web data",
+          "Flexible, hierarchical"
+        ],
+        [
+          "XML",
+          "Data exchange",
+          "Structured with tags"
+        ],
+        [
+          "GeoJSON",
+          "Spatial data",
+          "Coordinates + attributes"
+        ],
+        [
+          "Raster/Vector",
+          "GIS systems",
+          "Maps, satellite images"
+        ]
+      ]
+    },
+    {
+      "type": "highlight",
+      "text": "<span class=\"key-idea\">Key Insight:</span> Format selection affects: Storage efficiency, Processing speed, Interoperability."
+    },
+    {
+      "type": "section_heading",
+      "text": "3. Types of Databases"
+    },
+    {
+      "type": "paragraph",
+      "text": "Databases are systems used to store, manage, and retrieve data efficiently."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Major Categories:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Type",
+        "Description",
+        "Example Use"
+      ],
+      "rows": [
+        [
+          "Relational (SQL)",
+          "Table-based",
+          "Transport records"
+        ],
+        [
+          "NoSQL",
+          "Flexible schema",
+          "Social media data"
+        ],
+        [
+          "Spatial Databases",
+          "Geographic data",
+          "GIS systems"
+        ],
+        [
+          "Cloud Databases",
+          "Scalable storage",
+          "Smart city platforms"
+        ]
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "4. Relational Databases (RDBMS)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> A relational database organizes data into tables (relations) with rows and columns."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Key Concepts:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Table = Entity (e.g., Traffic Data)",
+        "Row = Record",
+        "Column = Attribute"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example Table:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Vehicle_ID",
+        "Location",
+        "Speed"
+      ],
+      "rows": [
+        [
+          "V101",
+          "MG Road",
+          "45"
+        ],
+        [
+          "V102",
+          "Indiranagar",
+          "30"
+        ]
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Important Features:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Primary Key:</strong> Unique identifier",
+        "<strong>Foreign Key:</strong> Links between tables",
+        "<strong>SQL (Structured Query Language):</strong> Used for querying"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Advantages:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "High consistency",
+        "Structured storage",
+        "Strong data integrity"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Limitations:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Less flexible for unstructured data",
+        "Scaling can be complex"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "5. Database Normalization"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> Normalization is the process of organizing data to reduce redundancy and improve integrity."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Goals:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Eliminate duplicate data",
+        "Ensure logical data dependencies",
+        "Improve efficiency"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example (Before Normalization):"
+    },
+    {
+      "type": "paragraph",
+      "text": "Student \"A\" repeated across ML and DB courses in a single row."
+    },
+    {
+      "type": "sub_heading",
+      "text": "After Normalization:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Table 1: Students (| Student_ID | Name |)",
+        "Table 2: Courses (| Course_ID | Name |)",
+        "Table 3: Enrollment (| Student_ID | Course_ID |)"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Normal Forms:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>1NF:</strong> Remove repeating groups",
+        "<strong>2NF:</strong> Remove partial dependencies",
+        "<strong>3NF:</strong> Remove transitive dependencies"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "👉 <strong>Outcome:</strong> Cleaner database, faster queries, reduced anomalies."
+    },
+    {
+      "type": "section_heading",
+      "text": "6. NoSQL Databases"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Definition:</strong> NoSQL databases store data in non-tabular formats, allowing flexibility."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Types:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Type",
+        "Structure",
+        "Example"
+      ],
+      "rows": [
+        [
+          "Document",
+          "JSON-like",
+          "MongoDB"
+        ],
+        [
+          "Key-Value",
+          "Pair-based",
+          "Redis"
+        ],
+        [
+          "Column-Family",
+          "Column groups",
+          "Cassandra"
+        ],
+        [
+          "Graph",
+          "Nodes & edges",
+          "Neo4j"
+        ]
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Advantages:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Flexible schema",
+        "Handles large-scale data",
+        "Suitable for real-time applications"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Limitations:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Less strict consistency",
+        "Complex querying compared to SQL"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "7. SQL vs NoSQL (Comparison)"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Feature",
+        "SQL (Relational)",
+        "NoSQL"
+      ],
+      "rows": [
+        [
+          "Structure",
+          "Fixed schema",
+          "Flexible schema"
+        ],
+        [
+          "Scalability",
+          "Vertical",
+          "Horizontal"
+        ],
+        [
+          "Data Type",
+          "Structured",
+          "All types"
+        ],
+        [
+          "Use Case",
+          "Banking, records",
+          "Big data, IoT"
+        ]
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "8. Application in Urban Informatics"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Real Use Cases:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Traffic Systems:</strong> SQL → structured traffic logs, NoSQL → real-time sensor data",
+        "<strong>Smart Cities:</strong> Spatial DB → maps and GIS, Cloud DB → scalable storage",
+        "<strong>Urban Analytics:</strong> JSON APIs → live city data"
+      ]
+    }
+  ],
+  "examSummary": [
+    "Urban data = structured, semi-structured, unstructured",
+    "Data formats = CSV, JSON, XML, GeoJSON",
+    "Databases = SQL (structured) vs NoSQL (flexible)",
+    "Relational DB = table-based with keys",
+    "Normalization = remove redundancy",
+    "NoSQL = scalable and flexible"
+  ],
+  "keyInsight": "Week 2 is about data foundation. 👉 If Week 1 answers “Why data?”, 👉 Week 2 answers “How data is stored and organized?”"
+}

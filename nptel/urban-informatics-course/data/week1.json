@@ -1,0 +1,327 @@
+{
+  "week": 1,
+  "title": "Introduction to Urban Informatics",
+  "topicSummary": "Urban Informatics Basics, Smart Cities, Urban Systems, Data-Driven Governance, Digital Infrastructure, Real-world Case Studies, Open Data Portals.",
+  "content": [
+    {
+      "type": "section_heading",
+      "text": "1. What is Urban Informatics?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Urban Informatics is an interdisciplinary field that applies:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Data science",
+        "Information technology",
+        "Urban planning principles"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "to analyze and improve urban systems and city operations."
+    },
+    {
+      "type": "highlight",
+      "text": "<span class=\"key-idea\">Key Idea:</span> Cities generate massive data. Urban Informatics converts that data into:",
+      "list": [
+        "Insights",
+        "Predictions",
+        "Actionable decisions"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>👉 Objective:</strong> Improve efficiency, sustainability, and quality of life in cities."
+    },
+    {
+      "type": "section_heading",
+      "text": "2. Smart Cities"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Definition:"
+    },
+    {
+      "type": "paragraph",
+      "text": "A smart city uses digital technologies and data to optimize infrastructure, services, and governance."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Core Components:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Sensors (IoT devices)",
+        "Communication networks",
+        "Data analytics systems",
+        "Citizen engagement platforms"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Features of Smart Cities:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Intelligent traffic management",
+        "Smart energy grids",
+        "Waste management systems",
+        "Real-time public services"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Singapore:</strong> advanced transport analytics",
+        "<strong>Barcelona:</strong> IoT-based waste systems"
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "3. Urban Systems"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Definition:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Urban systems are interconnected components that make a city function."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Major Urban Systems:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Transportation (roads, metro, buses)",
+        "Utilities (water, electricity)",
+        "Waste management",
+        "Healthcare and emergency services",
+        "Housing and land use"
+      ]
+    },
+    {
+      "type": "highlight",
+      "text": "<span class=\"key-idea\">Key Concept:</span> Urban systems are interdependent:",
+      "list": [
+        "Traffic affects pollution",
+        "Land use affects transportation demand",
+        "Energy usage affects sustainability"
+      ],
+      "footer": "👉 Urban Informatics studies these interactions using data."
+    },
+    {
+      "type": "section_heading",
+      "text": "4. Data-Driven Governance"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Definition:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Decision-making based on data analysis rather than intuition."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Traditional vs Data-Driven:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Traditional Governance",
+        "Data-Driven Governance"
+      ],
+      "rows": [
+        [
+          "Reactive decisions",
+          "Predictive decisions"
+        ],
+        [
+          "Limited data",
+          "Real-time data"
+        ],
+        [
+          "Manual processes",
+          "Automated systems"
+        ]
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Applications:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Predict traffic congestion",
+        "Monitor air quality",
+        "Optimize emergency response"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Example:"
+    },
+    {
+      "type": "paragraph",
+      "text": "New York City uses data dashboards for city operations."
+    },
+    {
+      "type": "section_heading",
+      "text": "5. Digital Infrastructure"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Definition:"
+    },
+    {
+      "type": "paragraph",
+      "text": "The technological backbone that enables data collection, transmission, and processing."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Components:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Internet connectivity (fiber, 5G)",
+        "Cloud computing platforms",
+        "IoT devices (sensors, cameras)",
+        "Data centers"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Role:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Enables real-time monitoring",
+        "Supports automation",
+        "Connects different urban systems"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "👉 Without digital infrastructure, smart cities cannot function."
+    },
+    {
+      "type": "section_heading",
+      "text": "6. Case Studies (Real-World Applications)"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Why Case Studies Matter:</strong> They show how theory is applied in real cities."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Examples:"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "<strong>Amsterdam:</strong> Open data sharing, Energy-efficient housing.",
+        "<strong>Singapore:</strong> AI-based traffic systems, Smart mobility platforms.",
+        "<strong>Bengaluru:</strong> Traffic monitoring systems, Public grievance portals."
+      ]
+    },
+    {
+      "type": "section_heading",
+      "text": "7. Open Data Portals"
+    },
+    {
+      "type": "sub_heading",
+      "text": "Definition:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Platforms where governments share public datasets freely."
+    },
+    {
+      "type": "sub_heading",
+      "text": "Purpose:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Transparency",
+        "Innovation",
+        "Research"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Examples:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>data.gov:</strong> US federal government open data platform.",
+        "<strong>data.gov.in:</strong> Open Government Data (OGD) platform of India.",
+        "<strong>NYC Open Data:</strong> Datasets from all NYC city agencies."
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Types of Data Available:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Traffic data",
+        "Pollution levels",
+        "Population statistics",
+        "Infrastructure data"
+      ]
+    },
+    {
+      "type": "sub_heading",
+      "text": "Importance:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Enables developers to build applications",
+        "Helps researchers analyze trends",
+        "Encourages citizen participation"
+      ]
+    }
+  ],
+  "examSummary": [
+    "Urban Informatics = Use of data + technology for city management",
+    "Smart Cities = Digitally enhanced urban environments",
+    "Urban Systems = Interconnected city components (transport, utilities, waste)",
+    "Data-Driven Governance = Predictive, real-time, automated decisions",
+    "Digital Infrastructure = Backbone of smart systems (fiber, IoT, cloud)",
+    "Case Studies = Real-world implementation (Amsterdam, Singapore, Bengaluru)",
+    "Open Data Portals = Public access to urban data (data.gov, data.gov.in)"
+  ],
+  "keyInsight": "Week 1 sets the conceptual foundation. All future topics (Python, ML, IoT) are tools to implement what is introduced here."
+}
