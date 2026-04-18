@@ -19,12 +19,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Urban stakeholders who both generate and use data",
-    "explanation": "The PDF answer key marks C. Urban stakeholders who both generate and use data. This answer is suitable because it directly addresses 'Which of the following best captures the People dimension in the People -Place-Technology framework'. Theory rule: The people dimension is about stakeholders who generate, interpret, govern, and use urban data.",
+    "explanation": "Correct answer: C. Urban stakeholders who both generate and use data. Why it is correct: it directly answers 'Which of the following best captures the People dimension in the People -Place-Technology framework'. Theory rule: The people dimension is about stakeholders who generate, interpret, govern, and use urban data.",
     "optionExplanations": [
-      "Not suitable: this option says 'GIS layers and spatial databases', but the PDF-marked answer is C. Urban stakeholders who both generate and use data. It does not match 'Which of the following best captures the People dimension in the People -Place-Technology framework'. Theory check: The people dimension is about stakeholders who generate, interpret, govern, and use urban data.",
-      "Not suitable: this option says 'Urban infrastructure networks', but the PDF-marked answer is C. Urban stakeholders who both generate and use data. It does not match 'Which of the following best captures the People dimension in the People -Place-Technology framework'. Theory check: The people dimension is about stakeholders who generate, interpret, govern, and use urban data.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following best captures the People dimension in the People -Place-Technology framework'. Theory check: The people dimension is about stakeholders who generate, interpret, govern, and use urban data.",
-      "Not suitable: this option says 'Cloud computing platforms', but the PDF-marked answer is C. Urban stakeholders who both generate and use data. It does not match 'Which of the following best captures the People dimension in the People -Place-Technology framework'. Theory check: The people dimension is about stakeholders who generate, interpret, govern, and use urban data."
+      "Do not choose: this points to GIS/spatial tooling. Correct reasoning: The people dimension is about stakeholders who generate, interpret, govern, and use urban data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: The people dimension is about stakeholders who generate, interpret, govern, and use urban data.",
+      "Choose this: it matches the concept. The people dimension is about stakeholders who generate, interpret, govern, and use urban data.",
+      "Do not choose: this points to infrastructure/deployment. Correct reasoning: The people dimension is about stakeholders who generate, interpret, govern, and use urban data."
     ]
   },
   {
@@ -47,12 +47,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Allows observation of trends and variations",
-    "explanation": "The PDF answer key marks B. Allows observation of trends and variations. This answer is suitable because it directly addresses 'Time-series data in urban informatics is mainly useful because it'. Theory rule: Time-series data is valuable because it preserves temporal order, making trends, peaks, seasonality, and shocks visible.",
+    "explanation": "Correct answer: B. Allows observation of trends and variations. Why it is correct: it directly answers 'Time-series data in urban informatics is mainly useful because it'. Theory rule: Time-series data is valuable because it preserves temporal order, making trends, peaks, seasonality, and shocks visible.",
     "optionExplanations": [
-      "Not suitable: this option says 'Replaces spatial data', but the PDF-marked answer is B. Allows observation of trends and variations. It does not match 'Time-series data in urban informatics is mainly useful because it'. Theory check: Time-series data is valuable because it preserves temporal order, making trends, peaks, seasonality, and shocks visible.",
-      "Suitable: the PDF answer key includes this option. It matches 'Time-series data in urban informatics is mainly useful because it'. Theory check: Time-series data is valuable because it preserves temporal order, making trends, peaks, seasonality, and shocks visible.",
-      "Not suitable: this option says 'Reduces data volume', but the PDF-marked answer is B. Allows observation of trends and variations. It does not match 'Time-series data in urban informatics is mainly useful because it'. Theory check: Time-series data is valuable because it preserves temporal order, making trends, peaks, seasonality, and shocks visible.",
-      "Not suitable: this option says 'Eliminates the need for sensors', but the PDF-marked answer is B. Allows observation of trends and variations. It does not match 'Time-series data in urban informatics is mainly useful because it'. Theory check: Time-series data is valuable because it preserves temporal order, making trends, peaks, seasonality, and shocks visible."
+      "Do not choose: this points to too absolute. Correct reasoning: Time-series data is valuable because it preserves temporal order, making trends, peaks, seasonality, and shocks visible.",
+      "Choose this: it matches the concept. Time-series data is valuable because it preserves temporal order, making trends, peaks, seasonality, and shocks visible.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Time-series data is valuable because it preserves temporal order, making trends, peaks, seasonality, and shocks visible.",
+      "Do not choose: this points to too absolute. Correct reasoning: Time-series data is valuable because it preserves temporal order, making trends, peaks, seasonality, and shocks visible."
     ]
   },
   {
@@ -75,12 +75,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Continuous inflow of data with minimal latency",
-    "explanation": "The PDF answer key marks C. Continuous inflow of data with minimal latency. This answer is suitable because it directly addresses 'Which of the following best represents the Velocity aspect of big data'. Theory rule: Big-data characteristics describe scale, speed, diversity, reliability, and value of data; velocity is specifically about rapid data inflow.",
+    "explanation": "Correct answer: C. Continuous inflow of data with minimal latency. Why it is correct: it directly answers 'Which of the following best represents the Velocity aspect of big data'. Theory rule: Big-data characteristics describe scale, speed, diversity, reliability, and value of data; velocity is specifically about rapid data inflow.",
     "optionExplanations": [
-      "Not suitable: this option says 'Different data formats', but the PDF-marked answer is C. Continuous inflow of data with minimal latency. It does not match 'Which of the following best represents the Velocity aspect of big data'. Theory check: Big-data characteristics describe scale, speed, diversity, reliability, and value of data; velocity is specifically about rapid data inflow.",
-      "Not suitable: this option says 'Large historical datasets', but the PDF-marked answer is C. Continuous inflow of data with minimal latency. It does not match 'Which of the following best represents the Velocity aspect of big data'. Theory check: Big-data characteristics describe scale, speed, diversity, reliability, and value of data; velocity is specifically about rapid data inflow.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following best represents the Velocity aspect of big data'. Theory check: Big-data characteristics describe scale, speed, diversity, reliability, and value of data; velocity is specifically about rapid data inflow.",
-      "Not suitable: this option says 'Accuracy of datasets', but the PDF-marked answer is C. Continuous inflow of data with minimal latency. It does not match 'Which of the following best represents the Velocity aspect of big data'. Theory check: Big-data characteristics describe scale, speed, diversity, reliability, and value of data; velocity is specifically about rapid data inflow."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Big-data characteristics describe scale, speed, diversity, reliability, and value of data; velocity is specifically about rapid data inflow.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Big-data characteristics describe scale, speed, diversity, reliability, and value of data; velocity is specifically about rapid data inflow.",
+      "Choose this: it matches the concept. Big-data characteristics describe scale, speed, diversity, reliability, and value of data; velocity is specifically about rapid data inflow.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Big-data characteristics describe scale, speed, diversity, reliability, and value of data; velocity is specifically about rapid data inflow."
     ]
   },
   {
@@ -103,12 +103,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Operational details of mass transit systems",
-    "explanation": "The PDF answer key marks B. Operational details of mass transit systems. This answer is suitable because it directly addresses 'GTFS is primarily used for sharing'. Theory rule: Transit data standards such as GTFS organize schedules, stops, routes, and service details so systems can share transport information.",
+    "explanation": "Correct answer: B. Operational details of mass transit systems. Why it is correct: it directly answers 'GTFS is primarily used for sharing'. Theory rule: Transit data standards such as GTFS organize schedules, stops, routes, and service details so systems can share transport information.",
     "optionExplanations": [
-      "Not suitable: this option says 'Satellite imagery', but the PDF-marked answer is B. Operational details of mass transit systems. It does not match 'GTFS is primarily used for sharing'. Theory check: Transit data standards such as GTFS organize schedules, stops, routes, and service details so systems can share transport information.",
-      "Suitable: the PDF answer key includes this option. It matches 'GTFS is primarily used for sharing'. Theory check: Transit data standards such as GTFS organize schedules, stops, routes, and service details so systems can share transport information.",
-      "Not suitable: this option says 'Census statistics', but the PDF-marked answer is B. Operational details of mass transit systems. It does not match 'GTFS is primarily used for sharing'. Theory check: Transit data standards such as GTFS organize schedules, stops, routes, and service details so systems can share transport information.",
-      "Not suitable: this option says 'Land-use zoning information', but the PDF-marked answer is B. Operational details of mass transit systems. It does not match 'GTFS is primarily used for sharing'. Theory check: Transit data standards such as GTFS organize schedules, stops, routes, and service details so systems can share transport information."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Transit data standards such as GTFS organize schedules, stops, routes, and service details so systems can share transport information.",
+      "Choose this: it matches the concept. Transit data standards such as GTFS organize schedules, stops, routes, and service details so systems can share transport information.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Transit data standards such as GTFS organize schedules, stops, routes, and service details so systems can share transport information.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Transit data standards such as GTFS organize schedules, stops, routes, and service details so systems can share transport information."
     ]
   },
   {
@@ -131,12 +131,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P-ii, Q-i, R-iii, S-iv",
-    "explanation": "The PDF answer key marks A. P-ii, Q-i, R-iii, S-iv. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
+    "explanation": "Correct answer: A. P-ii, Q-i, R-iii, S-iv. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
-      "Not suitable: this option says 'P-i, Q-ii, R-iv, S-iii', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
-      "Not suitable: this option says 'P-iii, Q-i, R-ii, S-iv', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
-      "Not suitable: this option says 'P-ii, Q-iii, R-i, S-iv', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration."
+      "Choose this: it matches the concept. DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration."
     ]
   },
   {
@@ -159,12 +159,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Analysis of systematically collected data to support actions",
-    "explanation": "The PDF answer key marks B. Analysis of systematically collected data to support actions. This answer is suitable because it directly addresses 'Data-driven governance relies mainly on'. Theory rule: Data-driven governance means decisions are supported by systematically collected and analyzed evidence rather than intuition alone.",
+    "explanation": "Correct answer: B. Analysis of systematically collected data to support actions. Why it is correct: it directly answers 'Data-driven governance relies mainly on'. Theory rule: Data-driven governance means decisions are supported by systematically collected and analyzed evidence rather than intuition alone.",
     "optionExplanations": [
-      "Not suitable: this option says 'Manual reporting systems', but the PDF-marked answer is B. Analysis of systematically collected data to support actions. It does not match 'Data-driven governance relies mainly on'. Theory check: Data-driven governance means decisions are supported by systematically collected and analyzed evidence rather than intuition alone.",
-      "Suitable: the PDF answer key includes this option. It matches 'Data-driven governance relies mainly on'. Theory check: Data-driven governance means decisions are supported by systematically collected and analyzed evidence rather than intuition alone.",
-      "Not suitable: this option says 'Political intuition', but the PDF-marked answer is B. Analysis of systematically collected data to support actions. It does not match 'Data-driven governance relies mainly on'. Theory check: Data-driven governance means decisions are supported by systematically collected and analyzed evidence rather than intuition alone.",
-      "Not suitable: this option says 'Paper-based records', but the PDF-marked answer is B. Analysis of systematically collected data to support actions. It does not match 'Data-driven governance relies mainly on'. Theory check: Data-driven governance means decisions are supported by systematically collected and analyzed evidence rather than intuition alone."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Data-driven governance means decisions are supported by systematically collected and analyzed evidence rather than intuition alone.",
+      "Choose this: it matches the concept. Data-driven governance means decisions are supported by systematically collected and analyzed evidence rather than intuition alone.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Data-driven governance means decisions are supported by systematically collected and analyzed evidence rather than intuition alone.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Data-driven governance means decisions are supported by systematically collected and analyzed evidence rather than intuition alone."
     ]
   },
   {
@@ -187,12 +187,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Actively involves citizens in data generation",
-    "explanation": "The PDF answer key marks C. Actively involves citizens in data generation. This answer is suitable because it directly addresses 'Citizen science differs from traditional data collection because it'. Theory rule: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
+    "explanation": "Correct answer: C. Actively involves citizens in data generation. Why it is correct: it directly answers 'Citizen science differs from traditional data collection because it'. Theory rule: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
     "optionExplanations": [
-      "Not suitable: this option says 'Uses only expert surveys', but the PDF-marked answer is C. Actively involves citizens in data generation. It does not match 'Citizen science differs from traditional data collection because it'. Theory check: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
-      "Not suitable: this option says 'Depends entirely on sensors', but the PDF-marked answer is C. Actively involves citizens in data generation. It does not match 'Citizen science differs from traditional data collection because it'. Theory check: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
-      "Suitable: the PDF answer key includes this option. It matches 'Citizen science differs from traditional data collection because it'. Theory check: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
-      "Not suitable: this option says 'Avoids digital tools', but the PDF-marked answer is C. Actively involves citizens in data generation. It does not match 'Citizen science differs from traditional data collection because it'. Theory check: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities."
+      "Do not choose: this points to too absolute. Correct reasoning: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
+      "Do not choose: this points to too absolute. Correct reasoning: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
+      "Choose this: it matches the concept. Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities."
     ]
   },
   {
@@ -215,12 +215,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Unequal access to internet and digital skills",
-    "explanation": "The PDF answer key marks B. Unequal access to internet and digital skills. This answer is suitable because it directly addresses 'Which of the following is a key challenge related to the digital divide'. Theory rule: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+    "explanation": "Correct answer: B. Unequal access to internet and digital skills. Why it is correct: it directly answers 'Which of the following is a key challenge related to the digital divide'. Theory rule: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
     "optionExplanations": [
-      "Not suitable: this option says 'Lack of urban land', but the PDF-marked answer is B. Unequal access to internet and digital skills. It does not match 'Which of the following is a key challenge related to the digital divide'. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is a key challenge related to the digital divide'. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Not suitable: this option says 'Excessive data availability', but the PDF-marked answer is B. Unequal access to internet and digital skills. It does not match 'Which of the following is a key challenge related to the digital divide'. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Not suitable: this option says 'Overuse of GIS', but the PDF-marked answer is B. Unequal access to internet and digital skills. It does not match 'Which of the following is a key challenge related to the digital divide'. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity."
+      "Do not choose: it does not express the asked concept. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Choose this: it matches the concept. GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Do not choose: this points to GIS/spatial tooling. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity."
     ]
   },
   {
@@ -243,12 +243,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P-ii, Q-iii, R-i, S-iv",
-    "explanation": "The PDF answer key marks A. P-ii, Q-iii, R-i, S-iv. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+    "explanation": "Correct answer: A. P-ii, Q-iii, R-i, S-iv. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'P-i, Q-ii, R-iv, S-iii', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'P-iii, Q-ii, R-i, S-iv', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'P-ii, Q-i, R-iii, S-iv', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
+      "Choose this: it matches the concept. APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
     ]
   },
   {
@@ -271,12 +271,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Enable real-time monitoring of multiple urban systems",
-    "explanation": "The PDF answer key marks B. Enable real-time monitoring of multiple urban systems. This answer is suitable because it directly addresses 'Integrated Command and Control Centers (ICCCs) are mainly designed to'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. Enable real-time monitoring of multiple urban systems. Why it is correct: it directly answers 'Integrated Command and Control Centers (ICCCs) are mainly designed to'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'Store archival records', but the PDF-marked answer is B. Enable real-time monitoring of multiple urban systems. It does not match 'Integrated Command and Control Centers (ICCCs) are mainly designed to'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Integrated Command and Control Centers (ICCCs) are mainly designed to'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Replace municipal departments', but the PDF-marked answer is B. Enable real-time monitoring of multiple urban systems. It does not match 'Integrated Command and Control Centers (ICCCs) are mainly designed to'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Conduct public surveys', but the PDF-marked answer is B. Enable real-time monitoring of multiple urban systems. It does not match 'Integrated Command and Control Centers (ICCCs) are mainly designed to'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this points to the wrong communication role. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -299,12 +299,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Automated data pipelines and legal backing",
-    "explanation": "The PDF answer key marks C. Automated data pipelines and legal backing. This answer is suitable because it directly addresses 'Which feature distinguishes advanced open-data platforms like NYC Open Data'. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+    "explanation": "Correct answer: C. Automated data pipelines and legal backing. Why it is correct: it directly answers 'Which feature distinguishes advanced open-data platforms like NYC Open Data'. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
     "optionExplanations": [
-      "Not suitable: this option says 'Manual data updates', but the PDF-marked answer is C. Automated data pipelines and legal backing. It does not match 'Which feature distinguishes advanced open-data platforms like NYC Open Data'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'Limited datasets', but the PDF-marked answer is C. Automated data pipelines and legal backing. It does not match 'Which feature distinguishes advanced open-data platforms like NYC Open Data'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which feature distinguishes advanced open-data platforms like NYC Open Data'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'No third-party API access', but the PDF-marked answer is C. Automated data pipelines and legal backing. It does not match 'Which feature distinguishes advanced open-data platforms like NYC Open Data'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
+      "Do not choose: it does not express the asked concept. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Choose this: it matches the concept. APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
     ]
   },
   {
@@ -327,12 +327,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. NIUA",
-    "explanation": "The PDF answer key marks C. NIUA. This answer is suitable because it directly addresses 'UPYOG is developed under the National Urban Digital Mission by MoHUA and ________'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: C. NIUA. Why it is correct: it directly answers 'UPYOG is developed under the National Urban Digital Mission by MoHUA and ________'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'ISRO', but the PDF-marked answer is C. NIUA. It does not match 'UPYOG is developed under the National Urban Digital Mission by MoHUA and ________'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'NITI Aayog', but the PDF-marked answer is C. NIUA. It does not match 'UPYOG is developed under the National Urban Digital Mission by MoHUA and ________'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'UPYOG is developed under the National Urban Digital Mission by MoHUA and ________'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'MeitY', but the PDF-marked answer is C. NIUA. It does not match 'UPYOG is developed under the National Urban Digital Mission by MoHUA and ________'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -355,12 +355,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Unified API",
-    "explanation": "The PDF answer key marks B. Unified API. This answer is suitable because it directly addresses 'The open data platform of Transport for London provides standardized transport data through a ________ interface'. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+    "explanation": "Correct answer: B. Unified API. Why it is correct: it directly answers 'The open data platform of Transport for London provides standardized transport data through a ________ interface'. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
     "optionExplanations": [
-      "Not suitable: this option says 'Closed database', but the PDF-marked answer is B. Unified API. It does not match 'The open data platform of Transport for London provides standardized transport data through a ________ interface'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Suitable: the PDF answer key includes this option. It matches 'The open data platform of Transport for London provides standardized transport data through a ________ interface'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'Manual reporting system', but the PDF-marked answer is B. Unified API. It does not match 'The open data platform of Transport for London provides standardized transport data through a ________ interface'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'Spreadsheet portal', but the PDF-marked answer is B. Unified API. It does not match 'The open data platform of Transport for London provides standardized transport data through a ________ interface'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
+      "Do not choose: this points to database mechanics. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Choose this: it matches the concept. APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
     ]
   },
   {
@@ -383,12 +383,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P-ii, Q-i, R-iii, S-iv",
-    "explanation": "The PDF answer key marks A. P-ii, Q-i, R-iii, S-iv. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
+    "explanation": "Correct answer: A. P-ii, Q-i, R-iii, S-iv. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
-      "Not suitable: this option says 'P-i, Q-ii, R-iv, S-iii', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
-      "Not suitable: this option says 'P-iii, Q-i, R-ii, S-iv', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
-      "Not suitable: this option says 'P-ii, Q-iv, R-i, S-iii', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities."
+      "Choose this: it matches the concept. Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Citizen participation concepts involve residents contributing data, reporting issues, joining consultations, or influencing priorities."
     ]
   },
   {
@@ -411,12 +411,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Personal data without anonymization",
-    "explanation": "The PDF answer key marks C. Personal data without anonymization. This answer is suitable because it directly addresses 'Under the DataSmart Cities framework, which data type should not be openly published'. Theory rule: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
+    "explanation": "Correct answer: C. Personal data without anonymization. Why it is correct: it directly answers 'Under the DataSmart Cities framework, which data type should not be openly published'. Theory rule: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
     "optionExplanations": [
-      "Not suitable: this option says 'Public datasets', but the PDF-marked answer is C. Personal data without anonymization. It does not match 'Under the DataSmart Cities framework, which data type should not be openly published'. Theory check: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
-      "Not suitable: this option says 'Aggregated statistics', but the PDF-marked answer is C. Personal data without anonymization. It does not match 'Under the DataSmart Cities framework, which data type should not be openly published'. Theory check: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
-      "Suitable: the PDF answer key includes this option. It matches 'Under the DataSmart Cities framework, which data type should not be openly published'. Theory check: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
-      "Not suitable: this option says 'Non-personal open data', but the PDF-marked answer is C. Personal data without anonymization. It does not match 'Under the DataSmart Cities framework, which data type should not be openly published'. Theory check: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration."
+      "Do not choose: it does not express the asked concept. Correct reasoning: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
+      "Choose this: it matches the concept. DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: DataSmart Cities questions test institutional roles: strategy, city governance, analytics support, and multi-stakeholder collaboration."
     ]
   },
   {
@@ -439,12 +439,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Enabling interoperable and scalable urban digital services",
-    "explanation": "The PDF answer key marks B. Enabling interoperable and scalable urban digital services. This answer is suitable because it directly addresses 'Which of the following is a key objective of UPYOG'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. Enabling interoperable and scalable urban digital services. Why it is correct: it directly answers 'Which of the following is a key objective of UPYOG'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'Centralizing all city data at the national level', but the PDF-marked answer is B. Enabling interoperable and scalable urban digital services. It does not match 'Which of the following is a key objective of UPYOG'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is a key objective of UPYOG'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Replacing municipal staff', but the PDF-marked answer is B. Enabling interoperable and scalable urban digital services. It does not match 'Which of the following is a key objective of UPYOG'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Limiting citizen interaction', but the PDF-marked answer is B. Enabling interoperable and scalable urban digital services. It does not match 'Which of the following is a key objective of UPYOG'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: this points to too absolute. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this points to the wrong communication role. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -467,12 +467,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. A, B and C",
-    "explanation": "The PDF answer key marks D. A, B and C. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+    "explanation": "Correct answer: D. A, B and C. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
     "optionExplanations": [
-      "Not suitable: this option says 'B, C and D', but the PDF-marked answer is D. A, B and C. It does not match the concept asked in this PDF question. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
-      "Not suitable: this option says 'A, C and D', but the PDF-marked answer is D. A, B and C. It does not match the concept asked in this PDF question. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
-      "Not suitable: this option says 'A, B and D', but the PDF-marked answer is D. A, B and C. It does not match the concept asked in this PDF question. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+      "Choose this: it matches the concept. Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data."
     ]
   },
   {
@@ -495,12 +495,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Microsoft Excel",
-    "explanation": "The PDF answer key marks C. Microsoft Excel. This answer is suitable because it directly addresses 'Which of the following is NOT an example of Database Management System (DBMS)'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: C. Microsoft Excel. Why it is correct: it directly answers 'Which of the following is NOT an example of Database Management System (DBMS)'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'Microsoft Access', but the PDF-marked answer is C. Microsoft Excel. It does not match 'Which of the following is NOT an example of Database Management System (DBMS)'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'PostgreSQL', but the PDF-marked answer is C. Microsoft Excel. It does not match 'Which of the following is NOT an example of Database Management System (DBMS)'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is NOT an example of Database Management System (DBMS)'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'MongoDB', but the PDF-marked answer is C. Microsoft Excel. It does not match 'Which of the following is NOT an example of Database Management System (DBMS)'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this points to database mechanics. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -523,12 +523,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. A, B and D",
-    "explanation": "The PDF answer key marks A. A, B and D. This answer is suitable because it directly addresses 'Which of the following are the ACID properties of RDBMS? A. atomicity B. consistency C. insulation D. durability'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: A. A, B and D. Why it is correct: it directly answers 'Which of the following are the ACID properties of RDBMS? A. atomicity B. consistency C. insulation D. durability'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following are the ACID properties of RDBMS? A. atomicity B. consistency C. insulation D. durability'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'A, C and D', but the PDF-marked answer is A. A, B and D. It does not match 'Which of the following are the ACID properties of RDBMS? A. atomicity B. consistency C. insulation D. durability'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'B, C and D', but the PDF-marked answer is A. A, B and D. It does not match 'Which of the following are the ACID properties of RDBMS? A. atomicity B. consistency C. insulation D. durability'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'A, B and C', but the PDF-marked answer is A. A, B and D. It does not match 'Which of the following are the ACID properties of RDBMS? A. atomicity B. consistency C. insulation D. durability'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -551,12 +551,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. Normalization is structuring a relational database in acc ordance with normal forms to reduce data redundancy and improve data integrity.",
-    "explanation": "The PDF answer key marks A. Normalization is structuring a relational database in accordance with normal forms to reduce data redundancy and improve data integrity.. This answer is suitable because it directly addresses 'Which of the following is correct'. Theory rule: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+    "explanation": "Correct answer: A. Normalization is structuring a relational database in accordance with normal forms to reduce data redundancy and improve data integrity.. Why it is correct: it directly answers 'Which of the following is correct'. Theory rule: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is correct'. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
-      "Not suitable: this option says 'Higher normal forms always increase performance', but the PDF-marked answer is A. Normalization is structuring a relational database in accordance with normal forms to reduce data redundancy and improve data integrity.. It does not match 'Which of the following is correct'. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
-      "Not suitable: this option says 'A deletion anomaly occurs when deleting a record intentionally removes other data.', but the PDF-marked answer is A. Normalization is structuring a relational database in accordance with normal forms to reduce data redundancy and improve data integrity.. It does not match 'Which of the following is correct'. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
-      "Not suitable: this option says 'An update anomaly occurs when data is stored in single place.', but the PDF-marked answer is A. Normalization is structuring a relational database in accordance with normal forms to reduce data redundancy and improve data integrity.. It does not match 'Which of the following is correct'. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place."
+      "Choose this: it matches the concept. Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+      "Do not choose: this points to too absolute. Correct reasoning: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place."
     ]
   },
   {
@@ -579,12 +579,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. P-iii; Q-ii; R-iv; S-i",
-    "explanation": "The PDF answer key marks C. P-iii; Q-ii; R-iv; S-i. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+    "explanation": "Correct answer: C. P-iii; Q-ii; R-iv; S-i. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
     "optionExplanations": [
-      "Not suitable: this option says 'P-ii; Q-i; R-iii; S-iv', but the PDF-marked answer is C. P-iii; Q-ii; R-iv; S-i. It does not match the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Not suitable: this option says 'P-i; Q-iii; R-iv; S-ii', but the PDF-marked answer is C. P-iii; Q-ii; R-iv; S-i. It does not match the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Not suitable: this option says 'P-ii; Q-iii; R-i; S-iv', but the PDF-marked answer is C. P-iii; Q-ii; R-iv; S-i. It does not match the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding."
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Choose this: it matches the concept. OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding."
     ]
   },
   {
@@ -607,12 +607,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. It lacks a predefined schema, requiring advanced NLP, computer vision, and machine learning for feature extraction and pattern recognition.",
-    "explanation": "The PDF answer key marks A. It lacks a predefined schema, requiring advanced NLP, computer vision, and machine learning for feature extraction and pattern recognition.. This answer is suitable because it directly addresses 'Which statement best explains why unstructured data poses a greater analytical challenge for urban planning compared to structured data'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: A. It lacks a predefined schema, requiring advanced NLP, computer vision, and machine learning for feature extraction and pattern recognition.. Why it is correct: it directly answers 'Which statement best explains why unstructured data poses a greater analytical challenge for urban planning compared to structured data'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'Which statement best explains why unstructured data poses a greater analytical challenge for urban planning compared to structured data'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'It contains only qualitative information that cannot be quantified for spatial analysis.', but the PDF-marked answer is A. It lacks a predefined schema, requiring advanced NLP, computer vision, and machine learning for feature extraction and pattern recognition.. It does not match 'Which statement best explains why unstructured data poses a greater analytical challenge for urban planning compared to structured data'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'It cannot be stored in relational databases and must always be converted into raster formats.', but the PDF-marked answer is A. It lacks a predefined schema, requiring advanced NLP, computer vision, and machine learning for feature extraction and pattern recognition.. It does not match 'Which statement best explains why unstructured data poses a greater analytical challenge for urban planning compared to structured data'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'It is always smaller in volume but higher in redundancy than structured datasets.', but the PDF-marked answer is A. It lacks a predefined schema, requiring advanced NLP, computer vision, and machine learning for feature extraction and pattern recognition.. It does not match 'Which statement best explains why unstructured data poses a greater analytical challenge for urban planning compared to structured data'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to too absolute. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to too absolute. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to too absolute. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -635,12 +635,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. 2NF",
-    "explanation": "The PDF answer key marks A. 2NF. This answer is suitable because it directly addresses 'Third Normal Form automatically satisfies __________'. Theory rule: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+    "explanation": "Correct answer: A. 2NF. Why it is correct: it directly answers 'Third Normal Form automatically satisfies __________'. Theory rule: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'Third Normal Form automatically satisfies __________'. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
-      "Not suitable: this option says 'BCNF', but the PDF-marked answer is A. 2NF. It does not match 'Third Normal Form automatically satisfies __________'. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
-      "Not suitable: this option says '4NF', but the PDF-marked answer is A. 2NF. It does not match 'Third Normal Form automatically satisfies __________'. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
-      "Not suitable: this option says '5NF', but the PDF-marked answer is A. 2NF. It does not match 'Third Normal Form automatically satisfies __________'. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place."
+      "Choose this: it matches the concept. Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place."
     ]
   },
   {
@@ -663,12 +663,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. P-ii; Q-iv; R-i; S-iii",
-    "explanation": "The PDF answer key marks D. P-ii; Q-iv; R-i; S-iii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: D. P-ii; Q-iv; R-i; S-iii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'P-ii; Q-i; R-iii; S-iv', but the PDF-marked answer is D. P-ii; Q-iv; R-i; S-iii. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'P-i; Q-iii; R-iv; S-ii', but the PDF-marked answer is D. P-ii; Q-iv; R-i; S-iii. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'P-iii; Q-ii; R-i; S-iv', but the PDF-marked answer is D. P-ii; Q-iv; R-i; S-iii. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -691,12 +691,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. The system needs to scale horizontally across distributed servers",
-    "explanation": "The PDF answer key marks B. The system needs to scale horizontally across distributed servers. This answer is suitable because it directly addresses 'NoSQL databases are primarily chosen when'. Theory rule: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+    "explanation": "Correct answer: B. The system needs to scale horizontally across distributed servers. Why it is correct: it directly answers 'NoSQL databases are primarily chosen when'. Theory rule: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
     "optionExplanations": [
-      "Not suitable: this option says 'The application requires strict ACID transactions', but the PDF-marked answer is B. The system needs to scale horizontally across distributed servers. It does not match 'NoSQL databases are primarily chosen when'. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
-      "Suitable: the PDF answer key includes this option. It matches 'NoSQL databases are primarily chosen when'. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
-      "Not suitable: this option says 'The data schema must remain fixed and highly normalized', but the PDF-marked answer is B. The system needs to scale horizontally across distributed servers. It does not match 'NoSQL databases are primarily chosen when'. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
-      "Not suitable: this option says 'The goal is to reduce all data to a single unified table for faster queries', but the PDF-marked answer is B. The system needs to scale horizontally across distributed servers. It does not match 'NoSQL databases are primarily chosen when'. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data."
+      "Do not choose: it does not express the asked concept. Correct reasoning: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+      "Choose this: it matches the concept. NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+      "Do not choose: this points to database mechanics. Correct reasoning: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+      "Do not choose: this points to too absolute. Correct reasoning: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data."
     ]
   },
   {
@@ -719,12 +719,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. transitive dependency",
-    "explanation": "The PDF answer key marks A. transitive dependency. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+    "explanation": "Correct answer: A. transitive dependency. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'partial dependency', but the PDF-marked answer is A. transitive dependency. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'multi-valued dependency', but the PDF-marked answer is A. transitive dependency. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'join dependency', but the PDF-marked answer is A. transitive dependency. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
+      "Choose this: it matches the concept. SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
     ]
   },
   {
@@ -747,12 +747,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. A, C and D",
-    "explanation": "The PDF answer key marks B. A, C and D. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+    "explanation": "Correct answer: B. A, C and D. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
     "optionExplanations": [
-      "Not suitable: this option says 'A, B and D', but the PDF-marked answer is B. A, C and D. It does not match the concept asked in this PDF question. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
-      "Not suitable: this option says 'B, C and D', but the PDF-marked answer is B. A, C and D. It does not match the concept asked in this PDF question. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
-      "Not suitable: this option says 'A, B and C', but the PDF-marked answer is B. A, C and D. It does not match the concept asked in this PDF question. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+      "Choose this: it matches the concept. Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place."
     ]
   },
   {
@@ -775,12 +775,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. P-iii; Q-i; R-iv; S-ii",
-    "explanation": "The PDF answer key marks B. P-iii; Q-i; R-iv; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+    "explanation": "Correct answer: B. P-iii; Q-i; R-iv; S-ii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
     "optionExplanations": [
-      "Not suitable: this option says 'P-iv; Q-ii; R-iii; S-i', but the PDF-marked answer is B. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
-      "Not suitable: this option says 'P-iv; Q-iii; R-ii; S-i', but the PDF-marked answer is B. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
-      "Not suitable: this option says 'P-ii; Q-i; R-iv; S-iii', but the PDF-marked answer is B. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data."
+      "Do not choose: it does not express the asked concept. Correct reasoning: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+      "Choose this: it matches the concept. NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data."
     ]
   },
   {
@@ -803,12 +803,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. API",
-    "explanation": "The PDF answer key marks A. API. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+    "explanation": "Correct answer: A. API. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'Non-Relational Database', but the PDF-marked answer is A. API. It does not match the concept asked in this PDF question. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'Normalization', but the PDF-marked answer is A. API. It does not match the concept asked in this PDF question. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'DBMS', but the PDF-marked answer is A. API. It does not match the concept asked in this PDF question. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
+      "Choose this: it matches the concept. APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: this points to database mechanics. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: this points to database mechanics. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
     ]
   },
   {
@@ -831,12 +831,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P-iv; Q-i; R-iii; S-ii",
-    "explanation": "The PDF answer key marks A. P-iv; Q-i; R-iii; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+    "explanation": "Correct answer: A. P-iv; Q-i; R-iii; S-ii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
-      "Not suitable: this option says 'P-iii; Q-ii; R-i; S-iv', but the PDF-marked answer is A. P-iv; Q-i; R-iii; S-ii. It does not match the concept asked in this PDF question. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
-      "Not suitable: this option says 'P-ii; Q-i; R-iii; S-iv', but the PDF-marked answer is A. P-iv; Q-i; R-iii; S-ii. It does not match the concept asked in this PDF question. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
-      "Not suitable: this option says 'P-iv; Q-iii; R-i; S-ii', but the PDF-marked answer is A. P-iv; Q-i; R-iii; S-ii. It does not match the concept asked in this PDF question. Theory check: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place."
+      "Choose this: it matches the concept. Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Normalization reduces redundancy and dependency problems so each fact is stored in the correct place."
     ]
   },
   {
@@ -859,12 +859,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Microsoft Access",
-    "explanation": "The PDF answer key marks B. Microsoft Access. This answer is suitable because it directly addresses '_______________ is a relational database management system that combines the Jet database engine with a user-friendly graphical interface'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. Microsoft Access. Why it is correct: it directly answers '_______________ is a relational database management system that combines the Jet database engine with a user-friendly graphical interface'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'Oracle Database', but the PDF-marked answer is B. Microsoft Access. It does not match '_______________ is a relational database management system that combines the Jet database engine with a user-friendly graphical interface'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches '_______________ is a relational database management system that combines the Jet database engine with a user-friendly graphical interface'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'MariaDB', but the PDF-marked answer is B. Microsoft Access. It does not match '_______________ is a relational database management system that combines the Jet database engine with a user-friendly graphical interface'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'PostgreSQL', but the PDF-marked answer is B. Microsoft Access. It does not match '_______________ is a relational database management system that combines the Jet database engine with a user-friendly graphical interface'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: this points to database mechanics. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this points to database mechanics. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -887,12 +887,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. Basically Available, Soft State, Eventually Consistent",
-    "explanation": "The PDF answer key marks D. Basically Available, Soft State, Eventually Consistent. This answer is suitable because it directly addresses 'What is the BASE property of NoSQL databases'. Theory rule: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+    "explanation": "Correct answer: D. Basically Available, Soft State, Eventually Consistent. Why it is correct: it directly answers 'What is the BASE property of NoSQL databases'. Theory rule: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
     "optionExplanations": [
-      "Not suitable: this option says 'Batch Access, Static State, Error-free Consistency', but the PDF-marked answer is D. Basically Available, Soft State, Eventually Consistent. It does not match 'What is the BASE property of NoSQL databases'. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
-      "Not suitable: this option says 'Balanced Access, Structured Storage, Encrypted Consistency', but the PDF-marked answer is D. Basically Available, Soft State, Eventually Consistent. It does not match 'What is the BASE property of NoSQL databases'. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
-      "Not suitable: this option says 'Backup Availability, Stable Schema, Exact Consistency', but the PDF-marked answer is D. Basically Available, Soft State, Eventually Consistent. It does not match 'What is the BASE property of NoSQL databases'. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
-      "Suitable: the PDF answer key includes this option. It matches 'What is the BASE property of NoSQL databases'. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data."
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+      "Do not choose: this points to database mechanics. Correct reasoning: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+      "Choose this: it matches the concept. NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data."
     ]
   },
   {
@@ -915,12 +915,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. It enforces relationships between tables using keys",
-    "explanation": "The PDF answer key marks B. It enforces relationships between tables using keys. This answer is suitable because it directly addresses 'Why is MySQL classified as a relational database system'. Theory rule: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
+    "explanation": "Correct answer: B. It enforces relationships between tables using keys. Why it is correct: it directly answers 'Why is MySQL classified as a relational database system'. Theory rule: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
     "optionExplanations": [
-      "Not suitable: this option says 'It stores data only in hierarchical structures', but the PDF-marked answer is B. It enforces relationships between tables using keys. It does not match 'Why is MySQL classified as a relational database system'. Theory check: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
-      "Suitable: the PDF answer key includes this option. It matches 'Why is MySQL classified as a relational database system'. Theory check: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
-      "Not suitable: this option says 'It supports only spatial datasets', but the PDF-marked answer is B. It enforces relationships between tables using keys. It does not match 'Why is MySQL classified as a relational database system'. Theory check: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
-      "Not suitable: this option says 'It does not require structured queries', but the PDF-marked answer is B. It enforces relationships between tables using keys. It does not match 'Why is MySQL classified as a relational database system'. Theory check: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity."
+      "Do not choose: this points to too absolute. Correct reasoning: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
+      "Choose this: it matches the concept. Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
+      "Do not choose: this points to too absolute. Correct reasoning: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity."
     ]
   },
   {
@@ -943,12 +943,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. MySQL Workbench",
-    "explanation": "The PDF answer key marks C. MySQL Workbench. This answer is suitable because it directly addresses 'Which MySQL component primarily simplifies database interaction for users unfamiliar with command-line syntax'. Theory rule: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
+    "explanation": "Correct answer: C. MySQL Workbench. Why it is correct: it directly answers 'Which MySQL component primarily simplifies database interaction for users unfamiliar with command-line syntax'. Theory rule: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
     "optionExplanations": [
-      "Not suitable: this option says 'MySQL Server', but the PDF-marked answer is C. MySQL Workbench. It does not match 'Which MySQL component primarily simplifies database interaction for users unfamiliar with command-line syntax'. Theory check: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
-      "Not suitable: this option says 'MySQL Storage Engine', but the PDF-marked answer is C. MySQL Workbench. It does not match 'Which MySQL component primarily simplifies database interaction for users unfamiliar with command-line syntax'. Theory check: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which MySQL component primarily simplifies database interaction for users unfamiliar with command-line syntax'. Theory check: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
-      "Not suitable: this option says 'MySQL Connector', but the PDF-marked answer is C. MySQL Workbench. It does not match 'Which MySQL component primarily simplifies database interaction for users unfamiliar with command-line syntax'. Theory check: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity."
+      "Do not choose: this points to infrastructure/deployment. Correct reasoning: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
+      "Do not choose: this points to database mechanics. Correct reasoning: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
+      "Choose this: it matches the concept. Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity.",
+      "Do not choose: this points to database mechanics. Correct reasoning: Relational databases organize facts as related tables with keys, constraints, and query operations that preserve data integrity."
     ]
   },
   {
@@ -971,12 +971,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Row filtering",
-    "explanation": "The PDF answer key marks B. Row filtering. This answer is suitable because it directly addresses 'In a SELECT query containing both WHERE and GROUP BY clauses, which operation is executed first'. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+    "explanation": "Correct answer: B. Row filtering. Why it is correct: it directly answers 'In a SELECT query containing both WHERE and GROUP BY clauses, which operation is executed first'. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
     "optionExplanations": [
-      "Not suitable: this option says 'Group formation', but the PDF-marked answer is B. Row filtering. It does not match 'In a SELECT query containing both WHERE and GROUP BY clauses, which operation is executed first'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Suitable: the PDF answer key includes this option. It matches 'In a SELECT query containing both WHERE and GROUP BY clauses, which operation is executed first'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'Result sorting', but the PDF-marked answer is B. Row filtering. It does not match 'In a SELECT query containing both WHERE and GROUP BY clauses, which operation is executed first'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'Aggregate calculation', but the PDF-marked answer is B. Row filtering. It does not match 'In a SELECT query containing both WHERE and GROUP BY clauses, which operation is executed first'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Choose this: it matches the concept. SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
     ]
   },
   {
@@ -999,12 +999,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Subquery/Nested Subquery",
-    "explanation": "The PDF answer key marks B. Subquery/Nested Subquery. This answer is suitable because it directly addresses 'Which SQL technique allows results from one query to be used as input for another query'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. Subquery/Nested Subquery. Why it is correct: it directly answers 'Which SQL technique allows results from one query to be used as input for another query'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'Join', but the PDF-marked answer is B. Subquery/Nested Subquery. It does not match 'Which SQL technique allows results from one query to be used as input for another query'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which SQL technique allows results from one query to be used as input for another query'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Index', but the PDF-marked answer is B. Subquery/Nested Subquery. It does not match 'Which SQL technique allows results from one query to be used as input for another query'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'View', but the PDF-marked answer is B. Subquery/Nested Subquery. It does not match 'Which SQL technique allows results from one query to be used as input for another query'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1027,12 +1027,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P-ii, Q-iv, R-i, S-iii",
-    "explanation": "The PDF answer key marks A. P-ii, Q-iv, R-i, S-iii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: A. P-ii, Q-iv, R-i, S-iii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'P-iv, Q-ii, R-iii, S-i', but the PDF-marked answer is A. P-ii, Q-iv, R-i, S-iii. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'P-ii, Q-i, R-iv, S-iii', but the PDF-marked answer is A. P-ii, Q-iv, R-i, S-iii. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'P-iii, Q-iv, R-ii, S-i', but the PDF-marked answer is A. P-ii, Q-iv, R-i, S-iii. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -1055,12 +1055,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. APIs abstract internal database structure and expose data via controlled interfaces",
-    "explanation": "The PDF answer key marks B. APIs abstract internal database structure and expose data via controlled interfaces. This answer is suitable because it directly addresses 'Which characteristic best differentiates API-based data access from direct database access'. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+    "explanation": "Correct answer: B. APIs abstract internal database structure and expose data via controlled interfaces. Why it is correct: it directly answers 'Which characteristic best differentiates API-based data access from direct database access'. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
     "optionExplanations": [
-      "Not suitable: this option says 'APIs store data permanently and make sures they are ACID compliant', but the PDF-marked answer is B. APIs abstract internal database structure and expose data via controlled interfaces. It does not match 'Which characteristic best differentiates API-based data access from direct database access'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which characteristic best differentiates API-based data access from direct database access'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'APIs require SQL from clients so that data can be returned', but the PDF-marked answer is B. APIs abstract internal database structure and expose data via controlled interfaces. It does not match 'Which characteristic best differentiates API-based data access from direct database access'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'APIs eliminate authentication', but the PDF-marked answer is B. APIs abstract internal database structure and expose data via controlled interfaces. It does not match 'Which characteristic best differentiates API-based data access from direct database access'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
+      "Do not choose: it does not express the asked concept. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Choose this: it matches the concept. APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: this points to database mechanics. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
     ]
   },
   {
@@ -1083,12 +1083,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. WebSocket communication",
-    "explanation": "The PDF answer key marks B. WebSocket communication. This answer is suitable because it directly addresses 'Which technology enables real-time updates in traffic monitoring dashboards'. Theory rule: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+    "explanation": "Correct answer: B. WebSocket communication. Why it is correct: it directly answers 'Which technology enables real-time updates in traffic monitoring dashboards'. Theory rule: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
     "optionExplanations": [
-      "Not suitable: this option says 'REST polling', but the PDF-marked answer is B. WebSocket communication. It does not match 'Which technology enables real-time updates in traffic monitoring dashboards'. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which technology enables real-time updates in traffic monitoring dashboards'. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
-      "Not suitable: this option says 'CSV downloads', but the PDF-marked answer is B. WebSocket communication. It does not match 'Which technology enables real-time updates in traffic monitoring dashboards'. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
-      "Not suitable: this option says 'Batch APIs', but the PDF-marked answer is B. WebSocket communication. It does not match 'Which technology enables real-time updates in traffic monitoring dashboards'. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+      "Choose this: it matches the concept. Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data."
     ]
   },
   {
@@ -1111,12 +1111,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. It centralizes logic and improves security",
-    "explanation": "The PDF answer key marks C. It centralizes logic and improves security. This answer is suitable because it directly addresses 'Why is server-side scripting preferred for database access in web applications'. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+    "explanation": "Correct answer: C. It centralizes logic and improves security. Why it is correct: it directly answers 'Why is server-side scripting preferred for database access in web applications'. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
     "optionExplanations": [
-      "Not suitable: this option says 'It reduces network latency', but the PDF-marked answer is C. It centralizes logic and improves security. It does not match 'Why is server-side scripting preferred for database access in web applications'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'It exposes database credentials to users', but the PDF-marked answer is C. It centralizes logic and improves security. It does not match 'Why is server-side scripting preferred for database access in web applications'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Suitable: the PDF answer key includes this option. It matches 'Why is server-side scripting preferred for database access in web applications'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'It replaces the need for APIs', but the PDF-marked answer is C. It centralizes logic and improves security. It does not match 'Why is server-side scripting preferred for database access in web applications'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
+      "Do not choose: it does not express the asked concept. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: this points to database mechanics. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Choose this: it matches the concept. APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: this points to too absolute. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
     ]
   },
   {
@@ -1139,12 +1139,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P-iii, Q-i, R-iv, S-ii",
-    "explanation": "The PDF answer key marks A. P-iii, Q-i, R-iv, S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+    "explanation": "Correct answer: A. P-iii, Q-i, R-iv, S-ii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'P-i, Q-iii, R-ii, S-iv', but the PDF-marked answer is A. P-iii, Q-i, R-iv, S-ii. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'P-iv, Q-i, R-iii, S-ii', but the PDF-marked answer is A. P-iii, Q-i, R-iv, S-ii. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'P-iii, Q-iv, R-i, S-ii', but the PDF-marked answer is A. P-iii, Q-i, R-iv, S-ii. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
+      "Choose this: it matches the concept. SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
     ]
   },
   {
@@ -1167,12 +1167,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. CHECK constraint",
-    "explanation": "The PDF answer key marks C. CHECK constraint. This answer is suitable because it directly addresses 'The SQL constraint that enforces a logical condition such as area_sq_m > 50 is called ________'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: C. CHECK constraint. Why it is correct: it directly answers 'The SQL constraint that enforces a logical condition such as area_sq_m > 50 is called ________'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'UNIQUE constraint', but the PDF-marked answer is C. CHECK constraint. It does not match 'The SQL constraint that enforces a logical condition such as area_sq_m > 50 is called ________'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'DEFAULT constraint', but the PDF-marked answer is C. CHECK constraint. It does not match 'The SQL constraint that enforces a logical condition such as area_sq_m > 50 is called ________'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'The SQL constraint that enforces a logical condition such as area_sq_m > 50 is called ________'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'NOT NULL constraint', but the PDF-marked answer is C. CHECK constraint. It does not match 'The SQL constraint that enforces a logical condition such as area_sq_m > 50 is called ________'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1195,12 +1195,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Filtering results based on an aggregate condition",
-    "explanation": "The PDF answer key marks C. Filtering results based on an aggregate condition. This answer is suitable because it directly addresses 'Which situation requires the use of the HAVING clause instead of the WHERE clause'. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+    "explanation": "Correct answer: C. Filtering results based on an aggregate condition. Why it is correct: it directly answers 'Which situation requires the use of the HAVING clause instead of the WHERE clause'. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
     "optionExplanations": [
-      "Not suitable: this option says 'Filtering rows based on a non-numeric column', but the PDF-marked answer is C. Filtering results based on an aggregate condition. It does not match 'Which situation requires the use of the HAVING clause instead of the WHERE clause'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'Filtering rows before grouping', but the PDF-marked answer is C. Filtering results based on an aggregate condition. It does not match 'Which situation requires the use of the HAVING clause instead of the WHERE clause'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which situation requires the use of the HAVING clause instead of the WHERE clause'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'Sorting query output', but the PDF-marked answer is C. Filtering results based on an aggregate condition. It does not match 'Which situation requires the use of the HAVING clause instead of the WHERE clause'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Choose this: it matches the concept. SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
     ]
   },
   {
@@ -1223,12 +1223,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. FOREIGN KEY",
-    "explanation": "The PDF answer key marks D. FOREIGN KEY. This answer is suitable because it directly addresses 'Which constraint ensures referential integrity between two related tables'. Theory rule: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+    "explanation": "Correct answer: D. FOREIGN KEY. Why it is correct: it directly answers 'Which constraint ensures referential integrity between two related tables'. Theory rule: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
     "optionExplanations": [
-      "Not suitable: this option says 'UNIQUE', but the PDF-marked answer is D. FOREIGN KEY. It does not match 'Which constraint ensures referential integrity between two related tables'. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Not suitable: this option says 'PRIMARY KEY', but the PDF-marked answer is D. FOREIGN KEY. It does not match 'Which constraint ensures referential integrity between two related tables'. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Not suitable: this option says 'CHECK', but the PDF-marked answer is D. FOREIGN KEY. It does not match 'Which constraint ensures referential integrity between two related tables'. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which constraint ensures referential integrity between two related tables'. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity."
+      "Do not choose: it does not express the asked concept. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Do not choose: this points to database mechanics. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Choose this: it matches the concept. GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity."
     ]
   },
   {
@@ -1251,12 +1251,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. DEFAULT",
-    "explanation": "The PDF answer key marks C. DEFAULT. This answer is suitable because it directly addresses 'The constraint that automatically assigns a value to a column when no value is provided during insertion is ________'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: C. DEFAULT. Why it is correct: it directly answers 'The constraint that automatically assigns a value to a column when no value is provided during insertion is ________'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'CHECK', but the PDF-marked answer is C. DEFAULT. It does not match 'The constraint that automatically assigns a value to a column when no value is provided during insertion is ________'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'UNIQUE', but the PDF-marked answer is C. DEFAULT. It does not match 'The constraint that automatically assigns a value to a column when no value is provided during insertion is ________'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'The constraint that automatically assigns a value to a column when no value is provided during insertion is ________'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'NOT NULL', but the PDF-marked answer is C. DEFAULT. It does not match 'The constraint that automatically assigns a value to a column when no value is provided during insertion is ________'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1279,12 +1279,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P-iv, Q-iii, R-i, S-ii",
-    "explanation": "The PDF answer key marks A. P-iv, Q-iii, R-i, S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+    "explanation": "Correct answer: A. P-iv, Q-iii, R-i, S-ii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'P-iii, Q-iv, R-ii, S-i', but the PDF-marked answer is A. P-iv, Q-iii, R-i, S-ii. It does not match the concept asked in this PDF question. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'P-i, Q-ii, R-iv, S-iii', but the PDF-marked answer is A. P-iv, Q-iii, R-i, S-ii. It does not match the concept asked in this PDF question. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'P-iv, Q-i, R-iii, S-ii', but the PDF-marked answer is A. P-iv, Q-iii, R-i, S-ii. It does not match the concept asked in this PDF question. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
+      "Choose this: it matches the concept. APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
     ]
   },
   {
@@ -1308,12 +1308,12 @@ window.questionBankData = [
     ],
     "multiSelect": true,
     "pdfAnswer": "a, b, & c",
-    "explanation": "The PDF answer key marks A. JOIN; B. GROUP BY. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Aggregation summarizes grouped records using functions such as COUNT, AVG, SUM, MIN, and MAX.",
+    "explanation": "Correct answer: A. JOIN; B. GROUP BY. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Aggregation summarizes grouped records using functions such as COUNT, AVG, SUM, MIN, and MAX.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Aggregation summarizes grouped records using functions such as COUNT, AVG, SUM, MIN, and MAX.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Aggregation summarizes grouped records using functions such as COUNT, AVG, SUM, MIN, and MAX.",
-      "Not suitable: this option says 'AVG()', but the PDF-marked answer is A. JOIN; B. GROUP BY. It does not match the concept asked in this PDF question. Theory check: Aggregation summarizes grouped records using functions such as COUNT, AVG, SUM, MIN, and MAX.",
-      "Not suitable: this option says 'HAVING', but the PDF-marked answer is A. JOIN; B. GROUP BY. It does not match the concept asked in this PDF question. Theory check: Aggregation summarizes grouped records using functions such as COUNT, AVG, SUM, MIN, and MAX."
+      "Choose this: it matches the concept. Aggregation summarizes grouped records using functions such as COUNT, AVG, SUM, MIN, and MAX.",
+      "Choose this: it matches the concept. Aggregation summarizes grouped records using functions such as COUNT, AVG, SUM, MIN, and MAX.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Aggregation summarizes grouped records using functions such as COUNT, AVG, SUM, MIN, and MAX.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Aggregation summarizes grouped records using functions such as COUNT, AVG, SUM, MIN, and MAX."
     ]
   },
   {
@@ -1336,12 +1336,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b SELECT road_id FROM traffic_observations GROUP BY road_id HAVING COUNT(obs_id) > 1;",
-    "explanation": "The PDF answer key marks B. SELECT road_id FROM traffic_observations GROUP BY road_id HAVING COUNT(obs_id) > 1;. This answer is suitable because it directly addresses 'From the above given database, Which SQL query correctly identifies road segments that have more than one traffic observation recorded'. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+    "explanation": "Correct answer: B. SELECT road_id FROM traffic_observations GROUP BY road_id HAVING COUNT(obs_id) > 1;. Why it is correct: it directly answers 'From the above given database, Which SQL query correctly identifies road segments that have more than one traffic observation recorded'. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
     "optionExplanations": [
-      "Not suitable: this option says 'SELECT road_id FROM traffic_observations WHERE COUNT(obs_id) > 1;', but the PDF-marked answer is B. SELECT road_id FROM traffic_observations GROUP BY road_id HAVING COUNT(obs_id) > 1;. It does not match 'From the above given database, Which SQL query correctly identifies road segments that have more than one traffic observation recorded'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Suitable: the PDF answer key includes this option. It matches 'From the above given database, Which SQL query correctly identifies road segments that have more than one traffic observation recorded'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'SELECT road_id FROM road_segments GROUP BY road_id HAVING COUNT(obs_id) > 1;', but the PDF-marked answer is B. SELECT road_id FROM traffic_observations GROUP BY road_id HAVING COUNT(obs_id) > 1;. It does not match 'From the above given database, Which SQL query correctly identifies road segments that have more than one traffic observation recorded'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'SELECT road_id FROM traffic_observations HAVING COUNT(obs_id) > 1;', but the PDF-marked answer is B. SELECT road_id FROM traffic_observations GROUP BY road_id HAVING COUNT(obs_id) > 1;. It does not match 'From the above given database, Which SQL query correctly identifies road segments that have more than one traffic observation recorded'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Choose this: it matches the concept. SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
     ]
   },
   {
@@ -1364,12 +1364,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. Data is fully encapsulated and cannot be accessed directly by functions.",
-    "explanation": "The PDF answer key marks D. Data is fully encapsulated and cannot be accessed directly by functions.. This answer is suitable because it directly addresses 'Which of the following is NOT TRUE about Procedure-Oriented Programming (POP)'. Theory rule: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+    "explanation": "Correct answer: D. Data is fully encapsulated and cannot be accessed directly by functions.. Why it is correct: it directly answers 'Which of the following is NOT TRUE about Procedure-Oriented Programming (POP)'. Theory rule: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
     "optionExplanations": [
-      "Not suitable: this option says 'Data is often global and shared across functions.', but the PDF-marked answer is D. Data is fully encapsulated and cannot be accessed directly by functions.. It does not match 'Which of the following is NOT TRUE about Procedure-Oriented Programming (POP)'. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
-      "Not suitable: this option says 'Global data are vulnerable to inadvertent changes by functions.', but the PDF-marked answer is D. Data is fully encapsulated and cannot be accessed directly by functions.. It does not match 'Which of the following is NOT TRUE about Procedure-Oriented Programming (POP)'. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
-      "Not suitable: this option says 'External data structure changes require revision of many dependent functions.', but the PDF-marked answer is D. Data is fully encapsulated and cannot be accessed directly by functions.. It does not match 'Which of the following is NOT TRUE about Procedure-Oriented Programming (POP)'. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is NOT TRUE about Procedure-Oriented Programming (POP)'. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function."
+      "Do not choose: this points to programming mechanics. Correct reasoning: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+      "Do not choose: this points to programming mechanics. Correct reasoning: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+      "Do not choose: this points to programming mechanics. Correct reasoning: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+      "Choose this: it matches the concept. Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function."
     ]
   },
   {
@@ -1392,12 +1392,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Spyder",
-    "explanation": "The PDF answer key marks B. Spyder. This answer is suitable because it directly addresses 'Which of the following is NOT a Python library'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. Spyder. Why it is correct: it directly answers 'Which of the following is NOT a Python library'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'SciPy', but the PDF-marked answer is B. Spyder. It does not match 'Which of the following is NOT a Python library'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is NOT a Python library'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Matplotlib', but the PDF-marked answer is B. Spyder. It does not match 'Which of the following is NOT a Python library'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'NumPy', but the PDF-marked answer is B. Spyder. It does not match 'Which of the following is NOT a Python library'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: this points to the wrong communication role. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1420,12 +1420,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. Local",
-    "explanation": "The PDF answer key marks D. Local. This answer is suitable because it directly addresses 'A variable that is defined inside a function and can be accessed only within that function is called ________ variable'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: D. Local. Why it is correct: it directly answers 'A variable that is defined inside a function and can be accessed only within that function is called ________ variable'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'Global', but the PDF-marked answer is D. Local. It does not match 'A variable that is defined inside a function and can be accessed only within that function is called ________ variable'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'String', but the PDF-marked answer is D. Local. It does not match 'A variable that is defined inside a function and can be accessed only within that function is called ________ variable'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Float', but the PDF-marked answer is D. Local. It does not match 'A variable that is defined inside a function and can be accessed only within that function is called ________ variable'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'A variable that is defined inside a function and can be accessed only within that function is called ________ variable'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1448,12 +1448,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. City Park",
-    "explanation": "The PDF answer key marks A. City Park. This answer is suitable because it directly addresses 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: A. City Park. Why it is correct: it directly answers 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says '20', but the PDF-marked answer is A. City Park. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Error', but the PDF-marked answer is A. City Park. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'name', but the PDF-marked answer is A. City Park. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1476,12 +1476,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P-iii; Q-iv; R-i; S-ii",
-    "explanation": "The PDF answer key marks A. P-iii; Q-iv; R-i; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: A. P-iii; Q-iv; R-i; S-ii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'P-iv; Q-ii; R-iii; S-i', but the PDF-marked answer is A. P-iii; Q-iv; R-i; S-ii. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'P-i; Q-iv; R-ii; S-iii', but the PDF-marked answer is A. P-iii; Q-iv; R-i; S-ii. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'P-ii; Q-i; R-iv; S-iii', but the PDF-marked answer is A. P-iii; Q-iv; R-i; S-ii. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -1504,12 +1504,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. It reduces code duplication and improves reusability",
-    "explanation": "The PDF answer key marks C. It reduces code duplication and improves reusability. This answer is suitable because it directly addresses 'Why is calling one function from another considered a good programming practice'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: C. It reduces code duplication and improves reusability. Why it is correct: it directly answers 'Why is calling one function from another considered a good programming practice'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'It increases execution time', but the PDF-marked answer is C. It reduces code duplication and improves reusability. It does not match 'Why is calling one function from another considered a good programming practice'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'It avoids syntax errors', but the PDF-marked answer is C. It reduces code duplication and improves reusability. It does not match 'Why is calling one function from another considered a good programming practice'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Why is calling one function from another considered a good programming practice'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'It removes the need for variables', but the PDF-marked answer is C. It reduces code duplication and improves reusability. It does not match 'Why is calling one function from another considered a good programming practice'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1532,12 +1532,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. C, D, E and F",
-    "explanation": "The PDF answer key marks D. C, D, E and F. This answer is suitable because it directly addresses 'Properties of Object-Oriented Programming (OOP) are- A. Compilation B. Libraries C. Inheritance D. Polymorphism E. Dynamic Binding F. Message Passing'. Theory rule: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+    "explanation": "Correct answer: D. C, D, E and F. Why it is correct: it directly answers 'Properties of Object-Oriented Programming (OOP) are- A. Compilation B. Libraries C. Inheritance D. Polymorphism E. Dynamic Binding F. Message Passing'. Theory rule: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
     "optionExplanations": [
-      "Not suitable: this option says 'A, B, C and D', but the PDF-marked answer is D. C, D, E and F. It does not match 'Properties of Object-Oriented Programming (OOP) are- A. Compilation B. Libraries C. Inheritance D. Polymorphism E. Dynamic Binding F. Message Passing'. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Not suitable: this option says 'A, C, E and F', but the PDF-marked answer is D. C, D, E and F. It does not match 'Properties of Object-Oriented Programming (OOP) are- A. Compilation B. Libraries C. Inheritance D. Polymorphism E. Dynamic Binding F. Message Passing'. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Not suitable: this option says 'B, C, D and E', but the PDF-marked answer is D. C, D, E and F. It does not match 'Properties of Object-Oriented Programming (OOP) are- A. Compilation B. Libraries C. Inheritance D. Polymorphism E. Dynamic Binding F. Message Passing'. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Suitable: the PDF answer key includes this option. It matches 'Properties of Object-Oriented Programming (OOP) are- A. Compilation B. Libraries C. Inheritance D. Polymorphism E. Dynamic Binding F. Message Passing'. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding."
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Choose this: it matches the concept. OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding."
     ]
   },
   {
@@ -1560,12 +1560,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. 7",
-    "explanation": "The PDF answer key marks B. 7. This answer is suitable because it directly addresses 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. 7. Why it is correct: it directly answers 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'add (3, 4)', but the PDF-marked answer is B. 7. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says '3+4', but the PDF-marked answer is B. 7. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'error', but the PDF-marked answer is B. 7. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1588,12 +1588,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. A, B and D",
-    "explanation": "The PDF answer key marks B. A, B and D. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+    "explanation": "Correct answer: B. A, B and D. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
     "optionExplanations": [
-      "Not suitable: this option says 'A, B and C', but the PDF-marked answer is B. A, B and D. It does not match the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Not suitable: this option says 'A, C and D', but the PDF-marked answer is B. A, B and D. It does not match the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Not suitable: this option says 'B, C and D', but the PDF-marked answer is B. A, B and D. It does not match the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding."
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Choose this: it matches the concept. OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding."
     ]
   },
   {
@@ -1616,12 +1616,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. 4",
-    "explanation": "The PDF answer key marks A. 4. This answer is suitable because it directly addresses 'Consider the following lines of code. Assume all necessary standard libraries are imported.. What will be the output'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: A. 4. Why it is correct: it directly answers 'Consider the following lines of code. Assume all necessary standard libraries are imported.. What will be the output'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'Consider the following lines of code. Assume all necessary standard libraries are imported.. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says '6', but the PDF-marked answer is A. 4. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported.. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says '9', but the PDF-marked answer is A. 4. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported.. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Infinite loop', but the PDF-marked answer is A. 4. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported.. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1644,12 +1644,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Dictionary is mutable and stores data as key-value pairs, while Set does not allow duplicate elements.",
-    "explanation": "The PDF answer key marks C. Dictionary is mutable and stores data as key-value pairs, while Set does not allow duplicate elements.. This answer is suitable because it directly addresses 'Which of the following statement is CORRECT'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: C. Dictionary is mutable and stores data as key-value pairs, while Set does not allow duplicate elements.. Why it is correct: it directly answers 'Which of the following statement is CORRECT'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'List and Tuple are both mutable and ordered.', but the PDF-marked answer is C. Dictionary is mutable and stores data as key-value pairs, while Set does not allow duplicate elements.. It does not match 'Which of the following statement is CORRECT'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Array and List can store elements of different data types.', but the PDF-marked answer is C. Dictionary is mutable and stores data as key-value pairs, while Set does not allow duplicate elements.. It does not match 'Which of the following statement is CORRECT'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following statement is CORRECT'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Tuple and Set both preserve insertion order.', but the PDF-marked answer is C. Dictionary is mutable and stores data as key-value pairs, while Set does not allow duplicate elements.. It does not match 'Which of the following statement is CORRECT'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: this points to database mechanics. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1672,12 +1672,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. 30 20 20",
-    "explanation": "The PDF answer key marks A. 30 20 20. This answer is suitable because it directly addresses 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: A. 30 20 20. Why it is correct: it directly answers 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says '30 30 30', but the PDF-marked answer is A. 30 20 20. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says '20 20 30', but the PDF-marked answer is A. 30 20 20. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says '20 20 20', but the PDF-marked answer is A. 30 20 20. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1700,12 +1700,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Polymorphism",
-    "explanation": "The PDF answer key marks C. Polymorphism. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+    "explanation": "Correct answer: C. Polymorphism. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
     "optionExplanations": [
-      "Not suitable: this option says 'Encapsulation', but the PDF-marked answer is C. Polymorphism. It does not match the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Not suitable: this option says 'Inheritance', but the PDF-marked answer is C. Polymorphism. It does not match the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Not suitable: this option says 'Abstraction', but the PDF-marked answer is C. Polymorphism. It does not match the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding."
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Choose this: it matches the concept. OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding."
     ]
   },
   {
@@ -1728,12 +1728,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. P-iii; Q-i; R-iv; S-ii",
-    "explanation": "The PDF answer key marks B. P-iii; Q-i; R-iv; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+    "explanation": "Correct answer: B. P-iii; Q-i; R-iv; S-ii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
     "optionExplanations": [
-      "Not suitable: this option says 'P-ii; Q-iv; R-i; S-iii', but the PDF-marked answer is B. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Not suitable: this option says 'P-ii; Q-iii; R-i; S-iv', but the PDF-marked answer is B. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
-      "Not suitable: this option says 'P-i; Q-iv; R-ii; S-iii', but the PDF-marked answer is B. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question. Theory check: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding."
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Choose this: it matches the concept. OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: OOP organizes code as objects that combine data and behavior through encapsulation, inheritance, polymorphism, abstraction, and dynamic binding."
     ]
   },
   {
@@ -1756,12 +1756,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. module",
-    "explanation": "The PDF answer key marks C. module. This answer is suitable because it directly addresses 'A ________ is a single Python file that organizes code and may contain functions, classes, or variables'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: C. module. Why it is correct: it directly answers 'A ________ is a single Python file that organizes code and may contain functions, classes, or variables'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'package', but the PDF-marked answer is C. module. It does not match 'A ________ is a single Python file that organizes code and may contain functions, classes, or variables'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'library', but the PDF-marked answer is C. module. It does not match 'A ________ is a single Python file that organizes code and may contain functions, classes, or variables'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'A ________ is a single Python file that organizes code and may contain functions, classes, or variables'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'directory', but the PDF-marked answer is C. module. It does not match 'A ________ is a single Python file that organizes code and may contain functions, classes, or variables'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this points to programming mechanics. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1784,12 +1784,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. dynamic binding",
-    "explanation": "The PDF answer key marks B. dynamic binding. This answer is suitable because it directly addresses 'In object-oriented programming, ______________ allows the method to be decided at runtime, not at compile time'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. dynamic binding. Why it is correct: it directly answers 'In object-oriented programming, ______________ allows the method to be decided at runtime, not at compile time'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'method overloading', but the PDF-marked answer is B. dynamic binding. It does not match 'In object-oriented programming, ______________ allows the method to be decided at runtime, not at compile time'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'In object-oriented programming, ______________ allows the method to be decided at runtime, not at compile time'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'message passing', but the PDF-marked answer is B. dynamic binding. It does not match 'In object-oriented programming, ______________ allows the method to be decided at runtime, not at compile time'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'encapsulation', but the PDF-marked answer is B. dynamic binding. It does not match 'In object-oriented programming, ______________ allows the method to be decided at runtime, not at compile time'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1812,12 +1812,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. JSON supports nested and hierarchical structures",
-    "explanation": "The PDF answer key marks B. JSON supports nested and hierarchical structures. This answer is suitable because it directly addresses 'Which of the following statements are correct regarding JSON and CSV data formats'. Theory rule: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+    "explanation": "Correct answer: B. JSON supports nested and hierarchical structures. Why it is correct: it directly answers 'Which of the following statements are correct regarding JSON and CSV data formats'. Theory rule: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
     "optionExplanations": [
-      "Not suitable: this option says 'JSON stores data only in rows', but the PDF-marked answer is B. JSON supports nested and hierarchical structures. It does not match 'Which of the following statements are correct regarding JSON and CSV data formats'. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following statements are correct regarding JSON and CSV data formats'. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
-      "Not suitable: this option says 'CSV supports key-value pairs', but the PDF-marked answer is B. JSON supports nested and hierarchical structures. It does not match 'Which of the following statements are correct regarding JSON and CSV data formats'. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
-      "Not suitable: this option says 'CSV preserves data types automatically', but the PDF-marked answer is B. JSON supports nested and hierarchical structures. It does not match 'Which of the following statements are correct regarding JSON and CSV data formats'. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data."
+      "Do not choose: this points to too absolute. Correct reasoning: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+      "Choose this: it matches the concept. Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+      "Do not choose: this points to database mechanics. Correct reasoning: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data."
     ]
   },
   {
@@ -1840,12 +1840,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Bridging database tables with programming objects",
-    "explanation": "The PDF answer key marks C. Bridging database tables with programming objects. This answer is suitable because it directly addresses 'What problem does Object-Relational Mapping (ORM) primarily solve'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: C. Bridging database tables with programming objects. Why it is correct: it directly answers 'What problem does Object-Relational Mapping (ORM) primarily solve'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'Data visualization', but the PDF-marked answer is C. Bridging database tables with programming objects. It does not match 'What problem does Object-Relational Mapping (ORM) primarily solve'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Manual SQL query writing', but the PDF-marked answer is C. Bridging database tables with programming objects. It does not match 'What problem does Object-Relational Mapping (ORM) primarily solve'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches 'What problem does Object-Relational Mapping (ORM) primarily solve'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Database installation', but the PDF-marked answer is C. Bridging database tables with programming objects. It does not match 'What problem does Object-Relational Mapping (ORM) primarily solve'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to database mechanics. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to database mechanics. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -1868,12 +1868,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. shape",
-    "explanation": "The PDF answer key marks C. shape. This answer is suitable because it directly addresses 'Which Pandas attribute immediately reveals the dimensionality of a dataset'. Theory rule: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
+    "explanation": "Correct answer: C. shape. Why it is correct: it directly answers 'Which Pandas attribute immediately reveals the dimensionality of a dataset'. Theory rule: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
     "optionExplanations": [
-      "Not suitable: this option says 'columns', but the PDF-marked answer is C. shape. It does not match 'Which Pandas attribute immediately reveals the dimensionality of a dataset'. Theory check: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
-      "Not suitable: this option says 'info()', but the PDF-marked answer is C. shape. It does not match 'Which Pandas attribute immediately reveals the dimensionality of a dataset'. Theory check: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which Pandas attribute immediately reveals the dimensionality of a dataset'. Theory check: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
-      "Not suitable: this option says 'size', but the PDF-marked answer is C. shape. It does not match 'Which Pandas attribute immediately reveals the dimensionality of a dataset'. Theory check: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
+      "Choose this: it matches the concept. Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets."
     ]
   },
   {
@@ -1896,12 +1896,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Embedded and serverless architecture",
-    "explanation": "The PDF answer key marks B. Embedded and serverless architecture. This answer is suitable because it directly addresses 'Which feature makes SQLite suitable for lightweight applications'. Theory rule: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+    "explanation": "Correct answer: B. Embedded and serverless architecture. Why it is correct: it directly answers 'Which feature makes SQLite suitable for lightweight applications'. Theory rule: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
     "optionExplanations": [
-      "Not suitable: this option says 'Requires dedicated server', but the PDF-marked answer is B. Embedded and serverless architecture. It does not match 'Which feature makes SQLite suitable for lightweight applications'. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which feature makes SQLite suitable for lightweight applications'. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
-      "Not suitable: this option says 'Supports only NoSQL queries', but the PDF-marked answer is B. Embedded and serverless architecture. It does not match 'Which feature makes SQLite suitable for lightweight applications'. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
-      "Not suitable: this option says 'Operates only online', but the PDF-marked answer is B. Embedded and serverless architecture. It does not match 'Which feature makes SQLite suitable for lightweight applications'. Theory check: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data."
+      "Do not choose: this points to infrastructure/deployment. Correct reasoning: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+      "Choose this: it matches the concept. NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+      "Do not choose: this points to too absolute. Correct reasoning: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data.",
+      "Do not choose: this points to too absolute. Correct reasoning: NoSQL systems are chosen for flexible schemas, distributed scale, high availability, graph relationships, or large heterogeneous data."
     ]
   },
   {
@@ -1924,12 +1924,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P-ii, Q-iii, R-i, S-iv",
-    "explanation": "The PDF answer key marks A. P-ii, Q-iii, R-i, S-iv. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
+    "explanation": "Correct answer: A. P-ii, Q-iii, R-i, S-iv. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
-      "Not suitable: this option says 'P-iii, Q-ii, R-iv, S-i', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question. Theory check: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
-      "Not suitable: this option says 'P-i, Q-iv, R-ii, S-iii', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question. Theory check: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
-      "Not suitable: this option says 'P-iv, Q-i, R-iii, S-ii', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question. Theory check: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis."
+      "Choose this: it matches the concept. A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis."
     ]
   },
   {
@@ -1952,12 +1952,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Boxplot",
-    "explanation": "The PDF answer key marks C. Boxplot. This answer is suitable because it directly addresses 'Which plot is most effective for comparing distributions across categories'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: C. Boxplot. Why it is correct: it directly answers 'Which plot is most effective for comparing distributions across categories'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'Line plot', but the PDF-marked answer is C. Boxplot. It does not match 'Which plot is most effective for comparing distributions across categories'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Scatter plot', but the PDF-marked answer is C. Boxplot. It does not match 'Which plot is most effective for comparing distributions across categories'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which plot is most effective for comparing distributions across categories'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Stem plot', but the PDF-marked answer is C. Boxplot. It does not match 'Which plot is most effective for comparing distributions across categories'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -1980,12 +1980,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Tukey's rule",
-    "explanation": "The PDF answer key marks C. Tukey's rule. This answer is suitable because it directly addresses 'Which rule is commonly used to flag outliers using quartiles'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: C. Tukey's rule. Why it is correct: it directly answers 'Which rule is commonly used to flag outliers using quartiles'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'Z-score rule', but the PDF-marked answer is C. Tukey's rule. It does not match 'Which rule is commonly used to flag outliers using quartiles'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says '3-sigma rule', but the PDF-marked answer is C. Tukey's rule. It does not match 'Which rule is commonly used to flag outliers using quartiles'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which rule is commonly used to flag outliers using quartiles'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Min-max rule', but the PDF-marked answer is C. Tukey's rule. It does not match 'Which rule is commonly used to flag outliers using quartiles'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -2008,12 +2008,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b df[\"population\"] = df[\"population\"].interpolate() df = df.reset_index(drop=True))",
-    "explanation": "The PDF answer key marks B. df[\"population\"] = df[\"population\"].interpolate() df = df.reset_index(drop=True). This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. df[\"population\"] = df[\"population\"].interpolate() df = df.reset_index(drop=True). Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'df = df.reset_index() df[\"population\"] = df[\"population\"].interpolate()', but the PDF-marked answer is B. df[\"population\"] = df[\"population\"].interpolate() df = df.reset_index(drop=True). It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'df = df.dropna() df = df.set_index(\"population\")', but the PDF-marked answer is B. df[\"population\"] = df[\"population\"].interpolate() df = df.reset_index(drop=True). It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'df[\"population\"] = df[\"population\"].fillna(0) df = df.reset_index()', but the PDF-marked answer is B. df[\"population\"] = df[\"population\"].interpolate() df = df.reset_index(drop=True). It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -2036,12 +2036,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. P-ii, Q-i, R-iii, S-iv",
-    "explanation": "The PDF answer key marks B. P-ii, Q-i, R-iii, S-iv. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. P-ii, Q-i, R-iii, S-iv. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'P-i, Q-ii, R-iv, S-iii', but the PDF-marked answer is B. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'P-iv, Q-iii, R-i, S-ii', but the PDF-marked answer is B. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'P-iii, Q-iv, R-ii, S-i', but the PDF-marked answer is B. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -2064,12 +2064,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].median())",
-    "explanation": "The PDF answer key marks C. df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].median()). This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: C. df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].median()). Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].mean())', but the PDF-marked answer is C. df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].median()). It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'df[\"area_sq_m\"].fillna(0)', but the PDF-marked answer is C. df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].median()). It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'df.dropna()', but the PDF-marked answer is C. df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].median()). It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -2092,12 +2092,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Database abstraction and object-based interaction",
-    "explanation": "The PDF answer key marks C. Database abstraction and object-based interaction. This answer is suitable because it directly addresses 'Which of the following is the primary functional advantage of using an Object-Relational Mapping (ORM) framework compared to writing raw SQL queries'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: C. Database abstraction and object-based interaction. Why it is correct: it directly answers 'Which of the following is the primary functional advantage of using an Object-Relational Mapping (ORM) framework compared to writing raw SQL queries'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'Faster execution in all scenarios', but the PDF-marked answer is C. Database abstraction and object-based interaction. It does not match 'Which of the following is the primary functional advantage of using an Object-Relational Mapping (ORM) framework compared to writing raw SQL queries'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Reduced memory usage', but the PDF-marked answer is C. Database abstraction and object-based interaction. It does not match 'Which of the following is the primary functional advantage of using an Object-Relational Mapping (ORM) framework compared to writing raw SQL queries'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is the primary functional advantage of using an Object-Relational Mapping (ORM) framework compared to writing raw SQL queries'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Automatic indexing of tables', but the PDF-marked answer is C. Database abstraction and object-based interaction. It does not match 'Which of the following is the primary functional advantage of using an Object-Relational Mapping (ORM) framework compared to writing raw SQL queries'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: this points to too absolute. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to database mechanics. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -2120,12 +2120,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. sns.histplot(df[\"PM25\"], kde=True)",
-    "explanation": "The PDF answer key marks B. sns.histplot(df[\"PM25\"], kde=True). This answer is suitable because it directly addresses 'Which code correctly visualizes the distribution and density of a continuous variable PM25'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. sns.histplot(df[\"PM25\"], kde=True). Why it is correct: it directly answers 'Which code correctly visualizes the distribution and density of a continuous variable PM25'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'df[\"PM25\"].plot(kind=\"bar\")', but the PDF-marked answer is B. sns.histplot(df[\"PM25\"], kde=True). It does not match 'Which code correctly visualizes the distribution and density of a continuous variable PM25'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which code correctly visualizes the distribution and density of a continuous variable PM25'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'df.groupby(\"PM25\").count().plot()', but the PDF-marked answer is B. sns.histplot(df[\"PM25\"], kde=True). It does not match 'Which code correctly visualizes the distribution and density of a continuous variable PM25'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'plt.scatter(df.index, df[\"PM25\"])', but the PDF-marked answer is B. sns.histplot(df[\"PM25\"], kde=True). It does not match 'Which code correctly visualizes the distribution and density of a continuous variable PM25'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -2148,12 +2148,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. df.groupby(\"Area\")[\"PM25\"].mean().plot(kind=\"bar\")",
-    "explanation": "The PDF answer key marks B. df.groupby(\"Area\")[\"PM25\"].mean().plot(kind=\"bar\"). This answer is suitable because it directly addresses 'Given a DataFrame df with columns Area and PM25, which code correctly computes and visualizes the mean PM2.5 concentration by urban area'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. df.groupby(\"Area\")[\"PM25\"].mean().plot(kind=\"bar\"). Why it is correct: it directly answers 'Given a DataFrame df with columns Area and PM25, which code correctly computes and visualizes the mean PM2.5 concentration by urban area'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'df.plot(x=\"Area\", y=\"PM25\", kind=\"bar\")', but the PDF-marked answer is B. df.groupby(\"Area\")[\"PM25\"].mean().plot(kind=\"bar\"). It does not match 'Given a DataFrame df with columns Area and PM25, which code correctly computes and visualizes the mean PM2.5 concentration by urban area'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Given a DataFrame df with columns Area and PM25, which code correctly computes and visualizes the mean PM2.5 concentration by urban area'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'df.groupby(\"PM25\")[\"Area\"].mean().plot()', but the PDF-marked answer is B. df.groupby(\"Area\")[\"PM25\"].mean().plot(kind=\"bar\"). It does not match 'Given a DataFrame df with columns Area and PM25, which code correctly computes and visualizes the mean PM2.5 concentration by urban area'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'df[\"PM25\"].mean().plot(kind=\"bar\")', but the PDF-marked answer is B. df.groupby(\"Area\")[\"PM25\"].mean().plot(kind=\"bar\"). It does not match 'Given a DataFrame df with columns Area and PM25, which code correctly computes and visualizes the mean PM2.5 concentration by urban area'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -2176,12 +2176,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. P-i, Q-ii, R-iii, S-iv",
-    "explanation": "The PDF answer key marks B. P-i, Q-ii, R-iii, S-iv. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: B. P-i, Q-ii, R-iii, S-iv. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'P-ii, Q-i, R-iii, S-iv', but the PDF-marked answer is B. P-i, Q-ii, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'P-iii, Q-iv, R-i, S-ii', but the PDF-marked answer is B. P-i, Q-ii, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'P-iv, Q-iii, R-ii, S-i', but the PDF-marked answer is B. P-i, Q-ii, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -2204,12 +2204,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. iqr = values.quantile(0.75) - values.quantile(0.25)",
-    "explanation": "The PDF answer key marks B. iqr = values.quantile(0.75) - values.quantile(0.25). This answer is suitable because it directly addresses 'Which code line correctly computes the Interquartile Range (IQR) of a numeric column values'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. iqr = values.quantile(0.75) - values.quantile(0.25). Why it is correct: it directly answers 'Which code line correctly computes the Interquartile Range (IQR) of a numeric column values'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'iqr = values.max() - values.min()', but the PDF-marked answer is B. iqr = values.quantile(0.75) - values.quantile(0.25). It does not match 'Which code line correctly computes the Interquartile Range (IQR) of a numeric column values'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which code line correctly computes the Interquartile Range (IQR) of a numeric column values'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'iqr = values.mean() - values.median()', but the PDF-marked answer is B. iqr = values.quantile(0.75) - values.quantile(0.25). It does not match 'Which code line correctly computes the Interquartile Range (IQR) of a numeric column values'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'iqr = values.std()', but the PDF-marked answer is B. iqr = values.quantile(0.75) - values.quantile(0.25). It does not match 'Which code line correctly computes the Interquartile Range (IQR) of a numeric column values'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -2232,12 +2232,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c df[\"value\"] = (df[\"value\"] - df[\"value\"].min()) / (df[\"value\"].max() - df[\"value\"].min())",
-    "explanation": "The PDF answer key marks C. df[\"value\"] = (df[\"value\"] - df[\"value\"].min()) / (df[\"value\"].max() - df[\"value\"].min()). This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: C. df[\"value\"] = (df[\"value\"] - df[\"value\"].min()) / (df[\"value\"].max() - df[\"value\"].min()). Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'df[\"value\"] = df[\"value\"] / df[\"value\"].mean()', but the PDF-marked answer is C. df[\"value\"] = (df[\"value\"] - df[\"value\"].min()) / (df[\"value\"].max() - df[\"value\"].min()). It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'df[\"value\"] = (df[\"value\"] - df[\"value\"].min()) / df[\"value\"].max()', but the PDF-marked answer is C. df[\"value\"] = (df[\"value\"] - df[\"value\"].min()) / (df[\"value\"].max() - df[\"value\"].min()). It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'df[\"value\"] = df[\"value\"] / df[\"value\"].std()', but the PDF-marked answer is C. df[\"value\"] = (df[\"value\"] - df[\"value\"].min()) / (df[\"value\"].max() - df[\"value\"].min()). It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -2260,12 +2260,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Large Language Models",
-    "explanation": "The PDF answer key marks B. Large Language Models. This answer is suitable because it directly addresses '__________________ are a class of deep learning models built using the Transformer architecture and trained on massive text data'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: B. Large Language Models. Why it is correct: it directly answers '__________________ are a class of deep learning models built using the Transformer architecture and trained on massive text data'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'Convolutional Neural Networks', but the PDF-marked answer is B. Large Language Models. It does not match '__________________ are a class of deep learning models built using the Transformer architecture and trained on massive text data'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches '__________________ are a class of deep learning models built using the Transformer architecture and trained on massive text data'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Clustering Models', but the PDF-marked answer is B. Large Language Models. It does not match '__________________ are a class of deep learning models built using the Transformer architecture and trained on massive text data'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Recurrent Neural Networks', but the PDF-marked answer is B. Large Language Models. It does not match '__________________ are a class of deep learning models built using the Transformer architecture and trained on massive text data'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -2288,12 +2288,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. To make sure patterns becomes clearer and capture maximum variance.",
-    "explanation": "The PDF answer key marks C. To make sure patterns becomes clearer and capture maximum variance.. This answer is suitable because it directly addresses 'Why are data transformations (e.g., scaling, rotation) applied in machine learning'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: C. To make sure patterns becomes clearer and capture maximum variance.. Why it is correct: it directly answers 'Why are data transformations (e.g., scaling, rotation) applied in machine learning'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'To convert datasets into square matrices required by algorithms.', but the PDF-marked answer is C. To make sure patterns becomes clearer and capture maximum variance.. It does not match 'Why are data transformations (e.g., scaling, rotation) applied in machine learning'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'To uniformly redistribute variance across all features.', but the PDF-marked answer is C. To make sure patterns becomes clearer and capture maximum variance.. It does not match 'Why are data transformations (e.g., scaling, rotation) applied in machine learning'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches 'Why are data transformations (e.g., scaling, rotation) applied in machine learning'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'To eliminate feature correlation completely.', but the PDF-marked answer is C. To make sure patterns becomes clearer and capture maximum variance.. It does not match 'Why are data transformations (e.g., scaling, rotation) applied in machine learning'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to too absolute. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -2316,12 +2316,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. A model where internal logic is hidden, focusing only on inputs and outputs",
-    "explanation": "The PDF answer key marks A. A model where internal logic is hidden, focusing only on inputs and outputs. This answer is suitable because it directly addresses 'Which statement best describes a black box model'. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+    "explanation": "Correct answer: A. A model where internal logic is hidden, focusing only on inputs and outputs. Why it is correct: it directly answers 'Which statement best describes a black box model'. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'Which statement best describes a black box model'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'A model built only using qualitative assumptions', but the PDF-marked answer is A. A model where internal logic is hidden, focusing only on inputs and outputs. It does not match 'Which statement best describes a black box model'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'A model that cannot be validated or tested', but the PDF-marked answer is A. A model where internal logic is hidden, focusing only on inputs and outputs. It does not match 'Which statement best describes a black box model'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'A model with fully transparent parameters and equations', but the PDF-marked answer is A. A model where internal logic is hidden, focusing only on inputs and outputs. It does not match 'Which statement best describes a black box model'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
+      "Choose this: it matches the concept. SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: this points to too absolute. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: this points to a different ML task. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: this points to a different ML task. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
     ]
   },
   {
@@ -2344,12 +2344,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. P-iii; Q-i; R-iv; S-ii",
-    "explanation": "The PDF answer key marks D. P-iii; Q-i; R-iv; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+    "explanation": "Correct answer: D. P-iii; Q-i; R-iv; S-ii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
     "optionExplanations": [
-      "Not suitable: this option says 'P-i; Q-iii; R-ii; S-iv', but the PDF-marked answer is D. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'P-ii; Q-i; R-iv; S-iii', but the PDF-marked answer is D. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'P-iii; Q-iv; R-ii; S-i', but the PDF-marked answer is D. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Choose this: it matches the concept. Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
     ]
   },
   {
@@ -2372,12 +2372,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Principal Component Analysis (PCA) applied to urban environmental indicators",
-    "explanation": "The PDF answer key marks C. Principal Component Analysis (PCA) applied to urban environmental indicators. This answer is suitable because it directly addresses 'Which of the following is NOT a supervised learning model'. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+    "explanation": "Correct answer: C. Principal Component Analysis (PCA) applied to urban environmental indicators. Why it is correct: it directly answers 'Which of the following is NOT a supervised learning model'. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
     "optionExplanations": [
-      "Not suitable: this option says 'Support Vector Machine (SVM) used for land-use classification', but the PDF-marked answer is C. Principal Component Analysis (PCA) applied to urban environmental indicators. It does not match 'Which of the following is NOT a supervised learning model'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'Random Forest model predicting peak-hour traffic volume', but the PDF-marked answer is C. Principal Component Analysis (PCA) applied to urban environmental indicators. It does not match 'Which of the following is NOT a supervised learning model'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is NOT a supervised learning model'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'Logistic Regression estimating the probability of modal shift', but the PDF-marked answer is C. Principal Component Analysis (PCA) applied to urban environmental indicators. It does not match 'Which of the following is NOT a supervised learning model'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
+      "Do not choose: this points to a different ML task. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Choose this: it matches the concept. Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: this points to GIS/spatial tooling. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
     ]
   },
   {
@@ -2400,12 +2400,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. Reinforcement learning",
-    "explanation": "The PDF answer key marks A. Reinforcement learning. This answer is suitable because it directly addresses 'SARSA algorithm is a __________ algorithm'. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+    "explanation": "Correct answer: A. Reinforcement learning. Why it is correct: it directly answers 'SARSA algorithm is a __________ algorithm'. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'SARSA algorithm is a __________ algorithm'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'Supervised learning', but the PDF-marked answer is A. Reinforcement learning. It does not match 'SARSA algorithm is a __________ algorithm'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'Unsupervised learning', but the PDF-marked answer is A. Reinforcement learning. It does not match 'SARSA algorithm is a __________ algorithm'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'Clustering', but the PDF-marked answer is A. Reinforcement learning. It does not match 'SARSA algorithm is a __________ algorithm'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
+      "Choose this: it matches the concept. Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
     ]
   },
   {
@@ -2428,12 +2428,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. Even though the model fit is good, the individual regression coefficients may not be reliably interpreted due to multicollinearity among predictors.",
-    "explanation": "The PDF answer key marks D. Even though the model fit is good, the individual regression coefficients may not be reliably interpreted due to multicollinearity among predictors.. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+    "explanation": "Correct answer: D. Even though the model fit is good, the individual regression coefficients may not be reliably interpreted due to multicollinearity among predictors.. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
     "optionExplanations": [
-      "Not suitable: this option says 'The dependent variable is poorly measured, which inflates the VIF values.', but the PDF-marked answer is D. Even though the model fit is good, the individual regression coefficients may not be reliably interpreted due to multicollinearity among predictors.. It does not match the concept asked in this PDF question. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Not suitable: this option says 'High VIF indicates that the predictors are strongly related to the dependent variable.', but the PDF-marked answer is D. Even though the model fit is good, the individual regression coefficients may not be reliably interpreted due to multicollinearity among predictors.. It does not match the concept asked in this PDF question. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Not suitable: this option says 'Removing the dependent variable from the model will reduce VIF values.', but the PDF-marked answer is D. Even though the model fit is good, the individual regression coefficients may not be reliably interpreted due to multicollinearity among predictors.. It does not match the concept asked in this PDF question. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity."
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Do not choose: this points to a different ML task. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Choose this: it matches the concept. GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity."
     ]
   },
   {
@@ -2456,12 +2456,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Long Short-Term Memory (LSTM)",
-    "explanation": "The PDF answer key marks B. Long Short-Term Memory (LSTM). This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+    "explanation": "Correct answer: B. Long Short-Term Memory (LSTM). Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
     "optionExplanations": [
-      "Not suitable: this option says 'Convolutional Neural Network (CNN)', but the PDF-marked answer is B. Long Short-Term Memory (LSTM). It does not match the concept asked in this PDF question. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
-      "Not suitable: this option says 'Undercomplete Autoencoder', but the PDF-marked answer is B. Long Short-Term Memory (LSTM). It does not match the concept asked in this PDF question. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
-      "Not suitable: this option says 'Deep Feed Forward Neural Network', but the PDF-marked answer is B. Long Short-Term Memory (LSTM). It does not match the concept asked in this PDF question. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function."
+      "Do not choose: this points to the wrong neural-network architecture. Correct reasoning: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+      "Choose this: it matches the concept. Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function."
     ]
   },
   {
@@ -2484,12 +2484,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. Information theory",
-    "explanation": "The PDF answer key marks A. Information theory. This answer is suitable because it directly addresses '________________ provides a framework for measuring uncertainty (entropy) of a prediction'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: A. Information theory. Why it is correct: it directly answers '________________ provides a framework for measuring uncertainty (entropy) of a prediction'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches '________________ provides a framework for measuring uncertainty (entropy) of a prediction'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Optimization theory', but the PDF-marked answer is A. Information theory. It does not match '________________ provides a framework for measuring uncertainty (entropy) of a prediction'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Graph theory', but the PDF-marked answer is A. Information theory. It does not match '________________ provides a framework for measuring uncertainty (entropy) of a prediction'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Learning theory', but the PDF-marked answer is A. Information theory. It does not match '________________ provides a framework for measuring uncertainty (entropy) of a prediction'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -2512,12 +2512,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. DBSCAN",
-    "explanation": "The PDF answer key marks C. DBSCAN. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
+    "explanation": "Correct answer: C. DBSCAN. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
     "optionExplanations": [
-      "Not suitable: this option says 'K-Means', but the PDF-marked answer is C. DBSCAN. It does not match the concept asked in this PDF question. Theory check: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
-      "Not suitable: this option says 'Hierarchical Clustering', but the PDF-marked answer is C. DBSCAN. It does not match the concept asked in this PDF question. Theory check: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
-      "Not suitable: this option says 'PCA', but the PDF-marked answer is C. DBSCAN. It does not match the concept asked in this PDF question. Theory check: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis."
+      "Do not choose: it does not express the asked concept. Correct reasoning: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
+      "Do not choose: this points to a different ML task. Correct reasoning: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
+      "Choose this: it matches the concept. A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis."
     ]
   },
   {
@@ -2540,12 +2540,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. For linear, continuous data without extreme outliers",
-    "explanation": "The PDF answer key marks B. For linear, continuous data without extreme outliers. This answer is suitable because it directly addresses 'When should you use Pearson correlation (r) instead of Spearman rank correlation (rho)'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. For linear, continuous data without extreme outliers. Why it is correct: it directly answers 'When should you use Pearson correlation (r) instead of Spearman rank correlation (rho)'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'For monotonic, non-linear data with outliers', but the PDF-marked answer is B. For linear, continuous data without extreme outliers. It does not match 'When should you use Pearson correlation (r) instead of Spearman rank correlation (rho)'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'When should you use Pearson correlation (r) instead of Spearman rank correlation (rho)'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'When strong outliers are present', but the PDF-marked answer is B. For linear, continuous data without extreme outliers. It does not match 'When should you use Pearson correlation (r) instead of Spearman rank correlation (rho)'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'For categorical variables', but the PDF-marked answer is B. For linear, continuous data without extreme outliers. It does not match 'When should you use Pearson correlation (r) instead of Spearman rank correlation (rho)'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -2568,12 +2568,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. Compare the median pedestrian satisfaction levels across three different street design types when data is not normally distributed",
-    "explanation": "The PDF answer key marks D. Compare the median pedestrian satisfaction levels across three different street design types when data is not normally distributed. This answer is suitable because it directly addresses 'In urban planning research, the Kruskal-Wallis test can be used to-'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: D. Compare the median pedestrian satisfaction levels across three different street design types when data is not normally distributed. Why it is correct: it directly answers 'In urban planning research, the Kruskal-Wallis test can be used to-'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'Compare the mean traffic volumes of two road corridors using normally distributed data', but the PDF-marked answer is D. Compare the median pedestrian satisfaction levels across three different street design types when data is not normally distributed. It does not match 'In urban planning research, the Kruskal-Wallis test can be used to-'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Measure the correlation between land use mix and property prices', but the PDF-marked answer is D. Compare the median pedestrian satisfaction levels across three different street design types when data is not normally distributed. It does not match 'In urban planning research, the Kruskal-Wallis test can be used to-'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Predict traffic congestion levels using multiple independent variables', but the PDF-marked answer is D. Compare the median pedestrian satisfaction levels across three different street design types when data is not normally distributed. It does not match 'In urban planning research, the Kruskal-Wallis test can be used to-'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches 'In urban planning research, the Kruskal-Wallis test can be used to-'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: this points to database mechanics. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to the wrong communication role. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -2596,12 +2596,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. To evaluate the model's ability to generalize to unseen data and avoid overfitting",
-    "explanation": "The PDF answer key marks A. To evaluate the model's ability to generalize to unseen data and avoid overfitting. This answer is suitable because it directly addresses 'Which of the following correctl y explains why a Train -Test split is essential in a Machine Learning workflow'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: A. To evaluate the model's ability to generalize to unseen data and avoid overfitting. Why it is correct: it directly answers 'Which of the following correctl y explains why a Train -Test split is essential in a Machine Learning workflow'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following correctl y explains why a Train -Test split is essential in a Machine Learning workflow'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'To improve data preprocessing by removing noise from the dataset', but the PDF-marked answer is A. To evaluate the model's ability to generalize to unseen data and avoid overfitting. It does not match 'Which of the following correctl y explains why a Train -Test split is essential in a Machine Learning workflow'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'To ensure the model perfectly fits the training data', but the PDF-marked answer is A. To evaluate the model's ability to generalize to unseen data and avoid overfitting. It does not match 'Which of the following correctl y explains why a Train -Test split is essential in a Machine Learning workflow'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'To select the most relevant features for the model', but the PDF-marked answer is A. To evaluate the model's ability to generalize to unseen data and avoid overfitting. It does not match 'Which of the following correctl y explains why a Train -Test split is essential in a Machine Learning workflow'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this points to a different ML task. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this points to a different ML task. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -2624,12 +2624,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. A- Clustering; B- Prediction; C- Scenario Analysis",
-    "explanation": "The PDF answer key marks D. A- Clustering; B- Prediction; C- Scenario Analysis. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
+    "explanation": "Correct answer: D. A- Clustering; B- Prediction; C- Scenario Analysis. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
     "optionExplanations": [
-      "Not suitable: this option says 'A- Prediction; B- Scenario Analysis; C- Clustering', but the PDF-marked answer is D. A- Clustering; B- Prediction; C- Scenario Analysis. It does not match the concept asked in this PDF question. Theory check: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
-      "Not suitable: this option says 'A- Prediction; B- Clustering; C- Scenario Analysis', but the PDF-marked answer is D. A- Clustering; B- Prediction; C- Scenario Analysis. It does not match the concept asked in this PDF question. Theory check: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
-      "Not suitable: this option says 'A- Scenario Analysis; B- Clustering; C- Prediction', but the PDF-marked answer is D. A- Clustering; B- Prediction; C- Scenario Analysis. It does not match the concept asked in this PDF question. Theory check: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models."
+      "Do not choose: this points to a different ML task. Correct reasoning: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
+      "Choose this: it matches the concept. Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models."
     ]
   },
   {
@@ -2652,12 +2652,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. It visually displays pairwise relationships among variables, helping identify linear/non-linear patterns, clusters, outliers, and class-wise heterogeneity.",
-    "explanation": "The PDF answer key marks B. It visually displays pairwise relationships among variables, helping identify linear/non -linear patterns, clusters, outliers, and class-wise heterogeneity.. This answer is suitable because it directly addresses 'Which of the following statements best describes the role of a pairplot in multivariate visualization'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. It visually displays pairwise relationships among variables, helping identify linear/non -linear patterns, clusters, outliers, and class-wise heterogeneity.. Why it is correct: it directly answers 'Which of the following statements best describes the role of a pairplot in multivariate visualization'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'It computes exact multicollinearity statistics such as VIF and provides numerical correlation coefficients for hypothesis testing.', but the PDF-marked answer is B. It visually displays pairwise relationships among variables, helping identify linear/non -linear patterns, clusters, outliers, and class-wise heterogeneity.. It does not match 'Which of the following statements best describes the role of a pairplot in multivariate visualization'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following statements best describes the role of a pairplot in multivariate visualization'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'It reduces high-dimensional data into principal components to maximize explained variance.', but the PDF-marked answer is B. It visually displays pairwise relationships among variables, helping identify linear/non -linear patterns, clusters, outliers, and class-wise heterogeneity.. It does not match 'Which of the following statements best describes the role of a pairplot in multivariate visualization'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'It automatically selects the best predictive model based on feature interactions.', but the PDF-marked answer is B. It visually displays pairwise relationships among variables, helping identify linear/non -linear patterns, clusters, outliers, and class-wise heterogeneity.. It does not match 'Which of the following statements best describes the role of a pairplot in multivariate visualization'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this points to the wrong communication role. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this points to a different ML task. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -2680,12 +2680,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. A & C",
-    "explanation": "The PDF answer key marks B. A & C. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+    "explanation": "Correct answer: B. A & C. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
     "optionExplanations": [
-      "Not suitable: this option says 'A & B', but the PDF-marked answer is B. A & C. It does not match the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'C & D', but the PDF-marked answer is B. A & C. It does not match the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'B & D', but the PDF-marked answer is B. A & C. It does not match the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Choose this: it matches the concept. Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
     ]
   },
   {
@@ -2708,12 +2708,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Sci-kit learn",
-    "explanation": "Scikit-learn is a Python library that provides a simple and efficient framework for building, training, and evaluating machine -learning models, supporting both supervised and unsupervised learning tasks. (Refer to lecture 31, slide 7.) The PDF-marked answer is C. Sci-kit learn, which directly addresses 'Which of the following Python library is used in building, training, and evaluating machine -learning models'. Theory rule: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
+    "explanation": "Correct answer: C. Sci-kit learn. Why it is correct: Scikit-learn is a Python library that provides a simple and efficient framework for building, training, and evaluating machine -learning models, supporting both supervised and unsupervised learning tasks. (Refer to lecture 31, slide 7.) Theory rule: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
     "optionExplanations": [
-      "Not suitable: this option says 'Matplotlib', but the PDF-marked answer is C. Sci-kit learn. It does not match 'Which of the following Python library is used in building, training, and evaluating machine -learning models'. Theory check: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
-      "Not suitable: this option says 'NumPy', but the PDF-marked answer is C. Sci-kit learn. It does not match 'Which of the following Python library is used in building, training, and evaluating machine -learning models'. Theory check: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following Python library is used in building, training, and evaluating machine -learning models'. Theory check: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets. Scikit-learn is a Python library that provides a simple and efficient framework for building, training, and evaluating machine -learning models, supporting both supervised and unsupervised learning tasks. (Refer to lecture 31, slide 7.)",
-      "Not suitable: this option says 'Pandas', but the PDF-marked answer is C. Sci-kit learn. It does not match 'Which of the following Python library is used in building, training, and evaluating machine -learning models'. Theory check: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets.",
+      "Choose this: it matches the concept. Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets. Extra clue: Scikit-learn is a Python library that provides a simple and efficient framework for building, training, and evaluating machine -learning models, supporting both supervised and unsupervised learning tasks. (Refer to lecture 31, slide 7.)",
+      "Do not choose: this points to programming mechanics. Correct reasoning: Python data analysis uses libraries and workflows for loading, cleaning, transforming, summarizing, and visualizing datasets."
     ]
   },
   {
@@ -2736,12 +2736,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Only Statement B is TRUE.",
-    "explanation": "Supervised learning uses historical labeled data to learn predictive relationships. In supervised classification learning, the set of classes are mutually exclusive and collectively exhaustive. Supervised classification is a supervised learning task in which, given an input feature vector, the goal is to assign the example to one of N predefined classes. The prediction phase of supervised learning uses testing dataset to test the accuracy of the model. (Refer to lecture 31, slide 4,5 & 6.) The PDF-marked answer is B. Only Statement B is TRUE., which directly addresses the concept asked in this PDF question. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+    "explanation": "Correct answer: B. Only Statement B is TRUE.. Why it is correct: Supervised learning uses historical labeled data to learn predictive relationships. In supervised classification learning, the set of classes are mutually exclusive and collectively exhaustive. Supervised classification is a supervised learning task in which, given an input feature vector, the goal is to assign the example to one of N predefined classes. The prediction phase of supervised learning uses testing dataset to test the accuracy of the model. (Refer to lecture 31, slide 4,5 & 6.) Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
     "optionExplanations": [
-      "Not suitable: this option says 'Both Statement A and Statement D are TRUE.', but the PDF-marked answer is B. Only Statement B is TRUE.. It does not match the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning. Supervised learning uses historical labeled data to learn predictive relationships. In supervised classification learning, the set of classes are mutually exclusive and collectively exhaustive. Supervised classification is a supervised learning task in which, given an input feature vector, the goal is to assign the example to one of N predefined classes. The prediction phase of supervised learning uses testing dataset to test the accuracy of the model. (Refer to lecture 31, slide 4,5 & 6.)",
-      "Not suitable: this option says 'Statement A is TRUE but Statement B is FALSE.', but the PDF-marked answer is B. Only Statement B is TRUE.. It does not match the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'Only Statement C is TRUE.', but the PDF-marked answer is B. Only Statement B is TRUE.. It does not match the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Choose this: it matches the concept. Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning. Extra clue: Supervised learning uses historical labeled data to learn predictive relationships. In supervised classification learning, the set of classes are mutually exclusive and collectively exhaustive. Supervised classification is a supervised learning task in which, given an input feature vector, the goal is to assign the example to one of N predefined classes. The prediction phase of supervised learning uses testing dataset to test the accuracy of the model. (Refer to lecture 31, slide 4,5 & 6.)",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: this points to too absolute. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
     ]
   },
   {
@@ -2764,12 +2764,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. P-iii; Q-i; R-iv; S-ii",
-    "explanation": "The PDF answer key marks D. P-iii; Q-i; R-iv; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: D. P-iii; Q-i; R-iv; S-ii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'P-i; Q-iii; R-ii; S-iv', but the PDF-marked answer is D. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'P-ii; Q-i; R-iv; S-iii', but the PDF-marked answer is D. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'P-iii; Q-iv; R-ii; S-i', but the PDF-marked answer is D. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -2792,12 +2792,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. 0.934",
-    "explanation": "The PDF answer key marks C. 0.934. This answer is suitable because it directly addresses 'What is the total entropy of the entire dataset'. Theory rule: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
+    "explanation": "Correct answer: C. 0.934. Why it is correct: it directly answers 'What is the total entropy of the entire dataset'. Theory rule: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
     "optionExplanations": [
-      "Not suitable: this option says '0.971', but the PDF-marked answer is C. 0.934. It does not match 'What is the total entropy of the entire dataset'. Theory check: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
-      "Not suitable: this option says '0.852', but the PDF-marked answer is C. 0.934. It does not match 'What is the total entropy of the entire dataset'. Theory check: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
-      "Suitable: the PDF answer key includes this option. It matches 'What is the total entropy of the entire dataset'. Theory check: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
-      "Not suitable: this option says '0.916', but the PDF-marked answer is C. 0.934. It does not match 'What is the total entropy of the entire dataset'. Theory check: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
+      "Choose this: it matches the concept. Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity."
     ]
   },
   {
@@ -2820,12 +2820,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. 0.082",
-    "explanation": "The PDF answer key marks D. 0.082. This answer is suitable because it directly addresses 'What is the information gain if population density is selected as the root node of the model'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: D. 0.082. Why it is correct: it directly answers 'What is the information gain if population density is selected as the root node of the model'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says '0.119', but the PDF-marked answer is D. 0.082. It does not match 'What is the information gain if population density is selected as the root node of the model'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says '0.402', but the PDF-marked answer is D. 0.082. It does not match 'What is the information gain if population density is selected as the root node of the model'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says '0.134', but the PDF-marked answer is D. 0.082. It does not match 'What is the information gain if population density is selected as the root node of the model'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches 'What is the information gain if population density is selected as the root node of the model'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -2848,12 +2848,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. The attribute traffic volume is most likely to be selected as root node as it has the highest information gain among the three attributes.",
-    "explanation": "The PDF answer key marks B. The attribute traffic volume is most likely to be selected as root node as it has the highest information gain among the three attributes.. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: B. The attribute traffic volume is most likely to be selected as root node as it has the highest information gain among the three attributes.. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'The attri bute commercial activity is most likely to be selected as root node as it has the highest weighted entropy among the three attributes.', but the PDF-marked answer is B. The attribute traffic volume is most likely to be selected as root node as it has the highest information gain among the three attributes.. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'The attribute commercial activity is most likely to be selected as root node as it has the lowest information gain among the three attributes.', but the PDF-marked answer is B. The attribute traffic volume is most likely to be selected as root node as it has the highest information gain among the three attributes.. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'The attribute traffic volume is least likely to be selected as root node as it has the lowest weighted entropy among the three attributes.', but the PDF-marked answer is B. The attribute traffic volume is most likely to be selected as root node as it has the highest information gain among the three attributes.. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: this points to the wrong impurity/split idea. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to the wrong impurity/split idea. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to the wrong impurity/split idea. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -2876,12 +2876,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Decision trees are prone to overfitting and instability, which can be reduced using pruning and ensemble methods like Random Forests.",
-    "explanation": "The PDF answer key marks B. Decision trees are prone to overfitting and instability, which can be reduced using pruning and ensemble methods like Random Forests.. This answer is suitable because it directly addresses 'Which of the following statements correctly explains a limitation of decision trees and a common method used to address it'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: B. Decision trees are prone to overfitting and instability, which can be reduced using pruning and ensemble methods like Random Forests.. Why it is correct: it directly answers 'Which of the following statements correctly explains a limitation of decision trees and a common method used to address it'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'Decision trees require feature scaling, which is addressed using normalization techniques.', but the PDF-marked answer is B. Decision trees are prone to overfitting and instability, which can be reduced using pruning and ensemble methods like Random Forests.. It does not match 'Which of the following statements correctly explains a limitation of decision trees and a common method used to address it'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following statements correctly explains a limitation of decision trees and a common method used to address it'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Decision trees cannot handle categorical data, which is addressed by converting all features to numerical values.', but the PDF-marked answer is B. Decision trees are prone to overfitting and instability, which can be reduced using pruning and ensemble methods like Random Forests.. It does not match 'Which of the following statements correctly explains a limitation of decision trees and a common method used to address it'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Decision trees only work fo r regression problems, which is addressed using classification techniques.', but the PDF-marked answer is B. Decision trees are prone to overfitting and instability, which can be reduced using pruning and ensemble methods like Random Forests.. It does not match 'Which of the following statements correctly explains a limitation of decision trees and a common method used to address it'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: this points to database mechanics. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to too absolute. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to too absolute. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -2904,12 +2904,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. subsample - specifies the fraction of training instances used for each tree",
-    "explanation": "The PDF answer key marks C. subsample - specifies the fraction of training instances used for each tree. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Boosting builds learners sequentially so later models focus on errors made by earlier models; XGBoost is a common boosted-tree method.",
+    "explanation": "Correct answer: C. subsample - specifies the fraction of training instances used for each tree. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Boosting builds learners sequentially so later models focus on errors made by earlier models; XGBoost is a common boosted-tree method.",
     "optionExplanations": [
-      "Not suitable: this option says 'learning_rate - controls the step size of learning from each tree', but the PDF-marked answer is C. subsample - specifies the fraction of training instances used for each tree. It does not match the concept asked in this PDF question. Theory check: Boosting builds learners sequentially so later models focus on errors made by earlier models; XGBoost is a common boosted-tree method.",
-      "Not suitable: this option says 'max_depth - determines the depth of each tree', but the PDF-marked answer is C. subsample - specifies the fraction of training instances used for each tree. It does not match the concept asked in this PDF question. Theory check: Boosting builds learners sequentially so later models focus on errors made by earlier models; XGBoost is a common boosted-tree method.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Boosting builds learners sequentially so later models focus on errors made by earlier models; XGBoost is a common boosted-tree method.",
-      "Not suitable: this option says 'n_estimators - defines the number of boosting rounds', but the PDF-marked answer is C. subsample - specifies the fraction of training instances used for each tree. It does not match the concept asked in this PDF question. Theory check: Boosting builds learners sequentially so later models focus on errors made by earlier models; XGBoost is a common boosted-tree method."
+      "Do not choose: this points to a different ML task. Correct reasoning: Boosting builds learners sequentially so later models focus on errors made by earlier models; XGBoost is a common boosted-tree method.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Boosting builds learners sequentially so later models focus on errors made by earlier models; XGBoost is a common boosted-tree method.",
+      "Choose this: it matches the concept. Boosting builds learners sequentially so later models focus on errors made by earlier models; XGBoost is a common boosted-tree method.",
+      "Do not choose: this points to the wrong ensemble idea. Correct reasoning: Boosting builds learners sequentially so later models focus on errors made by earlier models; XGBoost is a common boosted-tree method."
     ]
   },
   {
@@ -2932,12 +2932,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Bagging trains multiple models on bootstrap samples in parallel, Random Forest additionally selects random subsets of features at each split, and Boosting trains models sequentially to reduce previous errors.",
-    "explanation": "The PDF answer key marks B. Bagging trains multiple models on bootstrap samples in parallel, Random Forest additionally selects random subsets of f eatures at each split, and Boosting trains models sequentially to reduce previous errors.. This answer is suitable because it directly addresses 'Which of the following correctly distinguishes Bagging, Random Forest, and Boosting (e.g., XGBoost)'. Theory rule: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
+    "explanation": "Correct answer: B. Bagging trains multiple models on bootstrap samples in parallel, Random Forest additionally selects random subsets of f eatures at each split, and Boosting trains models sequentially to reduce previous errors.. Why it is correct: it directly answers 'Which of the following correctly distinguishes Bagging, Random Forest, and Boosting (e.g., XGBoost)'. Theory rule: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
     "optionExplanations": [
-      "Not suitable: this option says 'Bagging trains models sequentially to correct previous errors, Random Forest uses a single tree, and Boosting trains models in parallel.', but the PDF-marked answer is B. Bagging trains multiple models on bootstrap samples in parallel, Random Forest additionally selects random subsets of f eatures at each split, and Boosting trains models sequentially to reduce previous errors.. It does not match 'Which of the following correctly distinguishes Bagging, Random Forest, and Boosting (e.g., XGBoost)'. Theory check: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following correctly distinguishes Bagging, Random Forest, and Boosting (e.g., XGBoost)'. Theory check: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
-      "Not suitable: this option says 'Bagging and Boosting both use feature randomness at each split, while Random Forest uses the full dataset without sampling.', but the PDF-marked answer is B. Bagging trains multiple models on bootstrap samples in parallel, Random Forest additionally selects random subsets of f eatures at each split, and Boosting trains models sequentially to reduce previous errors.. It does not match 'Which of the following correctly distinguishes Bagging, Random Forest, and Boosting (e.g., XGBoost)'. Theory check: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
-      "Not suitable: this option says 'Random Forest and Boosting both rely only on averaging predictions, while Bagging uses majority voting.', but the PDF-marked answer is B. Bagging trains multiple models on bootstrap samples in parallel, Random Forest additionally selects random subsets of f eatures at each split, and Boosting trains models sequentially to reduce previous errors.. It does not match 'Which of the following correctly distinguishes Bagging, Random Forest, and Boosting (e.g., XGBoost)'. Theory check: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models."
+      "Do not choose: this points to a different ML task. Correct reasoning: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
+      "Choose this: it matches the concept. Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
+      "Do not choose: this points to the wrong ensemble idea. Correct reasoning: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models.",
+      "Do not choose: this points to too absolute. Correct reasoning: Ensembles combine models: bagging trains parallel models, random forest adds feature sampling, and boosting trains sequential error-correcting models."
     ]
   },
   {
@@ -2960,12 +2960,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. Both Information Gain and Gain Ratio will select A1 because it produces zero entropy after split.",
-    "explanation": "The PDF answer key marks A. Both Information Gain and Gain Ratio will select A1 because it produces zero entropy after split.. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: A. Both Information Gain and Gain Ratio will select A1 because it produces zero entropy after split.. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Information Gain will select A1, but Gain Ratio may prefer A2 due to normalization using Split Information.', but the PDF-marked answer is A. Both Information Gain and Gain Ratio will select A1 because it produces zero entropy after split.. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Information Gain will select A2, but Gain Ratio will select A1 due to lower split entropy.', but the PDF-marked answer is A. Both Information Gain and Gain Ratio will select A1 because it produces zero entropy after split.. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Both Information Gain and Gain Ratio will select A2 because it produces more balanced partitions.', but the PDF-marked answer is A. Both Information Gain and Gain Ratio will select A1 because it produces zero entropy after split.. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to database mechanics. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to the wrong impurity/split idea. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to the wrong impurity/split idea. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -2988,12 +2988,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Split B is selected because it gives larger weighted Gini reduction.",
-    "explanation": "The PDF answer key marks B. Split B is selected because it gives larger weighted Gini reduction.. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
+    "explanation": "Correct answer: B. Split B is selected because it gives larger weighted Gini reduction.. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
     "optionExplanations": [
-      "Not suitable: this option says 'Split A is selected because it produces lower Gini in the left node.', but the PDF-marked answer is B. Split B is selected because it gives larger weighted Gini reduction.. It does not match the concept asked in this PDF question. Theory check: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
-      "Not suitable: this option says 'Split A is selected because it gives larger weighted Gini reduction.', but the PDF-marked answer is B. Split B is selected because it gives larger weighted Gini reduction.. It does not match the concept asked in this PDF question. Theory check: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
-      "Not suitable: this option says 'Both splits produce the same weighted Gini, so CART chooses either randomly.', but the PDF-marked answer is B. Split B is selected because it gives larger weighted Gini reduction.. It does not match the concept asked in this PDF question. Theory check: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity."
+      "Do not choose: this points to the wrong impurity/split idea. Correct reasoning: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
+      "Choose this: it matches the concept. Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
+      "Do not choose: this points to the wrong impurity/split idea. Correct reasoning: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity.",
+      "Do not choose: this points to the wrong impurity/split idea. Correct reasoning: Decision trees choose splits that reduce class impurity using measures such as entropy, information gain, and Gini impurity."
     ]
   },
   {
@@ -3016,12 +3016,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. Code A performs systematic hyperparameter tuning and Code B performs cross-validation gives reliable estimate for small datasets.",
-    "explanation": "The PDF answer key marks A. Code A performs systematic hyperparameter tuning and Code B performs cross -validation that gives reliable estimate for small datasets.. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: A. Code A performs systematic hyperparameter tuning and Code B performs cross -validation that gives reliable estimate for small datasets.. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Code A performs cross-validation that gives reliable estimate for small datasets and Code B performs systematic hyperparameter tuning.', but the PDF-marked answer is A. Code A performs systematic hyperparameter tuning and Code B performs cross -validation that gives reliable estimate for small datasets.. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Code A handles missing values and scaling together and Code B builds model without data leakage.', but the PDF-marked answer is A. Code A performs systematic hyperparameter tuning and Code B performs cross -validation that gives reliable estimate for small datasets.. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Code A builds model without data leakage and Code B handles missing values and scaling together.', but the PDF-marked answer is A. Code A performs systematic hyperparameter tuning and Code B performs cross -validation that gives reliable estimate for small datasets.. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to too absolute. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -3044,12 +3044,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. Logistic regression, multinomial logistic regression",
-    "explanation": "Logistic regression and multinomial logistic regression are supervised learning classification models. Refer to lecture 36, slide 3. The PDF-marked answer is A. Logistic regression, multinomial logistic regression, which directly addresses '________________ and ________________ are supervised learning classification models'. Theory rule: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+    "explanation": "Correct answer: A. Logistic regression, multinomial logistic regression. Why it is correct: Logistic regression and multinomial logistic regression are supervised learning classification models. Refer to lecture 36, slide 3. Theory rule: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches '________________ and ________________ are supervised learning classification models'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance. Logistic regression and multinomial logistic regression are supervised learning classification models. Refer to lecture 36, slide 3.",
-      "Not suitable: this option says 'K-Means Clustering and DBSCAN', but the PDF-marked answer is A. Logistic regression, multinomial logistic regression. It does not match '________________ and ________________ are supervised learning classification models'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
-      "Not suitable: this option says 'PCA and autoencoders', but the PDF-marked answer is A. Logistic regression, multinomial logistic regression. It does not match '________________ and ________________ are supervised learning classification models'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
-      "Not suitable: this option says 'Apriori and decision tree', but the PDF-marked answer is A. Logistic regression, multinomial logistic regression. It does not match '________________ and ________________ are supervised learning classification models'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance."
+      "Choose this: it matches the concept. Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance. Extra clue: Logistic regression and multinomial logistic regression are supervised learning classification models. Refer to lecture 36, slide 3.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance."
     ]
   },
   {
@@ -3072,12 +3072,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Maximum Likelihood method",
-    "explanation": "The maximum likelihood method is used to estimate the parameters by maximizing the likelihood of the observed choices as per the model. Refer to lecture 36, slide 7. The PDF-marked answer is C. Maximum Likelihood method, which directly addresses 'Which method is commonly used to estimate model parameters by maximizing the probability of the observed choices'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: C. Maximum Likelihood method. Why it is correct: The maximum likelihood method is used to estimate the parameters by maximizing the likelihood of the observed choices as per the model. Refer to lecture 36, slide 7. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'Moving Average Method', but the PDF-marked answer is C. Maximum Likelihood method. It does not match 'Which method is commonly used to estimate model parameters by maximizing the probability of the observed choices'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Monte Carlo Simulation', but the PDF-marked answer is C. Maximum Likelihood method. It does not match 'Which method is commonly used to estimate model parameters by maximizing the probability of the observed choices'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which method is commonly used to estimate model parameters by maximizing the probability of the observed choices'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question. The maximum likelihood method is used to estimate the parameters by maximizing the likelihood of the observed choices as per the model. Refer to lecture 36, slide 7.",
-      "Not suitable: this option says 'Least Squares Method', but the PDF-marked answer is C. Maximum Likelihood method. It does not match 'Which method is commonly used to estimate model parameters by maximizing the probability of the observed choices'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question. Extra clue: The maximum likelihood method is used to estimate the parameters by maximizing the likelihood of the observed choices as per the model. Refer to lecture 36, slide 7.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -3100,12 +3100,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P and S",
-    "explanation": "Assumptions for Multinomial Logistic Regression are o bservations are independent, l og-odds are linear in predictors, no perfect multicollinearity among predictors, IIA assumption holds, s ufficient sample size for all classes and no complete separation in data (No predictor perfectly predicts a class). Refer to lecture 37, slide 3. The PDF-marked answer is A. P and S, which directly addresses the concept asked in this PDF question. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: A. P and S. Why it is correct: Assumptions for Multinomial Logistic Regression are o bservations are independent, l og-odds are linear in predictors, no perfect multicollinearity among predictors, IIA assumption holds, s ufficient sample size for all classes and no complete separation in data (No predictor perfectly predicts a class). Refer to lecture 37, slide 3. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question. Assumptions for Multinomial Logistic Regression are o bservations are independent, l og-odds are linear in predictors, no perfect multicollinearity among predictors, IIA assumption holds, s ufficient sample size for all classes and no complete separation in data (No predictor perfectly predicts a class). Refer to lecture 37, slide 3.",
-      "Not suitable: this option says 'Q and R', but the PDF-marked answer is A. P and S. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Q and S', but the PDF-marked answer is A. P and S. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'P and R', but the PDF-marked answer is A. P and S. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question. Extra clue: Assumptions for Multinomial Logistic Regression are o bservations are independent, l og-odds are linear in predictors, no perfect multicollinearity among predictors, IIA assumption holds, s ufficient sample size for all classes and no complete separation in data (No predictor perfectly predicts a class). Refer to lecture 37, slide 3.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -3128,12 +3128,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. P-ii; Q-iii; R-iv; S-i",
-    "explanation": "The PDF answer key marks B. P-ii; Q-iii; R-iv; S-i. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+    "explanation": "Correct answer: B. P-ii; Q-iii; R-iv; S-i. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
     "optionExplanations": [
-      "Not suitable: this option says 'P-i; Q-iii; R-ii; S-iv', but the PDF-marked answer is B. P-ii; Q-iii; R-iv; S-i. It does not match the concept asked in this PDF question. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Not suitable: this option says 'P-ii; Q-iv; R-ii; S-iii', but the PDF-marked answer is B. P-ii; Q-iii; R-iv; S-i. It does not match the concept asked in this PDF question. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Not suitable: this option says 'P-iv; Q-ii; R-i; S-iii', but the PDF-marked answer is B. P-ii; Q-iii; R-iv; S-i. It does not match the concept asked in this PDF question. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity."
+      "Do not choose: it does not express the asked concept. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Choose this: it matches the concept. GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity."
     ]
   },
   {
@@ -3156,12 +3156,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. data points closest to the decision boundary",
-    "explanation": "Support vectors are the data points closest to the decision boundary. Refer to lecture 39, slide 4. The PDF-marked answer is D. data points closest to the decision boundary, which directly addresses 'Support vectors in SVM are'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: D. data points closest to the decision boundary. Why it is correct: Support vectors are the data points closest to the decision boundary. Refer to lecture 39, slide 4. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'misclassified data points only', but the PDF-marked answer is D. data points closest to the decision boundary. It does not match 'Support vectors in SVM are'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'randomly selected data points', but the PDF-marked answer is D. data points closest to the decision boundary. It does not match 'Support vectors in SVM are'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'data points farthest to the decision boundary', but the PDF-marked answer is D. data points closest to the decision boundary. It does not match 'Support vectors in SVM are'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Support vectors in SVM are'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question. Support vectors are the data points closest to the decision boundary. Refer to lecture 39, slide 4."
+      "Do not choose: this points to too absolute. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question. Extra clue: Support vectors are the data points closest to the decision boundary. Refer to lecture 39, slide 4."
     ]
   },
   {
@@ -3184,12 +3184,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. To allow some margin violations and misclassifications for noisy data.",
-    "explanation": "Soft Margin SVM allows some training points to violate the margin or be misclassified in order to handle noisy, overlapping real-world data. Refer to lecture 39, slide 6. The PDF-marked answer is B. To allow some margin violations and misclassifications for noisy data., which directly addresses 'What is the main purpose of Soft Margin Support Vector Machines (SVM)'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. To allow some margin violations and misclassifications for noisy data.. Why it is correct: Soft Margin SVM allows some training points to violate the margin or be misclassified in order to handle noisy, overlapping real-world data. Refer to lecture 39, slide 6. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'To completely eliminate classification errors', but the PDF-marked answer is B. To allow some margin violations and misclassifications for noisy data.. It does not match 'What is the main purpose of Soft Margin Support Vector Machines (SVM)'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'What is the main purpose of Soft Margin Support Vector Machines (SVM)'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question. Soft Margin SVM allows some training points to violate the margin or be misclassified in order to handle noisy, overlapping real-world data. Refer to lecture 39, slide 6.",
-      "Not suitable: this option says 'To use only perfectly separable data', but the PDF-marked answer is B. To allow some margin violations and misclassifications for noisy data.. It does not match 'What is the main purpose of Soft Margin Support Vector Machines (SVM)'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'To reduce the number of features in the dataset', but the PDF-marked answer is B. To allow some margin violations and misclassifications for noisy data.. It does not match 'What is the main purpose of Soft Margin Support Vector Machines (SVM)'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: this points to a different ML task. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question. Extra clue: Soft Margin SVM allows some training points to violate the margin or be misclassified in order to handle noisy, overlapping real-world data. Refer to lecture 39, slide 6.",
+      "Do not choose: this points to too absolute. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -3212,12 +3212,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. P-iv; Q-i; R-ii; S-iii",
-    "explanation": "The PDF answer key marks D. P-iv; Q-i; R-ii; S-iii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
+    "explanation": "Correct answer: D. P-iv; Q-i; R-ii; S-iii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
     "optionExplanations": [
-      "Not suitable: this option says 'P-iv; Q-iii; R-ii; S-i', but the PDF-marked answer is D. P-iv; Q-i; R-ii; S-iii. It does not match the concept asked in this PDF question. Theory check: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
-      "Not suitable: this option says 'P-ii; Q-iii; R-iv; S-i', but the PDF-marked answer is D. P-iv; Q-i; R-ii; S-iii. It does not match the concept asked in this PDF question. Theory check: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
-      "Not suitable: this option says 'P-iii; Q-ii; R-i; S-iv', but the PDF-marked answer is D. P-iv; Q-i; R-ii; S-iii. It does not match the concept asked in this PDF question. Theory check: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
+      "Choose this: it matches the concept. Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture."
     ]
   },
   {
@@ -3240,12 +3240,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. convex and quadratic",
-    "explanation": "SVM optimization is convex and quadratic, ensuring a single global optimum for both hard and soft margin formulations. Refer to lecture 39, slide 9. The PDF-marked answer is A. convex and quadratic, which directly addresses 'SVM optimization is ___________ and __________, ensuring a single global optimum for both hard and soft margin formulations'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: A. convex and quadratic. Why it is correct: SVM optimization is convex and quadratic, ensuring a single global optimum for both hard and soft margin formulations. Refer to lecture 39, slide 9. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'SVM optimization is ___________ and __________, ensuring a single global optimum for both hard and soft margin formulations'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently. SVM optimization is convex and quadratic, ensuring a single global optimum for both hard and soft margin formulations. Refer to lecture 39, slide 9.",
-      "Not suitable: this option says 'concave and linear', but the PDF-marked answer is A. convex and quadratic. It does not match 'SVM optimization is ___________ and __________, ensuring a single global optimum for both hard and soft margin formulations'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'convex and linear', but the PDF-marked answer is A. convex and quadratic. It does not match 'SVM optimization is ___________ and __________, ensuring a single global optimum for both hard and soft margin formulations'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'concave and quadratic', but the PDF-marked answer is A. convex and quadratic. It does not match 'SVM optimization is ___________ and __________, ensuring a single global optimum for both hard and soft margin formulations'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently. Extra clue: SVM optimization is convex and quadratic, ensuring a single global optimum for both hard and soft margin formulations. Refer to lecture 39, slide 9.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -3268,12 +3268,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Semi-supervised learning",
-    "explanation": "The PDF answer key marks C. Semi-supervised learning. This answer is suitable because it directly addresses 'The model that learns jointly from both labeled and unlabeled (usually larger) data'. Theory rule: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+    "explanation": "Correct answer: C. Semi-supervised learning. Why it is correct: it directly answers 'The model that learns jointly from both labeled and unlabeled (usually larger) data'. Theory rule: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
     "optionExplanations": [
-      "Not suitable: this option says 'Reinforcement learning', but the PDF-marked answer is C. Semi-supervised learning. It does not match 'The model that learns jointly from both labeled and unlabeled (usually larger) data'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
-      "Not suitable: this option says 'Supervised learning', but the PDF-marked answer is C. Semi-supervised learning. It does not match 'The model that learns jointly from both labeled and unlabeled (usually larger) data'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
-      "Suitable: the PDF answer key includes this option. It matches 'The model that learns jointly from both labeled and unlabeled (usually larger) data'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
-      "Not suitable: this option says 'Association learning', but the PDF-marked answer is C. Semi-supervised learning. It does not match 'The model that learns jointly from both labeled and unlabeled (usually larger) data'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance."
+      "Do not choose: this points to a different ML task. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+      "Choose this: it matches the concept. Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance."
     ]
   },
   {
@@ -3296,12 +3296,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. P, Q and R",
-    "explanation": "The PDF answer key marks B. P, Q and R. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+    "explanation": "Correct answer: B. P, Q and R. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
     "optionExplanations": [
-      "Not suitable: this option says 'P, Q and S', but the PDF-marked answer is B. P, Q and R. It does not match the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'Q, R and S', but the PDF-marked answer is B. P, Q and R. It does not match the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'P, R and S', but the PDF-marked answer is B. P, Q and R. It does not match the concept asked in this PDF question. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Choose this: it matches the concept. Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
     ]
   },
   {
@@ -3324,12 +3324,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. It iteratively spreads labels from labeled nodes to unlabeled nodes based on data similarity",
-    "explanation": "The PDF answer key marks D. It iteratively spreads labels from labeled nodes to unlabeled nodes based on data similarity. This answer is suitable because it directly addresses 'Which statement best describes the Label Propagation Algorithm'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: D. It iteratively spreads labels from labeled nodes to unlabeled nodes based on data similarity. Why it is correct: it directly answers 'Which statement best describes the Label Propagation Algorithm'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'It uses only labeled data and ignores unlabeled data.', but the PDF-marked answer is D. It iteratively spreads labels from labeled nodes to unlabeled nodes based on data similarity. It does not match 'Which statement best describes the Label Propagation Algorithm'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'It assigns labels to data points without using similarity information', but the PDF-marked answer is D. It iteratively spreads labels from labeled nodes to unlabeled nodes based on data similarity. It does not match 'Which statement best describes the Label Propagation Algorithm'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'It removes unlabeled data before classification.', but the PDF-marked answer is D. It iteratively spreads labels from labeled nodes to unlabeled nodes based on data similarity. It does not match 'Which statement best describes the Label Propagation Algorithm'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which statement best describes the Label Propagation Algorithm'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: this points to too absolute. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -3352,12 +3352,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. P-ii; Q-i; R-iv; S-iii",
-    "explanation": "The PDF answer key marks C. P-ii; Q-i; R-iv; S-iii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+    "explanation": "Correct answer: C. P-ii; Q-i; R-iv; S-iii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
     "optionExplanations": [
-      "Not suitable: this option says 'P-ii; Q-iii; R-i; S-iv', but the PDF-marked answer is C. P-ii; Q-i; R-iv; S-iii. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'P-iv; Q-iii; R-ii; S-i', but the PDF-marked answer is C. P-ii; Q-i; R-iv; S-iii. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'P-iii; Q-ii; R-i; S-iv', but the PDF-marked answer is C. P-ii; Q-i; R-iv; S-iii. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Choose this: it matches the concept. SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
     ]
   },
   {
@@ -3380,12 +3380,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. Majority voting assignment",
-    "explanation": "The PDF answer key marks A. Majority voting assignment. This answer is suitable because it directly addresses 'In cluster-based semi-supervised learning, in which type of cluster assignment are unlabeled data points assigned the most frequent label'. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+    "explanation": "Correct answer: A. Majority voting assignment. Why it is correct: it directly answers 'In cluster-based semi-supervised learning, in which type of cluster assignment are unlabeled data points assigned the most frequent label'. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'In cluster-based semi-supervised learning, in which type of cluster assignment are unlabeled data points assigned the most frequent label'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'Centroid-based assignment', but the PDF-marked answer is A. Majority voting assignment. It does not match 'In cluster-based semi-supervised learning, in which type of cluster assignment are unlabeled data points assigned the most frequent label'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'Distance-based assignment', but the PDF-marked answer is A. Majority voting assignment. It does not match 'In cluster-based semi-supervised learning, in which type of cluster assignment are unlabeled data points assigned the most frequent label'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'Soft assignment', but the PDF-marked answer is A. Majority voting assignment. It does not match 'In cluster-based semi-supervised learning, in which type of cluster assignment are unlabeled data points assigned the most frequent label'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
+      "Choose this: it matches the concept. Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning."
     ]
   },
   {
@@ -3408,12 +3408,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Data preprocessing",
-    "explanation": "During data preprocessing, the transaction data is transformed into a binary matrix (0 -1) representing the presence or absence of items before frequent itemset generation algorithms. (Refer to Lecture 44, Slide 4) The PDF-marked answer is C. Data preprocessing, which directly addresses 'In the Association Rule Learning workflow, which step involves converting the dataset into a binary (0-1) incidence matrix'. Theory rule: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+    "explanation": "Correct answer: C. Data preprocessing. Why it is correct: During data preprocessing, the transaction data is transformed into a binary matrix (0 -1) representing the presence or absence of items before frequent itemset generation algorithms. (Refer to Lecture 44, Slide 4) Theory rule: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
     "optionExplanations": [
-      "Not suitable: this option says 'Data collection', but the PDF-marked answer is C. Data preprocessing. It does not match 'In the Association Rule Learning workflow, which step involves converting the dataset into a binary (0-1) incidence matrix'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
-      "Not suitable: this option says 'Rule generation', but the PDF-marked answer is C. Data preprocessing. It does not match 'In the Association Rule Learning workflow, which step involves converting the dataset into a binary (0-1) incidence matrix'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
-      "Suitable: the PDF answer key includes this option. It matches 'In the Association Rule Learning workflow, which step involves converting the dataset into a binary (0-1) incidence matrix'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance. During data preprocessing, the transaction data is transformed into a binary matrix (0 -1) representing the presence or absence of items before frequent itemset generation algorithms. (Refer to Lecture 44, Slide 4)",
-      "Not suitable: this option says 'Interpretation and deployment', but the PDF-marked answer is C. Data preprocessing. It does not match 'In the Association Rule Learning workflow, which step involves converting the dataset into a binary (0-1) incidence matrix'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+      "Choose this: it matches the concept. Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance. Extra clue: During data preprocessing, the transaction data is transformed into a binary matrix (0 -1) representing the presence or absence of items before frequent itemset generation algorithms. (Refer to Lecture 44, Slide 4)",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance."
     ]
   },
   {
@@ -3436,12 +3436,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. Distance calculations, K-Prototypes",
-    "explanation": "Most clustering algorithms determine similarity using distance measures (such as Euclidean distance). When a dataset contains both numeric and categorical variables, the K-Prototypes algorithm is commonly used because it can handle mixed data types. (Refer to Lecture 41, Slide 3 & 4) The PDF-marked answer is A. Distance calculations, K-Prototypes, which directly addresses the concept asked in this PDF question. Theory rule: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
+    "explanation": "Correct answer: A. Distance calculations, K-Prototypes. Why it is correct: Most clustering algorithms determine similarity using distance measures (such as Euclidean distance). When a dataset contains both numeric and categorical variables, the K-Prototypes algorithm is commonly used because it can handle mixed data types. (Refer to Lecture 41, Slide 3 & 4) Theory rule: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question. Most clustering algorithms determine similarity using distance measures (such as Euclidean distance). When a dataset contains both numeric and categorical variables, the K-Prototypes algorithm is commonly used because it can handle mixed data types. (Refer to Lecture 41, Slide 3 & 4)",
-      "Not suitable: this option says 'Probability estimation, K-Means', but the PDF-marked answer is A. Distance calculations, K-Prototypes. It does not match the concept asked in this PDF question. Theory check: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
-      "Not suitable: this option says 'Gradient descent, Principal Component Analysis', but the PDF-marked answer is A. Distance calculations, K-Prototypes. It does not match the concept asked in this PDF question. Theory check: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
-      "Not suitable: this option says 'Regression analysis, K-Nearest Neighbours', but the PDF-marked answer is A. Distance calculations, K-Prototypes. It does not match the concept asked in this PDF question. Theory check: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question."
+      "Choose this: it matches the concept. Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question. Extra clue: Most clustering algorithms determine similarity using distance measures (such as Euclidean distance). When a dataset contains both numeric and categorical variables, the K-Prototypes algorithm is commonly used because it can handle mixed data types. (Refer to Lecture 41, Slide 3 & 4)",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
+      "Do not choose: this points to the wrong communication role. Correct reasoning: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question."
     ]
   },
   {
@@ -3464,12 +3464,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. 1-B, 2-C, 3-A",
-    "explanation": "Support identifies the frequency of appearance of an item in the dataset. Confidence measures how often a rule appears to be true in a dataset. Lift measures the strength of a rule. (Refer to Lecture 44, Slide 5) The PDF-marked answer is D. 1-B, 2-C, 3-A, which directly addresses the concept asked in this PDF question. Theory rule: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+    "explanation": "Correct answer: D. 1-B, 2-C, 3-A. Why it is correct: Support identifies the frequency of appearance of an item in the dataset. Confidence measures how often a rule appears to be true in a dataset. Lift measures the strength of a rule. (Refer to Lecture 44, Slide 5) Theory rule: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
     "optionExplanations": [
-      "Not suitable: this option says '1-C, 2-A, 3-B', but the PDF-marked answer is D. 1-B, 2-C, 3-A. It does not match the concept asked in this PDF question. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
-      "Not suitable: this option says '1-A, 2-B, 3-C', but the PDF-marked answer is D. 1-B, 2-C, 3-A. It does not match the concept asked in this PDF question. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
-      "Not suitable: this option says '1-B, 2-A, 3-C', but the PDF-marked answer is D. 1-B, 2-C, 3-A. It does not match the concept asked in this PDF question. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance. Support identifies the frequency of appearance of an item in the dataset. Confidence measures how often a rule appears to be true in a dataset. Lift measures the strength of a rule. (Refer to Lecture 44, Slide 5)"
+      "Do not choose: it does not express the asked concept. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+      "Choose this: it matches the concept. Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance. Extra clue: Support identifies the frequency of appearance of an item in the dataset. Confidence measures how often a rule appears to be true in a dataset. Lift measures the strength of a rule. (Refer to Lecture 44, Slide 5)"
     ]
   },
   {
@@ -3492,12 +3492,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. An unsupervised data mining method used to identify patterns and frequent co- occurring relationships among variables in large datasets",
-    "explanation": "Association Rule Learning is an unsupervised data mining method that discovers associations and frequent co -occurring relationships among variables without labelled outputs. (Refer to Lecture 44, Slide 3). The PDF-marked answer is B. An unsupervised data mining method used to identify patterns and frequent co -occurring relationships among variables in large datasets, which directly addresses 'Which of the following best describes Association Rule Learning'. Theory rule: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+    "explanation": "Correct answer: B. An unsupervised data mining method used to identify patterns and frequent co -occurring relationships among variables in large datasets. Why it is correct: Association Rule Learning is an unsupervised data mining method that discovers associations and frequent co -occurring relationships among variables without labelled outputs. (Refer to Lecture 44, Slide 3). Theory rule: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
     "optionExplanations": [
-      "Not suitable: this option says 'A supervised learning technique used for classification of labelled datasets', but the PDF-marked answer is B. An unsupervised data mining method used to identify patterns and frequent co -occurring relationships among variables in large datasets. It does not match 'Which of the following best describes Association Rule Learning'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following best describes Association Rule Learning'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance. Association Rule Learning is an unsupervised data mining method that discovers associations and frequent co -occurring relationships among variables without labelled outputs. (Refer to Lecture 44, Slide 3).",
-      "Not suitable: this option says 'A clustering algorithm that groups data based on Euclidean distance', but the PDF-marked answer is B. An unsupervised data mining method used to identify patterns and frequent co -occurring relationships among variables in large datasets. It does not match 'Which of the following best describes Association Rule Learning'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
-      "Not suitable: this option says 'A regression technique used to predict continuous values', but the PDF-marked answer is B. An unsupervised data mining method used to identify patterns and frequent co -occurring relationships among variables in large datasets. It does not match 'Which of the following best describes Association Rule Learning'. Theory check: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance."
+      "Do not choose: this points to a different ML task. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+      "Choose this: it matches the concept. Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance. Extra clue: Association Rule Learning is an unsupervised data mining method that discovers associations and frequent co -occurring relationships among variables without labelled outputs. (Refer to Lecture 44, Slide 3).",
+      "Do not choose: this points to a different ML task. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance.",
+      "Do not choose: this points to a different ML task. Correct reasoning: Association rules discover co-occurrence patterns; support measures frequency, confidence measures conditional reliability, and lift measures strength beyond chance."
     ]
   },
   {
@@ -3520,12 +3520,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. 120",
-    "explanation": "(Refer to Lecture 43, Slide 5) E = n1n2 n1 + n2 x (distance)2 = 8 x 12 8 + 12 x 52 = 96 20 x 25 = 4.8 x 25 = 120 The PDF-marked answer is D. 120, which directly addresses the concept asked in this PDF question. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: D. 120. Why it is correct: (Refer to Lecture 43, Slide 5) E = n1n2 n1 + n2 x (distance)2 = 8 x 12 8 + 12 x 52 = 96 20 x 25 = 4.8 x 25 = 120 Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says '80', but the PDF-marked answer is D. 120. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says '60', but the PDF-marked answer is D. 120. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says '40', but the PDF-marked answer is D. 120. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question. (Refer to Lecture 43, Slide 5) E = n1n2 n1 + n2 x (distance)2 = 8 x 12 8 + 12 x 52 = 96 20 x 25 = 4.8 x 25 = 120"
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question. Extra clue: (Refer to Lecture 43, Slide 5) E = n1n2 n1 + n2 x (distance)2 = 8 x 12 8 + 12 x 52 = 96 20 x 25 = 4.8 x 25 = 120"
     ]
   },
   {
@@ -3548,12 +3548,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. A - Single Linkage, B - Complete Linkage, C - Ward's Linkage",
-    "explanation": "Single Linkage (Nearest Neighbor) uses the distance between the closest points and can create chaining effects. Complete Linkage (Farthest Neighbor) uses the distance between farthest points which produces co mpact clusters. Ward's Linkage merges clusters that cause the smallest increase in within-cluster variance (WCSS). (Refer to Lecture 43, Slide 5) The PDF-marked answer is A. A - Single Linkage, B - Complete Linkage, C - Ward's Linkage, which directly addresses the concept asked in this PDF question. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+    "explanation": "Correct answer: A. A - Single Linkage, B - Complete Linkage, C - Ward's Linkage. Why it is correct: Single Linkage (Nearest Neighbor) uses the distance between the closest points and can create chaining effects. Complete Linkage (Farthest Neighbor) uses the distance between farthest points which produces co mpact clusters. Ward's Linkage merges clusters that cause the smallest increase in within-cluster variance (WCSS). (Refer to Lecture 43, Slide 5) Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data. Single Linkage (Nearest Neighbor) uses the distance between the closest points and can create chaining effects. Complete Linkage (Farthest Neighbor) uses the distance between farthest points which produces co mpact clusters. Ward's Linkage merges clusters that cause the smallest increase in within-cluster variance (WCSS). (Refer to Lecture 43, Slide 5)",
-      "Not suitable: this option says 'A - Average Linkage, B - Single Linkage, C - Ward's Linkage', but the PDF-marked answer is A. A - Single Linkage, B - Complete Linkage, C - Ward's Linkage. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'A - Complete Linkage, B - Average Linkage, C - Single Linkage', but the PDF-marked answer is A. A - Single Linkage, B - Complete Linkage, C - Ward's Linkage. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'A - Single Linkage, B - Ward's Linkage, C - Average Linkage', but the PDF-marked answer is A. A - Single Linkage, B - Complete Linkage, C - Ward's Linkage. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
+      "Choose this: it matches the concept. SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data. Extra clue: Single Linkage (Nearest Neighbor) uses the distance between the closest points and can create chaining effects. Complete Linkage (Farthest Neighbor) uses the distance between farthest points which produces co mpact clusters. Ward's Linkage merges clusters that cause the smallest increase in within-cluster variance (WCSS). (Refer to Lecture 43, Slide 5)",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
     ]
   },
   {
@@ -3576,12 +3576,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. A point whose epsilon-neighbourhood contains at least MinPts points",
-    "explanation": "A core point in DBSCAN is a point whose epsilon -neighbourhood contains at least MinPts points, meaning it lies in a dense region of the dataset. (Refer to Lecture 42, Slide 7) The PDF-marked answer is B. A point whose epsilon-neighbourhood contains at least MinPts points, which directly addresses 'Which of the following correctly describes a core point in DBSCAN'. Theory rule: DBSCAN identifies dense regions and noise; a core point has enough neighbors within epsilon distance.",
+    "explanation": "Correct answer: B. A point whose epsilon-neighbourhood contains at least MinPts points. Why it is correct: A core point in DBSCAN is a point whose epsilon -neighbourhood contains at least MinPts points, meaning it lies in a dense region of the dataset. (Refer to Lecture 42, Slide 7) Theory rule: DBSCAN identifies dense regions and noise; a core point has enough neighbors within epsilon distance.",
     "optionExplanations": [
-      "Not suitable: this option says 'A point that lies within epsilon distance of a core point but has fewer than MinPts neighbours', but the PDF-marked answer is B. A point whose epsilon-neighbourhood contains at least MinPts points. It does not match 'Which of the following correctly describes a core point in DBSCAN'. Theory check: DBSCAN identifies dense regions and noise; a core point has enough neighbors within epsilon distance.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following correctly describes a core point in DBSCAN'. Theory check: DBSCAN identifies dense regions and noise; a core point has enough neighbors within epsilon distance. A core point in DBSCAN is a point whose epsilon -neighbourhood contains at least MinPts points, meaning it lies in a dense region of the dataset. (Refer to Lecture 42, Slide 7)",
-      "Not suitable: this option says 'A point that is not reachable from any other point within epsilon distance', but the PDF-marked answer is B. A point whose epsilon-neighbourhood contains at least MinPts points. It does not match 'Which of the following correctly describes a core point in DBSCAN'. Theory check: DBSCAN identifies dense regions and noise; a core point has enough neighbors within epsilon distance.",
-      "Not suitable: this option says 'A point that connects two clusters together', but the PDF-marked answer is B. A point whose epsilon-neighbourhood contains at least MinPts points. It does not match 'Which of the following correctly describes a core point in DBSCAN'. Theory check: DBSCAN identifies dense regions and noise; a core point has enough neighbors within epsilon distance."
+      "Do not choose: it does not express the asked concept. Correct reasoning: DBSCAN identifies dense regions and noise; a core point has enough neighbors within epsilon distance.",
+      "Choose this: it matches the concept. DBSCAN identifies dense regions and noise; a core point has enough neighbors within epsilon distance. Extra clue: A core point in DBSCAN is a point whose epsilon -neighbourhood contains at least MinPts points, meaning it lies in a dense region of the dataset. (Refer to Lecture 42, Slide 7)",
+      "Do not choose: it does not express the asked concept. Correct reasoning: DBSCAN identifies dense regions and noise; a core point has enough neighbors within epsilon distance.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: DBSCAN identifies dense regions and noise; a core point has enough neighbors within epsilon distance."
     ]
   },
   {
@@ -3604,12 +3604,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. Statements A and C are true; Statements B and D are false tree",
-    "explanation": "BIC balances goodness-of-fit and complexity. The lowest BIC indicates the best model. More clusters mean more parameters and larger penalty term. Spherical covariance assumes equal variance in all directions (circular clusters) while full covariance allows different orientations and shapes. (Refer to Lecture 42, Slide 4) The PDF-marked answer is A. Statements A and C are true; Statements B and D are false, which directly addresses the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: A. Statements A and C are true; Statements B and D are false. Why it is correct: BIC balances goodness-of-fit and complexity. The lowest BIC indicates the best model. More clusters mean more parameters and larger penalty term. Spherical covariance assumes equal variance in all directions (circular clusters) while full covariance allows different orientations and shapes. (Refer to Lecture 42, Slide 4) Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently. BIC balances goodness-of-fit and complexity. The lowest BIC indicates the best model. More clusters mean more parameters and larger penalty term. Spherical covariance assumes equal variance in all directions (circular clusters) while full covariance allows different orientations and shapes. (Refer to Lecture 42, Slide 4)",
-      "Not suitable: this option says 'Statements A and B are true; Statements C and D are false', but the PDF-marked answer is A. Statements A and C are true; Statements B and D are false. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Statements B and D are true; Statements A and C are false', but the PDF-marked answer is A. Statements A and C are true; Statements B and D are false. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Statements A, C and D are true; Statement B is false', but the PDF-marked answer is A. Statements A and C are true; Statements B and D are false. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently. Extra clue: BIC balances goodness-of-fit and complexity. The lowest BIC indicates the best model. More clusters mean more parameters and larger penalty term. Spherical covariance assumes equal variance in all directions (circular clusters) while full covariance allows different orientations and shapes. (Refer to Lecture 42, Slide 4)",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -3632,12 +3632,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. PCA constructs orthogonal components as linear combinations of the original variables, where the first component captures the maximum variance across the correlated variables.",
-    "explanation": "PCA transforms correlated variables into orthogonal (uncorrelated) principal components, each being a linear combination of the original variables. The first principal component captures the maximum variance, making it suitable as a comp osite indicator while also reducing multicollinearity. (Refer to Lecture 45, Slide 5) The PDF-marked answer is B. PCA constructs orthogonal components as linear combinations of the original variables, where the first component captures the maximum variance across the correlated variables., which directly addresses the concept asked in this PDF question. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+    "explanation": "Correct answer: B. PCA constructs orthogonal components as linear combinations of the original variables, where the first component captures the maximum variance across the correlated variables.. Why it is correct: PCA transforms correlated variables into orthogonal (uncorrelated) principal components, each being a linear combination of the original variables. The first principal component captures the maximum variance, making it suitable as a comp osite indicator while also reducing multicollinearity. (Refer to Lecture 45, Slide 5) Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
     "optionExplanations": [
-      "Not suitable: this option says 'PCA selects the single variable with the highest variance and removes all others to eliminate correlation.', but the PDF-marked answer is B. PCA constructs orthogonal components as linear combinations of the original variables, where the first component captures the maximum variance across the correlated variables.. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data. PCA transforms correlated variables into orthogonal (uncorrelated) principal components, each being a linear combination of the original variables. The first principal component captures the maximum variance, making it suitable as a comp osite indicator while also reducing multicollinearity. (Refer to Lecture 45, Slide 5)",
-      "Not suitable: this option says 'PCA converts correlated variables into independent categorical groups based on their correlation strength.', but the PDF-marked answer is B. PCA constructs orthogonal components as linear combinations of the original variables, where the first component captures the maximum variance across the correlated variables.. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'PCA ranks variables based on their correlation with temperature and removes those with lower correlations.', but the PDF-marked answer is B. PCA constructs orthogonal components as linear combinations of the original variables, where the first component captures the maximum variance across the correlated variables.. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
+      "Do not choose: this points to too absolute. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Choose this: it matches the concept. SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data. Extra clue: PCA transforms correlated variables into orthogonal (uncorrelated) principal components, each being a linear combination of the original variables. The first principal component captures the maximum variance, making it suitable as a comp osite indicator while also reducing multicollinearity. (Refer to Lecture 45, Slide 5)",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
     ]
   },
   {
@@ -3660,12 +3660,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. It identifies clusters by iteratively moving data points toward regions of higher data density.",
-    "explanation": "The Mean Shift algorithm iteratively shifts each data point toward the nearest high-density region (density peak) using a kernel density estimation (KDE) approach. It does not require specifying the number of clusters beforehand and can detect clusters of arbitrary shapes. (Refer to Lecture 42, Slide 5) The PDF-marked answer is C. It identifies clusters by iteratively moving data points toward regions of higher data density., which directly addresses 'Which of the following statements about the Mean Shift algorithm is correct'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: C. It identifies clusters by iteratively moving data points toward regions of higher data density.. Why it is correct: The Mean Shift algorithm iteratively shifts each data point toward the nearest high-density region (density peak) using a kernel density estimation (KDE) approach. It does not require specifying the number of clusters beforehand and can detect clusters of arbitrary shapes. (Refer to Lecture 42, Slide 5) Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'It requires the number of clusters to be specified before running the algorithm.', but the PDF-marked answer is C. It identifies clusters by iteratively moving data points toward regions of higher data density.. It does not match 'Which of the following statements about the Mean Shift algorithm is correct'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'It groups points by minimizing within-cluster variance similar to Ward's method.', but the PDF-marked answer is C. It identifies clusters by iteratively moving data points toward regions of higher data density.. It does not match 'Which of the following statements about the Mean Shift algorithm is correct'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following statements about the Mean Shift algorithm is correct'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently. The Mean Shift algorithm iteratively shifts each data point toward the nearest high-density region (density peak) using a kernel density estimation (KDE) approach. It does not require specifying the number of clusters beforehand and can detect clusters of arbitrary shapes. (Refer to Lecture 42, Slide 5)",
-      "Not suitable: this option says 'It forms clusters based only on the farthest distance between data points.', but the PDF-marked answer is C. It identifies clusters by iteratively moving data points toward regions of higher data density.. It does not match 'Which of the following statements about the Mean Shift algorithm is correct'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently. Extra clue: The Mean Shift algorithm iteratively shifts each data point toward the nearest high-density region (density peak) using a kernel density estimation (KDE) approach. It does not require specifying the number of clusters beforehand and can detect clusters of arbitrary shapes. (Refer to Lecture 42, Slide 5)",
+      "Do not choose: this points to too absolute. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -3688,12 +3688,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. A-2, B-3, C-1, D-4",
-    "explanation": "Unsupervised Learning works with no labelled output or target variable. In hard clustering, each data point belongs to exactly one cluster. In soft clustering, data points may belong to multiple clusters wi th different probabilities or memberships. Dimensionality reduction models discover underlying structures and reduce complexity in high -dimensional datasets. (Refer to Lecture 41, Slide 3 & 4) The PDF-marked answer is A. A-2, B-3, C-1, D-4, which directly addresses the concept asked in this PDF question. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+    "explanation": "Correct answer: A. A-2, B-3, C-1, D-4. Why it is correct: Unsupervised Learning works with no labelled output or target variable. In hard clustering, each data point belongs to exactly one cluster. In soft clustering, data points may belong to multiple clusters wi th different probabilities or memberships. Dimensionality reduction models discover underlying structures and reduce complexity in high -dimensional datasets. (Refer to Lecture 41, Slide 3 & 4) Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data. Unsupervised Learning works with no labelled output or target variable. In hard clustering, each data point belongs to exactly one cluster. In soft clustering, data points may belong to multiple clusters wi th different probabilities or memberships. Dimensionality reduction models discover underlying structures and reduce complexity in high -dimensional datasets. (Refer to Lecture 41, Slide 3 & 4)",
-      "Not suitable: this option says 'A-1, B-2, C-3, D-4', but the PDF-marked answer is A. A-2, B-3, C-1, D-4. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'A-2, B-1, C-3, D-4', but the PDF-marked answer is A. A-2, B-3, C-1, D-4. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'A-4, B-3, C-1, D-2', but the PDF-marked answer is A. A-2, B-3, C-1, D-4. It does not match the concept asked in this PDF question. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
+      "Choose this: it matches the concept. SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data. Extra clue: Unsupervised Learning works with no labelled output or target variable. In hard clustering, each data point belongs to exactly one cluster. In soft clustering, data points may belong to multiple clusters wi th different probabilities or memberships. Dimensionality reduction models discover underlying structures and reduce complexity in high -dimensional datasets. (Refer to Lecture 41, Slide 3 & 4)",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
     ]
   },
   {
@@ -3716,12 +3716,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. Three clusters are likely appropriate because the elbow occurs at k = 3, and the higher silhouette score indicates better separation, although some neighbourhoods may lie near cluster boundaries.",
-    "explanation": "WCSS measures cluster compactness (distance of points from centroids) and it always decreases as k increases. The Elbow Method identifies where the rate of decrease slows significantly, and since the elbow occurs at k = 3, it suggests 3 clusters capture the main structure of the dataset. For silhouette score, k = 3, the value of 0.62 indicates fairly strong clustering structure, whereas, for k = 5, the value of 0.41, indicates weaker cluster separation. Thus, k = 3 produces better-defined clusters. (Refer to Lecture 41, Slide 7 & 8) The PDF-marked answer is D. Three clusters are likely appropriate because the elbow occurs at k = 3, and the higher silhouette score indicates better separation, although some neighbourhoods may lie near cluster boundaries., which directly addresses the concept asked in this PDF question. Theory rule: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
+    "explanation": "Correct answer: D. Three clusters are likely appropriate because the elbow occurs at k = 3, and the higher silhouette score indicates better separation, although some neighbourhoods may lie near cluster boundaries.. Why it is correct: WCSS measures cluster compactness (distance of points from centroids) and it always decreases as k increases. The Elbow Method identifies where the rate of decrease slows significantly, and since the elbow occurs at k = 3, it suggests 3 clusters capture the main structure of the dataset. For silhouette score, k = 3, the value of 0.62 indicates fairly strong clustering structure, whereas, for k = 5, the value of 0.41, indicates weaker cluster separation. Thus, k = 3 produces better-defined clusters. (Refer to Lecture 41, Slide 7 & 8) Theory rule: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
     "optionExplanations": [
-      "Not suitable: this option says 'Five clusters should be chosen because WCSS always decreases as the number of clusters increases.', but the PDF-marked answer is D. Three clusters are likely appropriate because the elbow occurs at k = 3, and the higher silhouette score indicates better separation, although some neighbourhoods may lie near cluster boundaries.. It does not match the concept asked in this PDF question. Theory check: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
-      "Not suitable: this option says 'Three clusters are inappropriate because silhouette values close to zero indicate that K-means has completely failed.', but the PDF-marked answer is D. Three clusters are likely appropriate because the elbow occurs at k = 3, and the higher silhouette score indicates better separation, although some neighbourhoods may lie near cluster boundaries.. It does not match the concept asked in this PDF question. Theory check: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
-      "Not suitable: this option says 'Five clusters are better because silhouette score measures only cluster compactness, not separation.', but the PDF-marked answer is D. Three clusters are likely appropriate because the elbow occurs at k = 3, and the higher silhouette score indicates better separation, although some neighbourhoods may lie near cluster boundaries.. It does not match the concept asked in this PDF question. Theory check: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question. WCSS measures cluster compactness (distance of points from centroids) and it always decreases as k increases. The Elbow Method identifies where the rate of decrease slows significantly, and since the elbow occurs at k = 3, it suggests 3 clusters capture the main structure of the dataset. For silhouette score, k = 3, the value of 0.62 indicates fairly strong clustering structure, whereas, for k = 5, the value of 0.41, indicates weaker cluster separation. Thus, k = 3 produces better-defined clusters. (Refer to Lecture 41, Slide 7 & 8)"
+      "Do not choose: this points to too absolute. Correct reasoning: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
+      "Do not choose: this points to too absolute. Correct reasoning: Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question.",
+      "Choose this: it matches the concept. Clustering groups observations by similarity, so the distance measure and cluster validity criterion must match the data and question. Extra clue: WCSS measures cluster compactness (distance of points from centroids) and it always decreases as k increases. The Elbow Method identifies where the rate of decrease slows significantly, and since the elbow occurs at k = 3, it suggests 3 clusters capture the main structure of the dataset. For silhouette score, k = 3, the value of 0.62 indicates fairly strong clustering structure, whereas, for k = 5, the value of 0.41, indicates weaker cluster separation. Thus, k = 3 produces better-defined clusters. (Refer to Lecture 41, Slide 7 & 8)"
     ]
   },
   {
@@ -3744,12 +3744,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. Artificial Neural Network (ANN)",
-    "explanation": "Artificial Neural Network (ANN) is a machine learning model inspired by the structure and functioning of the human brain. Refer to lecture 46, slide 3. The PDF-marked answer is A. Artificial Neural Network (ANN), which directly addresses 'Which of the following machine learning models is inspired by the structure and functioning of the human brain'. Theory rule: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+    "explanation": "Correct answer: A. Artificial Neural Network (ANN). Why it is correct: Artificial Neural Network (ANN) is a machine learning model inspired by the structure and functioning of the human brain. Refer to lecture 46, slide 3. Theory rule: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following machine learning models is inspired by the structure and functioning of the human brain'. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function. Artificial Neural Network (ANN) is a machine learning model inspired by the structure and functioning of the human brain. Refer to lecture 46, slide 3.",
-      "Not suitable: this option says 'Decision Tree', but the PDF-marked answer is A. Artificial Neural Network (ANN). It does not match 'Which of the following machine learning models is inspired by the structure and functioning of the human brain'. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
-      "Not suitable: this option says 'K-Nearest Neighbours', but the PDF-marked answer is A. Artificial Neural Network (ANN). It does not match 'Which of the following machine learning models is inspired by the structure and functioning of the human brain'. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
-      "Not suitable: this option says 'Support Vector Machine', but the PDF-marked answer is A. Artificial Neural Network (ANN). It does not match 'Which of the following machine learning models is inspired by the structure and functioning of the human brain'. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function."
+      "Choose this: it matches the concept. Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function. Extra clue: Artificial Neural Network (ANN) is a machine learning model inspired by the structure and functioning of the human brain. Refer to lecture 46, slide 3.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+      "Do not choose: this points to the wrong association-rule metric. Correct reasoning: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function."
     ]
   },
   {
@@ -3772,12 +3772,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. The number of decision boundaries required to separate different classes",
-    "explanation": "Number of neurons in the hidden layer depends on the number of decision boundaries we need to draw between the different classes/categories that need to be predicted. Refer to lecture 46, slide 4. The PDF-marked answer is B. The number of decision boundaries required to separate different classes, which directly addresses 'In an artificial neural network, the number of neurons in the hidden layer mainly depends on which of the following'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: B. The number of decision boundaries required to separate different classes. Why it is correct: Number of neurons in the hidden layer depends on the number of decision boundaries we need to draw between the different classes/categories that need to be predicted. Refer to lecture 46, slide 4. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'The size of the input dataset', but the PDF-marked answer is B. The number of decision boundaries required to separate different classes. It does not match 'In an artificial neural network, the number of neurons in the hidden layer mainly depends on which of the following'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'In an artificial neural network, the number of neurons in the hidden layer mainly depends on which of the following'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question. Number of neurons in the hidden layer depends on the number of decision boundaries we need to draw between the different classes/categories that need to be predicted. Refer to lecture 46, slide 4.",
-      "Not suitable: this option says 'The number of output classes only', but the PDF-marked answer is B. The number of decision boundaries required to separate different classes. It does not match 'In an artificial neural network, the number of neurons in the hidden layer mainly depends on which of the following'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'The number of training iterations', but the PDF-marked answer is B. The number of decision boundaries required to separate different classes. It does not match 'In an artificial neural network, the number of neurons in the hidden layer mainly depends on which of the following'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question. Extra clue: Number of neurons in the hidden layer depends on the number of decision boundaries we need to draw between the different classes/categories that need to be predicted. Refer to lecture 46, slide 4.",
+      "Do not choose: this points to too absolute. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -3800,12 +3800,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. GELU (Gaussian Error Linear Unit)",
-    "explanation": "GELU is used in modern deep learning architecture such as transformers. Softmax is used for multi -class classification problems. ELU is used where smoother learning and faster convergence are needed. ReLU is used for general deep learning architectures. Refer to lecture 46, slide 6. The PDF-marked answer is C. GELU (Gaussian Error Linear Unit), which directly addresses '______________ is used in modern deep learning architecture such as transformers'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: C. GELU (Gaussian Error Linear Unit). Why it is correct: GELU is used in modern deep learning architecture such as transformers. Softmax is used for multi -class classification problems. ELU is used where smoother learning and faster convergence are needed. ReLU is used for general deep learning architectures. Refer to lecture 46, slide 6. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'ELU (Exponential Linear Unit)', but the PDF-marked answer is C. GELU (Gaussian Error Linear Unit). It does not match '______________ is used in modern deep learning architecture such as transformers'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Softmax', but the PDF-marked answer is C. GELU (Gaussian Error Linear Unit). It does not match '______________ is used in modern deep learning architecture such as transformers'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches '______________ is used in modern deep learning architecture such as transformers'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently. GELU is used in modern deep learning architecture such as transformers. Softmax is used for multi -class classification problems. ELU is used where smoother learning and faster convergence are needed. ReLU is used for general deep learning architectures. Refer to lecture 46, slide 6.",
-      "Not suitable: this option says 'ReLU (Rectified Linear Unit)', but the PDF-marked answer is C. GELU (Gaussian Error Linear Unit). It does not match '______________ is used in modern deep learning architecture such as transformers'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently. Extra clue: GELU is used in modern deep learning architecture such as transformers. Softmax is used for multi -class classification problems. ELU is used where smoother learning and faster convergence are needed. ReLU is used for general deep learning architectures. Refer to lecture 46, slide 6.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -3828,12 +3828,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Computing the partial derivatives of the loss function with respect to weights and biases",
-    "explanation": "Backpropagation is a systematic procedure for computing the partial derivatives of the loss function with respect to every weight and bias in the network. Refer to lecture 46, slide 9. 0 The PDF-marked answer is C. Computing the partial derivatives of the loss function with respect to weights and biases, which directly addresses 'Backpropagation in a neural network is primarily used for which of the following'. Theory rule: Backpropagation computes gradients of the loss with respect to weights so the network can update itself during training.",
+    "explanation": "Correct answer: C. Computing the partial derivatives of the loss function with respect to weights and biases. Why it is correct: Backpropagation is a systematic procedure for computing the partial derivatives of the loss function with respect to every weight and bias in the network. Refer to lecture 46, slide 9. 0 Theory rule: Backpropagation computes gradients of the loss with respect to weights so the network can update itself during training.",
     "optionExplanations": [
-      "Not suitable: this option says 'Increasing the number of hidden layers', but the PDF-marked answer is C. Computing the partial derivatives of the loss function with respect to weights and biases. It does not match 'Backpropagation in a neural network is primarily used for which of the following'. Theory check: Backpropagation computes gradients of the loss with respect to weights so the network can update itself during training.",
-      "Not suitable: this option says 'Initializing the weights of the network', but the PDF-marked answer is C. Computing the partial derivatives of the loss function with respect to weights and biases. It does not match 'Backpropagation in a neural network is primarily used for which of the following'. Theory check: Backpropagation computes gradients of the loss with respect to weights so the network can update itself during training.",
-      "Suitable: the PDF answer key includes this option. It matches 'Backpropagation in a neural network is primarily used for which of the following'. Theory check: Backpropagation computes gradients of the loss with respect to weights so the network can update itself during training. Backpropagation is a systematic procedure for computing the partial derivatives of the loss function with respect to every weight and bias in the network. Refer to lecture 46, slide 9. 0",
-      "Not suitable: this option says 'Reducing the size of the training dataset', but the PDF-marked answer is C. Computing the partial derivatives of the loss function with respect to weights and biases. It does not match 'Backpropagation in a neural network is primarily used for which of the following'. Theory check: Backpropagation computes gradients of the loss with respect to weights so the network can update itself during training."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Backpropagation computes gradients of the loss with respect to weights so the network can update itself during training.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Backpropagation computes gradients of the loss with respect to weights so the network can update itself during training.",
+      "Choose this: it matches the concept. Backpropagation computes gradients of the loss with respect to weights so the network can update itself during training. Extra clue: Backpropagation is a systematic procedure for computing the partial derivatives of the loss function with respect to every weight and bias in the network. Refer to lecture 46, slide 9. 0",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Backpropagation computes gradients of the loss with respect to weights so the network can update itself during training."
     ]
   },
   {
@@ -3856,12 +3856,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. It explains the contribution of each feature to a model's prediction using Shapley values",
-    "explanation": "SHAP is an explainable AI method based on Shapley values from cooperative game theory. It explains how much each feature contributes to a model's prediction. ANNs are black-box models: SHAP makes them interpretable. Refer to lecture 46, slide 10. The PDF-marked answer is D. It explains the contribution of each feature to a model's prediction using Shapley values, which directly addresses 'Which of the following best describes the purpose of SHAP in machine learning models'. Theory rule: Explainability methods such as SHAP connect model predictions back to feature contributions.",
+    "explanation": "Correct answer: D. It explains the contribution of each feature to a model's prediction using Shapley values. Why it is correct: SHAP is an explainable AI method based on Shapley values from cooperative game theory. It explains how much each feature contributes to a model's prediction. ANNs are black-box models: SHAP makes them interpretable. Refer to lecture 46, slide 10. Theory rule: Explainability methods such as SHAP connect model predictions back to feature contributions.",
     "optionExplanations": [
-      "Not suitable: this option says 'It improves the training speed of neural networks', but the PDF-marked answer is D. It explains the contribution of each feature to a model's prediction using Shapley values. It does not match 'Which of the following best describes the purpose of SHAP in machine learning models'. Theory check: Explainability methods such as SHAP connect model predictions back to feature contributions.",
-      "Not suitable: this option says 'It replaces the loss function in deep learning models', but the PDF-marked answer is D. It explains the contribution of each feature to a model's prediction using Shapley values. It does not match 'Which of the following best describes the purpose of SHAP in machine learning models'. Theory check: Explainability methods such as SHAP connect model predictions back to feature contributions.",
-      "Not suitable: this option says 'It increases the number of hidden layers in a neural network', but the PDF-marked answer is D. It explains the contribution of each feature to a model's prediction using Shapley values. It does not match 'Which of the following best describes the purpose of SHAP in machine learning models'. Theory check: Explainability methods such as SHAP connect model predictions back to feature contributions.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following best describes the purpose of SHAP in machine learning models'. Theory check: Explainability methods such as SHAP connect model predictions back to feature contributions. SHAP is an explainable AI method based on Shapley values from cooperative game theory. It explains how much each feature contributes to a model's prediction. ANNs are black-box models: SHAP makes them interpretable. Refer to lecture 46, slide 10."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Explainability methods such as SHAP connect model predictions back to feature contributions.",
+      "Do not choose: this points to too absolute. Correct reasoning: Explainability methods such as SHAP connect model predictions back to feature contributions.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Explainability methods such as SHAP connect model predictions back to feature contributions.",
+      "Choose this: it matches the concept. Explainability methods such as SHAP connect model predictions back to feature contributions. Extra clue: SHAP is an explainable AI method based on Shapley values from cooperative game theory. It explains how much each feature contributes to a model's prediction. ANNs are black-box models: SHAP makes them interpretable. Refer to lecture 46, slide 10."
     ]
   },
   {
@@ -3884,12 +3884,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Due to nonlinear activation functions, multiple layers, and a large number of parameters",
-    "explanation": "Loss surfaces are very complex due to nonlinear activation functions, multiple layers and millions of parameters. It contains local minima, saddle points, flat plateaus and sharp minima which needs to be overcome. Refer to lecture 47, slide 5. The PDF-marked answer is C. Due to nonlinear activation functions, multiple layers, and a large number of parameters, which directly addresses 'Why are loss surfaces in deep neural networks highly complex'. Theory rule: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
+    "explanation": "Correct answer: C. Due to nonlinear activation functions, multiple layers, and a large number of parameters. Why it is correct: Loss surfaces are very complex due to nonlinear activation functions, multiple layers and millions of parameters. It contains local minima, saddle points, flat plateaus and sharp minima which needs to be overcome. Refer to lecture 47, slide 5. Theory rule: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
     "optionExplanations": [
-      "Not suitable: this option says 'Because neural networks use only linear functions', but the PDF-marked answer is C. Due to nonlinear activation functions, multiple layers, and a large number of parameters. It does not match 'Why are loss surfaces in deep neural networks highly complex'. Theory check: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
-      "Not suitable: this option says 'Because neural networks always converge to a single global minimum', but the PDF-marked answer is C. Due to nonlinear activation functions, multiple layers, and a large number of parameters. It does not match 'Why are loss surfaces in deep neural networks highly complex'. Theory check: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
-      "Suitable: the PDF answer key includes this option. It matches 'Why are loss surfaces in deep neural networks highly complex'. Theory check: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture. Loss surfaces are very complex due to nonlinear activation functions, multiple layers and millions of parameters. It contains local minima, saddle points, flat plateaus and sharp minima which needs to be overcome. Refer to lecture 47, slide 5.",
-      "Not suitable: this option says 'Due to the absence of optimization algorithms', but the PDF-marked answer is C. Due to nonlinear activation functions, multiple layers, and a large number of parameters. It does not match 'Why are loss surfaces in deep neural networks highly complex'. Theory check: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture."
+      "Do not choose: this points to too absolute. Correct reasoning: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
+      "Do not choose: this points to too absolute. Correct reasoning: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
+      "Choose this: it matches the concept. Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture. Extra clue: Loss surfaces are very complex due to nonlinear activation functions, multiple layers and millions of parameters. It contains local minima, saddle points, flat plateaus and sharp minima which needs to be overcome. Refer to lecture 47, slide 5.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture."
     ]
   },
   {
@@ -3912,12 +3912,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P and Q",
-    "explanation": "The PDF answer key marks A. P and Q. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: A. P and Q. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'P and R', but the PDF-marked answer is A. P and Q. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Q and S', but the PDF-marked answer is A. P and Q. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Q and R', but the PDF-marked answer is A. P and Q. It does not match the concept asked in this PDF question. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -3940,12 +3940,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. CNNs are used for spatial data, while RNNs are used for sequential/temporal data",
-    "explanation": "Convolutional Neural Networks (CNNs) are used for spatial data (CNNs learn \"where\" patterns occur) while Recurrent Neural Networks (RNNs) are used for sequential/temporal data (RNNs learn \"when\" patterns occur). Refer to lecture 47, slide 10. The PDF-marked answer is D. CNNs are used for spatial data, while RNNs are used for sequential/temporal data, which directly addresses 'Which of the following correctly describes the primary use of CNNs and RNNs'. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+    "explanation": "Correct answer: D. CNNs are used for spatial data, while RNNs are used for sequential/temporal data. Why it is correct: Convolutional Neural Networks (CNNs) are used for spatial data (CNNs learn \"where\" patterns occur) while Recurrent Neural Networks (RNNs) are used for sequential/temporal data (RNNs learn \"when\" patterns occur). Refer to lecture 47, slide 10. Theory rule: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
     "optionExplanations": [
-      "Not suitable: this option says 'CNNs are used for sequential data, while RNNs are used for spatial data', but the PDF-marked answer is D. CNNs are used for spatial data, while RNNs are used for sequential/temporal data. It does not match 'Which of the following correctly describes the primary use of CNNs and RNNs'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'Both CNNs and RNNs are used only for image classification', but the PDF-marked answer is D. CNNs are used for spatial data, while RNNs are used for sequential/temporal data. It does not match 'Which of the following correctly describes the primary use of CNNs and RNNs'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Not suitable: this option says 'CNNs and RNNs are used only for unsupervised learning', but the PDF-marked answer is D. CNNs are used for spatial data, while RNNs are used for sequential/temporal data. It does not match 'Which of the following correctly describes the primary use of CNNs and RNNs'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following correctly describes the primary use of CNNs and RNNs'. Theory check: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning. Convolutional Neural Networks (CNNs) are used for spatial data (CNNs learn \"where\" patterns occur) while Recurrent Neural Networks (RNNs) are used for sequential/temporal data (RNNs learn \"when\" patterns occur). Refer to lecture 47, slide 10."
+      "Do not choose: this points to GIS/spatial tooling. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: this points to too absolute. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Do not choose: this points to too absolute. Correct reasoning: Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning.",
+      "Choose this: it matches the concept. Learning types differ by feedback: labels for supervised learning, no labels for unsupervised learning, partial labels for semi-supervised learning, and rewards for reinforcement learning. Extra clue: Convolutional Neural Networks (CNNs) are used for spatial data (CNNs learn \"where\" patterns occur) while Recurrent Neural Networks (RNNs) are used for sequential/temporal data (RNNs learn \"when\" patterns occur). Refer to lecture 47, slide 10."
     ]
   },
   {
@@ -3968,12 +3968,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. kernel",
-    "explanation": "A kernel (filter) is a small matrix that slides over an image to detect patterns like edges, textures, and shapes. A stride is how many steps the filter moves at a time. Padding is like adding a border of zeros around the image before applying the filter. Pooling layers down sample feature maps to retain dominant features while reducing computational complexity and overfitting. Refer to lecture 48, slide 5, 6 and 7. The PDF-marked answer is A. kernel, which directly addresses 'A ______________ is a small matrix that slides over an image to detect patterns like edges, textures, and shapes'. Theory rule: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
+    "explanation": "Correct answer: A. kernel. Why it is correct: A kernel (filter) is a small matrix that slides over an image to detect patterns like edges, textures, and shapes. A stride is how many steps the filter moves at a time. Padding is like adding a border of zeros around the image before applying the filter. Pooling layers down sample feature maps to retain dominant features while reducing computational complexity and overfitting. Refer to lecture 48, slide 5, 6 and 7. Theory rule: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'A ______________ is a small matrix that slides over an image to detect patterns like edges, textures, and shapes'. Theory check: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis. A kernel (filter) is a small matrix that slides over an image to detect patterns like edges, textures, and shapes. A stride is how many steps the filter moves at a time. Padding is like adding a border of zeros around the image before applying the filter. Pooling layers down sample feature maps to retain dominant features while reducing computational complexity and overfitting. Refer to lecture 48, slide 5, 6 and 7.",
-      "Not suitable: this option says 'stride', but the PDF-marked answer is A. kernel. It does not match 'A ______________ is a small matrix that slides over an image to detect patterns like edges, textures, and shapes'. Theory check: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
-      "Not suitable: this option says 'padding', but the PDF-marked answer is A. kernel. It does not match 'A ______________ is a small matrix that slides over an image to detect patterns like edges, textures, and shapes'. Theory check: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
-      "Not suitable: this option says 'pooling', but the PDF-marked answer is A. kernel. It does not match 'A ______________ is a small matrix that slides over an image to detect patterns like edges, textures, and shapes'. Theory check: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis."
+      "Choose this: it matches the concept. A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis. Extra clue: A kernel (filter) is a small matrix that slides over an image to detect patterns like edges, textures, and shapes. A stride is how many steps the filter moves at a time. Padding is like adding a border of zeros around the image before applying the filter. Pooling layers down sample feature maps to retain dominant features while reducing computational complexity and overfitting. Refer to lecture 48, slide 5, 6 and 7.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: A DataFrame is a labeled table; methods such as shape, info, describe, fillna, astype, groupby, and plotting support analysis."
     ]
   },
   {
@@ -3996,12 +3996,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. P-iv; Q-iii; R-i; S-ii",
-    "explanation": "The PDF answer key marks B. P-iv; Q-iii; R-i; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
+    "explanation": "Correct answer: B. P-iv; Q-iii; R-i; S-ii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
     "optionExplanations": [
-      "Not suitable: this option says 'P-iii; Q-iv; R-ii; S-i', but the PDF-marked answer is B. P-iv; Q-iii; R-i; S-ii. It does not match the concept asked in this PDF question. Theory check: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
-      "Not suitable: this option says 'P-ii; Q-i; R-iii; S-iv', but the PDF-marked answer is B. P-iv; Q-iii; R-i; S-ii. It does not match the concept asked in this PDF question. Theory check: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
-      "Not suitable: this option says 'P-i; Q-ii; R-iv; S-iii', but the PDF-marked answer is B. P-iv; Q-iii; R-i; S-ii. It does not match the concept asked in this PDF question. Theory check: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
+      "Choose this: it matches the concept. Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Activation functions introduce nonlinearity, allowing neural networks to learn relationships that linear models cannot capture."
     ]
   },
   {
@@ -4024,12 +4024,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Reinforcement Learning",
-    "explanation": "The PDF answer key marks C. Reinforcement Learning. This answer is suitable because it directly addresses '_______________ is a type of machine learning where an agent learns to make decisions by interacting with an environment'. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+    "explanation": "Correct answer: C. Reinforcement Learning. Why it is correct: it directly answers '_______________ is a type of machine learning where an agent learns to make decisions by interacting with an environment'. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
     "optionExplanations": [
-      "Not suitable: this option says 'Supervised Learning', but the PDF-marked answer is C. Reinforcement Learning. It does not match '_______________ is a type of machine learning where an agent learns to make decisions by interacting with an environment'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'Unsupervised Learning', but the PDF-marked answer is C. Reinforcement Learning. It does not match '_______________ is a type of machine learning where an agent learns to make decisions by interacting with an environment'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Suitable: the PDF answer key includes this option. It matches '_______________ is a type of machine learning where an agent learns to make decisions by interacting with an environment'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'Neural Networks', but the PDF-marked answer is C. Reinforcement Learning. It does not match '_______________ is a type of machine learning where an agent learns to make decisions by interacting with an environment'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
+      "Do not choose: this points to a different ML task. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: this points to a different ML task. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Choose this: it matches the concept. SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
     ]
   },
   {
@@ -4052,12 +4052,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. P-ii; Q-iv; R-i; S-iii",
-    "explanation": "The PDF answer key marks D. P-ii; Q-iv; R-i; S-iii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
+    "explanation": "Correct answer: D. P-ii; Q-iv; R-i; S-iii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
     "optionExplanations": [
-      "Not suitable: this option says 'P-iii; Q-i; R-iv; S-ii', but the PDF-marked answer is D. P-ii; Q-iv; R-i; S-iii. It does not match the concept asked in this PDF question. Theory check: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
-      "Not suitable: this option says 'P-iv; Q-iii; R-ii; S-i', but the PDF-marked answer is D. P-ii; Q-iv; R-i; S-iii. It does not match the concept asked in this PDF question. Theory check: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
-      "Not suitable: this option says 'P-i; Q-ii; R-iii; S-iv', but the PDF-marked answer is D. P-ii; Q-iv; R-i; S-iii. It does not match the concept asked in this PDF question. Theory check: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
+      "Choose this: it matches the concept. Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time."
     ]
   },
   {
@@ -4080,12 +4080,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P-iii; Q-i; R-ii",
-    "explanation": "The PDF answer key marks A. P-iii; Q-i; R-ii. This answer is suitable because it directly addresses the concept asked in this PDF question. Theory rule: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
+    "explanation": "Correct answer: A. P-iii; Q-i; R-ii. Why it is correct: it directly answers the concept asked in this PDF question. Theory rule: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
-      "Not suitable: this option says 'P-ii; Q-iii; R-ii', but the PDF-marked answer is A. P-iii; Q-i; R-ii. It does not match the concept asked in this PDF question. Theory check: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
-      "Not suitable: this option says 'P-i; Q-iii; R-ii', but the PDF-marked answer is A. P-iii; Q-i; R-ii. It does not match the concept asked in this PDF question. Theory check: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
-      "Not suitable: this option says 'P-iii; Q-ii; R-i', but the PDF-marked answer is A. P-iii; Q-i; R-ii. It does not match the concept asked in this PDF question. Theory check: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time."
+      "Choose this: it matches the concept. Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Reinforcement learning studies agents that choose actions in an environment and learn from rewards over time."
     ]
   },
   {
@@ -4108,12 +4108,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Q-value, Bellman Equation",
-    "explanation": "The PDF answer key marks B. Q-value, Bellman Equation. This answer is suitable because it directly addresses '_____________ is defined as an expectation over infinite future rewards, and __________ gives a practical recursive way to compute it'. Theory rule: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+    "explanation": "Correct answer: B. Q-value, Bellman Equation. Why it is correct: it directly answers '_____________ is defined as an expectation over infinite future rewards, and __________ gives a practical recursive way to compute it'. Theory rule: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
     "optionExplanations": [
-      "Not suitable: this option says 'Q-value, Boltzmann Equation', but the PDF-marked answer is B. Q-value, Bellman Equation. It does not match '_____________ is defined as an expectation over infinite future rewards, and __________ gives a practical recursive way to compute it'. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
-      "Suitable: the PDF answer key includes this option. It matches '_____________ is defined as an expectation over infinite future rewards, and __________ gives a practical recursive way to compute it'. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
-      "Not suitable: this option says 'Bellman Equation, Q-value', but the PDF-marked answer is B. Q-value, Bellman Equation. It does not match '_____________ is defined as an expectation over infinite future rewards, and __________ gives a practical recursive way to compute it'. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
-      "Not suitable: this option says 'Boltzmann Equation, Q-value', but the PDF-marked answer is B. Q-value, Bellman Equation. It does not match '_____________ is defined as an expectation over infinite future rewards, and __________ gives a practical recursive way to compute it'. Theory check: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function."
+      "Do not choose: this points to the wrong neural-network architecture. Correct reasoning: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+      "Choose this: it matches the concept. Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function.",
+      "Do not choose: this points to the wrong neural-network architecture. Correct reasoning: Neural networks learn layered representations through weighted connections, nonlinear activations, and training against a loss function."
     ]
   },
   {
@@ -4136,12 +4136,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. IP, TCP/IP",
-    "explanation": "IP assigns a unique address; TCP/IP ensures reliable communication. (Refer to Lecture 51 Slide 5) The PDF-marked answer is B. IP, TCP/IP, which directly addresses 'In IoT communication, ______ provides a unique address to devices, while ______ ensures reliable data transmission between devices and servers'. Theory rule: IoT communication moves sensor data across networks; IP addresses devices and TCP/IP supports reliable transmission.",
+    "explanation": "Correct answer: B. IP, TCP/IP. Why it is correct: IP assigns a unique address; TCP/IP ensures reliable communication. (Refer to Lecture 51 Slide 5) Theory rule: IoT communication moves sensor data across networks; IP addresses devices and TCP/IP supports reliable transmission.",
     "optionExplanations": [
-      "Not suitable: this option says 'HTTP, MQTT', but the PDF-marked answer is B. IP, TCP/IP. It does not match 'In IoT communication, ______ provides a unique address to devices, while ______ ensures reliable data transmission between devices and servers'. Theory check: IoT communication moves sensor data across networks; IP addresses devices and TCP/IP supports reliable transmission.",
-      "Suitable: the PDF answer key includes this option. It matches 'In IoT communication, ______ provides a unique address to devices, while ______ ensures reliable data transmission between devices and servers'. Theory check: IoT communication moves sensor data across networks; IP addresses devices and TCP/IP supports reliable transmission. IP assigns a unique address; TCP/IP ensures reliable communication. (Refer to Lecture 51 Slide 5)",
-      "Not suitable: this option says 'CoAP, WebSockets', but the PDF-marked answer is B. IP, TCP/IP. It does not match 'In IoT communication, ______ provides a unique address to devices, while ______ ensures reliable data transmission between devices and servers'. Theory check: IoT communication moves sensor data across networks; IP addresses devices and TCP/IP supports reliable transmission.",
-      "Not suitable: this option says 'MQTT, HTTP', but the PDF-marked answer is B. IP, TCP/IP. It does not match 'In IoT communication, ______ provides a unique address to devices, while ______ ensures reliable data transmission between devices and servers'. Theory check: IoT communication moves sensor data across networks; IP addresses devices and TCP/IP supports reliable transmission."
+      "Do not choose: this points to the wrong communication role. Correct reasoning: IoT communication moves sensor data across networks; IP addresses devices and TCP/IP supports reliable transmission.",
+      "Choose this: it matches the concept. IoT communication moves sensor data across networks; IP addresses devices and TCP/IP supports reliable transmission. Extra clue: IP assigns a unique address; TCP/IP ensures reliable communication. (Refer to Lecture 51 Slide 5)",
+      "Do not choose: it does not express the asked concept. Correct reasoning: IoT communication moves sensor data across networks; IP addresses devices and TCP/IP supports reliable transmission.",
+      "Do not choose: this points to the wrong communication role. Correct reasoning: IoT communication moves sensor data across networks; IP addresses devices and TCP/IP supports reliable transmission."
     ]
   },
   {
@@ -4164,12 +4164,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. ADC",
-    "explanation": "ADC converts analog signals into digital form. (Refer to Lecture 52 Slide 3) The PDF-marked answer is C. ADC, which directly addresses 'Which component in a Computer Process Control System (CPCS) is responsible for converting analog signals into digital form for processing'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: C. ADC. Why it is correct: ADC converts analog signals into digital form. (Refer to Lecture 52 Slide 3) Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'DAC', but the PDF-marked answer is C. ADC. It does not match 'Which component in a Computer Process Control System (CPCS) is responsible for converting analog signals into digital form for processing'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Controller', but the PDF-marked answer is C. ADC. It does not match 'Which component in a Computer Process Control System (CPCS) is responsible for converting analog signals into digital form for processing'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which component in a Computer Process Control System (CPCS) is responsible for converting analog signals into digital form for processing'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently. ADC converts analog signals into digital form. (Refer to Lecture 52 Slide 3)",
-      "Not suitable: this option says 'Actuator', but the PDF-marked answer is C. ADC. It does not match 'Which component in a Computer Process Control System (CPCS) is responsible for converting analog signals into digital form for processing'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently. Extra clue: ADC converts analog signals into digital form. (Refer to Lecture 52 Slide 3)",
+      "Do not choose: this points to hardware or sensing. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -4192,12 +4192,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P-ii, Q-i, R-iii, S-iv",
-    "explanation": "Sensing layer captures real -world data, Network layer transmits data, WPAN is short-range (Bluetooth, Zigbee), WWAN is long-range (4G/5G). (Refer to Lecture 52 Slide 4) The PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv, which directly addresses the concept asked in this PDF question. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: A. P-ii, Q-i, R-iii, S-iv. Why it is correct: Sensing layer captures real -world data, Network layer transmits data, WPAN is short-range (Bluetooth, Zigbee), WWAN is long-range (4G/5G). (Refer to Lecture 52 Slide 4) Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question. Sensing layer captures real -world data, Network layer transmits data, WPAN is short-range (Bluetooth, Zigbee), WWAN is long-range (4G/5G). (Refer to Lecture 52 Slide 4)",
-      "Not suitable: this option says 'P-i, Q-ii, R-iv, S-iii', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'P-ii, Q-iii, R-i, S-iv', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'P-iii, Q-i, R-ii, S-iv', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question. Extra clue: Sensing layer captures real -world data, Network layer transmits data, WPAN is short-range (Bluetooth, Zigbee), WWAN is long-range (4G/5G). (Refer to Lecture 52 Slide 4)",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -4220,12 +4220,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. To write, compile, and upload programs to microcontrollers",
-    "explanation": "Arduino IDE is used for coding and uploading programs. (Refer to Lecture 52 Slide 9) The PDF-marked answer is B. To write, compile, and upload programs to microcontrollers, which directly addresses 'Which of the following is a primary purpose of the Arduino IDE'. Theory rule: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+    "explanation": "Correct answer: B. To write, compile, and upload programs to microcontrollers. Why it is correct: Arduino IDE is used for coding and uploading programs. (Refer to Lecture 52 Slide 9) Theory rule: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
     "optionExplanations": [
-      "Not suitable: this option says 'To manufacture microcontrollers', but the PDF-marked answer is B. To write, compile, and upload programs to microcontrollers. It does not match 'Which of the following is a primary purpose of the Arduino IDE'. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is a primary purpose of the Arduino IDE'. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems. Arduino IDE is used for coding and uploading programs. (Refer to Lecture 52 Slide 9)",
-      "Not suitable: this option says 'To design hardware circuits only', but the PDF-marked answer is B. To write, compile, and upload programs to microcontrollers. It does not match 'Which of the following is a primary purpose of the Arduino IDE'. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
-      "Not suitable: this option says 'To replace embedded systems', but the PDF-marked answer is B. To write, compile, and upload programs to microcontrollers. It does not match 'Which of the following is a primary purpose of the Arduino IDE'. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+      "Choose this: it matches the concept. Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems. Extra clue: Arduino IDE is used for coding and uploading programs. (Refer to Lecture 52 Slide 9)",
+      "Do not choose: this points to too absolute. Correct reasoning: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems."
     ]
   },
   {
@@ -4248,12 +4248,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Analog signals are continuous and noise-sensitive, while digital signals are discrete and more noise-tolerant",
-    "explanation": "Analog is continuous, digital is discrete. (Refer to Lecture 53 Slide 3) The PDF-marked answer is C. Analog signals are continuous and noise-sensitive, while digital signals are discrete and more noise-tolerant, which directly addresses 'Which of the following statements correctly distinguishes analog and digital signals in terms of noise and representation'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: C. Analog signals are continuous and noise-sensitive, while digital signals are discrete and more noise-tolerant. Why it is correct: Analog is continuous, digital is discrete. (Refer to Lecture 53 Slide 3) Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'Analog signals are discrete and noise-tolerant', but the PDF-marked answer is C. Analog signals are continuous and noise-sensitive, while digital signals are discrete and more noise-tolerant. It does not match 'Which of the following statements correctly distinguishes analog and digital signals in terms of noise and representation'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Digital signals are continuous and noise-sensitive', but the PDF-marked answer is C. Analog signals are continuous and noise-sensitive, while digital signals are discrete and more noise-tolerant. It does not match 'Which of the following statements correctly distinguishes analog and digital signals in terms of noise and representation'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following statements correctly distinguishes analog and digital signals in terms of noise and representation'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question. Analog is continuous, digital is discrete. (Refer to Lecture 53 Slide 3)",
-      "Not suitable: this option says 'Digital signals have infinite values and analog signals have finite values', but the PDF-marked answer is C. Analog signals are continuous and noise-sensitive, while digital signals are discrete and more noise-tolerant. It does not match 'Which of the following statements correctly distinguishes analog and digital signals in terms of noise and representation'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question. Extra clue: Analog is continuous, digital is discrete. (Refer to Lecture 53 Slide 3)",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -4276,12 +4276,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. S=f(s), stimulus",
-    "explanation": "The transfer function relates input stimulus (s) to output signal (S). It defines how a sensor converts physical input into electrical output. (Refer to Lecture 53 Slide 6) The PDF-marked answer is A. S=f(s), stimulus, which directly addresses 'In a sensor system, the transfer function is represented as ______, where 's' denotes ______'. Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+    "explanation": "Correct answer: A. S=f(s), stimulus. Why it is correct: The transfer function relates input stimulus (s) to output signal (S). It defines how a sensor converts physical input into electrical output. (Refer to Lecture 53 Slide 6) Theory rule: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'In a sensor system, the transfer function is represented as ______, where 's' denotes ______'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data. The transfer function relates input stimulus (s) to output signal (S). It defines how a sensor converts physical input into electrical output. (Refer to Lecture 53 Slide 6)",
-      "Not suitable: this option says 'S=s2, output signal', but the PDF-marked answer is A. S=f(s), stimulus. It does not match 'In a sensor system, the transfer function is represented as ______, where 's' denotes ______'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'f=S(s), noise', but the PDF-marked answer is A. S=f(s), stimulus. It does not match 'In a sensor system, the transfer function is represented as ______, where 's' denotes ______'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
-      "Not suitable: this option says 'S=m+c, sensitivity', but the PDF-marked answer is A. S=f(s), stimulus. It does not match 'In a sensor system, the transfer function is represented as ______, where 's' denotes ______'. Theory check: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
+      "Choose this: it matches the concept. SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data. Extra clue: The transfer function relates input stimulus (s) to output signal (S). It defines how a sensor converts physical input into electrical output. (Refer to Lecture 53 Slide 6)",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: SQL logic depends on operation order: rows are filtered before grouping, groups are filtered with HAVING, and constraints protect valid data."
     ]
   },
   {
@@ -4304,12 +4304,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Convert electrical signals into physical action",
-    "explanation": "Actuators take control signals and convert them into physical actions like motion, pressure, or sound. (Refer to Lecture 53 Slide 11) The PDF-marked answer is C. Convert electrical signals into physical action, which directly addresses 'What is the primary function of an actuator'. Theory rule: Actuators turn control signals into physical actions such as movement, switching, opening, or closing.",
+    "explanation": "Correct answer: C. Convert electrical signals into physical action. Why it is correct: Actuators take control signals and convert them into physical actions like motion, pressure, or sound. (Refer to Lecture 53 Slide 11) Theory rule: Actuators turn control signals into physical actions such as movement, switching, opening, or closing.",
     "optionExplanations": [
-      "Not suitable: this option says 'Measure physical parameters', but the PDF-marked answer is C. Convert electrical signals into physical action. It does not match 'What is the primary function of an actuator'. Theory check: Actuators turn control signals into physical actions such as movement, switching, opening, or closing.",
-      "Not suitable: this option says 'Store data', but the PDF-marked answer is C. Convert electrical signals into physical action. It does not match 'What is the primary function of an actuator'. Theory check: Actuators turn control signals into physical actions such as movement, switching, opening, or closing.",
-      "Suitable: the PDF answer key includes this option. It matches 'What is the primary function of an actuator'. Theory check: Actuators turn control signals into physical actions such as movement, switching, opening, or closing. Actuators take control signals and convert them into physical actions like motion, pressure, or sound. (Refer to Lecture 53 Slide 11)",
-      "Not suitable: this option says 'Transmit data over network', but the PDF-marked answer is C. Convert electrical signals into physical action. It does not match 'What is the primary function of an actuator'. Theory check: Actuators turn control signals into physical actions such as movement, switching, opening, or closing."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Actuators turn control signals into physical actions such as movement, switching, opening, or closing.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Actuators turn control signals into physical actions such as movement, switching, opening, or closing.",
+      "Choose this: it matches the concept. Actuators turn control signals into physical actions such as movement, switching, opening, or closing. Extra clue: Actuators take control signals and convert them into physical actions like motion, pressure, or sound. (Refer to Lecture 53 Slide 11)",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Actuators turn control signals into physical actions such as movement, switching, opening, or closing."
     ]
   },
   {
@@ -4332,12 +4332,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. ATmega328P",
-    "explanation": "Arduino Uno uses ATmega328P as microcontroller. (Refer to Lecture 54 Slide 11) The PDF-marked answer is B. ATmega328P, which directly addresses 'Which microcontroller is used as the main processing unit in Arduino Uno'. Theory rule: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+    "explanation": "Correct answer: B. ATmega328P. Why it is correct: Arduino Uno uses ATmega328P as microcontroller. (Refer to Lecture 54 Slide 11) Theory rule: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
     "optionExplanations": [
-      "Not suitable: this option says 'ATmega2560', but the PDF-marked answer is B. ATmega328P. It does not match 'Which microcontroller is used as the main processing unit in Arduino Uno'. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which microcontroller is used as the main processing unit in Arduino Uno'. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems. Arduino Uno uses ATmega328P as microcontroller. (Refer to Lecture 54 Slide 11)",
-      "Not suitable: this option says 'ESP32', but the PDF-marked answer is B. ATmega328P. It does not match 'Which microcontroller is used as the main processing unit in Arduino Uno'. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
-      "Not suitable: this option says 'PIC16F877A', but the PDF-marked answer is B. ATmega328P. It does not match 'Which microcontroller is used as the main processing unit in Arduino Uno'. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+      "Choose this: it matches the concept. Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems. Extra clue: Arduino Uno uses ATmega328P as microcontroller. (Refer to Lecture 54 Slide 11)",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems."
     ]
   },
   {
@@ -4360,12 +4360,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. P-ii, Q-iii, R-i, S-iv",
-    "explanation": "EEPROM enables storage, Ethernet is used for network, GSM is used for communication, Bridge enables processor interaction. (Refer to Lecture 55 Slide 7) The PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv, which directly addresses the concept asked in this PDF question. Theory rule: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+    "explanation": "Correct answer: A. P-ii, Q-iii, R-i, S-iv. Why it is correct: EEPROM enables storage, Ethernet is used for network, GSM is used for communication, Bridge enables processor interaction. (Refer to Lecture 55 Slide 7) Theory rule: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems. EEPROM enables storage, Ethernet is used for network, GSM is used for communication, Bridge enables processor interaction. (Refer to Lecture 55 Slide 7)",
-      "Not suitable: this option says 'P-iii, Q-ii, R-iv, S-i', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
-      "Not suitable: this option says 'P-i, Q-ii, R-iii, S-iv', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
-      "Not suitable: this option says 'P-iv, Q-i, R-ii, S-iii', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems."
+      "Choose this: it matches the concept. Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems. Extra clue: EEPROM enables storage, Ethernet is used for network, GSM is used for communication, Bridge enables processor interaction. (Refer to Lecture 55 Slide 7)",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+      "Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems."
     ]
   },
   {
@@ -4388,12 +4388,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. Installing USB drivers",
-    "explanation": "USB drivers are necessa ry so that the computer can detect and communicate with the Arduino board. (Refer to Lecture 55 Slide 3) The PDF-marked answer is B. Installing USB drivers, which directly addresses 'Which step is essential after installing Arduino IDE for proper board detection'. Theory rule: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
+    "explanation": "Correct answer: B. Installing USB drivers. Why it is correct: USB drivers are necessa ry so that the computer can detect and communicate with the Arduino board. (Refer to Lecture 55 Slide 3) Theory rule: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
     "optionExplanations": [
-      "Not suitable: this option says 'Writing code', but the PDF-marked answer is B. Installing USB drivers. It does not match 'Which step is essential after installing Arduino IDE for proper board detection'. Theory check: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
-      "Suitable: the PDF answer key includes this option. It matches 'Which step is essential after installing Arduino IDE for proper board detection'. Theory check: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals. USB drivers are necessa ry so that the computer can detect and communicate with the Arduino board. (Refer to Lecture 55 Slide 3)",
-      "Not suitable: this option says 'Uploading firmware', but the PDF-marked answer is B. Installing USB drivers. It does not match 'Which step is essential after installing Arduino IDE for proper board detection'. Theory check: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
-      "Not suitable: this option says 'Connecting sensors', but the PDF-marked answer is B. Installing USB drivers. It does not match 'Which step is essential after installing Arduino IDE for proper board detection'. Theory check: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
+      "Choose this: it matches the concept. Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals. Extra clue: USB drivers are necessa ry so that the computer can detect and communicate with the Arduino board. (Refer to Lecture 55 Slide 3)",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
+      "Do not choose: this points to hardware or sensing. Correct reasoning: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals."
     ]
   },
   {
@@ -4416,12 +4416,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. Precise control of angular position based on input signals",
-    "explanation": "The PDF answer key marks A. Precise control of angular position based on input signals. This answer is suitable because it directly addresses 'What is the primary function of a servo motor when used with an Arduino'. Theory rule: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+    "explanation": "Correct answer: A. Precise control of angular position based on input signals. Why it is correct: it directly answers 'What is the primary function of a servo motor when used with an Arduino'. Theory rule: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'What is the primary function of a servo motor when used with an Arduino'. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
-      "Not suitable: this option says 'Continuous high-speed rotation without control', but the PDF-marked answer is A. Precise control of angular position based on input signals. It does not match 'What is the primary function of a servo motor when used with an Arduino'. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
-      "Not suitable: this option says 'Operating only at fixed speeds', but the PDF-marked answer is A. Precise control of angular position based on input signals. It does not match 'What is the primary function of a servo motor when used with an Arduino'. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
-      "Not suitable: this option says 'Producing linear motion without any rotation', but the PDF-marked answer is A. Precise control of angular position based on input signals. It does not match 'What is the primary function of a servo motor when used with an Arduino'. Theory check: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems."
+      "Choose this: it matches the concept. Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+      "Do not choose: this points to too absolute. Correct reasoning: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Arduino prototyping combines an IDE, microcontroller, libraries, sensors, actuators, and communication for hands-on IoT systems."
     ]
   },
   {
@@ -4444,12 +4444,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Sensing changes in infrared radiation from warm objects",
-    "explanation": "The PDF answer key marks C. Sensing changes in infrared radiation from warm objects. This answer is suitable because it directly addresses 'How does a Passive Infrared (PIR) sensor such as the HC-SR501 detect motion'. Theory rule: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
+    "explanation": "Correct answer: C. Sensing changes in infrared radiation from warm objects. Why it is correct: it directly answers 'How does a Passive Infrared (PIR) sensor such as the HC-SR501 detect motion'. Theory rule: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
     "optionExplanations": [
-      "Not suitable: this option says 'Measuring changes in air pressure', but the PDF-marked answer is C. Sensing changes in infrared radiation from warm objects. It does not match 'How does a Passive Infrared (PIR) sensor such as the HC-SR501 detect motion'. Theory check: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
-      "Not suitable: this option says 'Detecting sound frequency variations in the environment', but the PDF-marked answer is C. Sensing changes in infrared radiation from warm objects. It does not match 'How does a Passive Infrared (PIR) sensor such as the HC-SR501 detect motion'. Theory check: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
-      "Suitable: the PDF answer key includes this option. It matches 'How does a Passive Infrared (PIR) sensor such as the HC-SR501 detect motion'. Theory check: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
-      "Not suitable: this option says 'Emitting ultrasonic waves and measuring their reflection', but the PDF-marked answer is C. Sensing changes in infrared radiation from warm objects. It does not match 'How does a Passive Infrared (PIR) sensor such as the HC-SR501 detect motion'. Theory check: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
+      "Choose this: it matches the concept. Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Sensors convert physical phenomena such as heat, motion, light, pressure, or pollution into measurable signals."
     ]
   },
   {
@@ -4472,12 +4472,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. A request to select features or records from a database",
-    "explanation": "The PDF answer key marks D. A request to select features or records from a database. This answer is suitable because it directly addresses 'In GIS, a query is defined as'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: D. A request to select features or records from a database. Why it is correct: it directly answers 'In GIS, a query is defined as'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'A process of data deletion', but the PDF-marked answer is D. A request to select features or records from a database. It does not match 'In GIS, a query is defined as'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'A method to draw maps manually', but the PDF-marked answer is D. A request to select features or records from a database. It does not match 'In GIS, a query is defined as'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'A technique used to design computer hardware components', but the PDF-marked answer is D. A request to select features or records from a database. It does not match 'In GIS, a query is defined as'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'In GIS, a query is defined as'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: this points to GIS/spatial tooling. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -4500,12 +4500,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Both datasets must contain a common matching field",
-    "explanation": "The PDF answer key marks C. Both datasets must contain a common matching field. This answer is suitable because it directly addresses 'What is the primary requirement, when joining a CSV file to a shapefile in GIS'. Theory rule: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+    "explanation": "Correct answer: C. Both datasets must contain a common matching field. Why it is correct: it directly answers 'What is the primary requirement, when joining a CSV file to a shapefile in GIS'. Theory rule: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
     "optionExplanations": [
-      "Not suitable: this option says 'Both files must have identical geometry types', but the PDF-marked answer is C. Both datasets must contain a common matching field. It does not match 'What is the primary requirement, when joining a CSV file to a shapefile in GIS'. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
-      "Not suitable: this option says 'The CSV file must contain spatial coordinates', but the PDF-marked answer is C. Both datasets must contain a common matching field. It does not match 'What is the primary requirement, when joining a CSV file to a shapefile in GIS'. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
-      "Suitable: the PDF answer key includes this option. It matches 'What is the primary requirement, when joining a CSV file to a shapefile in GIS'. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
-      "Not suitable: this option says 'The shapefile must be converted into raster format', but the PDF-marked answer is C. Both datasets must contain a common matching field. It does not match 'What is the primary requirement, when joining a CSV file to a shapefile in GIS'. Theory check: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+      "Do not choose: this points to GIS/spatial tooling. Correct reasoning: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+      "Choose this: it matches the concept. Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data.",
+      "Do not choose: this points to GIS/spatial tooling. Correct reasoning: Data formats should match structure: CSV is flat tabular data, JSON supports nested name-value data, and XML represents hierarchical tagged data."
     ]
   },
   {
@@ -4528,12 +4528,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. When a one-to-many relationship exists between tables",
-    "explanation": "The PDF answer key marks B. When a one-to-many relationship exists between tables. This answer is suitable because it directly addresses 'When is the \"Relate\" function most useful in GIS'. Theory rule: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+    "explanation": "Correct answer: B. When a one-to-many relationship exists between tables. Why it is correct: it directly answers 'When is the \"Relate\" function most useful in GIS'. Theory rule: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
     "optionExplanations": [
-      "Not suitable: this option says 'When both tables have identical records', but the PDF-marked answer is B. When a one-to-many relationship exists between tables. It does not match 'When is the \"Relate\" function most useful in GIS'. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Suitable: the PDF answer key includes this option. It matches 'When is the \"Relate\" function most useful in GIS'. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Not suitable: this option says 'When spatial data needs to be visualized', but the PDF-marked answer is B. When a one-to-many relationship exists between tables. It does not match 'When is the \"Relate\" function most useful in GIS'. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
-      "Not suitable: this option says 'When converting coordinate systems', but the PDF-marked answer is B. When a one-to-many relationship exists between tables. It does not match 'When is the \"Relate\" function most useful in GIS'. Theory check: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity."
+      "Do not choose: this points to database mechanics. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Choose this: it matches the concept. GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Do not choose: this points to GIS/spatial tooling. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: GIS relationships depend on spatial or tabular links such as common fields, one-to-many relates, and referential integrity."
     ]
   },
   {
@@ -4556,12 +4556,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "c. Predicting categorical variables",
-    "explanation": "The PDF answer key marks C. Predicting categorical variables. This answer is suitable because it directly addresses 'What is the purpose of classification in forest-based models'. Theory rule: The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.",
+    "explanation": "Correct answer: C. Predicting categorical variables. Why it is correct: it directly answers 'What is the purpose of classification in forest-based models'. Theory rule: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
     "optionExplanations": [
-      "Not suitable: this option says 'Predicting continuous values', but the PDF-marked answer is C. Predicting categorical variables. It does not match 'What is the purpose of classification in forest-based models'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Grouping data without labels', but the PDF-marked answer is C. Predicting categorical variables. It does not match 'What is the purpose of classification in forest-based models'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Suitable: the PDF answer key includes this option. It matches 'What is the purpose of classification in forest-based models'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question.",
-      "Not suitable: this option says 'Reducing dimensionality', but the PDF-marked answer is C. Predicting categorical variables. It does not match 'What is the purpose of classification in forest-based models'. Theory check: Match the answer to the concept, operation, data type, relationship, or workflow described in the question."
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Choose this: it matches the concept. the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: the answer must match the concept, operation, data type, relationship, or workflow in the question."
     ]
   },
   {
@@ -4584,12 +4584,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. Confusion Matrix",
-    "explanation": "The PDF answer key marks A. Confusion Matrix. This answer is suitable because it directly addresses 'Which tool is used to evaluate classification performance'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: A. Confusion Matrix. Why it is correct: it directly answers 'Which tool is used to evaluate classification performance'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'Which tool is used to evaluate classification performance'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Buffer Tool', but the PDF-marked answer is A. Confusion Matrix. It does not match 'Which tool is used to evaluate classification performance'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Scatter Plot', but the PDF-marked answer is A. Confusion Matrix. It does not match 'Which tool is used to evaluate classification performance'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'Histogram', but the PDF-marked answer is A. Confusion Matrix. It does not match 'Which tool is used to evaluate classification performance'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -4612,12 +4612,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "a. Positive statistically significant z-scores",
-    "explanation": "The PDF answer key marks A. Positive statistically significant z-scores. This answer is suitable because it directly addresses 'Which of the following values indicate the presence of a hotspot in Hot Spot Analysis (Getis -Ord Gi*)'. Theory rule: Hotspot analysis identifies statistically significant spatial clustering of high or low values, often using z-scores.",
+    "explanation": "Correct answer: A. Positive statistically significant z-scores. Why it is correct: it directly answers 'Which of the following values indicate the presence of a hotspot in Hot Spot Analysis (Getis -Ord Gi*)'. Theory rule: Hotspot analysis identifies statistically significant spatial clustering of high or low values, often using z-scores.",
     "optionExplanations": [
-      "Suitable: the PDF answer key includes this option. It matches 'Which of the following values indicate the presence of a hotspot in Hot Spot Analysis (Getis -Ord Gi*)'. Theory check: Hotspot analysis identifies statistically significant spatial clustering of high or low values, often using z-scores.",
-      "Not suitable: this option says 'Zero z-scores', but the PDF-marked answer is A. Positive statistically significant z-scores. It does not match 'Which of the following values indicate the presence of a hotspot in Hot Spot Analysis (Getis -Ord Gi*)'. Theory check: Hotspot analysis identifies statistically significant spatial clustering of high or low values, often using z-scores.",
-      "Not suitable: this option says 'Random distribution values', but the PDF-marked answer is A. Positive statistically significant z-scores. It does not match 'Which of the following values indicate the presence of a hotspot in Hot Spot Analysis (Getis -Ord Gi*)'. Theory check: Hotspot analysis identifies statistically significant spatial clustering of high or low values, often using z-scores.",
-      "Not suitable: this option says 'Negative z-scores', but the PDF-marked answer is A. Positive statistically significant z-scores. It does not match 'Which of the following values indicate the presence of a hotspot in Hot Spot Analysis (Getis -Ord Gi*)'. Theory check: Hotspot analysis identifies statistically significant spatial clustering of high or low values, often using z-scores."
+      "Choose this: it matches the concept. Hotspot analysis identifies statistically significant spatial clustering of high or low values, often using z-scores.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Hotspot analysis identifies statistically significant spatial clustering of high or low values, often using z-scores.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Hotspot analysis identifies statistically significant spatial clustering of high or low values, often using z-scores.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Hotspot analysis identifies statistically significant spatial clustering of high or low values, often using z-scores."
     ]
   },
   {
@@ -4640,12 +4640,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "b. To create a polygon grid for aggregating point data",
-    "explanation": "The PDF answer key marks B. To create a polygon grid for aggregating point data. This answer is suitable because it directly addresses 'Why is the \"Create Fishnet\" tool used before Hot Spot Analysis'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+    "explanation": "Correct answer: B. To create a polygon grid for aggregating point data. Why it is correct: it directly answers 'Why is the \"Create Fishnet\" tool used before Hot Spot Analysis'. Theory rule: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
     "optionExplanations": [
-      "Not suitable: this option says 'To convert raster data into vector format', but the PDF-marked answer is B. To create a polygon grid for aggregating point data. It does not match 'Why is the \"Create Fishnet\" tool used before Hot Spot Analysis'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Suitable: the PDF answer key includes this option. It matches 'Why is the \"Create Fishnet\" tool used before Hot Spot Analysis'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'To remove spatial outliers', but the PDF-marked answer is B. To create a polygon grid for aggregating point data. It does not match 'Why is the \"Create Fishnet\" tool used before Hot Spot Analysis'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
-      "Not suitable: this option says 'To calculate distance automatically', but the PDF-marked answer is B. To create a polygon grid for aggregating point data. It does not match 'Why is the \"Create Fishnet\" tool used before Hot Spot Analysis'. Theory check: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Choose this: it matches the concept. Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: this points to GIS/spatial tooling. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: Database integration connects programs, queries, objects, and storage layers so applications can use data safely and consistently."
     ]
   },
   {
@@ -4668,12 +4668,12 @@ window.questionBankData = [
     ],
     "multiSelect": false,
     "pdfAnswer": "d. Web GIS, cloud-based mapping and data access",
-    "explanation": "The PDF answer key marks D. Web GIS, cloud-based mapping and data access. This answer is suitable because it directly addresses 'What is the main use of the ArcGIS API for Python'. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+    "explanation": "Correct answer: D. Web GIS, cloud-based mapping and data access. Why it is correct: it directly answers 'What is the main use of the ArcGIS API for Python'. Theory rule: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
     "optionExplanations": [
-      "Not suitable: this option says 'Hardware design', but the PDF-marked answer is D. Web GIS, cloud-based mapping and data access. It does not match 'What is the main use of the ArcGIS API for Python'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'Desktop-only spatial analysis', but the PDF-marked answer is D. Web GIS, cloud-based mapping and data access. It does not match 'What is the main use of the ArcGIS API for Python'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Not suitable: this option says 'Image editing', but the PDF-marked answer is D. Web GIS, cloud-based mapping and data access. It does not match 'What is the main use of the ArcGIS API for Python'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
-      "Suitable: the PDF answer key includes this option. It matches 'What is the main use of the ArcGIS API for Python'. Theory check: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
+      "Do not choose: it does not express the asked concept. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: this points to too absolute. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Do not choose: it does not express the asked concept. Correct reasoning: APIs provide controlled, secure, programmatic access to data without exposing the raw database directly.",
+      "Choose this: it matches the concept. APIs provide controlled, secure, programmatic access to data without exposing the raw database directly."
     ]
   }
 ];

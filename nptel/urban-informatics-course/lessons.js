@@ -12,8 +12,21 @@ const courseData = {
             affiliation: "Department of Architecture and Regional Planning, IIT Kharagpur",
             bio: "Prof. Pandit works in urban engineering, land use-transport modeling, smart mobility, and urban systems. His teaching and project background connects theory with real implementation, especially in bicycle sharing, bus transit planning, and data-driven urban services."
         },
+        officialSource: {
+            title: "Official NPTEL alignment",
+            sourceLabel: "NPTEL/SWAYAM public course preview",
+            sourceUrl: "https://onlinecourses.nptel.ac.in/noc26_ar01/preview",
+            notes: [
+                "The official preview frames Urban Informatics as an end-to-end course: urban data, databases, access methods, Python, machine learning, IoT, Arduino prototyping, and integrated urban platforms.",
+                "The course goal is not isolated tool learning. The central workflow is data storage, processing, analytics, visualization, and decision support for real urban applications.",
+                "The instructor bio highlights smart mobility implementation, including bicycle-sharing systems and AI-supported bus transit planning. Use these as practical anchors when revising platform and case-study questions.",
+                "The certificate scheme gives strong weight to the final exam, so the notes now separate concept learning from MCQ answer logic and distractor traps.",
+                "The public preview did not expose transcript links in the accessible course page. These notes therefore use the official layout, assignment PDFs, and public course description as the verified source layer."
+            ]
+        },
         studyGuide: [
             "Read each week in this order: overview, topic cards, assignment lens, then key terms.",
+            "Use the official NPTEL flow as the backbone: databases and data access lead to Python, Python leads to analytics, analytics leads to IoT, and IoT/GIS lead to integrated urban systems.",
             "Use the assignment lens to see what the course is likely to test, not just what it formally lists in the syllabus.",
             "Treat the references as a depth path: Batty and Townsend for urban context, Darwen for databases, Martelli and McKinney for Python, Mitchell and Murphy for machine learning, and Bahga-Madisetti for IoT."
         ],
@@ -437,57 +450,57 @@ const courseData = {
         },
         {
             week: 8,
-            title: "Unsupervised and Association Learning",
-            focus: "Frequent patterns, clustering, distance measures, and latent structure",
-            overview: "This week explores structure in data when labels are absent or limited. The ideas are especially useful for neighborhood typologies, behavior grouping, and discovering recurring urban activity patterns.",
+            title: "SVM, Semi-Supervised Learning, and Active Learning",
+            focus: "Decision boundaries, kernels, unlabeled data, label propagation, and query strategy",
+            overview: "Week 8 strengthens supervised learning by asking how models behave when boundaries are complex, labels are limited, or only selected examples can be labeled. This is where SVM geometry, semi-supervised assumptions, and active learning become testable.",
             topics: [
                 {
-                    title: "Association rule learning",
+                    title: "SVM boundary geometry",
                     notes: [
-                        "Association learning identifies items or events that frequently occur together without needing labels.",
-                        "The workflow often converts data into a binary incidence matrix and then mines rules from it.",
-                        "Support measures frequency, confidence measures conditional reliability, and lift measures strength relative to independence."
+                        "A support vector machine finds a separating hyperplane that maximizes the margin between classes.",
+                        "Support vectors are the training points closest to the decision boundary, so they control the final boundary.",
+                        "Soft-margin SVM allows limited margin violations when perfect separation would overfit or fail."
                     ]
                 },
                 {
-                    title: "K-means and hierarchical clustering",
+                    title: "Kernel choice and optimization",
                     notes: [
-                        "K-means partitions data into k groups by minimizing within-cluster variance, but it requires the number of clusters in advance.",
-                        "Hierarchical clustering builds a dendrogram through repeated merges or splits.",
-                        "Ward linkage is popular because it merges clusters in a way that minimizes the increase in within-cluster variance."
+                        "SVM training is a convex quadratic optimization problem, which is why the optimum is well-defined.",
+                        "A linear kernel is often strong for high-dimensional sparse data, while RBF captures flexible local similarity.",
+                        "Polynomial kernels capture interactions between features, but can become complex if degree is too high."
                     ]
                 },
                 {
-                    title: "Density and probabilistic clustering",
+                    title: "Semi-supervised learning assumptions",
                     notes: [
-                        "DBSCAN is useful when clusters are irregularly shaped and when outliers are present.",
-                        "A DBSCAN core point has at least MinPts neighbors within epsilon distance.",
-                        "Gaussian Mixture Models assign probabilistic membership, and BIC helps choose model complexity."
+                        "Semi-supervised learning combines a small labeled dataset with a larger unlabeled dataset.",
+                        "The smoothness assumption says nearby points should usually share labels.",
+                        "The cluster and manifold assumptions say labels should follow dense structure in the data."
                     ]
                 },
                 {
-                    title: "Distance metrics and mixed data",
+                    title: "Label propagation and active learning",
                     notes: [
-                        "Euclidean distance is common for continuous features, Manhattan distance fits grid-like movement, Hamming distance fits mismatch in coded categories, and cosine distance compares direction rather than magnitude.",
-                        "Different distance measures produce different cluster shapes and meanings.",
-                        "For mixed numeric and categorical data, methods such as k-prototypes are more suitable than plain k-means."
+                        "Label propagation spreads labels across a graph or similarity network using nearby labeled examples.",
+                        "Active learning asks for labels only for informative cases instead of labeling everything.",
+                        "Uncertainty, margin, entropy, and diversity sampling describe different ways to choose useful examples."
                     ]
                 },
                 {
-                    title: "Dimensionality reduction and soft structure",
+                    title: "Distance metrics and multinomial logistic regression",
                     notes: [
-                        "PCA creates orthogonal components that capture maximum variance from correlated variables.",
-                        "Dimensionality reduction helps summarize many urban indicators into a smaller set of interpretable factors.",
-                        "Hard clustering assigns each point to one cluster, while soft clustering allows partial membership across clusters."
+                        "Cosine distance compares direction, Hamming distance counts categorical mismatches, Manhattan distance follows grid movement, and Mahalanobis distance handles correlated features.",
+                        "Multinomial logistic regression extends logistic regression to more than two classes.",
+                        "MLE chooses parameters that make the observed data most probable under the model."
                     ]
                 }
             ],
             assignmentFocus: [
-                "Review support, confidence, and lift, plus the role of the binary incidence matrix in rule mining.",
-                "Know Ward linkage, DBSCAN core points, GMM with BIC, and why k-means needs k in advance.",
-                "PCA is especially important when many urban variables are correlated."
+                "Review support vectors, soft margin, kernel choice, and convex optimization.",
+                "Know smoothness, cluster, and manifold assumptions for semi-supervised learning.",
+                "Match active-learning strategies to the wording: low confidence, small margin, high entropy, or broad diversity."
             ],
-            keyTerms: ["association rule", "support", "confidence", "lift", "k-means", "Ward linkage", "DBSCAN", "PCA"],
+            keyTerms: ["SVM", "support vector", "soft margin", "kernel", "label propagation", "active learning", "MLE", "Mahalanobis distance"],
             references: [
                 "Tom Mitchell - Machine Learning",
                 "Kevin P. Murphy - Machine Learning: A Probabilistic Perspective"
@@ -495,57 +508,57 @@ const courseData = {
         },
         {
             week: 9,
-            title: "Deep Learning and Neural Networks",
-            focus: "ANNs, activations, backpropagation, CNNs, LSTMs, and explainability",
-            overview: "Week 9 moves from classical machine learning to neural models. The key idea is that neural networks learn layered representations, which makes them powerful but also more complex to train and explain.",
+            title: "Association Rules and Clustering Structure",
+            focus: "Frequent patterns, clustering, linkage, density, mixtures, PCA, and cluster validation",
+            overview: "Week 9 explores structure when labels are absent. Assignment questions focus on whether you can identify the right metric, clustering method, or validation idea from the wording of the problem.",
             topics: [
                 {
-                    title: "Neural network basics",
+                    title: "Association rule workflow",
                     notes: [
-                        "An artificial neural network consists of input, hidden, and output layers connected through weighted links.",
-                        "The number of hidden neurons depends on how complex the decision boundaries must be, not just on dataset size.",
-                        "Neural networks are inspired by the human brain at a very abstract level, not by exact biological detail."
+                        "Association learning finds items, events, or conditions that frequently occur together.",
+                        "A binary incidence matrix represents each transaction as presence or absence of items.",
+                        "Support measures frequency, confidence measures conditional reliability, and lift measures association beyond chance."
                     ]
                 },
                 {
-                    title: "Activation functions",
+                    title: "K-means, k-prototypes, and hierarchical linkage",
                     notes: [
-                        "Activation functions introduce nonlinearity so the network can learn complex relationships.",
-                        "ReLU is widely used, Leaky ReLU reduces dead-neuron issues, sigmoid maps to probabilities, tanh centers outputs around zero, and GELU is common in modern transformer-style architectures.",
-                        "Choice of activation affects learning behavior, gradient flow, and task suitability."
+                        "K-means partitions numeric data into k clusters by minimizing within-cluster sum of squares.",
+                        "K-prototypes handles mixed numeric and categorical data better than plain k-means.",
+                        "Single linkage can chain clusters, complete linkage favors compact clusters, and Ward linkage minimizes added within-cluster variance."
                     ]
                 },
                 {
-                    title: "Backpropagation and optimization",
+                    title: "Density and probabilistic clustering",
                     notes: [
-                        "Backpropagation computes gradients of the loss with respect to weights so the network can update itself.",
-                        "Deep loss surfaces are complex because networks contain many nonlinear transformations and parameters.",
-                        "Common optimization issues include vanishing gradients, exploding gradients, poor initialization, and unstable learning."
+                        "DBSCAN identifies dense regions and treats sparse points as noise or outliers.",
+                        "A DBSCAN core point has at least MinPts neighbors within epsilon distance.",
+                        "Gaussian Mixture Models assign probabilities of membership, and BIC balances fit against model complexity."
                     ]
                 },
                 {
-                    title: "CNN, RNN, and LSTM",
+                    title: "Choosing k and reading cluster quality",
                     notes: [
-                        "CNNs are suited to images and spatial patterns because filters slide over input and detect local features.",
-                        "A kernel is the small matrix that scans an image to extract edges, textures, and shapes.",
-                        "RNNs and especially LSTMs are useful for sequences such as traffic, demand, weather, or sensor time-series."
+                        "The elbow method looks for the point where WCSS improvement slows after adding more clusters.",
+                        "Silhouette score compares cohesion inside a cluster with separation from other clusters.",
+                        "Mean Shift finds dense modes without requiring k in advance."
                     ]
                 },
                 {
-                    title: "Model interpretation and reinforcement context",
+                    title: "PCA and hard versus soft structure",
                     notes: [
-                        "SHAP is used to interpret model outputs by estimating each feature's contribution to a prediction.",
-                        "Deep models are powerful but need careful explanation when used in public-sector settings.",
-                        "Assignments also linked this week to reinforcement learning concepts such as agent, action, reward, and policy."
+                        "PCA creates components that preserve variance and reduce correlation among variables.",
+                        "PCA is useful for composite indicators when many urban heat, pollution, or socio-economic variables overlap.",
+                        "Hard clustering assigns one cluster per point, while soft clustering gives membership degrees."
                     ]
                 }
             ],
             assignmentFocus: [
-                "Review ANN structure, hidden-layer reasoning, activation functions, and backpropagation.",
-                "Know why CNNs fit image tasks, why LSTMs fit sequence tasks, and what a kernel does.",
-                "Study SHAP, vanishing versus exploding gradients, and the basic components of reinforcement learning."
+                "Review binary incidence matrices, support, confidence, and lift.",
+                "Know linkage methods, DBSCAN core points, GMM with BIC, Mean Shift, elbow, and silhouette.",
+                "PCA matters when urban indicators are correlated and need a smaller composite representation."
             ],
-            keyTerms: ["ANN", "ReLU", "GELU", "backpropagation", "CNN", "kernel", "LSTM", "SHAP"],
+            keyTerms: ["association rule", "support", "confidence", "lift", "k-prototypes", "Ward linkage", "DBSCAN", "GMM", "BIC", "PCA"],
             references: [
                 "Tom Mitchell - Machine Learning",
                 "Kevin P. Murphy - Machine Learning: A Probabilistic Perspective"
@@ -553,126 +566,135 @@ const courseData = {
         },
         {
             week: 10,
-            title: "Internet of Things (IoT) Fundamentals",
-            focus: "Architecture, communication, sensing, control, and cloud links",
-            overview: "Week 10 explains how physical urban environments become digital systems. The goal is to understand how a sensor reading turns into a usable data stream, alert, or dashboard element.",
+            title: "Neural Networks, Deep Learning, and Reinforcement Learning",
+            focus: "ANNs, activations, backpropagation, optimization, CNN/RNN matching, SHAP, and RL terms",
+            overview: "Week 10 moves from classical machine learning to deep models and reinforcement learning. The testable skill is matching architecture, activation, explanation, or reinforcement-learning vocabulary to the question.",
             topics: [
                 {
-                    title: "IoT architecture",
+                    title: "ANN structure and hidden neurons",
                     notes: [
-                        "A typical IoT stack includes sensing, network, processing, storage, analytics, and application layers.",
-                        "The sensing layer captures the real world, the network layer moves data, and the application layer presents insights or control.",
-                        "Urban IoT systems must be designed for scale, latency, maintenance, and reliability."
+                        "An artificial neural network has input, hidden, and output layers connected through weights.",
+                        "Hidden neurons learn intermediate representations, so their count depends on problem complexity and data patterns.",
+                        "Neural networks are inspired by simplified brain-like connected units, not exact biological neurons."
                     ]
                 },
                 {
-                    title: "Protocols and addressing",
+                    title: "Activation functions and output behavior",
                     notes: [
-                        "IP provides device addressing, while TCP/IP provides a reliable communication stack for networked exchange.",
-                        "MQTT is lightweight and good for constrained devices, while HTTP is more common for web-oriented request-response systems.",
-                        "Protocol choice depends on bandwidth, power constraints, latency, and infrastructure."
+                        "Activation functions introduce nonlinearity so a network can learn complex relationships.",
+                        "ReLU is common in deep networks, Leaky ReLU reduces dead neurons, sigmoid maps to 0-1, tanh maps to -1 to 1, and GELU is used in modern transformer-style systems.",
+                        "The activation answer should match the output range or training behavior described in the question."
                     ]
                 },
                 {
-                    title: "Signals, conversion, and sensing",
+                    title: "Backpropagation and optimization risks",
                     notes: [
-                        "Analog signals vary continuously and are more sensitive to noise, while digital signals represent discrete states.",
-                        "ADC converts analog sensor signals into digital form so a microcontroller can process them.",
-                        "In a sensor transfer function S = f(s), the output depends on the applied stimulus."
+                        "Backpropagation computes gradients so weights can be updated to reduce loss.",
+                        "Deep loss surfaces are complex because many nonlinear parameters interact.",
+                        "Vanishing gradients, exploding gradients, initialization, and batch normalization are common optimization topics."
                     ]
                 },
                 {
-                    title: "Sensors, actuators, and embedded control",
+                    title: "CNN, RNN, kernels, and SHAP",
                     notes: [
-                        "Sensors measure physical phenomena such as temperature, motion, light, pressure, or air quality.",
-                        "Actuators convert signals into physical action, such as switching lights, moving motors, or opening valves.",
-                        "A full urban monitoring system often combines sensing, control, communication, and logging."
+                        "CNNs match image and spatial-pattern tasks because filters scan local regions.",
+                        "A CNN kernel is a small matrix used to detect edges, textures, and shapes.",
+                        "RNNs and LSTMs match sequence data, while SHAP explains feature contributions to model predictions."
                     ]
                 },
                 {
-                    title: "Cloud integration and urban applications",
+                    title: "Reinforcement learning components",
                     notes: [
-                        "Cloud platforms store incoming sensor data, support APIs, trigger alerts, and host dashboards.",
-                        "Urban examples include smart parking, environmental monitoring, street lighting, and utility management.",
-                        "Data governance matters because IoT systems generate continuous streams that may include sensitive location or behavioral information."
+                        "Reinforcement learning learns decisions through interaction with an environment.",
+                        "Agent, action, reward, policy, state, and return have specific roles and should not be interchanged.",
+                        "Bellman reasoning expresses future return recursively; model-free, model-based, and policy-based methods differ in what they learn directly."
                     ]
                 }
             ],
             assignmentFocus: [
-                "Know the role of IP, TCP/IP, ADC, sensing layer, network layer, WPAN, and WWAN.",
-                "Review analog versus digital signals and the transfer function representation for sensors.",
-                "Actuators should be understood as components that turn electrical commands into physical action."
+                "Review ANN structure, hidden-layer reasoning, activations, and backpropagation.",
+                "Know why CNNs fit images, why RNN/LSTM models fit sequences, and what a kernel does.",
+                "Study SHAP and the roles of agent, action, reward, policy, return, and Bellman equations."
             ],
-            keyTerms: ["IoT", "IP", "TCP/IP", "MQTT", "HTTP", "ADC", "sensor", "actuator"],
+            keyTerms: ["ANN", "ReLU", "GELU", "backpropagation", "CNN", "kernel", "RNN", "LSTM", "SHAP", "Bellman equation"],
             references: [
-                "Arshdeep Bahga and Vijay Madisetti - Internet of Things: A Hands-On-Approach"
+                "Tom Mitchell - Machine Learning",
+                "Kevin P. Murphy - Machine Learning: A Probabilistic Perspective"
             ]
         },
         {
             week: 11,
-            title: "Arduino and Arduino Projects",
-            focus: "Arduino IDE, firmware, communication, sensors, and urban prototypes",
-            overview: "Week 11 turns IoT concepts into hands-on prototypes. The emphasis is on how microcontrollers interact with sensors and actuators and how small projects can represent real urban use-cases.",
+            title: "IoT Communication, Sensors, Actuators, and Arduino",
+            focus: "IoT layers, IP/TCP-IP, WPAN/WWAN, signals, ADC, Arduino IDE, and hardware libraries",
+            overview: "Week 11 explains how the physical city becomes digital data and how embedded boards turn that data into action. Assignment questions test the sensing-network-processing chain and Arduino setup details.",
             topics: [
                 {
-                    title: "Arduino platform basics",
+                    title: "IoT layers and networks",
                     notes: [
-                        "The Arduino IDE is used to write, compile, and upload sketches to Arduino boards.",
-                        "Board drivers are often needed so the computer can detect the hardware correctly.",
-                        "Arduino is valuable in teaching because it shortens the path from idea to prototype."
+                        "The sensing layer captures real-world signals and the network layer transmits them.",
+                        "WPAN is short-range communication, while WWAN covers wide-area communication.",
+                        "IP addresses devices and TCP/IP supports reliable exchange across networks."
                     ]
                 },
                 {
-                    title: "Microcontroller and firmware fundamentals",
+                    title: "Signals, ADC, and transfer functions",
                     notes: [
-                        "The Arduino Uno uses the ATmega328P microcontroller.",
-                        "Firmware is the low-level code that directly interacts with device hardware and peripherals.",
-                        "Serial communication is important for debugging, monitoring sensor values, and exchanging data with other systems."
+                        "Analog signals vary continuously and are more sensitive to noise, while digital signals use discrete states.",
+                        "ADC converts analog signals into digital values a microcontroller can process.",
+                        "A transfer function such as S = f(s) means the sensor output depends on the stimulus."
                     ]
                 },
                 {
-                    title: "Libraries and communication support",
+                    title: "Sensors, actuators, and control",
                     notes: [
-                        "EEPROM supports non-volatile data storage, Ethernet supports network communication, GSM supports cellular connectivity, and Bridge supports processor communication in compatible boards.",
-                        "Libraries reduce development time by wrapping common hardware functions into reusable code.",
-                        "A good project uses libraries carefully instead of treating them as black boxes."
+                        "Sensors measure physical phenomena such as motion, light, pressure, temperature, or pollution.",
+                        "Actuators convert control signals into physical actions such as motion, switching, or valve control.",
+                        "A complete urban IoT loop senses, transmits, processes, decides, and acts."
                     ]
                 },
                 {
-                    title: "Sensors and actuators in projects",
+                    title: "Arduino IDE and board setup",
                     notes: [
-                        "Servo motors provide precise angular control and are useful for gates, camera sweep, or smart barrier systems.",
-                        "PIR sensors detect motion by sensing changes in infrared radiation from warm bodies.",
-                        "Combining a microcontroller, a sensor, and an actuator creates a full sensing-action loop."
+                        "The Arduino IDE is used to write, compile, and upload sketches.",
+                        "Drivers or board setup may be needed so the computer can detect the Arduino board.",
+                        "The Arduino Uno uses the ATmega328P microcontroller."
                     ]
                 },
                 {
-                    title: "Urban prototyping examples",
+                    title: "Arduino libraries and communication support",
                     notes: [
-                        "Typical urban mini-projects include smart parking counters, pedestrian alert systems, air-quality monitors, and street-light automation.",
-                        "Prototype quality depends on stable power, correct pin mapping, clean sensor calibration, and data logging.",
-                        "A useful prototype should demonstrate both technical feasibility and urban relevance."
+                        "EEPROM supports non-volatile storage, Ethernet supports network communication, GSM supports cellular communication, and Bridge supports processor communication.",
+                        "Libraries reduce development time by wrapping common hardware functions.",
+                        "Typical urban prototypes include smart lighting, parking counters, air-quality monitors, and pedestrian alerts."
                     ]
                 }
             ],
             assignmentFocus: [
-                "Review Arduino IDE purpose, USB driver setup, ATmega328P, and serial communication basics.",
-                "Know the mapping of EEPROM, Ethernet, GSM, and Bridge libraries.",
-                "Servo motors and PIR sensors are important components for project-based questions."
+                "Know IP, TCP/IP, WPAN, WWAN, sensing layer, network layer, analog/digital signals, and ADC.",
+                "Actuators should be understood as components that turn electrical commands into physical action.",
+                "Review Arduino IDE purpose, USB driver setup, ATmega328P, and the roles of EEPROM, Ethernet, GSM, and Bridge libraries."
             ],
-            keyTerms: ["Arduino IDE", "ATmega328P", "firmware", "serial communication", "EEPROM", "servo motor", "PIR sensor"],
+            keyTerms: ["IoT", "IP", "TCP/IP", "WPAN", "WWAN", "ADC", "sensor", "actuator", "Arduino IDE", "ATmega328P"],
             references: [
                 "Arshdeep Bahga and Vijay Madisetti - Internet of Things: A Hands-On-Approach"
             ]
         },
         {
             week: 12,
-            title: "Integrated Urban Systems and Data Platforms",
-            focus: "GIS, dashboards, spatial analytics, simulation, and smart mobility platforms",
-            overview: "The final week synthesizes the course. By this point, the course is no longer about isolated tools; it is about complete urban systems that store, process, analyze, visualize, and act on data.",
+            title: "Arduino Components, GIS Operations, and Spatial Analysis",
+            focus: "Servo/PIR components, GIS joins and relates, classification evaluation, hotspots, fishnet, and ArcGIS API",
+            overview: "The final week combines hardware components with GIS and platform operations. The assignment questions test whether you can match each component, GIS operation, or spatial-analysis tool to its purpose.",
             topics: [
                 {
-                    title: "Geospatial analysis and GIS operations",
+                    title: "Servo motor and PIR sensor",
+                    notes: [
+                        "A servo motor provides controlled angular movement and is used for barriers, gates, camera direction, or small mechanical control.",
+                        "A PIR sensor detects motion by sensing changes in infrared radiation from warm bodies.",
+                        "Servo is an actuator; PIR is a sensor. This distinction is central in MCQ options."
+                    ]
+                },
+                {
+                    title: "GIS query, join, and relate",
                     notes: [
                         "A GIS query is a request to select records or features that meet specific conditions.",
                         "Joining a CSV table to a shapefile requires a common matching field.",
@@ -696,15 +718,15 @@ const courseData = {
                     ]
                 },
                 {
-                    title: "Dashboards, simulation, and decision support",
+                    title: "Dashboards and decision support",
                     notes: [
                         "Dashboards turn analytic outputs into operational views for planners, operators, and administrators.",
-                        "Agent-based simulation represents urban systems through many interacting agents such as travelers, vehicles, or households.",
-                        "Real-time analytics helps when the decision window is short, such as traffic operations or dynamic fleet management."
+                        "Real-time analytics helps when the decision window is short, such as traffic operations or dynamic fleet management.",
+                        "Spatial outputs become useful when they are connected to decision workflows rather than treated as static maps."
                     ]
                 },
                 {
-                    title: "Mobility platforms, opportunities, and limitations",
+                    title: "Integrated urban platform limits",
                     notes: [
                         "Bus service optimization and bicycle-sharing systems are strong examples of end-to-end urban informatics platforms.",
                         "These systems combine sensing, storage, analytics, operations logic, and user-facing interfaces.",
@@ -713,11 +735,11 @@ const courseData = {
                 }
             ],
             assignmentFocus: [
-                "Review GIS query, join with common field, and the use of Relate for one-to-many relationships.",
+                "Review servo motors, PIR sensors, GIS query, join with common field, and Relate for one-to-many relationships.",
                 "Know confusion matrix, hotspot z-scores, fishnet creation, and the purpose of ArcGIS API for Python.",
                 "The final integrative perspective is about connecting databases, analytics, mapping, dashboards, and mobility applications into one workflow."
             ],
-            keyTerms: ["GIS query", "join", "Relate", "confusion matrix", "hotspot analysis", "fishnet", "PostGIS", "agent-based simulation"],
+            keyTerms: ["servo motor", "PIR sensor", "GIS query", "join", "Relate", "confusion matrix", "hotspot analysis", "fishnet", "ArcGIS API for Python"],
             references: [
                 "Michael Batty - Urban Informatics and Big Data",
                 "Anthony M. Townsend - Smart Cities",

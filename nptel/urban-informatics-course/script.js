@@ -104,11 +104,37 @@ function renderReferenceFramework(framework) {
     return section;
 }
 
+function renderAssignmentTheoryNotes(notes) {
+    const section = makeElement("section", "assignment-theory");
+    const header = makeElement("div", "learning-summary-header");
+    header.appendChild(makeElement("p", "panel-label", "100 MCQ preparation"));
+    header.appendChild(makeElement("h4", null, notes.title));
+    section.appendChild(header);
+    section.appendChild(makeElement("p", "learning-summary-text", notes.intro));
+
+    const grid = makeElement("div", "theory-grid");
+    notes.clusters.forEach((cluster) => {
+        const panel = makeElement("article", "theory-panel");
+        panel.appendChild(makeElement("h5", null, cluster.heading));
+        panel.appendChild(makeElement("p", "theory-subhead", "What to learn"));
+        panel.appendChild(makeList(cluster.mustKnow || [], "plain-list theory-list"));
+        panel.appendChild(makeElement("p", "theory-subhead", "How to answer MCQs"));
+        panel.appendChild(makeElement("p", "theory-rule", cluster.examLogic));
+        panel.appendChild(makeElement("p", "theory-subhead", "Distractor traps"));
+        panel.appendChild(makeList(cluster.traps || [], "plain-list theory-traps"));
+        grid.appendChild(panel);
+    });
+
+    section.appendChild(grid);
+    return section;
+}
+
 function renderOverview() {
     const about = document.getElementById("course-about");
     const instructor = document.getElementById("course-instructor");
     const facts = document.getElementById("course-facts");
     const studyGuide = document.getElementById("study-guide");
+    const officialSource = document.getElementById("official-source");
     const { meta } = courseData;
 
     about.appendChild(makeElement("p", "panel-label", "About the course"));
@@ -140,6 +166,17 @@ function renderOverview() {
     studyGuide.appendChild(makeElement("p", "panel-label", "How to use these notes"));
     studyGuide.appendChild(makeElement("h3", null, "Study path"));
     studyGuide.appendChild(makeList(meta.studyGuide, "plain-list"));
+
+    if (officialSource && meta.officialSource) {
+        officialSource.appendChild(makeElement("p", "panel-label", meta.officialSource.sourceLabel));
+        officialSource.appendChild(makeElement("h3", null, meta.officialSource.title));
+        officialSource.appendChild(makeList(meta.officialSource.notes, "plain-list"));
+        const sourceLink = makeElement("a", "button button-secondary", "Open official course preview");
+        sourceLink.href = meta.officialSource.sourceUrl;
+        sourceLink.target = "_blank";
+        sourceLink.rel = "noreferrer";
+        officialSource.appendChild(sourceLink);
+    }
 }
 
 function renderReferences() {
@@ -181,6 +218,7 @@ function renderWeekNotes() {
         const guide = window.weekGuides?.[weekData.week];
         const bridge = window.assignmentBridges?.[weekData.week];
         const referenceFramework = window.referenceFrameworks?.[weekData.week];
+        const assignmentTheory = window.assignmentTheoryNotes?.[weekData.week];
 
         const topicGrid = makeElement("div", "topic-grid");
         const quickChecks = guide?.quickChecks || window.weekQuickChecks?.[weekData.week] || [];
@@ -215,6 +253,9 @@ function renderWeekNotes() {
         aside.append(assignmentPanel, termsPanel, referencePanel);
         if (guide) {
             body.appendChild(renderLearningGuide(guide, weekData));
+        }
+        if (assignmentTheory) {
+            body.appendChild(renderAssignmentTheoryNotes(assignmentTheory));
         }
         if (bridge) {
             body.appendChild(renderAssignmentBridge(bridge));

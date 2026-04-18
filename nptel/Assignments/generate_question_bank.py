@@ -125,6 +125,17 @@ def format_answer(indices: list[int], options: list[str]) -> str:
     return "; ".join(f"{option_label(index)}. {options[index]}" for index in indices)
 
 
+def short_answer_rule(topic: str) -> str:
+    theory = TOPIC_THEORY.get(
+        topic,
+        "the answer must match the concept, operation, data type, relationship, or workflow in the question.",
+    )
+    first_sentence = theory.split(".")[0].strip()
+    if not first_sentence.endswith("."):
+        first_sentence += "."
+    return first_sentence
+
+
 def prompt_target(prompt: str) -> str:
     compact = prompt.strip().rstrip(".:?")
     if len(compact) > 150:
@@ -146,17 +157,46 @@ def build_question_explanation(
 ) -> str:
     correct_text = format_answer(correct_indices, options)
     target = prompt_target(prompt)
-    theory = TOPIC_THEORY.get(topic, "The reasonable answer is the one whose concept matches the operation, data type, relationship, or workflow described in the question.")
+    theory = short_answer_rule(topic)
 
     if is_reference_only(explanation):
         return (
-            f"The PDF answer key marks {correct_text}. This answer is suitable because it directly addresses "
-            f"{target}. Theory rule: {theory}"
+            f"Correct answer: {correct_text}. Why it is correct: it directly answers {target}. "
+            f"Theory rule: {theory}"
         )
 
     return (
-        f"{explanation} The PDF-marked answer is {correct_text}, which directly addresses {target}. Theory rule: {theory}"
+        f"Correct answer: {correct_text}. Why it is correct: {explanation} Theory rule: {theory}"
     )
+
+
+def wrong_option_reason(topic: str, option: str) -> str:
+    lowered = option.lower()
+    rule = short_answer_rule(topic)
+
+    mismatch_patterns = [
+        (("only", "always", "all ", "entirely", "eliminates", "replaces"), "too absolute"),
+        (("gis", "spatial", "shapefile", "map"), "GIS/spatial tooling"),
+        (("cloud", "server", "platform"), "infrastructure/deployment"),
+        (("sensor", "iot", "arduino", "actuator"), "hardware or sensing"),
+        (("sql", "table", "database", "key", "normal"), "database mechanics"),
+        (("python", "pandas", "dataframe", "library", "function"), "programming mechanics"),
+        (("classification", "regression", "clustering", "model", "learning"), "a different ML task"),
+        (("random forest", "boost", "xgboost", "bagging"), "the wrong ensemble idea"),
+        (("entropy", "gini", "information gain"), "the wrong impurity/split idea"),
+        (("support", "confidence", "lift"), "the wrong association-rule metric"),
+        (("cnn", "rnn", "lstm", "ann"), "the wrong neural-network architecture"),
+        (("ip", "tcp", "wpan", "wwan", "mqtt", "http"), "the wrong communication role"),
+    ]
+
+    for needles, reason in mismatch_patterns:
+        if any(needle in lowered for needle in needles):
+            return f"Do not choose: this points to {reason}. Correct reasoning: {rule}"
+
+    if re.search(r"^[pqrs]-|[ivx]+", lowered) and "," in lowered:
+        return f"Do not choose: this matching pairs at least one item with the wrong function. Correct reasoning: {rule}"
+
+    return f"Do not choose: it does not express the asked concept. Correct reasoning: {rule}"
 
 
 def build_option_explanations(
@@ -167,25 +207,21 @@ def build_option_explanations(
     topic: str,
 ) -> list[str]:
     correct_text = format_answer(correct_indices, options)
-    target = prompt_target(prompt)
-    theory = TOPIC_THEORY.get(topic, "Match the answer to the concept, operation, data type, relationship, or workflow described in the question.")
+    theory = short_answer_rule(topic)
     feedback: list[str] = []
 
     for index, option in enumerate(options):
         if index in correct_indices:
             feedback.append(
-                f"Suitable: the PDF answer key includes this option. It matches {target}. Theory check: {theory}"
+                f"Choose this: it matches the concept. {theory}"
             )
             continue
 
-        feedback.append(
-            f"Not suitable: this option says '{option}', but the PDF-marked answer is {correct_text}. "
-            f"It does not match {target}. Theory check: {theory}"
-        )
+        feedback.append(wrong_option_reason(topic, option))
 
     if not is_reference_only(explanation):
         feedback = [
-            item if index not in correct_indices else f"{item} {explanation}"
+            item if index not in correct_indices else f"{item} Extra clue: {explanation}"
             for index, item in enumerate(feedback)
         ]
 

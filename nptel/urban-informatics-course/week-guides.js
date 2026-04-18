@@ -112,7 +112,7 @@ window.weekGuides = {
             "Loss functions encode what kind of mistake matters most for the urban problem.",
             "Reinforcement learning links ML to adaptive traffic signals and other control systems."
         ],
-        flow: "Week 6 introduces the ML toolbox. Week 7 focuses on supervised prediction and Week 8 focuses on hidden structure.",
+        flow: "Week 6 introduces the ML toolbox. Week 7 focuses on supervised prediction and Week 8 extends prediction into SVM boundaries and limited-label learning.",
         assignmentSignals: [
             "Direct assignment link: supervised, unsupervised, reinforcement learning, SARSA, black-box models, entropy, VIF, Pearson, Spearman, Kruskal-Wallis, LSTM, and DBSCAN are direct exam cues.",
             "Indirect assignment link: model-evaluation questions test whether you know when a method is trustworthy for future or unseen urban conditions.",
@@ -132,7 +132,7 @@ window.weekGuides = {
             "Random forests and boosting improve weak single models but need careful evaluation for overfitting.",
             "SVM and tree models prepare the ground for remote sensing, risk mapping, and spatial classification."
         ],
-        flow: "Week 7 uses labeled data to predict outcomes. Week 8 removes labels and asks what structure is hidden in the data.",
+        flow: "Week 7 uses labeled data to predict outcomes. Week 8 asks how boundaries, kernels, unlabeled data, and active label selection change the prediction problem.",
         assignmentSignals: [
             "Direct assignment link: entropy, information gain, Gini impurity, bagging, random forest, boosting, GridSearchCV, and XGBoost subsample are direct technical targets.",
             "Indirect assignment link: overfitting and interpretability questions test whether predictive models can be trusted in public-sector decisions.",
@@ -140,8 +140,28 @@ window.weekGuides = {
         ]
     },
     8: {
+        label: "Boundary and label strategy",
+        summary: "Week 8 is the bridge between supervised prediction and limited-label learning. The assignment asks you to reason about SVM boundaries, support vectors, kernels, semi-supervised assumptions, active learning, and distance metrics.",
+        subjectLinks: [
+            "SVMs fit urban classification tasks where the boundary between classes matters, such as risk zones, land-use labels, or incident categories.",
+            "Semi-supervised learning fits city datasets where a few records are labeled but many sensor, image, or complaint records are unlabeled.",
+            "Active learning reduces labeling effort by asking humans to label the most informative cases first."
+        ],
+        topicLinks: [
+            "Support vectors connect directly to the geometry of the decision boundary.",
+            "Kernel choice connects the data shape to the model: linear, polynomial, RBF, or sigmoid.",
+            "Distance metrics connect to later clustering and GIS questions because similarity must match the data type."
+        ],
+        flow: "Week 8 completes the boundary-learning block. Week 9 moves into association rules and clustering, where similarity and structure are discovered without labels.",
+        assignmentSignals: [
+            "Direct assignment link: support vectors, soft margin, SVM kernels, convex optimization, smoothness/cluster/manifold assumptions, label propagation, active-learning sampling, and MLE are direct hooks.",
+            "Indirect assignment link: SVM and active-learning questions test whether you can choose a model or sampling rule from the way the data is described.",
+            "Revision cue: for every option, ask whether it describes the boundary, the label condition, the sampling strategy, or the distance measure."
+        ]
+    },
+    9: {
         label: "Hidden patterns",
-        summary: "Unsupervised and association learning help when the city has data but no predefined labels. These methods discover groups, similarities, co-occurring events, and reduced dimensions that reveal urban structure.",
+        summary: "Week 9 focuses on discovering structure when labels are not available. Association rules, clustering, density methods, mixture models, PCA, and validation metrics explain the assignment questions on hidden urban patterns.",
         subjectLinks: [
             "Clustering can create neighborhood typologies from mobility, demographic, land-use, or service indicators.",
             "Association rules can reveal recurring combinations behind accidents, complaints, failures, or trips.",
@@ -152,89 +172,69 @@ window.weekGuides = {
             "DBSCAN and hierarchical clustering are useful when city patterns are not neat circular groups.",
             "PCA connects many variables into a smaller set of axes for mapping, modeling, or communication."
         ],
-        flow: "Week 8 discovers patterns without labels. Week 9 moves to deeper models that learn complex representations.",
+        flow: "Week 9 discovers hidden structure. Week 10 moves to deep models and reinforcement learning, where representations and actions are learned.",
         assignmentSignals: [
-            "Direct assignment link: support, confidence, lift, binary incidence matrix, Ward linkage, DBSCAN core points, GMM with BIC, k in k-means, and PCA are direct question hooks.",
+            "Direct assignment link: support, confidence, lift, binary incidence matrix, k-prototypes, Ward linkage, DBSCAN core points, GMM with BIC, Mean Shift, elbow, silhouette, and PCA are direct question hooks.",
             "Indirect assignment link: clustering questions test whether you can interpret groups as meaningful urban types rather than just algorithm output.",
             "Revision cue: always state the similarity measure and what it means in the city context, such as distance between neighborhoods, trip patterns, or complaint profiles."
         ]
     },
-    9: {
-        label: "Representation learning",
-        summary: "Deep learning handles complex inputs and nonlinear relationships common in cities: camera images, sequences, sensor streams, text, and multi-factor congestion patterns. Its power comes with higher training and explanation demands.",
+    10: {
+        label: "Representation and action learning",
+        summary: "Week 10 covers neural networks, deep learning, explainability, and reinforcement learning. The assignment tests whether you can match model architecture, activation function, training issue, or RL term to its role.",
         subjectLinks: [
             "CNNs connect directly to urban imagery, CCTV, remote sensing, vehicle counting, and land-cover mapping.",
             "RNNs and LSTMs fit temporal city data such as demand, traffic, weather, energy, and AQI.",
-            "Explainability tools are important because deep models can affect public services and rights."
+            "Reinforcement learning connects prediction to adaptive decisions such as signal control or routing."
         ],
         topicLinks: [
             "Activation functions and backpropagation explain how neural networks learn nonlinear urban patterns.",
             "Vanishing and exploding gradients show why deep models need careful architecture and tuning.",
             "SHAP-style interpretation links model outputs back to features planners can discuss."
         ],
-        flow: "Week 9 completes the analytics block. Weeks 10-12 move from models to physical sensing, platforms, communication, and governance.",
+        flow: "Week 10 completes the analytics block. Week 11 moves from models to physical sensing, communication, and Arduino-based prototyping.",
         assignmentSignals: [
-            "Direct assignment link: ANN layers, hidden neurons, activation functions, backpropagation, CNNs, kernels, LSTMs, SHAP, vanishing gradients, exploding gradients, and RL components are direct revision points.",
+            "Direct assignment link: ANN layers, hidden neurons, activation functions, backpropagation, CNNs, kernels, RNN/LSTM, SHAP, vanishing gradients, exploding gradients, and RL components are direct revision points.",
             "Indirect assignment link: architecture questions test whether you can match data form to model form, such as images to CNNs and sequences to LSTMs.",
-            "Revision cue: for every deep-learning term, connect it to a city data source such as CCTV, satellite imagery, traffic sequences, sensor streams, or public complaints."
-        ]
-    },
-    10: {
-        label: "Sensing layer",
-        summary: "IoT explains how the physical city becomes digital data. Sensors, protocols, microcontrollers, networks, and cloud systems create the live input layer for smart-city monitoring and control.",
-        subjectLinks: [
-            "Sensors measure traffic, air quality, water levels, lighting, energy, motion, and public-space conditions.",
-            "Protocols decide whether urban data can move reliably from thousands of devices to a central platform.",
-            "Actuators close the loop by turning analysis into real-world actions such as signals, gates, lights, or valves."
-        ],
-        topicLinks: [
-            "Analog-to-digital conversion connects physical measurement with computable data.",
-            "MQTT, HTTP, IP, and TCP/IP explain the communication layer behind real-time dashboards.",
-            "Cloud integration links IoT data back to Python analysis, ML forecasting, and GIS platforms."
-        ],
-        flow: "Week 10 supplies live data from the city. Week 11 turns sensing and insight into prototypes, displays, and usable interventions.",
-        assignmentSignals: [
-            "Direct assignment link: IP, TCP/IP, ADC, sensing layer, network layer, WPAN, WWAN, analog versus digital signals, transfer functions, sensors, and actuators are direct targets.",
-            "Indirect assignment link: architecture questions test whether you can describe the whole sensor-to-cloud chain instead of isolated components.",
-            "Revision cue: draw the path from physical stimulus to sensor, ADC, microcontroller, network, cloud storage, dashboard, and actuator response."
+            "Revision cue: for every deep-learning or RL term, connect it to data input, learned representation, training process, or decision action."
         ]
     },
     11: {
-        label: "Action and communication",
-        summary: "Week 11 is about making urban informatics usable. Whether the focus is Arduino prototyping or visual communication, the shared goal is to turn data and analysis into something people can operate, understand, or act on.",
+        label: "Sensing and prototyping",
+        summary: "Week 11 explains how the physical city becomes digital data and how Arduino prototypes connect sensing, communication, and action. The assignment asks for IoT layers, network terms, ADC, actuators, and board setup details.",
         subjectLinks: [
-            "Arduino-style prototypes show that data collection can be built with sensors, firmware, serial communication, and actuators.",
-            "Visualization and storytelling make analytical results understandable for planners, officials, and citizens.",
-            "Both hardware prototypes and dashboards complete the feedback loop from urban problem to data-driven response."
+            "Sensors measure traffic, air quality, water levels, lighting, energy, motion, and public-space conditions.",
+            "Protocols and networks decide whether urban data can move reliably from devices to platforms.",
+            "Actuators and Arduino boards close the loop by turning analysis into real-world actions."
         ],
         topicLinks: [
-            "Serial communication can move sensor readings into Python, databases, or dashboards.",
-            "Charts, maps, and alerts must match the decision being made, not just decorate the data.",
-            "Project quality depends on calibration, stable data flow, clear communication, and urban relevance."
+            "Analog-to-digital conversion connects physical measurement with computable data.",
+            "IP, TCP/IP, WPAN, and WWAN explain the communication layer behind real-time systems.",
+            "Arduino IDE, USB drivers, ATmega328P, and hardware libraries explain the prototyping workflow."
         ],
-        flow: "Week 11 turns technical components into visible tools. Week 12 integrates those tools into larger platforms and governance frameworks.",
+        flow: "Week 11 supplies live data and control from the city. Week 12 connects components with GIS operations and integrated spatial platforms.",
         assignmentSignals: [
-            "Direct assignment link: Arduino IDE, USB drivers, ATmega328P, firmware, serial communication, EEPROM, Ethernet, GSM, Bridge, servo motors, and PIR sensors are direct hardware/prototype targets.",
-            "Indirect assignment link: visualization, dashboards, GIS maps, and storytelling questions test whether insight can be communicated clearly enough for action.",
-            "Revision cue: for any project example, list the input data, processing step, output display or actuator, user, and urban decision."
+            "Direct assignment link: IP, TCP/IP, ADC, sensing layer, network layer, WPAN, WWAN, analog versus digital signals, transfer functions, sensors, actuators, Arduino IDE, USB drivers, ATmega328P, EEPROM, Ethernet, GSM, and Bridge are direct targets.",
+            "Indirect assignment link: architecture questions test whether you can describe the whole sensor-to-board-to-network chain instead of isolated components.",
+            "Revision cue: draw the path from physical stimulus to sensor, ADC, microcontroller, network, storage, dashboard, and actuator response."
         ]
     },
     12: {
-        label: "Integration and responsibility",
-        summary: "The final week connects the full course into complete urban systems. Storage, APIs, Python, ML, IoT, GIS, dashboards, simulation, and governance must work together for an urban informatics solution to be useful and responsible.",
+        label: "Components and spatial platforms",
+        summary: "Week 12 joins hardware components with GIS operations and spatial analytics. The assignment focuses on servo motors, PIR sensors, GIS queries, joins, relates, classification evaluation, hotspots, fishnets, and ArcGIS API for Python.",
         subjectLinks: [
+            "Servo and PIR examples reinforce the difference between actuating and sensing.",
             "GIS and spatial databases keep the where of the city connected to the what and when of data.",
-            "Dashboards, simulations, and mobility platforms convert analysis into planning and operational decisions.",
-            "Ethics, privacy, inclusion, and institutional capacity decide whether a technical system should be deployed."
+            "Dashboards and spatial tools convert analysis into planning and operational decisions."
         ],
         topicLinks: [
-            "PostGIS, ArcGIS workflows, joins, relates, fishnets, and hotspot analysis bring database ideas into space.",
-            "Agent-based simulation tests policy ideas before cities spend money or disrupt residents.",
-            "Privacy and governance connect back to Week 1: urban informatics must improve cities without harming people."
+            "GIS query, joins, relates, fishnets, and hotspot analysis bring database ideas into space.",
+            "Confusion matrix links ML classification back to evaluation.",
+            "ArcGIS API for Python connects programming with web GIS, cloud mapping, and data access."
         ],
-        flow: "Week 12 is the synthesis: collect data, store it, process it, learn from it, visualize it, act on it, and govern it responsibly.",
+        flow: "Week 12 is the synthesis: sense or collect data, connect it to GIS, analyze spatial patterns, evaluate predictions, and publish or automate the result.",
         assignmentSignals: [
-            "Direct assignment link: GIS query, join using a common field, Relate for one-to-many tables, confusion matrix, hotspot z-scores, Create Fishnet, ArcGIS API for Python, and PostGIS are direct targets.",
+            "Direct assignment link: servo motor, PIR sensor, GIS query, join using a common field, Relate for one-to-many tables, forest classification, confusion matrix, hotspot z-scores, Create Fishnet, and ArcGIS API for Python are direct targets.",
             "Indirect assignment link: integrated-platform questions test whether you can connect databases, analytics, mapping, dashboards, mobility systems, and governance in one workflow.",
             "Revision cue: answer final-week questions by naming where the data lives, how the spatial or statistical relationship is analyzed, and what planning decision follows."
         ]
@@ -433,6 +433,33 @@ window.weekQuickChecks = {
     ],
     8: [
         {
+            topic: "Support vectors",
+            question: "Why are support vectors important in SVM?",
+            answer: "They are the points closest to the boundary, so they determine the margin and strongly influence the final separating hyperplane."
+        },
+        {
+            topic: "Soft margin",
+            question: "Why would an SVM allow a soft margin?",
+            answer: "A soft margin allows limited violations so the model can generalize better when data is noisy or not perfectly separable."
+        },
+        {
+            topic: "Semi-supervised learning",
+            question: "What changes when learning is semi-supervised?",
+            answer: "The model uses a small labeled set together with a larger unlabeled set, relying on structure such as smoothness, clusters, or manifolds."
+        },
+        {
+            topic: "Active learning",
+            question: "How do uncertainty, margin, entropy, and diversity sampling differ?",
+            answer: "Uncertainty asks for low-confidence cases, margin asks for cases near the boundary, entropy asks for high uncertainty distribution, and diversity asks for representative spread."
+        },
+        {
+            topic: "Distance metrics",
+            question: "When should Mahalanobis distance be preferred?",
+            answer: "Use Mahalanobis distance when numerical features are correlated and distance should account for covariance among variables."
+        }
+    ],
+    9: [
+        {
             topic: "Association rules",
             question: "What do support, confidence, and lift measure?",
             answer: "Support measures frequency, confidence measures conditional reliability, and lift measures strength compared with independent occurrence."
@@ -458,7 +485,7 @@ window.weekQuickChecks = {
             answer: "PCA compresses correlated variables into fewer components, making patterns easier to model, map, or explain."
         }
     ],
-    9: [
+    10: [
         {
             topic: "ANN structure",
             question: "What are the basic layers of an artificial neural network?",
@@ -480,12 +507,12 @@ window.weekQuickChecks = {
             answer: "CNNs fit images such as CCTV or satellite imagery. LSTMs fit time-series such as traffic flow, energy use, or AQI."
         },
         {
-            topic: "Explainability",
-            question: "Why does SHAP matter for urban AI?",
-            answer: "SHAP helps explain which features contributed to a prediction, which is important when decisions affect public services or citizens."
+            topic: "Reinforcement learning",
+            question: "What is the difference between agent, action, reward, and policy?",
+            answer: "The agent decides, the action is what it does, the reward is feedback, and the policy maps states to actions."
         }
     ],
-    10: [
+    11: [
         {
             topic: "IoT layers",
             question: "What is the difference between sensing and network layers?",
@@ -502,44 +529,22 @@ window.weekQuickChecks = {
             answer: "ADC converts continuous analog sensor signals into digital values a microcontroller or computer can process."
         },
         {
-            topic: "Signals",
-            question: "Why are analog signals often more noise-sensitive than digital signals?",
-            answer: "Analog values vary continuously, so small disturbances can change the measured value. Digital signals use discrete states."
-        },
-        {
-            topic: "Actuators",
-            question: "What does an actuator do in an urban IoT loop?",
-            answer: "It converts a control signal into physical action, such as switching a light, moving a gate, or opening a valve."
-        }
-    ],
-    11: [
-        {
             topic: "Arduino IDE",
             question: "What is the Arduino IDE used for?",
             answer: "It is used to write, compile, and upload sketches to Arduino boards."
         },
         {
-            topic: "Microcontroller",
-            question: "Which microcontroller is associated with Arduino Uno?",
-            answer: "Arduino Uno uses the ATmega328P microcontroller."
-        },
-        {
-            topic: "Serial communication",
-            question: "Why is serial communication important in prototypes?",
-            answer: "It helps debug projects, monitor sensor values, and move readings from hardware into software tools."
-        },
-        {
             topic: "Libraries",
             question: "Match one library to its purpose: EEPROM, Ethernet, GSM, or Bridge.",
             answer: "EEPROM stores non-volatile data, Ethernet supports wired networking, GSM supports cellular communication, and Bridge links processors on compatible boards."
-        },
-        {
-            topic: "Communication",
-            question: "What should a visualization or prototype always make clear?",
-            answer: "It should make clear the input data, the processing step, the output or action, and the urban decision being supported."
         }
     ],
     12: [
+        {
+            topic: "Servo and PIR",
+            question: "How do servo motors and PIR sensors differ?",
+            answer: "A servo motor is an actuator for controlled angular motion. A PIR sensor detects motion from infrared changes produced by warm bodies."
+        },
         {
             topic: "GIS query",
             question: "What is a GIS query?",
@@ -559,11 +564,6 @@ window.weekQuickChecks = {
             topic: "Hotspots and fishnets",
             question: "What do positive significant Getis-Ord Gi* z-scores indicate, and why might fishnets be used first?",
             answer: "They indicate hotspots. Fishnets can aggregate point events into comparable grid cells before hotspot analysis."
-        },
-        {
-            topic: "Integrated systems",
-            question: "What should a final urban informatics workflow always connect?",
-            answer: "It should connect data collection, storage, processing, spatial or statistical analysis, visualization, decision-making, and responsible governance."
         }
     ]
 };

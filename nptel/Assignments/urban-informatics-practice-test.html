@@ -712,9 +712,9 @@
 
             const fallbackOptionExplanations = options.map((option, optionIndex) => {
                 if (correctIndices.includes(optionIndex)) {
-                    return `Suitable: this option is included in the PDF answer key for this question.`;
+                    return `Choose this: it directly matches the concept, operation, or relationship asked in the question.`;
                 }
-                return `Not suitable: this option is not included in the PDF answer key. The correct answer is ${correctLabel}.`;
+                return `Do not choose this: it points to a different concept or mismatches the operation being asked. Compare it with the correct answer: ${correctLabel}.`;
             });
 
             return {
@@ -724,7 +724,7 @@
                 multiSelect: Boolean(question.multiSelect || correctIndices.length > 1),
                 topic: question.topic || "PDF assignment concept",
                 sourceLabel: question.sourceLabel || question.source || "Assignment PDF",
-                explanation: question.explanation || `The PDF answer key marks ${correctLabel}.`,
+                explanation: question.explanation || `Correct answer: ${correctLabel}. It matches the concept, operation, or relationship asked in the question.`,
                 optionExplanations: Array.isArray(question.optionExplanations) && question.optionExplanations.length === options.length
                     ? question.optionExplanations
                     : fallbackOptionExplanations,
@@ -925,8 +925,8 @@
                 const stateClass = isCorrectOption ? "correct-review" : "wrong-review";
                 const feedback = question.optionExplanations?.[optionIndex] || (
                     isCorrectOption
-                        ? "This option is included in the PDF answer key."
-                        : "This option is not included in the PDF answer key for this question."
+                        ? "Choose this: it directly matches the concept asked in the question."
+                        : "Do not choose this: it points to a different concept or mismatches the question."
                 );
 
                 return `
@@ -947,7 +947,7 @@
                 <p>${answerLabel}</p>
                 <p class="review-source"><span class="source-pill">PDF direct</span> ${escapeHtml(sourceLabel)}</p>
                 <p>${escapeHtml(question.explanation)}</p>
-                <strong class="review-heading">Why the other options do not fit</strong>
+                <strong class="review-heading">Why each option fits or fails</strong>
                 <div class="review-list">${buildOptionReview(question, expected, selectedIndices)}</div>
             `;
         }

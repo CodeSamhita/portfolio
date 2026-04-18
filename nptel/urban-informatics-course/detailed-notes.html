@@ -212,7 +212,37 @@
             color: var(--accent-green);
         }
 
+        .official-source-note {
+            background: linear-gradient(180deg, rgba(37, 99, 235, 0.12), rgba(15, 23, 42, 0.26));
+            border: 1px solid rgba(96, 165, 250, 0.28);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            padding: 1.25rem;
+        }
+
+        .official-source-note h2 {
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            margin: 0.3rem 0 0.8rem;
+        }
+
+        .official-source-note .panel-label {
+            color: var(--accent-green);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.35rem;
+            text-transform: uppercase;
+        }
+
+        .official-source-note a {
+            color: #bfdbfe;
+            font-weight: 700;
+        }
+
         .learning-summary,
+        .assignment-theory,
         .assignment-bridge,
         .reference-framework {
             background: linear-gradient(180deg, rgba(37, 99, 235, 0.12), rgba(16, 185, 129, 0.08));
@@ -220,6 +250,11 @@
             border-radius: 12px;
             padding: 1.25rem;
             margin-bottom: 2rem;
+        }
+
+        .assignment-theory {
+            background: linear-gradient(180deg, rgba(20, 184, 166, 0.12), rgba(15, 23, 42, 0.22));
+            border-color: rgba(45, 212, 191, 0.30);
         }
 
         .assignment-bridge {
@@ -236,6 +271,9 @@
         }
 
         .learning-summary .panel-label,
+        .assignment-theory .panel-label,
+        .assignment-bridge .panel-label,
+        .reference-framework .panel-label,
         .quick-test .quick-label {
             color: var(--accent-green);
             font-size: 0.78rem;
@@ -245,7 +283,10 @@
             text-transform: uppercase;
         }
 
-        .learning-summary h4 {
+        .learning-summary h4,
+        .assignment-theory h4,
+        .assignment-bridge h4,
+        .reference-framework h4 {
             color: #fff;
             font-family: 'Outfit', sans-serif;
             margin: 0;
@@ -257,7 +298,8 @@
         }
 
         .guide-grid,
-        .bridge-grid {
+        .bridge-grid,
+        .theory-grid {
             display: grid;
             gap: 0.9rem;
             grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -265,7 +307,8 @@
         }
 
         .guide-panel,
-        .bridge-panel {
+        .bridge-panel,
+        .theory-panel {
             background: rgba(15, 23, 42, 0.58);
             border: 1px solid rgba(148, 163, 184, 0.22);
             border-radius: 8px;
@@ -278,7 +321,8 @@
         }
 
         .guide-panel h5,
-        .bridge-panel h5 {
+        .bridge-panel h5,
+        .theory-panel h5 {
             color: #bfdbfe;
             font-size: 0.78rem;
             letter-spacing: 0.1em;
@@ -287,11 +331,13 @@
         }
 
         .guide-panel ul,
-        .bridge-panel ul {
+        .bridge-panel ul,
+        .theory-panel ul {
             margin-bottom: 0;
         }
 
-        .bridge-subhead {
+        .bridge-subhead,
+        .theory-subhead {
             color: var(--accent-amber);
             font-size: 0.76rem;
             font-weight: 700;
@@ -301,8 +347,17 @@
         }
 
         .bridge-text,
-        .reference-ideas {
+        .reference-ideas,
+        .theory-rule,
+        .theory-traps {
             color: var(--text-muted);
+        }
+
+        .theory-rule {
+            background: rgba(45, 212, 191, 0.08);
+            border-left: 4px solid rgba(45, 212, 191, 0.36);
+            border-radius: 0 8px 8px 0;
+            padding: 0.75rem 0.85rem;
         }
 
         .book-chip-wrap {
@@ -457,7 +512,8 @@
             }
 
             .guide-grid,
-            .bridge-grid {
+            .bridge-grid,
+            .theory-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -485,7 +541,9 @@
             }
 
             .chapter-summary,
+            .official-source-note,
             .learning-summary,
+            .assignment-theory,
             .assignment-bridge,
             .reference-framework,
             .highlight-box,
@@ -496,7 +554,9 @@
             .learning-summary-text,
             .guide-panel li,
             .bridge-panel li,
+            .theory-panel li,
             .bridge-text,
+            .theory-rule,
             .reference-ideas,
             .book-chip,
             .quick-test summary,
@@ -556,18 +616,30 @@
             <li><a href="#week5"><span>Week 5: Analysis & Vis</span></a></li>
             <li><a href="#week6"><span>Week 6: Machine Learning</span></a></li>
             <li><a href="#week7"><span>Week 7: Supervised Learning</span></a></li>
-            <li><a href="#week8"><span>Week 8: Unsupervised</span></a></li>
-            <li><a href="#week9"><span>Week 9: Deep Learning</span></a></li>
-            <li><a href="#week10"><span>Week 10: IoT Fundamentals</span></a></li>
-            <li><a href="#week11"><span>Week 11: Arduino Projects</span></a></li>
-            <li><a href="#week12"><span>Week 12: Integrated Systems</span></a></li>
+            <li><a href="#week8"><span>Week 8: SVM & Semi-supervised</span></a></li>
+            <li><a href="#week9"><span>Week 9: Clustering</span></a></li>
+            <li><a href="#week10"><span>Week 10: Neural Nets & RL</span></a></li>
+            <li><a href="#week11"><span>Week 11: IoT & Arduino</span></a></li>
+            <li><a href="#week12"><span>Week 12: GIS & Platforms</span></a></li>
         </ul>
     </aside>
 
     <main class="main-content">
         <header>
             <h1>Urban Informatics Detailed Notes</h1>
-            <p>Comprehensive structured study material for the 12-week curriculum.</p>
+            <p>Assignment-linked study material for the 12-week curriculum, with MCQ theory moved near the top of each week.</p>
+            <div class="official-source-note">
+                <p class="panel-label">NPTEL/SWAYAM public course preview</p>
+                <h2>Official NPTEL alignment</h2>
+                <ul>
+                    <li>The public preview frames Urban Informatics as an end-to-end course: urban data, databases, data access, Python, machine learning, IoT, Arduino prototyping, and integrated platforms.</li>
+                    <li>The course connects storage, processing, analytics, visualization, and decision support rather than treating tools as separate topics.</li>
+                    <li>The instructor bio highlights real implementation through bicycle-sharing systems and AI-supported bus transit planning, so smart mobility examples are important revision anchors.</li>
+                    <li>The certificate scheme gives strong weight to the final exam, so each week now separates concept learning from MCQ answer logic and distractor traps.</li>
+                    <li>I could not find public transcript links exposed in the preview page; the added notes use the official layout, assignment PDFs, and public course description as the verified source layer.</li>
+                </ul>
+                <a href="https://onlinecourses.nptel.ac.in/noc26_ar01/preview" target="_blank" rel="noreferrer">Open official course preview</a>
+            </div>
         </header>
 
         <!-- Week 1 -->
@@ -1968,11 +2040,11 @@ except Exception as e:
 
         <!-- Week 8 -->
         <section id="week8" class="week-section">
-            <h2 class="week-title"><span class="week-badge">Week 8</span> Unsupervised and Association Learning</h2>
+            <h2 class="week-title"><span class="week-badge">Week 8</span> SVM, Semi-Supervised Learning, and Active Learning</h2>
             
             <div class="chapter-summary">
                 <h5>Chapter Topics</h5>
-                <p>K-means, hierarchical clustering, PCA, dimensionality reduction, Apriori algorithm, Frequent pattern mining etc., Case studies.</p>
+                <p>SVM geometry, support vectors, kernels, soft margin, semi-supervised assumptions, label propagation, active learning, distance metrics, and multinomial logistic regression.</p>
             </div>
 
             <h3>1. Overview</h3>
@@ -2099,11 +2171,11 @@ except Exception as e:
 
         <!-- Week 9 -->
         <section id="week9" class="week-section">
-            <h2 class="week-title"><span class="week-badge">Week 9</span> Deep Learning and Neural Networks</h2>
+            <h2 class="week-title"><span class="week-badge">Week 9</span> Association Rules and Clustering Structure</h2>
             
             <div class="chapter-summary">
                 <h5>Chapter Topics</h5>
-                <p>Neural architectures, activation functions, backpropagation, CNN, time series modeling (LSTM) etc., Case studies.</p>
+                <p>Association rules, support-confidence-lift, incidence matrices, clustering methods, linkage logic, DBSCAN, GMM, BIC, PCA, Mean Shift, and hard versus soft clustering.</p>
             </div>
 
             <h3>1. Overview</h3>
@@ -2239,11 +2311,11 @@ except Exception as e:
 
         <!-- Week 10 -->
         <section id="week10" class="week-section">
-            <h2 class="week-title"><span class="week-badge">Week 10</span> IoT and Sensing for Urban Informatics</h2>
+            <h2 class="week-title"><span class="week-badge">Week 10</span> Neural Networks, Deep Learning, and Reinforcement Learning</h2>
             
             <div class="chapter-summary">
                 <h5>Chapter Topics</h5>
-                <p>Internet of things (IoT), Sensing technologies, Embedded systems (Arduino), Communication protocols, Real-time data streams and Case studies.</p>
+                <p>ANN structure, hidden neurons, activations, backpropagation, optimization problems, SHAP, CNN/RNN model matching, reinforcement learning roles, policies, rewards, and Bellman reasoning.</p>
             </div>
 
             <h3>1. Overview</h3>
@@ -2396,11 +2468,11 @@ void loop() {
 
         <!-- Week 11 -->
         <section id="week11" class="week-section">
-            <h2 class="week-title"><span class="week-badge">Week 11</span> Visualization and Communication of Urban Insights</h2>
+            <h2 class="week-title"><span class="week-badge">Week 11</span> IoT Communication, Sensors, Actuators, and Arduino</h2>
             
             <div class="chapter-summary">
                 <h5>Chapter Topics</h5>
-                <p>Visualization principles, Dashboard design, GIS integration, Communication strategies.</p>
+                <p>IoT layers, IP and TCP/IP, WPAN/WWAN, analog and digital signals, ADC, transfer functions, actuators, Arduino IDE, ATmega328P, libraries, and board detection.</p>
             </div>
 
             <h3>1. Overview</h3>
@@ -2505,11 +2577,11 @@ void loop() {
 
         <!-- Week 12 -->
         <section id="week12" class="week-section">
-            <h2 class="week-title"><span class="week-badge">Week 12</span> Ethics, Governance, and Future of Urban Informatics</h2>
+            <h2 class="week-title"><span class="week-badge">Week 12</span> Arduino Components, GIS Operations, and Spatial Analysis</h2>
             
             <div class="chapter-summary">
                 <h5>Chapter Topics</h5>
-                <p>Data privacy, Ethics in AI/ML, Governance frameworks, Future trends (Digital twins, Metaverse cities).</p>
+                <p>Servo motors, PIR sensors, GIS queries, CSV-shapefile joins, Relate, forest classification, confusion matrix, Getis-Ord Gi* hotspot logic, fishnet grids, and ArcGIS API for Python.</p>
             </div>
 
             <h3>1. Overview</h3>
@@ -2596,6 +2668,7 @@ void loop() {
     <script src="week-guides.js"></script>
     <script src="assignment-bridges.js"></script>
     <script src="reference-frameworks.js"></script>
+    <script src="assignment-theory-notes.js"></script>
     <script>
         const sections = document.querySelectorAll('.week-section');
         const navLinks = document.querySelectorAll('.nav-links a');
@@ -2696,6 +2769,36 @@ void loop() {
             return wrapper;
         }
 
+        function buildAssignmentTheoryNotes(notes) {
+            const wrapper = makeNode('section', 'assignment-theory');
+            const header = makeNode('div', 'learning-summary-header');
+
+            header.appendChild(makeNode('p', 'panel-label', '100 MCQ preparation'));
+            header.appendChild(makeNode('h4', null, notes.title));
+            wrapper.appendChild(header);
+            wrapper.appendChild(makeNode('p', 'learning-summary-text', notes.intro));
+
+            const grid = makeNode('div', 'theory-grid');
+            notes.clusters.forEach(cluster => {
+                const panel = makeNode('article', 'theory-panel');
+                panel.appendChild(makeNode('h5', null, cluster.heading));
+                panel.appendChild(makeNode('p', 'theory-subhead', 'What to learn'));
+                const learnList = makeGuideList(cluster.mustKnow || []);
+                learnList.className = 'theory-list';
+                panel.appendChild(learnList);
+                panel.appendChild(makeNode('p', 'theory-subhead', 'How to answer MCQs'));
+                panel.appendChild(makeNode('p', 'theory-rule', cluster.examLogic));
+                panel.appendChild(makeNode('p', 'theory-subhead', 'Distractor traps'));
+                const traps = makeGuideList(cluster.traps || []);
+                traps.className = 'theory-traps';
+                panel.appendChild(traps);
+                grid.appendChild(panel);
+            });
+
+            wrapper.appendChild(grid);
+            return wrapper;
+        }
+
         function buildQuickTest(check) {
             const test = makeNode('details', 'quick-test');
             test.appendChild(makeNode('p', 'quick-label', `Quick test: ${check.topic}`));
@@ -2719,6 +2822,11 @@ void loop() {
                 const chapterSummary = section.querySelector('.chapter-summary');
                 const guideNode = buildLearningGuide(guide, weekNumber);
                 section.insertBefore(guideNode, chapterSummary || section.children[1] || null);
+
+                const assignmentTheory = window.assignmentTheoryNotes?.[weekNumber];
+                if (assignmentTheory) {
+                    section.insertBefore(buildAssignmentTheoryNotes(assignmentTheory), chapterSummary || null);
+                }
 
                 const bridge = window.assignmentBridges?.[weekNumber];
                 if (bridge) {
