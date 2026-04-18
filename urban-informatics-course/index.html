@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Informatics Notes</title>
+    <meta name="description" content="Week-wise study notes for Urban Informatics covering data, databases, Python, machine learning, IoT, Arduino, GIS, and integrated urban systems.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero" id="home">
+        <div class="container">
+            <nav class="nav">
+                <div class="brand">Urban Informatics</div>
+                <div class="nav-links">
+                    <a href="#overview">Overview</a>
+                    <a href="#curriculum">Weekly Notes</a>
+                    <a href="#references">References</a>
+                </div>
+            </nav>
+
+            <div class="hero-copy">
+                <p class="eyebrow">IIT Kharagpur | Elective | Undergraduate / Postgraduate</p>
+                <h1>Structured notes for every topic in the course</h1>
+                <p class="hero-text">
+                    These notes combine the course outline, likely exam concepts from the assignments,
+                    and the reference books listed for the course. The goal is simple: make revision
+                    easier without losing the technical depth.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#curriculum">Open weekly notes</a>
+                    <a class="button button-secondary" href="#references">See references</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="overview" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">Course Snapshot</p>
+                        <h2>What the course is about</h2>
+                    </div>
+                </div>
+
+                <div class="overview-grid">
+                    <article id="course-about" class="panel panel-wide"></article>
+                    <article id="course-instructor" class="panel"></article>
+                    <article id="course-facts" class="panel panel-tall"></article>
+                </div>
+
+                <article id="study-guide" class="panel study-guide"></article>
+            </div>
+        </section>
+
+        <section id="curriculum" class="section section-notes">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">Weekly Notes</p>
+                        <h2>12-week curriculum with detailed topic notes</h2>
+                    </div>
+                    <div class="toolbar">
+                        <button type="button" id="expand-all">Expand all</button>
+                        <button type="button" id="collapse-all">Collapse all</button>
+                    </div>
+                </div>
+
+                <div id="curriculum-tree" class="curriculum-tree" aria-label="Urban Informatics weekly notes">
+                    <!-- Rendered by script.js -->
+                </div>
+            </div>
+        </section>
+
+        <section id="references" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">Reference Trail</p>
+                        <h2>Books and supporting material</h2>
+                    </div>
+                </div>
+                <div id="reference-list" class="reference-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>Urban Informatics study notes built for quick revision and topic-wise understanding.</p>
+            <a href="#home">Back to top</a>
+        </div>
+    </footer>
+
+    <script src="lessons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
