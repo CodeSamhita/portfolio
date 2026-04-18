@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Informatics | Learning Portal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+        :root {
+            --bg: #0a0c10;
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --primary: #4f46e5;
+            --secondary: #0ea5e9;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 0% 0%, rgba(79, 70, 229, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 100% 100%, rgba(14, 165, 233, 0.15) 0%, transparent 40%);
+        }
+
+        header {
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .description {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+            width: 100%;
+        }
+
+        .card {
+            position: relative;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(12px);
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent);
+            transform: translateX(-100%);
+            transition: 0.6s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .card:hover::before {
+            transform: translateX(100%);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .study-icon {
+            background: rgba(79, 70, 229, 0.15);
+            color: #818cf8;
+            border: 1px solid rgba(79, 70, 229, 0.2);
+        }
+
+        .practice-icon {
+            background: rgba(14, 165, 233, 0.15);
+            color: #38bdf8;
+            border: 1px solid rgba(14, 165, 233, 0.2);
+        }
+
+        .card h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        .badge {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 99px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .study-badge { background: rgba(79, 70, 229, 0.1); color: #818cf8; }
+        .practice-badge { background: rgba(14, 165, 233, 0.1); color: #38bdf8; }
+
+        footer {
+            margin-top: auto;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header { padding: 4rem 1.5rem 2rem; }
+            .portal-grid { padding: 0 1.5rem 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="eyebrow">NPTEL Course Portal</span>
+        <h1>Urban Informatics</h1>
+        <p class="description">Select a module to continue your learning journey. Access structured notes or test your knowledge with assignment-based practice.</p>
+    </header>
+
+    <main class="portal-grid">
+        <!-- Study Hub -->
+        <a href="urban-informatics-course/index.html" class="card">
+            <span class="badge study-badge">Module 1</span>
+            <div class="card-icon study-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            </div>
+            <h2>Curriculum Hub</h2>
+            <p>Access the complete 12-week study guide, lecture summaries, and technical notes for every topic in the course.</p>
+            <div class="card-footer">
+                Explore Lessons <span class="arrow">→</span>
+            </div>
+        </a>
+
+        <!-- Practice Lab -->
+        <a href="Assignments/urban-informatics-practice-test.html" class="card">
+            <span class="badge practice-badge">Practice</span>
+            <div class="card-icon practice-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            </div>
+            <h2>Practice Lab</h2>
+            <p>Test your knowledge with 160+ assignment-inspired questions. Custom practice sets with detailed explanations and scoring.</p>
+            <div class="card-footer">
+                Start Practicing <span class="arrow">→</span>
+            </div>
+        </a>
+    </main>
+
+    <footer>
+        <p>Built for Urban Informatics Study & Revision &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
