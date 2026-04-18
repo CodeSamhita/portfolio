@@ -75,11 +75,11 @@
 
         .portal-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
             max-width: 1100px;
             margin: 0 auto;
-            padding: 0 2rem 6rem;
+            padding: 0 1.5rem 4rem;
             width: 100%;
         }
 
@@ -87,8 +87,8 @@
             position: relative;
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 24px;
-            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            padding: 2.5rem 1.8rem;
             text-decoration: none;
             color: inherit;
             transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -181,8 +181,8 @@
 
         .badge {
             position: absolute;
-            top: 2rem;
-            right: 2rem;
+            top: 1.5rem;
+            right: 1.5rem;
             padding: 0.4rem 0.8rem;
             border-radius: 99px;
             font-size: 0.7rem;
@@ -212,11 +212,41 @@
 
         @media (max-width: 600px) {
             header {
-                padding: 4rem 1.5rem 2rem;
+                padding: 4rem 1.25rem 2rem;
             }
 
             .portal-grid {
-                padding: 0 1.5rem 4rem;
+                padding: 0 1rem 3rem;
+                gap: 1rem;
+            }
+
+            .card {
+                padding: 2rem 1.5rem;
+            }
+
+            .badge {
+                top: 1.25rem;
+                right: 1.25rem;
+                padding: 0.3rem 0.6rem;
+                font-size: 0.65rem;
+            }
+
+            h1 {
+                margin-bottom: 1rem;
+            }
+
+            .description {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .card h2 {
+                font-size: 1.5rem;
+            }
+            .card p {
+                font-size: 0.95rem;
+                margin-bottom: 1.5rem;
             }
         }
     </style>

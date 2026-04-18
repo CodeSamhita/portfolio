@@ -102,7 +102,7 @@ h4 {
 .nav-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.8rem 1.2rem;
 }
 
 .nav-links a {
@@ -139,9 +139,10 @@ h4 {
 
 .hero-actions {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 0.9rem;
     margin-top: 1.7rem;
+    width: 100%;
 }
 
 .button,
@@ -152,8 +153,9 @@ button {
     font-family: inherit;
     font-size: 0.96rem;
     font-weight: 700;
-    padding: 0.75rem 1.2rem;
+    padding: 0.8rem 1.4rem;
     transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+    justify-content: center;
 }
 
 .button:hover,
@@ -505,20 +507,50 @@ button:focus-visible,
     }
 }
 
+@media (min-width: 521px) {
+    .hero-actions {
+        flex-direction: row;
+        width: auto;
+    }
+}
+
 @media (max-width: 520px) {
     .container {
-        padding: 0 0.9rem;
+        padding: 0 1rem;
     }
 
     .hero {
-        padding-bottom: 3rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.15;
     }
 
     .panel,
     .week-summary,
     .week-body,
     .ref-card {
-        padding-left: 0.95rem;
-        padding-right: 0.95rem;
+        padding: 1.1rem 1rem;
+    }
+
+    .week-badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+
+    .week-heading h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .brand {
+        font-size: 1.2rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
     }
 }

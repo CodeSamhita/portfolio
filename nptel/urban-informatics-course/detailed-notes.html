@@ -19,6 +19,7 @@
             --accent-green: #10b981;
             --accent-amber: #f59e0b;
             --sidebar-width: 280px;
+            --header-height: 60px;
         }
 
         * {
@@ -97,6 +98,26 @@
             flex: 1;
             padding: 3rem 4rem;
             max-width: 1000px;
+            transition: margin-left 0.3s ease;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 200;
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
 
         header {
@@ -264,17 +285,41 @@
 
         @media (max-width: 1024px) {
             .sidebar {
-                width: 70px;
-                padding: 1rem 0.5rem;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                width: var(--sidebar-width);
             }
+            
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
             .sidebar-title, .nav-links span {
-                display: none;
+                display: block;
             }
+
             .main-content {
-                margin-left: 70px;
-                padding: 2rem;
+                margin-left: 0;
+                padding: 6rem 1.5rem 3rem;
             }
-            h1 { font-size: 2.2rem; }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            h1 { font-size: 2.22rem; }
+            .week-title { font-size: 1.8rem; }
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 1.8rem; }
+            .main-content { padding-top: 5rem; }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
         }
         /* Loading & Error States */
         .loading-state, .error-state {
@@ -312,7 +357,11 @@
 </head>
 <body>
 
-    <aside class="sidebar">
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+
+    <aside class="sidebar" id="sidebar">
         <div class="sidebar-title">Navigation</div>
         <ul class="nav-links">
             <li><a href="#week1" class="active"><span>Week 1: Intro</span></a></li>
@@ -2393,6 +2442,27 @@ void loop() {
             // Scroll main content to top
             window.scrollTo(0, 0);
         }
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            const isOpen = sidebar.classList.contains('open');
+            menuToggle.innerHTML = isOpen 
+                ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'
+                : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+        });
+
+        // Close sidebar when clicking a link on mobile
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 1024) {
+                    sidebar.classList.remove('open');
+                    menuToggle.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+                }
+            });
+        });
 
         // Listen for hash changes
         window.addEventListener('hashchange', switchWeek);
