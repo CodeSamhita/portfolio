@@ -44,6 +44,7 @@ ANSWER_LEAD_RE = re.compile(
 )
 NOISE_RE = re.compile(
     r"NPTEL Online Certification Courses Indian Institute of Technology Kharagpur|"
+    r"NPTEL Online Certification Courses|"
     r"Indian Institute of Technology Kharagpur",
     re.IGNORECASE,
 )
@@ -72,6 +73,147 @@ def normalize_text(value: str) -> str:
     value = value.replace(" ,", ",").replace(" .", ".")
     value = re.sub(r"\s+", " ", value).strip()
     return value
+
+
+def option_label(index: int) -> str:
+    return chr(65 + index)
+
+
+def format_answer(indices: list[int], options: list[str]) -> str:
+    return "; ".join(f"{option_label(index)}. {options[index]}" for index in indices)
+
+
+def prompt_target(prompt: str) -> str:
+    compact = prompt.strip().rstrip(".:?")
+    if len(compact) > 150:
+        return "the concept asked in this PDF question"
+    return f"'{compact}'"
+
+
+def is_reference_only(explanation: str) -> bool:
+    lowered = explanation.lower().strip()
+    return not lowered or lowered.startswith("refer to lecture")
+
+
+def build_question_explanation(prompt: str, options: list[str], correct_indices: list[int], explanation: str) -> str:
+    correct_text = format_answer(correct_indices, options)
+    target = prompt_target(prompt)
+
+    if is_reference_only(explanation):
+        return (
+            f"The PDF answer key marks {correct_text}. This answer is suitable because it directly addresses "
+            f"{target}, while the other choices point to different concepts or tools."
+        )
+
+    return (
+        f"{explanation} The PDF-marked answer is {correct_text}, which directly addresses {target}."
+    )
+
+
+def build_option_explanations(
+    prompt: str,
+    options: list[str],
+    correct_indices: list[int],
+    explanation: str,
+) -> list[str]:
+    correct_text = format_answer(correct_indices, options)
+    target = prompt_target(prompt)
+    feedback: list[str] = []
+
+    for index, option in enumerate(options):
+        if index in correct_indices:
+            feedback.append(
+                f"Suitable: the PDF answer key includes this option. It matches {target}."
+            )
+            continue
+
+        feedback.append(
+            f"Not suitable: this option says '{option}', but the PDF-marked answer is {correct_text}. "
+            f"It does not match {target}; it refers to a different concept, tool, layer, or relationship."
+        )
+
+    if not is_reference_only(explanation):
+        feedback = [
+            item if index not in correct_indices else f"{item} {explanation}"
+            for index, item in enumerate(feedback)
+        ]
+
+    return feedback
+
+
+def infer_topic(week: int, prompt: str, options: list[str]) -> str:
+    text = f"{prompt} {' '.join(options)}".lower()
+    if "data-driven governance" in text or "systematically collected data" in text:
+        return "Data-driven governance"
+    if "association" in text or "binary incidence" in text or "apriori" in text or "lift" in text or ("support" in text and "confidence" in text):
+        return "Association rules"
+    if re.search(r"\b(tcp/ip|tcp|ip address|internet protocol)\b", text):
+        return "IoT communication"
+
+    topic_rules = [
+        ("people", "People-place-technology"),
+        ("time-series", "Time-series data"),
+        ("velocity", "Big data characteristics"),
+        ("gtfs", "Transit data standards"),
+        ("datasmart", "DataSmart Cities framework"),
+        ("citizen science", "Citizen participation"),
+        ("csv", "Data formats"),
+        ("json", "Data formats"),
+        ("normal form", "Database normalization"),
+        ("nosql", "NoSQL databases"),
+        ("neo4j", "Graph databases"),
+        ("mysql", "Relational databases"),
+        ("where", "SQL query logic"),
+        ("group by", "SQL aggregation"),
+        ("api", "API data access"),
+        ("scrap", "Web scraping"),
+        ("local variable", "Python scope"),
+        ("inheritance", "Object-oriented programming"),
+        ("polymorphism", "Object-oriented programming"),
+        ("pandas", "Python data analysis"),
+        ("shape", "Pandas DataFrames"),
+        ("orm", "Database integration"),
+        ("supervised", "Machine learning types"),
+        ("unsupervised", "Machine learning types"),
+        ("reinforcement", "Reinforcement learning"),
+        ("sarsa", "Reinforcement learning"),
+        ("entropy", "Decision trees"),
+        ("gini", "Decision trees"),
+        ("random forest", "Ensemble learning"),
+        ("xgboost", "Boosting"),
+        ("gridsearch", "Model tuning"),
+        ("k-means", "Clustering"),
+        ("dbscan", "Density clustering"),
+        ("pca", "Dimensionality reduction"),
+        ("ann", "Neural networks"),
+        ("activation", "Activation functions"),
+        ("backpropagation", "Neural network training"),
+        ("cnn", "Convolutional neural networks"),
+        ("kernel", "Convolutional neural networks"),
+        ("lstm", "Sequence learning"),
+        ("shap", "Model explainability"),
+        ("adc", "Sensor conversion"),
+        ("sensor", "Sensing"),
+        ("actuator", "Actuation"),
+        ("arduino", "Arduino prototyping"),
+        ("atmega", "Arduino hardware"),
+        ("eeprom", "Arduino libraries"),
+        ("servo", "Actuators"),
+        ("pir", "Motion sensing"),
+        ("gis query", "GIS queries"),
+        ("relate", "GIS relationships"),
+        ("confusion matrix", "Model evaluation"),
+        ("hotspot", "Hotspot analysis"),
+        ("fishnet", "Spatial aggregation"),
+        ("arcgis api", "GIS automation"),
+        ("postgis", "Spatial databases"),
+    ]
+
+    for needle, topic in topic_rules:
+        if needle in text:
+            return topic
+
+    return f"Week {week} assignment concept"
 
 
 def parse_correct_indices(answer_raw: str, options: list[str]) -> list[int]:
@@ -136,11 +278,15 @@ def build_question_bank() -> list[dict]:
                     "marks": marks,
                     "source": pdf_name,
                     "sourceLabel": f"Week {week} assignment PDF",
+                    "pdfDirect": True,
+                    "topic": infer_topic(week, prompt, options),
                     "prompt": prompt,
                     "options": options,
                     "correctIndices": correct_indices,
                     "multiSelect": len(correct_indices) > 1 or "select all" in prompt.lower(),
-                    "explanation": explanation,
+                    "pdfAnswer": answer_raw,
+                    "explanation": build_question_explanation(prompt, options, correct_indices, explanation),
+                    "optionExplanations": build_option_explanations(prompt, options, correct_indices, explanation),
                 }
             )
 

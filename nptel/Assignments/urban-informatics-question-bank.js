@@ -5,6 +5,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "People-place-technology",
     "prompt": "Which of the following best captures the People dimension in the People -Place-Technology framework?",
     "options": [
       "GIS layers and spatial databases",
@@ -16,7 +18,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 1."
+    "pdfAnswer": "c. Urban stakeholders who both generate and use data",
+    "explanation": "The PDF answer key marks C. Urban stakeholders who both generate and use data. This answer is suitable because it directly addresses 'Which of the following best captures the People dimension in the People -Place-Technology framework', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'GIS layers and spatial databases', but the PDF-marked answer is C. Urban stakeholders who both generate and use data. It does not match 'Which of the following best captures the People dimension in the People -Place-Technology framework'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Urban infrastructure networks', but the PDF-marked answer is C. Urban stakeholders who both generate and use data. It does not match 'Which of the following best captures the People dimension in the People -Place-Technology framework'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following best captures the People dimension in the People -Place-Technology framework'.",
+      "Not suitable: this option says 'Cloud computing platforms', but the PDF-marked answer is C. Urban stakeholders who both generate and use data. It does not match 'Which of the following best captures the People dimension in the People -Place-Technology framework'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -24,6 +33,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Time-series data",
     "prompt": "Time-series data in urban informatics is mainly useful because it:",
     "options": [
       "Replaces spatial data",
@@ -35,7 +46,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 2."
+    "pdfAnswer": "b. Allows observation of trends and variations",
+    "explanation": "The PDF answer key marks B. Allows observation of trends and variations. This answer is suitable because it directly addresses 'Time-series data in urban informatics is mainly useful because it', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Replaces spatial data', but the PDF-marked answer is B. Allows observation of trends and variations. It does not match 'Time-series data in urban informatics is mainly useful because it'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Time-series data in urban informatics is mainly useful because it'.",
+      "Not suitable: this option says 'Reduces data volume', but the PDF-marked answer is B. Allows observation of trends and variations. It does not match 'Time-series data in urban informatics is mainly useful because it'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Eliminates the need for sensors', but the PDF-marked answer is B. Allows observation of trends and variations. It does not match 'Time-series data in urban informatics is mainly useful because it'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -43,6 +61,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Big data characteristics",
     "prompt": "Which of the following best represents the Velocity aspect of big data?",
     "options": [
       "Different data formats",
@@ -54,7 +74,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 2. NPTEL Online Certification Courses"
+    "pdfAnswer": "c. Continuous inflow of data with minimal latency",
+    "explanation": "The PDF answer key marks C. Continuous inflow of data with minimal latency. This answer is suitable because it directly addresses 'Which of the following best represents the Velocity aspect of big data', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Different data formats', but the PDF-marked answer is C. Continuous inflow of data with minimal latency. It does not match 'Which of the following best represents the Velocity aspect of big data'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Large historical datasets', but the PDF-marked answer is C. Continuous inflow of data with minimal latency. It does not match 'Which of the following best represents the Velocity aspect of big data'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following best represents the Velocity aspect of big data'.",
+      "Not suitable: this option says 'Accuracy of datasets', but the PDF-marked answer is C. Continuous inflow of data with minimal latency. It does not match 'Which of the following best represents the Velocity aspect of big data'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -62,6 +89,8 @@ window.questionBankData = [
     "marks": "1 marks",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Transit data standards",
     "prompt": "GTFS is primarily used for sharing:",
     "options": [
       "Satellite imagery",
@@ -73,7 +102,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 2."
+    "pdfAnswer": "b. Operational details of mass transit systems",
+    "explanation": "The PDF answer key marks B. Operational details of mass transit systems. This answer is suitable because it directly addresses 'GTFS is primarily used for sharing', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Satellite imagery', but the PDF-marked answer is B. Operational details of mass transit systems. It does not match 'GTFS is primarily used for sharing'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'GTFS is primarily used for sharing'.",
+      "Not suitable: this option says 'Census statistics', but the PDF-marked answer is B. Operational details of mass transit systems. It does not match 'GTFS is primarily used for sharing'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Land-use zoning information', but the PDF-marked answer is B. Operational details of mass transit systems. It does not match 'GTFS is primarily used for sharing'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -81,6 +117,8 @@ window.questionBankData = [
     "marks": "2 mark",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "DataSmart Cities framework",
     "prompt": "Match the following roles with their functions in the DataSmart Cities framework: DataSmart Cities Role Functions P. City Data Officer (CDO) i. National-level data strategy oversight Q. Mission Data Officer (MDO ii. City-level data governance and policy R. City Data Cell iii. Analytics and operational data support S. City Data Alliance iv. Multi-stakeholder collaboration platform",
     "options": [
       "P-ii, Q-i, R-iii, S-iv",
@@ -92,7 +130,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 4."
+    "pdfAnswer": "a. P-ii, Q-i, R-iii, S-iv",
+    "explanation": "The PDF answer key marks A. P-ii, Q-i, R-iii, S-iv. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-i, Q-ii, R-iv, S-iii', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iii, Q-i, R-ii, S-iv', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-ii, Q-iii, R-i, S-iv', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -100,6 +145,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Data-driven governance",
     "prompt": "Data-driven governance relies mainly on:",
     "options": [
       "Manual reporting systems",
@@ -111,7 +158,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 2. NPTEL Online Certification Courses"
+    "pdfAnswer": "b. Analysis of systematically collected data to support actions",
+    "explanation": "The PDF answer key marks B. Analysis of systematically collected data to support actions. This answer is suitable because it directly addresses 'Data-driven governance relies mainly on', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Manual reporting systems', but the PDF-marked answer is B. Analysis of systematically collected data to support actions. It does not match 'Data-driven governance relies mainly on'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Data-driven governance relies mainly on'.",
+      "Not suitable: this option says 'Political intuition', but the PDF-marked answer is B. Analysis of systematically collected data to support actions. It does not match 'Data-driven governance relies mainly on'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Paper-based records', but the PDF-marked answer is B. Analysis of systematically collected data to support actions. It does not match 'Data-driven governance relies mainly on'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -119,6 +173,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Citizen participation",
     "prompt": "Citizen science differs from traditional data collection because it:",
     "options": [
       "Uses only expert surveys",
@@ -130,7 +186,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 3."
+    "pdfAnswer": "c. Actively involves citizens in data generation",
+    "explanation": "The PDF answer key marks C. Actively involves citizens in data generation. This answer is suitable because it directly addresses 'Citizen science differs from traditional data collection because it', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Uses only expert surveys', but the PDF-marked answer is C. Actively involves citizens in data generation. It does not match 'Citizen science differs from traditional data collection because it'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Depends entirely on sensors', but the PDF-marked answer is C. Actively involves citizens in data generation. It does not match 'Citizen science differs from traditional data collection because it'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Citizen science differs from traditional data collection because it'.",
+      "Not suitable: this option says 'Avoids digital tools', but the PDF-marked answer is C. Actively involves citizens in data generation. It does not match 'Citizen science differs from traditional data collection because it'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -138,6 +201,8 @@ window.questionBankData = [
     "marks": "1 marks",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "GIS relationships",
     "prompt": "Which of the following is a key challenge related to the digital divide?",
     "options": [
       "Lack of urban land",
@@ -149,7 +214,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 3."
+    "pdfAnswer": "b. Unequal access to internet and digital skills",
+    "explanation": "The PDF answer key marks B. Unequal access to internet and digital skills. This answer is suitable because it directly addresses 'Which of the following is a key challenge related to the digital divide', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Lack of urban land', but the PDF-marked answer is B. Unequal access to internet and digital skills. It does not match 'Which of the following is a key challenge related to the digital divide'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is a key challenge related to the digital divide'.",
+      "Not suitable: this option says 'Excessive data availability', but the PDF-marked answer is B. Unequal access to internet and digital skills. It does not match 'Which of the following is a key challenge related to the digital divide'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Overuse of GIS', but the PDF-marked answer is B. Unequal access to internet and digital skills. It does not match 'Which of the following is a key challenge related to the digital divide'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -157,6 +229,8 @@ window.questionBankData = [
     "marks": "2 mark",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "API data access",
     "prompt": "Match the following open-data platforms with their key features: Open Data Platform Key Feature P. Pune Open Data Portal i. Real-time transport APIs Q. NYC Open Data ii. Machine-readable municipal datasets R. Transport for London (TfL) iii. Legal mandate for open data publication S. NIUA - Centre for Digital Governance iv. Digital governance standards and platforms Choose the correct option:",
     "options": [
       "P-ii, Q-iii, R-i, S-iv",
@@ -168,7 +242,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 5. NPTEL Online Certification Courses"
+    "pdfAnswer": "a. P-ii, Q-iii, R-i, S-iv",
+    "explanation": "The PDF answer key marks A. P-ii, Q-iii, R-i, S-iv. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-i, Q-ii, R-iv, S-iii', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iii, Q-ii, R-i, S-iv', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-ii, Q-i, R-iii, S-iv', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -176,6 +257,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 1 assignment concept",
     "prompt": "Integrated Command and Control Centers (ICCCs) are mainly designed to:",
     "options": [
       "Store archival records",
@@ -187,7 +270,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 4."
+    "pdfAnswer": "b. Enable real-time monitoring of multiple urban systems",
+    "explanation": "The PDF answer key marks B. Enable real-time monitoring of multiple urban systems. This answer is suitable because it directly addresses 'Integrated Command and Control Centers (ICCCs) are mainly designed to', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Store archival records', but the PDF-marked answer is B. Enable real-time monitoring of multiple urban systems. It does not match 'Integrated Command and Control Centers (ICCCs) are mainly designed to'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Integrated Command and Control Centers (ICCCs) are mainly designed to'.",
+      "Not suitable: this option says 'Replace municipal departments', but the PDF-marked answer is B. Enable real-time monitoring of multiple urban systems. It does not match 'Integrated Command and Control Centers (ICCCs) are mainly designed to'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Conduct public surveys', but the PDF-marked answer is B. Enable real-time monitoring of multiple urban systems. It does not match 'Integrated Command and Control Centers (ICCCs) are mainly designed to'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -195,6 +285,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "API data access",
     "prompt": "Which feature distinguishes advanced open-data platforms like NYC Open Data?",
     "options": [
       "Manual data updates",
@@ -206,7 +298,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 5."
+    "pdfAnswer": "c. Automated data pipelines and legal backing",
+    "explanation": "The PDF answer key marks C. Automated data pipelines and legal backing. This answer is suitable because it directly addresses 'Which feature distinguishes advanced open-data platforms like NYC Open Data', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Manual data updates', but the PDF-marked answer is C. Automated data pipelines and legal backing. It does not match 'Which feature distinguishes advanced open-data platforms like NYC Open Data'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Limited datasets', but the PDF-marked answer is C. Automated data pipelines and legal backing. It does not match 'Which feature distinguishes advanced open-data platforms like NYC Open Data'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which feature distinguishes advanced open-data platforms like NYC Open Data'.",
+      "Not suitable: this option says 'No third-party API access', but the PDF-marked answer is C. Automated data pipelines and legal backing. It does not match 'Which feature distinguishes advanced open-data platforms like NYC Open Data'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -214,6 +313,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 1 assignment concept",
     "prompt": "UPYOG is developed under the National Urban Digital Mission by MoHUA and ________.",
     "options": [
       "ISRO",
@@ -225,7 +326,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 5."
+    "pdfAnswer": "c. NIUA",
+    "explanation": "The PDF answer key marks C. NIUA. This answer is suitable because it directly addresses 'UPYOG is developed under the National Urban Digital Mission by MoHUA and ________', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'ISRO', but the PDF-marked answer is C. NIUA. It does not match 'UPYOG is developed under the National Urban Digital Mission by MoHUA and ________'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'NITI Aayog', but the PDF-marked answer is C. NIUA. It does not match 'UPYOG is developed under the National Urban Digital Mission by MoHUA and ________'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'UPYOG is developed under the National Urban Digital Mission by MoHUA and ________'.",
+      "Not suitable: this option says 'MeitY', but the PDF-marked answer is C. NIUA. It does not match 'UPYOG is developed under the National Urban Digital Mission by MoHUA and ________'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -233,18 +341,27 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "API data access",
     "prompt": "The open data platform of Transport for London provides standardized transport data through a ________ interface.",
     "options": [
       "Closed database",
       "Unified API",
       "Manual reporting system",
-      "Spreadsheet portal NPTEL Online Certification Courses"
+      "Spreadsheet portal"
     ],
     "correctIndices": [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 5."
+    "pdfAnswer": "b. Unified API",
+    "explanation": "The PDF answer key marks B. Unified API. This answer is suitable because it directly addresses 'The open data platform of Transport for London provides standardized transport data through a ________ interface', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Closed database', but the PDF-marked answer is B. Unified API. It does not match 'The open data platform of Transport for London provides standardized transport data through a ________ interface'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'The open data platform of Transport for London provides standardized transport data through a ________ interface'.",
+      "Not suitable: this option says 'Manual reporting system', but the PDF-marked answer is B. Unified API. It does not match 'The open data platform of Transport for London provides standardized transport data through a ________ interface'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Spreadsheet portal', but the PDF-marked answer is B. Unified API. It does not match 'The open data platform of Transport for London provides standardized transport data through a ________ interface'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -252,6 +369,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Citizen participation",
     "prompt": "Match the following digital participation concepts with their descriptions: Digital Participation Description P. Citizen Science i. Online voting and project prioritization by residents Q. Participatory Budgeting ii. Citizens contributing data for scientific or governance purposes R. Issue-reporting platforms iii. Mobile or web tools for reporting civic problems S. Online consultations iv. Digital forums and virtual town-hall meetings Choose the correct option:",
     "options": [
       "P-ii, Q-i, R-iii, S-iv",
@@ -263,7 +382,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 3."
+    "pdfAnswer": "a. P-ii, Q-i, R-iii, S-iv",
+    "explanation": "The PDF answer key marks A. P-ii, Q-i, R-iii, S-iv. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-i, Q-ii, R-iv, S-iii', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iii, Q-i, R-ii, S-iv', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-ii, Q-iv, R-i, S-iii', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -271,6 +397,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "DataSmart Cities framework",
     "prompt": "Under the DataSmart Cities framework, which data type should not be openly published?",
     "options": [
       "Public datasets",
@@ -282,7 +410,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 4."
+    "pdfAnswer": "c. Personal data without anonymization",
+    "explanation": "The PDF answer key marks C. Personal data without anonymization. This answer is suitable because it directly addresses 'Under the DataSmart Cities framework, which data type should not be openly published', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Public datasets', but the PDF-marked answer is C. Personal data without anonymization. It does not match 'Under the DataSmart Cities framework, which data type should not be openly published'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Aggregated statistics', but the PDF-marked answer is C. Personal data without anonymization. It does not match 'Under the DataSmart Cities framework, which data type should not be openly published'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Under the DataSmart Cities framework, which data type should not be openly published'.",
+      "Not suitable: this option says 'Non-personal open data', but the PDF-marked answer is C. Personal data without anonymization. It does not match 'Under the DataSmart Cities framework, which data type should not be openly published'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 1,
@@ -290,6 +425,8 @@ window.questionBankData = [
     "marks": "2 mark",
     "source": "Urban Informatics_Assignment_week_1.pdf",
     "sourceLabel": "Week 1 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 1 assignment concept",
     "prompt": "Which of the following is a key objective of UPYOG?",
     "options": [
       "Centralizing all city data at the national level",
@@ -301,7 +438,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 5. NPTEL Online Certification Courses"
+    "pdfAnswer": "b. Enabling interoperable and scalable urban digital services",
+    "explanation": "The PDF answer key marks B. Enabling interoperable and scalable urban digital services. This answer is suitable because it directly addresses 'Which of the following is a key objective of UPYOG', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Centralizing all city data at the national level', but the PDF-marked answer is B. Enabling interoperable and scalable urban digital services. It does not match 'Which of the following is a key objective of UPYOG'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is a key objective of UPYOG'.",
+      "Not suitable: this option says 'Replacing municipal staff', but the PDF-marked answer is B. Enabling interoperable and scalable urban digital services. It does not match 'Which of the following is a key objective of UPYOG'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Limiting citizen interaction', but the PDF-marked answer is B. Enabling interoperable and scalable urban digital services. It does not match 'Which of the following is a key objective of UPYOG'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -309,6 +453,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Data formats",
     "prompt": "Which of the following statements about data formats are correct? A. CSV is appropriate for structured datasets, such as demographic tables or street -light maintenance records. B. JSON uses name-value pairs enclosed in braces and supports nested objects and arrays. C. XML documents consist of hierarchical elements that describe the meaning of data. D. JSON is more detailed than XML and can be slower to transmit.",
     "options": [
       "B, C and D",
@@ -320,7 +466,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 6. XML is more detailed than JSON and can be slower to transmit."
+    "pdfAnswer": "d. A, B and C",
+    "explanation": "The PDF answer key marks D. A, B and C. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'B, C and D', but the PDF-marked answer is D. A, B and C. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A, C and D', but the PDF-marked answer is D. A, B and C. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A, B and D', but the PDF-marked answer is D. A, B and C. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question."
+    ]
   },
   {
     "week": 2,
@@ -328,6 +481,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 2 assignment concept",
     "prompt": "Which of the following is NOT an example of Database Management System (DBMS)?",
     "options": [
       "Microsoft Access",
@@ -339,7 +494,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 7."
+    "pdfAnswer": "c. Microsoft Excel",
+    "explanation": "The PDF answer key marks C. Microsoft Excel. This answer is suitable because it directly addresses 'Which of the following is NOT an example of Database Management System (DBMS)', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Microsoft Access', but the PDF-marked answer is C. Microsoft Excel. It does not match 'Which of the following is NOT an example of Database Management System (DBMS)'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'PostgreSQL', but the PDF-marked answer is C. Microsoft Excel. It does not match 'Which of the following is NOT an example of Database Management System (DBMS)'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is NOT an example of Database Management System (DBMS)'.",
+      "Not suitable: this option says 'MongoDB', but the PDF-marked answer is C. Microsoft Excel. It does not match 'Which of the following is NOT an example of Database Management System (DBMS)'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -347,7 +509,9 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
-    "prompt": "Which of the following are the ACID properties of RDBMS? A. atomicity B. consistency C. insulation D. durability NPTEL Online Certification Courses",
+    "pdfDirect": true,
+    "topic": "Week 2 assignment concept",
+    "prompt": "Which of the following are the ACID properties of RDBMS? A. atomicity B. consistency C. insulation D. durability",
     "options": [
       "A, B and D",
       "A, C and D",
@@ -358,7 +522,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 7."
+    "pdfAnswer": "a. A, B and D",
+    "explanation": "The PDF answer key marks A. A, B and D. This answer is suitable because it directly addresses 'Which of the following are the ACID properties of RDBMS? A. atomicity B. consistency C. insulation D. durability', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following are the ACID properties of RDBMS? A. atomicity B. consistency C. insulation D. durability'.",
+      "Not suitable: this option says 'A, C and D', but the PDF-marked answer is A. A, B and D. It does not match 'Which of the following are the ACID properties of RDBMS? A. atomicity B. consistency C. insulation D. durability'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'B, C and D', but the PDF-marked answer is A. A, B and D. It does not match 'Which of the following are the ACID properties of RDBMS? A. atomicity B. consistency C. insulation D. durability'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A, B and C', but the PDF-marked answer is A. A, B and D. It does not match 'Which of the following are the ACID properties of RDBMS? A. atomicity B. consistency C. insulation D. durability'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -366,6 +537,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database normalization",
     "prompt": "Which of the following is correct?",
     "options": [
       "Normalization is structuring a relational database in accordance with normal forms to reduce data redundancy and improve data integrity.",
@@ -377,7 +550,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 8."
+    "pdfAnswer": "a. Normalization is structuring a relational database in acc ordance with normal forms to reduce data redundancy and improve data integrity.",
+    "explanation": "The PDF answer key marks A. Normalization is structuring a relational database in accordance with normal forms to reduce data redundancy and improve data integrity.. This answer is suitable because it directly addresses 'Which of the following is correct', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is correct'.",
+      "Not suitable: this option says 'Higher normal forms always increase performance', but the PDF-marked answer is A. Normalization is structuring a relational database in accordance with normal forms to reduce data redundancy and improve data integrity.. It does not match 'Which of the following is correct'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A deletion anomaly occurs when deleting a record intentionally removes other data.', but the PDF-marked answer is A. Normalization is structuring a relational database in accordance with normal forms to reduce data redundancy and improve data integrity.. It does not match 'Which of the following is correct'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'An update anomaly occurs when data is stored in single place.', but the PDF-marked answer is A. Normalization is structuring a relational database in accordance with normal forms to reduce data redundancy and improve data integrity.. It does not match 'Which of the following is correct'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -385,6 +565,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Object-oriented programming",
     "prompt": "Match the following key features with their Database Model. Database Model Key features P. Network model i. Very fast access, schema-less, highly scalable Q. Relational model ii. Structured schema, data integrity, SQL, normalization R. Object-oriented model iii. Many-to-many relationships, graph-like links S. Key-Value model iv. Complex data types, inheritance, similar to object -oriented programming",
     "options": [
       "P-ii; Q-i; R-iii; S-iv",
@@ -396,7 +578,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 7."
+    "pdfAnswer": "c. P-iii; Q-ii; R-iv; S-i",
+    "explanation": "The PDF answer key marks C. P-iii; Q-ii; R-iv; S-i. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P-ii; Q-i; R-iii; S-iv', but the PDF-marked answer is C. P-iii; Q-ii; R-iv; S-i. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-i; Q-iii; R-iv; S-ii', but the PDF-marked answer is C. P-iii; Q-ii; R-iv; S-i. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-ii; Q-iii; R-i; S-iv', but the PDF-marked answer is C. P-iii; Q-ii; R-iv; S-i. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -404,9 +593,11 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Which statement best explains why unstructured data poses a greater analytical challenge for urban planning compared to structured data?",
     "options": [
-      "It lacks a predefined schema, requiring advanced NLP, computer vision, and machine learning for feature extraction and pattern recognition. NPTEL Online Certification Courses",
+      "It lacks a predefined schema, requiring advanced NLP, computer vision, and machine learning for feature extraction and pattern recognition.",
       "It contains only qualitative information that cannot be quantified for spatial analysis.",
       "It cannot be stored in relational databases and must always be converted into raster formats.",
       "It is always smaller in volume but higher in redundancy than structured datasets."
@@ -415,7 +606,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 6, last slide."
+    "pdfAnswer": "a. It lacks a predefined schema, requiring advanced NLP, computer vision, and machine learning for feature extraction and pattern recognition.",
+    "explanation": "The PDF answer key marks A. It lacks a predefined schema, requiring advanced NLP, computer vision, and machine learning for feature extraction and pattern recognition.. This answer is suitable because it directly addresses 'Which statement best explains why unstructured data poses a greater analytical challenge for urban planning compared to structured data', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'Which statement best explains why unstructured data poses a greater analytical challenge for urban planning compared to structured data'.",
+      "Not suitable: this option says 'It contains only qualitative information that cannot be quantified for spatial analysis.', but the PDF-marked answer is A. It lacks a predefined schema, requiring advanced NLP, computer vision, and machine learning for feature extraction and pattern recognition.. It does not match 'Which statement best explains why unstructured data poses a greater analytical challenge for urban planning compared to structured data'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'It cannot be stored in relational databases and must always be converted into raster formats.', but the PDF-marked answer is A. It lacks a predefined schema, requiring advanced NLP, computer vision, and machine learning for feature extraction and pattern recognition.. It does not match 'Which statement best explains why unstructured data poses a greater analytical challenge for urban planning compared to structured data'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'It is always smaller in volume but higher in redundancy than structured datasets.', but the PDF-marked answer is A. It lacks a predefined schema, requiring advanced NLP, computer vision, and machine learning for feature extraction and pattern recognition.. It does not match 'Which statement best explains why unstructured data poses a greater analytical challenge for urban planning compared to structured data'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -423,6 +621,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database normalization",
     "prompt": "Third Normal Form automatically satisfies __________.",
     "options": [
       "2NF",
@@ -434,7 +634,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 8."
+    "pdfAnswer": "a. 2NF",
+    "explanation": "The PDF answer key marks A. 2NF. This answer is suitable because it directly addresses 'Third Normal Form automatically satisfies __________', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'Third Normal Form automatically satisfies __________'.",
+      "Not suitable: this option says 'BCNF', but the PDF-marked answer is A. 2NF. It does not match 'Third Normal Form automatically satisfies __________'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says '4NF', but the PDF-marked answer is A. 2NF. It does not match 'Third Normal Form automatically satisfies __________'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says '5NF', but the PDF-marked answer is A. 2NF. It does not match 'Third Normal Form automatically satisfies __________'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -442,6 +649,8 @@ window.questionBankData = [
     "marks": "2 mark",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 2 assignment concept",
     "prompt": "Match the following- Database Model Key features P. Candidate Key i. May include extra attributes beyond the minimum needed for uniqueness. Q. Primary Key ii. A set of attributes that can uniquely identify each record in a table, and a table may have more than one such key. R. Superkey iii. An attribute that links one table to the primary key of another table to maintain valid relationships. S. Foreign Key iv. The selected candidate key used as the main unique identifier for records and for defining relationships.",
     "options": [
       "P-ii; Q-i; R-iii; S-iv",
@@ -453,7 +662,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 9."
+    "pdfAnswer": "d. P-ii; Q-iv; R-i; S-iii",
+    "explanation": "The PDF answer key marks D. P-ii; Q-iv; R-i; S-iii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P-ii; Q-i; R-iii; S-iv', but the PDF-marked answer is D. P-ii; Q-iv; R-i; S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-i; Q-iii; R-iv; S-ii', but the PDF-marked answer is D. P-ii; Q-iv; R-i; S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iii; Q-ii; R-i; S-iv', but the PDF-marked answer is D. P-ii; Q-iv; R-i; S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question."
+    ]
   },
   {
     "week": 2,
@@ -461,7 +677,9 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
-    "prompt": "NoSQL databases are primarily chosen when: NPTEL Online Certification Courses",
+    "pdfDirect": true,
+    "topic": "NoSQL databases",
+    "prompt": "NoSQL databases are primarily chosen when:",
     "options": [
       "The application requires strict ACID transactions",
       "The system needs to scale horizontally across distributed servers",
@@ -472,7 +690,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 10."
+    "pdfAnswer": "b. The system needs to scale horizontally across distributed servers",
+    "explanation": "The PDF answer key marks B. The system needs to scale horizontally across distributed servers. This answer is suitable because it directly addresses 'NoSQL databases are primarily chosen when', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'The application requires strict ACID transactions', but the PDF-marked answer is B. The system needs to scale horizontally across distributed servers. It does not match 'NoSQL databases are primarily chosen when'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'NoSQL databases are primarily chosen when'.",
+      "Not suitable: this option says 'The data schema must remain fixed and highly normalized', but the PDF-marked answer is B. The system needs to scale horizontally across distributed servers. It does not match 'NoSQL databases are primarily chosen when'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'The goal is to reduce all data to a single unified table for faster queries', but the PDF-marked answer is B. The system needs to scale horizontally across distributed servers. It does not match 'NoSQL databases are primarily chosen when'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -480,6 +705,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
+    "pdfDirect": true,
+    "topic": "SQL query logic",
     "prompt": "A ____________________ is a functional dependency in which X->Z (X determines Z) indirectly, by virtue of X->Y and Y->Z (where it is not the case that Y->X).",
     "options": [
       "transitive dependency",
@@ -491,7 +718,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 9."
+    "pdfAnswer": "a. transitive dependency",
+    "explanation": "The PDF answer key marks A. transitive dependency. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'partial dependency', but the PDF-marked answer is A. transitive dependency. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'multi-valued dependency', but the PDF-marked answer is A. transitive dependency. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'join dependency', but the PDF-marked answer is A. transitive dependency. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -499,6 +733,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database normalization",
     "prompt": "Which of the following statements are true about normalization of databases? A. Normalization is the process of organizing tables in a relational database to reduce redundancy and avoid update, insertion, and deletion anomalies. B. Higher levels of normalization can be achieved even without satisfying the conditions of the previous normal forms. C. It is based on a series of rules called normal forms, which ensure that each fact is stored in one appropriate place only. D. Normalization improves data integrity and consistency by eliminating duplicat e and dependent data.",
     "options": [
       "A, B and D",
@@ -510,7 +746,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 8."
+    "pdfAnswer": "b. A, C and D",
+    "explanation": "The PDF answer key marks B. A, C and D. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'A, B and D', but the PDF-marked answer is B. A, C and D. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'B, C and D', but the PDF-marked answer is B. A, C and D. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A, B and C', but the PDF-marked answer is B. A, C and D. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -518,7 +761,9 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
-    "prompt": "Match the type of NoSQL databases with their example- NoSQL database Examples NPTEL Online Certification Courses P. Wide-Column Databases i. Neo4j Q. Graph Databases ii. Redis R. Document Databases iii. HBase S. Key-Value Databases iv. MongoDB",
+    "pdfDirect": true,
+    "topic": "NoSQL databases",
+    "prompt": "Match the type of NoSQL databases with their example- NoSQL database Examples P. Wide-Column Databases i. Neo4j Q. Graph Databases ii. Redis R. Document Databases iii. HBase S. Key-Value Databases iv. MongoDB",
     "options": [
       "P-iv; Q-ii; R-iii; S-i",
       "P-iii; Q-i; R-iv; S-ii",
@@ -529,7 +774,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 10."
+    "pdfAnswer": "b. P-iii; Q-i; R-iv; S-ii",
+    "explanation": "The PDF answer key marks B. P-iii; Q-i; R-iv; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P-iv; Q-ii; R-iii; S-i', but the PDF-marked answer is B. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-iv; Q-iii; R-ii; S-i', but the PDF-marked answer is B. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-ii; Q-i; R-iv; S-iii', but the PDF-marked answer is B. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -537,6 +789,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
+    "pdfDirect": true,
+    "topic": "API data access",
     "prompt": "_________ is important because they provide a secure interface that enables applications to retrieve, share, and modify database information without giving direct access to the database.",
     "options": [
       "API",
@@ -548,7 +802,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 10. APIs are essential because they act as a secure bridge that allows applications to access, exchange, and update database data without directly opening or exposing the database itself."
+    "pdfAnswer": "a. API",
+    "explanation": "The PDF answer key marks A. API. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'Non-Relational Database', but the PDF-marked answer is A. API. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Normalization', but the PDF-marked answer is A. API. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'DBMS', but the PDF-marked answer is A. API. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -556,6 +817,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database normalization",
     "prompt": "Match the normal forms with their characteristics- Normal Forms Characteristics P. First Normal Form (1NF) i. Eliminates transitive dependency Q. Third Normal Form (3NF) ii. Removes multi-valued dependencies R. Boyce & Codd Normal Form (BCNF) iii. Ensures each determinant is a candidate key S. Fourth Normal Form (4NF) iv. Eliminates repeating groups and ensures atomic values",
     "options": [
       "P-iv; Q-i; R-iii; S-ii",
@@ -567,7 +830,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 9. NPTEL Online Certification Courses"
+    "pdfAnswer": "a. P-iv; Q-i; R-iii; S-ii",
+    "explanation": "The PDF answer key marks A. P-iv; Q-i; R-iii; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-iii; Q-ii; R-i; S-iv', but the PDF-marked answer is A. P-iv; Q-i; R-iii; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-ii; Q-i; R-iii; S-iv', but the PDF-marked answer is A. P-iv; Q-i; R-iii; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iv; Q-iii; R-i; S-ii', but the PDF-marked answer is A. P-iv; Q-i; R-iii; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -575,6 +845,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 2 assignment concept",
     "prompt": "_______________ is a relational database management system that combines the Jet database engine with a user-friendly graphical interface.",
     "options": [
       "Oracle Database",
@@ -586,7 +858,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 7."
+    "pdfAnswer": "b. Microsoft Access",
+    "explanation": "The PDF answer key marks B. Microsoft Access. This answer is suitable because it directly addresses '_______________ is a relational database management system that combines the Jet database engine with a user-friendly graphical interface', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Oracle Database', but the PDF-marked answer is B. Microsoft Access. It does not match '_______________ is a relational database management system that combines the Jet database engine with a user-friendly graphical interface'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches '_______________ is a relational database management system that combines the Jet database engine with a user-friendly graphical interface'.",
+      "Not suitable: this option says 'MariaDB', but the PDF-marked answer is B. Microsoft Access. It does not match '_______________ is a relational database management system that combines the Jet database engine with a user-friendly graphical interface'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'PostgreSQL', but the PDF-marked answer is B. Microsoft Access. It does not match '_______________ is a relational database management system that combines the Jet database engine with a user-friendly graphical interface'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 2,
@@ -594,6 +873,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 2_Week 2_corrections final.pdf",
     "sourceLabel": "Week 2 assignment PDF",
+    "pdfDirect": true,
+    "topic": "NoSQL databases",
     "prompt": "What is the BASE property of NoSQL databases?",
     "options": [
       "Batch Access, Static State, Error-free Consistency",
@@ -605,7 +886,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 10."
+    "pdfAnswer": "d. Basically Available, Soft State, Eventually Consistent",
+    "explanation": "The PDF answer key marks D. Basically Available, Soft State, Eventually Consistent. This answer is suitable because it directly addresses 'What is the BASE property of NoSQL databases', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Batch Access, Static State, Error-free Consistency', but the PDF-marked answer is D. Basically Available, Soft State, Eventually Consistent. It does not match 'What is the BASE property of NoSQL databases'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Balanced Access, Structured Storage, Encrypted Consistency', but the PDF-marked answer is D. Basically Available, Soft State, Eventually Consistent. It does not match 'What is the BASE property of NoSQL databases'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Backup Availability, Stable Schema, Exact Consistency', but the PDF-marked answer is D. Basically Available, Soft State, Eventually Consistent. It does not match 'What is the BASE property of NoSQL databases'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'What is the BASE property of NoSQL databases'."
+    ]
   },
   {
     "week": 3,
@@ -613,6 +901,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Relational databases",
     "prompt": "Why is MySQL classified as a relational database system?",
     "options": [
       "It stores data only in hierarchical structures",
@@ -624,7 +914,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 11."
+    "pdfAnswer": "b. It enforces relationships between tables using keys",
+    "explanation": "The PDF answer key marks B. It enforces relationships between tables using keys. This answer is suitable because it directly addresses 'Why is MySQL classified as a relational database system', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'It stores data only in hierarchical structures', but the PDF-marked answer is B. It enforces relationships between tables using keys. It does not match 'Why is MySQL classified as a relational database system'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Why is MySQL classified as a relational database system'.",
+      "Not suitable: this option says 'It supports only spatial datasets', but the PDF-marked answer is B. It enforces relationships between tables using keys. It does not match 'Why is MySQL classified as a relational database system'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'It does not require structured queries', but the PDF-marked answer is B. It enforces relationships between tables using keys. It does not match 'Why is MySQL classified as a relational database system'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -632,6 +929,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Relational databases",
     "prompt": "Which MySQL component primarily simplifies database interaction for users unfamiliar with command-line syntax?",
     "options": [
       "MySQL Server",
@@ -643,7 +942,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 11."
+    "pdfAnswer": "c. MySQL Workbench",
+    "explanation": "The PDF answer key marks C. MySQL Workbench. This answer is suitable because it directly addresses 'Which MySQL component primarily simplifies database interaction for users unfamiliar with command-line syntax', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'MySQL Server', but the PDF-marked answer is C. MySQL Workbench. It does not match 'Which MySQL component primarily simplifies database interaction for users unfamiliar with command-line syntax'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'MySQL Storage Engine', but the PDF-marked answer is C. MySQL Workbench. It does not match 'Which MySQL component primarily simplifies database interaction for users unfamiliar with command-line syntax'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which MySQL component primarily simplifies database interaction for users unfamiliar with command-line syntax'.",
+      "Not suitable: this option says 'MySQL Connector', but the PDF-marked answer is C. MySQL Workbench. It does not match 'Which MySQL component primarily simplifies database interaction for users unfamiliar with command-line syntax'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -651,6 +957,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "SQL query logic",
     "prompt": "In a SELECT query containing both WHERE and GROUP BY clauses, which operation is executed first?",
     "options": [
       "Group formation",
@@ -662,7 +970,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 13. NPTEL Online Certification Courses"
+    "pdfAnswer": "b. Row filtering",
+    "explanation": "The PDF answer key marks B. Row filtering. This answer is suitable because it directly addresses 'In a SELECT query containing both WHERE and GROUP BY clauses, which operation is executed first', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Group formation', but the PDF-marked answer is B. Row filtering. It does not match 'In a SELECT query containing both WHERE and GROUP BY clauses, which operation is executed first'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'In a SELECT query containing both WHERE and GROUP BY clauses, which operation is executed first'.",
+      "Not suitable: this option says 'Result sorting', but the PDF-marked answer is B. Row filtering. It does not match 'In a SELECT query containing both WHERE and GROUP BY clauses, which operation is executed first'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Aggregate calculation', but the PDF-marked answer is B. Row filtering. It does not match 'In a SELECT query containing both WHERE and GROUP BY clauses, which operation is executed first'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -670,6 +985,8 @@ window.questionBankData = [
     "marks": "1 marks",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 3 assignment concept",
     "prompt": "Which SQL technique allows results from one query to be used as input for another query?",
     "options": [
       "Join",
@@ -681,7 +998,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 14."
+    "pdfAnswer": "b. Subquery/Nested Subquery",
+    "explanation": "The PDF answer key marks B. Subquery/Nested Subquery. This answer is suitable because it directly addresses 'Which SQL technique allows results from one query to be used as input for another query', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Join', but the PDF-marked answer is B. Subquery/Nested Subquery. It does not match 'Which SQL technique allows results from one query to be used as input for another query'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which SQL technique allows results from one query to be used as input for another query'.",
+      "Not suitable: this option says 'Index', but the PDF-marked answer is B. Subquery/Nested Subquery. It does not match 'Which SQL technique allows results from one query to be used as input for another query'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'View', but the PDF-marked answer is B. Subquery/Nested Subquery. It does not match 'Which SQL technique allows results from one query to be used as input for another query'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -689,6 +1013,8 @@ window.questionBankData = [
     "marks": "2 mark",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Match the following Advanced Database Concepts: Column I Column II P. Index i. Groups multiple SQL statements into a reusable executable block Q. View ii. Improves query performance by speeding up data retrieval R. Stored Procedure iii. Ensures atomicity and consistency of database operations S. Transaction management iv. Virtual table created from a SELECT query without storing data",
     "options": [
       "P-ii, Q-iv, R-i, S-iii",
@@ -700,7 +1026,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 14."
+    "pdfAnswer": "a. P-ii, Q-iv, R-i, S-iii",
+    "explanation": "The PDF answer key marks A. P-ii, Q-iv, R-i, S-iii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-iv, Q-ii, R-iii, S-i', but the PDF-marked answer is A. P-ii, Q-iv, R-i, S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-ii, Q-i, R-iv, S-iii', but the PDF-marked answer is A. P-ii, Q-iv, R-i, S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iii, Q-iv, R-ii, S-i', but the PDF-marked answer is A. P-ii, Q-iv, R-i, S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -708,6 +1041,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "API data access",
     "prompt": "Which characteristic best differentiates API-based data access from direct database access?",
     "options": [
       "APIs store data permanently and make sures they are ACID compliant",
@@ -719,7 +1054,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 15. NPTEL Online Certification Courses"
+    "pdfAnswer": "b. APIs abstract internal database structure and expose data via controlled interfaces",
+    "explanation": "The PDF answer key marks B. APIs abstract internal database structure and expose data via controlled interfaces. This answer is suitable because it directly addresses 'Which characteristic best differentiates API-based data access from direct database access', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'APIs store data permanently and make sures they are ACID compliant', but the PDF-marked answer is B. APIs abstract internal database structure and expose data via controlled interfaces. It does not match 'Which characteristic best differentiates API-based data access from direct database access'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which characteristic best differentiates API-based data access from direct database access'.",
+      "Not suitable: this option says 'APIs require SQL from clients so that data can be returned', but the PDF-marked answer is B. APIs abstract internal database structure and expose data via controlled interfaces. It does not match 'Which characteristic best differentiates API-based data access from direct database access'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'APIs eliminate authentication', but the PDF-marked answer is B. APIs abstract internal database structure and expose data via controlled interfaces. It does not match 'Which characteristic best differentiates API-based data access from direct database access'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -727,6 +1069,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Data formats",
     "prompt": "Which technology enables real-time updates in traffic monitoring dashboards?",
     "options": [
       "REST polling",
@@ -738,7 +1082,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 15."
+    "pdfAnswer": "b. WebSocket communication",
+    "explanation": "The PDF answer key marks B. WebSocket communication. This answer is suitable because it directly addresses 'Which technology enables real-time updates in traffic monitoring dashboards', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'REST polling', but the PDF-marked answer is B. WebSocket communication. It does not match 'Which technology enables real-time updates in traffic monitoring dashboards'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which technology enables real-time updates in traffic monitoring dashboards'.",
+      "Not suitable: this option says 'CSV downloads', but the PDF-marked answer is B. WebSocket communication. It does not match 'Which technology enables real-time updates in traffic monitoring dashboards'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Batch APIs', but the PDF-marked answer is B. WebSocket communication. It does not match 'Which technology enables real-time updates in traffic monitoring dashboards'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -746,6 +1097,8 @@ window.questionBankData = [
     "marks": "1 marks",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "API data access",
     "prompt": "Why is server-side scripting preferred for database access in web applications?",
     "options": [
       "It reduces network latency",
@@ -757,7 +1110,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 15."
+    "pdfAnswer": "c. It centralizes logic and improves security",
+    "explanation": "The PDF answer key marks C. It centralizes logic and improves security. This answer is suitable because it directly addresses 'Why is server-side scripting preferred for database access in web applications', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'It reduces network latency', but the PDF-marked answer is C. It centralizes logic and improves security. It does not match 'Why is server-side scripting preferred for database access in web applications'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'It exposes database credentials to users', but the PDF-marked answer is C. It centralizes logic and improves security. It does not match 'Why is server-side scripting preferred for database access in web applications'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Why is server-side scripting preferred for database access in web applications'.",
+      "Not suitable: this option says 'It replaces the need for APIs', but the PDF-marked answer is C. It centralizes logic and improves security. It does not match 'Why is server-side scripting preferred for database access in web applications'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -765,6 +1125,8 @@ window.questionBankData = [
     "marks": "2 mark",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "SQL query logic",
     "prompt": "Match the following SQL Clauses & Their Roles: Clauses Roles P. WHERE i. Filters rows after aggregation Q. HAVING ii. Sorts the query output R. GROUP BY iii. Filters rows before aggregation S. ORDER BY iv. Groups rows based on column values Choose the correct option:",
     "options": [
       "P-iii, Q-i, R-iv, S-ii",
@@ -776,7 +1138,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 14. NPTEL Online Certification Courses"
+    "pdfAnswer": "a. P-iii, Q-i, R-iv, S-ii",
+    "explanation": "The PDF answer key marks A. P-iii, Q-i, R-iv, S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-i, Q-iii, R-ii, S-iv', but the PDF-marked answer is A. P-iii, Q-i, R-iv, S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iv, Q-i, R-iii, S-ii', but the PDF-marked answer is A. P-iii, Q-i, R-iv, S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iii, Q-iv, R-i, S-ii', but the PDF-marked answer is A. P-iii, Q-i, R-iv, S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -784,6 +1153,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 3 assignment concept",
     "prompt": "The SQL constraint that enforces a logical condition such as area_sq_m > 50 is called ________.",
     "options": [
       "UNIQUE constraint",
@@ -795,7 +1166,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 12."
+    "pdfAnswer": "c. CHECK constraint",
+    "explanation": "The PDF answer key marks C. CHECK constraint. This answer is suitable because it directly addresses 'The SQL constraint that enforces a logical condition such as area_sq_m > 50 is called ________', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'UNIQUE constraint', but the PDF-marked answer is C. CHECK constraint. It does not match 'The SQL constraint that enforces a logical condition such as area_sq_m > 50 is called ________'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'DEFAULT constraint', but the PDF-marked answer is C. CHECK constraint. It does not match 'The SQL constraint that enforces a logical condition such as area_sq_m > 50 is called ________'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'The SQL constraint that enforces a logical condition such as area_sq_m > 50 is called ________'.",
+      "Not suitable: this option says 'NOT NULL constraint', but the PDF-marked answer is C. CHECK constraint. It does not match 'The SQL constraint that enforces a logical condition such as area_sq_m > 50 is called ________'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -803,6 +1181,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "SQL query logic",
     "prompt": "Which situation requires the use of the HAVING clause instead of the WHERE clause?",
     "options": [
       "Filtering rows based on a non-numeric column",
@@ -814,7 +1194,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 13."
+    "pdfAnswer": "c. Filtering results based on an aggregate condition",
+    "explanation": "The PDF answer key marks C. Filtering results based on an aggregate condition. This answer is suitable because it directly addresses 'Which situation requires the use of the HAVING clause instead of the WHERE clause', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Filtering rows based on a non-numeric column', but the PDF-marked answer is C. Filtering results based on an aggregate condition. It does not match 'Which situation requires the use of the HAVING clause instead of the WHERE clause'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Filtering rows before grouping', but the PDF-marked answer is C. Filtering results based on an aggregate condition. It does not match 'Which situation requires the use of the HAVING clause instead of the WHERE clause'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which situation requires the use of the HAVING clause instead of the WHERE clause'.",
+      "Not suitable: this option says 'Sorting query output', but the PDF-marked answer is C. Filtering results based on an aggregate condition. It does not match 'Which situation requires the use of the HAVING clause instead of the WHERE clause'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -822,6 +1209,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "GIS relationships",
     "prompt": "Which constraint ensures referential integrity between two related tables?",
     "options": [
       "UNIQUE",
@@ -833,7 +1222,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 12."
+    "pdfAnswer": "d. FOREIGN KEY",
+    "explanation": "The PDF answer key marks D. FOREIGN KEY. This answer is suitable because it directly addresses 'Which constraint ensures referential integrity between two related tables', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'UNIQUE', but the PDF-marked answer is D. FOREIGN KEY. It does not match 'Which constraint ensures referential integrity between two related tables'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'PRIMARY KEY', but the PDF-marked answer is D. FOREIGN KEY. It does not match 'Which constraint ensures referential integrity between two related tables'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'CHECK', but the PDF-marked answer is D. FOREIGN KEY. It does not match 'Which constraint ensures referential integrity between two related tables'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which constraint ensures referential integrity between two related tables'."
+    ]
   },
   {
     "week": 3,
@@ -841,6 +1237,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 3 assignment concept",
     "prompt": "The constraint that automatically assigns a value to a column when no value is provided during insertion is ________.",
     "options": [
       "CHECK",
@@ -852,7 +1250,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 12."
+    "pdfAnswer": "c. DEFAULT",
+    "explanation": "The PDF answer key marks C. DEFAULT. This answer is suitable because it directly addresses 'The constraint that automatically assigns a value to a column when no value is provided during insertion is ________', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'CHECK', but the PDF-marked answer is C. DEFAULT. It does not match 'The constraint that automatically assigns a value to a column when no value is provided during insertion is ________'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'UNIQUE', but the PDF-marked answer is C. DEFAULT. It does not match 'The constraint that automatically assigns a value to a column when no value is provided during insertion is ________'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'The constraint that automatically assigns a value to a column when no value is provided during insertion is ________'.",
+      "Not suitable: this option says 'NOT NULL', but the PDF-marked answer is C. DEFAULT. It does not match 'The constraint that automatically assigns a value to a column when no value is provided during insertion is ________'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -860,6 +1265,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "API data access",
     "prompt": "Match the following Data Access & Deployment Concepts: Digital Participation Description P. REST API i. Client-driven data querying allowing flexible response structure Q. ORM ii. Database offered as a fully managed cloud service R. GraphQL iii. Object-based interaction with relational databases S. Managed Cloud Database iv. Stateless request-response communication over HTTP Choose the correct option:",
     "options": [
       "P-iv, Q-iii, R-i, S-ii",
@@ -871,7 +1278,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 15. NPTEL Online Certification Courses"
+    "pdfAnswer": "a. P-iv, Q-iii, R-i, S-ii",
+    "explanation": "The PDF answer key marks A. P-iv, Q-iii, R-i, S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-iii, Q-iv, R-ii, S-i', but the PDF-marked answer is A. P-iv, Q-iii, R-i, S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-i, Q-ii, R-iv, S-iii', but the PDF-marked answer is A. P-iv, Q-iii, R-i, S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iv, Q-i, R-iii, S-ii', but the PDF-marked answer is A. P-iv, Q-iii, R-i, S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -879,6 +1293,8 @@ window.questionBankData = [
     "marks": "2 mark",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "SQL aggregation",
     "prompt": "A city traffic department maintains a database to analyze traffic flow and road safety across different road segments. The database consists of the following two tables: Table 1: Road_segments Column Name Data Type Description road_id INT Unique ID for each road segment road_name VARCHAR Name of the road area VARCHAR City zone (CBD / Residential / Industrial) speed_limit INT Speed limit in km/h Table 2: Traffic_observations Column Name Data Type Description obs_id INT Observation ID road_id INT References road_segments(road_id) avg_speed FLOAT Average vehicle speed (km/h) traffic_volume INT Vehicles per hour obs_date DATE Date of observation Which of the following SQL components are required to compute the average traffic volume per area? (Select all that apply)",
     "options": [
       "JOIN",
@@ -891,7 +1307,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": true,
-    "explanation": "Refer to lecture 14. JOIN operation is used on area from the road_segments table and traffic_volume from the traffic_observations table. AVG() aggregate function is used to calculate the average traffic volume GROUP BY is required to perform this aggregation separately for each area. NPTEL Online Certification Courses"
+    "pdfAnswer": "a, b, & c",
+    "explanation": "The PDF answer key marks A. JOIN; B. GROUP BY. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'AVG()', but the PDF-marked answer is A. JOIN; B. GROUP BY. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'HAVING', but the PDF-marked answer is A. JOIN; B. GROUP BY. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 3,
@@ -899,6 +1322,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_3.pdf",
     "sourceLabel": "Week 3 assignment PDF",
+    "pdfDirect": true,
+    "topic": "SQL query logic",
     "prompt": "From the above given database, Which SQL query correctly identifies road segments that have more than one traffic observation recorded?",
     "options": [
       "SELECT road_id FROM traffic_observations WHERE COUNT(obs_id) > 1;",
@@ -910,7 +1335,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 14. The FROM traffic_observations clause specifies the table containing all traffic observation records. The SELECT road_id clause defines the required output column. The GROUP BY road_id clause groups observations for each road segment COUNT(obs_id) computes the number of observations per group. Since filtering is based on an aggregate value, the HAVING COUNT(obs_id) > 1 clause is used."
+    "pdfAnswer": "b SELECT road_id FROM traffic_observations GROUP BY road_id HAVING COUNT(obs_id) > 1;",
+    "explanation": "The PDF answer key marks B. SELECT road_id FROM traffic_observations GROUP BY road_id HAVING COUNT(obs_id) > 1;. This answer is suitable because it directly addresses 'From the above given database, Which SQL query correctly identifies road segments that have more than one traffic observation recorded', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'SELECT road_id FROM traffic_observations WHERE COUNT(obs_id) > 1;', but the PDF-marked answer is B. SELECT road_id FROM traffic_observations GROUP BY road_id HAVING COUNT(obs_id) > 1;. It does not match 'From the above given database, Which SQL query correctly identifies road segments that have more than one traffic observation recorded'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'From the above given database, Which SQL query correctly identifies road segments that have more than one traffic observation recorded'.",
+      "Not suitable: this option says 'SELECT road_id FROM road_segments GROUP BY road_id HAVING COUNT(obs_id) > 1;', but the PDF-marked answer is B. SELECT road_id FROM traffic_observations GROUP BY road_id HAVING COUNT(obs_id) > 1;. It does not match 'From the above given database, Which SQL query correctly identifies road segments that have more than one traffic observation recorded'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'SELECT road_id FROM traffic_observations HAVING COUNT(obs_id) > 1;', but the PDF-marked answer is B. SELECT road_id FROM traffic_observations GROUP BY road_id HAVING COUNT(obs_id) > 1;. It does not match 'From the above given database, Which SQL query correctly identifies road segments that have more than one traffic observation recorded'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 4,
@@ -918,6 +1350,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Neural networks",
     "prompt": "Which of the following is NOT TRUE about Procedure-Oriented Programming (POP)?",
     "options": [
       "Data is often global and shared across functions.",
@@ -929,7 +1363,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 19, slide 2. Option d. describes Object-Oriented Programming, not POP."
+    "pdfAnswer": "d. Data is fully encapsulated and cannot be accessed directly by functions.",
+    "explanation": "The PDF answer key marks D. Data is fully encapsulated and cannot be accessed directly by functions.. This answer is suitable because it directly addresses 'Which of the following is NOT TRUE about Procedure-Oriented Programming (POP)', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Data is often global and shared across functions.', but the PDF-marked answer is D. Data is fully encapsulated and cannot be accessed directly by functions.. It does not match 'Which of the following is NOT TRUE about Procedure-Oriented Programming (POP)'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Global data are vulnerable to inadvertent changes by functions.', but the PDF-marked answer is D. Data is fully encapsulated and cannot be accessed directly by functions.. It does not match 'Which of the following is NOT TRUE about Procedure-Oriented Programming (POP)'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'External data structure changes require revision of many dependent functions.', but the PDF-marked answer is D. Data is fully encapsulated and cannot be accessed directly by functions.. It does not match 'Which of the following is NOT TRUE about Procedure-Oriented Programming (POP)'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is NOT TRUE about Procedure-Oriented Programming (POP)'."
+    ]
   },
   {
     "week": 4,
@@ -937,6 +1378,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 4 assignment concept",
     "prompt": "Which of the following is NOT a Python library?",
     "options": [
       "SciPy",
@@ -948,7 +1391,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 16. Spyder (Scientific Python Development Environment) is an Integrated Development Environment."
+    "pdfAnswer": "b. Spyder",
+    "explanation": "The PDF answer key marks B. Spyder. This answer is suitable because it directly addresses 'Which of the following is NOT a Python library', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'SciPy', but the PDF-marked answer is B. Spyder. It does not match 'Which of the following is NOT a Python library'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is NOT a Python library'.",
+      "Not suitable: this option says 'Matplotlib', but the PDF-marked answer is B. Spyder. It does not match 'Which of the following is NOT a Python library'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'NumPy', but the PDF-marked answer is B. Spyder. It does not match 'Which of the following is NOT a Python library'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 4,
@@ -956,6 +1406,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 4 assignment concept",
     "prompt": "A variable that is defined inside a function and can be accessed only within that function is called ________ variable.",
     "options": [
       "Global",
@@ -967,7 +1419,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 17, slide 3. NPTEL Online Certification Courses"
+    "pdfAnswer": "d. Local",
+    "explanation": "The PDF answer key marks D. Local. This answer is suitable because it directly addresses 'A variable that is defined inside a function and can be accessed only within that function is called ________ variable', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Global', but the PDF-marked answer is D. Local. It does not match 'A variable that is defined inside a function and can be accessed only within that function is called ________ variable'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'String', but the PDF-marked answer is D. Local. It does not match 'A variable that is defined inside a function and can be accessed only within that function is called ________ variable'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Float', but the PDF-marked answer is D. Local. It does not match 'A variable that is defined inside a function and can be accessed only within that function is called ________ variable'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'A variable that is defined inside a function and can be accessed only within that function is called ________ variable'."
+    ]
   },
   {
     "week": 4,
@@ -975,6 +1434,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 4 assignment concept",
     "prompt": "Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output?",
     "options": [
       "City Park",
@@ -986,7 +1447,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 20, Inheritance in Python. PublicSpace is a parent class that stores the common attribute name and defines the method show_name(). Park is a child class that inherits from PublicSpace and adds its own attribute area. super().__init__(name) calls the parent class constructor to initialize name. The object park1 can access the parent method show_name(), so it prints City Park. NPTEL Online Certification Courses"
+    "pdfAnswer": "a. City Park",
+    "explanation": "The PDF answer key marks A. City Park. This answer is suitable because it directly addresses 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'.",
+      "Not suitable: this option says '20', but the PDF-marked answer is A. City Park. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Error', but the PDF-marked answer is A. City Park. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'name', but the PDF-marked answer is A. City Park. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 4,
@@ -994,6 +1462,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Match the following Python libraries to the functions they are primarily used for. Library Primary function P. SciPy i. Machine learning algorithms for classification, regression, and clustering Q. Statsmodels ii. End-to-end platform for machine learning and deep learning R. Scikit-Learn iii. Scientific computing for optimization, integration, and numerical methods S. TensorFlow iv. Statistical modeling, estimation, and hypothesis testing",
     "options": [
       "P-iii; Q-iv; R-i; S-ii",
@@ -1005,7 +1475,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 16, slide 8 and 9."
+    "pdfAnswer": "a. P-iii; Q-iv; R-i; S-ii",
+    "explanation": "The PDF answer key marks A. P-iii; Q-iv; R-i; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-iv; Q-ii; R-iii; S-i', but the PDF-marked answer is A. P-iii; Q-iv; R-i; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-i; Q-iv; R-ii; S-iii', but the PDF-marked answer is A. P-iii; Q-iv; R-i; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-ii; Q-i; R-iv; S-iii', but the PDF-marked answer is A. P-iii; Q-iv; R-i; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 4,
@@ -1013,6 +1490,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 4 assignment concept",
     "prompt": "Why is calling one function from another considered a good programming practice?",
     "options": [
       "It increases execution time",
@@ -1024,7 +1503,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 17, slide 9."
+    "pdfAnswer": "c. It reduces code duplication and improves reusability",
+    "explanation": "The PDF answer key marks C. It reduces code duplication and improves reusability. This answer is suitable because it directly addresses 'Why is calling one function from another considered a good programming practice', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'It increases execution time', but the PDF-marked answer is C. It reduces code duplication and improves reusability. It does not match 'Why is calling one function from another considered a good programming practice'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'It avoids syntax errors', but the PDF-marked answer is C. It reduces code duplication and improves reusability. It does not match 'Why is calling one function from another considered a good programming practice'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Why is calling one function from another considered a good programming practice'.",
+      "Not suitable: this option says 'It removes the need for variables', but the PDF-marked answer is C. It reduces code duplication and improves reusability. It does not match 'Why is calling one function from another considered a good programming practice'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 4,
@@ -1032,6 +1518,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Object-oriented programming",
     "prompt": "Properties of Object-Oriented Programming (OOP) are- A. Compilation B. Libraries C. Inheritance D. Polymorphism E. Dynamic Binding F. Message Passing",
     "options": [
       "A, B, C and D",
@@ -1043,7 +1531,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 19."
+    "pdfAnswer": "d. C, D, E and F",
+    "explanation": "The PDF answer key marks D. C, D, E and F. This answer is suitable because it directly addresses 'Properties of Object-Oriented Programming (OOP) are- A. Compilation B. Libraries C. Inheritance D. Polymorphism E. Dynamic Binding F. Message Passing', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'A, B, C and D', but the PDF-marked answer is D. C, D, E and F. It does not match 'Properties of Object-Oriented Programming (OOP) are- A. Compilation B. Libraries C. Inheritance D. Polymorphism E. Dynamic Binding F. Message Passing'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A, C, E and F', but the PDF-marked answer is D. C, D, E and F. It does not match 'Properties of Object-Oriented Programming (OOP) are- A. Compilation B. Libraries C. Inheritance D. Polymorphism E. Dynamic Binding F. Message Passing'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'B, C, D and E', but the PDF-marked answer is D. C, D, E and F. It does not match 'Properties of Object-Oriented Programming (OOP) are- A. Compilation B. Libraries C. Inheritance D. Polymorphism E. Dynamic Binding F. Message Passing'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Properties of Object-Oriented Programming (OOP) are- A. Compilation B. Libraries C. Inheritance D. Polymorphism E. Dynamic Binding F. Message Passing'."
+    ]
   },
   {
     "week": 4,
@@ -1051,6 +1546,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 4 assignment concept",
     "prompt": "Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output?",
     "options": [
       "add (3, 4)",
@@ -1062,7 +1559,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 17, function calling a function. The function calculate() calls the function add(3, 4). The add() function returns the sum 7, which is stored in the variable result. Since calculate() returns result, the print(calculate()) statement prints 7."
+    "pdfAnswer": "b. 7",
+    "explanation": "The PDF answer key marks B. 7. This answer is suitable because it directly addresses 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'add (3, 4)', but the PDF-marked answer is B. 7. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'.",
+      "Not suitable: this option says '3+4', but the PDF-marked answer is B. 7. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'error', but the PDF-marked answer is B. 7. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 4,
@@ -1070,6 +1574,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Object-oriented programming",
     "prompt": "Which of the following statements correctly describe features of Object-Oriented Programming (OOP)? A. OOP allows data to be encapsulated within objects, protecting it from accidental external modification. B. OOP organizes code using objects that combine data and behavior C. OOP programs cannot use inheritance or reuse existing code D. OOP enables modular and maintainable program design through classes and objects",
     "options": [
       "A, B and C",
@@ -1081,7 +1587,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 19. NPTEL Online Certification Courses"
+    "pdfAnswer": "b. A, B and D",
+    "explanation": "The PDF answer key marks B. A, B and D. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'A, B and C', but the PDF-marked answer is B. A, B and D. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'A, C and D', but the PDF-marked answer is B. A, B and D. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'B, C and D', but the PDF-marked answer is B. A, B and D. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 4,
@@ -1089,6 +1602,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 4 assignment concept",
     "prompt": "Consider the following lines of code. Assume all necessary standard libraries are imported.. What will be the output?",
     "options": [
       "4",
@@ -1100,7 +1615,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 18. The loop runs while count < 5. Iteration 1: count = 1; total = 1 Iteration 2: count = 3; total = 4 Iteration 3: count = 5; condition becomes False. That makes total = 4, not 6."
+    "pdfAnswer": "a. 4",
+    "explanation": "The PDF answer key marks A. 4. This answer is suitable because it directly addresses 'Consider the following lines of code. Assume all necessary standard libraries are imported.. What will be the output', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'Consider the following lines of code. Assume all necessary standard libraries are imported.. What will be the output'.",
+      "Not suitable: this option says '6', but the PDF-marked answer is A. 4. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported.. What will be the output'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says '9', but the PDF-marked answer is A. 4. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported.. What will be the output'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Infinite loop', but the PDF-marked answer is A. 4. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported.. What will be the output'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 4,
@@ -1108,6 +1630,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 4 assignment concept",
     "prompt": "Which of the following statement is CORRECT?",
     "options": [
       "List and Tuple are both mutable and ordered.",
@@ -1119,7 +1643,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 18. NPTEL Online Certification Courses"
+    "pdfAnswer": "c. Dictionary is mutable and stores data as key-value pairs, while Set does not allow duplicate elements.",
+    "explanation": "The PDF answer key marks C. Dictionary is mutable and stores data as key-value pairs, while Set does not allow duplicate elements.. This answer is suitable because it directly addresses 'Which of the following statement is CORRECT', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'List and Tuple are both mutable and ordered.', but the PDF-marked answer is C. Dictionary is mutable and stores data as key-value pairs, while Set does not allow duplicate elements.. It does not match 'Which of the following statement is CORRECT'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Array and List can store elements of different data types.', but the PDF-marked answer is C. Dictionary is mutable and stores data as key-value pairs, while Set does not allow duplicate elements.. It does not match 'Which of the following statement is CORRECT'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following statement is CORRECT'.",
+      "Not suitable: this option says 'Tuple and Set both preserve insertion order.', but the PDF-marked answer is C. Dictionary is mutable and stores data as key-value pairs, while Set does not allow duplicate elements.. It does not match 'Which of the following statement is CORRECT'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 4,
@@ -1127,6 +1658,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 4 assignment concept",
     "prompt": "Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output?",
     "options": [
       "30 20 20",
@@ -1138,7 +1671,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 20. road_width is a class variable. Assigning z1.road_width = 30 creates an instance variable. z2 still uses the class variable. The class itself remains unchanged. NPTEL Online Certification Courses"
+    "pdfAnswer": "a. 30 20 20",
+    "explanation": "The PDF answer key marks A. 30 20 20. This answer is suitable because it directly addresses 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'.",
+      "Not suitable: this option says '30 30 30', but the PDF-marked answer is A. 30 20 20. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says '20 20 30', but the PDF-marked answer is A. 30 20 20. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says '20 20 20', but the PDF-marked answer is A. 30 20 20. It does not match 'Consider the following lines of code. Assume all necessary standard libraries are imported. What will be the output'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 4,
@@ -1146,6 +1686,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Object-oriented programming",
     "prompt": "A city transport system models Bus, Metro, and Bicycle as separate classes. Each class has a method named travel_time(), but the method calculates time differently for each mode. Which Object-Oriented Programming concept is illustrated here?",
     "options": [
       "Encapsulation",
@@ -1157,7 +1699,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 19. Polymorphism allows the same method name to behave differently depending on the object."
+    "pdfAnswer": "c. Polymorphism",
+    "explanation": "The PDF answer key marks C. Polymorphism. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Encapsulation', but the PDF-marked answer is C. Polymorphism. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Inheritance', but the PDF-marked answer is C. Polymorphism. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'Abstraction', but the PDF-marked answer is C. Polymorphism. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 4,
@@ -1165,6 +1714,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Object-oriented programming",
     "prompt": "Match the following Object Oriented Programming (OOP) concepts with their description. Concept Description P. Encapsulation i. Creating new classes by reusing properties of existing classes Q. Inheritance ii. Hiding implementation details and showing only essential features R. Polymorphism iii. Wrapping data and methods together and restricting direct access S. Abstraction iv. Using the same method name to perform different behaviors",
     "options": [
       "P-ii; Q-iv; R-i; S-iii",
@@ -1176,7 +1727,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 19."
+    "pdfAnswer": "b. P-iii; Q-i; R-iv; S-ii",
+    "explanation": "The PDF answer key marks B. P-iii; Q-i; R-iv; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P-ii; Q-iv; R-i; S-iii', but the PDF-marked answer is B. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-ii; Q-iii; R-i; S-iv', but the PDF-marked answer is B. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-i; Q-iv; R-ii; S-iii', but the PDF-marked answer is B. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 4,
@@ -1184,6 +1742,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 4 assignment concept",
     "prompt": "A ________ is a single Python file that organizes code and may contain functions, classes, or variables.",
     "options": [
       "package",
@@ -1195,7 +1755,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 16. NPTEL Online Certification Courses"
+    "pdfAnswer": "c. module",
+    "explanation": "The PDF answer key marks C. module. This answer is suitable because it directly addresses 'A ________ is a single Python file that organizes code and may contain functions, classes, or variables', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'package', but the PDF-marked answer is C. module. It does not match 'A ________ is a single Python file that organizes code and may contain functions, classes, or variables'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'library', but the PDF-marked answer is C. module. It does not match 'A ________ is a single Python file that organizes code and may contain functions, classes, or variables'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'A ________ is a single Python file that organizes code and may contain functions, classes, or variables'.",
+      "Not suitable: this option says 'directory', but the PDF-marked answer is C. module. It does not match 'A ________ is a single Python file that organizes code and may contain functions, classes, or variables'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 4,
@@ -1203,6 +1770,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment 4_Week 4.pdf",
     "sourceLabel": "Week 4 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 4 assignment concept",
     "prompt": "In object-oriented programming, ______________ allows the method to be decided at runtime, not at compile time.",
     "options": [
       "method overloading",
@@ -1214,7 +1783,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 19."
+    "pdfAnswer": "b. dynamic binding",
+    "explanation": "The PDF answer key marks B. dynamic binding. This answer is suitable because it directly addresses 'In object-oriented programming, ______________ allows the method to be decided at runtime, not at compile time', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'method overloading', but the PDF-marked answer is B. dynamic binding. It does not match 'In object-oriented programming, ______________ allows the method to be decided at runtime, not at compile time'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'In object-oriented programming, ______________ allows the method to be decided at runtime, not at compile time'.",
+      "Not suitable: this option says 'message passing', but the PDF-marked answer is B. dynamic binding. It does not match 'In object-oriented programming, ______________ allows the method to be decided at runtime, not at compile time'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'encapsulation', but the PDF-marked answer is B. dynamic binding. It does not match 'In object-oriented programming, ______________ allows the method to be decided at runtime, not at compile time'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1222,6 +1798,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Data formats",
     "prompt": "Which of the following statements are correct regarding JSON and CSV data formats?",
     "options": [
       "JSON stores data only in rows",
@@ -1233,7 +1811,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 21."
+    "pdfAnswer": "b. JSON supports nested and hierarchical structures",
+    "explanation": "The PDF answer key marks B. JSON supports nested and hierarchical structures. This answer is suitable because it directly addresses 'Which of the following statements are correct regarding JSON and CSV data formats', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'JSON stores data only in rows', but the PDF-marked answer is B. JSON supports nested and hierarchical structures. It does not match 'Which of the following statements are correct regarding JSON and CSV data formats'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following statements are correct regarding JSON and CSV data formats'.",
+      "Not suitable: this option says 'CSV supports key-value pairs', but the PDF-marked answer is B. JSON supports nested and hierarchical structures. It does not match 'Which of the following statements are correct regarding JSON and CSV data formats'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'CSV preserves data types automatically', but the PDF-marked answer is B. JSON supports nested and hierarchical structures. It does not match 'Which of the following statements are correct regarding JSON and CSV data formats'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1241,6 +1826,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "What problem does Object-Relational Mapping (ORM) primarily solve?",
     "options": [
       "Data visualization",
@@ -1252,7 +1839,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 21."
+    "pdfAnswer": "c. Bridging database tables with programming objects",
+    "explanation": "The PDF answer key marks C. Bridging database tables with programming objects. This answer is suitable because it directly addresses 'What problem does Object-Relational Mapping (ORM) primarily solve', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Data visualization', but the PDF-marked answer is C. Bridging database tables with programming objects. It does not match 'What problem does Object-Relational Mapping (ORM) primarily solve'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Manual SQL query writing', but the PDF-marked answer is C. Bridging database tables with programming objects. It does not match 'What problem does Object-Relational Mapping (ORM) primarily solve'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'What problem does Object-Relational Mapping (ORM) primarily solve'.",
+      "Not suitable: this option says 'Database installation', but the PDF-marked answer is C. Bridging database tables with programming objects. It does not match 'What problem does Object-Relational Mapping (ORM) primarily solve'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1260,6 +1854,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Python data analysis",
     "prompt": "Which Pandas attribute immediately reveals the dimensionality of a dataset?",
     "options": [
       "columns",
@@ -1271,7 +1867,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 22. NPTEL Online Certification Courses"
+    "pdfAnswer": "c. shape",
+    "explanation": "The PDF answer key marks C. shape. This answer is suitable because it directly addresses 'Which Pandas attribute immediately reveals the dimensionality of a dataset', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'columns', but the PDF-marked answer is C. shape. It does not match 'Which Pandas attribute immediately reveals the dimensionality of a dataset'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'info()', but the PDF-marked answer is C. shape. It does not match 'Which Pandas attribute immediately reveals the dimensionality of a dataset'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which Pandas attribute immediately reveals the dimensionality of a dataset'.",
+      "Not suitable: this option says 'size', but the PDF-marked answer is C. shape. It does not match 'Which Pandas attribute immediately reveals the dimensionality of a dataset'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1279,6 +1882,8 @@ window.questionBankData = [
     "marks": "1 marks",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "NoSQL databases",
     "prompt": "Which feature makes SQLite suitable for lightweight applications?",
     "options": [
       "Requires dedicated server",
@@ -1290,7 +1895,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 23."
+    "pdfAnswer": "b. Embedded and serverless architecture",
+    "explanation": "The PDF answer key marks B. Embedded and serverless architecture. This answer is suitable because it directly addresses 'Which feature makes SQLite suitable for lightweight applications', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Requires dedicated server', but the PDF-marked answer is B. Embedded and serverless architecture. It does not match 'Which feature makes SQLite suitable for lightweight applications'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which feature makes SQLite suitable for lightweight applications'.",
+      "Not suitable: this option says 'Supports only NoSQL queries', but the PDF-marked answer is B. Embedded and serverless architecture. It does not match 'Which feature makes SQLite suitable for lightweight applications'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Operates only online', but the PDF-marked answer is B. Embedded and serverless architecture. It does not match 'Which feature makes SQLite suitable for lightweight applications'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1298,6 +1910,8 @@ window.questionBankData = [
     "marks": "2 mark",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Pandas DataFrames",
     "prompt": "Match the following Visualization Techniques (Column I ) with their most appropriate analytical use(Column II): Column I Column II P. Histogram i. Comparison of aggregated values across categories Q. Boxplot ii. Identification of distribution shape and frequency R. Bar Plot iii. Detection of outliers and comparison of spread S. Kernel Density Plot iv. Smooth estimation of probability density",
     "options": [
       "P-ii, Q-iii, R-i, S-iv",
@@ -1309,7 +1923,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 24."
+    "pdfAnswer": "a. P-ii, Q-iii, R-i, S-iv",
+    "explanation": "The PDF answer key marks A. P-ii, Q-iii, R-i, S-iv. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-iii, Q-ii, R-iv, S-i', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-i, Q-iv, R-ii, S-iii', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iv, Q-i, R-iii, S-ii', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1317,6 +1938,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 5 assignment concept",
     "prompt": "Which plot is most effective for comparing distributions across categories?",
     "options": [
       "Line plot",
@@ -1328,7 +1951,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 25. NPTEL Online Certification Courses"
+    "pdfAnswer": "c. Boxplot",
+    "explanation": "The PDF answer key marks C. Boxplot. This answer is suitable because it directly addresses 'Which plot is most effective for comparing distributions across categories', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Line plot', but the PDF-marked answer is C. Boxplot. It does not match 'Which plot is most effective for comparing distributions across categories'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Scatter plot', but the PDF-marked answer is C. Boxplot. It does not match 'Which plot is most effective for comparing distributions across categories'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which plot is most effective for comparing distributions across categories'.",
+      "Not suitable: this option says 'Stem plot', but the PDF-marked answer is C. Boxplot. It does not match 'Which plot is most effective for comparing distributions across categories'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1336,6 +1966,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 5 assignment concept",
     "prompt": "Which rule is commonly used to flag outliers using quartiles?",
     "options": [
       "Z-score rule",
@@ -1347,7 +1979,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 25."
+    "pdfAnswer": "c. Tukey's rule",
+    "explanation": "The PDF answer key marks C. Tukey's rule. This answer is suitable because it directly addresses 'Which rule is commonly used to flag outliers using quartiles', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Z-score rule', but the PDF-marked answer is C. Tukey's rule. It does not match 'Which rule is commonly used to flag outliers using quartiles'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says '3-sigma rule', but the PDF-marked answer is C. Tukey's rule. It does not match 'Which rule is commonly used to flag outliers using quartiles'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which rule is commonly used to flag outliers using quartiles'.",
+      "Not suitable: this option says 'Min-max rule', but the PDF-marked answer is C. Tukey's rule. It does not match 'Which rule is commonly used to flag outliers using quartiles'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1355,6 +1994,8 @@ window.questionBankData = [
     "marks": "1 marks",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 5 assignment concept",
     "prompt": "A DataFrame df contains a numeric column population with missing values and an index that is no longer meaningful after several row deletions. Which sequence of operations correctly fills missing values using estimation and then restores a clean default index?",
     "options": [
       "df = df.reset_index() df[\"population\"] = df[\"population\"].interpolate()",
@@ -1366,7 +2007,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 21. Interpolate() estimates missing numeric values without removing rows, preserving data continuity. After row -level operations, reset_index(drop=True) restores a clean sequential index without retaining the old index as a column. NPTEL Online Certification Courses"
+    "pdfAnswer": "b df[\"population\"] = df[\"population\"].interpolate() df = df.reset_index(drop=True))",
+    "explanation": "The PDF answer key marks B. df[\"population\"] = df[\"population\"].interpolate() df = df.reset_index(drop=True). This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'df = df.reset_index() df[\"population\"] = df[\"population\"].interpolate()', but the PDF-marked answer is B. df[\"population\"] = df[\"population\"].interpolate() df = df.reset_index(drop=True). It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'df = df.dropna() df = df.set_index(\"population\")', but the PDF-marked answer is B. df[\"population\"] = df[\"population\"].interpolate() df = df.reset_index(drop=True). It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'df[\"population\"] = df[\"population\"].fillna(0) df = df.reset_index()', but the PDF-marked answer is B. df[\"population\"] = df[\"population\"].interpolate() df = df.reset_index(drop=True). It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1374,6 +2022,8 @@ window.questionBankData = [
     "marks": "2 mark",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 5 assignment concept",
     "prompt": "Match the following Data Inspection (Column I) & Preparation Operations (Column II) Column I Column II P. info() i. Provides statistical distribution of numerical variables Q. describe() ii. Displays schema, data types, and missing values R. fillna() iii. Replaces missing entries using a defined strategy S. astype() iv. Converts column data types explicitly Choose the correct option:",
     "options": [
       "P-i, Q-ii, R-iv, S-iii",
@@ -1385,7 +2035,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 22."
+    "pdfAnswer": "b. P-ii, Q-i, R-iii, S-iv",
+    "explanation": "The PDF answer key marks B. P-ii, Q-i, R-iii, S-iv. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P-i, Q-ii, R-iv, S-iii', but the PDF-marked answer is B. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-iv, Q-iii, R-i, S-ii', but the PDF-marked answer is B. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iii, Q-iv, R-ii, S-i', but the PDF-marked answer is B. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1393,6 +2050,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 5 assignment concept",
     "prompt": "A DataFrame df contains missing values in a numeric column area_sq_m. Which approach is most suitable to fill missing values while minimizing outlier influence?",
     "options": [
       "df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].mean())",
@@ -1404,7 +2063,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 22. The median is a robust measure of central tendency and is less affected by extreme values or outliers. Filling missing values using the median preserves the overall distribution of the data better than the mean or constant replacement, making it suitable for skewed urban datasets. NPTEL Online Certification Courses"
+    "pdfAnswer": "c. df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].median())",
+    "explanation": "The PDF answer key marks C. df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].median()). This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].mean())', but the PDF-marked answer is C. df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].median()). It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'df[\"area_sq_m\"].fillna(0)', but the PDF-marked answer is C. df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].median()). It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'df.dropna()', but the PDF-marked answer is C. df[\"area_sq_m\"].fillna(df[\"area_sq_m\"].median()). It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1412,6 +2078,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Which of the following is the primary functional advantage of using an Object-Relational Mapping (ORM) framework compared to writing raw SQL queries?",
     "options": [
       "Faster execution in all scenarios",
@@ -1423,7 +2091,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 23."
+    "pdfAnswer": "c. Database abstraction and object-based interaction",
+    "explanation": "The PDF answer key marks C. Database abstraction and object-based interaction. This answer is suitable because it directly addresses 'Which of the following is the primary functional advantage of using an Object-Relational Mapping (ORM) framework compared to writing raw SQL queries', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Faster execution in all scenarios', but the PDF-marked answer is C. Database abstraction and object-based interaction. It does not match 'Which of the following is the primary functional advantage of using an Object-Relational Mapping (ORM) framework compared to writing raw SQL queries'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Reduced memory usage', but the PDF-marked answer is C. Database abstraction and object-based interaction. It does not match 'Which of the following is the primary functional advantage of using an Object-Relational Mapping (ORM) framework compared to writing raw SQL queries'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is the primary functional advantage of using an Object-Relational Mapping (ORM) framework compared to writing raw SQL queries'.",
+      "Not suitable: this option says 'Automatic indexing of tables', but the PDF-marked answer is C. Database abstraction and object-based interaction. It does not match 'Which of the following is the primary functional advantage of using an Object-Relational Mapping (ORM) framework compared to writing raw SQL queries'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1431,6 +2106,8 @@ window.questionBankData = [
     "marks": "2 mark",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 5 assignment concept",
     "prompt": "Which code correctly visualizes the distribution and density of a continuous variable PM25?",
     "options": [
       "df[\"PM25\"].plot(kind=\"bar\")",
@@ -1442,7 +2119,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 24. A histogram visualizes the distribution of a continuous variable by grouping values into bins, while the kernel density estimate (KDE) provides a smooth approximation of the probability density. The sns.histplot() function with kde=True correctly displays both the frequency distribution and the underlying density of PM2.5 values."
+    "pdfAnswer": "b. sns.histplot(df[\"PM25\"], kde=True)",
+    "explanation": "The PDF answer key marks B. sns.histplot(df[\"PM25\"], kde=True). This answer is suitable because it directly addresses 'Which code correctly visualizes the distribution and density of a continuous variable PM25', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'df[\"PM25\"].plot(kind=\"bar\")', but the PDF-marked answer is B. sns.histplot(df[\"PM25\"], kde=True). It does not match 'Which code correctly visualizes the distribution and density of a continuous variable PM25'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which code correctly visualizes the distribution and density of a continuous variable PM25'.",
+      "Not suitable: this option says 'df.groupby(\"PM25\").count().plot()', but the PDF-marked answer is B. sns.histplot(df[\"PM25\"], kde=True). It does not match 'Which code correctly visualizes the distribution and density of a continuous variable PM25'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'plt.scatter(df.index, df[\"PM25\"])', but the PDF-marked answer is B. sns.histplot(df[\"PM25\"], kde=True). It does not match 'Which code correctly visualizes the distribution and density of a continuous variable PM25'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1450,6 +2134,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 5 assignment concept",
     "prompt": "Given a DataFrame df with columns Area and PM25, which code correctly computes and visualizes the mean PM2.5 concentration by urban area?",
     "options": [
       "df.plot(x=\"Area\", y=\"PM25\", kind=\"bar\")",
@@ -1461,7 +2147,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 24. To compute the mean PM2.5 concentration separately for each urban area, the data must first be grouped by Area. The groupby(\"Area\")[\"PM25\"].mean() operation performs the area -wise aggregation, and plot(kind=\"bar\") correctly visualizes the aggregated values."
+    "pdfAnswer": "b. df.groupby(\"Area\")[\"PM25\"].mean().plot(kind=\"bar\")",
+    "explanation": "The PDF answer key marks B. df.groupby(\"Area\")[\"PM25\"].mean().plot(kind=\"bar\"). This answer is suitable because it directly addresses 'Given a DataFrame df with columns Area and PM25, which code correctly computes and visualizes the mean PM2.5 concentration by urban area', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'df.plot(x=\"Area\", y=\"PM25\", kind=\"bar\")', but the PDF-marked answer is B. df.groupby(\"Area\")[\"PM25\"].mean().plot(kind=\"bar\"). It does not match 'Given a DataFrame df with columns Area and PM25, which code correctly computes and visualizes the mean PM2.5 concentration by urban area'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Given a DataFrame df with columns Area and PM25, which code correctly computes and visualizes the mean PM2.5 concentration by urban area'.",
+      "Not suitable: this option says 'df.groupby(\"PM25\")[\"Area\"].mean().plot()', but the PDF-marked answer is B. df.groupby(\"Area\")[\"PM25\"].mean().plot(kind=\"bar\"). It does not match 'Given a DataFrame df with columns Area and PM25, which code correctly computes and visualizes the mean PM2.5 concentration by urban area'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'df[\"PM25\"].mean().plot(kind=\"bar\")', but the PDF-marked answer is B. df.groupby(\"Area\")[\"PM25\"].mean().plot(kind=\"bar\"). It does not match 'Given a DataFrame df with columns Area and PM25, which code correctly computes and visualizes the mean PM2.5 concentration by urban area'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1469,6 +2162,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Match the following ORM Component /Object (Column I) with the Functional Responsibility (column II) Column I Column II P. Declarative Model i. Maps database tables to Python classes using schema definitions Q. Session ii. Manages transactional scope and persistence of ORM objects R. SQL Alchemy Engine iii. Establishes and manages low-level database connectivity S. Query Builder iv. Constructs object-oriented queries independent of database syntax Choose the correct option:",
     "options": [
       "P-ii, Q-i, R-iii, S-iv",
@@ -1480,7 +2175,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 23."
+    "pdfAnswer": "b. P-i, Q-ii, R-iii, S-iv",
+    "explanation": "The PDF answer key marks B. P-i, Q-ii, R-iii, S-iv. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P-ii, Q-i, R-iii, S-iv', but the PDF-marked answer is B. P-i, Q-ii, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-iii, Q-iv, R-i, S-ii', but the PDF-marked answer is B. P-i, Q-ii, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iv, Q-iii, R-ii, S-i', but the PDF-marked answer is B. P-i, Q-ii, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1488,6 +2190,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 5 assignment concept",
     "prompt": "Which code line correctly computes the Interquartile Range (IQR) of a numeric column values?",
     "options": [
       "iqr = values.max() - values.min()",
@@ -1499,7 +2203,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 25. The interquartile range (IQR) measures the spread of the middle 50% of the data and is defined as the difference between the third quartile (Q3) and the first quartile (Q1). The quantile(0.75) and quantile(0.25) functions correctly compute Q3 and Q1, respectively. NPTEL Online Certification Courses"
+    "pdfAnswer": "b. iqr = values.quantile(0.75) - values.quantile(0.25)",
+    "explanation": "The PDF answer key marks B. iqr = values.quantile(0.75) - values.quantile(0.25). This answer is suitable because it directly addresses 'Which code line correctly computes the Interquartile Range (IQR) of a numeric column values', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'iqr = values.max() - values.min()', but the PDF-marked answer is B. iqr = values.quantile(0.75) - values.quantile(0.25). It does not match 'Which code line correctly computes the Interquartile Range (IQR) of a numeric column values'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which code line correctly computes the Interquartile Range (IQR) of a numeric column values'.",
+      "Not suitable: this option says 'iqr = values.mean() - values.median()', but the PDF-marked answer is B. iqr = values.quantile(0.75) - values.quantile(0.25). It does not match 'Which code line correctly computes the Interquartile Range (IQR) of a numeric column values'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'iqr = values.std()', but the PDF-marked answer is B. iqr = values.quantile(0.75) - values.quantile(0.25). It does not match 'Which code line correctly computes the Interquartile Range (IQR) of a numeric column values'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 5,
@@ -1507,6 +2218,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Urban Informatics_Assignment_week_5.pdf",
     "sourceLabel": "Week 5 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "A dataset contains a numeric column value with varying magnitudes. The objective is to rescale the column to a fixed range between 0 and 1, so that comparisons across variables become meaningful. Which code correctly performs this transformation?",
     "options": [
       "df[\"value\"] = df[\"value\"] / df[\"value\"].mean()",
@@ -1518,7 +2231,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 25. Min-max normalization rescales values by subtracting the minimum and dividing by the data range, ensuring all values lie between 0 and 1."
+    "pdfAnswer": "c df[\"value\"] = (df[\"value\"] - df[\"value\"].min()) / (df[\"value\"].max() - df[\"value\"].min())",
+    "explanation": "The PDF answer key marks C. df[\"value\"] = (df[\"value\"] - df[\"value\"].min()) / (df[\"value\"].max() - df[\"value\"].min()). This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'df[\"value\"] = df[\"value\"] / df[\"value\"].mean()', but the PDF-marked answer is C. df[\"value\"] = (df[\"value\"] - df[\"value\"].min()) / (df[\"value\"].max() - df[\"value\"].min()). It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'df[\"value\"] = (df[\"value\"] - df[\"value\"].min()) / df[\"value\"].max()', but the PDF-marked answer is C. df[\"value\"] = (df[\"value\"] - df[\"value\"].min()) / (df[\"value\"].max() - df[\"value\"].min()). It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'df[\"value\"] = df[\"value\"] / df[\"value\"].std()', but the PDF-marked answer is C. df[\"value\"] = (df[\"value\"] - df[\"value\"].min()) / (df[\"value\"].max() - df[\"value\"].min()). It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 6,
@@ -1526,6 +2246,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "__________________ are a class of deep learning models built using the Transformer architecture and trained on massive text data.",
     "options": [
       "Convolutional Neural Networks",
@@ -1537,7 +2259,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 28, slide 10."
+    "pdfAnswer": "b. Large Language Models",
+    "explanation": "The PDF answer key marks B. Large Language Models. This answer is suitable because it directly addresses '__________________ are a class of deep learning models built using the Transformer architecture and trained on massive text data', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Convolutional Neural Networks', but the PDF-marked answer is B. Large Language Models. It does not match '__________________ are a class of deep learning models built using the Transformer architecture and trained on massive text data'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches '__________________ are a class of deep learning models built using the Transformer architecture and trained on massive text data'.",
+      "Not suitable: this option says 'Clustering Models', but the PDF-marked answer is B. Large Language Models. It does not match '__________________ are a class of deep learning models built using the Transformer architecture and trained on massive text data'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Recurrent Neural Networks', but the PDF-marked answer is B. Large Language Models. It does not match '__________________ are a class of deep learning models built using the Transformer architecture and trained on massive text data'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 6,
@@ -1545,6 +2274,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Why are data transformations (e.g., scaling, rotation) applied in machine learning?",
     "options": [
       "To convert datasets into square matrices required by algorithms.",
@@ -1556,7 +2287,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 27, slide 3."
+    "pdfAnswer": "c. To make sure patterns becomes clearer and capture maximum variance.",
+    "explanation": "The PDF answer key marks C. To make sure patterns becomes clearer and capture maximum variance.. This answer is suitable because it directly addresses 'Why are data transformations (e.g., scaling, rotation) applied in machine learning', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'To convert datasets into square matrices required by algorithms.', but the PDF-marked answer is C. To make sure patterns becomes clearer and capture maximum variance.. It does not match 'Why are data transformations (e.g., scaling, rotation) applied in machine learning'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'To uniformly redistribute variance across all features.', but the PDF-marked answer is C. To make sure patterns becomes clearer and capture maximum variance.. It does not match 'Why are data transformations (e.g., scaling, rotation) applied in machine learning'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Why are data transformations (e.g., scaling, rotation) applied in machine learning'.",
+      "Not suitable: this option says 'To eliminate feature correlation completely.', but the PDF-marked answer is C. To make sure patterns becomes clearer and capture maximum variance.. It does not match 'Why are data transformations (e.g., scaling, rotation) applied in machine learning'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 6,
@@ -1564,6 +2302,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "SQL query logic",
     "prompt": "Which statement best describes a black box model?",
     "options": [
       "A model where internal logic is hidden, focusing only on inputs and outputs",
@@ -1575,7 +2315,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 28, slide 2. NPTEL Online Certification Courses"
+    "pdfAnswer": "a. A model where internal logic is hidden, focusing only on inputs and outputs",
+    "explanation": "The PDF answer key marks A. A model where internal logic is hidden, focusing only on inputs and outputs. This answer is suitable because it directly addresses 'Which statement best describes a black box model', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'Which statement best describes a black box model'.",
+      "Not suitable: this option says 'A model built only using qualitative assumptions', but the PDF-marked answer is A. A model where internal logic is hidden, focusing only on inputs and outputs. It does not match 'Which statement best describes a black box model'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A model that cannot be validated or tested', but the PDF-marked answer is A. A model where internal logic is hidden, focusing only on inputs and outputs. It does not match 'Which statement best describes a black box model'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A model with fully transparent parameters and equations', but the PDF-marked answer is A. A model where internal logic is hidden, focusing only on inputs and outputs. It does not match 'Which statement best describes a black box model'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 6,
@@ -1583,6 +2330,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Machine learning types",
     "prompt": "Match the following Machine learning mechanism with their example- Learning mechanism Example task P. Supervised Learning i. K-means clustering of land-use zones Q. Unsupervised Learning ii. Training an autonomous car through reward signals R. Semi-Supervised Learning iii. Predicting house prices from labeled data S. Reinforcement Learning iv. Image classification with few labeled and many unlabeled samples",
     "options": [
       "P-i; Q-iii; R-ii; S-iv",
@@ -1594,7 +2343,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 28, slide 2."
+    "pdfAnswer": "d. P-iii; Q-i; R-iv; S-ii",
+    "explanation": "The PDF answer key marks D. P-iii; Q-i; R-iv; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P-i; Q-iii; R-ii; S-iv', but the PDF-marked answer is D. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-ii; Q-i; R-iv; S-iii', but the PDF-marked answer is D. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iii; Q-iv; R-ii; S-i', but the PDF-marked answer is D. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question."
+    ]
   },
   {
     "week": 6,
@@ -1602,6 +2358,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Machine learning types",
     "prompt": "Which of the following is NOT a supervised learning model?",
     "options": [
       "Support Vector Machine (SVM) used for land-use classification",
@@ -1613,7 +2371,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 28, slide 5. PCA is an unsupervised learning technique for dimensionality reduction."
+    "pdfAnswer": "c. Principal Component Analysis (PCA) applied to urban environmental indicators",
+    "explanation": "The PDF answer key marks C. Principal Component Analysis (PCA) applied to urban environmental indicators. This answer is suitable because it directly addresses 'Which of the following is NOT a supervised learning model', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Support Vector Machine (SVM) used for land-use classification', but the PDF-marked answer is C. Principal Component Analysis (PCA) applied to urban environmental indicators. It does not match 'Which of the following is NOT a supervised learning model'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Random Forest model predicting peak-hour traffic volume', but the PDF-marked answer is C. Principal Component Analysis (PCA) applied to urban environmental indicators. It does not match 'Which of the following is NOT a supervised learning model'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is NOT a supervised learning model'.",
+      "Not suitable: this option says 'Logistic Regression estimating the probability of modal shift', but the PDF-marked answer is C. Principal Component Analysis (PCA) applied to urban environmental indicators. It does not match 'Which of the following is NOT a supervised learning model'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 6,
@@ -1621,6 +2386,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Machine learning types",
     "prompt": "SARSA algorithm is a __________ algorithm.",
     "options": [
       "Reinforcement learning",
@@ -1632,7 +2399,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 28, slide 9. NPTEL Online Certification Courses"
+    "pdfAnswer": "a. Reinforcement learning",
+    "explanation": "The PDF answer key marks A. Reinforcement learning. This answer is suitable because it directly addresses 'SARSA algorithm is a __________ algorithm', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'SARSA algorithm is a __________ algorithm'.",
+      "Not suitable: this option says 'Supervised learning', but the PDF-marked answer is A. Reinforcement learning. It does not match 'SARSA algorithm is a __________ algorithm'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Unsupervised learning', but the PDF-marked answer is A. Reinforcement learning. It does not match 'SARSA algorithm is a __________ algorithm'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Clustering', but the PDF-marked answer is A. Reinforcement learning. It does not match 'SARSA algorithm is a __________ algorithm'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 6,
@@ -1640,6 +2414,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "GIS relationships",
     "prompt": "A regression model predicting urban congestion includes three predictors: population density, commercial floor area ratio (FAR), and traffic volume. The model has a high R2 (0.82), but two predictors show VIF (Variance Inflation Factor) values above 12. Which of the following statements is MOST accurate?",
     "options": [
       "The dependent variable is poorly measured, which inflates the VIF values.",
@@ -1651,7 +2427,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 29, slide 8. VIF measures how much the variance of a coefficient is inflated due to correlations among predictors (not due to the dependent variable). High VIF implies multicollinearity, meaning the model may predict well overall, but it becomes difficult to separate the individual effects of correlated predictors."
+    "pdfAnswer": "d. Even though the model fit is good, the individual regression coefficients may not be reliably interpreted due to multicollinearity among predictors.",
+    "explanation": "The PDF answer key marks D. Even though the model fit is good, the individual regression coefficients may not be reliably interpreted due to multicollinearity among predictors.. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'The dependent variable is poorly measured, which inflates the VIF values.', but the PDF-marked answer is D. Even though the model fit is good, the individual regression coefficients may not be reliably interpreted due to multicollinearity among predictors.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'High VIF indicates that the predictors are strongly related to the dependent variable.', but the PDF-marked answer is D. Even though the model fit is good, the individual regression coefficients may not be reliably interpreted due to multicollinearity among predictors.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Removing the dependent variable from the model will reduce VIF values.', but the PDF-marked answer is D. Even though the model fit is good, the individual regression coefficients may not be reliably interpreted due to multicollinearity among predictors.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question."
+    ]
   },
   {
     "week": 6,
@@ -1659,6 +2442,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Neural networks",
     "prompt": "In an urban planning study, a researcher wants to predict hourly traffic flow using past time -series traffic data. Which neural network architecture is most suitable for capturing temporal dependencies in such sequential data?",
     "options": [
       "Convolutional Neural Network (CNN)",
@@ -1670,7 +2455,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 28, slide 10. RNNs and LSTMs are specifically designed to handle sequential or time -series data. They retain information from previous time steps, making them ideal for modeling temporal dependencies such as hourly traffic patterns in urban planning."
+    "pdfAnswer": "b. Long Short-Term Memory (LSTM)",
+    "explanation": "The PDF answer key marks B. Long Short-Term Memory (LSTM). This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Convolutional Neural Network (CNN)', but the PDF-marked answer is B. Long Short-Term Memory (LSTM). It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'Undercomplete Autoencoder', but the PDF-marked answer is B. Long Short-Term Memory (LSTM). It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Deep Feed Forward Neural Network', but the PDF-marked answer is B. Long Short-Term Memory (LSTM). It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 6,
@@ -1678,6 +2470,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "________________ provides a framework for measuring uncertainty (entropy) of a prediction.",
     "options": [
       "Information theory",
@@ -1689,7 +2483,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 27, slide 6."
+    "pdfAnswer": "a. Information theory",
+    "explanation": "The PDF answer key marks A. Information theory. This answer is suitable because it directly addresses '________________ provides a framework for measuring uncertainty (entropy) of a prediction', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches '________________ provides a framework for measuring uncertainty (entropy) of a prediction'.",
+      "Not suitable: this option says 'Optimization theory', but the PDF-marked answer is A. Information theory. It does not match '________________ provides a framework for measuring uncertainty (entropy) of a prediction'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Graph theory', but the PDF-marked answer is A. Information theory. It does not match '________________ provides a framework for measuring uncertainty (entropy) of a prediction'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Learning theory', but the PDF-marked answer is A. Information theory. It does not match '________________ provides a framework for measuring uncertainty (entropy) of a prediction'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 6,
@@ -1697,6 +2498,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Pandas DataFrames",
     "prompt": "A city planner is analyzing GPS-based pedestrian movement data in a historic market. The dataset has no predefined labels, contains irregularly shaped clust ers, and also includes isolated outlier points caused by occasional tourists. Which clustering method would be most appropriate for identifying the main activity zones while separating the outliers?",
     "options": [
       "K-Means",
@@ -1708,7 +2511,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 28, slide 6. DBSCAN, because it can detect clusters of arbitrary shape and identify noise."
+    "pdfAnswer": "c. DBSCAN",
+    "explanation": "The PDF answer key marks C. DBSCAN. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'K-Means', but the PDF-marked answer is C. DBSCAN. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Hierarchical Clustering', but the PDF-marked answer is C. DBSCAN. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'PCA', but the PDF-marked answer is C. DBSCAN. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 6,
@@ -1716,6 +2526,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 6 assignment concept",
     "prompt": "When should you use Pearson correlation (r) instead of Spearman rank correlation (rho)?",
     "options": [
       "For monotonic, non-linear data with outliers",
@@ -1727,7 +2539,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 29, slide 5."
+    "pdfAnswer": "b. For linear, continuous data without extreme outliers",
+    "explanation": "The PDF answer key marks B. For linear, continuous data without extreme outliers. This answer is suitable because it directly addresses 'When should you use Pearson correlation (r) instead of Spearman rank correlation (rho)', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'For monotonic, non-linear data with outliers', but the PDF-marked answer is B. For linear, continuous data without extreme outliers. It does not match 'When should you use Pearson correlation (r) instead of Spearman rank correlation (rho)'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'When should you use Pearson correlation (r) instead of Spearman rank correlation (rho)'.",
+      "Not suitable: this option says 'When strong outliers are present', but the PDF-marked answer is B. For linear, continuous data without extreme outliers. It does not match 'When should you use Pearson correlation (r) instead of Spearman rank correlation (rho)'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'For categorical variables', but the PDF-marked answer is B. For linear, continuous data without extreme outliers. It does not match 'When should you use Pearson correlation (r) instead of Spearman rank correlation (rho)'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 6,
@@ -1735,6 +2554,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "In urban planning research, the Kruskal-Wallis test can be used to-",
     "options": [
       "Compare the mean traffic volumes of two road corridors using normally distributed data",
@@ -1746,7 +2567,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 30, slide 9. NPTEL Online Certification Courses"
+    "pdfAnswer": "d. Compare the median pedestrian satisfaction levels across three different street design types when data is not normally distributed",
+    "explanation": "The PDF answer key marks D. Compare the median pedestrian satisfaction levels across three different street design types when data is not normally distributed. This answer is suitable because it directly addresses 'In urban planning research, the Kruskal-Wallis test can be used to-', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Compare the mean traffic volumes of two road corridors using normally distributed data', but the PDF-marked answer is D. Compare the median pedestrian satisfaction levels across three different street design types when data is not normally distributed. It does not match 'In urban planning research, the Kruskal-Wallis test can be used to-'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Measure the correlation between land use mix and property prices', but the PDF-marked answer is D. Compare the median pedestrian satisfaction levels across three different street design types when data is not normally distributed. It does not match 'In urban planning research, the Kruskal-Wallis test can be used to-'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Predict traffic congestion levels using multiple independent variables', but the PDF-marked answer is D. Compare the median pedestrian satisfaction levels across three different street design types when data is not normally distributed. It does not match 'In urban planning research, the Kruskal-Wallis test can be used to-'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'In urban planning research, the Kruskal-Wallis test can be used to-'."
+    ]
   },
   {
     "week": 6,
@@ -1754,6 +2582,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 6 assignment concept",
     "prompt": "Which of the following correctl y explains why a Train -Test split is essential in a Machine Learning workflow?",
     "options": [
       "To evaluate the model's ability to generalize to unseen data and avoid overfitting",
@@ -1765,7 +2595,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 26, slide 5."
+    "pdfAnswer": "a. To evaluate the model's ability to generalize to unseen data and avoid overfitting",
+    "explanation": "The PDF answer key marks A. To evaluate the model's ability to generalize to unseen data and avoid overfitting. This answer is suitable because it directly addresses 'Which of the following correctl y explains why a Train -Test split is essential in a Machine Learning workflow', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following correctl y explains why a Train -Test split is essential in a Machine Learning workflow'.",
+      "Not suitable: this option says 'To improve data preprocessing by removing noise from the dataset', but the PDF-marked answer is A. To evaluate the model's ability to generalize to unseen data and avoid overfitting. It does not match 'Which of the following correctl y explains why a Train -Test split is essential in a Machine Learning workflow'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'To ensure the model perfectly fits the training data', but the PDF-marked answer is A. To evaluate the model's ability to generalize to unseen data and avoid overfitting. It does not match 'Which of the following correctl y explains why a Train -Test split is essential in a Machine Learning workflow'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'To select the most relevant features for the model', but the PDF-marked answer is A. To evaluate the model's ability to generalize to unseen data and avoid overfitting. It does not match 'Which of the following correctl y explains why a Train -Test split is essential in a Machine Learning workflow'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 6,
@@ -1773,6 +2610,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Ensemble learning",
     "prompt": "A city planning department collects large -scale mobility data (GPS traces, land -use mix, traffic counts) to reduce congestion in a historic CBD. First, A) planners group roads into categories based on traffic volume, land-use intensity, and peak- hour variability. Next, B) they build a Random Forest model to estimate congestion levels for roads in each identified group. Finally, C) they simulate different policy interventions (e.g., parking pricing, restricted vehicle entry, and signal timing changes) to evaluate how congestion levels would change. Which of the following sequence correctly classifies the following three stages?",
     "options": [
       "A- Prediction; B- Scenario Analysis; C- Clustering",
@@ -1784,7 +2623,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 26."
+    "pdfAnswer": "d. A- Clustering; B- Prediction; C- Scenario Analysis",
+    "explanation": "The PDF answer key marks D. A- Clustering; B- Prediction; C- Scenario Analysis. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'A- Prediction; B- Scenario Analysis; C- Clustering', but the PDF-marked answer is D. A- Clustering; B- Prediction; C- Scenario Analysis. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A- Prediction; B- Clustering; C- Scenario Analysis', but the PDF-marked answer is D. A- Clustering; B- Prediction; C- Scenario Analysis. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A- Scenario Analysis; B- Clustering; C- Prediction', but the PDF-marked answer is D. A- Clustering; B- Prediction; C- Scenario Analysis. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question."
+    ]
   },
   {
     "week": 6,
@@ -1792,6 +2638,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 6 assignment concept",
     "prompt": "Which of the following statements best describes the role of a pairplot in multivariate visualization?",
     "options": [
       "It computes exact multicollinearity statistics such as VIF and provides numerical correlation coefficients for hypothesis testing.",
@@ -1803,7 +2651,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 29, slide 10."
+    "pdfAnswer": "b. It visually displays pairwise relationships among variables, helping identify linear/non-linear patterns, clusters, outliers, and class-wise heterogeneity.",
+    "explanation": "The PDF answer key marks B. It visually displays pairwise relationships among variables, helping identify linear/non -linear patterns, clusters, outliers, and class-wise heterogeneity.. This answer is suitable because it directly addresses 'Which of the following statements best describes the role of a pairplot in multivariate visualization', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'It computes exact multicollinearity statistics such as VIF and provides numerical correlation coefficients for hypothesis testing.', but the PDF-marked answer is B. It visually displays pairwise relationships among variables, helping identify linear/non -linear patterns, clusters, outliers, and class-wise heterogeneity.. It does not match 'Which of the following statements best describes the role of a pairplot in multivariate visualization'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following statements best describes the role of a pairplot in multivariate visualization'.",
+      "Not suitable: this option says 'It reduces high-dimensional data into principal components to maximize explained variance.', but the PDF-marked answer is B. It visually displays pairwise relationships among variables, helping identify linear/non -linear patterns, clusters, outliers, and class-wise heterogeneity.. It does not match 'Which of the following statements best describes the role of a pairplot in multivariate visualization'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'It automatically selects the best predictive model based on feature interactions.', but the PDF-marked answer is B. It visually displays pairwise relationships among variables, helping identify linear/non -linear patterns, clusters, outliers, and class-wise heterogeneity.. It does not match 'Which of the following statements best describes the role of a pairplot in multivariate visualization'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 6,
@@ -1811,6 +2666,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 6_Urban Informatics.pdf",
     "sourceLabel": "Week 6 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Machine learning types",
     "prompt": "Which of the following statements is/are correct about PCA (Principal Component Analysis) and/or LDA (Linear Discriminant Analysis)? A. PCA preserves maximum variance B. Both PCA and LDA are unsupervised techniques. C. LDA is supervised dimensionality reduction technique. D. PCA and LDA both maximize variance.",
     "options": [
       "A & B",
@@ -1822,7 +2679,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 28, slide 5."
+    "pdfAnswer": "b. A & C",
+    "explanation": "The PDF answer key marks B. A & C. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'A & B', but the PDF-marked answer is B. A & C. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'C & D', but the PDF-marked answer is B. A & C. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'B & D', but the PDF-marked answer is B. A & C. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 7,
@@ -1830,6 +2694,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 7_Urban Informatics.pdf",
     "sourceLabel": "Week 7 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Python data analysis",
     "prompt": "Which of the following Python library is used in building, training, and evaluating machine -learning models?",
     "options": [
       "Matplotlib",
@@ -1841,7 +2707,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Scikit-learn is a Python library that provides a simple and efficient framework for building, training, and evaluating machine -learning models, supporting both supervised and unsupervised learning tasks. (Refer to lecture 31, slide 7.)"
+    "pdfAnswer": "c. Sci-kit learn",
+    "explanation": "Scikit-learn is a Python library that provides a simple and efficient framework for building, training, and evaluating machine -learning models, supporting both supervised and unsupervised learning tasks. (Refer to lecture 31, slide 7.) The PDF-marked answer is C. Sci-kit learn, which directly addresses 'Which of the following Python library is used in building, training, and evaluating machine -learning models'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Matplotlib', but the PDF-marked answer is C. Sci-kit learn. It does not match 'Which of the following Python library is used in building, training, and evaluating machine -learning models'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'NumPy', but the PDF-marked answer is C. Sci-kit learn. It does not match 'Which of the following Python library is used in building, training, and evaluating machine -learning models'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following Python library is used in building, training, and evaluating machine -learning models'. Scikit-learn is a Python library that provides a simple and efficient framework for building, training, and evaluating machine -learning models, supporting both supervised and unsupervised learning tasks. (Refer to lecture 31, slide 7.)",
+      "Not suitable: this option says 'Pandas', but the PDF-marked answer is C. Sci-kit learn. It does not match 'Which of the following Python library is used in building, training, and evaluating machine -learning models'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 7,
@@ -1849,6 +2722,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 7_Urban Informatics.pdf",
     "sourceLabel": "Week 7 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Machine learning types",
     "prompt": "Consider the following statements regarding Supervised Learning. Statement A - Supervised learning uses unlabeled data to learn predictive relationships. Statement B - In supervised classification learning, the set of classes are mutually exclusive and collectively exhaustive. Statement C - Supervised regression is a supervised learning task in which, given an input feature vector, the goal is to assign the example to one of N predefined classes. Statement D - The prediction phase of supervised learning uses training dataset to t est the accuracy of the model. Based on the statements, which of the following option is CORRECT?",
     "options": [
       "Both Statement A and Statement D are TRUE.",
@@ -1860,7 +2735,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Supervised learning uses historical labeled data to learn predictive relationships. In supervised classification learning, the set of classes are mutually exclusive and collectively exhaustive. Supervised classification is a supervised learning task in which, given an input feature vector, the goal is to assign the example to one of N predefined classes. NPTEL Online Certification Courses The prediction phase of supervised learning uses testing dataset to test the accuracy of the model. (Refer to lecture 31, slide 4,5 & 6.)"
+    "pdfAnswer": "b. Only Statement B is TRUE.",
+    "explanation": "Supervised learning uses historical labeled data to learn predictive relationships. In supervised classification learning, the set of classes are mutually exclusive and collectively exhaustive. Supervised classification is a supervised learning task in which, given an input feature vector, the goal is to assign the example to one of N predefined classes. The prediction phase of supervised learning uses testing dataset to test the accuracy of the model. (Refer to lecture 31, slide 4,5 & 6.) The PDF-marked answer is B. Only Statement B is TRUE., which directly addresses the concept asked in this PDF question.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Both Statement A and Statement D are TRUE.', but the PDF-marked answer is B. Only Statement B is TRUE.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Supervised learning uses historical labeled data to learn predictive relationships. In supervised classification learning, the set of classes are mutually exclusive and collectively exhaustive. Supervised classification is a supervised learning task in which, given an input feature vector, the goal is to assign the example to one of N predefined classes. The prediction phase of supervised learning uses testing dataset to test the accuracy of the model. (Refer to lecture 31, slide 4,5 & 6.)",
+      "Not suitable: this option says 'Statement A is TRUE but Statement B is FALSE.', but the PDF-marked answer is B. Only Statement B is TRUE.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Only Statement C is TRUE.', but the PDF-marked answer is B. Only Statement B is TRUE.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 7,
@@ -1868,6 +2750,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 7_Urban Informatics.pdf",
     "sourceLabel": "Week 7 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 7 assignment concept",
     "prompt": "Match the following Modules with their Uses. Module Use P. sklearn.model_selection i. used for filling or estimating missing values. Q. sklearn.impute ii. used to prepare raw data for ML algorithms. R. sklearn.feature_selection iii. used for splitting datasets into training, validation and test sets. S. sklearn.preprocessing iv. used to reduce dimensionality by selecting relevant features",
     "options": [
       "P-i; Q-iii; R-ii; S-iv",
@@ -1879,7 +2763,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 31, slide 7. NPTEL Online Certification Courses For Questions 4,5, & 6 refer to the case scenario given below. The transport authority of a medium -sized city wants to build a model for predicting if bus stop is needed for a certain area or not. In order to build the model, they collected the following dataset: You are appointed to assist the authorities in training a decision tree model with the given dataset. Answer the following questions based on the information given above."
+    "pdfAnswer": "d. P-iii; Q-i; R-iv; S-ii",
+    "explanation": "The PDF answer key marks D. P-iii; Q-i; R-iv; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P-i; Q-iii; R-ii; S-iv', but the PDF-marked answer is D. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-ii; Q-i; R-iv; S-iii', but the PDF-marked answer is D. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iii; Q-iv; R-ii; S-i', but the PDF-marked answer is D. P-iii; Q-i; R-iv; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question."
+    ]
   },
   {
     "week": 7,
@@ -1887,6 +2778,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 7_Urban Informatics.pdf",
     "sourceLabel": "Week 7 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Decision trees",
     "prompt": "What is the total entropy of the entire dataset?",
     "options": [
       "0.971",
@@ -1898,7 +2791,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 33, slide 11. Entropy= - pilog2(pi) n i=1 Total number of observations = 20 Total Number of observations with Yes for target variable (Bus stop needed) = 13 Total Number of observations with No for target variable (Bus stop needed) = 7 Entropytotal = - [{13 20 log2 13 20} + { 7 20 log2 7 20}] = -[{0.65 x log20.65} + {0.35 x log20.35} ] = -[{0.65 x (-0.621)} + {0.35 x (-1.515)}] = -[{-0.40365} + {-0.53025}] = - [-0.9339] = 0.9339 0.934 NPTEL Online Certification Courses"
+    "pdfAnswer": "c. 0.934",
+    "explanation": "The PDF answer key marks C. 0.934. This answer is suitable because it directly addresses 'What is the total entropy of the entire dataset', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says '0.971', but the PDF-marked answer is C. 0.934. It does not match 'What is the total entropy of the entire dataset'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says '0.852', but the PDF-marked answer is C. 0.934. It does not match 'What is the total entropy of the entire dataset'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'What is the total entropy of the entire dataset'.",
+      "Not suitable: this option says '0.916', but the PDF-marked answer is C. 0.934. It does not match 'What is the total entropy of the entire dataset'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 7,
@@ -1906,6 +2806,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 7_Urban Informatics.pdf",
     "sourceLabel": "Week 7 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "What is the information gain if population density is selected as the root node of the model?",
     "options": [
       "0.119",
@@ -1917,7 +2819,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 33, slide 11. Total number of observations with population density as high = 7 For population density as high, Total Number of observations with Yes for target variable (Bus stop needed) = 6 Total Number of observations with No for target variable (Bus stop needed) = 1 Entropypopulation density,high = - [{6 7 log2 6 7} + {1 7 log2 1 7}] = -[{0.857 x log20.857} + {0.143 x log20.143} ] = -[{0.857 x (-0.223)} + {0.143 x (-2.806)}] = -[{-0.19111} + {-0.40126}] = - [-0.59237] = 0.59237 0. 592 Total number of observations with population density as medium = 7 For population density as medium, Total Number of observations with Yes for target variable (Bus stop needed) = 4 Total Number of observations with No for target variable (Bus stop needed) = 3 Entropypopulation density,medium = - [{4 7 log2 4 7} + {3 7 log2 3 7}] = -[{0.571 x log20.571} + {0.429 x log20.429} ] = -[{0.571 x (-0.808)} + {0.429 x (-1.221)}] = -[{-0.46137} + {-0.52381}] = - [-0.98518] = 0.98518 0. 985 Total number of observations with population density as low = 6 For population density as low, Total Number of observations with Yes for target variable (Bus stop needed) = 3 Total Number of observations with No for target variable (Bus stop needed) = 3 Entropypopulation density,low = - [{3 6 log2 3 6} + {3 6 log2 3 6}] = -[{0.5 x log20.5} + {0.5 x log20.5} ] = -[{0.5 x (-1)} + {0.5 x (-1)}] = -[{-0.5} + {-0.5}] = - [-1] = 1 Weighted Entropypopulation density = [{ 7 20} x {0.592}] + [{ 7 20} x {0.985}] + [{ 6 20} x {1}] = [{0.35} x {0.592}] + [{0.35} x {0.985}] + [{0.3} x {1}] = [0.2072] + [{0.3448}] + [0.3] = 0. 852 NPTEL Online Certification Courses Information Gainpopulation density = [Entropytotal] - [Entropypopulation density] = 0.934 - 0.852 = 0. 082"
+    "pdfAnswer": "d. 0.082",
+    "explanation": "The PDF answer key marks D. 0.082. This answer is suitable because it directly addresses 'What is the information gain if population density is selected as the root node of the model', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says '0.119', but the PDF-marked answer is D. 0.082. It does not match 'What is the information gain if population density is selected as the root node of the model'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says '0.402', but the PDF-marked answer is D. 0.082. It does not match 'What is the information gain if population density is selected as the root node of the model'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says '0.134', but the PDF-marked answer is D. 0.082. It does not match 'What is the information gain if population density is selected as the root node of the model'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'What is the information gain if population density is selected as the root node of the model'."
+    ]
   },
   {
     "week": 7,
@@ -1925,6 +2834,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 7_Urban Informatics.pdf",
     "sourceLabel": "Week 7 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Consider the following statement s with regards to the selection of attribute for root node among traffic volume, commercial activity and existing public transport, based on the information given above, and choose the correct option. Statement A - For traffic volume as root node, the weighted entropy of the model is 0.402 and the information gain is 0.532. Statement B - For commercial activity as root node, the weighted entropy of the model is 0.861 and the information gain is 0.073. Statement C - For existing public transport as root node, the weighted entropy of the model is 0.773 and the information gain is 0.161.",
     "options": [
       "The attri bute commercial activity is most likely to be selected as root node as it has the highest weighted entropy among the three attributes.",
@@ -1936,7 +2847,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 33, slide 11."
+    "pdfAnswer": "b. The attribute traffic volume is most likely to be selected as root node as it has the highest information gain among the three attributes.",
+    "explanation": "The PDF answer key marks B. The attribute traffic volume is most likely to be selected as root node as it has the highest information gain among the three attributes.. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'The attri bute commercial activity is most likely to be selected as root node as it has the highest weighted entropy among the three attributes.', but the PDF-marked answer is B. The attribute traffic volume is most likely to be selected as root node as it has the highest information gain among the three attributes.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'The attribute commercial activity is most likely to be selected as root node as it has the lowest information gain among the three attributes.', but the PDF-marked answer is B. The attribute traffic volume is most likely to be selected as root node as it has the highest information gain among the three attributes.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'The attribute traffic volume is least likely to be selected as root node as it has the lowest weighted entropy among the three attributes.', but the PDF-marked answer is B. The attribute traffic volume is most likely to be selected as root node as it has the highest information gain among the three attributes.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 7,
@@ -1944,6 +2862,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 7_Urban Informatics.pdf",
     "sourceLabel": "Week 7 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Which of the following statements correctly explains a limitation of decision trees and a common method used to address it?",
     "options": [
       "Decision trees require feature scaling, which is addressed using normalization techniques.",
@@ -1955,7 +2875,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 33, slide 4. NPTEL Online Certification Courses"
+    "pdfAnswer": "b. Decision trees are prone to overfitting and instability, which can be reduced using pruning and ensemble methods like Random Forests.",
+    "explanation": "The PDF answer key marks B. Decision trees are prone to overfitting and instability, which can be reduced using pruning and ensemble methods like Random Forests.. This answer is suitable because it directly addresses 'Which of the following statements correctly explains a limitation of decision trees and a common method used to address it', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Decision trees require feature scaling, which is addressed using normalization techniques.', but the PDF-marked answer is B. Decision trees are prone to overfitting and instability, which can be reduced using pruning and ensemble methods like Random Forests.. It does not match 'Which of the following statements correctly explains a limitation of decision trees and a common method used to address it'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following statements correctly explains a limitation of decision trees and a common method used to address it'.",
+      "Not suitable: this option says 'Decision trees cannot handle categorical data, which is addressed by converting all features to numerical values.', but the PDF-marked answer is B. Decision trees are prone to overfitting and instability, which can be reduced using pruning and ensemble methods like Random Forests.. It does not match 'Which of the following statements correctly explains a limitation of decision trees and a common method used to address it'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Decision trees only work fo r regression problems, which is addressed using classification techniques.', but the PDF-marked answer is B. Decision trees are prone to overfitting and instability, which can be reduced using pruning and ensemble methods like Random Forests.. It does not match 'Which of the following statements correctly explains a limitation of decision trees and a common method used to address it'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 7,
@@ -1963,6 +2890,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 7_Urban Informatics.pdf",
     "sourceLabel": "Week 7 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Boosting",
     "prompt": "In XGBoost, which hyperparameter specifically controls the fraction of training data randomly sampled to train each boosting tree, helping to reduce overfitting and improve generalization?",
     "options": [
       "learning_rate - controls the step size of learning from each tree",
@@ -1974,7 +2903,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 35, slide 7."
+    "pdfAnswer": "c. subsample - specifies the fraction of training instances used for each tree",
+    "explanation": "The PDF answer key marks C. subsample - specifies the fraction of training instances used for each tree. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'learning_rate - controls the step size of learning from each tree', but the PDF-marked answer is C. subsample - specifies the fraction of training instances used for each tree. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'max_depth - determines the depth of each tree', but the PDF-marked answer is C. subsample - specifies the fraction of training instances used for each tree. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'n_estimators - defines the number of boosting rounds', but the PDF-marked answer is C. subsample - specifies the fraction of training instances used for each tree. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 7,
@@ -1982,6 +2918,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 7_Urban Informatics.pdf",
     "sourceLabel": "Week 7 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Ensemble learning",
     "prompt": "Which of the following correctly distinguishes Bagging, Random Forest, and Boosting (e.g., XGBoost)?",
     "options": [
       "Bagging trains models sequentially to correct previous errors, Random Forest uses a single tree, and Boosting trains models in parallel.",
@@ -1993,7 +2931,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 35, slide 3,7 & 11."
+    "pdfAnswer": "b. Bagging trains multiple models on bootstrap samples in parallel, Random Forest additionally selects random subsets of features at each split, and Boosting trains models sequentially to reduce previous errors.",
+    "explanation": "The PDF answer key marks B. Bagging trains multiple models on bootstrap samples in parallel, Random Forest additionally selects random subsets of f eatures at each split, and Boosting trains models sequentially to reduce previous errors.. This answer is suitable because it directly addresses 'Which of the following correctly distinguishes Bagging, Random Forest, and Boosting (e.g., XGBoost)', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Bagging trains models sequentially to correct previous errors, Random Forest uses a single tree, and Boosting trains models in parallel.', but the PDF-marked answer is B. Bagging trains multiple models on bootstrap samples in parallel, Random Forest additionally selects random subsets of f eatures at each split, and Boosting trains models sequentially to reduce previous errors.. It does not match 'Which of the following correctly distinguishes Bagging, Random Forest, and Boosting (e.g., XGBoost)'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following correctly distinguishes Bagging, Random Forest, and Boosting (e.g., XGBoost)'.",
+      "Not suitable: this option says 'Bagging and Boosting both use feature randomness at each split, while Random Forest uses the full dataset without sampling.', but the PDF-marked answer is B. Bagging trains multiple models on bootstrap samples in parallel, Random Forest additionally selects random subsets of f eatures at each split, and Boosting trains models sequentially to reduce previous errors.. It does not match 'Which of the following correctly distinguishes Bagging, Random Forest, and Boosting (e.g., XGBoost)'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Random Forest and Boosting both rely only on averaging predictions, while Bagging uses majority voting.', but the PDF-marked answer is B. Bagging trains multiple models on bootstrap samples in parallel, Random Forest additionally selects random subsets of f eatures at each split, and Boosting trains models sequentially to reduce previous errors.. It does not match 'Which of the following correctly distinguishes Bagging, Random Forest, and Boosting (e.g., XGBoost)'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 7,
@@ -2001,18 +2946,27 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 7_Urban Informatics.pdf",
     "sourceLabel": "Week 7 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "A dataset contains 1,000 samples equally distributed across two classes (500 each). Two attributes are evaluated for splitting: Attribute A1 has 10 distinct values, each value uniquely identifies 100 samples belonging to only one class (perfectly pure subsets). Attribute A2 has 2 values, each splitting the dataset into 500 samples, with class distribution (400,100) and (100,400) respectively. Which of the following statements is CORRECT regarding the selection of splitting attribute by Information Gain (IG) and Gain Ratio (GR)?",
     "options": [
       "Both Information Gain and Gain Ratio will select A1 because it produces zero entropy after split.",
       "Information Gain will select A1, but Gain Ratio may prefer A2 due to normalization using Split Information.",
       "Information Gain will select A2, but Gain Ratio will select A1 due to lower split entropy.",
-      "Both Information Gain and Gain Ratio will select A2 because it produces more balanced partitions. NPTEL Online Certification Courses"
+      "Both Information Gain and Gain Ratio will select A2 because it produces more balanced partitions."
     ],
     "correctIndices": [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 33, slide 9 & 10. Initial entropy is maximum (since 500/500 split). For Information Gain, A1 creates 10 pure subsets, so entropy after split = 0 IG(A1) = maximum possible A2 creates two impure subsets, so entropy after split > 0 IG(A2) < IG(A1) So, Information Gain selects A1 attribute. For Gain Ratio, Gain Ratio for attribute A1 = 0.301 (Refer to Lecture 33, Slide 10) Gain Ratio for attribute A2 = 0.278 (Refer to Lecture 33, Slide 10) So, Gain Ratio also selects A1 attribute"
+    "pdfAnswer": "a. Both Information Gain and Gain Ratio will select A1 because it produces zero entropy after split.",
+    "explanation": "The PDF answer key marks A. Both Information Gain and Gain Ratio will select A1 because it produces zero entropy after split.. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'Information Gain will select A1, but Gain Ratio may prefer A2 due to normalization using Split Information.', but the PDF-marked answer is A. Both Information Gain and Gain Ratio will select A1 because it produces zero entropy after split.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Information Gain will select A2, but Gain Ratio will select A1 due to lower split entropy.', but the PDF-marked answer is A. Both Information Gain and Gain Ratio will select A1 because it produces zero entropy after split.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Both Information Gain and Gain Ratio will select A2 because it produces more balanced partitions.', but the PDF-marked answer is A. Both Information Gain and Gain Ratio will select A1 because it produces zero entropy after split.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 7,
@@ -2020,6 +2974,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 7_Urban Informatics.pdf",
     "sourceLabel": "Week 7 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Decision trees",
     "prompt": "A parent node in a binary classification problem contains 100 samples with class distribution: Class 1: 60 Class 0: 40 Two possible binary splits are evaluated using CART (Gini impurity). Split A Left child: 30 (Class 1), 10 (Class 0) Right child: 30 (Class 1), 30 (Class 0) Split B Left child: 50 (Class 1), 20 (Class 0) Right child: 10 (Class 1), 20 (Class 0) Which of the following statements is CORRECT?",
     "options": [
       "Split A is selected because it produces lower Gini in the left node.",
@@ -2031,7 +2987,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 34, slide 4. Parent Gini Gini_parent = 1 - (0.6^2 + 0.4^2) = 1 - (0.36 + 0.16) = 1 - 0.52 = 0.48 For Split A, NPTEL Online Certification Courses Left Node (40 samples: 30,10) Gini_Left_Node_1 = 1 - (0.75)^2 + (0.25)^2 = 1 - (0.5625 + 0.0625) = 1 - 0.625 = 0.375 Right Node (60 samples: 30,30) Gini_Right_Node_1 = 1 - (0.5^2 + 0.5^2) = 1 - (0.25 + 0.25) = 0.5 Weighted Gini (Split A) = Gini_A = (0.40) X (0.375) + (0.60) X (0.50) = 0.15 + 0.30 = 0.45 Reduction (Split A) = 0.48 - 0.45 = 0.03 For Split B, Left Node (70 samples: 50,20) Gini_Left_Node_2 = 1 - (0.71)^2 + (0.29)^2 = 1 - (0.5041 + 0.0841) = 1 - 0.5882 = 0.4118 Right Node (30 samples: 10,20) Gini_Right_Node_2 = 1 - (0.33)^2 + (0.67)^2 = 1 - (0.1089 + 0.4489) = 1 - 0.5578 = 0.4422 Weighted Gini (Split B) = Gini_B = (0.70) X (0.4118) + (0.30) X (0.4422) = 0.2883 + 0.1327 = 0.4210 Reduction (Split B) = 0.48 - 0.4210 = 0.0590 Since Split B produces larger impurity reduction, CART selects it."
+    "pdfAnswer": "b. Split B is selected because it gives larger weighted Gini reduction.",
+    "explanation": "The PDF answer key marks B. Split B is selected because it gives larger weighted Gini reduction.. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Split A is selected because it produces lower Gini in the left node.', but the PDF-marked answer is B. Split B is selected because it gives larger weighted Gini reduction.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'Split A is selected because it gives larger weighted Gini reduction.', but the PDF-marked answer is B. Split B is selected because it gives larger weighted Gini reduction.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Both splits produce the same weighted Gini, so CART chooses either randomly.', but the PDF-marked answer is B. Split B is selected because it gives larger weighted Gini reduction.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 7,
@@ -2039,6 +3002,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 7_Urban Informatics.pdf",
     "sourceLabel": "Week 7 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Consider the following codes given below and choose the correct option. Code A from sklearn.model_selection import GridSearchCV param_grid = {\"fit_intercept\":[True, False]} grid = GridSearchCV(model, param_grid, cv=5) grid.fit(X, y) Code B from sklearn.model_selection import cross_val_score scores = cross_val_score(model, X, y, cv=5) print(scores.mean())",
     "options": [
       "Code A performs systematic hyperparameter tuning and Code B performs cross -validation that gives reliable estimate for small datasets.",
@@ -2050,7 +3015,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 32"
+    "pdfAnswer": "a. Code A performs systematic hyperparameter tuning and Code B performs cross-validation gives reliable estimate for small datasets.",
+    "explanation": "The PDF answer key marks A. Code A performs systematic hyperparameter tuning and Code B performs cross -validation that gives reliable estimate for small datasets.. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'Code A performs cross-validation that gives reliable estimate for small datasets and Code B performs systematic hyperparameter tuning.', but the PDF-marked answer is A. Code A performs systematic hyperparameter tuning and Code B performs cross -validation that gives reliable estimate for small datasets.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Code A handles missing values and scaling together and Code B builds model without data leakage.', but the PDF-marked answer is A. Code A performs systematic hyperparameter tuning and Code B performs cross -validation that gives reliable estimate for small datasets.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Code A builds model without data leakage and Code B handles missing values and scaling together.', but the PDF-marked answer is A. Code A performs systematic hyperparameter tuning and Code B performs cross -validation that gives reliable estimate for small datasets.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 8,
@@ -2058,6 +3030,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 8_Urban Informatics.pdf",
     "sourceLabel": "Week 8 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Association rules",
     "prompt": "________________ and ________________ are supervised learning classification models.",
     "options": [
       "Logistic regression, multinomial logistic regression",
@@ -2069,7 +3043,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Logistic regression and multinomial logistic regression are supervised learning classification models. Refer to lecture 36, slide 3."
+    "pdfAnswer": "a. Logistic regression, multinomial logistic regression",
+    "explanation": "Logistic regression and multinomial logistic regression are supervised learning classification models. Refer to lecture 36, slide 3. The PDF-marked answer is A. Logistic regression, multinomial logistic regression, which directly addresses '________________ and ________________ are supervised learning classification models'.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches '________________ and ________________ are supervised learning classification models'. Logistic regression and multinomial logistic regression are supervised learning classification models. Refer to lecture 36, slide 3.",
+      "Not suitable: this option says 'K-Means Clustering and DBSCAN', but the PDF-marked answer is A. Logistic regression, multinomial logistic regression. It does not match '________________ and ________________ are supervised learning classification models'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'PCA and autoencoders', but the PDF-marked answer is A. Logistic regression, multinomial logistic regression. It does not match '________________ and ________________ are supervised learning classification models'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Apriori and decision tree', but the PDF-marked answer is A. Logistic regression, multinomial logistic regression. It does not match '________________ and ________________ are supervised learning classification models'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 8,
@@ -2077,6 +3058,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 8_Urban Informatics.pdf",
     "sourceLabel": "Week 8 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 8 assignment concept",
     "prompt": "Which method is commonly used to estimate model parameters by maximizing the probability of the observed choices?",
     "options": [
       "Moving Average Method",
@@ -2088,7 +3071,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "The maximum likelihood method is used to estimate the parameters by maximizing the likelihood of the observed choices as per the model. Refer to lecture 36, slide 7. NPTEL Online Certification Courses"
+    "pdfAnswer": "c. Maximum Likelihood method",
+    "explanation": "The maximum likelihood method is used to estimate the parameters by maximizing the likelihood of the observed choices as per the model. Refer to lecture 36, slide 7. The PDF-marked answer is C. Maximum Likelihood method, which directly addresses 'Which method is commonly used to estimate model parameters by maximizing the probability of the observed choices'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Moving Average Method', but the PDF-marked answer is C. Maximum Likelihood method. It does not match 'Which method is commonly used to estimate model parameters by maximizing the probability of the observed choices'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Monte Carlo Simulation', but the PDF-marked answer is C. Maximum Likelihood method. It does not match 'Which method is commonly used to estimate model parameters by maximizing the probability of the observed choices'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which method is commonly used to estimate model parameters by maximizing the probability of the observed choices'. The maximum likelihood method is used to estimate the parameters by maximizing the likelihood of the observed choices as per the model. Refer to lecture 36, slide 7.",
+      "Not suitable: this option says 'Least Squares Method', but the PDF-marked answer is C. Maximum Likelihood method. It does not match 'Which method is commonly used to estimate model parameters by maximizing the probability of the observed choices'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 8,
@@ -2096,6 +3086,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 8_Urban Informatics.pdf",
     "sourceLabel": "Week 8 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 8 assignment concept",
     "prompt": "Which of the following assumptions are CORRECT for Multinomial Logistic Regression? P. Observations are independent Q. Log-odds are non-linear in predictors R. Perfect collinearity among predictors S. Sufficient sample size for all classes",
     "options": [
       "P and S",
@@ -2107,7 +3099,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Assumptions for Multinomial Logistic Regression are o bservations are independent, l og-odds are linear in predictors, no perfect multicollinearity among predictors, IIA assumption holds, s ufficient sample size for all classes and no complete separation in data (No predictor perfectly predicts a class). Refer to lecture 37, slide 3."
+    "pdfAnswer": "a. P and S",
+    "explanation": "Assumptions for Multinomial Logistic Regression are o bservations are independent, l og-odds are linear in predictors, no perfect multicollinearity among predictors, IIA assumption holds, s ufficient sample size for all classes and no complete separation in data (No predictor perfectly predicts a class). Refer to lecture 37, slide 3. The PDF-marked answer is A. P and S, which directly addresses the concept asked in this PDF question.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Assumptions for Multinomial Logistic Regression are o bservations are independent, l og-odds are linear in predictors, no perfect multicollinearity among predictors, IIA assumption holds, s ufficient sample size for all classes and no complete separation in data (No predictor perfectly predicts a class). Refer to lecture 37, slide 3.",
+      "Not suitable: this option says 'Q and R', but the PDF-marked answer is A. P and S. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Q and S', but the PDF-marked answer is A. P and S. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P and R', but the PDF-marked answer is A. P and S. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 8,
@@ -2115,6 +3114,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 8_Urban Informatics.pdf",
     "sourceLabel": "Week 8 assignment PDF",
+    "pdfDirect": true,
+    "topic": "GIS relationships",
     "prompt": "Match the following distance metrics with their description - Distance metrics Description P. Cosine Distance i. Measures distance along axes (grid-based movement for grid based layouts) Q. Hamming Distance ii. Measures orientation and ignores absolute size differences R. Mahalanobis Distance iii. Measures the number of mismatched categorical attributes between two observations S. Manhattan (City-Block) Distance iv. Used when features are correlated",
     "options": [
       "P-i; Q-iii; R-ii; S-iv",
@@ -2126,7 +3127,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 38, slide 4 and 5."
+    "pdfAnswer": "b. P-ii; Q-iii; R-iv; S-i",
+    "explanation": "The PDF answer key marks B. P-ii; Q-iii; R-iv; S-i. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P-i; Q-iii; R-ii; S-iv', but the PDF-marked answer is B. P-ii; Q-iii; R-iv; S-i. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-ii; Q-iv; R-ii; S-iii', but the PDF-marked answer is B. P-ii; Q-iii; R-iv; S-i. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iv; Q-ii; R-i; S-iii', but the PDF-marked answer is B. P-ii; Q-iii; R-iv; S-i. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 8,
@@ -2134,18 +3142,27 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 8_Urban Informatics.pdf",
     "sourceLabel": "Week 8 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 8 assignment concept",
     "prompt": "Support vectors in SVM are:",
     "options": [
       "misclassified data points only",
       "randomly selected data points",
       "data points farthest to the decision boundary",
-      "data points closest to the decision boundary NPTEL Online Certification Courses"
+      "data points closest to the decision boundary"
     ],
     "correctIndices": [
       3
     ],
     "multiSelect": false,
-    "explanation": "Support vectors are the data points closest to the decision boundary. Refer to lecture 39, slide 4."
+    "pdfAnswer": "d. data points closest to the decision boundary",
+    "explanation": "Support vectors are the data points closest to the decision boundary. Refer to lecture 39, slide 4. The PDF-marked answer is D. data points closest to the decision boundary, which directly addresses 'Support vectors in SVM are'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'misclassified data points only', but the PDF-marked answer is D. data points closest to the decision boundary. It does not match 'Support vectors in SVM are'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'randomly selected data points', but the PDF-marked answer is D. data points closest to the decision boundary. It does not match 'Support vectors in SVM are'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'data points farthest to the decision boundary', but the PDF-marked answer is D. data points closest to the decision boundary. It does not match 'Support vectors in SVM are'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Support vectors in SVM are'. Support vectors are the data points closest to the decision boundary. Refer to lecture 39, slide 4."
+    ]
   },
   {
     "week": 8,
@@ -2153,6 +3170,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 8_Urban Informatics.pdf",
     "sourceLabel": "Week 8 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 8 assignment concept",
     "prompt": "What is the main purpose of Soft Margin Support Vector Machines (SVM)?",
     "options": [
       "To completely eliminate classification errors",
@@ -2164,7 +3183,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Soft Margin SVM allows some training points to violate the margin or be misclassified in order to handle noisy, overlapping real-world data. Refer to lecture 39, slide 6."
+    "pdfAnswer": "b. To allow some margin violations and misclassifications for noisy data.",
+    "explanation": "Soft Margin SVM allows some training points to violate the margin or be misclassified in order to handle noisy, overlapping real-world data. Refer to lecture 39, slide 6. The PDF-marked answer is B. To allow some margin violations and misclassifications for noisy data., which directly addresses 'What is the main purpose of Soft Margin Support Vector Machines (SVM)'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'To completely eliminate classification errors', but the PDF-marked answer is B. To allow some margin violations and misclassifications for noisy data.. It does not match 'What is the main purpose of Soft Margin Support Vector Machines (SVM)'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'What is the main purpose of Soft Margin Support Vector Machines (SVM)'. Soft Margin SVM allows some training points to violate the margin or be misclassified in order to handle noisy, overlapping real-world data. Refer to lecture 39, slide 6.",
+      "Not suitable: this option says 'To use only perfectly separable data', but the PDF-marked answer is B. To allow some margin violations and misclassifications for noisy data.. It does not match 'What is the main purpose of Soft Margin Support Vector Machines (SVM)'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'To reduce the number of features in the dataset', but the PDF-marked answer is B. To allow some margin violations and misclassifications for noisy data.. It does not match 'What is the main purpose of Soft Margin Support Vector Machines (SVM)'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 8,
@@ -2172,6 +3198,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 8_Urban Informatics.pdf",
     "sourceLabel": "Week 8 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Activation functions",
     "prompt": "Match the following kernels with their description - Kernels Description P. Linear kernel i. Captures feature interactions with moderate complexity by modeling nonlinear relationships explicitly. Q. Polynomial kernel ii. Most commonly used kernel that models local similarity and creates highly flexible nonlinear decision boundaries. R. RBF (Gaussian) kernel iii. Mimics neural network activation behavior and is less used due to instability and tuning difficulties. S. Sigmoid kernel iv. Best suited for high-dimensional, sparse data such as text features or indicator variables.",
     "options": [
       "P-iv; Q-iii; R-ii; S-i",
@@ -2183,7 +3211,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 39, slide 8."
+    "pdfAnswer": "d. P-iv; Q-i; R-ii; S-iii",
+    "explanation": "The PDF answer key marks D. P-iv; Q-i; R-ii; S-iii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P-iv; Q-iii; R-ii; S-i', but the PDF-marked answer is D. P-iv; Q-i; R-ii; S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-ii; Q-iii; R-iv; S-i', but the PDF-marked answer is D. P-iv; Q-i; R-ii; S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iii; Q-ii; R-i; S-iv', but the PDF-marked answer is D. P-iv; Q-i; R-ii; S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question."
+    ]
   },
   {
     "week": 8,
@@ -2191,6 +3226,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 8_Urban Informatics.pdf",
     "sourceLabel": "Week 8 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "SVM optimization is ___________ and __________, ensuring a single global optimum for both hard and soft margin formulations.",
     "options": [
       "convex and quadratic",
@@ -2202,7 +3239,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "SVM optimization is convex and quadratic, ensuring a single global optimum for both hard and soft margin formulations. Refer to lecture 39, slide 9."
+    "pdfAnswer": "a. convex and quadratic",
+    "explanation": "SVM optimization is convex and quadratic, ensuring a single global optimum for both hard and soft margin formulations. Refer to lecture 39, slide 9. The PDF-marked answer is A. convex and quadratic, which directly addresses 'SVM optimization is ___________ and __________, ensuring a single global optimum for both hard and soft margin formulations'.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'SVM optimization is ___________ and __________, ensuring a single global optimum for both hard and soft margin formulations'. SVM optimization is convex and quadratic, ensuring a single global optimum for both hard and soft margin formulations. Refer to lecture 39, slide 9.",
+      "Not suitable: this option says 'concave and linear', but the PDF-marked answer is A. convex and quadratic. It does not match 'SVM optimization is ___________ and __________, ensuring a single global optimum for both hard and soft margin formulations'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'convex and linear', but the PDF-marked answer is A. convex and quadratic. It does not match 'SVM optimization is ___________ and __________, ensuring a single global optimum for both hard and soft margin formulations'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'concave and quadratic', but the PDF-marked answer is A. convex and quadratic. It does not match 'SVM optimization is ___________ and __________, ensuring a single global optimum for both hard and soft margin formulations'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 8,
@@ -2210,6 +3254,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 8_Urban Informatics.pdf",
     "sourceLabel": "Week 8 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Association rules",
     "prompt": "The model that learns jointly from both labeled and unlabeled (usually larger) data.",
     "options": [
       "Reinforcement learning",
@@ -2221,7 +3267,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 40, slide 3."
+    "pdfAnswer": "c. Semi-supervised learning",
+    "explanation": "The PDF answer key marks C. Semi-supervised learning. This answer is suitable because it directly addresses 'The model that learns jointly from both labeled and unlabeled (usually larger) data', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Reinforcement learning', but the PDF-marked answer is C. Semi-supervised learning. It does not match 'The model that learns jointly from both labeled and unlabeled (usually larger) data'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Supervised learning', but the PDF-marked answer is C. Semi-supervised learning. It does not match 'The model that learns jointly from both labeled and unlabeled (usually larger) data'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'The model that learns jointly from both labeled and unlabeled (usually larger) data'.",
+      "Not suitable: this option says 'Association learning', but the PDF-marked answer is C. Semi-supervised learning. It does not match 'The model that learns jointly from both labeled and unlabeled (usually larger) data'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 8,
@@ -2229,6 +3282,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 8_Urban Informatics.pdf",
     "sourceLabel": "Week 8 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Machine learning types",
     "prompt": "Which of the following are assumptions of semi-supervised learning? P. Smoothness assumption Q. Cluster assumption R. Manifold assumption S. Multicollinearity assumption",
     "options": [
       "P, Q and S",
@@ -2240,7 +3295,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 40, slide 4."
+    "pdfAnswer": "b. P, Q and R",
+    "explanation": "The PDF answer key marks B. P, Q and R. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P, Q and S', but the PDF-marked answer is B. P, Q and R. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'Q, R and S', but the PDF-marked answer is B. P, Q and R. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P, R and S', but the PDF-marked answer is B. P, Q and R. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 8,
@@ -2248,6 +3310,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 8_Urban Informatics.pdf",
     "sourceLabel": "Week 8 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Which statement best describes the Label Propagation Algorithm?",
     "options": [
       "It uses only labeled data and ignores unlabeled data.",
@@ -2259,7 +3323,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 40, slide 7. NPTEL Online Certification Courses"
+    "pdfAnswer": "d. It iteratively spreads labels from labeled nodes to unlabeled nodes based on data similarity",
+    "explanation": "The PDF answer key marks D. It iteratively spreads labels from labeled nodes to unlabeled nodes based on data similarity. This answer is suitable because it directly addresses 'Which statement best describes the Label Propagation Algorithm', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'It uses only labeled data and ignores unlabeled data.', but the PDF-marked answer is D. It iteratively spreads labels from labeled nodes to unlabeled nodes based on data similarity. It does not match 'Which statement best describes the Label Propagation Algorithm'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'It assigns labels to data points without using similarity information', but the PDF-marked answer is D. It iteratively spreads labels from labeled nodes to unlabeled nodes based on data similarity. It does not match 'Which statement best describes the Label Propagation Algorithm'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'It removes unlabeled data before classification.', but the PDF-marked answer is D. It iteratively spreads labels from labeled nodes to unlabeled nodes based on data similarity. It does not match 'Which statement best describes the Label Propagation Algorithm'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which statement best describes the Label Propagation Algorithm'."
+    ]
   },
   {
     "week": 8,
@@ -2267,6 +3338,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 8_Urban Informatics.pdf",
     "sourceLabel": "Week 8 assignment PDF",
+    "pdfDirect": true,
+    "topic": "SQL query logic",
     "prompt": "Match the following sampling methods in Active learning and Semi-Supervised learning with their descriptions - Sampling methods Description P. Uncertainty sampling i. Select points closest to the decision boundary Q. Margin sampling ii. Select samples where the model shows low confidence predictions R. Entropy-based sampling iii. Select samples that best represent different regions of the data. S. Diversity sampling iv. Choose samples with highest prediction entropy",
     "options": [
       "P-ii; Q-iii; R-i; S-iv",
@@ -2278,7 +3351,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 40, slide 12."
+    "pdfAnswer": "c. P-ii; Q-i; R-iv; S-iii",
+    "explanation": "The PDF answer key marks C. P-ii; Q-i; R-iv; S-iii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P-ii; Q-iii; R-i; S-iv', but the PDF-marked answer is C. P-ii; Q-i; R-iv; S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iv; Q-iii; R-ii; S-i', but the PDF-marked answer is C. P-ii; Q-i; R-iv; S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-iii; Q-ii; R-i; S-iv', but the PDF-marked answer is C. P-ii; Q-i; R-iv; S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 8,
@@ -2286,6 +3366,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 8_Urban Informatics.pdf",
     "sourceLabel": "Week 8 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Machine learning types",
     "prompt": "In cluster-based semi-supervised learning, in which type of cluster assignment are unlabeled data points assigned the most frequent label?",
     "options": [
       "Majority voting assignment",
@@ -2297,7 +3379,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 40, slide 11."
+    "pdfAnswer": "a. Majority voting assignment",
+    "explanation": "The PDF answer key marks A. Majority voting assignment. This answer is suitable because it directly addresses 'In cluster-based semi-supervised learning, in which type of cluster assignment are unlabeled data points assigned the most frequent label', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'In cluster-based semi-supervised learning, in which type of cluster assignment are unlabeled data points assigned the most frequent label'.",
+      "Not suitable: this option says 'Centroid-based assignment', but the PDF-marked answer is A. Majority voting assignment. It does not match 'In cluster-based semi-supervised learning, in which type of cluster assignment are unlabeled data points assigned the most frequent label'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Distance-based assignment', but the PDF-marked answer is A. Majority voting assignment. It does not match 'In cluster-based semi-supervised learning, in which type of cluster assignment are unlabeled data points assigned the most frequent label'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Soft assignment', but the PDF-marked answer is A. Majority voting assignment. It does not match 'In cluster-based semi-supervised learning, in which type of cluster assignment are unlabeled data points assigned the most frequent label'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 9,
@@ -2305,6 +3394,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Week9_Assignment 9_Urban Informatics_2026.pdf",
     "sourceLabel": "Week 9 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Association rules",
     "prompt": "In the Association Rule Learning workflow, which step involves converting the dataset into a binary (0-1) incidence matrix?",
     "options": [
       "Data collection",
@@ -2316,7 +3407,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "During data preprocessing, the transaction data is transformed into a binary matrix (0 -1) representing the presence or absence of items before frequent itemset generation algorithms. (Refer to Lecture 44, Slide 4)"
+    "pdfAnswer": "c. Data preprocessing",
+    "explanation": "During data preprocessing, the transaction data is transformed into a binary matrix (0 -1) representing the presence or absence of items before frequent itemset generation algorithms. (Refer to Lecture 44, Slide 4) The PDF-marked answer is C. Data preprocessing, which directly addresses 'In the Association Rule Learning workflow, which step involves converting the dataset into a binary (0-1) incidence matrix'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Data collection', but the PDF-marked answer is C. Data preprocessing. It does not match 'In the Association Rule Learning workflow, which step involves converting the dataset into a binary (0-1) incidence matrix'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Rule generation', but the PDF-marked answer is C. Data preprocessing. It does not match 'In the Association Rule Learning workflow, which step involves converting the dataset into a binary (0-1) incidence matrix'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'In the Association Rule Learning workflow, which step involves converting the dataset into a binary (0-1) incidence matrix'. During data preprocessing, the transaction data is transformed into a binary matrix (0 -1) representing the presence or absence of items before frequent itemset generation algorithms. (Refer to Lecture 44, Slide 4)",
+      "Not suitable: this option says 'Interpretation and deployment', but the PDF-marked answer is C. Data preprocessing. It does not match 'In the Association Rule Learning workflow, which step involves converting the dataset into a binary (0-1) incidence matrix'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 9,
@@ -2324,6 +3422,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Week9_Assignment 9_Urban Informatics_2026.pdf",
     "sourceLabel": "Week 9 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Clustering",
     "prompt": "In clustering analysis, similarity between observations is usually determined using _______, while datasets containing both numeric and categorical variables can be clustered using the _______ algorithm.",
     "options": [
       "Distance calculations, K-Prototypes",
@@ -2335,7 +3435,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Most clustering algorithms determine similarity using distance measures (such as Euclidean distance). When a dataset contains both numeric and categorical variables, the K-Prototypes algorithm is commonly used because it can handle mixed data types. (Refer to Lecture 41, Slide 3 & 4) NPTEL Online Certification Courses"
+    "pdfAnswer": "a. Distance calculations, K-Prototypes",
+    "explanation": "Most clustering algorithms determine similarity using distance measures (such as Euclidean distance). When a dataset contains both numeric and categorical variables, the K-Prototypes algorithm is commonly used because it can handle mixed data types. (Refer to Lecture 41, Slide 3 & 4) The PDF-marked answer is A. Distance calculations, K-Prototypes, which directly addresses the concept asked in this PDF question.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Most clustering algorithms determine similarity using distance measures (such as Euclidean distance). When a dataset contains both numeric and categorical variables, the K-Prototypes algorithm is commonly used because it can handle mixed data types. (Refer to Lecture 41, Slide 3 & 4)",
+      "Not suitable: this option says 'Probability estimation, K-Means', but the PDF-marked answer is A. Distance calculations, K-Prototypes. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Gradient descent, Principal Component Analysis', but the PDF-marked answer is A. Distance calculations, K-Prototypes. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Regression analysis, K-Nearest Neighbours', but the PDF-marked answer is A. Distance calculations, K-Prototypes. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 9,
@@ -2343,6 +3450,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Week9_Assignment 9_Urban Informatics_2026.pdf",
     "sourceLabel": "Week 9 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Association rules",
     "prompt": "Considering the metrics for Association rule learnings, m atch the metrics with their correct interpretation. Metric Interpretation 1. Support A. Measures the strength of a rule. 2. Confidence B. Frequency of appearance of an item in the dataset. 3. Lift C. Measures how often a rule appears to be true in a dataset.",
     "options": [
       "1-C, 2-A, 3-B",
@@ -2354,7 +3463,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Support identifies the frequency of appearance of an item in the dataset. Confidence measures how often a rule appears to be true in a dataset. Lift measures the strength of a rule. (Refer to Lecture 44, Slide 5)"
+    "pdfAnswer": "d. 1-B, 2-C, 3-A",
+    "explanation": "Support identifies the frequency of appearance of an item in the dataset. Confidence measures how often a rule appears to be true in a dataset. Lift measures the strength of a rule. (Refer to Lecture 44, Slide 5) The PDF-marked answer is D. 1-B, 2-C, 3-A, which directly addresses the concept asked in this PDF question.",
+    "optionExplanations": [
+      "Not suitable: this option says '1-C, 2-A, 3-B', but the PDF-marked answer is D. 1-B, 2-C, 3-A. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says '1-A, 2-B, 3-C', but the PDF-marked answer is D. 1-B, 2-C, 3-A. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says '1-B, 2-A, 3-C', but the PDF-marked answer is D. 1-B, 2-C, 3-A. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Support identifies the frequency of appearance of an item in the dataset. Confidence measures how often a rule appears to be true in a dataset. Lift measures the strength of a rule. (Refer to Lecture 44, Slide 5)"
+    ]
   },
   {
     "week": 9,
@@ -2362,6 +3478,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Week9_Assignment 9_Urban Informatics_2026.pdf",
     "sourceLabel": "Week 9 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Association rules",
     "prompt": "Which of the following best describes Association Rule Learning?",
     "options": [
       "A supervised learning technique used for classification of labelled datasets",
@@ -2373,7 +3491,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Association Rule Learning is an unsupervised data mining method that discovers associations and frequent co -occurring relationships among variables without labelled outputs. (Refer to Lecture 44, Slide 3)."
+    "pdfAnswer": "b. An unsupervised data mining method used to identify patterns and frequent co- occurring relationships among variables in large datasets",
+    "explanation": "Association Rule Learning is an unsupervised data mining method that discovers associations and frequent co -occurring relationships among variables without labelled outputs. (Refer to Lecture 44, Slide 3). The PDF-marked answer is B. An unsupervised data mining method used to identify patterns and frequent co -occurring relationships among variables in large datasets, which directly addresses 'Which of the following best describes Association Rule Learning'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'A supervised learning technique used for classification of labelled datasets', but the PDF-marked answer is B. An unsupervised data mining method used to identify patterns and frequent co -occurring relationships among variables in large datasets. It does not match 'Which of the following best describes Association Rule Learning'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following best describes Association Rule Learning'. Association Rule Learning is an unsupervised data mining method that discovers associations and frequent co -occurring relationships among variables without labelled outputs. (Refer to Lecture 44, Slide 3).",
+      "Not suitable: this option says 'A clustering algorithm that groups data based on Euclidean distance', but the PDF-marked answer is B. An unsupervised data mining method used to identify patterns and frequent co -occurring relationships among variables in large datasets. It does not match 'Which of the following best describes Association Rule Learning'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A regression technique used to predict continuous values', but the PDF-marked answer is B. An unsupervised data mining method used to identify patterns and frequent co -occurring relationships among variables in large datasets. It does not match 'Which of the following best describes Association Rule Learning'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 9,
@@ -2381,6 +3506,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Week9_Assignment 9_Urban Informatics_2026.pdf",
     "sourceLabel": "Week 9 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 9 assignment concept",
     "prompt": "In an urban clustering study, two clusters of city zones are being merged using Ward's linkage method. Cluster 1 contains 8 urban zones and Cluster 2 contains 12 urban zones. The Euclidean distance between the centroids of the clusters is 5. Calculate the increase in within-cluster variance E when these two clusters are merged.0.119",
     "options": [
       "80",
@@ -2392,7 +3519,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "(Refer to Lecture 43, Slide 5) E = n1n2 n1 + n2 x (distance)2 = 8 x 12 8 + 12 x 52 = 96 20 x 25 = 4.8 x 25 = 120"
+    "pdfAnswer": "d. 120",
+    "explanation": "(Refer to Lecture 43, Slide 5) E = n1n2 n1 + n2 x (distance)2 = 8 x 12 8 + 12 x 52 = 96 20 x 25 = 4.8 x 25 = 120 The PDF-marked answer is D. 120, which directly addresses the concept asked in this PDF question.",
+    "optionExplanations": [
+      "Not suitable: this option says '80', but the PDF-marked answer is D. 120. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says '60', but the PDF-marked answer is D. 120. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says '40', but the PDF-marked answer is D. 120. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. (Refer to Lecture 43, Slide 5) E = n1n2 n1 + n2 x (distance)2 = 8 x 12 8 + 12 x 52 = 96 20 x 25 = 4.8 x 25 = 120"
+    ]
   },
   {
     "week": 9,
@@ -2400,6 +3534,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Week9_Assignment 9_Urban Informatics_2026.pdf",
     "sourceLabel": "Week 9 assignment PDF",
+    "pdfDirect": true,
+    "topic": "SQL query logic",
     "prompt": "A geospatial analyst is clustering urban neighborhoods based on features such as population density, land surface temperature, vegetation cover, and building height using Agglomerative Hierarchical Clustering. During experimentation, the analyst observes the following behaviors: Method A: Clusters sometimes form long chain -like structures, where distant neighbourhoods become part of the same cluster through intermediate ones. Method B: Clusters are very compact, because the distance between clusters is determined by the farthest pair of points. Method C: Cluster merging prioritizes minimizing the increase in within-cluster variance (WCSS). Which of the following correctly identifies the linkage methods used?",
     "options": [
       "A - Single Linkage, B - Complete Linkage, C - Ward's Linkage",
@@ -2411,7 +3547,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Single Linkage (Nearest Neighbor) uses the distance between the closest points and can create chaining effects. Complete Linkage (Farthest Neighbor) uses the distance between farthest points which produces co mpact clusters. Ward's Linkage merges clusters that cause the smallest increase in within-cluster variance (WCSS). (Refer to Lecture 43, Slide 5)"
+    "pdfAnswer": "a. A - Single Linkage, B - Complete Linkage, C - Ward's Linkage",
+    "explanation": "Single Linkage (Nearest Neighbor) uses the distance between the closest points and can create chaining effects. Complete Linkage (Farthest Neighbor) uses the distance between farthest points which produces co mpact clusters. Ward's Linkage merges clusters that cause the smallest increase in within-cluster variance (WCSS). (Refer to Lecture 43, Slide 5) The PDF-marked answer is A. A - Single Linkage, B - Complete Linkage, C - Ward's Linkage, which directly addresses the concept asked in this PDF question.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Single Linkage (Nearest Neighbor) uses the distance between the closest points and can create chaining effects. Complete Linkage (Farthest Neighbor) uses the distance between farthest points which produces co mpact clusters. Ward's Linkage merges clusters that cause the smallest increase in within-cluster variance (WCSS). (Refer to Lecture 43, Slide 5)",
+      "Not suitable: this option says 'A - Average Linkage, B - Single Linkage, C - Ward's Linkage', but the PDF-marked answer is A. A - Single Linkage, B - Complete Linkage, C - Ward's Linkage. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A - Complete Linkage, B - Average Linkage, C - Single Linkage', but the PDF-marked answer is A. A - Single Linkage, B - Complete Linkage, C - Ward's Linkage. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A - Single Linkage, B - Ward's Linkage, C - Average Linkage', but the PDF-marked answer is A. A - Single Linkage, B - Complete Linkage, C - Ward's Linkage. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 9,
@@ -2419,6 +3562,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Week9_Assignment 9_Urban Informatics_2026.pdf",
     "sourceLabel": "Week 9 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Density clustering",
     "prompt": "Which of the following correctly describes a core point in DBSCAN?",
     "options": [
       "A point that lies within epsilon distance of a core point but has fewer than MinPts neighbours",
@@ -2430,7 +3575,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "A core point in DBSCAN is a point whose epsilon -neighbourhood contains at least MinPts points, meaning it lies in a dense region of the dataset. (Refer to Lecture 42, Slide 7) NPTEL Online Certification Courses"
+    "pdfAnswer": "b. A point whose epsilon-neighbourhood contains at least MinPts points",
+    "explanation": "A core point in DBSCAN is a point whose epsilon -neighbourhood contains at least MinPts points, meaning it lies in a dense region of the dataset. (Refer to Lecture 42, Slide 7) The PDF-marked answer is B. A point whose epsilon-neighbourhood contains at least MinPts points, which directly addresses 'Which of the following correctly describes a core point in DBSCAN'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'A point that lies within epsilon distance of a core point but has fewer than MinPts neighbours', but the PDF-marked answer is B. A point whose epsilon-neighbourhood contains at least MinPts points. It does not match 'Which of the following correctly describes a core point in DBSCAN'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following correctly describes a core point in DBSCAN'. A core point in DBSCAN is a point whose epsilon -neighbourhood contains at least MinPts points, meaning it lies in a dense region of the dataset. (Refer to Lecture 42, Slide 7)",
+      "Not suitable: this option says 'A point that is not reachable from any other point within epsilon distance', but the PDF-marked answer is B. A point whose epsilon-neighbourhood contains at least MinPts points. It does not match 'Which of the following correctly describes a core point in DBSCAN'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A point that connects two clusters together', but the PDF-marked answer is B. A point whose epsilon-neighbourhood contains at least MinPts points. It does not match 'Which of the following correctly describes a core point in DBSCAN'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 9,
@@ -2438,6 +3590,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Week9_Assignment 9_Urban Informatics_2026.pdf",
     "sourceLabel": "Week 9 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Consider the following statements about Gaussian Mixture Models (GMM) and the Bayesian Information Criterion (BIC) used for model selection. Statement A - BIC balances good model fit and penalizes excessive model complexity, thereby preventing overfitting. Statement B - In GMM model selection, the model with the highest BIC value is considered the optimal model. Statement C - Increasing the number of clus ters in a GMM generally increases the number of parameters, which increases the complexity penalty in BIC. Statement D - In GMM, the \"spherical\" covariance type allows each cluster to have its own full covariance. Considering the statements given above, choose the correct option.",
     "options": [
       "Statements A and C are true; Statements B and D are false",
@@ -2449,7 +3603,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "BIC balances goodness-of-fit and complexity. The lowest BIC indicates the best model. More clusters mean more parameters and larger penalty term. Spherical covariance assumes equal variance in all directions (circular clusters) while full covariance allows different orientations and shapes. (Refer to Lecture 42, Slide 4)"
+    "pdfAnswer": "a. Statements A and C are true; Statements B and D are false tree",
+    "explanation": "BIC balances goodness-of-fit and complexity. The lowest BIC indicates the best model. More clusters mean more parameters and larger penalty term. Spherical covariance assumes equal variance in all directions (circular clusters) while full covariance allows different orientations and shapes. (Refer to Lecture 42, Slide 4) The PDF-marked answer is A. Statements A and C are true; Statements B and D are false, which directly addresses the concept asked in this PDF question.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. BIC balances goodness-of-fit and complexity. The lowest BIC indicates the best model. More clusters mean more parameters and larger penalty term. Spherical covariance assumes equal variance in all directions (circular clusters) while full covariance allows different orientations and shapes. (Refer to Lecture 42, Slide 4)",
+      "Not suitable: this option says 'Statements A and B are true; Statements C and D are false', but the PDF-marked answer is A. Statements A and C are true; Statements B and D are false. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Statements B and D are true; Statements A and C are false', but the PDF-marked answer is A. Statements A and C are true; Statements B and D are false. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Statements A, C and D are true; Statement B is false', but the PDF-marked answer is A. Statements A and C are true; Statements B and D are false. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 9,
@@ -2457,6 +3618,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Week9_Assignment 9_Urban Informatics_2026.pdf",
     "sourceLabel": "Week 9 assignment PDF",
+    "pdfDirect": true,
+    "topic": "SQL query logic",
     "prompt": "An urban researcher collects five variables from multiple city zones (impervious surface percentage, population density, land surface temperature (LST), albedo, air pollution index). Exploratory analysis shows that impervious surface, density, and LST are strongly positively correlated, while albedo is negatively correlated with temperature and pollution. The researcher wants to create one composite urban heat-impact indicator while avoiding multicollinearity in further regression analysis. Which of the following statements best explains how Principal Co mponent Analysis (PCA) can be used in the creation of the indicator?",
     "options": [
       "PCA selects the single variable with the highest variance and removes all others to eliminate correlation.",
@@ -2468,7 +3631,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "PCA transforms correlated variables into orthogonal (uncorrelated) principal NPTEL Online Certification Courses components, each being a linear combination of the original variables. The first principal component captures the maximum variance, making it suitable as a comp osite indicator while also reducing multicollinearity. (Refer to Lecture 45, Slide 5)"
+    "pdfAnswer": "b. PCA constructs orthogonal components as linear combinations of the original variables, where the first component captures the maximum variance across the correlated variables.",
+    "explanation": "PCA transforms correlated variables into orthogonal (uncorrelated) principal components, each being a linear combination of the original variables. The first principal component captures the maximum variance, making it suitable as a comp osite indicator while also reducing multicollinearity. (Refer to Lecture 45, Slide 5) The PDF-marked answer is B. PCA constructs orthogonal components as linear combinations of the original variables, where the first component captures the maximum variance across the correlated variables., which directly addresses the concept asked in this PDF question.",
+    "optionExplanations": [
+      "Not suitable: this option says 'PCA selects the single variable with the highest variance and removes all others to eliminate correlation.', but the PDF-marked answer is B. PCA constructs orthogonal components as linear combinations of the original variables, where the first component captures the maximum variance across the correlated variables.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. PCA transforms correlated variables into orthogonal (uncorrelated) principal components, each being a linear combination of the original variables. The first principal component captures the maximum variance, making it suitable as a comp osite indicator while also reducing multicollinearity. (Refer to Lecture 45, Slide 5)",
+      "Not suitable: this option says 'PCA converts correlated variables into independent categorical groups based on their correlation strength.', but the PDF-marked answer is B. PCA constructs orthogonal components as linear combinations of the original variables, where the first component captures the maximum variance across the correlated variables.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'PCA ranks variables based on their correlation with temperature and removes those with lower correlations.', but the PDF-marked answer is B. PCA constructs orthogonal components as linear combinations of the original variables, where the first component captures the maximum variance across the correlated variables.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 9,
@@ -2476,6 +3646,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Week9_Assignment 9_Urban Informatics_2026.pdf",
     "sourceLabel": "Week 9 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Which of the following statements about the Mean Shift algorithm is correct?",
     "options": [
       "It requires the number of clusters to be specified before running the algorithm.",
@@ -2487,7 +3659,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "The Mean Shift algorithm iteratively shifts each data point toward the nearest high-density region (density peak) using a kernel density estimation (KDE) approach. It does not require specifying the number of clusters beforehand and can detect clusters of arbitrary shapes. (Refer to Lecture 42, Slide 5)"
+    "pdfAnswer": "c. It identifies clusters by iteratively moving data points toward regions of higher data density.",
+    "explanation": "The Mean Shift algorithm iteratively shifts each data point toward the nearest high-density region (density peak) using a kernel density estimation (KDE) approach. It does not require specifying the number of clusters beforehand and can detect clusters of arbitrary shapes. (Refer to Lecture 42, Slide 5) The PDF-marked answer is C. It identifies clusters by iteratively moving data points toward regions of higher data density., which directly addresses 'Which of the following statements about the Mean Shift algorithm is correct'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'It requires the number of clusters to be specified before running the algorithm.', but the PDF-marked answer is C. It identifies clusters by iteratively moving data points toward regions of higher data density.. It does not match 'Which of the following statements about the Mean Shift algorithm is correct'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'It groups points by minimizing within-cluster variance similar to Ward's method.', but the PDF-marked answer is C. It identifies clusters by iteratively moving data points toward regions of higher data density.. It does not match 'Which of the following statements about the Mean Shift algorithm is correct'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following statements about the Mean Shift algorithm is correct'. The Mean Shift algorithm iteratively shifts each data point toward the nearest high-density region (density peak) using a kernel density estimation (KDE) approach. It does not require specifying the number of clusters beforehand and can detect clusters of arbitrary shapes. (Refer to Lecture 42, Slide 5)",
+      "Not suitable: this option says 'It forms clusters based only on the farthest distance between data points.', but the PDF-marked answer is C. It identifies clusters by iteratively moving data points toward regions of higher data density.. It does not match 'Which of the following statements about the Mean Shift algorithm is correct'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 9,
@@ -2495,6 +3674,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Week9_Assignment 9_Urban Informatics_2026.pdf",
     "sourceLabel": "Week 9 assignment PDF",
+    "pdfDirect": true,
+    "topic": "SQL query logic",
     "prompt": "Match the concepts in Column A with the correct descriptions in Column B. Column A Column B A. Unsupervised Learning 1. Data point belongs to multiple clusters with varying membership B. Hard Clustering 2. An approach where there is no predefined target variable C. Soft Clustering 3. Each observation belongs strictly to a single group D. Dimensionality Reduction Models 4. Technique used to uncover underlying structures in high- dimensional data",
     "options": [
       "A-2, B-3, C-1, D-4",
@@ -2506,7 +3687,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Unsupervised Learning works with no labelled output or target variable. In hard clustering, each data point belongs to exactly one cluster. In soft clustering, data points may belong to multiple clusters wi th different probabilities or memberships. Dimensionality reduction models discover underlying structures and reduce complexity in high -dimensional datasets. (Refer to Lecture 41, Slide 3 & 4) NPTEL Online Certification Courses"
+    "pdfAnswer": "a. A-2, B-3, C-1, D-4",
+    "explanation": "Unsupervised Learning works with no labelled output or target variable. In hard clustering, each data point belongs to exactly one cluster. In soft clustering, data points may belong to multiple clusters wi th different probabilities or memberships. Dimensionality reduction models discover underlying structures and reduce complexity in high -dimensional datasets. (Refer to Lecture 41, Slide 3 & 4) The PDF-marked answer is A. A-2, B-3, C-1, D-4, which directly addresses the concept asked in this PDF question.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Unsupervised Learning works with no labelled output or target variable. In hard clustering, each data point belongs to exactly one cluster. In soft clustering, data points may belong to multiple clusters wi th different probabilities or memberships. Dimensionality reduction models discover underlying structures and reduce complexity in high -dimensional datasets. (Refer to Lecture 41, Slide 3 & 4)",
+      "Not suitable: this option says 'A-1, B-2, C-3, D-4', but the PDF-marked answer is A. A-2, B-3, C-1, D-4. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A-2, B-1, C-3, D-4', but the PDF-marked answer is A. A-2, B-3, C-1, D-4. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A-4, B-3, C-1, D-2', but the PDF-marked answer is A. A-2, B-3, C-1, D-4. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 9,
@@ -2514,6 +3702,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Week9_Assignment 9_Urban Informatics_2026.pdf",
     "sourceLabel": "Week 9 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Clustering",
     "prompt": "A city planning department is clustering 150 urban neighborhoods using K-means based on several variables (average parking occupancy, pedestrian activity density, distance to nearest metro station, traffic congestion index). The planners compute the following observations: I) WCSS decreases sharply until k = 3 and then decreases slowly afterwards. II) Average Silhouette Score for k = 3 is 0.62. III) Average Silhouette Score for k = 5 is 0.41. IV) Some neighborhoods at k = 3 have silhouette values close to 0. Which of the following interpretations is CORRECT based on the observations given above?",
     "options": [
       "Five clusters should be chosen because WCSS always decreases as the number of clusters increases.",
@@ -2525,7 +3715,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "WCSS measures cluster compactness (distance of points from centroids) and it always decreases as k increases. The Elbow Method identifies where the rate of decrease slows significantly, and since the elbow occurs at k = 3, it suggests 3 clusters capture the main structure of the dataset. For silhouette score, k = 3, the value of 0.62 indicates fairly strong clustering structure, whereas, for k = 5, the value of 0.41, indicates weaker cluster separation. Thus, k = 3 produces better-defined clusters. (Refer to Lecture 41, Slide 7 & 8)"
+    "pdfAnswer": "d. Three clusters are likely appropriate because the elbow occurs at k = 3, and the higher silhouette score indicates better separation, although some neighbourhoods may lie near cluster boundaries.",
+    "explanation": "WCSS measures cluster compactness (distance of points from centroids) and it always decreases as k increases. The Elbow Method identifies where the rate of decrease slows significantly, and since the elbow occurs at k = 3, it suggests 3 clusters capture the main structure of the dataset. For silhouette score, k = 3, the value of 0.62 indicates fairly strong clustering structure, whereas, for k = 5, the value of 0.41, indicates weaker cluster separation. Thus, k = 3 produces better-defined clusters. (Refer to Lecture 41, Slide 7 & 8) The PDF-marked answer is D. Three clusters are likely appropriate because the elbow occurs at k = 3, and the higher silhouette score indicates better separation, although some neighbourhoods may lie near cluster boundaries., which directly addresses the concept asked in this PDF question.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Five clusters should be chosen because WCSS always decreases as the number of clusters increases.', but the PDF-marked answer is D. Three clusters are likely appropriate because the elbow occurs at k = 3, and the higher silhouette score indicates better separation, although some neighbourhoods may lie near cluster boundaries.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Three clusters are inappropriate because silhouette values close to zero indicate that K-means has completely failed.', but the PDF-marked answer is D. Three clusters are likely appropriate because the elbow occurs at k = 3, and the higher silhouette score indicates better separation, although some neighbourhoods may lie near cluster boundaries.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Five clusters are better because silhouette score measures only cluster compactness, not separation.', but the PDF-marked answer is D. Three clusters are likely appropriate because the elbow occurs at k = 3, and the higher silhouette score indicates better separation, although some neighbourhoods may lie near cluster boundaries.. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. WCSS measures cluster compactness (distance of points from centroids) and it always decreases as k increases. The Elbow Method identifies where the rate of decrease slows significantly, and since the elbow occurs at k = 3, it suggests 3 clusters capture the main structure of the dataset. For silhouette score, k = 3, the value of 0.62 indicates fairly strong clustering structure, whereas, for k = 5, the value of 0.41, indicates weaker cluster separation. Thus, k = 3 produces better-defined clusters. (Refer to Lecture 41, Slide 7 & 8)"
+    ]
   },
   {
     "week": 10,
@@ -2533,6 +3730,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Neural networks",
     "prompt": "Which of the following machine learning models is inspired by the structure and functioning of the human brain?",
     "options": [
       "Artificial Neural Network (ANN)",
@@ -2544,7 +3743,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Artificial Neural Network (ANN) is a machine learning model inspired by the structure and functioning of the human brain. Refer to lecture 46, slide 3."
+    "pdfAnswer": "a. Artificial Neural Network (ANN)",
+    "explanation": "Artificial Neural Network (ANN) is a machine learning model inspired by the structure and functioning of the human brain. Refer to lecture 46, slide 3. The PDF-marked answer is A. Artificial Neural Network (ANN), which directly addresses 'Which of the following machine learning models is inspired by the structure and functioning of the human brain'.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following machine learning models is inspired by the structure and functioning of the human brain'. Artificial Neural Network (ANN) is a machine learning model inspired by the structure and functioning of the human brain. Refer to lecture 46, slide 3.",
+      "Not suitable: this option says 'Decision Tree', but the PDF-marked answer is A. Artificial Neural Network (ANN). It does not match 'Which of the following machine learning models is inspired by the structure and functioning of the human brain'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'K-Nearest Neighbours', but the PDF-marked answer is A. Artificial Neural Network (ANN). It does not match 'Which of the following machine learning models is inspired by the structure and functioning of the human brain'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Support Vector Machine', but the PDF-marked answer is A. Artificial Neural Network (ANN). It does not match 'Which of the following machine learning models is inspired by the structure and functioning of the human brain'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 10,
@@ -2552,6 +3758,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 10 assignment concept",
     "prompt": "In an artificial neural network, the number of neurons in the hidden layer mainly depends on which of the following?",
     "options": [
       "The size of the input dataset",
@@ -2563,7 +3771,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Number of neurons in the hidden layer depends on the number of decision boundaries we need to draw between the different classes/categories that need to be predicted. Refer to lecture 46, slide 4."
+    "pdfAnswer": "b. The number of decision boundaries required to separate different classes",
+    "explanation": "Number of neurons in the hidden layer depends on the number of decision boundaries we need to draw between the different classes/categories that need to be predicted. Refer to lecture 46, slide 4. The PDF-marked answer is B. The number of decision boundaries required to separate different classes, which directly addresses 'In an artificial neural network, the number of neurons in the hidden layer mainly depends on which of the following'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'The size of the input dataset', but the PDF-marked answer is B. The number of decision boundaries required to separate different classes. It does not match 'In an artificial neural network, the number of neurons in the hidden layer mainly depends on which of the following'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'In an artificial neural network, the number of neurons in the hidden layer mainly depends on which of the following'. Number of neurons in the hidden layer depends on the number of decision boundaries we need to draw between the different classes/categories that need to be predicted. Refer to lecture 46, slide 4.",
+      "Not suitable: this option says 'The number of output classes only', but the PDF-marked answer is B. The number of decision boundaries required to separate different classes. It does not match 'In an artificial neural network, the number of neurons in the hidden layer mainly depends on which of the following'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'The number of training iterations', but the PDF-marked answer is B. The number of decision boundaries required to separate different classes. It does not match 'In an artificial neural network, the number of neurons in the hidden layer mainly depends on which of the following'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 10,
@@ -2571,6 +3786,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "______________ is used in modern deep learning architecture such as transformers.",
     "options": [
       "ELU (Exponential Linear Unit)",
@@ -2582,7 +3799,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "GELU is used in modern deep learning architecture such as transformers. Softmax is used for multi -class classification problems. ELU is used where smoother learning and faster convergence are needed. ReLU is used for general deep learning architectures. Refer to lecture 46, slide 6."
+    "pdfAnswer": "c. GELU (Gaussian Error Linear Unit)",
+    "explanation": "GELU is used in modern deep learning architecture such as transformers. Softmax is used for multi -class classification problems. ELU is used where smoother learning and faster convergence are needed. ReLU is used for general deep learning architectures. Refer to lecture 46, slide 6. The PDF-marked answer is C. GELU (Gaussian Error Linear Unit), which directly addresses '______________ is used in modern deep learning architecture such as transformers'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'ELU (Exponential Linear Unit)', but the PDF-marked answer is C. GELU (Gaussian Error Linear Unit). It does not match '______________ is used in modern deep learning architecture such as transformers'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Softmax', but the PDF-marked answer is C. GELU (Gaussian Error Linear Unit). It does not match '______________ is used in modern deep learning architecture such as transformers'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches '______________ is used in modern deep learning architecture such as transformers'. GELU is used in modern deep learning architecture such as transformers. Softmax is used for multi -class classification problems. ELU is used where smoother learning and faster convergence are needed. ReLU is used for general deep learning architectures. Refer to lecture 46, slide 6.",
+      "Not suitable: this option says 'ReLU (Rectified Linear Unit)', but the PDF-marked answer is C. GELU (Gaussian Error Linear Unit). It does not match '______________ is used in modern deep learning architecture such as transformers'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 10,
@@ -2590,6 +3814,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Neural network training",
     "prompt": "Backpropagation in a neural network is primarily used for which of the following?",
     "options": [
       "Increasing the number of hidden layers",
@@ -2601,7 +3827,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Backpropagation is a systematic procedure for computing the partial derivatives of the loss function with respect to every weight and bias in the network. Refer to lecture 46, slide 9. 0"
+    "pdfAnswer": "c. Computing the partial derivatives of the loss function with respect to weights and biases",
+    "explanation": "Backpropagation is a systematic procedure for computing the partial derivatives of the loss function with respect to every weight and bias in the network. Refer to lecture 46, slide 9. 0 The PDF-marked answer is C. Computing the partial derivatives of the loss function with respect to weights and biases, which directly addresses 'Backpropagation in a neural network is primarily used for which of the following'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Increasing the number of hidden layers', but the PDF-marked answer is C. Computing the partial derivatives of the loss function with respect to weights and biases. It does not match 'Backpropagation in a neural network is primarily used for which of the following'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Initializing the weights of the network', but the PDF-marked answer is C. Computing the partial derivatives of the loss function with respect to weights and biases. It does not match 'Backpropagation in a neural network is primarily used for which of the following'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Backpropagation in a neural network is primarily used for which of the following'. Backpropagation is a systematic procedure for computing the partial derivatives of the loss function with respect to every weight and bias in the network. Refer to lecture 46, slide 9. 0",
+      "Not suitable: this option says 'Reducing the size of the training dataset', but the PDF-marked answer is C. Computing the partial derivatives of the loss function with respect to weights and biases. It does not match 'Backpropagation in a neural network is primarily used for which of the following'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 10,
@@ -2609,6 +3842,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Model explainability",
     "prompt": "Which of the following best describes the purpose of SHAP in machine learning models?",
     "options": [
       "It improves the training speed of neural networks",
@@ -2620,7 +3855,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "SHAP is an explainable AI method based on Shapley values from cooperative game theory. It explains how much each feature contributes to a model's prediction. ANNs are black-box models: SHAP makes them interpretable. Refer to lecture 46, slide 10."
+    "pdfAnswer": "d. It explains the contribution of each feature to a model's prediction using Shapley values",
+    "explanation": "SHAP is an explainable AI method based on Shapley values from cooperative game theory. It explains how much each feature contributes to a model's prediction. ANNs are black-box models: SHAP makes them interpretable. Refer to lecture 46, slide 10. The PDF-marked answer is D. It explains the contribution of each feature to a model's prediction using Shapley values, which directly addresses 'Which of the following best describes the purpose of SHAP in machine learning models'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'It improves the training speed of neural networks', but the PDF-marked answer is D. It explains the contribution of each feature to a model's prediction using Shapley values. It does not match 'Which of the following best describes the purpose of SHAP in machine learning models'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'It replaces the loss function in deep learning models', but the PDF-marked answer is D. It explains the contribution of each feature to a model's prediction using Shapley values. It does not match 'Which of the following best describes the purpose of SHAP in machine learning models'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'It increases the number of hidden layers in a neural network', but the PDF-marked answer is D. It explains the contribution of each feature to a model's prediction using Shapley values. It does not match 'Which of the following best describes the purpose of SHAP in machine learning models'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following best describes the purpose of SHAP in machine learning models'. SHAP is an explainable AI method based on Shapley values from cooperative game theory. It explains how much each feature contributes to a model's prediction. ANNs are black-box models: SHAP makes them interpretable. Refer to lecture 46, slide 10."
+    ]
   },
   {
     "week": 10,
@@ -2628,6 +3870,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Activation functions",
     "prompt": "Why are loss surfaces in deep neural networks highly complex?",
     "options": [
       "Because neural networks use only linear functions",
@@ -2639,7 +3883,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Loss surfaces are very complex due to nonlinear activation functions, multiple layers and millions of parameters. It contains local minima, saddle points, flat plateaus and sharp minima which needs to be overcome. Refer to lecture 47, slide 5. NPTEL Online Certification Courses"
+    "pdfAnswer": "c. Due to nonlinear activation functions, multiple layers, and a large number of parameters",
+    "explanation": "Loss surfaces are very complex due to nonlinear activation functions, multiple layers and millions of parameters. It contains local minima, saddle points, flat plateaus and sharp minima which needs to be overcome. Refer to lecture 47, slide 5. The PDF-marked answer is C. Due to nonlinear activation functions, multiple layers, and a large number of parameters, which directly addresses 'Why are loss surfaces in deep neural networks highly complex'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Because neural networks use only linear functions', but the PDF-marked answer is C. Due to nonlinear activation functions, multiple layers, and a large number of parameters. It does not match 'Why are loss surfaces in deep neural networks highly complex'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Because neural networks always converge to a single global minimum', but the PDF-marked answer is C. Due to nonlinear activation functions, multiple layers, and a large number of parameters. It does not match 'Why are loss surfaces in deep neural networks highly complex'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Why are loss surfaces in deep neural networks highly complex'. Loss surfaces are very complex due to nonlinear activation functions, multiple layers and millions of parameters. It contains local minima, saddle points, flat plateaus and sharp minima which needs to be overcome. Refer to lecture 47, slide 5.",
+      "Not suitable: this option says 'Due to the absence of optimization algorithms', but the PDF-marked answer is C. Due to nonlinear activation functions, multiple layers, and a large number of parameters. It does not match 'Why are loss surfaces in deep neural networks highly complex'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 10,
@@ -2647,6 +3898,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Which of the following are major challenges in deep learning optimization? P. Vanishing gradients Q. Exploding gradients R. Weight initialisation S. Batch normalisation",
     "options": [
       "P and Q",
@@ -2658,7 +3911,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 47, slide 8 and 9."
+    "pdfAnswer": "a. P and Q",
+    "explanation": "The PDF answer key marks A. P and Q. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P and R', but the PDF-marked answer is A. P and Q. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Q and S', but the PDF-marked answer is A. P and Q. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Q and R', but the PDF-marked answer is A. P and Q. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 10,
@@ -2666,6 +3926,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Machine learning types",
     "prompt": "Which of the following correctly describes the primary use of CNNs and RNNs?",
     "options": [
       "CNNs are used for sequential data, while RNNs are used for spatial data",
@@ -2677,7 +3939,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Convolutional Neural Networks (CNNs) are used for spatial data (CNNs learn \"where\" patterns occur) while Recurrent Neural Networks (RNNs) are used for sequential/temporal data (RNNs learn \"when\" patterns occur). Refer to lecture 47, slide 10."
+    "pdfAnswer": "d. CNNs are used for spatial data, while RNNs are used for sequential/temporal data",
+    "explanation": "Convolutional Neural Networks (CNNs) are used for spatial data (CNNs learn \"where\" patterns occur) while Recurrent Neural Networks (RNNs) are used for sequential/temporal data (RNNs learn \"when\" patterns occur). Refer to lecture 47, slide 10. The PDF-marked answer is D. CNNs are used for spatial data, while RNNs are used for sequential/temporal data, which directly addresses 'Which of the following correctly describes the primary use of CNNs and RNNs'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'CNNs are used for sequential data, while RNNs are used for spatial data', but the PDF-marked answer is D. CNNs are used for spatial data, while RNNs are used for sequential/temporal data. It does not match 'Which of the following correctly describes the primary use of CNNs and RNNs'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Both CNNs and RNNs are used only for image classification', but the PDF-marked answer is D. CNNs are used for spatial data, while RNNs are used for sequential/temporal data. It does not match 'Which of the following correctly describes the primary use of CNNs and RNNs'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'CNNs and RNNs are used only for unsupervised learning', but the PDF-marked answer is D. CNNs are used for spatial data, while RNNs are used for sequential/temporal data. It does not match 'Which of the following correctly describes the primary use of CNNs and RNNs'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following correctly describes the primary use of CNNs and RNNs'. Convolutional Neural Networks (CNNs) are used for spatial data (CNNs learn \"where\" patterns occur) while Recurrent Neural Networks (RNNs) are used for sequential/temporal data (RNNs learn \"when\" patterns occur). Refer to lecture 47, slide 10."
+    ]
   },
   {
     "week": 10,
@@ -2685,6 +3954,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Pandas DataFrames",
     "prompt": "A ______________ is a small matrix that slides over an image to detect patterns like edges, textures, and shapes.",
     "options": [
       "kernel",
@@ -2696,7 +3967,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "A kernel (filter) is a small matrix that slides over an image to detect patterns like edges, textures, and shapes. A stride is how many steps the filter moves at a time. Padding is like adding a border of zeros around the image before applying the filter. Pooling layers down sample feature maps to retain dominant features while reducing computational complexity and overfitting. NPTEL Online Certification Courses Refer to lecture 48, slide 5, 6 and 7."
+    "pdfAnswer": "a. kernel",
+    "explanation": "A kernel (filter) is a small matrix that slides over an image to detect patterns like edges, textures, and shapes. A stride is how many steps the filter moves at a time. Padding is like adding a border of zeros around the image before applying the filter. Pooling layers down sample feature maps to retain dominant features while reducing computational complexity and overfitting. Refer to lecture 48, slide 5, 6 and 7. The PDF-marked answer is A. kernel, which directly addresses 'A ______________ is a small matrix that slides over an image to detect patterns like edges, textures, and shapes'.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'A ______________ is a small matrix that slides over an image to detect patterns like edges, textures, and shapes'. A kernel (filter) is a small matrix that slides over an image to detect patterns like edges, textures, and shapes. A stride is how many steps the filter moves at a time. Padding is like adding a border of zeros around the image before applying the filter. Pooling layers down sample feature maps to retain dominant features while reducing computational complexity and overfitting. Refer to lecture 48, slide 5, 6 and 7.",
+      "Not suitable: this option says 'stride', but the PDF-marked answer is A. kernel. It does not match 'A ______________ is a small matrix that slides over an image to detect patterns like edges, textures, and shapes'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'padding', but the PDF-marked answer is A. kernel. It does not match 'A ______________ is a small matrix that slides over an image to detect patterns like edges, textures, and shapes'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'pooling', but the PDF-marked answer is A. kernel. It does not match 'A ______________ is a small matrix that slides over an image to detect patterns like edges, textures, and shapes'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 10,
@@ -2704,6 +3982,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Activation functions",
     "prompt": "Match the following activation functions with their descriptions. Activation function Description P. ReLU i. Output is between 0 and 1 and is good for probabilities Q. Leaky ReLU ii. Output is between -1 and 1 and it allows negative outputs R. Sigmoid iii. Makes negative values very small and helps avoid dead neurons S. Tanh iv. It makes negative values 0 and is best for deep networks.",
     "options": [
       "P-iii; Q-iv; R-ii; S-i",
@@ -2715,7 +3995,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 48, slide 8."
+    "pdfAnswer": "b. P-iv; Q-iii; R-i; S-ii",
+    "explanation": "The PDF answer key marks B. P-iv; Q-iii; R-i; S-ii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P-iii; Q-iv; R-ii; S-i', but the PDF-marked answer is B. P-iv; Q-iii; R-i; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-ii; Q-i; R-iii; S-iv', but the PDF-marked answer is B. P-iv; Q-iii; R-i; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-i; Q-ii; R-iv; S-iii', but the PDF-marked answer is B. P-iv; Q-iii; R-i; S-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 10,
@@ -2723,6 +4010,8 @@ window.questionBankData = [
     "marks": "1 mark",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "SQL query logic",
     "prompt": "_______________ is a type of machine learning where an agent learns to make decisions by interacting with an environment.",
     "options": [
       "Supervised Learning",
@@ -2734,7 +4023,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 50, slide 3."
+    "pdfAnswer": "c. Reinforcement Learning",
+    "explanation": "The PDF answer key marks C. Reinforcement Learning. This answer is suitable because it directly addresses '_______________ is a type of machine learning where an agent learns to make decisions by interacting with an environment', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Supervised Learning', but the PDF-marked answer is C. Reinforcement Learning. It does not match '_______________ is a type of machine learning where an agent learns to make decisions by interacting with an environment'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Unsupervised Learning', but the PDF-marked answer is C. Reinforcement Learning. It does not match '_______________ is a type of machine learning where an agent learns to make decisions by interacting with an environment'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches '_______________ is a type of machine learning where an agent learns to make decisions by interacting with an environment'.",
+      "Not suitable: this option says 'Neural Networks', but the PDF-marked answer is C. Reinforcement Learning. It does not match '_______________ is a type of machine learning where an agent learns to make decisions by interacting with an environment'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 10,
@@ -2742,18 +4038,27 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Reinforcement learning",
     "prompt": "Match the following core components of reinforcement learning with their descriptions. Core components Description P. Agent i. Feedback from environment Q. Action ii. Decision maker R. Reward iii. Strategy that maps states to actions S. Policy iv. Decision made by agent",
     "options": [
       "P-iii; Q-i; R-iv; S-ii",
       "P-iv; Q-iii; R-ii; S-i",
       "P-i; Q-ii; R-iii; S-iv",
-      "P-ii; Q-iv; R-i; S-iii NPTEL Online Certification Courses"
+      "P-ii; Q-iv; R-i; S-iii"
     ],
     "correctIndices": [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 50, slide 4."
+    "pdfAnswer": "d. P-ii; Q-iv; R-i; S-iii",
+    "explanation": "The PDF answer key marks D. P-ii; Q-iv; R-i; S-iii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'P-iii; Q-i; R-iv; S-ii', but the PDF-marked answer is D. P-ii; Q-iv; R-i; S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iv; Q-iii; R-ii; S-i', but the PDF-marked answer is D. P-ii; Q-iv; R-i; S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-i; Q-ii; R-iii; S-iv', but the PDF-marked answer is D. P-ii; Q-iv; R-i; S-iii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question."
+    ]
   },
   {
     "week": 10,
@@ -2761,6 +4066,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Reinforcement learning",
     "prompt": "Match the types of Reinforcement learning (RL) with their descriptions. Type of RL Description P. Model-Free RL i. The agent directly learns a policy that maps states to actions, optimizing it to maximize expected rewards. Q. Policy-Based RL ii. The agent builds a model of the environment to simulate outcomes before taking actions. R. Model-Based RL iii. The agent learns purely from experience without an explicit model of the environment.",
     "options": [
       "P-iii; Q-i; R-ii",
@@ -2772,7 +4079,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 50, slide 9."
+    "pdfAnswer": "a. P-iii; Q-i; R-ii",
+    "explanation": "The PDF answer key marks A. P-iii; Q-i; R-ii. This answer is suitable because it directly addresses the concept asked in this PDF question, while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question.",
+      "Not suitable: this option says 'P-ii; Q-iii; R-ii', but the PDF-marked answer is A. P-iii; Q-i; R-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-i; Q-iii; R-ii', but the PDF-marked answer is A. P-iii; Q-i; R-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iii; Q-ii; R-i', but the PDF-marked answer is A. P-iii; Q-i; R-ii. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 10,
@@ -2780,6 +4094,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 10_Urban Informatics.pdf",
     "sourceLabel": "Week 10 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Neural networks",
     "prompt": "_____________ is defined as an expectation over infinite future rewards, and __________ gives a practical recursive way to compute it.",
     "options": [
       "Q-value, Boltzmann Equation",
@@ -2791,7 +4107,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 50, slide 7."
+    "pdfAnswer": "b. Q-value, Bellman Equation",
+    "explanation": "The PDF answer key marks B. Q-value, Bellman Equation. This answer is suitable because it directly addresses '_____________ is defined as an expectation over infinite future rewards, and __________ gives a practical recursive way to compute it', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Q-value, Boltzmann Equation', but the PDF-marked answer is B. Q-value, Bellman Equation. It does not match '_____________ is defined as an expectation over infinite future rewards, and __________ gives a practical recursive way to compute it'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches '_____________ is defined as an expectation over infinite future rewards, and __________ gives a practical recursive way to compute it'.",
+      "Not suitable: this option says 'Bellman Equation, Q-value', but the PDF-marked answer is B. Q-value, Bellman Equation. It does not match '_____________ is defined as an expectation over infinite future rewards, and __________ gives a practical recursive way to compute it'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Boltzmann Equation, Q-value', but the PDF-marked answer is B. Q-value, Bellman Equation. It does not match '_____________ is defined as an expectation over infinite future rewards, and __________ gives a practical recursive way to compute it'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 11,
@@ -2799,6 +4122,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "UI_Assignment 11_Week 11.pdf",
     "sourceLabel": "Week 11 assignment PDF",
+    "pdfDirect": true,
+    "topic": "IoT communication",
     "prompt": "In IoT communication, ______ provides a unique address to devices, while ______ ensures reliable data transmission between devices and servers.",
     "options": [
       "HTTP, MQTT",
@@ -2810,7 +4135,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "IP assigns a unique address; TCP/IP ensures reliable communication. (Refer to Lecture 51 Slide 5)"
+    "pdfAnswer": "b. IP, TCP/IP",
+    "explanation": "IP assigns a unique address; TCP/IP ensures reliable communication. (Refer to Lecture 51 Slide 5) The PDF-marked answer is B. IP, TCP/IP, which directly addresses 'In IoT communication, ______ provides a unique address to devices, while ______ ensures reliable data transmission between devices and servers'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'HTTP, MQTT', but the PDF-marked answer is B. IP, TCP/IP. It does not match 'In IoT communication, ______ provides a unique address to devices, while ______ ensures reliable data transmission between devices and servers'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'In IoT communication, ______ provides a unique address to devices, while ______ ensures reliable data transmission between devices and servers'. IP assigns a unique address; TCP/IP ensures reliable communication. (Refer to Lecture 51 Slide 5)",
+      "Not suitable: this option says 'CoAP, WebSockets', but the PDF-marked answer is B. IP, TCP/IP. It does not match 'In IoT communication, ______ provides a unique address to devices, while ______ ensures reliable data transmission between devices and servers'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'MQTT, HTTP', but the PDF-marked answer is B. IP, TCP/IP. It does not match 'In IoT communication, ______ provides a unique address to devices, while ______ ensures reliable data transmission between devices and servers'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 11,
@@ -2818,6 +4150,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "UI_Assignment 11_Week 11.pdf",
     "sourceLabel": "Week 11 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Which component in a Computer Process Control System (CPCS) is responsible for converting analog signals into digital form for processing?",
     "options": [
       "DAC",
@@ -2829,7 +4163,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "ADC converts analog signals into digital form. (Refer to Lecture 52 Slide 3) NPTEL Online Certification Courses"
+    "pdfAnswer": "c. ADC",
+    "explanation": "ADC converts analog signals into digital form. (Refer to Lecture 52 Slide 3) The PDF-marked answer is C. ADC, which directly addresses 'Which component in a Computer Process Control System (CPCS) is responsible for converting analog signals into digital form for processing'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'DAC', but the PDF-marked answer is C. ADC. It does not match 'Which component in a Computer Process Control System (CPCS) is responsible for converting analog signals into digital form for processing'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Controller', but the PDF-marked answer is C. ADC. It does not match 'Which component in a Computer Process Control System (CPCS) is responsible for converting analog signals into digital form for processing'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which component in a Computer Process Control System (CPCS) is responsible for converting analog signals into digital form for processing'. ADC converts analog signals into digital form. (Refer to Lecture 52 Slide 3)",
+      "Not suitable: this option says 'Actuator', but the PDF-marked answer is C. ADC. It does not match 'Which component in a Computer Process Control System (CPCS) is responsible for converting analog signals into digital form for processing'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 11,
@@ -2837,6 +4178,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "UI_Assignment 11_Week 11.pdf",
     "sourceLabel": "Week 11 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 11 assignment concept",
     "prompt": "Match the IoT layer with its function: IOT Layer Function P. Sensing Layer i. Data transmission Q. Network Layer ii. Real-world data capture R. WPAN iii. Short-range communication S. WWAN iv. Long-distance communication",
     "options": [
       "P-ii, Q-i, R-iii, S-iv",
@@ -2848,7 +4191,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Sensing layer captures real -world data, Network layer transmits data, WPAN is short-range (Bluetooth, Zigbee), WWAN is long-range (4G/5G). (Refer to Lecture 52 Slide 4)"
+    "pdfAnswer": "a. P-ii, Q-i, R-iii, S-iv",
+    "explanation": "Sensing layer captures real -world data, Network layer transmits data, WPAN is short-range (Bluetooth, Zigbee), WWAN is long-range (4G/5G). (Refer to Lecture 52 Slide 4) The PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv, which directly addresses the concept asked in this PDF question.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. Sensing layer captures real -world data, Network layer transmits data, WPAN is short-range (Bluetooth, Zigbee), WWAN is long-range (4G/5G). (Refer to Lecture 52 Slide 4)",
+      "Not suitable: this option says 'P-i, Q-ii, R-iv, S-iii', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-ii, Q-iii, R-i, S-iv', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iii, Q-i, R-ii, S-iv', but the PDF-marked answer is A. P-ii, Q-i, R-iii, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 11,
@@ -2856,6 +4206,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "UI_Assignment 11_Week 11.pdf",
     "sourceLabel": "Week 11 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Arduino prototyping",
     "prompt": "Which of the following is a primary purpose of the Arduino IDE?",
     "options": [
       "To manufacture microcontrollers",
@@ -2867,7 +4219,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Arduino IDE is used for coding and uploading programs. (Refer to Lecture 52 Slide 9)"
+    "pdfAnswer": "b. To write, compile, and upload programs to microcontrollers",
+    "explanation": "Arduino IDE is used for coding and uploading programs. (Refer to Lecture 52 Slide 9) The PDF-marked answer is B. To write, compile, and upload programs to microcontrollers, which directly addresses 'Which of the following is a primary purpose of the Arduino IDE'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'To manufacture microcontrollers', but the PDF-marked answer is B. To write, compile, and upload programs to microcontrollers. It does not match 'Which of the following is a primary purpose of the Arduino IDE'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following is a primary purpose of the Arduino IDE'. Arduino IDE is used for coding and uploading programs. (Refer to Lecture 52 Slide 9)",
+      "Not suitable: this option says 'To design hardware circuits only', but the PDF-marked answer is B. To write, compile, and upload programs to microcontrollers. It does not match 'Which of the following is a primary purpose of the Arduino IDE'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'To replace embedded systems', but the PDF-marked answer is B. To write, compile, and upload programs to microcontrollers. It does not match 'Which of the following is a primary purpose of the Arduino IDE'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 11,
@@ -2875,18 +4234,27 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "UI_Assignment 11_Week 11.pdf",
     "sourceLabel": "Week 11 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 11 assignment concept",
     "prompt": "Which of the following statements correctly distinguishes analog and digital signals in terms of noise and representation?",
     "options": [
       "Analog signals are discrete and noise-tolerant",
       "Digital signals are continuous and noise-sensitive",
       "Analog signals are continuous and noise-sensitive, while digital signals are discrete and more noise-tolerant",
-      "Digital signals have infinite values and analog signals have finite values NPTEL Online Certification Courses"
+      "Digital signals have infinite values and analog signals have finite values"
     ],
     "correctIndices": [
       2
     ],
     "multiSelect": false,
-    "explanation": "Analog is continuous, digital is discrete. (Refer to Lecture 53 Slide 3)"
+    "pdfAnswer": "c. Analog signals are continuous and noise-sensitive, while digital signals are discrete and more noise-tolerant",
+    "explanation": "Analog is continuous, digital is discrete. (Refer to Lecture 53 Slide 3) The PDF-marked answer is C. Analog signals are continuous and noise-sensitive, while digital signals are discrete and more noise-tolerant, which directly addresses 'Which of the following statements correctly distinguishes analog and digital signals in terms of noise and representation'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Analog signals are discrete and noise-tolerant', but the PDF-marked answer is C. Analog signals are continuous and noise-sensitive, while digital signals are discrete and more noise-tolerant. It does not match 'Which of the following statements correctly distinguishes analog and digital signals in terms of noise and representation'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Digital signals are continuous and noise-sensitive', but the PDF-marked answer is C. Analog signals are continuous and noise-sensitive, while digital signals are discrete and more noise-tolerant. It does not match 'Which of the following statements correctly distinguishes analog and digital signals in terms of noise and representation'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following statements correctly distinguishes analog and digital signals in terms of noise and representation'. Analog is continuous, digital is discrete. (Refer to Lecture 53 Slide 3)",
+      "Not suitable: this option says 'Digital signals have infinite values and analog signals have finite values', but the PDF-marked answer is C. Analog signals are continuous and noise-sensitive, while digital signals are discrete and more noise-tolerant. It does not match 'Which of the following statements correctly distinguishes analog and digital signals in terms of noise and representation'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 11,
@@ -2894,6 +4262,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "UI_Assignment 11_Week 11.pdf",
     "sourceLabel": "Week 11 assignment PDF",
+    "pdfDirect": true,
+    "topic": "SQL query logic",
     "prompt": "In a sensor system, the transfer function is represented as ______, where 's' denotes ______.",
     "options": [
       "S=f(s), stimulus",
@@ -2905,7 +4275,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "The transfer function relates input stimulus (s) to output signal (S). It defines how a sensor converts physical input into electrical output. (Refer to Lecture 53 Slide 6)"
+    "pdfAnswer": "a. S=f(s), stimulus",
+    "explanation": "The transfer function relates input stimulus (s) to output signal (S). It defines how a sensor converts physical input into electrical output. (Refer to Lecture 53 Slide 6) The PDF-marked answer is A. S=f(s), stimulus, which directly addresses 'In a sensor system, the transfer function is represented as ______, where 's' denotes ______'.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'In a sensor system, the transfer function is represented as ______, where 's' denotes ______'. The transfer function relates input stimulus (s) to output signal (S). It defines how a sensor converts physical input into electrical output. (Refer to Lecture 53 Slide 6)",
+      "Not suitable: this option says 'S=s2, output signal', but the PDF-marked answer is A. S=f(s), stimulus. It does not match 'In a sensor system, the transfer function is represented as ______, where 's' denotes ______'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'f=S(s), noise', but the PDF-marked answer is A. S=f(s), stimulus. It does not match 'In a sensor system, the transfer function is represented as ______, where 's' denotes ______'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'S=m+c, sensitivity', but the PDF-marked answer is A. S=f(s), stimulus. It does not match 'In a sensor system, the transfer function is represented as ______, where 's' denotes ______'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 11,
@@ -2913,6 +4290,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "UI_Assignment 11_Week 11.pdf",
     "sourceLabel": "Week 11 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Actuation",
     "prompt": "What is the primary function of an actuator?",
     "options": [
       "Measure physical parameters",
@@ -2924,7 +4303,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Actuators take control signals and convert them into physical actions like motion, pressure, or sound. (Refer to Lecture 53 Slide 11)"
+    "pdfAnswer": "c. Convert electrical signals into physical action",
+    "explanation": "Actuators take control signals and convert them into physical actions like motion, pressure, or sound. (Refer to Lecture 53 Slide 11) The PDF-marked answer is C. Convert electrical signals into physical action, which directly addresses 'What is the primary function of an actuator'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Measure physical parameters', but the PDF-marked answer is C. Convert electrical signals into physical action. It does not match 'What is the primary function of an actuator'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Store data', but the PDF-marked answer is C. Convert electrical signals into physical action. It does not match 'What is the primary function of an actuator'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'What is the primary function of an actuator'. Actuators take control signals and convert them into physical actions like motion, pressure, or sound. (Refer to Lecture 53 Slide 11)",
+      "Not suitable: this option says 'Transmit data over network', but the PDF-marked answer is C. Convert electrical signals into physical action. It does not match 'What is the primary function of an actuator'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 11,
@@ -2932,6 +4318,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "UI_Assignment 11_Week 11.pdf",
     "sourceLabel": "Week 11 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Arduino prototyping",
     "prompt": "Which microcontroller is used as the main processing unit in Arduino Uno?",
     "options": [
       "ATmega2560",
@@ -2943,7 +4331,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Arduino Uno uses ATmega328P as microcontroller. (Refer to Lecture 54 Slide 11)"
+    "pdfAnswer": "b. ATmega328P",
+    "explanation": "Arduino Uno uses ATmega328P as microcontroller. (Refer to Lecture 54 Slide 11) The PDF-marked answer is B. ATmega328P, which directly addresses 'Which microcontroller is used as the main processing unit in Arduino Uno'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'ATmega2560', but the PDF-marked answer is B. ATmega328P. It does not match 'Which microcontroller is used as the main processing unit in Arduino Uno'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which microcontroller is used as the main processing unit in Arduino Uno'. Arduino Uno uses ATmega328P as microcontroller. (Refer to Lecture 54 Slide 11)",
+      "Not suitable: this option says 'ESP32', but the PDF-marked answer is B. ATmega328P. It does not match 'Which microcontroller is used as the main processing unit in Arduino Uno'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'PIC16F877A', but the PDF-marked answer is B. ATmega328P. It does not match 'Which microcontroller is used as the main processing unit in Arduino Uno'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 11,
@@ -2951,6 +4346,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "UI_Assignment 11_Week 11.pdf",
     "sourceLabel": "Week 11 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Arduino prototyping",
     "prompt": "Match the Arduino library with its function: Arduino Library Functions P. EEPROM i. Communication Q. Ethernet ii. Data storage R. GSM iii. Network connectivity S. Bridge iv. Processor communication",
     "options": [
       "P-ii, Q-iii, R-i, S-iv",
@@ -2962,7 +4359,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "EEPROM enables storage, Ethernet is used for network, GSM is used for communication, Bridge enables processor interaction. (Refer to Lecture 55 Slide 7)"
+    "pdfAnswer": "a. P-ii, Q-iii, R-i, S-iv",
+    "explanation": "EEPROM enables storage, Ethernet is used for network, GSM is used for communication, Bridge enables processor interaction. (Refer to Lecture 55 Slide 7) The PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv, which directly addresses the concept asked in this PDF question.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches the concept asked in this PDF question. EEPROM enables storage, Ethernet is used for network, GSM is used for communication, Bridge enables processor interaction. (Refer to Lecture 55 Slide 7)",
+      "Not suitable: this option says 'P-iii, Q-ii, R-iv, S-i', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-i, Q-ii, R-iii, S-iv', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'P-iv, Q-i, R-ii, S-iii', but the PDF-marked answer is A. P-ii, Q-iii, R-i, S-iv. It does not match the concept asked in this PDF question; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 11,
@@ -2970,6 +4374,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "UI_Assignment 11_Week 11.pdf",
     "sourceLabel": "Week 11 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Sensing",
     "prompt": "Which step is essential after installing Arduino IDE for proper board detection?",
     "options": [
       "Writing code",
@@ -2981,7 +4387,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "USB drivers are necessa ry so that the computer can detect and communicate with the Arduino board. (Refer to Lecture 55 Slide 3)"
+    "pdfAnswer": "b. Installing USB drivers",
+    "explanation": "USB drivers are necessa ry so that the computer can detect and communicate with the Arduino board. (Refer to Lecture 55 Slide 3) The PDF-marked answer is B. Installing USB drivers, which directly addresses 'Which step is essential after installing Arduino IDE for proper board detection'.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Writing code', but the PDF-marked answer is B. Installing USB drivers. It does not match 'Which step is essential after installing Arduino IDE for proper board detection'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Which step is essential after installing Arduino IDE for proper board detection'. USB drivers are necessa ry so that the computer can detect and communicate with the Arduino board. (Refer to Lecture 55 Slide 3)",
+      "Not suitable: this option says 'Uploading firmware', but the PDF-marked answer is B. Installing USB drivers. It does not match 'Which step is essential after installing Arduino IDE for proper board detection'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Connecting sensors', but the PDF-marked answer is B. Installing USB drivers. It does not match 'Which step is essential after installing Arduino IDE for proper board detection'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 12,
@@ -2989,6 +4402,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 12_Urban Informatics.pdf",
     "sourceLabel": "Week 12 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Arduino prototyping",
     "prompt": "What is the primary function of a servo motor when used with an Arduino?",
     "options": [
       "Precise control of angular position based on input signals",
@@ -3000,7 +4415,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 56, slide 3."
+    "pdfAnswer": "a. Precise control of angular position based on input signals",
+    "explanation": "The PDF answer key marks A. Precise control of angular position based on input signals. This answer is suitable because it directly addresses 'What is the primary function of a servo motor when used with an Arduino', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'What is the primary function of a servo motor when used with an Arduino'.",
+      "Not suitable: this option says 'Continuous high-speed rotation without control', but the PDF-marked answer is A. Precise control of angular position based on input signals. It does not match 'What is the primary function of a servo motor when used with an Arduino'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Operating only at fixed speeds', but the PDF-marked answer is A. Precise control of angular position based on input signals. It does not match 'What is the primary function of a servo motor when used with an Arduino'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Producing linear motion without any rotation', but the PDF-marked answer is A. Precise control of angular position based on input signals. It does not match 'What is the primary function of a servo motor when used with an Arduino'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 12,
@@ -3008,6 +4430,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 12_Urban Informatics.pdf",
     "sourceLabel": "Week 12 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Sensing",
     "prompt": "How does a Passive Infrared (PIR) sensor such as the HC-SR501 detect motion?",
     "options": [
       "Measuring changes in air pressure",
@@ -3019,7 +4443,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 56, slide 6."
+    "pdfAnswer": "c. Sensing changes in infrared radiation from warm objects",
+    "explanation": "The PDF answer key marks C. Sensing changes in infrared radiation from warm objects. This answer is suitable because it directly addresses 'How does a Passive Infrared (PIR) sensor such as the HC-SR501 detect motion', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Measuring changes in air pressure', but the PDF-marked answer is C. Sensing changes in infrared radiation from warm objects. It does not match 'How does a Passive Infrared (PIR) sensor such as the HC-SR501 detect motion'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Detecting sound frequency variations in the environment', but the PDF-marked answer is C. Sensing changes in infrared radiation from warm objects. It does not match 'How does a Passive Infrared (PIR) sensor such as the HC-SR501 detect motion'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'How does a Passive Infrared (PIR) sensor such as the HC-SR501 detect motion'.",
+      "Not suitable: this option says 'Emitting ultrasonic waves and measuring their reflection', but the PDF-marked answer is C. Sensing changes in infrared radiation from warm objects. It does not match 'How does a Passive Infrared (PIR) sensor such as the HC-SR501 detect motion'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 12,
@@ -3027,6 +4458,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 12_Urban Informatics.pdf",
     "sourceLabel": "Week 12 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 12 assignment concept",
     "prompt": "In GIS, a query is defined as:",
     "options": [
       "A process of data deletion",
@@ -3038,7 +4471,14 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 57, slide 3. NPTEL Online Certification Courses"
+    "pdfAnswer": "d. A request to select features or records from a database",
+    "explanation": "The PDF answer key marks D. A request to select features or records from a database. This answer is suitable because it directly addresses 'In GIS, a query is defined as', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'A process of data deletion', but the PDF-marked answer is D. A request to select features or records from a database. It does not match 'In GIS, a query is defined as'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A method to draw maps manually', but the PDF-marked answer is D. A request to select features or records from a database. It does not match 'In GIS, a query is defined as'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'A technique used to design computer hardware components', but the PDF-marked answer is D. A request to select features or records from a database. It does not match 'In GIS, a query is defined as'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'In GIS, a query is defined as'."
+    ]
   },
   {
     "week": 12,
@@ -3046,6 +4486,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 12_Urban Informatics.pdf",
     "sourceLabel": "Week 12 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Data formats",
     "prompt": "What is the primary requirement, when joining a CSV file to a shapefile in GIS?",
     "options": [
       "Both files must have identical geometry types",
@@ -3057,7 +4499,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 57, slide 19."
+    "pdfAnswer": "c. Both datasets must contain a common matching field",
+    "explanation": "The PDF answer key marks C. Both datasets must contain a common matching field. This answer is suitable because it directly addresses 'What is the primary requirement, when joining a CSV file to a shapefile in GIS', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Both files must have identical geometry types', but the PDF-marked answer is C. Both datasets must contain a common matching field. It does not match 'What is the primary requirement, when joining a CSV file to a shapefile in GIS'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'The CSV file must contain spatial coordinates', but the PDF-marked answer is C. Both datasets must contain a common matching field. It does not match 'What is the primary requirement, when joining a CSV file to a shapefile in GIS'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'What is the primary requirement, when joining a CSV file to a shapefile in GIS'.",
+      "Not suitable: this option says 'The shapefile must be converted into raster format', but the PDF-marked answer is C. Both datasets must contain a common matching field. It does not match 'What is the primary requirement, when joining a CSV file to a shapefile in GIS'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 12,
@@ -3065,6 +4514,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 12_Urban Informatics.pdf",
     "sourceLabel": "Week 12 assignment PDF",
+    "pdfDirect": true,
+    "topic": "GIS relationships",
     "prompt": "When is the \"Relate\" function most useful in GIS?",
     "options": [
       "When both tables have identical records",
@@ -3076,7 +4527,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 57, slide 22."
+    "pdfAnswer": "b. When a one-to-many relationship exists between tables",
+    "explanation": "The PDF answer key marks B. When a one-to-many relationship exists between tables. This answer is suitable because it directly addresses 'When is the \"Relate\" function most useful in GIS', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'When both tables have identical records', but the PDF-marked answer is B. When a one-to-many relationship exists between tables. It does not match 'When is the \"Relate\" function most useful in GIS'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'When is the \"Relate\" function most useful in GIS'.",
+      "Not suitable: this option says 'When spatial data needs to be visualized', but the PDF-marked answer is B. When a one-to-many relationship exists between tables. It does not match 'When is the \"Relate\" function most useful in GIS'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'When converting coordinate systems', but the PDF-marked answer is B. When a one-to-many relationship exists between tables. It does not match 'When is the \"Relate\" function most useful in GIS'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 12,
@@ -3084,6 +4542,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 12_Urban Informatics.pdf",
     "sourceLabel": "Week 12 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Week 12 assignment concept",
     "prompt": "What is the purpose of classification in forest-based models?",
     "options": [
       "Predicting continuous values",
@@ -3095,7 +4555,14 @@ window.questionBankData = [
       2
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 58, slide 13."
+    "pdfAnswer": "c. Predicting categorical variables",
+    "explanation": "The PDF answer key marks C. Predicting categorical variables. This answer is suitable because it directly addresses 'What is the purpose of classification in forest-based models', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Predicting continuous values', but the PDF-marked answer is C. Predicting categorical variables. It does not match 'What is the purpose of classification in forest-based models'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Grouping data without labels', but the PDF-marked answer is C. Predicting categorical variables. It does not match 'What is the purpose of classification in forest-based models'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'What is the purpose of classification in forest-based models'.",
+      "Not suitable: this option says 'Reducing dimensionality', but the PDF-marked answer is C. Predicting categorical variables. It does not match 'What is the purpose of classification in forest-based models'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 12,
@@ -3103,6 +4570,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 12_Urban Informatics.pdf",
     "sourceLabel": "Week 12 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Which tool is used to evaluate classification performance?",
     "options": [
       "Confusion Matrix",
@@ -3114,7 +4583,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 58, slide 13. NPTEL Online Certification Courses"
+    "pdfAnswer": "a. Confusion Matrix",
+    "explanation": "The PDF answer key marks A. Confusion Matrix. This answer is suitable because it directly addresses 'Which tool is used to evaluate classification performance', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'Which tool is used to evaluate classification performance'.",
+      "Not suitable: this option says 'Buffer Tool', but the PDF-marked answer is A. Confusion Matrix. It does not match 'Which tool is used to evaluate classification performance'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Scatter Plot', but the PDF-marked answer is A. Confusion Matrix. It does not match 'Which tool is used to evaluate classification performance'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Histogram', but the PDF-marked answer is A. Confusion Matrix. It does not match 'Which tool is used to evaluate classification performance'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 12,
@@ -3122,6 +4598,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 12_Urban Informatics.pdf",
     "sourceLabel": "Week 12 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Hotspot analysis",
     "prompt": "Which of the following values indicate the presence of a hotspot in Hot Spot Analysis (Getis -Ord Gi*)?",
     "options": [
       "Positive statistically significant z-scores",
@@ -3133,7 +4611,14 @@ window.questionBankData = [
       0
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 47, slide 10."
+    "pdfAnswer": "a. Positive statistically significant z-scores",
+    "explanation": "The PDF answer key marks A. Positive statistically significant z-scores. This answer is suitable because it directly addresses 'Which of the following values indicate the presence of a hotspot in Hot Spot Analysis (Getis -Ord Gi*)', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Suitable: the PDF answer key includes this option. It matches 'Which of the following values indicate the presence of a hotspot in Hot Spot Analysis (Getis -Ord Gi*)'.",
+      "Not suitable: this option says 'Zero z-scores', but the PDF-marked answer is A. Positive statistically significant z-scores. It does not match 'Which of the following values indicate the presence of a hotspot in Hot Spot Analysis (Getis -Ord Gi*)'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Random distribution values', but the PDF-marked answer is A. Positive statistically significant z-scores. It does not match 'Which of the following values indicate the presence of a hotspot in Hot Spot Analysis (Getis -Ord Gi*)'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Negative z-scores', but the PDF-marked answer is A. Positive statistically significant z-scores. It does not match 'Which of the following values indicate the presence of a hotspot in Hot Spot Analysis (Getis -Ord Gi*)'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 12,
@@ -3141,6 +4626,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 12_Urban Informatics.pdf",
     "sourceLabel": "Week 12 assignment PDF",
+    "pdfDirect": true,
+    "topic": "Database integration",
     "prompt": "Why is the \"Create Fishnet\" tool used before Hot Spot Analysis?",
     "options": [
       "To convert raster data into vector format",
@@ -3152,7 +4639,14 @@ window.questionBankData = [
       1
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 59, slide 4."
+    "pdfAnswer": "b. To create a polygon grid for aggregating point data",
+    "explanation": "The PDF answer key marks B. To create a polygon grid for aggregating point data. This answer is suitable because it directly addresses 'Why is the \"Create Fishnet\" tool used before Hot Spot Analysis', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'To convert raster data into vector format', but the PDF-marked answer is B. To create a polygon grid for aggregating point data. It does not match 'Why is the \"Create Fishnet\" tool used before Hot Spot Analysis'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'Why is the \"Create Fishnet\" tool used before Hot Spot Analysis'.",
+      "Not suitable: this option says 'To remove spatial outliers', but the PDF-marked answer is B. To create a polygon grid for aggregating point data. It does not match 'Why is the \"Create Fishnet\" tool used before Hot Spot Analysis'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'To calculate distance automatically', but the PDF-marked answer is B. To create a polygon grid for aggregating point data. It does not match 'Why is the \"Create Fishnet\" tool used before Hot Spot Analysis'; it refers to a different concept, tool, layer, or relationship."
+    ]
   },
   {
     "week": 12,
@@ -3160,6 +4654,8 @@ window.questionBankData = [
     "marks": "2 marks",
     "source": "Assignment 12_Urban Informatics.pdf",
     "sourceLabel": "Week 12 assignment PDF",
+    "pdfDirect": true,
+    "topic": "API data access",
     "prompt": "What is the main use of the ArcGIS API for Python?",
     "options": [
       "Hardware design",
@@ -3171,6 +4667,13 @@ window.questionBankData = [
       3
     ],
     "multiSelect": false,
-    "explanation": "Refer to lecture 60, slide 8."
+    "pdfAnswer": "d. Web GIS, cloud-based mapping and data access",
+    "explanation": "The PDF answer key marks D. Web GIS, cloud-based mapping and data access. This answer is suitable because it directly addresses 'What is the main use of the ArcGIS API for Python', while the other choices point to different concepts or tools.",
+    "optionExplanations": [
+      "Not suitable: this option says 'Hardware design', but the PDF-marked answer is D. Web GIS, cloud-based mapping and data access. It does not match 'What is the main use of the ArcGIS API for Python'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Desktop-only spatial analysis', but the PDF-marked answer is D. Web GIS, cloud-based mapping and data access. It does not match 'What is the main use of the ArcGIS API for Python'; it refers to a different concept, tool, layer, or relationship.",
+      "Not suitable: this option says 'Image editing', but the PDF-marked answer is D. Web GIS, cloud-based mapping and data access. It does not match 'What is the main use of the ArcGIS API for Python'; it refers to a different concept, tool, layer, or relationship.",
+      "Suitable: the PDF answer key includes this option. It matches 'What is the main use of the ArcGIS API for Python'."
+    ]
   }
 ];
