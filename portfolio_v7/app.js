@@ -43,7 +43,7 @@
     renderNav(); renderHero(); renderAbout(); renderSkills();
     renderWork(); renderJourney(); renderGallery(); renderContact(); renderFooter();
     initTheme(); initScroll(); initReveal(); initTypewriter(); initCounters();
-    initTilt(); initMobile(); initLightbox(); initContactForm();
+    initTilt(); initMobile(); initLightbox(); initContactForm(); init3D(); initHints();
   }
 
   /* ----------------------------------------------------- NAV */
@@ -86,6 +86,7 @@
         "</div>" +
       "</div>" +
       '<div class="tile tile-portrait"><span class="tile-glare"></span><img src="' + esc(p.portrait || "") + '" alt="' + esc(p.name) + '" onerror="this.style.display=\'none\'" /></div>' +
+      '<div class="tile tile-3d"><span class="tile-glare"></span><canvas id="hero3d"></canvas><span class="tile-3d-label">interactive \u00b7 drag to spin</span><span class="hint-badge">\u2726 drag me</span></div>' +
       stats +
       '<div class="tile tile-focus"><span class="tile-glare"></span>' +
         '<div class="focus-eyebrow">' + esc(p.heroEyebrow || "Focus") + "</div>" +
@@ -138,7 +139,7 @@
         "<h4>" + esc(c.title) + "</h4><p>" + esc(c.text) + "</p></div>";
     }).join("");
     var tools = (s.tools || []);
-    var pills = tools.concat(tools).map(function (t) { return '<span class="tool-pill">' + esc(t) + "</span>"; }).join("");
+    var pills = tools.concat(tools).map(function (t) { return '<span class="tool-pill">' + logoFor(t) + "<span>" + esc(t) + "</span></span>"; }).join("");
     $("#tools-track").innerHTML = pills;
   }
 
@@ -199,7 +200,8 @@
     var g = (D.gallery || []).filter(function (a) { return a.images && a.images.length; });
     ALBUMS = g;
     var sec = (D.site.sections || {}).gallery || {};
-    $("#gallery-head").innerHTML = head(sec.eyebrow, sec.title || "Gallery", sec.description);
+    $("#gallery-head").innerHTML = head(sec.eyebrow, sec.title || "Gallery", sec.description) +
+      '<a class="btn btn-ghost" href="gallery.html" style="margin-top:1.1rem" data-hint="See every album">View full gallery <i class="fas fa-arrow-right"></i></a>';
     $("#gallery-grid").innerHTML = g.map(function (a, idx) {
       var cover = a.folder + "/" + a.images[0];
       return '<div class="album" data-album="' + idx + '">' +
@@ -234,11 +236,60 @@
     var f = D.site.footer || {}, p = D.profile;
     $("#footer").innerHTML =
       '<span class="tagline">' + esc(f.tagline || "") + "</span>" +
+      '<div class="footer-links"><a href="gallery.html">Gallery</a><a href="' + esc(p.resumeUrl || "resume.html") + '">R\u00e9sum\u00e9</a><a href="admin.html">Manage content</a></div>' +
       '<div class="footer-social">' + socialLinks(p) + "</div>" +
       '<span class="copy">' + esc(f.copyright || "") + "</span>";
   }
 
   /* ----------------------------------------------------- helpers */
+  // map a tech name to a logo (Devicon where available, Font Awesome fallback)
+  var DEV = { python:"devicon-python-plain", c:"devicon-c-plain", "c++":"devicon-cplusplus-plain", "c#":"devicon-csharp-plain",
+    java:"devicon-java-plain", kotlin:"devicon-kotlin-plain", javascript:"devicon-javascript-plain", js:"devicon-javascript-plain",
+    react:"devicon-react-original", reactjs:"devicon-react-original", node:"devicon-nodejs-plain", nodejs:"devicon-nodejs-plain",
+    flask:"devicon-flask-original", html:"devicon-html5-plain", html5:"devicon-html5-plain", css:"devicon-css3-plain", css3:"devicon-css3-plain",
+    bootstrap:"devicon-bootstrap-plain", mysql:"devicon-mysql-plain", git:"devicon-git-plain", github:"devicon-github-original",
+    linux:"devicon-linux-plain", ubuntu:"devicon-ubuntu-plain", arduino:"devicon-arduino-plain", raspberrypi:"devicon-raspberrypi-line",
+    ros:"devicon-ros-original", ros2:"devicon-ros-original", tensorflow:"devicon-tensorflow-original", pytorch:"devicon-pytorch-original",
+    opencv:"devicon-opencv-plain", vscode:"devicon-vscode-plain", numpy:"devicon-numpy-original", pandas:"devicon-pandas-original" };
+  var FA = { powerbi:"fas fa-chart-column", tinkercad:"fas fa-cube", easyeda:"fas fa-microchip", platformio:"fas fa-microchip",
+    esp32:"fas fa-microchip", freertos:"fas fa-gears", mqtt:"fas fa-tower-broadcast", jetsonnano:"fas fa-microchip",
+    whisper:"fas fa-microphone-lines", langchain:"fas fa-link", scikitlearn:"fas fa-brain", littlefs:"fas fa-floppy-disk", photoshop:"fas fa-image", premierepro:"fas fa-film" };
+  function logoFor(name) {
+    var k = String(name).toLowerCase().replace(/[^a-z0-9+#]/g, "");
+    if (DEV[k]) return '<i class="' + DEV[k] + ' colored"></i>';
+    if (FA[k]) return '<i class="' + FA[k] + '"></i>';
+    return '<i class="fas fa-microchip"></i>';
+  }
+
+  function initHints() {
+    var seen;
+    try { seen = sessionStorage.getItem("v7-hints"); } catch (e) {}
+    if (seen || reduce) return;
+    var tips = [
+      "\u2726 Tip: drag the 3D shape in the intro to spin it",
+      "\u25D0 Tip: switch light / dark from the top-right",
+      "\u29C9 Tip: hover the cards \u2014 they tilt in 3D",
+      "\u25A6 Tip: tap any gallery photo to open it full-size"
+    ];
+    var box = document.createElement("div");
+    box.className = "hint-toast";
+    box.innerHTML = '<span class="hint-dot"></span><span class="hint-text"></span><button class="hint-x" aria-label="Dismiss">&times;</button>';
+    document.body.appendChild(box);
+    var txt = box.querySelector(".hint-text"), i = 0, timer;
+    function show() {
+      txt.textContent = tips[i];
+      box.classList.add("in");
+      timer = setTimeout(function () {
+        box.classList.remove("in");
+        i++;
+        if (i < tips.length) setTimeout(show, 500); else done();
+      }, 3600);
+    }
+    function done() { try { sessionStorage.setItem("v7-hints", "1"); } catch (e) {} setTimeout(function () { box.remove(); }, 600); }
+    box.querySelector(".hint-x").addEventListener("click", function () { clearTimeout(timer); box.classList.remove("in"); done(); });
+    setTimeout(show, 1600);
+  }
+
   function head(eyebrow, title, desc) {
     return (eyebrow ? '<div class="eyebrow">' + esc(eyebrow) + "</div>" : "") +
       "<h2 class=\"section-title\">" + esc(title || "") + "</h2>" +
@@ -340,17 +391,30 @@
 
   function initTilt() {
     if (reduce || coarse) return;
-    [].slice.call(document.querySelectorAll(".tile")).forEach(function (el) {
-      var glare = el.querySelector(".tile-glare");
+    function arm(el, max, glare) {
+      if (el.__tilt) return; el.__tilt = true;
+      if (!glare) {
+        glare = document.createElement("span"); glare.className = "card-glare"; el.appendChild(glare);
+      }
       el.addEventListener("pointermove", function (e) {
         var r = el.getBoundingClientRect();
         var px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
-        el.style.transform = "perspective(900px) rotateX(" + ((0.5 - py) * 5).toFixed(2) + "deg) rotateY(" + ((px - 0.5) * 5).toFixed(2) + "deg) translateZ(0)";
-        if (glare) { glare.style.setProperty("--gx", px * 100 + "%"); glare.style.setProperty("--gy", py * 100 + "%"); }
+        el.style.transform = "perspective(900px) rotateX(" + ((0.5 - py) * max).toFixed(2) + "deg) rotateY(" + ((px - 0.5) * max).toFixed(2) + "deg)";
+        glare.style.setProperty("--gx", px * 100 + "%");
+        glare.style.setProperty("--gy", py * 100 + "%");
         el.classList.add("tilting");
       });
       el.addEventListener("pointerleave", function () { el.style.transform = ""; el.classList.remove("tilting"); });
-    });
+    }
+    function scan() {
+      [].slice.call(document.querySelectorAll(".tile")).forEach(function (el) { arm(el, 5, el.querySelector(".tile-glare")); });
+      [].slice.call(document.querySelectorAll(".project, .capability, .insight, .album")).forEach(function (el) { arm(el, 6); });
+    }
+    scan();
+    // re-arm cards that are rendered later (project filtering, gallery, etc.)
+    if (window.MutationObserver) {
+      new MutationObserver(scan).observe(document.getElementById("app") || document.body, { childList: true, subtree: true });
+    }
   }
 
   function initMobile() {
@@ -404,5 +468,83 @@
       note.className = "form-note ok"; note.textContent = "Opening your email app…";
       form.reset();
     });
+  }
+
+  /* ----------------------------------------------------- 3D HERO OBJECT (Three.js) */
+  function init3D() {
+    if (!window.THREE || reduce) return;
+    var canvas = document.getElementById("hero3d");
+    if (!canvas) return;
+    try {
+      var T = window.THREE;
+      var accentOf = function () {
+        var c = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();
+        return new T.Color(c || "#ff6a3d");
+      };
+      var renderer = new T.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      var scene = new T.Scene();
+      var camera = new T.PerspectiveCamera(50, 1, 0.1, 100);
+      camera.position.z = 3.4;
+
+      var col = accentOf();
+      var wire = new T.Mesh(
+        new T.IcosahedronGeometry(1.15, 1),
+        new T.MeshBasicMaterial({ color: col, wireframe: true, transparent: true, opacity: 0.6 })
+      );
+      var core = new T.Mesh(
+        new T.IcosahedronGeometry(1.12, 1),
+        new T.MeshBasicMaterial({ color: col, transparent: true, opacity: 0.07 })
+      );
+      scene.add(wire); scene.add(core);
+
+      var pos = [], N = 150;
+      for (var i = 0; i < N; i++) {
+        var th = Math.acos(2 * Math.random() - 1), ph = 2 * Math.PI * Math.random(), r = 1.7 + Math.random() * 0.6;
+        pos.push(r * Math.sin(th) * Math.cos(ph), r * Math.sin(th) * Math.sin(ph), r * Math.cos(th));
+      }
+      var pg = new T.BufferGeometry();
+      pg.setAttribute("position", new T.Float32BufferAttribute(pos, 3));
+      var pts = new T.Points(pg, new T.PointsMaterial({ color: col, size: 0.035, transparent: true, opacity: 0.65 }));
+      scene.add(pts);
+
+      var mx = 0, my = 0, tmx = 0, tmy = 0, raf = null;
+      var host = canvas.parentElement;
+      if (!coarse) host.addEventListener("pointermove", function (e) {
+        var r = canvas.getBoundingClientRect();
+        tmx = (e.clientX - r.left) / r.width - 0.5;
+        tmy = (e.clientY - r.top) / r.height - 0.5;
+      });
+      function resize() {
+        var w = canvas.clientWidth, h = canvas.clientHeight;
+        if (!w || !h) return;
+        renderer.setSize(w, h, false);
+        camera.aspect = w / h; camera.updateProjectionMatrix();
+      }
+      function animate() {
+        mx += (tmx - mx) * 0.05; my += (tmy - my) * 0.05;
+        wire.rotation.y += 0.004; wire.rotation.x += 0.0022;
+        core.rotation.copy(wire.rotation);
+        pts.rotation.y -= 0.0012;
+        scene.rotation.y = mx * 0.6; scene.rotation.x = my * 0.6;
+        renderer.render(scene, camera);
+        raf = requestAnimationFrame(animate);
+      }
+      resize(); setTimeout(resize, 120);
+      window.addEventListener("resize", resize);
+      animate();
+
+      // recolor on theme switch
+      if (window.MutationObserver) {
+        new MutationObserver(function () {
+          var c = accentOf();
+          wire.material.color = c; core.material.color = c; pts.material.color = c;
+        }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+      }
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) { if (raf) { cancelAnimationFrame(raf); raf = null; } }
+        else if (!raf) animate();
+      });
+    } catch (err) { console.warn("3D init failed", err); }
   }
 })();

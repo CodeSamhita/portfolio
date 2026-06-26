@@ -192,6 +192,11 @@ body::before {
 .tile-portrait { position: relative; }
 .tile-portrait::after { content: ""; position: absolute; inset: 0; border-radius: var(--r-lg); background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.45)); }
 
+.tile-3d { grid-column: span 2; grid-row: span 2; padding: 0; position: relative; overflow: hidden; background: radial-gradient(circle at 50% 42%, var(--surface-2), var(--surface)); display: grid; place-items: center; }
+.tile-3d canvas { width: 100%; height: 100%; display: block; cursor: grab; }
+.tile-3d canvas:active { cursor: grabbing; }
+.tile-3d-label { position: absolute; bottom: 16px; left: 18px; font-family: var(--font-mono); font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--muted); pointer-events: none; }
+
 .tile-stat { display: flex; flex-direction: column; justify-content: center; }
 .tile-stat .num { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; color: var(--text); }
 .tile-stat .num span { color: var(--accent); }
@@ -368,18 +373,145 @@ body::before {
    ============================================================ */
 @media (max-width: 940px) {
   .bento { grid-template-columns: repeat(2, 1fr); }
-  .tile-identity, .tile-portrait, .tile-focus, .tile-now { grid-column: span 2; }
+  .tile-identity, .tile-portrait, .tile-3d, .tile-focus, .tile-now { grid-column: span 2; }
   .tile-portrait { grid-row: span 1; min-height: 320px; }
+  .tile-3d { grid-row: span 1; min-height: 320px; }
   .about-grid, .journey-grid, .contact-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
   .nav-links, .nav-resume { display: none; }
   .nav-burger { display: flex; }
   .bento { grid-template-columns: 1fr; }
-  .tile-identity, .tile-portrait, .tile-focus, .tile-now, .tile-stat, .tile-social { grid-column: span 1; }
+  .tile-identity, .tile-portrait, .tile-3d, .tile-focus, .tile-now, .tile-stat, .tile-social { grid-column: span 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto; }
   .reveal > * { opacity: 1; transform: none; }
 }
+
+/* =============================================================
+   v7.1 REFINEMENTS
+   — Light-theme floating depth, relative (%/rem/clamp) scaling,
+     mobile-first tuning, and 3D perspective for every card.
+     (British / Indian English throughout.)
+   ============================================================= */
+
+/* Make rem-based sizing scale fluidly across viewports */
+html { font-size: clamp(14.5px, 0.45vw + 13px, 18px); }
+
+/* ---- Light theme: give surfaces real floating depth ---- */
+[data-theme="light"] {
+  --shadow: 0 1.4rem 2.6rem -1.2rem rgba(60, 45, 30, 0.30), 0 0.4rem 0.9rem -0.6rem rgba(60, 45, 30, 0.16);
+  --border: rgba(20, 16, 12, 0.12);
+  --border-strong: rgba(20, 16, 12, 0.22);
+}
+[data-theme="light"] .tile,
+[data-theme="light"] .capability,
+[data-theme="light"] .project,
+[data-theme="light"] .insight,
+[data-theme="light"] .contact-form,
+[data-theme="light"] .contact-channel,
+[data-theme="light"] .album,
+[data-theme="light"] .tool-pill {
+  box-shadow: 0 0.5rem 1.4rem -0.8rem rgba(60, 45, 30, 0.22);
+}
+[data-theme="light"] .tile:hover,
+[data-theme="light"] .project:hover,
+[data-theme="light"] .capability:hover { box-shadow: var(--shadow); }
+[data-theme="light"] .nav.scrolled { box-shadow: 0 0.5rem 1.2rem -0.8rem rgba(60,45,30,0.2); }
+[data-theme="light"] .project-type,
+[data-theme="light"] .album-count { background: rgba(255, 255, 255, 0.78); }
+[data-theme="light"] .grain { opacity: 0.02; }
+
+/* ---- Relative scaling: convert fixed gaps/padding to fluid units ---- */
+.bento { gap: clamp(0.7rem, 1.4vw, 1.1rem); }
+.tile { padding: clamp(1.1rem, 2.2vw, 1.7rem); border-radius: clamp(1rem, 2vw, 1.7rem); }
+.capability, .insight, .contact-channel { padding: clamp(1.1rem, 2vw, 1.5rem); }
+.project-body { padding: clamp(1.1rem, 2vw, 1.4rem); }
+.work-grid, .capability-grid { gap: clamp(0.8rem, 1.6vw, 1.25rem); }
+.gallery-grid { gap: clamp(0.6rem, 1.3vw, 0.9rem); }
+.section-head { margin-bottom: clamp(2rem, 4vw, 3rem); }
+
+/* ---- 3D for EVERY card: perspective on the grids + tilt hook ---- */
+.work-grid, .capability-grid, .about-insights, .gallery-grid { perspective: 1100px; }
+.project, .capability, .insight, .album { transform-style: preserve-3d; transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease), border-color 0.3s var(--ease); }
+.card-glare { position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity 0.3s var(--ease); background: radial-gradient(180px circle at var(--gx,50%) var(--gy,50%), rgba(255,255,255,0.10), transparent 60%); z-index: 3; }
+.tilting .card-glare { opacity: 1; }
+.capability, .insight, .album { position: relative; }
+/* lift inner content into depth on the bento + project cards */
+.project-body > * { transform: translateZ(18px); }
+.capability .ico { transform: translateZ(26px); }
+.capability h4, .capability p { transform: translateZ(14px); }
+
+/* ---- Mobile-first tuning: best viewing on phones ---- */
+@media (max-width: 560px) {
+  .section { padding: clamp(3rem, 14vw, 5rem) 1.1rem; }
+  .hero { padding: 6.5rem 1.1rem 2.5rem; }
+  .nav { padding: 0.8rem 1.1rem; }
+  .section-title { font-size: clamp(1.7rem, 8vw, 2.3rem); }
+  .tile-identity h1 { font-size: clamp(2rem, 11vw, 3rem); }
+  .hero-cta { width: 100%; }
+  .hero-cta .btn { flex: 1; justify-content: center; }
+  .hero-social { width: 100%; justify-content: space-between; margin: 0.4rem 0 0; }
+  .work-grid, .capability-grid, .gallery-grid { grid-template-columns: 1fr; }
+  .tile-3d { min-height: 16rem; }
+  .lightbox-nav { width: 2.6rem; height: 2.6rem; font-size: 1.3rem; }
+  .lightbox-prev { left: 0.6rem; } .lightbox-next { right: 0.6rem; }
+  .footer { flex-direction: column; text-align: center; gap: 0.8rem; }
+  /* disable heavy 3D tilt translateZ on small screens for clarity */
+  .project-body > *, .capability .ico, .capability h4, .capability p { transform: none; }
+}
+@media (max-width: 380px) {
+  .tile-identity .lead { display: none; }
+  .chip { padding: 0.5rem 0.9rem; }
+}
+
+/* =============================================================
+   v7.2 — Skill logos + on-screen hint animations
+   ============================================================= */
+.tool-pill { display: inline-flex; align-items: center; gap: 0.55rem; }
+.tool-pill i { font-size: 1.1rem; width: 1.3rem; text-align: center; }
+.tool-pill i.fas { color: var(--accent); }
+
+/* pulsing "do this" badge */
+.hint-badge {
+  position: absolute; top: 0.9rem; right: 0.9rem; z-index: 4; pointer-events: none;
+  font-family: var(--font-mono); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em;
+  color: #0a0a0c; background: var(--accent); padding: 0.32rem 0.6rem; border-radius: 999px;
+  animation: hintPulse 2s ease-in-out infinite;
+}
+@keyframes hintPulse { 0%,100% { transform: scale(1); opacity: 0.92; } 50% { transform: scale(1.08); opacity: 1; } }
+
+/* hover tooltips telling users what a control does */
+[data-hint] { position: relative; }
+[data-hint]::after {
+  content: attr(data-hint); position: absolute; top: calc(100% + 0.5rem); left: 50%;
+  transform: translateX(-50%) translateY(0.25rem);
+  background: var(--surface-2); color: var(--text); border: 1px solid var(--border-strong);
+  font-family: var(--font-mono); font-size: 0.64rem; padding: 0.4rem 0.6rem; border-radius: 0.5rem;
+  white-space: nowrap; opacity: 0; pointer-events: none; z-index: 130;
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+}
+[data-hint]:hover::after { opacity: 1; transform: translateX(-50%) translateY(0); }
+[data-hint].hint-left::after { left: auto; right: 0; transform: translateY(0.25rem); }
+[data-hint].hint-left:hover::after { transform: translateY(0); }
+
+/* one-time intro hint toast (rotates a few tips, dismissible) */
+.hint-toast {
+  position: fixed; left: 50%; bottom: 1.5rem; transform: translateX(-50%) translateY(160%);
+  z-index: 300; display: flex; align-items: center; gap: 0.65rem; max-width: 92vw;
+  background: var(--surface); border: 1px solid var(--border-strong); border-radius: 999px;
+  padding: 0.7rem 1rem 0.7rem 0.9rem; box-shadow: var(--shadow);
+  transition: transform 0.55s var(--ease);
+}
+.hint-toast.in { transform: translateX(-50%) translateY(0); }
+.hint-toast .hint-dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0.6rem var(--accent); animation: pulse 1.6s infinite; flex-shrink: 0; }
+.hint-toast .hint-text { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text); }
+.hint-toast .hint-x { background: none; border: none; color: var(--muted); font-size: 1.2rem; line-height: 1; cursor: pointer; padding: 0 0.15rem; }
+.hint-toast .hint-x:hover { color: var(--accent); }
+@media (max-width: 480px) { .hint-toast .hint-text { font-size: 0.68rem; } }
+
+.footer-links { display: flex; gap: 1.1rem; flex-wrap: wrap; }
+.footer-links a { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); transition: color 0.25s var(--ease); }
+.footer-links a:hover { color: var(--accent); }

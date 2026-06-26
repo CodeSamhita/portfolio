@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -20,7 +21,7 @@
     <a href="#home" class="nav-logo" id="nav-logo" aria-label="Home"></a>
     <nav class="nav-links" id="nav-links" aria-label="Primary"></nav>
     <div class="nav-actions">
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+      <button class="theme-toggle hint-left" id="theme-toggle" aria-label="Toggle theme" data-hint="Switch light / dark">
         <i class="fas fa-moon"></i>
       </button>
       <a class="btn btn-primary nav-resume" id="nav-resume" target="_blank" rel="noopener"></a>
@@ -50,11 +51,10 @@
     <!-- SKILLS -->
     <section id="skills" class="section reveal">
       <div class="section-head" id="skills-head"></div>
+      <div class="capability-grid" id="capability-grid"></div>
       <div class="tools-marquee" id="tools-marquee" aria-label="Tools">
         <div class="tools-track" id="tools-track"></div>
-      </div><br>
-      <div class="capability-grid" id="capability-grid"></div>
-      
+      </div>
     </section>
 
     <!-- WORK -->
@@ -113,6 +113,7 @@
     <div class="lightbox-caption" id="lightbox-caption"></div>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

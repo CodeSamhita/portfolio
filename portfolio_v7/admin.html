@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-IN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager — Aditya Sharma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .admin-wrap { max-width: 60rem; margin: 0 auto; padding: 6.5rem clamp(1rem,4vw,2.5rem) 4rem; }
+    .admin-head h1 { font-size: clamp(1.8rem,5vw,2.6rem); }
+    .admin-head .eyebrow { margin-bottom: 0.8rem; }
+    .admin-note { color: var(--muted); font-size: 0.92rem; max-width: 60ch; margin-top: 0.6rem; line-height: 1.6; }
+    .admin-note code { font-family: var(--font-mono); color: var(--accent); background: var(--surface); padding: 0.1rem 0.35rem; border-radius: 0.3rem; }
+    .tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.8rem 0 1rem; }
+    .tab { font-family: var(--font-mono); font-size: 0.78rem; cursor: pointer; background: var(--surface); border: 1px solid var(--border); color: var(--muted); border-radius: 999px; padding: 0.5rem 1rem; transition: all 0.25s var(--ease); }
+    .tab:hover { color: var(--text); border-color: var(--border-strong); }
+    .tab.active { background: var(--accent); color: #0a0a0c; border-color: var(--accent); font-weight: 700; }
+    .editor { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: clamp(1rem,2.5vw,1.6rem); box-shadow: var(--shadow); }
+    .editor-bar { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; margin-bottom: 0.9rem; }
+    .editor-bar .file { font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); margin-right: auto; }
+    textarea#code { width: 100%; min-height: 24rem; resize: vertical; background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--r-md); color: var(--text); font-family: var(--font-mono); font-size: 0.82rem; line-height: 1.6; padding: 1rem; tab-size: 2; }
+    textarea#code:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+    .status { font-family: var(--font-mono); font-size: 0.78rem; margin-top: 0.7rem; min-height: 1.2rem; }
+    .status.ok { color: #38d39f; } .status.err { color: #ff6b6b; }
+    .btn-sm { padding: 0.55rem 1rem; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="nav scrolled">
+    <a href="index.html" class="nav-logo">CM</a>
+    <div class="nav-actions">
+      <button class="theme-toggle hint-left" id="theme-toggle" aria-label="Toggle theme" data-hint="Switch light / dark"><i class="fas fa-moon"></i></button>
+      <a class="btn btn-ghost" href="index.html"><i class="fas fa-arrow-left"></i> Back to site</a>
+    </div>
+  </header>
+
+  <main class="admin-wrap">
+    <div class="admin-head">
+      <div class="eyebrow">Content Manager</div>
+      <h1>Edit your portfolio without touching code</h1>
+      <p class="admin-note">Pick a file, edit the JSON, then <b>Validate</b> and <b>Download</b>. Replace the matching file in your repository with the download and commit — the live site updates from these files. Everything you see on the site comes from here. <br />Tip: <code>gallery.json</code> belongs in the <code>image/</code> folder; the rest live in <code>data/</code>.</p>
+    </div>
+
+    <div class="tabs" id="tabs"></div>
+
+    <div class="editor">
+      <div class="editor-bar">
+        <span class="file" id="file-name">data/site.json</span>
+        <button class="btn btn-ghost btn-sm" id="btn-format" data-hint="Tidy indentation"><i class="fas fa-wand-magic-sparkles"></i> Format</button>
+        <button class="btn btn-ghost btn-sm" id="btn-validate"><i class="fas fa-circle-check"></i> Validate</button>
+        <button class="btn btn-primary btn-sm" id="btn-download"><i class="fas fa-download"></i> Download</button>
+      </div>
+      <textarea id="code" spellcheck="false"></textarea>
+      <div class="status" id="status"></div>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
