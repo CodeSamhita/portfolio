@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Sharma — Portfolio</title>
+  <meta name="description" content="Portfolio of Aditya Sharma — embedded systems, robotics, and full-stack engineer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- NAV (populated from site.json) -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav-logo" id="nav-logo" aria-label="Home"></a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary"></nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <a class="btn btn-primary nav-resume" id="nav-resume" target="_blank" rel="noopener"></a>
+      <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true"></div>
+
+  <main id="app">
+    <!-- HERO / BENTO -->
+    <section id="home" class="hero">
+      <div class="bento" id="bento"></div>
+      <div class="scroll-hint" id="scroll-hint" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+      <div class="section-head" id="about-head"></div>
+      <div class="about-grid">
+        <div class="about-copy" id="about-copy"></div>
+        <div class="about-insights" id="about-insights"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section reveal">
+      <div class="section-head" id="skills-head"></div>
+      <div class="capability-grid" id="capability-grid"></div>
+      <div class="tools-marquee" id="tools-marquee" aria-label="Tools">
+        <div class="tools-track" id="tools-track"></div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section reveal">
+      <div class="section-head" id="work-head"></div>
+      <div class="work-filters" id="work-filters"></div>
+      <div class="work-grid" id="work-grid"></div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section id="journey" class="section reveal">
+      <div class="section-head" id="journey-head"></div>
+      <div class="journey-grid">
+        <div class="journey-col">
+          <h3 class="journey-label" id="edu-label"></h3>
+          <div class="timeline" id="education-list"></div>
+        </div>
+        <div class="journey-col">
+          <h3 class="journey-label" id="highlights-label"></h3>
+          <ul class="highlight-list" id="highlights-list"></ul>
+          <h3 class="journey-label" id="activities-label"></h3>
+          <ul class="activity-list" id="activities-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section reveal">
+      <div class="section-head" id="gallery-head"></div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <div class="section-head" id="contact-head"></div>
+      <div class="contact-grid">
+        <div class="contact-info" id="contact-info"></div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field"><input type="text" id="cf-name" required placeholder=" " /><label for="cf-name">Your name</label></div>
+          <div class="field"><input type="email" id="cf-email" required placeholder=" " /><label for="cf-email">Your email</label></div>
+          <div class="field"><textarea id="cf-msg" rows="5" required placeholder=" "></textarea><label for="cf-msg">Message</label></div>
+          <button type="submit" class="btn btn-primary btn-block" id="cf-submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous">&#8249;</button>
+    <img class="lightbox-img" id="lightbox-img" alt="" />
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next">&#8250;</button>
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

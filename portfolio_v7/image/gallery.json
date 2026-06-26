@@ -1,0 +1,108 @@
+[
+  {
+    "id": "0001",
+    "title": "WALL-E Robotics Build",
+    "description": "Development and assembly of a WALL-E inspired robot, including mechanical structure, detailing, and progress captured during lab work and exhibitions.",
+    "folder": "image/gallery/wall-e-build",
+    "technologies": [],
+    "tags": ["Robotics", "Hardware", "Build"],
+    "notes": [],
+    "images": [
+      "walle.jpg",
+      "lab.jpg",
+      "walle-1.JPG",
+      "Lab Deligate visit.png",
+      "Project Expo at school.jpg",
+      "Project Expo Orientation.jpg"
+    ]
+  },
+  {
+    "id": "0002",
+    "title": "Humanoid Motion Prototype",
+    "description": "Prototype humanoid project focusing on structural design, motion concepts, and visual components such as the eye mechanism.",
+    "folder": "image/gallery/humanoid-prototype",
+    "technologies": [],
+    "tags": ["Humanoid", "Prototype", "Engineering"],
+    "notes": [],
+    "images": [
+      "Humonoid.jpg",
+      "humonoid eye.jpg"
+    ]
+  },
+  {
+    "id": "0003",
+    "title": "Innovation Visit at IITM",
+    "description": "Collection of moments from the IIT Madras visit, including group interactions, campus exposure, and innovation-focused discussions.",
+    "folder": "image/gallery/iitm-innovation-visit",
+    "technologies": [],
+    "tags": ["IITM", "Innovation", "Event"],
+    "notes": [],
+    "images": [
+      "IITM.jpg",
+      "IITM 2.jpeg",
+      "IITM 3.jpg",
+      "phunsukh wangdu group photo.jpg"
+    ]
+  },
+  {
+    "id": "0004",
+    "title": "Best Innovator & Ambassador Meet",
+    "description": "Highlights from recognition events, including award moments and participation in ambassador-level meetings.",
+    "folder": "image/gallery/Best Innovator & Ambassador",
+    "technologies": [],
+    "tags": ["Awards", "Recognition"],
+    "notes": [],
+    "images": [
+      "Ambasdor meet.jpg",
+      "Best Innovator.jpg"
+    ]
+  },
+  {
+    "id": "0005",
+    "title": "Anveshan",
+    "description": "Moments from the Anveshan event, including recognition, participation, and certificate highlights.",
+    "folder": "image/gallery/Anveshan",
+    "technologies": [],
+    "tags": ["Awards", "Research", "Recognition"],
+    "notes": [],
+    "images": [
+      "Anveshan.jpg",
+      "Anveshan Certificate.jpg"
+    ]
+  },
+  {
+    "id": "0006",
+    "title": "Interactive Portfolio Website",
+    "description": "A responsive portfolio website demonstrating frontend development and project presentation capabilities.",
+    "folder": "image/gallery/interactive-portfolio-website",
+    "technologies": ["HTML5", "CSS3", "JS", "BOOTSTRAP"],
+    "tags": [],
+    "notes": [],
+    "images": [
+      "Screenshot-2026-03-28-152522.png",
+      "Screenshot 2026-03-28 152532.png"
+    ]
+  },
+  {
+    "id": "col-1774721177133-0b3f59",
+    "title": "AI Robo Dog",
+    "description": "Robotics project focused on motion control, balance, and hardware integration using Raspberry Pi and servo systems.",
+    "folder": "image/gallery/ai-robo-dog",
+    "technologies": [
+      "Respberry-pi 5",
+      "pca9685",
+      "mg996",
+      "python",
+      "hd camera",
+      "3d printing(abs",
+      "tpu)"
+    ],
+    "tags": [],
+    "notes": [],
+    "images": [
+      "IMG_20250918_164108.jpg",
+      "IMG_20250918_164037.jpg",
+      "Screenshot 2025-11-02 151530.png"
+    ]
+  }
+]

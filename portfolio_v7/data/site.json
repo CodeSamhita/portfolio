@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Aditya Sharma — Engineer Portfolio",
+    "themeDefault": "dark"
+  },
+  "nav": [
+    {
+      "id": "home",
+      "label": "Home"
+    },
+    {
+      "id": "about",
+      "label": "About"
+    },
+    {
+      "id": "skills",
+      "label": "Skills"
+    },
+    {
+      "id": "work",
+      "label": "Work"
+    },
+    {
+      "id": "journey",
+      "label": "Journey"
+    },
+    {
+      "id": "gallery",
+      "label": "Gallery"
+    },
+    {
+      "id": "contact",
+      "label": "Contact"
+    }
+  ],
+  "sections": {
+    "about": {
+      "eyebrow": "01 — Profile"
+    },
+    "skills": {
+      "eyebrow": "02 — Capabilities",
+      "toolsLabel": "Daily Toolkit"
+    },
+    "work": {
+      "eyebrow": "03 — Selected Work",
+      "title": "Things I've Built",
+      "description": "A mix of embedded systems, robotics, and full-stack builds — each shipped end to end."
+    },
+    "journey": {
+      "eyebrow": "04 — Experience",
+      "eduLabel": "Education",
+      "highlightsLabel": "Highlights",
+      "activitiesLabel": "Certifications & Activity"
+    },
+    "gallery": {
+      "eyebrow": "05 — In the Lab",
+      "title": "Gallery",
+      "description": "Builds, prototypes, and milestones — straight from the workbench.",
+      "cta": "View album"
+    },
+    "contact": {
+      "eyebrow": "06 — Contact"
+    }
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "ctaPrimary": "View my work",
+    "ctaSecondary": "Résumé",
+    "scrollHint": "Scroll to explore",
+    "stats": [
+      {
+        "value": 5,
+        "suffix": "+",
+        "label": "Projects shipped"
+      },
+      {
+        "value": 10,
+        "suffix": "+",
+        "label": "Members mentored"
+      },
+      {
+        "value": 1,
+        "suffix": "",
+        "label": "IEEE paper"
+      },
+      {
+        "value": 4,
+        "suffix": "+",
+        "label": "Years building"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Designed & built from scratch — fully data-driven.",
+    "copyright": "© 2026 Aditya Sharma. All rights reserved."
+  }
+}
