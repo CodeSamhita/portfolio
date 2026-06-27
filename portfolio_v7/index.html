@@ -26,6 +26,8 @@
   @keyframes auroraB { 0%,100%{ transform: translate(0,0) scale(1);} 50%{ transform: translate(-54px,32px) scale(1.14);} }
   @keyframes gridDrift { from { background-position: 0 0, 0 0; } to { background-position: 64px 64px, 64px 64px; } }
   @keyframes dropdownIn { from { opacity: 0; transform: translateY(-8px) scale(0.96); } to { opacity: 1; transform: none; } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes scaleIn { from { opacity: 0; transform: scale(0.96) translateY(8px); } to { opacity: 1; transform: scale(1) translateY(0); } }
   [data-skillcard] [data-sktag] { transition: transform .3s cubic-bezier(.2,.8,.2,1), border-color .3s, color .3s; }
   [data-skillcard]:hover [data-sktag] { transform: translateY(-4px); border-color: rgba(235,167,80,0.45); color: #f2ede3; }
   [data-skillcard]:hover [data-sktag]:nth-child(2){ transition-delay: .03s; }
@@ -307,10 +309,32 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 20px;">
         <sc-for list="{{ filteredProjects }}" as="p" hint-placeholder-count="6">
           <div data-reveal style="opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s;">
-            <div style="border: 1px solid rgba(255,255,255,0.08); background: #1c1813; overflow: hidden; border-radius: 14px; display: flex; flex-direction: column; height: 100%; transition: transform 0.28s cubic-bezier(.2,.8,.2,1), border-color 0.28s, box-shadow 0.28s;" style-hover="transform: translateY(-6px); border-color: rgba(235,167,80,0.5); box-shadow: 0 24px 44px -24px rgba(0,0,0,0.8);">
-              <div style="height: 168px; position: relative; background-color: #251e17; background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0 10px, transparent 10px 20px); display: grid; place-items: center; border-bottom: 1px solid rgba(255,255,255,0.06);">
-                <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #897f6f; letter-spacing: 0.5px;">[ {{ p.shot }} ]</span>
-                <span style="position: absolute; top: 12px; left: 12px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 4px 9px; background: rgba(235,167,80,0.14); color: #eaa64f; letter-spacing: 0.5px; border-radius: 5px;">{{ p.cat }}</span>
+            <div onClick="{{ p.open }}" style="border: 1px solid rgba(255,255,255,0.08); background: #1c1813; overflow: hidden; border-radius: 14px; display: flex; flex-direction: column; height: 100%; cursor: pointer; transition: transform 0.28s cubic-bezier(.2,.8,.2,1), border-color 0.28s, box-shadow 0.28s;" style-hover="transform: translateY(-6px); border-color: rgba(235,167,80,0.5); box-shadow: 0 24px 44px -24px rgba(0,0,0,0.8);">
+              <div style="height: 168px; position: relative; background-color: #251e17; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center;">
+                <sc-if value="{{ p.hasImage }}" hint-placeholder-val="{{ false }}">
+                  <img src="{{ p.currentImage }}" alt="{{ p.title }}" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.2) contrast(1.05); transition: filter 0.3s, transform 0.3s; pointer-events: none;" style-hover="filter: grayscale(0) contrast(1.05); transform: scale(1.025);">
+                </sc-if>
+                <sc-if value="{{ !p.hasImage }}" hint-placeholder-val="{{ true }}">
+                  <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0 10px, transparent 10px 20px); display: grid; place-items: center; width: 100%; height: 100%;">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #897f6f; letter-spacing: 0.5px;">[ {{ p.shot }} ]</span>
+                  </div>
+                </sc-if>
+                <span style="position: absolute; top: 12px; left: 12px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 4px 9px; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.1); color: #eaa64f; letter-spacing: 0.5px; border-radius: 5px; backdrop-filter: blur(4px); z-index: 2;">{{ p.cat }}</span>
+                
+                <!-- carousel arrows overlay -->
+                <sc-if value="{{ p.hasMultipleImages }}" hint-placeholder-val="{{ false }}">
+                  <button onClick="{{ p.prev }}" style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.12); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(4px); transition: all 0.2s; padding: 0; outline: none;" style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  </button>
+                  <button onClick="{{ p.next }}" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.12); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(4px); transition: all 0.2s; padding: 0; outline: none;" style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                  <div style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 4;">
+                    <sc-for list="{{ p.dots }}" as="dot" hint-placeholder-count="3">
+                      <span style="width: 5px; height: 5px; border-radius: 50%; background: {{ dot.bg }}; transform: {{ dot.scale }}; transition: all 0.25s;"></span>
+                    </sc-for>
+                  </div>
+                </sc-if>
               </div>
               <div style="padding: 20px 22px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
                 <h3 style="font-size: clamp(16.5px, 1.8vw, 19px); font-weight: 600; margin: 0; line-height: 1.25;">{{ p.title }}</h3>
@@ -395,13 +419,27 @@
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 16px;">
         <sc-for list="{{ certImages }}" as="c" hint-placeholder-count="5">
-          <div data-reveal style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; aspect-ratio: 1.4/1; border: 1px dashed rgba(235,167,80,0.35); border-radius: 12px; background: rgba(235,167,80,0.03); display: flex; flex-direction: column; justify-content: space-between; padding: 16px; transition: border-color 0.25s, background 0.25s;" style-hover="border-color: rgba(235,167,80,0.7); background: rgba(235,167,80,0.06);">
-            <span style="align-self: flex-start; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #eaa64f; border: 1px solid rgba(235,167,80,0.4); border-radius: 6px; padding: 4px 9px;">＋ add image</span>
-            <div>
-              <p style="margin: 0; font-size: clamp(12.5px, 1.4vw, 14px); font-weight: 600; line-height: 1.3;">{{ c.name }}</p>
-              <p style="margin: 4px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #a89e8d;">{{ c.issuer }}</p>
+          <a onClick="{{ c.open }}" data-reveal style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; aspect-ratio: 1.4/1; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; background: #1c1813; display: flex; flex-direction: column; justify-content: space-between; padding: 16px; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s; overflow: hidden; position: relative; cursor: pointer; text-decoration: none; color: inherit;" style-hover="border-color: rgba(235,167,80,0.5); transform: translateY(-4px); box-shadow: 0 12px 24px -10px rgba(0,0,0,0.65);">
+            <sc-if value="{{ c.hasImg }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ c.img }}" alt="{{ c.name }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.35) contrast(1.1) grayscale(0.25); z-index: 0; transition: transform 0.3s, filter 0.3s; pointer-events: none;" style-hover="transform: scale(1.03); filter: brightness(0.65) contrast(1.1) grayscale(0);">
+            </sc-if>
+            <sc-if value="{{ !c.hasImg }}" hint-placeholder-val="{{ true }}">
+              <div style="position: absolute; inset: 0; border: 1px dashed rgba(235,167,80,0.3); border-radius: 12px; background: rgba(235,167,80,0.02); z-index: 0;"></div>
+            </sc-if>
+            
+            <div style="position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%;">
+              <sc-if value="{{ c.hasImg }}" hint-placeholder-val="{{ false }}">
+                <span style="align-self: flex-start; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); color: #eaa64f; border: 1px solid rgba(235,167,80,0.4); background: rgba(20,17,13,0.78); backdrop-filter: blur(4px); border-radius: 6px; padding: 3px 8px;">view scan ✦</span>
+              </sc-if>
+              <sc-if value="{{ !c.hasImg }}" hint-placeholder-val="{{ true }}">
+                <span style="align-self: flex-start; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #eaa64f; border: 1px solid rgba(235,167,80,0.4); border-radius: 6px; padding: 4px 9px;">＋ add image</span>
+              </sc-if>
+              <div>
+                <p style="margin: 0; font-size: clamp(12.5px, 1.4vw, 14px); font-weight: 600; line-height: 1.3; text-shadow: 0 2px 4px rgba(0,0,0,0.85);">{{ c.name }}</p>
+                <p style="margin: 4px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #c0b8ab; text-shadow: 0 1px 3px rgba(0,0,0,0.85);">{{ c.issuer }}</p>
+              </div>
             </div>
-          </div>
+          </a>
         </sc-for>
       </div>
     </section>
@@ -416,11 +454,36 @@
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 16px;">
         <sc-for list="{{ gallery }}" as="a" hint-placeholder-count="6">
-          <a href="Gallery.dc.html" data-reveal style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; aspect-ratio: 4/3; position: relative; background-color: #251e17; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 9px, transparent 9px 18px); border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; justify-content: flex-end; padding: 16px; overflow: hidden; border-radius: 14px; cursor: pointer; transition: border-color 0.25s, transform 0.3s cubic-bezier(.2,.8,.2,1);" style-hover="border-color: rgba(235,167,80,0.45); transform: translateY(-4px);">
-            <span style="position: absolute; top: 12px; right: 12px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 3px 8px; background: rgba(20,17,13,0.7); color: #eaa64f; border-radius: 5px;">{{ a.count }} photos</span>
-            <p style="margin: 0; font-size: clamp(13.5px, 1.4vw, 15px); font-weight: 600;">{{ a.title }}</p>
-            <p style="margin: 4px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #a89e8d;">view album →</p>
-          </a>
+          <div onClick="{{ a.open }}" data-reveal style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; aspect-ratio: 4/3; position: relative; background-color: #251e17; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; justify-content: flex-end; padding: 16px; overflow: hidden; border-radius: 14px; cursor: pointer; transition: border-color 0.25s, transform 0.3s cubic-bezier(.2,.8,.2,1);" style-hover="border-color: rgba(235,167,80,0.45); transform: translateY(-4px);">
+            <sc-if value="{{ a.hasImage }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ a.currentImage }}" alt="{{ a.title }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.2) contrast(1.05); z-index: 0; transition: transform 0.3s; pointer-events: none;" style-hover="transform: scale(1.04); filter: grayscale(0) contrast(1.05);">
+            </sc-if>
+            <sc-if value="{{ !a.hasImage }}" hint-placeholder-val="{{ true }}">
+              <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 9px, transparent 9px 18px); z-index: 0;"></div>
+            </sc-if>
+            
+            <!-- gradient overlay for text readability -->
+            <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(19,16,12,0.85) 90%); z-index: 1; pointer-events: none;"></div>
+            
+            <span style="position: absolute; top: 12px; right: 12px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 3px 8px; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.1); color: #eaa64f; border-radius: 5px; z-index: 2; backdrop-filter: blur(4px);">{{ a.count }} photos</span>
+            <p style="margin: 0; font-size: clamp(13.5px, 1.4vw, 15px); font-weight: 600; z-index: 2; text-shadow: 0 1px 3px rgba(0,0,0,0.85);">{{ a.title }}</p>
+            <p style="margin: 4px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #c0b8ab; z-index: 2; text-shadow: 0 1px 2px rgba(0,0,0,0.85);">view album ✦</p>
+
+            <!-- carousel arrows overlay -->
+            <sc-if value="{{ a.hasMultipleImages }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ a.prev }}" style="position: absolute; left: 8px; top: 35%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.12); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(4px); transition: all 0.2s; padding: 0; outline: none;" style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button onClick="{{ a.next }}" style="position: absolute; right: 8px; top: 35%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.12); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(4px); transition: all 0.2s; padding: 0; outline: none;" style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <div style="position: absolute; bottom: 44px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 4;">
+                <sc-for list="{{ a.dots }}" as="dot" hint-placeholder-count="3">
+                  <span style="width: 5px; height: 5px; border-radius: 50%; background: {{ dot.bg }}; transform: {{ dot.scale }}; transition: all 0.25s;"></span>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
         </sc-for>
       </div>
     </section>
@@ -472,12 +535,95 @@
       </div>
     </footer>
 
+    <!-- ===== CERTIFICATE MODAL POPUP ===== -->
+    <sc-if value="{{ activeCertImage }}" hint-placeholder-val="{{ false }}">
+      <div onClick="{{ closeCertPopup }}" style="position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(19, 16, 12, 0.85); backdrop-filter: blur(12px); animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;">
+        <div onClick="{{ stopProp }}" style="position: relative; max-width: 900px; width: 100%; max-height: calc(100vh - 120px); background: #1c1813; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; box-shadow: 0 32px 64px -16px rgba(0,0,0,0.85); overflow: hidden; display: flex; flex-direction: column; animation: scaleIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;">
+          <!-- Header -->
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); background: rgba(20,17,13,0.5);">
+            <div>
+              <h4 style="margin: 0; font-size: clamp(14px, 1.5vw, 17px); font-weight: 700; color: #f2ede3; letter-spacing: -0.3px;">{{ activeCertImage.name }}</h4>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #a89e8d;">{{ activeCertImage.issuer }}</span>
+            </div>
+            <button onClick="{{ closeCertPopup }}" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: #c0b8ab; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; transition: all 0.2s; outline: none;" style-hover="background: rgba(255,255,255,0.12); color: #f2ede3; transform: scale(1.05);">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+          <!-- Image Body -->
+          <div style="flex: 1; overflow-y: auto; display: flex; align-items: center; justify-content: center; padding: clamp(12px, 3vw, 24px); background: #13100c;">
+            <img src="{{ activeCertImage.img }}" alt="{{ activeCertImage.name }}" style="max-width: 100%; max-height: calc(100vh - 240px); object-fit: contain; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); user-select: none;">
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ===== PROJECT DETAIL MODAL POPUP ===== -->
+    <sc-if value="{{ activeProject }}" hint-placeholder-val="{{ false }}">
+      <div onClick="{{ closeProjectPopup }}" style="position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(19, 16, 12, 0.85); backdrop-filter: blur(12px); animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;">
+        <div onClick="{{ stopProp }}" style="position: relative; max-width: 800px; width: 100%; max-height: calc(100vh - 80px); background: #1c1813; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; box-shadow: 0 32px 64px -16px rgba(0,0,0,0.85); overflow: hidden; display: flex; flex-direction: column; animation: scaleIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;">
+          <!-- Header -->
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); background: rgba(20,17,13,0.5);">
+            <div>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 3px 8px; background: rgba(235,167,80,0.14); border: 1px solid rgba(235,167,80,0.25); color: #eaa64f; border-radius: 5px; letter-spacing: 0.5px;">{{ activeProject.cat }}</span>
+              <h4 style="margin: 6px 0 0; font-size: clamp(16px, 1.8vw, 20px); font-weight: 700; color: #f2ede3; letter-spacing: -0.3px;">{{ activeProject.title }}</h4>
+            </div>
+            <button onClick="{{ closeProjectPopup }}" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: #c0b8ab; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; transition: all 0.2s; outline: none;" style-hover="background: rgba(255,255,255,0.12); color: #f2ede3; transform: scale(1.05);">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+          <!-- Body -->
+          <div style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; background: #13100c;">
+            <!-- Modal Image Slider -->
+            <sc-if value="{{ activeProject.hasImage }}" hint-placeholder-val="{{ false }}">
+              <div style="height: 320px; position: relative; background-color: #1c1813; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <img src="{{ activeProject.currentImage }}" alt="{{ activeProject.title }}" style="width: 100%; height: 100%; object-fit: contain; user-select: none;">
+                <!-- arrows -->
+                <sc-if value="{{ activeProject.hasMultipleImages }}" hint-placeholder-val="{{ false }}">
+                  <button onClick="{{ activeProject.prev }}" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; background: rgba(20,17,13,0.85); border: 1px solid rgba(255,255,255,0.15); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(8px); transition: all 0.2s; padding: 0; outline: none;" style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  </button>
+                  <button onClick="{{ activeProject.next }}" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; background: rgba(20,17,13,0.85); border: 1px solid rgba(255,255,255,0.15); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(8px); transition: all 0.2s; padding: 0; outline: none;" style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                  <div style="position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 4; background: rgba(20,17,13,0.64); padding: 4px 10px; border-radius: 20px; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.05);">
+                    <sc-for list="{{ activeProject.dots }}" as="dot" hint-placeholder-count="3">
+                      <span style="width: 6px; height: 6px; border-radius: 50%; background: {{ dot.bg }}; transform: {{ dot.scale }}; transition: all 0.25s;"></span>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-if>
+            <!-- Details content -->
+            <div style="padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+              <p style="margin: 0; font-size: clamp(14px, 1.5vw, 16px); line-height: 1.6; color: #c0b8ab;">{{ activeProject.desc }}</p>
+              
+              <sc-if value="{{ activeProject.hasHighlight }}" hint-placeholder-val="{{ false }}">
+                <div style="display: flex; gap: 10px; padding: 12px 16px; background: rgba(235,167,80,0.06); border: 1px solid rgba(235,167,80,0.18); border-radius: 10px; font-size: clamp(12.5px, 1.3vw, 14px); line-height: 1.5; color: #eaa64f;">
+                  <span style="flex-shrink: 0;">★</span>
+                  <span>{{ activeProject.highlight }}</span>
+                </div>
+              </sc-if>
+              
+              <div>
+                <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #897f6f; letter-spacing: 0.5px;">TECHNOLOGIES USED</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  <sc-for list="{{ activeProject.tech }}" as="t" hint-placeholder-count="4">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11px, 1.2vw, 12px); padding: 5px 10px; color: #f2ede3; background: #1c1813; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px;">{{ t }}</span>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
   </main>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;showAvailability&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;gridLines&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Background&quot;}}">
 class Component extends DCLogic {
-  state = { active: 'home', menuOpen: false, navOpen: false, filter: 'All', sent: false, typed: '' };
+  state = { active: 'home', menuOpen: false, navOpen: false, filter: 'All', sent: false, typed: '', activeCertImage: null, activeProject: null, activeGalleryAlbum: null, projectImageIndexes: {}, galleryImageIndexes: {} };
 
   constructor(props) {
     super(props);
@@ -485,6 +631,28 @@ class Component extends DCLogic {
     this.cubeRef = React.createRef();
     this._cleanups = [];
     this._roles = ['A Full Stack Developer.', 'An Innovator.', 'A Hardware Enthusiast.', 'A Problem Solver.'];
+    this._slideshowTimers = [];
+    this.projects = [
+      { title: 'Autonomous RoboDog', cat: 'Robotics', shot: 'security quadruped', desc: 'A security quadruped that detects and follows a recognised face in real time using on-board computer vision.', highlight: 'Basis of the IEEE NQComp-2026 research paper (MIT Manipal).', tech: ['Python', 'OpenCV', 'Face Recognition', 'Embedded'], images: ['assets/gallery/Project/Robo Dog - Robotics/IMG_20250918_164037.jpg', 'assets/gallery/Project/Robo Dog - Robotics/IMG_20250918_164108.jpg', 'assets/gallery/Project/Robo Dog - Robotics/Screenshot 2025-11-02 151530.png'] },
+      { title: 'Interactive Humanoid', cat: 'AI', shot: 'humanoid bust', desc: 'An interactive humanoid that listens, understands and replies with real-time, lip-synced speech.', highlight: 'Real-time speech recognition with lip-synced response.', tech: ['Raspberry Pi', 'Whisper', 'OpenCV', 'TTS'], images: ['assets/gallery/Project/Humonoid - Robotics/20251010_170740.jpg', 'assets/gallery/Project/Humonoid - Robotics/20251112_152204.jpg', 'assets/gallery/Project/Humonoid - Robotics/20251118_171630.jpg', 'assets/gallery/Project/Humonoid - Robotics/IMG_20250822_233600.jpg'] },
+      { title: 'Smart Switch — LEO', cat: 'IoT', shot: 'local-first hub', desc: 'A local-first smart-home switch and hub with its own MQTT broker, web dashboard and a companion Android app. Runs entirely on your network — no cloud.', highlight: 'Fully offline — its own broker, mDNS clustering and a glassmorphic app.', tech: ['ESP32-S3', 'FreeRTOS', 'MQTT', 'Kotlin'], images: ['assets/gallery/Project/Smart Switch - IOT/IMG_20260623_212231.jpg'] },
+      { title: 'Smart Tank Monitor — AquaNode', cat: 'IoT', shot: 'water-level sensor', desc: 'A Wi-Fi water-tank monitor — ultrasonic level sensing, a live dashboard, colour LED status and push alerts, with on-device logging.', highlight: 'Live dashboard updated in real time over Server-Sent Events.', tech: ['ESP32-C3', 'Ultrasonic', 'SSE', 'React'], images: ['assets/gallery/Project/Smart tank - IOT/IMG_20260515_043412.jpg', 'assets/gallery/Project/Smart tank - IOT/IMG_20260515_111504.jpg', 'assets/gallery/Project/Smart tank - IOT/IMG_20260623_212209.jpg', 'assets/gallery/Project/Smart tank - IOT/IMG_20241014_221137.jpg'] },
+      { title: 'AI-Driven Smart Traffic Management', cat: 'AI', shot: 'traffic vision feed', desc: 'A computer-vision system that detects traffic flow and optimises signal timing to ease congestion.', highlight: '', tech: ['Python', 'OpenCV', 'Computer Vision'], images: ['assets/gallery/Project/AI driven smart traffi analysis system - AI-Automation/IMG_20260428_140703.jpg', 'assets/gallery/Project/AI driven smart traffi analysis system - AI-Automation/Screenshot 2026-03-28 152532.png', 'assets/gallery/Project/AI driven smart traffi analysis system - AI-Automation/Screenshot-2026-03-28-152522.png'] },
+      { title: 'WALL-E Build', cat: 'Robotics', shot: 'animatronic build', desc: 'A WALL-E–inspired animatronic build with motion and personality, presented at the Innovative Project Expo.', highlight: '', tech: ['Arduino', 'Servos', '3D Printing'], images: ['assets/gallery/Project/Wall-E - ROBOTICS/1744954817634.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/Project Expo Orientation.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_20241216_161123.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_2760.JPG', 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_2761.JPG', 'assets/gallery/Project/Wall-E - ROBOTICS/0A2A1514.JPG'] },
+      { title: 'Path Finder Bot', cat: 'Robotics', shot: 'obstacle avoider', desc: 'An obstacle-avoiding robot that works out a route around barriers in real time.', highlight: '', tech: ['Arduino', 'Ultrasonic', 'Robotics'], images: ['assets/gallery/Project/Path finder bot - Security-robotics/Path finder bot.jpg', 'assets/gallery/Project/Path finder bot - Security-robotics/IMG_20250729_165030.jpg'] },
+      { title: 'Line Follower Bot', cat: 'Robotics', shot: 'track follower', desc: 'An autonomous robot that follows a marked track using IR sensors and a tuned control loop.', highlight: '', tech: ['Arduino', 'IR Sensors', 'Control Loop'], images: [] },
+      { title: 'Smart Traffic System', cat: 'IoT', shot: 'adaptive signals', desc: 'A model traffic-control system that adapts signal timing to live road conditions using sensors.', highlight: '', tech: ['Arduino', 'Sensors', 'Embedded C'], images: ['assets/gallery/Project/Smart Traffic System (Hardware) - Automation/IMG_20220823_162440.jpg', 'assets/gallery/Project/Smart Traffic System (Hardware) - Automation/IMG_20220823_163903.jpg', 'assets/gallery/Project/Smart Traffic System (Hardware) - Automation/IMG_20220823_164336.jpg', 'assets/gallery/Project/Smart Traffic System (Hardware) - Automation/IMG_20220823_164838.jpg'] },
+      { title: 'Maker Space Sign Board', cat: 'Hardware', shot: 'addressable LEDs', desc: 'A programmable LED sign board built for the campus Maker Space, with addressable lighting effects.', highlight: '', tech: ['ESP32', 'WLED', 'NeoPixel'], images: ['assets/gallery/Project/Wled - IOT/IMG_20241028_082845.jpg', 'assets/gallery/Project/Wled - IOT/IMG_20241014_221153.jpg', 'assets/gallery/Project/Wled - IOT/IMG_20250102_033107.jpg'] },
+      { title: 'Cyber Attack Demonstration', cat: 'Security', shot: 'attack & defence', desc: 'An educational demonstration of common attack techniques and their defences, built to teach safe security practices.', highlight: '', tech: ['Security', 'Networking', 'Linux', 'Python'], images: ['assets/gallery/Project/Cyber Attack Demonstration - Security/IMG_6827 2.jpg', 'assets/gallery/Project/Cyber Attack Demonstration - Security/IMG_6828 4.jpg', 'assets/gallery/Project/Cyber Attack Demonstration - Security/P_20220113_165046.jpg'] },
+    ];
+    this.gallery = [
+      { title: 'EnVision 2025 · IITM Research Park', count: 7, images: ['assets/gallery/Moments/Envision IITM/IMG_20250130_130729.jpg', 'assets/gallery/Moments/Envision IITM/IMG_1700.jpeg', 'assets/gallery/Moments/Envision IITM/IMG_20250130_120154_1.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250130_130857.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250130_132715.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250131_120523.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250131_122241.jpg'] },
+      { title: 'Best Innovator & Ambassador Meet', count: 2, images: ['assets/gallery/Moments/Best Innovator & Ambassador/Best Innovator.jpg', 'assets/gallery/Moments/Best Innovator & Ambassador/Ambasdor meet.jpg'] },
+      { title: 'Anveshan — South Zone', count: 4, images: ['assets/gallery/Moments/Anveshan/Anveshan.jpg', 'assets/gallery/Moments/Anveshan/IMG_20250221_142419.jpg', 'assets/gallery/Moments/Anveshan/IMG_20250221_143953.jpg', 'assets/gallery/Moments/Anveshan/IMG_20250221_144424.jpg'] },
+      { title: 'Student Project Expo 2024', count: 3, images: ['assets/gallery/Project/Wall-E - ROBOTICS/Project Expo Orientation.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_20241216_161123.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/0A2A1514.JPG'] },
+      { title: 'MakerSpace Build Sessions', count: 4, images: ['assets/gallery/Project/Wall-E - ROBOTICS/IMG_2760.JPG', 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_2761.JPG', 'assets/gallery/Project/Wall-E - ROBOTICS/1744954817634.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/DSC03312.JPG'] },
+      { title: 'Tech Fests & Demos', count: 3, images: ['assets/gallery/Moments/AWS/IMG_20220726_165740.jpg', 'assets/gallery/Moments/AWS/IMG_20220727_161055.jpg', 'assets/gallery/Moments/AWS/IMG_20220727_164420.jpg'] },
+    ];
   }
 
   navTo(id) {
@@ -562,16 +730,67 @@ class Component extends DCLogic {
     };
     window.addEventListener('scroll', this._onScroll, { passive: true });
     this._onScroll();
+
+    this._onKeyDown = (e) => {
+      if (e.key === 'Escape') this.setState({ activeCertImage: null, activeProject: null, activeGalleryAlbum: null });
+    };
+    window.addEventListener('keydown', this._onKeyDown);
+
+    this.startProjectSlideshow();
   }
 
   componentWillUnmount() {
     if (this._reveal) this._reveal.disconnect();
     if (this._spy) this._spy.disconnect();
     if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._onKeyDown) window.removeEventListener('keydown', this._onKeyDown);
+    if (this._slideshowTimers) this._slideshowTimers.forEach(clearTimeout);
     if (this._typeTimer) clearTimeout(this._typeTimer);
     if (this._raf) cancelAnimationFrame(this._raf);
     if (this._scrollRaf) cancelAnimationFrame(this._scrollRaf);
     this._cleanups.forEach((fn) => fn());
+  }
+
+  startProjectSlideshow() {
+    // 1. Projects auto-slideshow
+    const multiImgProjects = this.projects.filter((p) => p.images && p.images.length > 1);
+    multiImgProjects.forEach((p) => {
+      const cycle = () => {
+        if (!this.state.activeProject && !this.state.activeCertImage && !this.state.activeGalleryAlbum) {
+          const idx = this.state.projectImageIndexes[p.title] || 0;
+          const nextIdx = (idx + 1) % p.images.length;
+          this.setState((s) => ({
+            projectImageIndexes: { ...s.projectImageIndexes, [p.title]: nextIdx }
+          }));
+        }
+        const delay = 4000 + Math.random() * 3500;
+        const timer = setTimeout(cycle, delay);
+        this._slideshowTimers.push(timer);
+      };
+      const initialDelay = 2000 + Math.random() * 4000;
+      const timer = setTimeout(cycle, initialDelay);
+      this._slideshowTimers.push(timer);
+    });
+
+    // 2. Gallery auto-slideshow
+    const multiImgGallery = this.gallery.filter((g) => g.images && g.images.length > 1);
+    multiImgGallery.forEach((g) => {
+      const cycle = () => {
+        if (!this.state.activeProject && !this.state.activeCertImage && !this.state.activeGalleryAlbum) {
+          const idx = this.state.galleryImageIndexes[g.title] || 0;
+          const nextIdx = (idx + 1) % g.images.length;
+          this.setState((s) => ({
+            galleryImageIndexes: { ...s.galleryImageIndexes, [g.title]: nextIdx }
+          }));
+        }
+        const delay = 4500 + Math.random() * 3500;
+        const timer = setTimeout(cycle, delay);
+        this._slideshowTimers.push(timer);
+      };
+      const initialDelay = 3000 + Math.random() * 4000;
+      const timer = setTimeout(cycle, initialDelay);
+      this._slideshowTimers.push(timer);
+    });
   }
 
   startTyping() {
@@ -714,21 +933,7 @@ class Component extends DCLogic {
     const toolsWithEl = tools.map((t) => ({ ...t, logoEl: React.createElement('img', { src: t.logo, alt: '', style: { width: 22, height: 22, display: 'block' } }) }));
     const toolsLoop = toolsWithEl.concat(toolsWithEl);
 
-    const projects = [
-      { title: 'Autonomous RoboDog', cat: 'Robotics', shot: 'security quadruped', desc: 'A security quadruped that detects and follows a recognised face in real time using on-board computer vision.', highlight: 'Basis of the IEEE NQComp-2026 research paper (MIT Manipal).', tech: ['Python', 'OpenCV', 'Face Recognition', 'Embedded'] },
-      { title: 'Interactive Humanoid', cat: 'AI', shot: 'humanoid bust', desc: 'An interactive humanoid that listens, understands and replies with real-time, lip-synced speech.', highlight: 'Real-time speech recognition with lip-synced response.', tech: ['Raspberry Pi', 'Whisper', 'OpenCV', 'TTS'] },
-      { title: 'Smart Switch — LEO', cat: 'IoT', shot: 'local-first hub', desc: 'A local-first smart-home switch and hub with its own MQTT broker, web dashboard and a companion Android app. Runs entirely on your network — no cloud.', highlight: 'Fully offline — its own broker, mDNS clustering and a glassmorphic app.', tech: ['ESP32-S3', 'FreeRTOS', 'MQTT', 'Kotlin'] },
-      { title: 'Smart Tank Monitor — AquaNode', cat: 'IoT', shot: 'water-level sensor', desc: 'A Wi-Fi water-tank monitor — ultrasonic level sensing, a live dashboard, colour LED status and push alerts, with on-device logging.', highlight: 'Live dashboard updated in real time over Server-Sent Events.', tech: ['ESP32-C3', 'Ultrasonic', 'SSE', 'React'] },
-      { title: 'AI-Driven Smart Traffic Management', cat: 'AI', shot: 'traffic vision feed', desc: 'A computer-vision system that detects traffic flow and optimises signal timing to ease congestion.', highlight: '', tech: ['Python', 'OpenCV', 'Computer Vision'] },
-      { title: 'WALL-E Build', cat: 'Robotics', shot: 'animatronic build', desc: 'A WALL-E–inspired animatronic build with motion and personality, presented at the Innovative Project Expo.', highlight: '', tech: ['Arduino', 'Servos', '3D Printing'] },
-      { title: 'Path Finder Bot', cat: 'Robotics', shot: 'obstacle avoider', desc: 'An obstacle-avoiding robot that works out a route around barriers in real time.', highlight: '', tech: ['Arduino', 'Ultrasonic', 'Robotics'] },
-      { title: 'Line Follower Bot', cat: 'Robotics', shot: 'track follower', desc: 'An autonomous robot that follows a marked track using IR sensors and a tuned control loop.', highlight: '', tech: ['Arduino', 'IR Sensors', 'Control Loop'] },
-      { title: 'Smart Traffic System', cat: 'IoT', shot: 'adaptive signals', desc: 'A model traffic-control system that adapts signal timing to live road conditions using sensors.', highlight: '', tech: ['Arduino', 'Sensors', 'Embedded C'] },
-      { title: 'Maker Space Sign Board', cat: 'Hardware', shot: 'addressable LEDs', desc: 'A programmable LED sign board built for the campus Maker Space, with addressable lighting effects.', highlight: '', tech: ['ESP32', 'WLED', 'NeoPixel'] },
-      { title: 'Cyber Attack Demonstration', cat: 'Security', shot: 'attack & defence', desc: 'An educational demonstration of common attack techniques and their defences, built to teach safe security practices.', highlight: '', tech: ['Security', 'Networking', 'Linux', 'Python'] },
-      { title: 'DIY Bluetooth Speaker', cat: 'Hardware', shot: 'speaker enclosure', desc: 'A hand-built portable Bluetooth speaker — amplifier, custom enclosure and battery, assembled and tuned end to end.', highlight: '', tech: ['Electronics', 'Audio Amplifier', 'Soldering'] },
-      { title: 'DIY Power Bank', cat: 'Hardware', shot: '18650 pack', desc: 'A custom USB power bank built around 18650 cells with a boost converter and charge-protection circuit.', highlight: '', tech: ['18650 Cells', 'Boost Converter', 'BMS'] },
-    ];
+    const projects = this.projects;
 
     const cats = ['All', 'Robotics', 'AI', 'IoT', 'Hardware', 'Security'];
     const filters = cats.map((c) => {
@@ -741,8 +946,39 @@ class Component extends DCLogic {
         on: () => this.setState({ filter: c }),
       };
     });
+
     const filteredProjects = (filter === 'All' ? projects : projects.filter((p) => p.cat === filter))
-      .map((p) => ({ ...p, hasHighlight: !!p.highlight }));
+      .map((p) => {
+        const pImages = p.images || [];
+        const activeIdx = this.state.projectImageIndexes[p.title] || 0;
+        const currentImage = pImages[activeIdx] || '';
+        return {
+          ...p,
+          currentImage,
+          hasHighlight: !!p.highlight,
+          hasImage: pImages.length > 0,
+          hasMultipleImages: pImages.length > 1,
+          open: () => this.setState({ activeProject: p }),
+          prev: (e) => {
+            if (e) { e.preventDefault(); e.stopPropagation(); }
+            if (pImages.length <= 1) return;
+            const prevIdx = (activeIdx - 1 + pImages.length) % pImages.length;
+            this.setState((s) => ({ projectImageIndexes: { ...s.projectImageIndexes, [p.title]: prevIdx } }));
+          },
+          next: (e) => {
+            if (e) { e.preventDefault(); e.stopPropagation(); }
+            if (pImages.length <= 1) return;
+            const nextIdx = (activeIdx + 1) % pImages.length;
+            this.setState((s) => ({ projectImageIndexes: { ...s.projectImageIndexes, [p.title]: nextIdx } }));
+          },
+          dots: pImages.map((img, i) => ({
+            index: i,
+            isActive: i === activeIdx,
+            bg: i === activeIdx ? '#eaa64f' : 'rgba(255,255,255,0.3)',
+            scale: i === activeIdx ? 'scale(1.25)' : 'scale(1)',
+          })),
+        };
+      });
 
     const experience = [
       { role: 'Robotics Developer & Mentor', org: 'Build Club MakerSpace, Presidency University', period: 'Jul 2024 — Present', point: 'Lead robotics builds and mentor 50+ members on programming, debugging and ROS 2 control frameworks; co-organised InnovateX 3.0, a 24-hour hardware hackathon.' },
@@ -773,27 +1009,123 @@ class Component extends DCLogic {
       'AWS Workshop — Brainovision (2022)',
       'Cyber Security, Hands-On — RRIMS (2021)',
     ];
-    const certImages = [
-      { name: 'Full-Stack Web Development', issuer: 'Bootcamp Certificate' },
-      { name: 'Data Visualization', issuer: 'Infosys Springboard' },
-      { name: 'Machine Learning with Python', issuer: 'SimpliLearn SkillUP' },
-      { name: 'DSA using Java', issuer: 'CodeChef' },
-      { name: 'ROS 2 & Robotic Simulation', issuer: 'Course Certificate' },
+    const rawCertImages = [
+      { name: 'Best Mentor Certificate', issuer: 'Presidency University (Innovative Project Expo 2024)', img: 'assets/gallery/Certificates/Apprieciation/Best-Mentor-Certificate.png' },
+      { name: 'Full-Stack Web Development', issuer: 'Udemy Bootcamp', img: 'assets/gallery/Certificates/Course/front-end.png' },
+      { name: 'Data Visualization Techniques', issuer: 'Infosys Springboard', img: 'assets/gallery/Certificates/Course/Data-Visualization-Techniques.png' },
+      { name: 'AWS Certificate Workshop', issuer: 'Brainovision', img: 'assets/gallery/Certificates/Course/AWS-Certificate.png' },
+      { name: 'Anveshan 2024 Research', issuer: 'Presidency University (South Zone)', img: 'assets/gallery/Certificates/Participation/Anveshan-2024-Certificate.png' },
+      { name: 'Envision IITM Research Park', issuer: 'IIT Madras', img: 'assets/gallery/Certificates/Participation/Envision-Certification.png' },
+      { name: 'Python & Application Dev', issuer: 'Red Tron Technologies', img: 'assets/gallery/Certificates/Course/Python-and-Application-Devlopment-Red TronCertificate.png' },
+      { name: 'Hands-on Cyber Security', issuer: 'RRIMS', img: 'assets/gallery/Certificates/Apprieciation/Cyber-Security.png' },
+      { name: 'In-Plant training — Python', issuer: 'KnowX Innovations', img: 'assets/gallery/Certificates/Career/In-plant-training-certificate.png' },
     ];
+    const certImages = rawCertImages.map((c) => ({
+      ...c,
+      hasImg: !!c.img,
+      open: () => this.setState({ activeCertImage: c })
+    }));
 
-    const gallery = [
-      { title: 'EnVision 2025 · IITM Research Park', count: 4 },
-      { title: 'Best Innovator & Ambassador Meet', count: 2 },
-      { title: 'Anveshan — South Zone', count: 2 },
-      { title: 'Student Project Expo 2024', count: 3 },
-      { title: 'MakerSpace Build Sessions', count: 5 },
-      { title: 'Tech Fests & Demos', count: 4 },
-    ];
+    const gallery = this.gallery.map((g) => {
+      const gImages = g.images || [];
+      const activeIdx = this.state.galleryImageIndexes[g.title] || 0;
+      const currentImage = gImages[activeIdx] || '';
+      return {
+        ...g,
+        currentImage,
+        hasImage: gImages.length > 0,
+        hasMultipleImages: gImages.length > 1,
+        open: () => this.setState({ activeGalleryAlbum: g }),
+        prev: (e) => {
+          if (e) { e.preventDefault(); e.stopPropagation(); }
+          if (gImages.length <= 1) return;
+          const prevIdx = (activeIdx - 1 + gImages.length) % gImages.length;
+          this.setState((s) => ({ galleryImageIndexes: { ...s.galleryImageIndexes, [g.title]: prevIdx } }));
+        },
+        next: (e) => {
+          if (e) { e.preventDefault(); e.stopPropagation(); }
+          if (gImages.length <= 1) return;
+          const nextIdx = (activeIdx + 1) % gImages.length;
+          this.setState((s) => ({ galleryImageIndexes: { ...s.galleryImageIndexes, [g.title]: nextIdx } }));
+        },
+        dots: gImages.map((img, i) => ({
+          index: i,
+          isActive: i === activeIdx,
+          bg: i === activeIdx ? '#eaa64f' : 'rgba(255,255,255,0.3)',
+          scale: i === activeIdx ? 'scale(1.25)' : 'scale(1)',
+        })),
+      };
+    });
 
     const githubUrl = 'https://github.com/CodeSamhita';
     const linkedinUrl = 'https://www.linkedin.com/in/aditya-sharma-8679802b3';
     const instagramUrl = 'https://www.instagram.com/sanatan.simha/';
     const whatsappUrl = "https://wa.me/916363350665?text=Hello%20Aditya,%20I'm%20reaching%20out%20from%20your%20portfolio.";
+
+    const activeProject = this.state.activeProject ? (() => {
+      const p = this.projects.find((pr) => pr.title === this.state.activeProject.title);
+      if (!p) return null;
+      const pImages = p.images || [];
+      const activeIdx = this.state.projectImageIndexes[p.title] || 0;
+      const currentImage = pImages[activeIdx] || '';
+      return {
+        ...p,
+        currentImage,
+        hasHighlight: !!p.highlight,
+        hasImage: pImages.length > 0,
+        hasMultipleImages: pImages.length > 1,
+        prev: (e) => {
+          if (e) { e.preventDefault(); e.stopPropagation(); }
+          if (pImages.length <= 1) return;
+          const prevIdx = (activeIdx - 1 + pImages.length) % pImages.length;
+          this.setState((s) => ({ projectImageIndexes: { ...s.projectImageIndexes, [p.title]: prevIdx } }));
+        },
+        next: (e) => {
+          if (e) { e.preventDefault(); e.stopPropagation(); }
+          if (pImages.length <= 1) return;
+          const nextIdx = (activeIdx + 1) % pImages.length;
+          this.setState((s) => ({ projectImageIndexes: { ...s.projectImageIndexes, [p.title]: nextIdx } }));
+        },
+        dots: pImages.map((img, i) => ({
+          index: i,
+          isActive: i === activeIdx,
+          bg: i === activeIdx ? '#eaa64f' : 'rgba(255,255,255,0.3)',
+          scale: i === activeIdx ? 'scale(1.25)' : 'scale(1)',
+        })),
+      };
+    })() : null;
+
+    const activeGalleryAlbum = this.state.activeGalleryAlbum ? (() => {
+      const g = this.gallery.find((gr) => gr.title === this.state.activeGalleryAlbum.title);
+      if (!g) return null;
+      const gImages = g.images || [];
+      const activeIdx = this.state.galleryImageIndexes[g.title] || 0;
+      const currentImage = gImages[activeIdx] || '';
+      return {
+        ...g,
+        currentImage,
+        hasImage: gImages.length > 0,
+        hasMultipleImages: gImages.length > 1,
+        prev: (e) => {
+          if (e) { e.preventDefault(); e.stopPropagation(); }
+          if (gImages.length <= 1) return;
+          const prevIdx = (activeIdx - 1 + gImages.length) % gImages.length;
+          this.setState((s) => ({ galleryImageIndexes: { ...s.galleryImageIndexes, [g.title]: prevIdx } }));
+        },
+        next: (e) => {
+          if (e) { e.preventDefault(); e.stopPropagation(); }
+          if (gImages.length <= 1) return;
+          const nextIdx = (activeIdx + 1) % gImages.length;
+          this.setState((s) => ({ galleryImageIndexes: { ...s.galleryImageIndexes, [g.title]: nextIdx } }));
+        },
+        dots: gImages.map((img, i) => ({
+          index: i,
+          isActive: i === activeIdx,
+          bg: i === activeIdx ? '#eaa64f' : 'rgba(255,255,255,0.3)',
+          scale: i === activeIdx ? 'scale(1.25)' : 'scale(1)',
+        })),
+      };
+    })() : null;
 
     return {
       typed: this.state.typed,
@@ -816,6 +1148,13 @@ class Component extends DCLogic {
       experience, education, highlights, certs, certImages, gallery,
       sendLabel: this.state.sent ? 'Sent ✓' : 'Send message',
       onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      activeCertImage: this.state.activeCertImage,
+      closeCertPopup: () => this.setState({ activeCertImage: null }),
+      activeProject,
+      closeProjectPopup: () => this.setState({ activeProject: null }),
+      activeGalleryAlbum,
+      closeGalleryPopup: () => this.setState({ activeGalleryAlbum: null }),
+      stopProp: (e) => e.stopPropagation(),
     };
   }
 }

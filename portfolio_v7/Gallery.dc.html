@@ -55,12 +55,22 @@
     <!-- album grid -->
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 18px;">
       <sc-for list="{{ albums }}" as="a" hint-placeholder-count="8">
-        <div style="position: relative; aspect-ratio: 4/3; background-color: #251e17; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 9px, transparent 9px 18px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; cursor: pointer; transition: transform 0.3s cubic-bezier(.2,.8,.2,1), border-color 0.3s, box-shadow 0.3s;" style-hover="transform: translateY(-6px); border-color: rgba(235,167,80,0.5); box-shadow: 0 26px 48px -26px rgba(0,0,0,0.85);">
-          <span style="position: absolute; top: 14px; left: 14px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 4px 9px; background: rgba(235,167,80,0.14); color: #eaa64f; border-radius: 5px; letter-spacing: 0.5px;">{{ a.cat }}</span>
-          <span style="position: absolute; top: 14px; right: 14px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 4px 9px; background: rgba(20,17,13,0.72); color: #f2ede3; border-radius: 5px;">{{ a.count }} photos</span>
-          <h3 style="margin: 0; font-size: clamp(16px, 1.8vw, 18px); font-weight: 600; line-height: 1.25;">{{ a.title }}</h3>
-          <p style="margin: 6px 0 0; font-size: clamp(12px, 1.4vw, 13.5px); line-height: 1.5; color: #c0b8ab;">{{ a.note }}</p>
-          <p style="margin: 10px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #897f6f;">＋ drop images here</p>
+        <div style="position: relative; aspect-ratio: 4/3; background-color: #251e17; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; cursor: pointer; transition: transform 0.3s cubic-bezier(.2,.8,.2,1), border-color 0.3s, box-shadow 0.3s;" style-hover="transform: translateY(-6px); border-color: rgba(235,167,80,0.5); box-shadow: 0 26px 48px -26px rgba(0,0,0,0.85);">
+          <sc-if value="{{ a.hasImage }}" hint-placeholder-val="{{ false }}">
+            <img src="{{ a.image }}" alt="{{ a.title }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.2) contrast(1.05); z-index: 0; transition: transform 0.3s, filter 0.3s; pointer-events: none;" style-hover="transform: scale(1.04); filter: grayscale(0) contrast(1.05);">
+          </sc-if>
+          <sc-if value="{{ !a.hasImage }}" hint-placeholder-val="{{ true }}">
+            <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 9px, transparent 9px 18px); z-index: 0;"></div>
+          </sc-if>
+
+          <!-- gradient overlay for text readability -->
+          <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(19,16,12,0.88) 88%); z-index: 1; pointer-events: none;"></div>
+
+          <span style="position: absolute; top: 14px; left: 14px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 4px 9px; background: rgba(235,167,80,0.18); border: 1px solid rgba(235,167,80,0.3); color: #eaa64f; border-radius: 5px; letter-spacing: 0.5px; z-index: 2; backdrop-filter: blur(4px);">{{ a.cat }}</span>
+          <span style="position: absolute; top: 14px; right: 14px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 4px 9px; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.1); color: #f2ede3; border-radius: 5px; z-index: 2; backdrop-filter: blur(4px);">{{ a.count }} photos</span>
+          <h3 style="margin: 0; font-size: clamp(16px, 1.8vw, 18px); font-weight: 600; line-height: 1.25; z-index: 2; text-shadow: 0 1px 3px rgba(0,0,0,0.85);">{{ a.title }}</h3>
+          <p style="margin: 6px 0 0; font-size: clamp(12px, 1.4vw, 13.5px); line-height: 1.5; color: #c0b8ab; z-index: 2; text-shadow: 0 1px 2px rgba(0,0,0,0.85);">{{ a.note }}</p>
+          <p style="margin: 10px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #897f6f; z-index: 2;">＋ view photos</p>
         </div>
       </sc-for>
     </div>
@@ -77,16 +87,16 @@ class Component extends DCLogic {
     const filter = this.state.filter;
 
     const all = [
-      { title: 'EnVision 2025 · IITM Research Park', cat: 'Visit', count: 4, note: 'Innovation visit and demos at the IITM Research Park.' },
-      { title: 'Best Mentor & Ambassador Meet', cat: 'Award', count: 2, note: 'Recognition for mentoring at MakerSpace.' },
-      { title: 'Anveshan 2024 — South Zone', cat: 'Expo', count: 2, note: 'Represented Presidency University for robotics research.' },
-      { title: 'Student Project Expo 2024', cat: 'Expo', count: 3, note: 'WALL-E selected in the Top 25 of 450 projects.' },
-      { title: 'IEEE NQComp-2026 · MIT Manipal', cat: 'Award', count: 3, note: 'Presented the RoboDog research paper.' },
-      { title: 'WALL-E Build Sessions', cat: 'Build', count: 6, note: 'From frame and wiring to a moving animatronic.' },
-      { title: 'Humanoid Motion Prototype', cat: 'Build', count: 2, note: 'Servo lip-sync and voice tests.' },
-      { title: 'AI RoboDog — Field Tests', cat: 'Build', count: 3, note: 'Face-tracking and follow-me trials.' },
-      { title: 'InnovateX 3.0 Hackathon', cat: 'Expo', count: 4, note: '24-hour hardware hackathon at MakerSpace.' },
-      { title: 'Tech Fests & Demos', cat: 'Visit', count: 4, note: 'Booths, talks and live demonstrations.' },
+      { title: 'EnVision 2025 · IITM Research Park', cat: 'Visit', count: 4, note: 'Innovation visit and demos at the IITM Research Park.', image: 'assets/gallery/Moments/Envision IITM/IMG_20250130_130729.jpg' },
+      { title: 'Best Mentor & Ambassador Meet', cat: 'Award', count: 2, note: 'Recognition for mentoring at MakerSpace.', image: 'assets/gallery/Moments/Best Innovator & Ambassador/Best Innovator.jpg' },
+      { title: 'Anveshan 2024 — South Zone', cat: 'Expo', count: 2, note: 'Represented Presidency University for robotics research.', image: 'assets/gallery/Moments/Anveshan/Anveshan.jpg' },
+      { title: 'Student Project Expo 2024', cat: 'Expo', count: 3, note: 'WALL-E selected in the Top 25 of 450 projects.', image: 'assets/gallery/Project/Wall-E - ROBOTICS/Project Expo Orientation.jpg' },
+      { title: 'IEEE NQComp-2026 · MIT Manipal', cat: 'Award', count: 3, note: 'Presented the RoboDog research paper.', image: 'image/gallery/IEEE-ROBODOG/IEEE-robodog.jpg' },
+      { title: 'WALL-E Build Sessions', cat: 'Build', count: 6, note: 'From frame and wiring to a moving animatronic.', image: 'assets/gallery/Project/Wall-E - ROBOTICS/1744954817634.jpg' },
+      { title: 'Humanoid Motion Prototype', cat: 'Build', count: 2, note: 'Servo lip-sync and voice tests.', image: 'assets/gallery/Project/Humonoid - Robotics/20251010_170740.jpg' },
+      { title: 'AI RoboDog — Field Tests', cat: 'Build', count: 3, note: 'Face-tracking and follow-me trials.', image: 'assets/gallery/Project/Robo Dog - Robotics/IMG_20250918_164037.jpg' },
+      { title: 'InnovateX 3.0 Hackathon', cat: 'Expo', count: 4, note: '24-hour hardware hackathon at MakerSpace.', image: 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_2761.JPG' },
+      { title: 'Tech Fests & Demos', cat: 'Visit', count: 4, note: 'Booths, talks and live demonstrations.', image: 'assets/gallery/Moments/AWS/IMG_20220726_165740.jpg' },
     ];
 
     const cats = ['All', 'Build', 'Expo', 'Award', 'Visit'];
@@ -101,7 +111,8 @@ class Component extends DCLogic {
       };
     });
 
-    const albums = filter === 'All' ? all : all.filter((a) => a.cat === filter);
+    const albums = (filter === 'All' ? all : all.filter((a) => a.cat === filter))
+      .map((a) => ({ ...a, hasImage: !!a.image }));
     const photoTotal = albums.reduce((n, a) => n + a.count, 0);
 
     return {
