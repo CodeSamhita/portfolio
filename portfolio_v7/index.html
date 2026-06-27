@@ -618,6 +618,47 @@
       </div>
     </sc-if>
 
+    <!-- ===== GALLERY ALBUM DETAIL MODAL POPUP ===== -->
+    <sc-if value="{{ activeGalleryAlbum }}" hint-placeholder-val="{{ false }}">
+      <div onClick="{{ closeGalleryPopup }}" style="position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(19, 16, 12, 0.85); backdrop-filter: blur(12px); animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;">
+        <div onClick="{{ stopProp }}" style="position: relative; max-width: 800px; width: 100%; max-height: calc(100vh - 80px); background: #1c1813; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; box-shadow: 0 32px 64px -16px rgba(0,0,0,0.85); overflow: hidden; display: flex; flex-direction: column; animation: scaleIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;">
+          <!-- Header -->
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); background: rgba(20,17,13,0.5);">
+            <div>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 3px 8px; background: rgba(235,167,80,0.14); border: 1px solid rgba(235,167,80,0.25); color: #eaa64f; border-radius: 5px; letter-spacing: 0.5px;">LAB MOMENTS</span>
+              <h4 style="margin: 6px 0 0; font-size: clamp(16px, 1.8vw, 20px); font-weight: 700; color: #f2ede3; letter-spacing: -0.3px;">{{ activeGalleryAlbum.title }}</h4>
+            </div>
+            <button onClick="{{ closeGalleryPopup }}" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: #c0b8ab; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; transition: all 0.2s; outline: none;" style-hover="background: rgba(255,255,255,0.12); color: #f2ede3; transform: scale(1.05);">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+          <!-- Body -->
+          <div style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; background: #13100c;">
+            <!-- Modal Image Slider -->
+            <sc-if value="{{ activeGalleryAlbum.hasImage }}" hint-placeholder-val="{{ false }}">
+              <div style="height: clamp(300px, 50vh, 480px); position: relative; background-color: #1c1813; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <img src="{{ activeGalleryAlbum.currentImage }}" alt="{{ activeGalleryAlbum.title }}" style="width: 100%; height: 100%; object-fit: contain; user-select: none;">
+                <!-- arrows -->
+                <sc-if value="{{ activeGalleryAlbum.hasMultipleImages }}" hint-placeholder-val="{{ false }}">
+                  <button onClick="{{ activeGalleryAlbum.prev }}" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; background: rgba(20,17,13,0.85); border: 1px solid rgba(255,255,255,0.15); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(8px); transition: all 0.2s; padding: 0; outline: none;" style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  </button>
+                  <button onClick="{{ activeGalleryAlbum.next }}" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; background: rgba(20,17,13,0.85); border: 1px solid rgba(255,255,255,0.15); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(8px); transition: all 0.2s; padding: 0; outline: none;" style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                  <div style="position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 4; background: rgba(20,17,13,0.64); padding: 4px 10px; border-radius: 20px; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.05);">
+                    <sc-for list="{{ activeGalleryAlbum.dots }}" as="dot" hint-placeholder-count="3">
+                      <span style="width: 6px; height: 6px; border-radius: 50%; background: {{ dot.bg }}; transform: {{ dot.scale }}; transition: all 0.25s;"></span>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
   </main>
 </div>
 </x-dc>
