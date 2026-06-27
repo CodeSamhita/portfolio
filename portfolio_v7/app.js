@@ -43,7 +43,7 @@
     renderNav(); renderHero(); renderAbout(); renderSkills();
     renderWork(); renderJourney(); renderGallery(); renderContact(); renderFooter();
     initTheme(); initScroll(); initReveal(); initTypewriter(); initCounters();
-    initTilt(); initMobile(); initLightbox(); initContactForm(); init3D(); initHints();
+    initTilt(); initMobile(); initLightbox(); initContactForm(); initSkillCycle(); initAmbient(); initHints();
   }
 
   /* ----------------------------------------------------- NAV */
@@ -86,7 +86,7 @@
         "</div>" +
       "</div>" +
       '<div class="tile tile-portrait"><span class="tile-glare"></span><img src="' + esc(p.portrait || "") + '" alt="' + esc(p.name) + '" onerror="this.style.display=\'none\'" /></div>' +
-      '<div class="tile tile-3d"><span class="tile-glare"></span><canvas id="hero3d"></canvas><span class="tile-3d-label">interactive \u00b7 drag to spin</span><span class="hint-badge">\u2726 drag me</span></div>' +
+      '<div class="tile tile-stack"><span class="tile-glare"></span><div class="stack-eyebrow"><span class="stack-live"></span>Tech I build with</div><div class="stack-display" id="stack-display"><i class="stack-ico fas fa-microchip"></i><span class="stack-name"></span></div></div>' +
       stats +
       '<div class="tile tile-focus"><span class="tile-glare"></span>' +
         '<div class="focus-eyebrow">' + esc(p.heroEyebrow || "Focus") + "</div>" +
@@ -162,6 +162,7 @@
     });
   }
   function paintProjects(list) {
+    var CATICON = { IoT: "fas fa-house-signal", Robotics: "fas fa-robot", AI: "fas fa-brain", Hardware: "fas fa-microchip", Security: "fas fa-shield-halved", Web: "fas fa-code" };
     $("#work-grid").innerHTML = list.map(function (p) {
       var tags = (p.technologies || []).map(function (t) { return "<span>" + esc(t) + "</span>"; }).join("");
       var links = [];
@@ -169,8 +170,9 @@
       if (p.liveUrl) links.push('<a href="' + esc(p.liveUrl) + '" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>');
       if (p.linkedinUrl) links.push('<a href="' + esc(p.linkedinUrl) + '" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i> Post</a>');
       return '<article class="project">' +
-        '<div class="project-media"><span class="project-type">' + esc(p.type || p.category || "") + "</span>" +
-          '<img src="' + esc(p.image || "") + '" alt="' + esc(p.title) + '" loading="lazy" onerror="this.closest(\'.project-media\').style.background=\'var(--surface-2)\';this.remove()" /></div>' +
+        '<div class="project-media' + (p.image ? "" : " no-img") + '"><span class="project-type">' + esc(p.type || p.category || "") + "</span>" +
+          '<i class="proj-art ' + (CATICON[p.category] || "fas fa-microchip") + '"></i>' +
+          (p.image ? '<img src="' + esc(p.image) + '" alt="' + esc(p.title) + '" loading="lazy" onerror="this.closest(\'.project-media\').classList.add(\'no-img\');this.remove()" />' : "") + "</div>" +
         '<div class="project-body"><h3>' + esc(p.title) + "</h3>" +
           '<p class="desc">' + esc(p.description) + "</p>" +
           (p.highlight ? '<p class="hl">' + esc(p.highlight) + "</p>" : "") +
@@ -470,81 +472,68 @@
     });
   }
 
-  /* ----------------------------------------------------- 3D HERO OBJECT (Three.js) */
-  function init3D() {
-    if (!window.THREE || reduce) return;
-    var canvas = document.getElementById("hero3d");
-    if (!canvas) return;
-    try {
-      var T = window.THREE;
-      var accentOf = function () {
-        var c = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();
-        return new T.Color(c || "#ff6a3d");
-      };
-      var renderer = new T.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-      var scene = new T.Scene();
-      var camera = new T.PerspectiveCamera(50, 1, 0.1, 100);
-      camera.position.z = 3.4;
+  function initSkillCycle() {
+    var disp = document.getElementById("stack-display");
+    if (!disp) return;
+    var tools = (D.skills && D.skills.tools) || [];
+    if (!tools.length) return;
+    var ico = disp.querySelector(".stack-ico"), name = disp.querySelector(".stack-name");
+    function set(t) {
+      var m = logoFor(t).match(/class="([^"]+)"/);
+      ico.className = "stack-ico " + (m ? m[1] : "fas fa-microchip");
+      name.textContent = t;
+    }
+    var i = 0; set(tools[0]);
+    if (reduce) return;
+    setInterval(function () {
+      i = (i + 1) % tools.length;
+      disp.classList.remove("flip"); void disp.offsetWidth; disp.classList.add("flip");
+      set(tools[i]);
+    }, 1150);
+  }
 
-      var col = accentOf();
-      var wire = new T.Mesh(
-        new T.IcosahedronGeometry(1.15, 1),
-        new T.MeshBasicMaterial({ color: col, wireframe: true, transparent: true, opacity: 0.6 })
-      );
-      var core = new T.Mesh(
-        new T.IcosahedronGeometry(1.12, 1),
-        new T.MeshBasicMaterial({ color: col, transparent: true, opacity: 0.07 })
-      );
-      scene.add(wire); scene.add(core);
-
-      var pos = [], N = 150;
-      for (var i = 0; i < N; i++) {
-        var th = Math.acos(2 * Math.random() - 1), ph = 2 * Math.PI * Math.random(), r = 1.7 + Math.random() * 0.6;
-        pos.push(r * Math.sin(th) * Math.cos(ph), r * Math.sin(th) * Math.sin(ph), r * Math.cos(th));
+  function initAmbient() {
+    if (reduce) return;
+    var c = document.createElement("canvas");
+    c.id = "ambient-canvas"; c.setAttribute("aria-hidden", "true");
+    document.body.appendChild(c);
+    var x = c.getContext("2d"); if (!x) return;
+    var DPR = Math.min(window.devicePixelRatio || 1, 2), W, H, P = [], mx = 0, my = 0, tmx = 0, tmy = 0, raf = null;
+    function rgb() {
+      var h = (getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "#ff6a3d").replace("#", "");
+      if (h.length === 3) h = h.replace(/(.)/g, "$1$1");
+      var n = parseInt(h, 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+    }
+    function size() {
+      W = c.clientWidth = window.innerWidth; H = c.clientHeight = window.innerHeight;
+      c.width = W * DPR; c.height = H * DPR; x.setTransform(DPR, 0, 0, DPR, 0, 0); make();
+    }
+    function make() {
+      var n = Math.max(36, Math.min(110, (W * H / 17000) | 0)); P = [];
+      for (var i = 0; i < n; i++) P.push({ x: Math.random(), y: Math.random(), z: Math.random(), vx: (Math.random() - 0.5) * 0.0002, vy: (Math.random() - 0.5) * 0.0002, r: Math.random() * 1.4 + 0.4 });
+    }
+    function tick() {
+      mx += (tmx - mx) * 0.05; my += (tmy - my) * 0.05;
+      var col = rgb(); x.clearRect(0, 0, W, H);
+      for (var i = 0; i < P.length; i++) {
+        var p = P[i]; p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > 1) p.vx *= -1; if (p.y < 0 || p.y > 1) p.vy *= -1;
+        var d = 1 - p.z;
+        var px = (p.x - 0.5) * W * (0.7 + d * 0.6) + W / 2 + mx * d * 46;
+        var py = (p.y - 0.5) * H * (0.7 + d * 0.6) + H / 2 + my * d * 46;
+        var a = d * 0.45 + 0.06;
+        x.fillStyle = "rgba(" + col[0] + "," + col[1] + "," + col[2] + "," + a + ")";
+        x.beginPath(); x.arc(px, py, p.r * (d * 1.6 + 0.5), 0, 6.283); x.fill();
+        if (p.z < 0.18) { x.fillStyle = "rgba(" + col[0] + "," + col[1] + "," + col[2] + "," + (a * 0.16) + ")"; x.beginPath(); x.arc(px, py, p.r * 5, 0, 6.283); x.fill(); }
       }
-      var pg = new T.BufferGeometry();
-      pg.setAttribute("position", new T.Float32BufferAttribute(pos, 3));
-      var pts = new T.Points(pg, new T.PointsMaterial({ color: col, size: 0.035, transparent: true, opacity: 0.65 }));
-      scene.add(pts);
-
-      var mx = 0, my = 0, tmx = 0, tmy = 0, raf = null;
-      var host = canvas.parentElement;
-      if (!coarse) host.addEventListener("pointermove", function (e) {
-        var r = canvas.getBoundingClientRect();
-        tmx = (e.clientX - r.left) / r.width - 0.5;
-        tmy = (e.clientY - r.top) / r.height - 0.5;
-      });
-      function resize() {
-        var w = canvas.clientWidth, h = canvas.clientHeight;
-        if (!w || !h) return;
-        renderer.setSize(w, h, false);
-        camera.aspect = w / h; camera.updateProjectionMatrix();
-      }
-      function animate() {
-        mx += (tmx - mx) * 0.05; my += (tmy - my) * 0.05;
-        wire.rotation.y += 0.004; wire.rotation.x += 0.0022;
-        core.rotation.copy(wire.rotation);
-        pts.rotation.y -= 0.0012;
-        scene.rotation.y = mx * 0.6; scene.rotation.x = my * 0.6;
-        renderer.render(scene, camera);
-        raf = requestAnimationFrame(animate);
-      }
-      resize(); setTimeout(resize, 120);
-      window.addEventListener("resize", resize);
-      animate();
-
-      // recolor on theme switch
-      if (window.MutationObserver) {
-        new MutationObserver(function () {
-          var c = accentOf();
-          wire.material.color = c; core.material.color = c; pts.material.color = c;
-        }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
-      }
-      document.addEventListener("visibilitychange", function () {
-        if (document.hidden) { if (raf) { cancelAnimationFrame(raf); raf = null; } }
-        else if (!raf) animate();
-      });
-    } catch (err) { console.warn("3D init failed", err); }
+      raf = requestAnimationFrame(tick);
+    }
+    window.addEventListener("resize", size);
+    if (!coarse) window.addEventListener("pointermove", function (e) { tmx = e.clientX / window.innerWidth - 0.5; tmy = e.clientY / window.innerHeight - 0.5; }, { passive: true });
+    size(); raf = requestAnimationFrame(tick);
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) { if (raf) { cancelAnimationFrame(raf); raf = null; } }
+      else if (!raf) { raf = requestAnimationFrame(tick); }
+    });
   }
 })();

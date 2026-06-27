@@ -1,112 +1,84 @@
 [
   {
-    "id": "project-portfolio",
-    "title": "Interactive Portfolio Website",
-    "category": "Web",
-    "type": "Software",
-    "description": "A modern, responsive portfolio website showcasing full-stack capabilities.",
-    "technologies": [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Bootstrap"
-    ],
-    "highlight": "Created a highly interactive online presence with clean UI.",
-    "image": "image/gallery/interactive-portfolio-website/Screenshot-2026-03-28-152522.png",
-    "galleryTitle": "Portfolio Platform",
-    "galleryDescription": "A from-scratch web project.",
-    "githubUrl": "https://github.com/CodeSamhita",
-    "linkedinUrl": "https://www.linkedin.com/in/aditya-sharma-8679802b3",
-    "liveUrl": "index.html",
-    "featured": true,
-    "upgradeNotes": []
+    "id": "leo-smart-switch", "title": "Smart Switch (LEO)", "category": "IoT", "type": "IoT",
+    "description": "LEO — a local-first smart-home switch and hub with its own MQTT broker, web dashboard and a companion Android app. Runs entirely on your network, no cloud.",
+    "technologies": ["ESP32-S3", "FreeRTOS", "MQTT", "Kotlin"],
+    "highlight": "Fully offline — its own broker, mDNS clustering and a glassmorphic app.",
+    "image": "", "featured": true
   },
   {
-    "id": "project-humanoid",
-    "title": "Humanoid Bot: Voice-Controlled Lip Sync",
-    "category": "AI",
-    "type": "Robotics",
-    "description": "A humanoid robot with voice-activated mouth movements, precisely synced using Whisper AI.",
-    "technologies": [
-      "Raspberry Pi 5",
-      "Python",
-      "Whisper AI",
-      "Servos"
-    ],
-    "highlight": "Demonstrates advanced embedded AI and robotics integration with low-latency servo control.",
-    "image": "image/gallery/humanoid-prototype/Humonoid.jpg",
-    "galleryTitle": "Humanoid Bot",
-    "galleryDescription": "Voice-controlled lip sync robotics.",
-    "githubUrl": "",
-    "linkedinUrl": "",
-    "liveUrl": "",
-    "featured": true,
-    "upgradeNotes": []
+    "id": "aquanode-tank", "title": "Smart Tank Monitor (AquaNode)", "category": "IoT", "type": "IoT",
+    "description": "A Wi-Fi water-tank monitor — ultrasonic level sensing, a live dashboard, colour LED status and push alerts, with on-device logging.",
+    "technologies": ["ESP32-C3", "Ultrasonic", "SSE", "React"],
+    "highlight": "Live dashboard updated in real time over Server-Sent Events.",
+    "image": "", "featured": true
   },
   {
-    "id": "project-obstacle",
-    "title": "Obstacle Avoidance Robot",
-    "category": "Hardware",
-    "type": "Robotics",
-    "description": "An autonomous robot designed to navigate complex environments using multiple sensors.",
-    "technologies": [
-      "Arduino",
-      "L298N Motor Driver",
-      "IR Sensors",
-      "Ultrasonic Sensors"
-    ],
-    "highlight": "A practical application of robust sensor fusion algorithms.",
-    "image": "image/gallery/Path finder bot/Path finder bot.jpg",
-    "galleryTitle": "Path Finder Bot",
-    "galleryDescription": "Autonomous navigation systems.",
-    "githubUrl": "",
-    "linkedinUrl": "",
-    "liveUrl": "",
-    "featured": true,
-    "upgradeNotes": []
-  },
-  {
-    "id": "project-lab",
-    "title": "Lab Management System with AI Chatbot",
-    "category": "Web",
-    "type": "Software",
-    "description": "A web-based application for lab management, integrated with an AI chatbot for assistance.",
-    "technologies": [
-      "Flask",
-      "Python",
-      "HTML/CSS",
-      "AI Chatbot API"
-    ],
-    "highlight": "Streamlines laboratory operations and ensures data consistency.",
-    "image": "image/gallery/wall-e-build/LAB.JPG",
-    "galleryTitle": "Lab Management Tool",
-    "galleryDescription": "Integrated third-party APIs for lab operations.",
-    "githubUrl": "",
-    "linkedinUrl": "",
-    "liveUrl": "",
-    "featured": true,
-    "upgradeNotes": []
-  },
-  {
-    "id": "project-robodog",
-    "title": "Autonomous Security RoboDog",
-    "category": "Robotics",
-    "type": "Robotics",
-    "description": "A quadruped robot that detects and follows a recognized face in real time using on-board computer vision.",
-    "technologies": [
-      "Python",
-      "OpenCV",
-      "Face Recognition",
-      "Embedded Controllers"
-    ],
+    "id": "robo-dog", "title": "Autonomous RoboDog", "category": "Robotics", "type": "Robotics",
+    "description": "A security quadruped that detects and follows a recognised face in real time using on-board computer vision.",
+    "technologies": ["Python", "OpenCV", "Face Recognition", "Embedded"],
     "highlight": "Basis of the IEEE NQComp-2026 research paper (MIT Manipal).",
-    "image": "image/gallery/ai-robo-dog/IMG_20250918_164037.jpg",
-    "galleryTitle": "RoboDog",
-    "galleryDescription": "Autonomous face-recognition quadruped.",
-    "githubUrl": "",
-    "linkedinUrl": "",
-    "liveUrl": "",
-    "featured": true,
-    "upgradeNotes": []
+    "image": "image/gallery/IEEE-ROBODOG/IEEE-robodog.jpg", "featured": true
+  },
+  {
+    "id": "humanoid", "title": "Interactive Humanoid", "category": "AI", "type": "AI",
+    "description": "An interactive humanoid robot that listens, understands and replies with real-time, lip-synced speech.",
+    "technologies": ["Raspberry Pi", "Whisper", "OpenCV", "TTS"],
+    "highlight": "Real-time speech recognition with lip-synced response.",
+    "image": "image/gallery/humanoid-prototype/Humonoid.jpg", "featured": true
+  },
+  {
+    "id": "wall-e", "title": "WALL-E Build", "category": "Robotics", "type": "Robotics",
+    "description": "A WALL-E–inspired animatronic build with motion and personality, presented at the Innovative Project Expo.",
+    "technologies": ["Arduino", "Servos", "3D Printing"],
+    "highlight": "", "image": "image/gallery/wall-e-build/walle.jpg"
+  },
+  {
+    "id": "path-finder", "title": "Path Finder Bot", "category": "Robotics", "type": "Robotics",
+    "description": "An obstacle-avoiding robot that works out a route around barriers in real time.",
+    "technologies": ["Arduino", "Ultrasonic", "Robotics"],
+    "highlight": "", "image": "image/gallery/Path finder bot/Path finder bot.jpg"
+  },
+  {
+    "id": "line-follower", "title": "Line Follower Bot", "category": "Robotics", "type": "Robotics",
+    "description": "An autonomous robot that follows a marked track using IR sensors and a tuned control loop.",
+    "technologies": ["Arduino", "IR Sensors", "Control Loop"],
+    "highlight": "", "image": ""
+  },
+  {
+    "id": "ai-traffic", "title": "AI-Driven Smart Traffic Management", "category": "AI", "type": "AI",
+    "description": "A computer-vision system that detects traffic flow and optimises signal timing to ease congestion.",
+    "technologies": ["Python", "OpenCV", "Computer Vision"],
+    "highlight": "", "image": ""
+  },
+  {
+    "id": "smart-traffic", "title": "Smart Traffic System", "category": "IoT", "type": "IoT",
+    "description": "A model traffic-control system that adapts signal timing to live road conditions using sensors.",
+    "technologies": ["Arduino", "Sensors", "Embedded C"],
+    "highlight": "", "image": ""
+  },
+  {
+    "id": "makerspace-sign", "title": "Maker Space Sign Board", "category": "Hardware", "type": "Hardware",
+    "description": "A programmable LED sign board built for the campus Maker Space, with addressable lighting effects.",
+    "technologies": ["ESP32", "WLED", "NeoPixel"],
+    "highlight": "", "image": ""
+  },
+  {
+    "id": "cyber-demo", "title": "Cyber Attack Demonstration", "category": "Security", "type": "Security",
+    "description": "An educational demonstration of common attack techniques and their defences, built to teach safe security practices.",
+    "technologies": ["Security", "Networking", "Linux", "Python"],
+    "highlight": "", "image": ""
+  },
+  {
+    "id": "diy-speaker", "title": "DIY Bluetooth Speaker", "category": "Hardware", "type": "Hardware",
+    "description": "A hand-built portable Bluetooth speaker — amplifier, custom enclosure and battery, assembled and tuned end to end.",
+    "technologies": ["Electronics", "Audio Amplifier", "Soldering"],
+    "highlight": "", "image": ""
+  },
+  {
+    "id": "diy-powerbank", "title": "DIY Power Bank", "category": "Hardware", "type": "Hardware",
+    "description": "A custom USB power bank built around 18650 cells with a boost converter and charge-protection circuit.",
+    "technologies": ["18650 Cells", "Boost Converter", "BMS"],
+    "highlight": "", "image": ""
   }
 ]

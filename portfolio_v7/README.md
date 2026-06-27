@@ -12,9 +12,9 @@ English is used throughout.
 
 ## New in v7
 - Bento-grid hero with a live typewriter role, animated counters, status and your photo.
-- Real 3D: a Three.js wireframe you can drag to spin (recolours with the theme) + 3D tilt on EVERY card.
+- Depth: a parallax particle field drifts behind everything (reacts to scroll & cursor), plus 3D tilt on EVERY card.
 - On-screen hints: one-time intro tips toast, a pulsing "drag me" badge, and hover tooltips on controls.
-- Tech LOGOS in the skills marquee (Devicon, with fallbacks) instead of plain text.
+- A live "Tech I build with" tile that switches swiftly through your stack with logos; plus tech logos in the skills marquee.
 - Light / Dark theme with real floating depth in light mode; remembered across visits.
 - Fluid scaling (rem / clamp / % / vw) and a mobile-first layout.
 - Scroll-progress bar, active-section nav, reveal-on-scroll.

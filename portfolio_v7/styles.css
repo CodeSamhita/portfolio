@@ -515,3 +515,61 @@ html { font-size: clamp(14.5px, 0.45vw + 13px, 18px); }
 .footer-links { display: flex; gap: 1.1rem; flex-wrap: wrap; }
 .footer-links a { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); transition: color 0.25s var(--ease); }
 .footer-links a:hover { color: var(--accent); }
+
+/* =============================================================
+   v7.3 — Depth background, swift skills tile, project art,
+            mobile-portrait fix. (Indian English.)
+   ============================================================= */
+
+/* parallax depth particle field behind everything */
+#ambient-canvas { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.9; }
+[data-theme="light"] #ambient-canvas { opacity: 0.5; }
+
+/* ---- "Tech I build with" — swift switching skills tile ---- */
+.tile-stack {
+  grid-column: span 2; grid-row: span 2; display: flex; flex-direction: column; justify-content: space-between;
+  background: radial-gradient(120% 120% at 80% 0%, color-mix(in srgb, var(--accent) 14%, var(--surface)) 0%, var(--surface) 55%);
+}
+.stack-eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 0.5rem; }
+.stack-live { width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0.6rem var(--accent); animation: pulse 1.6s infinite; }
+.stack-display { display: flex; flex-direction: column; gap: 0.6rem; align-items: flex-start; }
+.stack-ico { font-size: clamp(2.6rem, 6vw, 4rem); color: var(--accent); line-height: 1; }
+.stack-ico.colored, .stack-ico[class*="devicon"] { color: inherit; }
+.stack-name { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.3rem, 3vw, 2rem); letter-spacing: -0.01em; }
+.stack-display.flip { animation: stackFlip 0.5s var(--ease); }
+@keyframes stackFlip {
+  0% { opacity: 0; transform: translateY(0.6rem) rotateX(-22deg); }
+  100% { opacity: 1; transform: translateY(0) rotateX(0); }
+}
+
+/* ---- project cards without a photo: category art tile ---- */
+.project-media .proj-art { display: none; }
+.project-media.no-img { display: grid; place-items: center; background: linear-gradient(150deg, color-mix(in srgb, var(--accent) 20%, var(--surface)), var(--surface-2)); }
+.project-media.no-img::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.5;
+  background-image: radial-gradient(circle at 1px 1px, var(--border-strong) 1px, transparent 0);
+  background-size: 18px 18px;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000, transparent 75%); mask-image: radial-gradient(circle at 50% 50%, #000, transparent 75%);
+}
+.project-media.no-img .proj-art { display: block; font-size: clamp(2.4rem, 7vw, 3.6rem); color: var(--accent); opacity: 0.92; z-index: 1; filter: drop-shadow(0 0.4rem 1rem color-mix(in srgb, var(--accent) 40%, transparent)); }
+.project-media.no-img img { display: none; }
+
+/* ---- deepen elevation a touch across the board ---- */
+.project:hover, .tile:hover, .capability:hover { box-shadow: 0 1.6rem 3rem -1.4rem rgba(0,0,0,0.7), 0 0.6rem 1.4rem -0.8rem color-mix(in srgb, var(--accent) 30%, transparent); }
+
+/* =============================================================
+   MOBILE PORTRAIT — compact photo, moved to the very top
+   ============================================================= */
+@media (max-width: 720px) and (orientation: portrait), (max-width: 560px) {
+  .bento { display: flex; flex-direction: column; gap: 0.8rem; }
+  .tile-portrait {
+    order: -1; min-height: 0; height: clamp(11rem, 38vw, 15rem);
+    border-radius: var(--r-lg); overflow: hidden;
+  }
+  .tile-portrait img { height: 100%; width: 100%; object-fit: cover; object-position: center 28%; }
+  .tile-identity { order: 0; }
+  .tile-stack { order: 1; min-height: 13rem; }
+  .tile-stat { order: 2; flex-direction: row; align-items: baseline; justify-content: space-between; min-height: 0; padding: 1rem 1.2rem; }
+  .tile-focus { order: 3; } .tile-now { order: 4; }
+  .tile-stat .num { font-size: 1.8rem; }
+}
