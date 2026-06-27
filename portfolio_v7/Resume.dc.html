@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #13100c; color: #f2ede3; font-family: 'Space Grotesk', sans-serif; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #eaa64f; color: #13100c; }
+  a { color: inherit; text-decoration: none; }
+  @media (max-width: 720px) { [data-cols] { grid-template-columns: 1fr !important; } }
+  @media print {
+    @page { margin: 14mm; }
+    [data-cols] { grid-template-columns: 1.5fr 1fr !important; }
+    body { background: #fff !important; color: #1a1714 !important; }
+    [data-noprint] { display: none !important; }
+    [data-sheet] { box-shadow: none !important; border: none !important; margin: 0 !important; max-width: none !important; padding: 0 !important; background: #fff !important; }
+    [data-ink] { color: #1a1714 !important; }
+    [data-ink-soft] { color: #5c554a !important; }
+    [data-accent] { color: #b9740f !important; }
+    [data-rule] { border-color: #d8d0c3 !important; }
+    [data-chip] { border-color: #c9c0b2 !important; color: #2c2720 !important; background: #fff !important; }
+    [data-card] { border-color: #d8d0c3 !important; background: #faf7f1 !important; }
+    [data-sidebar-bg] { background: #faf7f1 !important; }
+  }
+</style>
+</helmet>
+
+<div data-sheet style="max-width: min(920px, 100%); margin: 0 auto; background: #16130e; min-height: 100vh; padding: clamp(24px, 5vw, 56px) clamp(20px, 5vw, 56px) 64px;">
+
+  <!-- toolbar -->
+  <div data-noprint style="display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 36px; flex-wrap: wrap;">
+    <a href="Aditya Sharma - Portfolio.dc.html" style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #a89e8d; padding: 9px 14px; border: 1px solid rgba(255,255,255,0.12); border-radius: 9px; transition: all 0.2s;" style-hover="border-color: #eaa64f; color: #eaa64f;">← Back to portfolio</a>
+    <button onClick="{{ doPrint }}" style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #13100c; background: #eaa64f; padding: 10px 18px; border: none; border-radius: 9px; cursor: pointer; font-weight: 600; transition: transform 0.2s;" style-hover="transform: translateY(-2px);">⤓ Download / Print PDF</button>
+  </div>
+
+  <!-- header -->
+  <header data-rev style="display: flex; gap: 26px; align-items: center; padding-bottom: 26px; border-bottom: 1px solid rgba(255,255,255,0.1);" data-rule>
+    <img src="assets/profile.jpg" alt="Aditya Sharma" style="width: 96px; height: 96px; border-radius: 16px; object-fit: cover; filter: grayscale(1) contrast(1.04); border: 1px solid rgba(235,167,80,0.4); flex-shrink: 0;" data-noprint>
+    <div style="flex: 1; min-width: 0;">
+      <h1 style="font-size: clamp(32px, 5vw, 46px); font-weight: 700; margin: 0 0 6px; letter-spacing: -1.5px;" data-ink>Aditya Sharma</h1>
+      <p style="font-size: clamp(14px, 1.5vw, 16px); color: #eaa64f; margin: 0 0 12px; font-weight: 500;" data-accent>Full Stack Developer &amp; Innovator · CS Engineer</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(11px, 1.3vw, 12.5px); color: #a89e8d;" data-ink-soft>
+        <span>Bengaluru, India</span>
+        <a href="mailto:adisharma102000@gmail.com" style="color: inherit;">adisharma102000@gmail.com</a>
+        <span>+91 63633 50665</span>
+        <a href="https://github.com/CodeSamhita" target="_blank" rel="noopener" style="color: inherit;">github.com/CodeSamhita</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- objective -->
+  <section data-rev style="padding: 26px 0; border-bottom: 1px solid rgba(255,255,255,0.1);" data-rule>
+    <p style="margin: 0; font-size: clamp(14px, 0.4vw + 12px, 15.5px); line-height: 1.7; color: #c0b8ab; max-width: 760px;" data-ink-soft>{{ objective }}</p>
+  </section>
+
+  <!-- two column body -->
+  <div style="display: grid; grid-template-columns: 1.55fr 1fr; gap: clamp(26px, 4vw, 40px); padding-top: 30px;" data-cols>
+
+    <!-- MAIN column -->
+    <div style="display: flex; flex-direction: column; gap: 30px;">
+
+      <section data-rev style="">
+        <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); letter-spacing: 1.5px; color: #eaa64f; margin: 0 0 18px; text-transform: uppercase;" data-accent>Experience</h2>
+        <div style="display: flex; flex-direction: column; gap: 22px;">
+          <sc-for list="{{ experience }}" as="x" hint-placeholder-count="4">
+            <div style="border-left: 2px solid rgba(235,167,80,0.4); padding-left: 18px;" data-rule>
+              <div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline;">
+                <h3 style="font-size: clamp(14px, 1.5vw, 16px); font-weight: 600; margin: 0;" data-ink>{{ x.role }}</h3>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 11.5px); color: #a89e8d; white-space: nowrap;" data-ink-soft>{{ x.period }}</span>
+              </div>
+              <p style="font-size: clamp(12px, 1.4vw, 13.5px); color: #eaa64f; margin: 3px 0 8px;" data-accent>{{ x.org }}</p>
+              <p style="font-size: clamp(13px, 0.4vw + 11px, 14.5px); line-height: 1.6; color: #c0b8ab; margin: 0;" data-ink-soft>{{ x.point }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section data-rev style="">
+        <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); letter-spacing: 1.5px; color: #eaa64f; margin: 0 0 18px; text-transform: uppercase;" data-accent>Selected Projects</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <sc-for list="{{ projects }}" as="p" hint-placeholder-count="5">
+            <div style="padding: 16px 18px; border: 1px solid rgba(255,255,255,0.08); border-radius: 11px; background: #1c1813;" data-card>
+              <div style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+                <h3 style="font-size: clamp(13.5px, 1.4vw, 15px); font-weight: 600; margin: 0;" data-ink>{{ p.title }}</h3>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(9.5px, 1.1vw, 10.5px); color: #eaa64f; border: 1px solid rgba(235,167,80,0.35); padding: 2px 8px; border-radius: 5px;" data-chip>{{ p.cat }}</span>
+              </div>
+              <p style="font-size: clamp(12px, 1.4vw, 13.5px); line-height: 1.55; color: #c0b8ab; margin: 8px 0 0;" data-ink-soft>{{ p.desc }}</p>
+              <p style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 11.5px); color: #a89e8d; margin: 8px 0 0;" data-ink-soft>{{ p.stack }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section data-rev style="">
+        <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); letter-spacing: 1.5px; color: #eaa64f; margin: 0 0 14px; text-transform: uppercase;" data-accent>Publication</h2>
+        <sc-for list="{{ publications }}" as="pub" hint-placeholder-count="1">
+          <p style="font-size: clamp(13px, 0.4vw + 11px, 14.5px); line-height: 1.6; color: #c0b8ab; margin: 0; padding-left: 18px; border-left: 2px solid rgba(235,167,80,0.4);" data-ink-soft data-rule>{{ pub }}</p>
+        </sc-for>
+      </section>
+
+    </div>
+
+    <!-- SIDE column -->
+    <div style="display: flex; flex-direction: column; gap: 28px;">
+
+      <section data-rev style="padding: 20px; border-radius: 12px; background: #1a1611;" data-sidebar-bg>
+        <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); letter-spacing: 1.5px; color: #eaa64f; margin: 0 0 16px; text-transform: uppercase;" data-accent>Education</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <sc-for list="{{ education }}" as="e" hint-placeholder-count="2">
+            <div>
+              <h3 style="font-size: clamp(12.5px, 1.4vw, 14px); font-weight: 600; margin: 0 0 3px; line-height: 1.35;" data-ink>{{ e.title }}</h3>
+              <p style="font-size: clamp(11px, 1.3vw, 12.5px); color: #c0b8ab; margin: 0 0 3px; line-height: 1.4;" data-ink-soft>{{ e.place }}</p>
+              <p style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #a89e8d; margin: 0;" data-ink-soft>{{ e.span }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section data-rev style="">
+        <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); letter-spacing: 1.5px; color: #eaa64f; margin: 0 0 14px; text-transform: uppercase;" data-accent>Skills</h2>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <sc-for list="{{ skills }}" as="g" hint-placeholder-count="5">
+            <div>
+              <p style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(9.5px, 1.1vw, 10.5px); color: #a89e8d; margin: 0 0 7px; letter-spacing: 0.5px;" data-ink-soft>{{ g.title }}</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="5">
+                  <span style="font-size: clamp(10.5px, 1.2vw, 12px); padding: 4px 9px; border: 1px solid rgba(255,255,255,0.12); color: #d8d0c3; border-radius: 6px;" data-chip>{{ it }}</span>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section data-rev style="">
+        <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); letter-spacing: 1.5px; color: #eaa64f; margin: 0 0 14px; text-transform: uppercase;" data-accent>Awards &amp; Recognition</h2>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <sc-for list="{{ highlights }}" as="h" hint-placeholder-count="5">
+            <div style="display: flex; gap: 9px; font-size: clamp(11.5px, 1.3vw, 13px); line-height: 1.5; color: #c0b8ab;" data-ink-soft>
+              <span style="color: #eaa64f; flex-shrink: 0;" data-accent>◆</span><span>{{ h }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section data-rev style="">
+        <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); letter-spacing: 1.5px; color: #eaa64f; margin: 0 0 14px; text-transform: uppercase;" data-accent>Certifications</h2>
+        <div style="display: flex; flex-direction: column; gap: 9px;">
+          <sc-for list="{{ certs }}" as="c" hint-placeholder-count="6">
+            <div style="display: flex; gap: 9px; font-size: clamp(11px, 1.3vw, 12.5px); line-height: 1.5; color: #c0b8ab;" data-ink-soft>
+              <span style="color: #a89e8d; flex-shrink: 0;" data-ink-soft>›</span><span>{{ c }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:920,&quot;height&quot;:1180}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      doPrint: () => window.print(),
+      objective: 'Computer Science engineer who builds complete systems end to end — embedded firmware, full-stack web, and applied robotics. Comfortable taking an idea from a breadboard and a blank repository through to a working, dependable product. Keen to contribute to a team where hardware and software meet, and to keep learning by building.',
+      experience: [
+        { role: 'Robotics Developer & Mentor (Core Member)', org: 'Build Club MakerSpace, Presidency University', period: 'Jul 2024 — Present', point: 'Lead robotics builds and mentor 50+ members on programming, debugging and ROS 2 control frameworks; co-organised InnovateX 3.0, a 24-hour hardware hackathon, and project expos that took prototypes to demonstration.' },
+        { role: 'Final-Semester Internship', org: 'B.Tech Capstone Internship, Presidency University', period: '2026', point: 'Eight-credit internship credited toward the degree (Grade O), applying full-stack and embedded skills on a real-world project end to end.' },
+        { role: 'Machine Learning Intern', org: 'KnowX Innovations, Bengaluru', period: 'Sep 2022', point: 'Built and tested a Sign-Language Detection System using custom ML pipelines and computer-vision datasets.' },
+        { role: 'In-Plant Training (Python)', org: 'KnowX Innovations, Bengaluru', period: 'May 2022', point: 'Completed hands-on training in Python and applied it across small embedded-software exercises.' },
+      ],
+      projects: [
+        { title: 'Autonomous Security RoboDog', cat: 'Robotics', desc: 'A quadruped that detects and follows a recognised face in real time using on-board computer vision. Basis of the IEEE NQComp-2026 research paper.', stack: 'Python · OpenCV · Face Recognition · Embedded' },
+        { title: 'Smart Switch — LEO', cat: 'IoT', desc: 'A local-first smart-home switch and hub with its own MQTT broker, web dashboard and companion Android app. Runs entirely on your network — no cloud.', stack: 'ESP32-S3 · FreeRTOS · MQTT · Kotlin' },
+        { title: 'Smart Tank Monitor — AquaNode', cat: 'IoT', desc: 'A Wi-Fi water-tank monitor with ultrasonic level sensing, a live SSE dashboard, colour LED status and push alerts, with on-device logging.', stack: 'ESP32-C3 · Ultrasonic · SSE · React' },
+        { title: 'Interactive Humanoid', cat: 'AI', desc: 'A humanoid that listens, understands and replies with real-time, lip-synced speech using on-device speech recognition.', stack: 'Raspberry Pi · Whisper · OpenCV · TTS' },
+        { title: 'AI-Driven Smart Traffic Management', cat: 'AI', desc: 'A computer-vision system that detects traffic flow and optimises signal timing to ease congestion at intersections.', stack: 'Python · OpenCV · Computer Vision' },
+      ],
+      publications: [
+        '"AI-Powered Autonomous Security Robotic Dog with Integrated Face Recognition" — presented at IEEE NQComp-2026, Manipal Institute of Technology (MAHE). Co-authored.',
+      ],
+      education: [
+        { title: 'B.Tech in Computer Science & Engineering', place: 'Presidency University, Bengaluru · Lateral entry · CGPA 7.70', span: '2023 — 2026' },
+        { title: 'Diploma in Computer Science & Engineering', place: 'RR Polytechnic, Bengaluru · Second Class', span: '2018 — 2022' },
+      ],
+      skills: [
+        { title: 'LANGUAGES', items: ['Python', 'C', 'C++', 'Java', 'Kotlin', 'JavaScript', 'C#'] },
+        { title: 'WEB & FRAMEWORKS', items: ['React.js', 'Node.js', 'Flask', 'REST APIs', 'HTML/CSS'] },
+        { title: 'EMBEDDED & IoT', items: ['ROS 2', 'Arduino', 'ESP32', 'Raspberry Pi', 'FreeRTOS', 'MQTT', 'Jetson Nano'] },
+        { title: 'AI · ML · VISION', items: ['TensorFlow', 'PyTorch', 'OpenCV', 'Scikit-learn', 'LangChain', 'Whisper'] },
+        { title: 'LANGUAGES (SPOKEN)', items: ['English (India)', 'Hindi', 'Himachali'] },
+      ],
+      highlights: [
+        'Best Mentor — Presidency University, WALL-E project at the 5th Innovative Project Expo 2024.',
+        'Student Project Expo 2024 — WALL-E in Top 25 of 450 projects.',
+        'Anveshan 2024 (South Zone) — robotics research, Presidency University.',
+        "TekBiz@SJP 2022 — 1st Prize, Treasure Hunt (state-level).",
+      ],
+      certs: [
+        'Complete Front-End Web Development — Udemy (2025)',
+        'Data Visualization Techniques — Infosys Springboard (2025)',
+        'Machine Learning with Python — SimpliLearn SkillUP',
+        'Problem Solving & DSA using Java — CodeChef',
+        'Introduction to ROS 2 & Robotic Simulation',
+        'AWS Workshop — Brainovision (2022)',
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
