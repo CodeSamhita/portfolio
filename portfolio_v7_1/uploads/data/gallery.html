@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aditya Sharma | Project Gallery</title>
+  <meta name="description" content="Extended visual gallery of projects by Aditya Sharma." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+
+<body data-page="gallery" class="dark-mode">
+  <div id="global-loader" class="global-loader">
+    <div class="loader-spinner"></div>
+  </div>
+  <div class="ambient-background" aria-hidden="true">
+    <div class="glow-orb orb-primary"></div>
+    <div class="glow-orb orb-secondary"></div>
+    <div class="glow-orb orb-accent"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <div id="progressBar" aria-hidden="true"></div>
+
+  <nav class="glass-nav">
+    <div class="nav-container container">
+      <a class="brand-logo" href="main.html">Aditya Sharma</a>
+      <div class="nav-links" id="site-nav">
+        <a href="main.html" class="nav-link">Home</a>
+        <a href="main.html#about" class="nav-link">About</a>
+        <a href="main.html#skills" class="nav-link">Skills</a>
+        <a href="main.html#projects" class="nav-link">Work</a>
+        <a href="main.html#journey" class="nav-link">Journey</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="main.html#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-controls">
+        <button id="themeToggleBtn" class="icon-button" type="button" aria-label="Toggle dark and light mode">
+          <i class="fas fa-sun"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content" class="gallery-page">
+    <section class="section container reveal-up gallery-hero-section">
+      <div class="section-header text-center gallery-hero-header">
+        <span class="section-subtitle">Showcase</span>
+        <h1 class="hero-title text-gradient gallery-hero-title">Gallery</h1>
+        <p class="section-description mt-4">
+          A deeper look into the interfaces, systems, and hardware builds that bring my projects to life.
+        </p>
+        <h2>Projects, awards, and expo memories in one visual timeline.</h2>
+        <p>
+          This gallery keeps the same glassmorphism theme as the site, but gives each image more breathing room,
+          cleaner cropping, and a better full-size viewing experience across desktop and mobile.
+        </p>
+        <div class="gallery-hero-actions">
+          <a href="main.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+      </div>
+
+
+    </section>
+
+    <section class="section container reveal-up gallery-collection-section">
+      <div class="gallery-toolbar">
+        <div>
+          <span class="section-subtitle">Collection</span>
+          <h2 class="section-title">Project Collections</h2>
+        </div>
+      </div>
+
+
+
+      <div class="gallery-collection-grid" id="gallery-collections">
+        <article class="gallery-card gallery-card-skeleton">
+          <div class="gallery-card-cover-wrap">
+            <div class="skeleton-img gallery-skeleton-media"></div>
+          </div>
+          <div class="gallery-card-body">
+            <div class="skeleton-text skeleton-title" style="width: 40%"></div>
+            <div class="skeleton-text skeleton-line"></div>
+            <div class="skeleton-text skeleton-line" style="width: 80%"></div>
+          </div>
+        </article>
+        <article class="gallery-card gallery-card-skeleton">
+          <div class="gallery-card-cover-wrap">
+            <div class="skeleton-img gallery-skeleton-media"></div>
+          </div>
+          <div class="gallery-card-body">
+            <div class="skeleton-text skeleton-title" style="width: 50%"></div>
+            <div class="skeleton-text skeleton-line"></div>
+            <div class="skeleton-text skeleton-line" style="width: 90%"></div>
+          </div>
+        </article>
+        <article class="gallery-card gallery-card-skeleton">
+          <div class="gallery-card-cover-wrap">
+            <div class="skeleton-img gallery-skeleton-media"></div>
+          </div>
+          <div class="gallery-card-body">
+            <div class="skeleton-text skeleton-title" style="width: 35%"></div>
+            <div class="skeleton-text skeleton-line"></div>
+            <div class="skeleton-text skeleton-line" style="width: 75%"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <p>Building intuitive digital experiences.</p>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; 2026 Aditya Sharma. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div id="gallery-modal" class="gallery-modal" aria-hidden="true">
+    <div class="gallery-modal-backdrop" data-gallery-close></div>
+    <div class="gallery-modal-dialog glass-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title">
+      <button class="gallery-modal-close icon-button" type="button" aria-label="Close collection viewer"
+        data-gallery-close>
+        <i class="fas fa-xmark"></i>
+      </button>
+
+      <div class="gallery-modal-media">
+        <button class="gallery-modal-nav gallery-modal-nav-prev" type="button" aria-label="Show previous image"
+          data-image-step="-1">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <img id="gallery-modal-image" class="gallery-modal-image" src="" alt="" />
+        <button class="gallery-modal-nav gallery-modal-nav-next" type="button" aria-label="Show next image"
+          data-image-step="1">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="gallery-modal-sidebar">
+        <span id="gallery-modal-meta" class="gallery-modal-meta"></span>
+        <h3 id="gallery-modal-title"></h3>
+        <p id="gallery-modal-description"></p>
+
+
+
+        <div id="gallery-modal-technologies-section" class="gallery-modal-section" hidden>
+          <span class="gallery-modal-label">Technologies Used</span>
+          <div id="gallery-modal-technologies" class="gallery-modal-tags"></div>
+        </div>
+
+        <div id="gallery-modal-tags" class="gallery-modal-tags"></div>
+
+        <div id="gallery-modal-notes-section" class="gallery-modal-section" hidden>
+          <span class="gallery-modal-label">Project Notes</span>
+          <ul id="gallery-modal-notes" class="gallery-modal-notes"></ul>
+        </div>
+
+        <div id="gallery-modal-thumbnails" class="gallery-modal-thumbnails"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data-store.js"></script>
+  <script src="gallery.js" defer></script>
+</body>
+
+</html>

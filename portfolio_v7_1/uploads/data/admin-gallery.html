@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery Studio | Portfolio Admin</title>
+  <meta name="description" content="Manage gallery collections, upload images, and browse deletion history." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body[data-page="gallery-admin"]{--text:var(--text-main);--muted:var(--text-muted);--line:var(--border-glass);--surface-glass:var(--bg-glass);--bg:var(--bg-color);display:flex;flex-direction:column;min-height:100vh}
+    body[data-page="gallery-admin"] #main-content{flex:1 0 auto}
+    #progressBar{position:fixed;top:0;left:0;width:0;height:3px;z-index:1200;background:linear-gradient(90deg,var(--accent-primary),var(--accent-secondary));box-shadow:0 0 18px rgba(14,165,233,.35);transition:width .15s linear}
+    .global-loader{background:rgba(5,5,5,.96)}.loader-spinner{border-color:rgba(255,255,255,.12);border-top-color:var(--accent-secondary)}
+
+    /* Nav */
+    .gs-nav-shell{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:1rem}
+    .gs-nav-copy{display:flex;flex-direction:column;gap:.25rem}.gs-nav-kicker{margin:0}
+    .gs-nav-title{margin:0;font-size:clamp(1.8rem,3.6vw,3rem);line-height:1.05}
+    .gs-nav-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.75rem}
+
+    /* Hero */
+    .gs-hero-section{padding-top:9.5rem;padding-bottom:2.5rem}
+    .gs-hero-shell{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.9fr);gap:1.5rem;padding:clamp(1.4rem,2vw,2.2rem);position:relative;overflow:hidden}
+    .gs-hero-shell::before{content:'';position:absolute;inset:auto -10% -30% auto;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,.2),transparent 70%);filter:blur(25px);pointer-events:none}
+    .gs-hero-shell.glass-panel:hover{transform:none;border-color:var(--border-glass);box-shadow:0 8px 32px rgba(0,0,0,.1)}
+    .gs-hero-copy,.gs-hero-side{position:relative;z-index:1}
+    .gs-hero-copy{display:flex;flex-direction:column;gap:1rem}
+    .gs-hero-copy .section-title{margin:0;font-size:clamp(2.2rem,4vw,3.5rem);letter-spacing:-.03em}
+    .gs-hero-copy .section-description{max-width:60ch;margin-top:0}
+    .gs-hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.5rem}
+    .gs-overview-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}
+    .gs-overview-card{padding:1rem 1.1rem;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+    .gs-overview-card strong{display:block;margin-bottom:.35rem;font-family:'Outfit',sans-serif;font-size:1.6rem;letter-spacing:-.03em}
+    .gs-overview-card span{color:var(--text-muted);font-size:.9rem}
+    .gs-workflow-note{margin-top:1rem;padding:1rem 1.1rem;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--text-muted);line-height:1.7}
+
+    /* Tabs */
+    .gs-tabs-bar{display:flex;gap:.5rem;justify-content:center;margin-bottom:2rem;position:sticky;top:80px;z-index:50;padding:1rem;border:1px solid var(--border-glass);border-radius:28px;background:rgba(8,8,10,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 20px 40px rgba(0,0,0,.24)}
+    .gs-tab-btn{padding:.75rem 1.5rem;background:0 0;color:var(--text-muted);border:1px solid transparent;border-radius:8px;font-weight:600;cursor:pointer;transition:all .2s ease;display:flex;align-items:center;gap:.5rem;white-space:nowrap}
+    .gs-tab-btn:hover{color:var(--text-main);background:rgba(255,255,255,.05)}
+    .gs-tab-btn.active{color:var(--bg-color);background:var(--text-main);border-color:var(--text-main)}
+    .gs-tab-panel{display:none;animation:gsFadeIn .4s ease forwards}.gs-tab-panel.active{display:block}
+    @keyframes gsFadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+    /* Cards */
+    .gs-card-grid{display:flex;flex-direction:column;gap:1rem}
+    .gs-card{display:grid;grid-template-columns:120px 1fr auto;align-items:start;gap:1.25rem;padding:1.25rem;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.03);transition:transform .2s ease,border-color .2s ease}
+    .gs-card:hover{border-color:rgba(255,255,255,.1);transform:translateY(-2px)}
+    .gs-card-cover{width:120px;height:85px;border-radius:10px;object-fit:cover;border:1px solid var(--line);background:rgba(0,0,0,.3)}
+    .gs-card-cover-placeholder{width:120px;height:85px;border-radius:10px;border:1px dashed var(--line);background:rgba(0,0,0,.2);display:grid;place-items:center;color:var(--text-muted);font-size:1.4rem}
+    .gs-card-info h3{margin:0 0 .3rem;font-size:1.05rem}
+    .gs-card-info p{margin:0;color:var(--text-muted);font-size:.85rem}
+    .gs-card-info code{font-size:.78rem;color:var(--accent-secondary)}
+    .gs-card-meta{display:flex;gap:.5rem;margin-top:.4rem;flex-wrap:wrap}
+    .gs-card-badge{font-size:.72rem;padding:2px 8px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--text-muted)}
+    .gs-card-actions{display:flex;gap:.5rem;flex-shrink:0;flex-wrap:wrap}
+    .gs-card-actions button{padding:.5rem .9rem;border-radius:8px;border:1px solid var(--line);background:0 0;color:var(--text-main);cursor:pointer;font-size:.82rem;font-weight:500;transition:all .15s ease;display:flex;align-items:center;gap:.4rem}
+    .gs-card-actions button:hover{background:rgba(255,255,255,.08)}
+    .gs-btn-danger{color:#ff6b6b !important;border-color:rgba(255,107,107,.3) !important}
+    .gs-btn-danger:hover{background:rgba(255,107,107,.12) !important}
+    .gs-btn-restore{color:#34d399 !important;border-color:rgba(52,211,153,.3) !important}
+    .gs-btn-restore:hover{background:rgba(52,211,153,.12) !important}
+    .gs-deleted-at{color:#fbbf24;font-size:.78rem;margin-top:.3rem}
+
+    /* Editor Panel */
+    .gs-editor-backdrop{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease;display:grid;place-items:center;padding:2rem}
+    .gs-editor-backdrop.open{opacity:1;visibility:visible}
+    .gs-editor-panel{position:relative;z-index:910;width:min(640px,100%);max-height:calc(100vh - 4rem);background:rgba(12,14,20,.97);border:1px solid var(--line);border-radius:24px;overflow-y:auto;padding:2rem;transform:translateY(30px) scale(.96);opacity:0;transition:transform .35s cubic-bezier(.22,1,.36,1),opacity .3s ease;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 1px rgba(135,238,255,.08)}
+    .gs-editor-backdrop.open .gs-editor-panel{transform:translateY(0) scale(1);opacity:1}
+    .gs-editor-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem}
+    .gs-editor-header h2{margin:0;font-size:1.4rem}
+    .gs-editor-close{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:0 0;color:var(--text-main);cursor:pointer;font-size:1rem;display:grid;place-items:center;transition:background .15s ease}
+    .gs-editor-close:hover{background:rgba(255,255,255,.08)}
+    .gs-editor-form{display:flex;flex-direction:column;gap:1.25rem}
+    .gs-editor-form .form-input{width:100%}
+    .gs-editor-actions{display:flex;gap:.75rem;margin-top:1rem}
+    .gs-editor-note{color:var(--text-muted);font-size:.82rem;margin-top:.3rem;line-height:1.5}
+
+    /* Image Manager inside Editor */
+    .gs-img-manager{border:1px solid var(--line);border-radius:12px;padding:1rem;background:rgba(0,0,0,.2)}
+    .gs-img-manager-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem}
+    .gs-img-manager-header h4{margin:0;font-size:.95rem;color:var(--text-main)}
+    .gs-img-add-btn{padding:.4rem .8rem;border-radius:8px;border:1px solid var(--line);background:0 0;color:var(--accent-secondary);cursor:pointer;font-size:.8rem;font-weight:600;transition:all .15s ease;display:flex;align-items:center;gap:.35rem}
+    .gs-img-add-btn:hover{background:rgba(14,165,233,.12)}
+    .gs-img-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:.6rem;min-height:60px}
+    .gs-img-item{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;border:2px solid transparent;cursor:pointer;transition:border-color .15s ease,transform .15s ease}
+    .gs-img-item:hover{transform:translateY(-2px)}
+    .gs-img-item.is-cover{border-color:var(--accent-secondary);box-shadow:0 0 12px rgba(14,165,233,.3)}
+    .gs-img-item img{width:100%;height:100%;object-fit:cover;display:block}
+    .gs-img-item-badge{position:absolute;top:4px;left:4px;padding:2px 6px;border-radius:4px;background:rgba(14,165,233,.85);color:#fff;font-size:.65rem;font-weight:700;text-transform:uppercase}
+    .gs-img-item-remove{position:absolute;top:4px;right:4px;width:22px;height:22px;border-radius:50%;border:none;background:rgba(255,60,60,.85);color:#fff;font-size:.65rem;cursor:pointer;display:grid;place-items:center;opacity:0;transition:opacity .15s ease}
+    .gs-img-item:hover .gs-img-item-remove{opacity:1}
+    .gs-img-item-broken{width:100%;height:100%;display:grid;place-items:center;background:rgba(0,0,0,.3);color:var(--text-muted);font-size:.75rem;text-align:center;padding:.5rem}
+    .gs-img-empty{grid-column:1/-1;text-align:center;color:var(--text-muted);padding:1.5rem;font-size:.85rem}
+    .gs-img-hint{margin-top:.5rem;font-size:.78rem;color:var(--text-muted);line-height:1.5}
+    .gs-img-dropzone{border:2px dashed var(--line);border-radius:12px;padding:1.5rem;text-align:center;color:var(--text-muted);cursor:pointer;transition:all .25s ease;margin-bottom:.75rem}
+    .gs-img-dropzone:hover{border-color:var(--accent-secondary);color:var(--text-main);background:rgba(14,165,233,.05)}
+    .gs-img-dropzone.drag-over{border-color:var(--accent-secondary);background:rgba(14,165,233,.1);color:var(--text-main);transform:scale(1.01);box-shadow:0 0 20px rgba(14,165,233,.15)}
+    .gs-img-dropzone i{font-size:1.8rem;margin-bottom:.5rem;display:block;opacity:.6;transition:opacity .2s ease}
+    .gs-img-dropzone:hover i,.gs-img-dropzone.drag-over i{opacity:1}
+    .gs-img-dropzone p{margin:0;font-size:.85rem}
+    .gs-img-dropzone small{display:block;margin-top:.35rem;font-size:.75rem;opacity:.6}
+
+    /* Empty state */
+    .gs-empty{text-align:center;padding:3rem 1rem;color:var(--text-muted)}
+    .gs-empty i{font-size:2.5rem;margin-bottom:1rem;display:block;opacity:.4}
+    .gs-empty h3{margin:0 0 .5rem}
+
+    /* Sticky bar */
+    .gs-sticky-bar-shell{position:sticky;bottom:20px;z-index:100;margin-bottom:2rem;pointer-events:none;display:flex;justify-content:center}
+    .gs-sticky-bar{width:min(100%,920px);padding:10px 16px;border-radius:24px;background:rgba(10,24,43,.95);border:1px solid rgba(135,238,255,.3);box-shadow:0 10px 30px -5px rgba(0,0,0,.8);backdrop-filter:blur(10px);pointer-events:auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
+    .gs-sticky-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem}
+    .gs-quick-status{min-width:160px;text-align:left;font-size:.9rem}
+
+    .gs-section-block{padding-top:0;padding-bottom:2rem}
+    .gs-section-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
+    .gs-admin-note{color:var(--muted);font-size:.9rem;margin-top:.25rem;line-height:1.6}
+
+    .back-to-top{position:fixed;right:1.5rem;bottom:1.5rem;width:48px;height:48px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--border-glass);background:rgba(8,8,10,.66);color:var(--text-main);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity var(--transition-normal),transform var(--transition-normal),visibility var(--transition-normal);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+    .back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+    .back-to-top:hover{transform:translateY(-3px)}
+
+    @media(max-width:900px){.gs-hero-shell,.gs-overview-stats,.gs-nav-shell{grid-template-columns:1fr}.gs-nav-actions{width:100%;justify-content:flex-start}.gs-card{grid-template-columns:90px 1fr}.gs-card-actions{grid-column:1/-1;justify-content:flex-end}}
+    @media(max-width:720px){.gs-hero-section{padding-top:8.6rem}.gs-card{grid-template-columns:1fr}.gs-card-cover,.gs-card-cover-placeholder{width:100%;height:140px}.gs-sticky-bar{border-radius:20px;align-items:flex-start}.gs-sticky-actions{width:100%}.gs-quick-status{min-width:0;width:100%}}
+  </style>
+</head>
+
+<body data-page="gallery-admin" class="dark-mode">
+  <div id="global-loader" class="global-loader"><div class="loader-spinner"></div></div>
+  <div class="ambient-background" aria-hidden="true">
+    <div class="glow-orb orb-primary"></div><div class="glow-orb orb-secondary"></div>
+    <div class="glow-orb orb-accent"></div><div class="noise-overlay"></div>
+  </div>
+  <div id="progressBar" aria-hidden="true"></div>
+
+  <nav class="glass-nav">
+    <div class="nav-container container gs-nav-shell">
+      <div class="gs-nav-copy">
+        <span class="section-subtitle gs-nav-kicker">Gallery Studio</span>
+        <h1 class="gs-nav-title text-gradient">Collection Manager</h1>
+      </div>
+      <div class="nav-controls gs-nav-actions">
+        <a href="admin.html" class="btn btn-outline btn-sm"><i class="fas fa-sliders"></i> Portfolio Studio</a>
+        <a href="gallery.html" class="btn btn-outline btn-sm"><i class="fas fa-images"></i> Public Gallery</a>
+        <a href="index.html" class="btn btn-outline btn-sm"><i class="fas fa-globe"></i> View Site</a>
+        <button id="themeToggleBtn" class="icon-button" type="button" aria-label="Toggle dark and light mode"><i class="fas fa-sun"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="section container reveal-up gs-hero-section">
+      <div class="glass-panel gs-hero-shell">
+        <div class="gs-hero-copy">
+          <span class="section-subtitle">Gallery Admin</span>
+          <h2 class="section-title">Manage every collection from one place.</h2>
+          <p class="section-description">
+            Add, edit, and remove gallery collections with full image management.
+            Click any image to set it as cover. Deleted items move to history for safe recovery.
+          </p>
+          <div class="gs-hero-actions">
+            <button type="button" class="btn btn-glow" id="gs-new-btn"><i class="fas fa-plus"></i> New Collection</button>
+            <button type="button" class="btn btn-outline" id="gs-export-btn"><i class="fas fa-download"></i> Export gallery.json</button>
+          </div>
+        </div>
+        <div class="gs-hero-side">
+          <div id="gs-stats" class="gs-overview-stats"></div>
+          <div class="gs-workflow-note">
+            <i class="fas fa-info-circle"></i>
+            Changes save <strong>immediately</strong> by downloading updated JSON files.
+            Replace <code>image/gallery.json</code> and <code>image/gallery-history.json</code> with the downloads.
+            Images must be manually placed in the matching <code>image/gallery/&lt;folder&gt;/</code> directory.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <div class="gs-tabs-bar container">
+      <button type="button" class="gs-tab-btn active" data-gs-tab="gs-collections"><i class="fas fa-layer-group"></i> Collections</button>
+      <button type="button" class="gs-tab-btn" data-gs-tab="gs-history"><i class="fas fa-clock-rotate-left"></i> History</button>
+    </div>
+
+    <!-- Collections -->
+    <section id="gs-collections" class="section container reveal-up gs-tab-panel active gs-section-block">
+      <article class="glass-panel" style="padding:clamp(1.4rem,2vw,2.2rem)">
+        <div class="gs-section-top">
+          <div>
+            <h2 class="card-title text-gradient"><i class="fas fa-layer-group"></i> Active Collections</h2>
+            <p class="gs-admin-note">Loaded from <code>image/gallery.json</code>. Click Edit to manage images.</p>
+          </div>
+          <button type="button" class="btn btn-outline" id="gs-new-btn-2"><i class="fas fa-plus"></i> New Collection</button>
+        </div>
+        <div id="gs-collection-list" class="gs-card-grid"></div>
+      </article>
+    </section>
+
+    <!-- History -->
+    <section id="gs-history" class="section container reveal-up gs-tab-panel gs-section-block">
+      <article class="glass-panel" style="padding:clamp(1.4rem,2vw,2.2rem)">
+        <div class="gs-section-top">
+          <div>
+            <h2 class="card-title text-gradient"><i class="fas fa-clock-rotate-left"></i> Deleted Collections</h2>
+            <p class="gs-admin-note">Archived items from <code>image/gallery-history.json</code>. Restore or purge.</p>
+          </div>
+          <button type="button" class="btn btn-outline gs-btn-danger" id="gs-purge-all-btn"><i class="fas fa-trash"></i> Purge All</button>
+        </div>
+        <div id="gs-history-list" class="gs-card-grid"></div>
+      </article>
+    </section>
+
+    <!-- Sticky bar -->
+    <div class="gs-sticky-bar-shell container">
+      <div class="gs-sticky-bar">
+        <div class="gs-sticky-actions">
+          <button type="button" class="btn btn-glow" id="gs-save-gallery-btn"><i class="fas fa-download"></i> Save gallery.json</button>
+          <button type="button" class="btn btn-outline" id="gs-save-history-btn"><i class="fas fa-download"></i> Save history.json</button>
+        </div>
+        <span id="gs-status" class="text-gradient gs-quick-status"></span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Editor slide-over -->
+  <div id="gs-editor-backdrop" class="gs-editor-backdrop">
+    <div class="gs-editor-panel">
+      <div class="gs-editor-header">
+        <h2 id="gs-editor-title">New Collection</h2>
+        <button type="button" class="gs-editor-close" id="gs-editor-close" aria-label="Close editor"><i class="fas fa-xmark"></i></button>
+      </div>
+      <form id="gs-editor-form" class="gs-editor-form modern-form">
+        <div class="form-group">
+          <input type="text" id="gs-ed-title" class="form-input" placeholder=" " required />
+          <label for="gs-ed-title" class="form-label">Collection Title</label>
+        </div>
+        <div class="form-group">
+          <textarea id="gs-ed-description" class="form-input form-textarea" rows="3" placeholder=" "></textarea>
+          <label for="gs-ed-description" class="form-label">Description</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="gs-ed-folder" class="form-input" placeholder=" " />
+          <label for="gs-ed-folder" class="form-label">Folder Path (auto-generated from title)</label>
+          <p class="gs-editor-note"><i class="fas fa-info-circle"></i> e.g. <code>image/gallery/my-project</code> — place your image files in this folder.</p>
+        </div>
+        <div class="form-group">
+          <input type="text" id="gs-ed-tags" class="form-input" placeholder=" " />
+          <label for="gs-ed-tags" class="form-label">Tags (comma-separated)</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="gs-ed-technologies" class="form-input" placeholder=" " />
+          <label for="gs-ed-technologies" class="form-label">Technologies (comma-separated)</label>
+        </div>
+        <div class="form-group">
+          <textarea id="gs-ed-notes" class="form-input form-textarea" rows="3" placeholder=" "></textarea>
+          <label for="gs-ed-notes" class="form-label">Notes (one per line)</label>
+        </div>
+
+        <!-- Image Manager -->
+        <div class="gs-img-manager">
+          <div class="gs-img-manager-header">
+            <h4><i class="fas fa-images"></i> Images</h4>
+            <button type="button" class="gs-img-add-btn" id="gs-img-add-btn"><i class="fas fa-plus"></i> Browse Files</button>
+            <input type="file" id="gs-img-file-input" accept="image/*" multiple style="display:none" />
+          </div>
+          <div id="gs-img-dropzone" class="gs-img-dropzone">
+            <i class="fas fa-cloud-arrow-up"></i>
+            <p>Drag & drop images here</p>
+            <small>or click Browse Files above</small>
+          </div>
+          <div id="gs-img-grid" class="gs-img-grid"></div>
+          <p class="gs-img-hint">
+            <i class="fas fa-info-circle"></i>
+            <strong>Click an image</strong> to set it as cover.
+            <strong>Hover</strong> and click <strong>×</strong> to remove.
+            Place actual image files in the collection folder.
+          </p>
+        </div>
+
+        <div class="gs-editor-actions">
+          <button type="submit" class="btn btn-glow"><i class="fas fa-check"></i> Save Collection</button>
+          <button type="button" class="btn btn-outline" id="gs-editor-cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h3>Gallery Studio</h3>
+        <p>Runs entirely offline. Downloads replace your JSON files.</p>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; 2026 All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" type="button" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="admin-gallery.js" defer></script>
+</body>
+</html>

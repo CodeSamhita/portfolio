@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Admin overrides */
+    body[data-page="admin"] {
+      --text: var(--text-main);
+      --muted: var(--text-muted);
+      --line: var(--border-glass);
+      --surface-glass: var(--bg-glass);
+      --bg: var(--bg-color);
+      --cyan: var(--accent-secondary);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    body[data-page="admin"] #main-content {
+      flex: 1 0 auto;
+    }
+
+    .admin-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      z-index: 1200;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+      box-shadow: 0 0 18px rgba(14, 165, 233, 0.35);
+      transition: width 0.15s linear;
+    }
+
+    .global-loader {
+      background: rgba(5, 5, 5, 0.96);
+    }
+
+    .loader-spinner {
+      border-color: rgba(255, 255, 255, 0.12);
+      border-top-color: var(--accent-secondary);
+    }
+
+    .admin-nav-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .admin-nav-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .admin-nav-kicker {
+      margin: 0;
+    }
+
+    .admin-nav-title {
+      margin: 0;
+      font-size: clamp(1.8rem, 3.6vw, 3rem);
+      line-height: 1.05;
+    }
+
+    .admin-nav-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 0.75rem;
+    }
+
+    .admin-hero-section {
+      padding-top: 9.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .admin-hero-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.9fr);
+      gap: 1.5rem;
+      padding: clamp(1.4rem, 2vw, 2.2rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .admin-hero-shell::before {
+      content: '';
+      position: absolute;
+      inset: auto -10% -30% auto;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.2), transparent 70%);
+      filter: blur(25px);
+      pointer-events: none;
+    }
+
+    .admin-hero-shell.glass-panel:hover,
+    .tab-section > .glass-panel:hover {
+      transform: none;
+      border-color: var(--border-glass);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .admin-section-block {
+      padding-top: 0;
+      padding-bottom: 2rem;
+    }
+
+    .admin-section-card {
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .admin-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      align-items: start;
+      margin-top: 1.5rem;
+    }
+
+    .admin-compact-grid {
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .admin-full-span {
+      grid-column: 1 / -1;
+    }
+
+    .admin-divider {
+      grid-column: 1 / -1;
+      border-top: 1px solid var(--line);
+      padding-top: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .admin-section-heading {
+      font-size: 1rem;
+      margin: 1.5rem 0 0.75rem;
+      opacity: 0.6;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .admin-section-heading-flush {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .admin-section-heading-compact {
+      margin: 0 0 0.5rem;
+    }
+
+    .admin-divider .admin-section-heading {
+      font-size: 0.85rem;
+      margin: 0 0 1rem;
+      opacity: 0.5;
+    }
+
+    .admin-inline-code {
+      background: rgba(255, 255, 255, 0.07);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .admin-note-compact {
+      font-size: 0.8rem;
+    }
+
+    .admin-section-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .admin-scroll-stack {
+      max-height: 500px;
+      overflow-y: auto;
+      padding-right: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .admin-action-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .admin-sticky-save-shell {
+      position: sticky;
+      bottom: 20px;
+      z-index: 100;
+      margin-bottom: 2rem;
+      pointer-events: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    .admin-sticky-save-bar {
+      width: min(100%, 920px);
+      padding: 10px 16px;
+      border-radius: 24px;
+      background: rgba(10, 24, 43, 0.95);
+      border: 1px solid rgba(135, 238, 255, 0.3);
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      pointer-events: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .admin-sticky-save-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .admin-quick-status {
+      min-width: 160px;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    .admin-json-panel {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .admin-tools-form {
+      max-width: 600px;
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .admin-file-frame {
+      padding: 1rem;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+    }
+
+    .admin-file-input {
+      width: 100%;
+      color: var(--text);
+    }
+
+    .admin-select-grid {
+      gap: 1rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 1.5rem;
+    }
+
+    .admin-select-label {
+      top: -10px;
+      font-size: 0.8rem;
+    }
+
+    .admin-select {
+      background: rgba(10, 24, 43, 0.8);
+      color: white;
+    }
+
+    .admin-preview-frame {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .admin-danger-btn {
+      color: #ff6b6b;
+      border-color: rgba(255, 107, 107, 0.3);
+    }
+
+    .admin-hidden-input {
+      display: none;
+    }
+
+    .admin-hero-copy,
+    .admin-hero-side {
+      position: relative;
+      z-index: 1;
+    }
+
+    .admin-hero-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .admin-hero-copy .section-title {
+      margin: 0;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      letter-spacing: -0.03em;
+    }
+
+    .admin-hero-copy .section-description {
+      max-width: 60ch;
+      margin-top: 0;
+    }
+
+    .admin-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .admin-overview-stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .admin-overview-card {
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .admin-overview-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: -0.03em;
+    }
+
+    .admin-overview-card span {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .admin-workflow-note {
+      margin-top: 1rem;
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .content-editor {
+      width: 100%;
+      height: 500px;
+      background: rgba(0, 0, 0, 0.4);
+      color: var(--text);
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+      padding: 1rem;
+      font-family: monospace;
+      font-size: 0.9rem;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+
+    .project-list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 1.5rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-list-item:hover {
+      border-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .admin-stats-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .preview-card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+      align-items: stretch;
+    }
+
+    .image-preview-box {
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+      padding: 1rem;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.02);
+      text-align: center;
+    }
+
+    .image-preview-box strong {
+      align-self: flex-start;
+    }
+
+    .image-preview-box img {
+      max-width: 100%;
+      max-height: 200px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      object-fit: contain;
+    }
+
+    .admin-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+
+    .badge {
+      background: var(--surface-glass);
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      width: fit-content;
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .admin-tabs-container {
+      margin-bottom: 2rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      position: sticky;
+      top: 80px;
+      z-index: 50;
+      padding: 1rem;
+      border: 1px solid var(--border-glass);
+      border-radius: 28px;
+      background: rgba(8, 8, 10, 0.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.24);
+    }
+
+    .admin-tabs-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .admin-tabs {
+      display: flex;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border-glass);
+      padding-bottom: 1rem;
+      width: max-content;
+      margin: 0 auto;
+    }
+
+    .admin-tabs-note {
+      margin: 0.9rem 0 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .admin-secondary-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .admin-secondary-links .btn {
+      width: max-content;
+    }
+
+    .tab-btn {
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .tab-btn.active {
+      color: var(--bg-color);
+      background: var(--text-main);
+      border-color: var(--text-main);
+    }
+
+    .tab-section {
+      display: none;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .tab-section.active {
+      display: block;
+    }
+
+    .tab-section > .glass-panel {
+      padding: clamp(1.4rem, 2vw, 2.2rem);
+    }
+
+    .tab-section .card-title {
+      margin-bottom: 0.35rem;
+    }
+
+    .admin-studio-footer-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid var(--border-glass);
+      background: rgba(8, 8, 10, 0.66);
+      color: var(--text-main);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity var(--transition-normal), transform var(--transition-normal), visibility var(--transition-normal);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-3px);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+
+      .admin-hero-shell,
+      .admin-overview-stats,
+      .admin-nav-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .admin-nav-actions {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .admin-grid,
+      .admin-form-grid,
+      .preview-card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .admin-select-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .admin-hero-section {
+        padding-top: 8.6rem;
+      }
+
+      .admin-tabs-container {
+        padding: 0.85rem;
+        border-radius: 22px;
+      }
+
+      .admin-hero-actions,
+      .admin-secondary-links {
+        justify-content: flex-start;
+      }
+
+      .admin-sticky-save-bar {
+        border-radius: 20px;
+        align-items: flex-start;
+      }
+
+      .admin-sticky-save-actions {
+        width: 100%;
+      }
+
+      .admin-quick-status {
+        min-width: 0;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body data-page="admin" class="dark-mode">
+  <div id="global-loader" class="global-loader">
+    <div class="loader-spinner"></div>
+  </div>
+  <div class="ambient-background" aria-hidden="true">
+    <div class="glow-orb orb-primary"></div>
+    <div class="glow-orb orb-secondary"></div>
+    <div class="glow-orb orb-accent"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <div id="progressBar" aria-hidden="true"></div>
+
+  <nav class="glass-nav">
+    <div class="nav-container container admin-nav-shell">
+      <div class="admin-nav-copy">
+        <span class="section-subtitle admin-nav-kicker">Portfolio Studio</span>
+        <h1 class="admin-nav-title text-gradient">Content Command Center</h1>
+      </div>
+      <div class="nav-controls admin-nav-actions">
+        <a href="index.html" class="btn btn-outline btn-sm"><i class="fas fa-globe"></i> View Site</a>
+        <a href="gallery.html" class="btn btn-outline btn-sm"><i class="fas fa-images"></i> Public Gallery</a>
+        <a href="admin-gallery.html" class="btn btn-outline btn-sm"><i class="fas fa-folder-open"></i> Gallery Studio</a>
+        <button id="themeToggleBtn" class="icon-button" type="button" aria-label="Toggle dark and light mode">
+          <i class="fas fa-sun"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="section container reveal-up admin-hero-section">
+      <div class="glass-panel admin-hero-shell">
+        <div class="admin-hero-copy">
+          <span class="section-subtitle">Studio Overview</span>
+          <h2 class="section-title">Update your portfolio without digging through files.</h2>
+          <p class="section-description">
+            This admin workspace gives you one place to manage profile details, project content, JSON data, and asset optimization.
+            Multi-image gallery collections now live in a dedicated Gallery Studio for a cleaner workflow.
+          </p>
+          <div class="admin-hero-actions">
+            <a href="admin-gallery.html" class="btn btn-glow"><i class="fas fa-images"></i> Open Gallery Studio</a>
+            <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-up-right-from-square"></i> Preview Portfolio</a>
+          </div>
+        </div>
+        <div class="admin-hero-side">
+          <div id="admin-overview-stats" class="admin-overview-stats"></div>
+          <div class="admin-workflow-note">
+            Save Global Text updates the live portfolio data in local storage. The previous version is auto-backed up before each save,
+            and the advanced JSON editor remains available when you need fine-grained control.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADMIN TABS -->
+    <div class="admin-tabs-container container">
+      <div class="admin-tabs" id="adminTabs">
+        <button type="button" class="tab-btn active" data-tab="tab-profile"><i class="fas fa-user-edit"></i>
+          Profile</button>
+        <button type="button" class="tab-btn" data-tab="tab-about"><i class="fas fa-address-card"></i> About</button>
+        <button type="button" class="tab-btn" data-tab="tab-skills"><i class="fas fa-laptop-code"></i> Skills</button>
+        <button type="button" class="tab-btn" data-tab="tab-journey"><i class="fas fa-route"></i> Journey</button>
+        <button type="button" class="tab-btn" data-tab="tab-projects"><i class="fas fa-rocket"></i> Projects</button>
+        <button type="button" class="tab-btn" data-tab="tab-advanced"><i class="fas fa-database"></i> JSON</button>
+        <button type="button" class="tab-btn" data-tab="tab-tools"><i class="fas fa-magic"></i> Image Tools</button>
+      </div>
+      <div class="admin-secondary-links">
+        <a href="admin-gallery.html" class="btn btn-outline btn-sm"><i class="fas fa-images"></i> Open Gallery Studio</a>
+      </div>
+      <p class="admin-tabs-note">Choose a workspace below. Use the separate Gallery Studio for folder-based image collections.</p>
+    </div>
+
+    <!-- CONTENT CONFIGURATION FORM -->
+    <form id="master-form" class="modern-form">
+
+      <!-- 1. Profile Config -->
+      <section id="tab-profile" class="section container reveal-up tab-section active admin-section-block">
+        <article class="glass-panel admin-section-card">
+          <h2 class="card-title text-gradient"><i class="fas fa-user-edit"></i> 1. Profile &amp; Contact details</h2>
+
+          <!-- Hero Identity -->
+          <div class="admin-form-grid">
+            <div class="form-group">
+              <input type="text" id="studio-name" class="form-input" placeholder=" " />
+              <label for="studio-name" class="form-label">Full Name</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="studio-label" class="form-input" placeholder=" " />
+              <label for="studio-label" class="form-label">Role Focus (Navbar / Footer)</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="studio-eyebrow" class="form-input" placeholder=" " />
+              <label for="studio-eyebrow" class="form-label">Hero Eyebrow Text</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="studio-title" class="form-input" placeholder=" " />
+              <label for="studio-title" class="form-label">Main Hero Title</label>
+            </div>
+            <div class="form-group admin-full-span">
+              <textarea id="studio-lead" class="form-input form-textarea" rows="2" placeholder=" "></textarea>
+              <label for="studio-lead" class="form-label">Hero Lead Intro Paragraph</label>
+            </div>
+
+            <!-- Status & Location -->
+            <div class="form-group">
+              <input type="text" id="studio-status-label" class="form-input" placeholder=" " />
+              <label for="studio-status-label" class="form-label">Status Badge Label (e.g. Currently)</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="studio-status" class="form-input" placeholder=" " />
+              <label for="studio-status" class="form-label">Status Badge Value</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="studio-location-label" class="form-input" placeholder=" " />
+              <label for="studio-location-label" class="form-label">Location Badge Label (e.g. Based in)</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="studio-location" class="form-input" placeholder=" " />
+              <label for="studio-location" class="form-label">Location Value (City, Country)</label>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="form-group">
+              <input type="email" id="studio-email" class="form-input" placeholder=" " />
+              <label for="studio-email" class="form-label">Contact Email</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="studio-resume" class="form-input" placeholder=" " />
+              <label for="studio-resume" class="form-label">Resume Link URL</label>
+            </div>
+            <div class="form-group admin-full-span">
+              <input type="text" id="studio-languages" class="form-input" placeholder=" " />
+              <label for="studio-languages" class="form-label">Spoken Languages (comma-separated, e.g. English, Hindi)</label>
+            </div>
+            <div class="form-group admin-full-span">
+              <textarea id="studio-focus-areas" class="form-input form-textarea" rows="4" placeholder=" "></textarea>
+              <label for="studio-focus-areas" class="form-label">Typing Animation Focus Areas &mdash; one per line (e.g. A Full Stack Developer.)</label>
+            </div>
+
+            <!-- Social Links -->
+            <div class="admin-divider">
+              <h3 class="admin-section-heading"><i class="fas fa-share-alt"></i> Social &amp; Contact Links</h3>
+            </div>
+            <div class="form-group">
+              <input type="text" id="studio-github" class="form-input" placeholder=" " />
+              <label for="studio-github" class="form-label">GitHub URL</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="studio-linkedin" class="form-input" placeholder=" " />
+              <label for="studio-linkedin" class="form-label">LinkedIn URL</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="studio-instagram" class="form-input" placeholder=" " />
+              <label for="studio-instagram" class="form-label">Instagram URL</label>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="studio-whatsapp-number" class="form-input" placeholder=" " />
+              <label for="studio-whatsapp-number" class="form-label">WhatsApp Number (with country code, no + or spaces)</label>
+            </div>
+            <div class="form-group admin-full-span">
+              <input type="text" id="studio-whatsapp-message" class="form-input" placeholder=" " />
+              <label for="studio-whatsapp-message" class="form-label">WhatsApp Opening Message (pre-filled text for visitor)</label>
+              <p class="admin-note admin-note-compact mt-2"><i class="fas fa-info-circle"></i> Example number: <strong>918217450041</strong> (91 = India country code). The full WhatsApp link is built automatically on Save.</p>
+            </div>
+            <div class="form-group admin-full-span">
+              <textarea id="studio-availability" class="form-input form-textarea" rows="2" placeholder=" "></textarea>
+              <label for="studio-availability" class="form-label">Availability / Footer Note</label>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- 2. About Config -->
+      <section id="tab-about" class="section container reveal-up tab-section admin-section-block">
+        <article class="glass-panel admin-section-card">
+          <h2 class="card-title text-gradient"><i class="fas fa-address-card"></i> 2. About Me Section</h2>
+          <div class="form-group mb-4 mt-6">
+            <input type="text" id="studio-about-heading" class="form-input" placeholder=" " />
+            <label for="studio-about-heading" class="form-label">Section Heading</label>
+          </div>
+          <div class="form-group mb-4">
+            <textarea id="studio-about-paragraphs" class="form-input form-textarea" rows="6" placeholder=" "></textarea>
+            <label for="studio-about-paragraphs" class="form-label">Paragraphs (Separate by hitting Enter twice)</label>
+          </div>
+          <h3 class="admin-section-heading">
+            <i class="fas fa-lightbulb"></i> Insight Cards (About Me sidebar)
+          </h3>
+          <p class="admin-note mb-3"><i class="fas fa-info-circle"></i> One insight per line.<br>Format: <code
+              class="admin-inline-code">Tag | Title | Description text</code><br>Example:
+            <code
+              class="admin-inline-code">Goal | Build it to matter | I build things to matter.</code>
+          </p>
+          <div class="form-group">
+            <textarea id="studio-about-insights" class="form-input form-textarea" rows="6" placeholder=" "></textarea>
+            <label for="studio-about-insights" class="form-label">Insights (Tag | Title | Text &mdash; one per line)</label>
+          </div>
+        </article>
+      </section>
+
+      <!-- 3. Skills Config -->
+      <section id="tab-skills" class="section container reveal-up tab-section admin-section-block">
+        <article class="glass-panel admin-section-card">
+          <h2 class="card-title text-gradient"><i class="fas fa-laptop-code"></i> 3. Skills & Tools</h2>
+          <div class="form-group mb-4 mt-6">
+            <input type="text" id="studio-skills-heading" class="form-input" placeholder=" " />
+            <label for="studio-skills-heading" class="form-label">Section Heading</label>
+          </div>
+          <h3 class="admin-section-heading">
+            <i class="fas fa-layer-group"></i> Skill Capability Cards
+          </h3>
+          <p class="admin-note mb-3"><i class="fas fa-info-circle"></i> One capability per line.<br>Format: <code
+              class="admin-inline-code">Icon Class | Title | Description</code><br>Example:
+            <code
+              class="admin-inline-code">fas fa-code | Programming | Python, C++, Java</code>
+          </p>
+          <div class="form-group mb-4">
+            <textarea id="studio-skills-capabilities" class="form-input form-textarea" rows="7"
+              placeholder=" "></textarea>
+            <label for="studio-skills-capabilities" class="form-label">Capabilities (Icon | Title | Text &mdash; one per
+              line)</label>
+          </div>
+          <h3 class="admin-section-heading">
+            <i class="fas fa-tools"></i> Active Tools / Tech Badges
+          </h3>
+          <div class="form-group">
+            <textarea id="studio-skills-tools" class="form-input form-textarea" rows="3" placeholder=" "></textarea>
+            <label for="studio-skills-tools" class="form-label">Tools (comma-separated, e.g. VS Code, GitHub,
+              Arduino)</label>
+          </div>
+        </article>
+      </section>
+
+      <!-- 4. Journey Config -->
+      <section id="tab-journey" class="section container reveal-up tab-section admin-section-block">
+        <article class="glass-panel admin-section-card">
+          <h2 class="card-title text-gradient"><i class="fas fa-route"></i> 4. Journey & Extracurriculars</h2>
+          <div class="form-group mb-4 mt-6">
+            <input type="text" id="studio-journey-heading" class="form-input" placeholder=" " />
+            <label for="studio-journey-heading" class="form-label">Section Heading</label>
+          </div>
+          <h3 class="admin-section-heading">
+            <i class="fas fa-graduation-cap"></i> Education History
+          </h3>
+          <p class="admin-note mb-3"><i class="fas fa-info-circle"></i> One entry per line.<br>Format: <code
+              class="admin-inline-code">Degree Title | Institution Name | Year Range</code><br>Example:
+            <code
+              class="admin-inline-code">B.Tech CSE | Presidency University | 2023 - Present</code>
+          </p>
+          <div class="form-group mb-4">
+            <textarea id="studio-journey-education" class="form-input form-textarea" rows="4"
+              placeholder=" "></textarea>
+            <label for="studio-journey-education" class="form-label">Education (Title | Place | Year &mdash; one per
+              line)</label>
+          </div>
+          <div class="admin-grid admin-compact-grid">
+            <div class="form-group">
+              <textarea id="studio-journey-highlights" class="form-input form-textarea" rows="5"
+                placeholder=" "></textarea>
+              <label for="studio-journey-highlights" class="form-label">Highlights / Awards (one per line)</label>
+            </div>
+            <div class="form-group">
+              <textarea id="studio-journey-activities" class="form-input form-textarea" rows="5"
+                placeholder=" "></textarea>
+              <label for="studio-journey-activities" class="form-label">Activities / Certifications (one per
+                line)</label>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Floating Save Bar -->
+      <div class="admin-sticky-save-shell">
+        <div class="admin-sticky-save-bar">
+          <div class="admin-sticky-save-actions">
+            <button type="submit" class="btn btn-glow"><i class="fas fa-save"></i> Save Global Text</button>
+            <button type="button" class="btn btn-outline" id="floating-backup-btn"><i
+                class="fas fa-archive"></i> Download Backup ZIP</button>
+          </div>
+          <span id="quick-status" class="text-gradient admin-quick-status"></span>
+        </div>
+      </div>
+    </form>
+
+    <!-- 5. Project Hub -->
+    <section id="tab-projects" class="section container reveal-up tab-section admin-section-block">
+      <article class="glass-panel admin-section-card">
+        <div class="admin-section-top">
+          <div>
+            <h2 class="card-title text-gradient"><i class="fas fa-rocket"></i> 5. Project Configurator</h2>
+            <p class="admin-note mt-0 mb-4">Add, preview, and delete standalone projects directly.</p>
+          </div>
+          <button type="button" class="btn btn-outline" id="add-project-btn"><i class="fas fa-plus"></i> New
+            Project</button>
+        </div>
+        <div class="admin-stats-row text-gradient" id="studio-stats"></div>
+        <div id="studio-project-list" class="admin-scroll-stack">
+        </div>
+      </article>
+    </section>
+
+    <!-- 6. Advanced JSON -->
+    <section id="tab-advanced" class="section container reveal-up tab-section admin-section-block">
+      <article class="glass-panel admin-section-card">
+        <h2 class="card-title text-gradient"><i class="fas fa-database"></i> 6. Advanced Core JSON</h2>
+        <p class="admin-note mb-6">Directly edit the full JSON data. This is the raw source of truth for your portfolio.
+          Use the Contact section below to edit the Contact heading and intro text.</p>
+
+        <h3 class="admin-section-heading admin-section-heading-flush"><i class="fas fa-envelope"></i>
+          Contact Section</h3>
+        <div class="admin-grid admin-compact-grid mb-6">
+          <div class="form-group">
+            <input type="text" id="studio-contact-heading" class="form-input" placeholder=" " />
+            <label for="studio-contact-heading" class="form-label">Contact Section Heading</label>
+          </div>
+          <div class="form-group admin-full-span">
+            <textarea id="studio-contact-intro" class="form-input form-textarea" rows="3" placeholder=" "></textarea>
+            <label for="studio-contact-intro" class="form-label">Contact Intro Text</label>
+          </div>
+        </div>
+
+        <div class="admin-action-row mb-4">
+          <button type="button" class="btn btn-glow" id="save-json-btn">Deploy Core JSON</button>
+          <button type="button" class="btn btn-outline btn-sm" id="format-json-btn"><i class="fas fa-align-left"></i>
+            Auto-Format</button>
+          <button type="button" class="btn btn-outline btn-sm" id="export-json-btn"><i class="fas fa-download"></i>
+            Export JSON</button>
+          <button type="button" class="btn btn-outline btn-sm" id="import-json-btn"><i class="fas fa-upload"></i>
+            Import JSON</button>
+          <button type="button" class="btn btn-outline btn-sm admin-danger-btn" id="reset-json-btn"><i class="fas fa-trash-alt"></i> Hard Reset
+          </button>
+          <input type="file" id="import-json-file" class="admin-hidden-input" accept="application/json" />
+        </div>
+
+        <textarea id="content-editor" class="content-editor"></textarea>
+        <span id="editor-status" aria-live="polite" class="text-gradient"></span>
+
+        <!-- Auto-Backup Restore Panel -->
+        <div class="admin-json-panel">
+          <h3 class="admin-section-heading admin-section-heading-compact"><i class="fas fa-history"></i> Auto-Save History</h3>
+          <p class="admin-note admin-note-compact mb-3"><i class="fas fa-info-circle"></i> Every time you click "Save Global Text", the <em>previous</em> data is automatically backed up here. Up to 10 snapshots are kept.</p>
+          <div id="backup-restore-list" class="admin-scroll-stack"></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 7. Optimizer -->
+    <section id="tab-tools" class="section container reveal-up tab-section admin-section-block">
+      <article class="glass-panel admin-section-card">
+        <h2 class="card-title text-gradient"><i class="fas fa-magic"></i> 7. Asset Optimization Engine</h2>
+        <p class="admin-note mb-6">Compress heavy imagery to 85% Webp inside your browser using canvas APIs entirely
+          local to your machine.</p>
+
+        <div class="modern-form admin-tools-form">
+          <div class="form-group admin-file-frame">
+            <input type="file" id="image-file-input" accept="image/*" class="admin-file-input" />
+          </div>
+
+          <div class="admin-grid admin-select-grid">
+            <div class="form-group">
+              <select id="image-preset" class="form-input admin-select">
+                <option value="portrait">Profile Portrait</option>
+                <option value="project">Project Card Size</option>
+                <option value="gallery">Gallery Viewport</option>
+              </select>
+              <label class="form-label admin-select-label">Auto-Crop Profile</label>
+            </div>
+
+            <div class="form-group">
+              <select id="image-target" class="form-input admin-select"></select>
+              <label class="form-label admin-select-label">Auto-Inject Target JSON</label>
+            </div>
+          </div>
+
+          <div class="admin-action-row mt-6">
+            <button type="button" class="btn btn-glow" id="process-image-btn"><i class="fas fa-microchip"></i> Compress
+              Engine</button>
+            <button type="button" class="btn btn-outline" id="apply-image-btn"><i class="fas fa-link"></i> Sync active
+              to JSON</button>
+            <button type="button" class="btn btn-outline" id="download-image-btn"><i class="fas fa-download"></i> Save
+              as Webp</button>
+          </div>
+
+          <p class="form-message mt-4 text-gradient" id="image-status" aria-live="polite"></p>
+        </div>
+
+        <div class="preview-card-grid">
+          <div class="image-preview-box">
+            <strong class="mb-4 d-block">Source File</strong>
+            <div id="original-image-frame" class="admin-preview-frame"><span>Pending File
+                Selection</span></div>
+            <p id="original-image-meta" class="admin-note mt-2"></p>
+          </div>
+          <div class="image-preview-box">
+            <strong class="mb-4 d-block">Compiled WebP Output</strong>
+            <div id="optimized-image-frame" class="admin-preview-frame"><span>Awaiting
+                optimization...</span></div>
+            <p id="optimized-image-meta" class="admin-note mt-2"></p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h3>Aditya.</h3>
+        <p>Studio V6 running absolutely offline. Refreshing will reset unsaved edits.</p>
+        <div class="admin-studio-footer-note"><i class="fas fa-shield-heart"></i> Auto-backups protect previous saves</div>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; 2026 Aditya Sharma. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="data-store.js"></script>
+  <script src="admin.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #13100c; color: #f2ede3; font-family: 'Space Grotesk', sans-serif; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #eaa64f; color: #13100c; }
+  a { color: inherit; text-decoration: none; }
+  @keyframes auroraA { 0%,100%{ transform: translate(0,0) scale(1);} 33%{ transform: translate(46px,-34px) scale(1.12);} 66%{ transform: translate(-32px,24px) scale(0.94);} }
+  @keyframes auroraB { 0%,100%{ transform: translate(0,0) scale(1);} 50%{ transform: translate(-54px,32px) scale(1.14);} }
+</style>
+</helmet>
+
+<div style="position: relative; min-height: 100vh; overflow-x: hidden;">
+
+  <!-- animated background -->
+  <div aria-hidden="true" style="position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;">
+    <div style="position: absolute; width: 540px; height: 540px; left: 4%; top: 6%; border-radius: 50%; background: radial-gradient(circle, rgba(235,167,80,0.16), transparent 70%); filter: blur(34px); animation: auroraA 19s ease-in-out infinite;"></div>
+    <div style="position: absolute; width: 500px; height: 500px; right: 2%; top: 40%; border-radius: 50%; background: radial-gradient(circle, rgba(217,138,107,0.14), transparent 70%); filter: blur(38px); animation: auroraB 24s ease-in-out infinite;"></div>
+  </div>
+
+  <main style="position: relative; z-index: 1; max-width: min(1200px, 100%); margin: 0 auto; padding: clamp(28px, 5vw, 48px) clamp(20px, 5vw, 32px) 72px;">
+
+    <!-- toolbar -->
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 48px; flex-wrap: wrap;">
+      <a href="index.html" style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #a89e8d; padding: 9px 14px; border: 1px solid rgba(255,255,255,0.12); border-radius: 9px; transition: all 0.2s;" style-hover="border-color: #eaa64f; color: #eaa64f;">← Back to portfolio</a>
+      <a href="Resume.dc.html" style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); padding: 9px 16px; border: 1px solid #eaa64f; color: #eaa64f; border-radius: 9px; transition: all 0.2s;" style-hover="background: #eaa64f; color: #13100c;">Résumé ↗</a>
+    </div>
+
+    <!-- header -->
+    <div style="margin-bottom: 40px;">
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 8px;">In the Lab — Full Gallery</p>
+      <h1 data-gtitle style="font-size: clamp(44px, 7vw, 78px); font-weight: 700; margin: 0 0 14px; letter-spacing: -2px;">Milestones &amp; Moments</h1>
+      <p style="max-width: 56ch; font-size: clamp(14px, 0.5vw + 12px, 16px); line-height: 1.6; color: #c0b8ab; margin: 0;">Visits, expos, builds and recognition — the journey around the projects. <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #897f6f;">(drop photos into each album)</span></p>
+    </div>
+
+    <!-- filter chips -->
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px;">
+      <sc-for list="{{ filters }}" as="f" hint-placeholder-count="4">
+        <button onClick="{{ f.on }}" style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); padding: 8px 16px; cursor: pointer; transition: all 0.2s; border-radius: 7px; background: {{ f.bg }}; color: {{ f.color }}; border: 1px solid {{ f.border }};">{{ f.label }}</button>
+      </sc-for>
+    </div>
+
+    <!-- album grid -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 18px;">
+      <sc-for list="{{ albums }}" as="a" hint-placeholder-count="8">
+        <div style="position: relative; aspect-ratio: 4/3; background-color: #251e17; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; cursor: pointer; transition: transform 0.3s cubic-bezier(.2,.8,.2,1), border-color 0.3s, box-shadow 0.3s;" style-hover="transform: translateY(-6px); border-color: rgba(235,167,80,0.5); box-shadow: 0 26px 48px -26px rgba(0,0,0,0.85);">
+          <sc-if value="{{ a.hasImage }}" hint-placeholder-val="{{ false }}">
+            <img src="{{ a.image }}" alt="{{ a.title }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.2) contrast(1.05); z-index: 0; transition: transform 0.3s, filter 0.3s; pointer-events: none;" style-hover="transform: scale(1.04); filter: grayscale(0) contrast(1.05);">
+          </sc-if>
+          <sc-if value="{{ !a.hasImage }}" hint-placeholder-val="{{ true }}">
+            <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 9px, transparent 9px 18px); z-index: 0;"></div>
+          </sc-if>
+
+          <!-- gradient overlay for text readability -->
+          <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(19,16,12,0.88) 88%); z-index: 1; pointer-events: none;"></div>
+
+          <span style="position: absolute; top: 14px; left: 14px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 4px 9px; background: rgba(235,167,80,0.18); border: 1px solid rgba(235,167,80,0.3); color: #eaa64f; border-radius: 5px; letter-spacing: 0.5px; z-index: 2; backdrop-filter: blur(4px);">{{ a.cat }}</span>
+          <span style="position: absolute; top: 14px; right: 14px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 4px 9px; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.1); color: #f2ede3; border-radius: 5px; z-index: 2; backdrop-filter: blur(4px);">{{ a.count }} photos</span>
+          <h3 style="margin: 0; font-size: clamp(16px, 1.8vw, 18px); font-weight: 600; line-height: 1.25; z-index: 2; text-shadow: 0 1px 3px rgba(0,0,0,0.85);">{{ a.title }}</h3>
+          <p style="margin: 6px 0 0; font-size: clamp(12px, 1.4vw, 13.5px); line-height: 1.5; color: #c0b8ab; z-index: 2; text-shadow: 0 1px 2px rgba(0,0,0,0.85);">{{ a.note }}</p>
+          <p style="margin: 10px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #897f6f; z-index: 2;">＋ view photos</p>
+        </div>
+      </sc-for>
+    </div>
+
+    <p style="margin: 40px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #897f6f;">{{ countLabel }}</p>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { filter: 'All' };
+
+  renderVals() {
+    const filter = this.state.filter;
+
+    const all = [
+      { title: 'EnVision 2025 · IITM Research Park', cat: 'Visit', count: 4, note: 'Innovation visit and demos at the IITM Research Park.', image: 'assets/gallery/Moments/Envision IITM/IMG_20250130_130729.jpg' },
+      { title: 'Best Mentor & Ambassador Meet', cat: 'Award', count: 2, note: 'Recognition for mentoring at MakerSpace.', image: 'assets/gallery/Moments/Best Innovator & Ambassador/Best Innovator.jpg' },
+      { title: 'Anveshan 2024 — South Zone', cat: 'Expo', count: 2, note: 'Represented Presidency University for robotics research.', image: 'assets/gallery/Moments/Anveshan/Anveshan.jpg' },
+      { title: 'Student Project Expo 2024', cat: 'Expo', count: 3, note: 'WALL-E selected in the Top 25 of 450 projects.', image: 'assets/gallery/Project/Wall-E - ROBOTICS/Project Expo Orientation.jpg' },
+      { title: 'IEEE NQComp-2026 · MIT Manipal', cat: 'Award', count: 3, note: 'Presented the RoboDog research paper.', image: 'assets/gallery/Certificates/IEEE/IEEE-Sertificate-on-Robo-Dog.png' },
+      { title: 'WALL-E Build Sessions', cat: 'Build', count: 6, note: 'From frame and wiring to a moving animatronic.', image: 'assets/gallery/Project/Wall-E - ROBOTICS/1744954817634.jpg' },
+      { title: 'Humanoid Motion Prototype', cat: 'Build', count: 2, note: 'Servo lip-sync and voice tests.', image: 'assets/gallery/Project/Humonoid - Robotics/20251010_170740.jpg' },
+      { title: 'AI RoboDog — Field Tests', cat: 'Build', count: 3, note: 'Face-tracking and follow-me trials.', image: 'assets/gallery/Project/Robo Dog - Robotics/IMG_20250918_164037.jpg' },
+      { title: 'InnovateX 3.0 Hackathon', cat: 'Expo', count: 4, note: '24-hour hardware hackathon at MakerSpace.', image: 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_2761.JPG' },
+      { title: 'Tech Fests & Demos', cat: 'Visit', count: 4, note: 'Booths, talks and live demonstrations.', image: 'assets/gallery/Moments/AWS/IMG_20220726_165740.jpg' },
+    ];
+
+    const cats = ['All', 'Build', 'Expo', 'Award', 'Visit'];
+    const filters = cats.map((c) => {
+      const on = filter === c;
+      return {
+        label: c,
+        bg: on ? '#eaa64f' : 'transparent',
+        color: on ? '#13100c' : '#c0b8ab',
+        border: on ? '#eaa64f' : 'rgba(255,255,255,0.14)',
+        on: () => this.setState({ filter: c }),
+      };
+    });
+
+    const albums = (filter === 'All' ? all : all.filter((a) => a.cat === filter))
+      .map((a) => ({ ...a, hasImage: !!a.image }));
+    const photoTotal = albums.reduce((n, a) => n + a.count, 0);
+
+    return {
+      filters,
+      albums,
+      countLabel: albums.length + ' albums · ' + photoTotal + ' photos',
+    };
+  }
+}
+</script>
+</body>
+</html>

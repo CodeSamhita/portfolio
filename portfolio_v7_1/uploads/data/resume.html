@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Sharma - Technical Resume</title>
+    <style>
+        /* Traditional Technical Resume (LaTeX/Word Hybrid) Aesthetic */
+        html {
+            background-color: #e6e6e6;
+            display: flex;
+            justify-content: center;
+        }
+
+        body {
+            /* Standard clean serif font used in technical CVs */
+            font-family: "Times New Roman", Times, serif;
+            font-size: 10.5pt;
+            color: #000;
+            line-height: 1.25;
+            margin: 0;
+            padding: 20px;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            background: #ffffff;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+            /* Very tight margins for technical resumes to fit 1 page */
+            padding: 12mm 15mm;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        @media print {
+            html { background-color: #ffffff; }
+            body { padding: 0; }
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                padding: 12mm 15mm;
+            }
+            @page { size: A4; margin: 0; }
+        }
+
+        /* Header */
+        h1 {
+            font-size: 20pt;
+            text-align: center;
+            margin: 0 0 4px 0;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 10pt;
+            margin-bottom: 8pt;
+        }
+        .contact-info a {
+            color: #000; 
+            text-decoration: underline;
+        }
+
+        /* Grouping for Print Safety */
+        .section-group {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        /* Sections */
+        h2 {
+            font-size: 12pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1pt solid #000;
+            margin: 10pt 0 4pt 0;
+            padding-bottom: 1pt;
+            page-break-after: avoid; /* Bulletproof headings */
+            break-after: avoid;
+        }
+
+        /* Flex Layouts */
+        .flex-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .bold { font-weight: bold; }
+        .italic { font-style: italic; }
+
+        .entry {
+            margin-bottom: 6pt;
+            page-break-inside: avoid; /* Bulletproof entries */
+            break-inside: avoid;
+        }
+
+        /* Lists */
+        ul {
+            margin: 2pt 0 4pt 0;
+            padding-left: 14pt;
+        }
+        li {
+            margin-bottom: 1.5pt;
+        }
+
+        p {
+            margin: 2pt 0 4pt 0;
+            text-align: justify;
+        }
+
+        /* Dense Skills Section */
+        .skills-list {
+            margin: 3pt 0 6pt 0;
+        }
+        .skills-item {
+            margin-bottom: 2pt;
+        }
+
+    </style>
+    <style>
+        .nav-panel {
+            position: fixed; top: 15px; right: 15px;
+            background: #f8f9fa; border: 1px solid #ddd;
+            padding: 8px 15px; border-radius: 20px; font-family: sans-serif; font-size: 13px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); z-index: 1000;
+        }
+        .nav-panel a { text-decoration: none; color: #666; transition: color 0.2s; }
+        .nav-panel a.active { color: #000; font-weight: bold; pointer-events: none; }
+        .nav-panel a:hover { color: #000; }
+        @media print { .nav-panel { display: none !important; } }
+    </style>
+</head>
+<body>
+
+    <!-- Switching Panel -->
+    <div class="nav-panel">
+        <span class="text-gray-500">Theme:</span>
+        <a href="resume.html" class="active">📄 Old School</a> |
+       <!-- <a href="old_resume.html">📄✨ Standard</a> | -->
+        <a href="resume_modern.html">✨ Creative Split</a>
+    </div>
+
+    <div class="page">
+        <!-- Header -->
+        <div class="section-group">
+            <h1>ADITYA SHARMA</h1>
+            <div class="contact-info">
+                adisharma102000@gmail.com | +91 82174 50041 <br>
+                LinkedIn: <a href="https://linkedin.com/in/aditya-sharma-profile">linkedin.com/in/aditya-sharma-profile</a> | 
+                GitHub: <a href="https://github.com/CodeSamhita">github.com/CodeSamhita</a>
+            </div>
+        </div>
+
+        <!-- Career Objective -->
+        <div class="section-group">
+            <h2>CAREER OBJECTIVE</h2>
+            <p>Motivated Computer Science & Engineering student seeking an entry-level role in Full Stack Engineering, Embedded Systems, IoT, or Robotics. Experienced with Python, C++, ROS 2, sensor integration, and advanced AI models. Highly passionate about software–hardware integration, rapidly prototyping intelligent applications, and delivering scalable real-time technical solutions.</p>
+        </div>
+
+        <!-- Education (At Top for Students) -->
+        <div class="section-group">
+            <h2>EDUCATION</h2>
+            
+            <div class="entry">
+                <div class="flex-row bold">
+                    <div>Presidency University — Bangalore, India</div>
+                    <div>Aug 2023 – Present</div>
+                </div>
+                <div class="flex-row">
+                    <div class="italic">Bachelor of Technology – Computer Science and Engineering</div>
+                    <div>CGPA: 7.56</div>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="flex-row bold">
+                    <div>RR Polytechnic — Bengaluru, India</div>
+                    <div>2018 – 2022</div>
+                </div>
+                <div class="flex-row">
+                    <div class="italic">Diploma in Computer Science and Engineering</div>
+                    <div>Percentage: 68%</div>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="flex-row bold">
+                    <div>Air Force School</div>
+                    <div>2014 – 2015</div>
+                </div>
+                <div class="flex-row">
+                    <div class="italic">Matriculation</div>
+                    <div>CGPA: 5.6</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section-group">
+            <h2>TECHNICAL SKILLS</h2>
+            <div class="skills-list">
+                <div class="skills-item"><span class="bold">Languages:</span> Python, C, C++, Java, JavaScript, HTML, CSS, PHP, SQL, Arduino C.</div>
+                <div class="skills-item"><span class="bold">Frameworks & Libraries:</span> Bootstrap, NodeJS, React.js, Flask, TensorFlow, PyTorch, OpenCV, Pandas, Numpy, LangChain, Whisper.</div>
+                <div class="skills-item"><span class="bold">Tools & Platforms:</span> Git, GitHub, ROS 2, Arduino, Raspberry Pi, Ubuntu, MySQL, Power BI, Tinkercad.</div>
+                <div class="skills-item"><span class="bold">Concepts:</span> RESTful APIs, Machine Learning, Agile Methodology, Real-time Systems Automation.</div>
+                <div class="skills-item"><span class="bold">Soft Skills:</span> Leadership, Mentorship, Problem-Solving, Team Collaboration.</div>
+            </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="section-group">
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+            
+            <div class="entry">
+                <div class="flex-row bold">
+                    <div>Maker Space (BuildClub) — Presidency University</div>
+                    <div>Aug 2024 – Mar 2026</div>
+                </div>
+                <div class="italic">Core Member & Robotics Developer / Mentor</div>
+                <ul>
+                    <li>Mentored 50+ members on programming, debugging, and robotic control frameworks.</li>
+                    <li>Led the concurrent engineering of major robotics projects from concept to prototype, including an AI Humanoid, WALL·E, and RoboDog.</li>
+                    <li>Architected optimal software–hardware stacks prioritizing IoT edge execution and embedded constraints.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="flex-row bold">
+                    <div>KnowX Innovations Pvt. Ltd.</div>
+                    <div>Sep 2022</div>
+                </div>
+                <div class="italic">Machine Learning Intern</div>
+                <ul>
+                    <li>Developed and tested a Sign Language Detection System utilizing custom ML pipelines and computer vision datasets.</li>
+                    <li>Deployed proof-of-concept AI module validating real-time frame evaluation for functional hardware integrations.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Technical Projects -->
+        <div>
+            <h2>TECHNICAL PROJECTS</h2>
+
+            <div class="entry">
+                <div class="flex-row bold">
+                    <div>AI-Driven Smart Traffic Management</div>
+                    <div>Jan 2026 – Present</div>
+                </div>
+                <ul>
+                    <li><span class="bold">Final Semester Project:</span> "Implementation of an Artificial Intelligence Driven Smart Traffic Management System for Urban Congestion Mitigation." Developing AI and vision-based models to dynamically optimize traffic flow.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="flex-row bold">
+                    <div>Concurrent Robotics: Humanoid, WALL·E & RoboDog</div>
+                    <div>Feb 2024 – Present</div>
+                </div>
+                <ul>
+                    <li>Simultaneous development of three major robotics platforms. The Humanoid (<span class="bold">7th Semester Capstone Project</span>) features voice-activated mouth movements precisely synced using Whisper AI, demonstrating advanced embedded AI and low-latency servo control.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="flex-row bold">
+                    <div>Obstacle Avoidance Robot</div>
+                    <div>Aug 2023 – Nov 2023</div>
+                </div>
+                <ul>
+                    <li>An autonomous robot designed to navigate complex environments utilizing multiple sensors. Serves as a practical application of robust sensor fusion algorithms.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="flex-row bold">
+                    <div>Interactive Portfolio Website</div>
+                    <div>May 2024 – Jun 2024</div>
+                </div>
+                <ul>
+                    <li>A modern, responsive portfolio website showcasing full-stack capabilities. Created a highly interactive online presence with a clean, user-friendly UI.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="flex-row bold">
+                    <div>Smart Tank Monitoring</div>
+                    <div>Oct 2023 – Dec 2023</div>
+                </div>
+                <ul>
+                    <li>A real implementation of monitoring water level at home tanks with smart cutoff and device notification in at home wifi.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="flex-row bold">
+                    <div>Smart Traffic Analysis System</div>
+                    <div>Jan 2022 – May 2022</div>
+                </div>
+                <ul>
+                    <li><span class="bold">Final Year Project (2022):</span> Adaptive algorithm leveraging sensor arrays to evaluate traffic density for emergency routing using UNO, Ultrasonic Sensor, RFID, IR Sensor, and Arduino Language.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="flex-row bold">
+                    <div>Public Network Safety Demo</div>
+                    <div>Mar 2022</div>
+                </div>
+                <ul>
+                    <li><span class="bold">Diploma Project (2022):</span> Demonstrated network vulnerabilities and packet manipulation to raise cybersecurity awareness, utilizing OpenWrt and Sniffer Tools.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Publications & Research -->
+        <div class="section-group">
+            <h2>PUBLICATIONS & RESEARCH</h2>
+            <div class="entry">
+                <ul>
+                    <li><span class="bold">Research Paper Presented</span> — "Design and implementation of AI-Powered autonomous security robotic dog with integrated face recognition" at NQComp-2026, MIT Bengaluru (Mar 2026).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section-group">
+            <h2>CERTIFICATIONS & TRAINING</h2>
+            <div class="entry">
+                <ul>
+                    <li><span class="bold">The Complete Front-End Web Development Course</span> — Udemy (Apr 2025)</li>
+                    <li><span class="bold">Data Visualization Techniques</span> — Infosys Springboard (Apr 2025)</li>
+                    <li><span class="bold">EnVision 2025 Energy Festival Participant</span> — IITM Research Park (Feb 2025)</li>
+                    <li><span class="bold">30 Days of Python</span> — Udemy (Feb 2024)</li>
+                    <li><span class="bold">Amazon Web Services (AWS) Workshop</span> — Brain O Vision & R.R Polytechnic (Jul 2022)</li>
+                    <li><span class="bold">Python In-Plant Training</span> — Knowx Innovations (May 2022)</li>
+                    <li><span class="bold">Cyber Security (Hands-On) SDP</span> — R.R. Institute of Management Studies (Dec 2021)</li>
+                    <li><span class="bold">Data Exploration and Visualization</span> — Sri Ramakrishna Eng. College (Jun 2021)</li>
+                    <li><span class="bold">Footprints & Counter Measures in Ethical Hacking</span> — Sri Ramakrishna Eng. College (May 2021)</li>
+                    <li><span class="bold">Python & Application Development</span> — RedTron (Jan 2020)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Awards -->
+        <div class="section-group">
+            <h2>AWARDS & RECOGNITION</h2>
+            <div class="entry">
+                <ul>
+                    <li><span class="bold">Winner at Inventra'25</span> - Capstone Project Expo, Presidency University (Nov 2025).</li>
+                    <li><span class="bold">Anveshan 2024 (South Zone)</span> - Represented Presidency University for robotics research (Feb 2025).</li>
+                    <li><span class="bold">Best Mentor Award (2024)</span> - Awarded for the "WALL-E" project at the 5th Innovative Project Expo, Presidency University (Dec 2024).</li>
+                    <li><span class="bold">TekBiz@SJP 2K22</span> - Secured 1st Prize in Treasure Hunt, and won prizes in Coding and Photo Editing (Jul 2022).</li>
+                    <li><span class="bold">Certificate of Merit (NSCSC)</span> - National Schools Computer Science Competition (Jan 2014).</li>
+                    <li><span class="bold">NCC 'A' Certificate</span> - 51 Assam Air (T) Sqn NCC, under Ministry of Defence (2013).</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "heading": "Skills & Tools",
+  "capabilities": [
+    {
+      "icon": "fas fa-code",
+      "title": "Programming Languages",
+      "text": "Python, C, C++, Java, JavaScript, C#"
+    },
+    {
+      "icon": "fas fa-globe",
+      "title": "Web Technologies & Frameworks",
+      "text": "HTML, CSS, Bootstrap, NodeJS, React.js, Flask, RESTful APIs, Client-Server Architecture"
+    },
+    {
+      "icon": "fas fa-microchip",
+      "title": "Embedded & Platforms",
+      "text": "ROS 2, Arduino, Raspberry Pi, Ubuntu, Power BI, MySQL"
+    },
+    {
+      "icon": "fas fa-brain",
+      "title": "AI, ML & Computer Vision",
+      "text": "TensorFlow, PyTorch, OpenCV, Scikit-learn, Numpy, Pandas, LangChain, Whisper AI"
+    },
+    {
+      "icon": "fas fa-users",
+      "title": "Soft Skills & Methodologies",
+      "text": "Leadership, Team Collaboration, Agile Methodology, Mentorship, Problem-Solving, Critical Thinking"
+    },
+    {
+      "icon": "fas fa-language",
+      "title": "Spoken Languages",
+      "text": "English, Hindi, Himachali (Native)"
+    }
+  ],
+  "tools": [
+    "VS Code",
+    "GitHub",
+    "Git",
+    "Tinkercad",
+    "Ubuntu",
+    "Raspberry Pi",
+    "Arduino",
+    "ROS 2"
+  ]
+}

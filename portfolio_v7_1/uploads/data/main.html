@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1024" />
+  <title>Aditya Sharma | Modern Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Aditya Sharma, a developer and builder working across software, robotics, embedded systems, and interactive product experiences." />
+  <meta name="author" content="Aditya Sharma" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="home" class="dark-mode">
+  <div id="global-loader" class="global-loader">
+    <div class="loader-spinner"></div>
+  </div>
+  <div class="ambient-background" aria-hidden="true">
+    <div class="glow-orb orb-primary"></div>
+    <div class="glow-orb orb-secondary"></div>
+    <div class="glow-orb orb-accent"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <div id="progressBar" aria-hidden="true"></div>
+
+  <nav class="glass-nav">
+    <div class="nav-container container">
+      <a class="brand-logo" href="../index.html#">Aditya Sharma</a>
+      <div class="nav-links" id="site-nav">
+        <a href="main.html" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Work</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-controls">
+        <button id="themeToggleBtn" class="icon-button" type="button" aria-label="Toggle dark and light mode">
+          <i class="fas fa-sun"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="hero-section container reveal-up" id="hero">
+      <div class="hero-content">
+        <div class="badge-wrapper animate-enter" style="--delay: 1">
+          <span class="eyebrow-badge" id="hero-eyebrow"></span>
+        </div>
+        <h1 class="hero-title animate-enter text-gradient" id="hero-title" style="--delay: 2"></h1>
+        <h2 class="hero-role animate-enter" id="hero-role" style="--delay: 3"></h2>
+        <p class="hero-lead animate-enter" id="hero-lead" style="--delay: 4"></p>
+
+        <div class="signals-container animate-enter" style="--delay: 5">
+          <div class="signal-tag">
+            <div class="pulse-dot green"></div>
+            <span id="status-label"></span>
+            <strong id="status-text"></strong>
+          </div>
+          <div class="signal-tag">
+            <i class="fas fa-location-dot"></i>
+            <span id="location-label"></span>
+            <strong id="location-text"></strong>
+          </div>
+          <div style="flex-basis: 100%; height: 0; margin: 0;"></div>
+          <div class="signal-tag">
+            <i class="fas fa-language"></i>
+            <span id="language-label">Speaks </span>
+            <strong id="language-text"></strong>
+          </div>
+        </div>
+
+        <div class="hero-buttons animate-enter" style="--delay: 6">
+          <a href="#projects" class="btn btn-glow">View My Work <i class="fas fa-arrow-right"></i></a>
+          <a id="resume-link" href="resume.html" class="btn btn-outline" target="_blank" rel="noreferrer">Resume</a>
+        </div>
+      </div>
+
+      <div class="hero-visual animate-enter" style="--delay: 4">
+        <div class="portrait-container glass-panel">
+          <img id="hero-portrait" src="profile.png" alt="Aditya Sharma" class="portrait-img" />
+          <div class="portrait-overlay"></div>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric-box glass-panel stagger-enter" style="--delay: 5">
+            <span class="metric-value"><span id="project-count" data-counter="0">0</span>+</span>
+            <span class="metric-label">Projects</span>
+          </div>
+          <div class="metric-box glass-panel stagger-enter" style="--delay: 6">
+            <span class="metric-value"><span id="tool-count" data-counter="0">0</span>+</span>
+            <span class="metric-label">Technologies</span>
+          </div>
+          <div class="metric-box glass-panel stagger-enter metric-wide"
+            style="--delay: 7; flex-direction: column; align-items: flex-start; justify-content: center; gap: 0.75rem; min-height: 110px;">
+            <span class="metric-label">Focus Area</span>
+            <span class="metric-text" id="typed-text" style="font-size: 1.15rem; line-height: 1.4;"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section container reveal-up" id="about">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Discovery</span>
+        <h2 class="section-title" id="about-heading"></h2>
+      </div>
+      <div class="about-layout">
+        <div class="glass-panel about-story" id="about-paragraphs"></div>
+        <div class="about-insights" id="about-insights"></div>
+      </div>
+    </section>
+
+    <section class="section skills-section container reveal-up" id="skills">
+      <div class="section-header">
+        <span class="section-subtitle">Expertise</span>
+        <h2 class="section-title" id="skills-heading"></h2>
+      </div>
+      <div class="capability-grid" id="capability-grid">
+        <article class="glass-panel capability-card skeleton-card">
+          <div class="skeleton-icon"></div>
+          <div class="skeleton-text skeleton-title"></div>
+          <div class="skeleton-text skeleton-line"></div>
+          <div class="skeleton-text skeleton-line" style="width: 70%"></div>
+        </article>
+        <article class="glass-panel capability-card skeleton-card">
+          <div class="skeleton-icon"></div>
+          <div class="skeleton-text skeleton-title"></div>
+          <div class="skeleton-text skeleton-line"></div>
+          <div class="skeleton-text skeleton-line" style="width: 85%"></div>
+        </article>
+        <article class="glass-panel capability-card skeleton-card">
+          <div class="skeleton-icon"></div>
+          <div class="skeleton-text skeleton-title"></div>
+          <div class="skeleton-text skeleton-line"></div>
+          <div class="skeleton-text skeleton-line" style="width: 60%"></div>
+        </article>
+        <article class="glass-panel capability-card skeleton-card">
+          <div class="skeleton-icon"></div>
+          <div class="skeleton-text skeleton-title"></div>
+          <div class="skeleton-text skeleton-line"></div>
+          <div class="skeleton-text skeleton-line" style="width: 75%"></div>
+        </article>
+      </div>
+      <div class="scrolling-tools mt-12">
+        <div class="tools-track" id="tool-ribbon"></div>
+      </div>
+    </section>
+
+    <section class="section work-section container reveal-up" id="projects">
+      <div class="section-header max-w-2xl">
+        <span class="section-subtitle">Portfolio</span>
+        <h2 class="section-title">Selected Work</h2>
+        <p class="section-description">A showcase of systems, applications, and interactive experiences.</p>
+      </div>
+      <div class="filter-controls" id="project-filters"></div>
+      <div class="project-grid" id="projects-container">
+        <article class="project-card skeleton-card">
+          <div class="skeleton-img"></div>
+          <div class="project-content">
+            <div class="skeleton-text skeleton-title" style="width: 40%;"></div>
+            <div class="skeleton-text skeleton-line"></div>
+            <div class="skeleton-text skeleton-line" style="width: 80%"></div>
+            <div class="skeleton-text skeleton-line" style="width: 60%"></div>
+          </div>
+        </article>
+        <article class="project-card skeleton-card">
+          <div class="skeleton-img"></div>
+          <div class="project-content">
+            <div class="skeleton-text skeleton-title" style="width: 50%;"></div>
+            <div class="skeleton-text skeleton-line"></div>
+            <div class="skeleton-text skeleton-line" style="width: 90%"></div>
+            <div class="skeleton-text skeleton-line" style="width: 50%"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section journey-section container reveal-up" id="journey">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Experience</span>
+        <h2 class="section-title" id="journey-heading"></h2>
+      </div>
+      <div class="journey-layout">
+        <div class="glass-panel journey-card timeline-card">
+          <h3 class="card-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+          <div class="timeline" id="education-list"></div>
+        </div>
+        <div class="glass-panel journey-card list-card">
+          <h3 class="card-title"><i class="fas fa-star"></i> Highlights</h3>
+          <ul class="styled-list" id="highlights-list"></ul>
+        </div>
+        <div class="glass-panel journey-card list-card">
+          <h3 class="card-title"><i class="fas fa-users"></i> Involvement</h3>
+          <ul class="styled-list" id="activities-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section container reveal-up" id="gallery">
+      <div class="section-header flex-between">
+        <div>
+          <span class="section-subtitle">Visuals</span>
+          <h2 class="section-title">Project Gallery</h2>
+        </div>
+        <a href="gallery.html" class="btn btn-outline btn-sm">Full Gallery <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="gallery-grid" id="gallery-preview"></div>
+    </section>
+
+    <section class="section contact-section container reveal-up" id="contact">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Get in Touch</span>
+        <h2 class="section-title" id="contact-heading"></h2>
+      </div>
+      <div class="contact-layout">
+        <div class="glass-panel contact-form-card">
+          <h3 class="card-title">Send a message</h3>
+          <p class="text-muted" id="contact-intro"></p>
+          <form id="contact-form" class="modern-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-group">
+              <input type="text" id="contactName" name="name" class="form-input" placeholder=" " required />
+              <label for="contactName" class="form-label">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="contactEmail" name="email" class="form-input" placeholder=" " required />
+              <label for="contactEmail" class="form-label">Your Email</label>
+            </div>
+            <div class="form-group">
+              <textarea id="contactMessage" name="message" class="form-input form-textarea" placeholder=" " rows="4"
+                required></textarea>
+              <label for="contactMessage" class="form-label">Message</label>
+            </div>
+            <button type="submit" class="btn btn-glow w-full mt-4">Send Message <i
+                class="fas fa-paper-plane"></i></button>
+            <p id="form-message" class="form-message mt-4" aria-live="polite"></p>
+          </form>
+        </div>
+        <div class="glass-panel connect-card flex-col-center text-center">
+          <div class="avatar-glow mb-6">
+            <img src="profile.png" alt="Connect" class="avatar-small" />
+          </div>
+          <h3 class="card-title">Let's Connect</h3>
+          <p class="text-muted mb-6" id="availability-text"></p>
+          <div class="social-links-grid" id="contact-links"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h3>Aditya Sharma</h3>
+        <p>Building intuitive digital experiences.</p>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; 2025 Aditya Sharma. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div id="messageBox" class="message-box" role="status" aria-live="polite"></div>
+
+  <script src="data-store.js"></script>
+  <script src="app.js" defer></script>
+</body>
+
+</html>
