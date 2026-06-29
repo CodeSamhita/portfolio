@@ -16,7 +16,8 @@
 <meta http-equiv="Expires" content="0">
 <style>
   * { box-sizing: border-box; }
-  body { margin: 0; background: #13100c; color: #f2ede3; font-family: 'Space Grotesk', sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  html { overflow-x: clip; max-width: 100%; }
+  body { margin: 0; background: #13100c; color: #f2ede3; font-family: 'Space Grotesk', sans-serif; -webkit-font-smoothing: antialiased; overflow-x: clip; max-width: 100%; }
   ::selection { background: #eaa64f; color: #13100c; }
   input, textarea, button { font-family: inherit; }
   a { color: inherit; text-decoration: none; }
@@ -29,6 +30,7 @@
   @keyframes lbFade { from { opacity: 0; } to { opacity: 1; } }
   @keyframes gridDrift { from { background-position: 0 0, 0 0; } to { background-position: 64px 64px, 64px 64px; } }
   @keyframes dropdownIn { from { opacity: 0; transform: translateY(-8px) scale(0.96); } to { opacity: 1; transform: none; } }
+  @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
   [data-skillcard] [data-sktag] { transition: transform .3s cubic-bezier(.2,.8,.2,1), border-color .3s, color .3s; }
   [data-skillcard]:hover [data-sktag] { transform: translateY(-4px); border-color: rgba(235,167,80,0.45); color: #f2ede3; }
   [data-skillcard]:hover [data-sktag]:nth-child(2){ transition-delay: .03s; }
@@ -57,6 +59,7 @@
     [data-nav-toggle] { display: flex !important; }
     [data-split] { grid-template-columns: 1fr !important; }
     [data-contact] { grid-template-columns: 1fr !important; }
+    [data-skillsplit] { grid-template-columns: 1fr !important; }
     [data-portrait] { display: none !important; }
     [data-mobile-avatar] { display: block !important; }
     [data-hero-main], [data-hero-aside], [data-namerow] { display: contents !important; }
@@ -98,6 +101,19 @@
 </style>
 </helmet>
 
+<!--
+  ════════════════════════════════════════════════════════════════════
+  Aditya Sharma — Personal Portfolio
+  © 2026 Aditya Sharma. All rights reserved.
+
+  This source code and its visual design (layout, colour system, motion,
+  component structure and copy) are the original work of Aditya Sharma.
+  It is published for viewing only. It is NOT licensed for reuse,
+  redistribution, scraping, or the creation of derivative works — in
+  whole or in part, by a person or an automated system — without the
+  explicit written permission of the author.
+  ════════════════════════════════════════════════════════════════════
+-->
 <div data-scale-root style="position: relative; min-height: 100vh;">
 
   <div data-progress style="position: fixed; top: 0; left: 0; height: 2px; width: 100%; transform: scaleX(0); transform-origin: left; background: linear-gradient(90deg, #eaa64f, #d98a6b); z-index: 60; pointer-events: none;"></div>
@@ -266,7 +282,7 @@
               <p data-sktitle style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #eaa64f; margin: 0 0 16px; letter-spacing: 0.5px;">{{ g.title }}</p>
               <div style="display: flex; flex-wrap: wrap; gap: 8px;">
                 <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="5">
-                  <span data-sktag style="font-size: clamp(11.5px, 1.3vw, 13px); padding: 6px 11px; border: 1px solid rgba(255,255,255,0.12); color: #d8d0c3; background: rgba(255,255,255,0.02); border-radius: 7px;">{{ it }}</span>
+                  <span data-sktag onClick="{{ it.on }}" style="font-size: clamp(11.5px, 1.3vw, 13px); padding: 6px 11px; border: 1px solid rgba(255,255,255,0.12); color: #d8d0c3; background: rgba(255,255,255,0.02); border-radius: 7px; cursor: pointer;" style-hover="border-color: rgba(235,167,80,0.55); color: #f2ede3; background: rgba(235,167,80,0.08);">{{ it.label }}</span>
                 </sc-for>
               </div>
             </div>
@@ -423,13 +439,12 @@
       </div>
     </section>
 
-    <!-- ===== MILESTONES / GALLERY ===== -->
-    <section id="gallery" style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 9vw, 90px) clamp(20px, 5vw, 32px) 0;">
+    <!-- ===== MOMENTS ===== -->
+    <section id="moments" style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 9vw, 90px) clamp(20px, 5vw, 32px) 0;">
       <div data-reveal style="margin: 0 0 24px;">
         <p style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 8px;">05 — Beyond the Build</p>
         <h3 style="font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin: 0; letter-spacing: -1px;">Milestones &amp; Moments</h3>
-        <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #a89e8d;">visits, expos &amp; recognition — not the projects, the journey around them</span>
-        <div style="margin-top: 18px;"><a href="Gallery.dc.html" style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; padding: 9px 16px; border: 1px solid rgba(235,167,80,0.4); border-radius: 9px; transition: all 0.2s;" style-hover="background: #eaa64f; color: #13100c;">View full gallery →</a></div>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #a89e8d;">visits, expos &amp; recognition — the journey around the projects</span>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 16px;">
         <sc-for list="{{ gallery }}" as="a" hint-placeholder-count="0">
@@ -451,11 +466,11 @@
         <h2 style="font-size: clamp(34px, 5vw, 52px); font-weight: 700; margin: 0 0 14px; letter-spacing: -1px;">Get In Touch</h2>
         <p style="max-width: 56ch; font-size: clamp(14px, 0.5vw + 12px, 16px); line-height: 1.6; color: #c0b8ab; margin: 0 0 40px;">Have a project in mind or just want to say hello? Drop a line — I'll get back as soon as I can.</p>
       </div>
-      <div data-contact style="display: grid; grid-template-columns: 0.95fr 1.05fr; gap: clamp(28px, 3.5vw, 40px);">
-        <div data-contact-list data-reveal style="display: flex; flex-direction: column; gap: 12px; height: fit-content;">
+      <div data-contact style="display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: clamp(28px, 3.5vw, 40px);">
+        <div data-contact-list data-reveal style="display: flex; flex-direction: column; gap: 12px; height: fit-content; background: #17130e; border: 1px solid rgba(255,255,255,0.07); border-radius: 18px; padding: clamp(14px, 1.6vw, 18px);">
           <a href="mailto:adisharma102000@gmail.com" style="background: #1c1813; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px 20px; display: flex; align-items: center; gap: 14px; transition: background 0.2s, box-shadow 0.2s, border-color 0.2s, transform 0.22s cubic-bezier(.2,.8,.2,1);" style-hover="background: #251e17;">
             <span style="width: 38px; height: 38px; flex-shrink: 0; display: grid; place-items: center; border-radius: 9px; background: rgba(234,67,53,0.14); color: #ef6f63;"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
-            <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #a89e8d; letter-spacing: 0.5px;">EMAIL</span><span style="font-size: clamp(12.5px, 1.4vw, 14px); color: #f2ede3; overflow: hidden; text-overflow: ellipsis;">adisharma102000@gmail.com</span></span>
+            <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #a89e8d; letter-spacing: 0.5px;">EMAIL</span><span style="font-size: clamp(12.5px, 1.4vw, 14px); color: #f2ede3; overflow-wrap: anywhere;">adisharma102000@gmail.com</span></span>
           </a>
           <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="background: #1c1813; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px 20px; display: flex; align-items: center; gap: 14px; transition: background 0.2s, box-shadow 0.2s, border-color 0.2s, transform 0.22s cubic-bezier(.2,.8,.2,1);" style-hover="background: #251e17;">
             <span style="width: 38px; height: 38px; flex-shrink: 0; display: grid; place-items: center; border-radius: 9px; background: rgba(70,204,99,0.14); color: #46cc63;"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg></span>
@@ -474,7 +489,7 @@
             <span style="display: flex; flex-direction: column; gap: 2px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #a89e8d; letter-spacing: 0.5px;">INSTAGRAM</span><span style="font-size: clamp(12.5px, 1.4vw, 14px); color: #f2ede3;">@sanatan.simha</span></span>
           </a>
         </div>
-        <form onSubmit="{{ onSubmit }}" data-reveal style="display: flex; flex-direction: column; gap: 14px;">
+        <form onSubmit="{{ onSubmit }}" data-reveal style="display: flex; flex-direction: column; gap: 14px; background: #17130e; border: 1px solid rgba(255,255,255,0.07); border-radius: 18px; padding: clamp(16px, 1.9vw, 22px); height: fit-content;">
           <input required placeholder="Your name" style="background: #1c1813; border: 1px solid rgba(255,255,255,0.12); color: #f2ede3; padding: 14px 16px; font-size: clamp(13.5px, 1.4vw, 15px); border-radius: 9px; outline: none;" style-focus="border-color: #eaa64f;">
           <input required type="email" placeholder="Your email" style="background: #1c1813; border: 1px solid rgba(255,255,255,0.12); color: #f2ede3; padding: 14px 16px; font-size: clamp(13.5px, 1.4vw, 15px); border-radius: 9px; outline: none;" style-focus="border-color: #eaa64f;">
           <textarea required placeholder="Message" rows="5" style="background: #1c1813; border: 1px solid rgba(255,255,255,0.12); color: #f2ede3; padding: 14px 16px; font-size: clamp(13.5px, 1.4vw, 15px); border-radius: 9px; outline: none; resize: vertical; font-family: inherit;" style-focus="border-color: #eaa64f;"></textarea>
@@ -501,13 +516,87 @@
           <button onClick="{{ lbNext }}" aria-label="Next" style="position: absolute; right: clamp(10px, 3vw, 32px); top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); background: rgba(28,24,19,0.7); color: #f2ede3; font-size: 22px; cursor: pointer; display: grid; place-items: center; transition: all 0.2s; z-index: 2;" style-hover="border-color: #eaa64f; color: #eaa64f;">›</button>
         </sc-if>
 
-        <div onClick="{{ lbStop }}" style="cursor: default; display: flex; flex-direction: column; align-items: center; gap: 16px; max-width: 100%;">
-          <div style="display: flex; align-items: center; justify-content: center; min-height: 0;">{{ lbImgEl }}</div>
-          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;">
-            <span style="font-size: clamp(13.5px, 1.4vw, 15px); color: #f2ede3; font-weight: 500;">{{ lbTitle }}</span>
-            <sc-if value="{{ lbMulti }}" hint-placeholder-val="{{ false }}">
-              <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11px, 1.2vw, 12.5px); color: #a89e8d;">{{ lbCounter }}</span>
+        <div onClick="{{ lbStop }}" style="cursor: default; display: flex; flex-direction: column; width: min(880px, 100%); max-height: 86vh; background: #1c1813; border: 1px solid rgba(235,167,80,0.28); border-radius: 16px; overflow: hidden; box-shadow: 0 40px 90px -30px rgba(0,0,0,0.92);">
+          <div style="background: #0d0b08; display: flex; align-items: center; justify-content: center; min-height: 0; flex: 1;">{{ lbImgEl }}</div>
+          <div style="padding: clamp(16px, 2.4vw, 22px); display: flex; flex-direction: column; gap: 11px; border-top: 1px solid rgba(255,255,255,0.07);">
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(9.5px, 1.1vw, 11px); padding: 4px 10px; background: rgba(235,167,80,0.16); color: #eaa64f; letter-spacing: 0.5px; border-radius: 6px;">{{ lbCat }}</span>
+              <sc-if value="{{ lbHasDate }}" hint-placeholder-val="{{ false }}">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(9.5px, 1.1vw, 11px); padding: 4px 10px; background: rgba(255,255,255,0.05); color: #c0b8ab; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px;">{{ lbDate }}</span>
+              </sc-if>
+              <sc-if value="{{ lbMulti }}" hint-placeholder-val="{{ false }}">
+                <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #897f6f;">{{ lbCounter }}</span>
+              </sc-if>
+            </div>
+            <h3 style="margin: 0; font-size: clamp(17px, 2vw, 21px); font-weight: 600; line-height: 1.25; color: #f2ede3;">{{ lbTitle }}</h3>
+            <sc-if value="{{ lbHasDesc }}" hint-placeholder-val="{{ false }}">
+              <p style="margin: 0; font-size: clamp(13px, 0.4vw + 11px, 14.5px); line-height: 1.6; color: #c0b8ab;">{{ lbDesc }}</p>
             </sc-if>
+            <sc-if value="{{ lbHasTech }}" hint-placeholder-val="{{ false }}">
+              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1px;">
+                <sc-for list="{{ lbTech }}" as="t" hint-placeholder-count="0">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); padding: 4px 9px; color: #a89e8d; border: 1px solid rgba(255,255,255,0.1); border-radius: 5px;">{{ t }}</span>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ===== SKILL CARD (all categories, accordion) ===== -->
+    <sc-if value="{{ skillOpen }}" hint-placeholder-val="{{ false }}">
+      <div onClick="{{ closeSkill }}" style="position: fixed; inset: 0; z-index: 200; background: rgba(10,8,6,0.92); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; padding: clamp(16px, 4vw, 48px); cursor: zoom-out; animation: lbFade 0.28s ease;">
+        <div onClick="{{ lbStop }}" style="cursor: default; position: relative; width: min(620px, 100%); max-height: 88vh; display: flex; flex-direction: column; background: #1c1813; border: 1px solid rgba(235,167,80,0.28); border-radius: 16px; box-shadow: 0 40px 90px -30px rgba(0,0,0,0.92); animation: dropdownIn 0.3s cubic-bezier(.2,.8,.2,1); overflow: hidden;">
+          <div style="padding: clamp(20px, 3vw, 26px) clamp(22px, 3.5vw, 30px) 16px; border-bottom: 1px solid rgba(255,255,255,0.07); flex-shrink: 0;">
+            <button onClick="{{ closeSkill }}" aria-label="Close" style="position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 9px; border: 1px solid rgba(255,255,255,0.18); background: rgba(28,24,19,0.7); color: #f2ede3; font-size: 16px; cursor: pointer; display: grid; place-items: center; transition: all 0.2s;" style-hover="border-color: #eaa64f; color: #eaa64f;">✕</button>
+            <p style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11.5px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 6px;">SKILLS &amp; TOOLKIT</p>
+            <h3 style="margin: 0; font-size: clamp(20px, 2.6vw, 26px); font-weight: 700; line-height: 1.2; letter-spacing: -0.5px; color: #f2ede3; padding-right: 30px;">{{ skillHeading }}</h3>
+          </div>
+          <div style="overflow-y: auto; padding: 10px clamp(16px, 2.6vw, 22px) clamp(18px, 2.6vw, 24px); display: flex; flex-direction: column; gap: 8px;">
+            <sc-if value="{{ anyGroupOpen }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ backToCategories }}" style="display: flex; align-items: center; gap: 9px; padding: 9px 4px 11px; background: transparent; border: 0; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: clamp(11px, 1.2vw, 12.5px); letter-spacing: 0.5px; color: #a89e8d; transition: color 0.2s;" style-hover="color: #eaa64f;"><span style="font-size: 15px; line-height: 1;">←</span><span>All categories</span></button>
+            </sc-if>
+            <sc-for list="{{ skillGroups }}" as="g" hint-placeholder-count="6">
+              <div style="border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; background: rgba(255,255,255,0.015); display: {{ g.wrapDisplay }};">
+                <button onClick="{{ g.onToggle }}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; background: {{ g.headBg }}; border: 0; cursor: pointer; text-align: left; transition: background 0.2s;">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11px, 1.2vw, 12.5px); letter-spacing: 0.5px; color: {{ g.headColor }};">{{ g.title }}</span>
+                  <span style="display: flex; align-items: center; gap: 12px; flex-shrink: 0;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #897f6f;">{{ g.count }}</span><span style="font-size: 17px; line-height: 1; color: #eaa64f; width: 14px; text-align: center;">{{ g.sign }}</span></span>
+                </button>
+                <sc-if value="{{ g.open }}" hint-placeholder-val="{{ false }}">
+                  <div data-skillsplit style="padding: 10px; display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: 10px; align-items: start;">
+                    <!-- LEFT: item list card -->
+                    <div style="background: rgba(0,0,0,0.22); border: 1px solid rgba(255,255,255,0.06); border-radius: 11px; padding: 6px; display: flex; flex-direction: column; gap: 2px;">
+                      <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="5">
+                        <button onClick="{{ it.onSelect }}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px 12px; background: {{ it.rowBg }}; border: 0; border-radius: 8px; cursor: pointer; text-align: left; transition: background 0.18s;">
+                          <span style="font-size: clamp(13px, 1.4vw, 14.5px); font-weight: 500; color: {{ it.labelColor }};">{{ it.label }}</span>
+                          <span style="font-size: 13px; line-height: 1; color: #eaa64f; flex-shrink: 0; opacity: {{ it.arrowOpacity }};">▸</span>
+                        </button>
+                      </sc-for>
+                    </div>
+                    <!-- RIGHT: detail card -->
+                    <div style="background: rgba(235,167,80,0.05); border: 1px solid rgba(235,167,80,0.18); border-radius: 11px; padding: clamp(16px, 2vw, 20px); min-height: 100%;">
+                      <p style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(9.5px, 1.1vw, 11px); color: #eaa64f; letter-spacing: 0.5px; margin: 0 0 6px;">{{ g.detailKind }}</p>
+                      <h4 style="margin: 0 0 12px; font-size: clamp(17px, 2vw, 21px); font-weight: 700; line-height: 1.2; color: #f2ede3;">{{ g.detailLabel }}</h4>
+                      <p style="margin: 0; font-size: clamp(13px, 0.4vw + 11px, 14.5px); line-height: 1.62; color: #c0b8ab;">{{ g.detailDef }}</p>
+                      <sc-if value="{{ g.detailHasWhere }}" hint-placeholder-val="{{ false }}">
+                        <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                          <p style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(9.5px, 1.1vw, 11px); color: #eaa64f; letter-spacing: 0.5px; margin: 0 0 10px;">WHERE I'VE USED IT</p>
+                          <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <sc-for list="{{ g.detailWhere }}" as="w" hint-placeholder-count="2">
+                              <div style="display: flex; align-items: center; gap: 9px; font-size: clamp(12.5px, 1.3vw, 14px); color: #d8d0c3;"><span style="color: #eaa64f; flex-shrink: 0;">▸</span><span>{{ w }}</span></div>
+                            </sc-for>
+                          </div>
+                        </div>
+                      </sc-if>
+                      <sc-if value="{{ g.detailNoWhere }}" hint-placeholder-val="{{ false }}">
+                        <p style="margin: 14px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #897f6f; line-height: 1.5;">Applied across coursework, prototypes and personal builds.</p>
+                      </sc-if>
+                    </div>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-for>
           </div>
         </div>
       </div>
@@ -518,7 +607,90 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;showAvailability&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;gridLines&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Background&quot;}}">
 class Component extends DCLogic {
-  state = { active: 'home', menuOpen: false, navOpen: false, filter: 'All', sent: false, lb: null };
+  state = { active: 'home', menuOpen: false, navOpen: false, filter: 'All', sent: false, lb: null, skill: null, extraImgs: {} };
+
+  // ---- automatic image discovery -------------------------------------------
+  // A static page can't list a folder, so we PROBE for numbered files by
+  // convention: <folder>/1.jpg, 2.png, 3.jpeg ... Drop a new numbered image
+  // into any project or moment folder and it appears on the page automatically,
+  // no code change needed. Just continue the numbering (next: N+1).
+  _imgExts = ['jpg', 'jpeg', 'png', 'webp', 'JPG', 'JPEG', 'PNG'];
+
+  probeImg(url) {
+    return new Promise((res) => {
+      const img = new Image();
+      img.onload = () => res(true);
+      img.onerror = () => res(false);
+      img.src = url;
+    });
+  }
+
+  // Find which extension exists for "<folder>/<n>"; tries the last winning ext first.
+  async findExt(folder, n, exts, preferred) {
+    const order = preferred ? [preferred].concat(exts.filter((e) => e !== preferred)) : exts;
+    for (const e of order) {
+      if (await this.probeImg(folder + '/' + n + '.' + e)) return e;
+    }
+    return null;
+  }
+
+  // Probe forward from startN until a number is missing; returns any found URLs.
+  // `exts` is scoped per-folder (the extensions already in use there) to keep
+  // the number of 404 probes tiny.
+  async discoverSeq(folder, startN, exts) {
+    const found = [];
+    let pref = null;
+    for (let n = startN; n <= startN + 60; n++) {
+      const e = await this.findExt(folder, n, exts, pref);
+      if (!e) break;            // first gap stops the scan
+      pref = e;
+      found.push(folder + '/' + n + '.' + e);
+    }
+    return found;
+  }
+
+  // Extensions used by a folder's seed list, plus a small fallback set.
+  extsFor(seed) {
+    const used = [];
+    (seed || []).forEach((u) => {
+      const m = u.match(/\.([a-zA-Z0-9]+)$/);
+      if (m && used.indexOf(m[1]) === -1) used.push(m[1]);
+    });
+    ['jpg', 'jpeg', 'png'].forEach((e) => { if (used.indexOf(e) === -1) used.push(e); });
+    return used;
+  }
+
+  // Highest N already referenced for a folder (so we only probe past it).
+  maxIndexFor(folder, seedUrls) {
+    let max = 0;
+    (seedUrls || []).forEach((u) => {
+      if (u.indexOf(folder + '/') !== 0) return;
+      const m = u.slice(folder.length + 1).match(/^(\d+)\./);
+      if (m) max = Math.max(max, parseInt(m[1], 10));
+    });
+    return max;
+  }
+
+  async runDiscovery(folders) {
+    const extra = {};
+    for (const f of folders) {
+      const start = this.maxIndexFor(f.folder, f.seed) + 1;
+      const found = await this.discoverSeq(f.folder, start, this.extsFor(f.seed));
+      if (found.length) extra[f.folder] = found;
+    }
+    if (Object.keys(extra).length) {
+      this.setState((s) => ({ extraImgs: Object.assign({}, s.extraImgs, extra) }));
+    }
+  }
+
+  withExtras(folder, seed) {
+    const ex = (this.state.extraImgs || {})[folder] || [];
+    const out = (seed || []).slice();
+    ex.forEach((u) => { if (out.indexOf(u) === -1) out.push(u); });
+    return out;
+  }
+
+  dirOf(url) { return url ? url.slice(0, url.lastIndexOf('/')) : ''; }
 
   constructor(props) {
     super(props);
@@ -528,8 +700,24 @@ class Component extends DCLogic {
     this._roles = ['A Full Stack Developer.', 'An Innovator.', 'A Hardware Enthusiast.', 'A Problem Solver.'];
 
     // per-card slideshow: independent timer so each card cross-fades at its own random cadence
+    // Reusable image with a shimmer skeleton that fades the photo in once it has downloaded.
+    this.LoadingImg = ({ src, alt, imgStyle, onClick }) => {
+      const [loaded, setLoaded] = React.useState(false);
+      return React.createElement(
+        'div',
+        { onClick, style: { position: 'absolute', inset: 0, overflow: 'hidden' } },
+        loaded ? null : React.createElement('div', { 'aria-hidden': 'true', style: { position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(100deg, #1d1812 30%, #322817 50%, #1d1812 70%)', backgroundSize: '200% 100%', animation: 'shimmer 1.4s linear infinite' } }),
+        React.createElement('img', {
+          src, alt: alt || '', loading: 'eager', decoding: 'async',
+          onLoad: () => setLoaded(true), onError: () => setLoaded(true),
+          style: Object.assign({ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block', opacity: loaded ? 1 : 0, transition: 'opacity 0.55s ease' }, imgStyle || {}),
+        })
+      );
+    };
+
     this.CardSlideshow = ({ imgs, onOpen }) => {
       const [idx, setIdx] = React.useState(0);
+      const [loaded, setLoaded] = React.useState(false);
       React.useEffect(() => {
         if (!imgs || imgs.length < 2) return;
         let timer;
@@ -543,12 +731,16 @@ class Component extends DCLogic {
       return React.createElement(
         'div',
         { onClick: onOpen, style: { position: 'absolute', inset: 0, cursor: 'zoom-in' } },
+        loaded ? null : React.createElement('div', { 'aria-hidden': 'true', style: { position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(100deg, #1d1812 30%, #322817 50%, #1d1812 70%)', backgroundSize: '200% 100%', animation: 'shimmer 1.4s linear infinite' } }),
         (imgs || []).map((src, i) =>
           React.createElement('img', {
             key: src,
             src,
             alt: '',
-            loading: 'lazy',
+            loading: 'eager',
+            decoding: 'async',
+            onLoad: () => setLoaded(true),
+            onError: () => setLoaded(true),
             style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(0.25) contrast(1.05)', opacity: i === idx ? 1 : 0, transition: 'opacity 0.9s ease' },
           })
         ),
@@ -622,8 +814,31 @@ class Component extends DCLogic {
     this.setState({ lb: null });
   }
 
+  openSkill(label, group) {
+    this.setState({ skill: { group, item: label } });
+    document.body.style.overflow = 'hidden';
+  }
+
+  toggleSkillGroup(group) {
+    this.setState((s) => {
+      const cur = s.skill || {};
+      const same = cur.group === group;
+      return { skill: { group: same ? null : group, item: null } };
+    });
+  }
+
+  selectSkillItem(group, label) {
+    this.setState({ skill: { group, item: label } });
+  }
+
+  closeSkill() {
+    document.body.style.overflow = '';
+    this.setState({ skill: null });
+  }
+
   componentDidMount() {
     this._onKey = (e) => {
+      if (e.key === 'Escape' && this.state.skill) { this.closeSkill(); return; }
       if (!this.state.lb) return;
       if (e.key === 'Escape') this.closeLightbox();
       else if (e.key === 'ArrowRight') this.lbStep(1);
@@ -631,7 +846,18 @@ class Component extends DCLogic {
     };
     window.addEventListener('keydown', this._onKey);
 
-    this.buildCertPreview();
+    // Warm ALL photos in the background once text + icons have painted, so they pop in
+    // instantly when scrolled to. Held only in memory and dropped when the page is left.
+    this._onPageHide = () => this.releasePreloads();
+    window.addEventListener('pagehide', this._onPageHide);
+
+    // Auto-discover any newly added numbered images, just after first paint.
+    setTimeout(() => { if (this._discoverFolders) this.runDiscovery(this._discoverFolders); }, 400);
+    requestAnimationFrame(() => {
+      const kick = () => this.startPreload();
+      if (window.requestIdleCallback) requestIdleCallback(kick, { timeout: 1200 });
+      else this._preloadTimer = setTimeout(kick, 200);
+    });
 
     // uniform desktop scaling: treat ~1440px as the intended design width and
     // scale the whole composition up on larger desktops so it looks "as intended" everywhere
@@ -660,11 +886,19 @@ class Component extends DCLogic {
     }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
     this.observeReveals();
 
-    const ids = ['home', 'about', 'skills', 'work', 'journey', 'gallery', 'contact'];
-    this._spy = new IntersectionObserver((entries) => {
-      entries.forEach((e) => { if (e.isIntersecting) this.setState({ active: e.target.id }); });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    ids.forEach((id) => { const s = document.getElementById(id); if (s) this._spy.observe(s); });
+    this._spyIds = ['home', 'about', 'skills', 'work', 'journey', 'moments', 'contact'];
+    this.updateActiveSection();
+    // Drive the deterministic section picker from an IntersectionObserver as well as
+    // the scroll event. The observer fires on every kind of scroll (wheel, keyboard,
+    // programmatic, anchor jumps) — so the active nav link always tracks, even where
+    // window 'scroll' events are unreliable.
+    if ('IntersectionObserver' in window) {
+      this._spy = new IntersectionObserver(() => this.updateActiveSection(), {
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+        rootMargin: '0px 0px -35% 0px',
+      });
+      this._spyIds.forEach((id) => { const s = document.getElementById(id); if (s) this._spy.observe(s); });
+    }
 
     this.setupTilt();
     this.setupCube();
@@ -692,20 +926,11 @@ class Component extends DCLogic {
         pill.style.padding = cond ? '7px 10px 7px 14px' : '9px 12px 9px 16px';
         this.updateNavIndicator();
       }
-      if (this._certWrap && window.matchMedia('(hover: hover)').matches) this.hideCertPreview();
       this.updateCertFocus();
+      this.updateActiveSection();
     };
     window.addEventListener('scroll', this._onScroll, { passive: true });
     this._onScroll();
-
-    // desktop: hovering a certificate pops a viewport-clamped preview over it
-    this._onCertHover = (e) => {
-      if (!window.matchMedia('(hover: hover)').matches) return;
-      const wrap = e.target.closest && e.target.closest('[data-cert-wrap]');
-      if (wrap) { if (wrap !== this._certWrap) this.showCertPreview(wrap); }
-      else if (!(e.target.closest && e.target.closest('[data-cert-preview]')) && this._certWrap) { this.hideCertPreview(); }
-    };
-    document.addEventListener('mouseover', this._onCertHover);
 
     // position the sliding active-section indicator once layout (and fonts) settle
     requestAnimationFrame(() => requestAnimationFrame(() => this.updateNavIndicator()));
@@ -716,6 +941,8 @@ class Component extends DCLogic {
     if (!prevState || prevState.active !== this.state.active) this.updateNavIndicator();
     // re-render wipes JS-applied classes; restore the centred-cert focus
     this.updateCertFocus();
+    // filter/menu re-renders: reveal any brand-new cards instantly so nothing stays blank
+    this.observeReveals(true);
   }
 
   // Build the shared preview ONCE and mount it on <body> (outside the zoom-scaled root,
@@ -807,7 +1034,23 @@ class Component extends DCLogic {
     });
     const within = best && bestDist < window.innerHeight * 0.24;
     els.forEach((el) => { el.classList.toggle('cert-focus', el === best && within); });
-    if (within) this.showCertPreview(best); else this.hideCertPreview();
+  }
+
+  // Determine the active section deterministically: the last section whose top has
+  // scrolled past a line just below the floating header. Avoids the tall hero staying
+  // "active" while About is on screen (the old thin intersection band did that).
+  updateActiveSection() {
+    const ids = this._spyIds || [];
+    if (!ids.length) return;
+    const line = Math.max(140, window.innerHeight * 0.3);
+    let current = ids[0];
+    for (const id of ids) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      if (el.getBoundingClientRect().top - line <= 0) current = id;
+      else break;
+    }
+    if (current && current !== this.state.active) this.setState({ active: current });
   }
 
   updateNavIndicator() {
@@ -824,6 +1067,27 @@ class Component extends DCLogic {
     ind.style.transform = 'translate(' + link.offsetLeft + 'px, -50%)';
   }
 
+  // Fetch every photo via in-memory Image objects (download now, display later).
+  startPreload() {
+    if (this._preloads) return;
+    this._preloads = [];
+    (this._allImgUrls || []).forEach((u) => {
+      const img = new Image();
+      img.decoding = 'async';
+      img.src = u;
+      this._preloads.push(img);
+    });
+  }
+
+  // Drop the in-memory cache so nothing lingers after the user leaves / closes the tab.
+  releasePreloads() {
+    if (this._preloadTimer) { clearTimeout(this._preloadTimer); this._preloadTimer = null; }
+    if (this._preloads) {
+      this._preloads.forEach((img) => { img.onload = null; img.onerror = null; img.src = ''; });
+      this._preloads = null;
+    }
+  }
+
   componentWillUnmount() {
     if (this._reveal) this._reveal.disconnect();
     if (this._spy) this._spy.disconnect();
@@ -835,7 +1099,8 @@ class Component extends DCLogic {
     if (this._lbTimer) clearTimeout(this._lbTimer);
     if (this._navIndTimer) clearTimeout(this._navIndTimer);
     if (this._onCertHover) document.removeEventListener('mouseover', this._onCertHover);
-    if (this._certPreview && this._certPreview.parentElement) this._certPreview.parentElement.removeChild(this._certPreview);
+    if (this._onPageHide) window.removeEventListener('pagehide', this._onPageHide);
+    this.releasePreloads();
     if (this._onKey) window.removeEventListener('keydown', this._onKey);
     document.body.style.overflow = '';
     this._cleanups.forEach((fn) => fn());
@@ -864,11 +1129,6 @@ class Component extends DCLogic {
         this._reveal.observe(el);
       }
     });
-  }
-
-  componentDidUpdate() {
-    // filter/menu re-renders: reveal any brand-new cards instantly so nothing stays blank
-    this.observeReveals(true);
   }
 
   startTyping() {
@@ -1057,6 +1317,11 @@ class Component extends DCLogic {
       { title: 'METHODOLOGIES', items: ['Leadership', 'Agile', 'Mentorship', 'Problem-Solving', 'Team Collaboration'] },
       { title: 'SPOKEN LANGUAGES', items: ['English (India)', 'Hindi', 'Himachali (Native)'] },
     ];
+    // each tag becomes clickable → opens a detail card (handlers carry its label + group)
+    const skillsView = skills.map((g) => ({
+      title: g.title,
+      items: g.items.map((label) => ({ label, on: () => this.openSkill(label, g.title) })),
+    }));
 
     const di = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/';
     const tools = [
@@ -1088,7 +1353,7 @@ class Component extends DCLogic {
       { title: 'Cyber Attack Demonstration', cat: 'Security', date: '2022-01', shot: 'attack & defence', images: ['assets/projects/cyber/1.jpg','assets/projects/cyber/2.jpg','assets/projects/cyber/3.jpg'], desc: 'An educational demonstration of common attack techniques and their defences, built to teach safe security practices.', highlight: '', tech: ['Security', 'Networking', 'Linux', 'Python'] },
     ];
 
-    const cats = ['All', 'Robotics', 'AI', 'IoT', 'Automation', 'Security', 'Hardware'];
+    const cats = ['All', 'Robotics', 'AI', 'IoT', 'Automation', 'Security'];
     const filters = cats.map((c) => {
       const on = filter === c;
       return {
@@ -1099,6 +1364,13 @@ class Component extends DCLogic {
         on: () => this.setState({ filter: c }),
       };
     });
+    // Folders to auto-scan for new numbered images (collected for post-mount discovery).
+    const discoverFolders = [];
+    projects.forEach((p) => {
+      const seed = (p.images && p.images.length) ? p.images : (p.image ? [p.image] : []);
+      if (seed.length) discoverFolders.push({ folder: this.dirOf(seed[0]), seed });
+    });
+
     const filteredProjects = (filter === 'All' ? projects : projects.filter((p) => p.cat === filter))
       .slice().sort((a, b) => (b.date || '').localeCompare(a.date || ''))
       .map((p) => {
@@ -1108,8 +1380,9 @@ class Component extends DCLogic {
           const mo = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][parseInt(m, 10)] || '';
           dateLabel = (mo ? mo + ' ' : '') + y;
         }
-        const imgs = (p.images && p.images.length ? p.images : (p.image ? [p.image] : []));
-        const shots = imgs.map((src) => ({ src, title: p.title }));
+        const seed = (p.images && p.images.length ? p.images : (p.image ? [p.image] : []));
+        const imgs = seed.length ? this.withExtras(this.dirOf(seed[0]), seed) : [];
+        const shots = imgs.map((src) => ({ src, title: p.title, cat: p.cat, date: dateLabel, desc: p.desc, tech: p.tech }));
         return { ...p, dateLabel, hasHighlight: !!p.highlight, hasImage: imgs.length > 0, imgEl: imgs.length ? React.createElement(this.CardSlideshow, { imgs, onOpen: () => this.openLightbox(shots, 0) }) : null };
       });
 
@@ -1152,33 +1425,148 @@ class Component extends DCLogic {
       { name: 'Python & Application Development', issuer: 'Course Certificate', image: 'assets/certs/python.png' },
       { name: 'Ethical Hacking', issuer: 'Footprints & Counter-Measures', image: 'assets/certs/ethical-hacking.png' },
     ];
-    const certShots = certImages.map((c) => ({ src: c.image, title: c.name + ' — ' + c.issuer }));
+    const certShots = certImages.map((c) => ({ src: c.image, title: c.name, cat: 'Certificate', desc: c.issuer }));
     const certImagesEl = certImages.map((c, ci) => ({
       ...c,
       open: () => this.openLightbox(certShots, ci),
-      imgEl: React.createElement('img', { src: c.image, alt: c.name, loading: 'lazy', style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' } }),
+      imgEl: React.createElement(this.LoadingImg, { src: c.image, alt: c.name, imgStyle: { objectFit: 'cover' } }),
     }));
 
     // Each card carries its OWN set of photos — add more paths to a card's `images` array as you collect them.
     const galleryRaw = [
-      { title: 'EnVision 2025 · IITM Research Park', images: ['assets/gallery/Moments/Envision IITM/IMG_20250130_130729.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250130_120154_1.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250130_130857.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250130_132715.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250131_120523.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250131_122241.jpg', 'assets/gallery/Moments/Envision IITM/IMG_1700.jpeg'] },
-      { title: 'Best Innovator & Ambassador Meet', images: ['assets/gallery/Moments/Best Innovator & Ambassador/Best Innovator.jpg', 'assets/gallery/Moments/Best Innovator & Ambassador/Ambasdor meet.jpg'] },
-      { title: 'Anveshan — South Zone', images: ['assets/gallery/Moments/Anveshan/Anveshan.jpg', 'assets/gallery/Moments/Anveshan/IMG_20250221_142419.jpg', 'assets/gallery/Moments/Anveshan/IMG_20250221_143953.jpg', 'assets/gallery/Moments/Anveshan/IMG_20250221_144424.jpg'] },
-      { title: 'Student Project Expo 2024', images: ['assets/gallery/Project/Wall-E - ROBOTICS/Project Expo Orientation.jpg'] },
-      { title: 'MakerSpace Build Sessions', images: ['assets/gallery/Project/Wall-E - ROBOTICS/1744954817634.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_2761.JPG'] },
-      { title: 'Tech Fests & Demos', images: ['assets/gallery/Moments/AWS/IMG_20220726_165740.jpg', 'assets/gallery/Moments/AWS/IMG_20220727_161055.jpg', 'assets/gallery/Moments/AWS/IMG_20220727_164420.jpg'] },
+      { title: 'EnVision 2025 · IITM Research Park', note: 'Innovation visit and project demos at the IITM Research Park, Chennai.', images: ['assets/gallery/Moments/Envision IITM/IMG_20250130_130729.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250130_120154_1.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250130_130857.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250130_132715.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250131_120523.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250131_122241.jpg', 'assets/gallery/Moments/Envision IITM/IMG_1700.jpeg'] },
+      { title: 'Best Innovator & Ambassador Meet', note: 'Recognition for mentoring and building at the MakerSpace.', images: ['assets/gallery/Moments/Best Innovator & Ambassador/Best Innovator.jpg', 'assets/gallery/Moments/Best Innovator & Ambassador/Ambasdor meet.jpg'] },
+      { title: 'Anveshan — South Zone', note: 'Represented Presidency University for robotics research at the South Zone meet.', images: ['assets/gallery/Moments/Anveshan/Anveshan.jpg', 'assets/gallery/Moments/Anveshan/IMG_20250221_142419.jpg', 'assets/gallery/Moments/Anveshan/IMG_20250221_143953.jpg', 'assets/gallery/Moments/Anveshan/IMG_20250221_144424.jpg'] },
+      { title: 'Student Project Expo 2024', note: 'WALL-E selected in the Top 25 of 450 projects at the expo.', images: ['assets/gallery/Project/Wall-E - ROBOTICS/Project Expo Orientation.jpg'] },
+      { title: 'MakerSpace Build Sessions', note: 'From frame and wiring to a moving animatronic — late nights at the lab.', images: ['assets/gallery/Project/Wall-E - ROBOTICS/1744954817634.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_2761.JPG'] },
+      { title: 'Tech Fests & Demos', note: 'Booths, talks and live demonstrations across campus tech fests.', images: ['assets/gallery/Moments/AWS/IMG_20220726_165740.jpg', 'assets/gallery/Moments/AWS/IMG_20220727_161055.jpg', 'assets/gallery/Moments/AWS/IMG_20220727_164420.jpg'] },
     ];
+    galleryRaw.forEach((g) => { if (g.images && g.images.length) discoverFolders.push({ folder: this.dirOf(g.images[0]), seed: g.images }); });
+    this._discoverFolders = discoverFolders;
     const gallery = galleryRaw.map((g) => {
-      const shots = g.images.map((src) => ({ src, title: g.title }));
-      const cover = g.images[0];
-      const coverEl = React.createElement('img', { src: cover, alt: g.title, loading: 'lazy', style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(0.25) contrast(1.05)' } });
-      return { ...g, image: cover, coverEl, count: g.images.length, countLabel: g.images.length + (g.images.length === 1 ? ' photo' : ' photos'), open: () => this.openLightbox(shots, 0) };
+      const imgsG = this.withExtras(this.dirOf(g.images[0]), g.images);
+      const shots = imgsG.map((src) => ({ src, title: g.title, cat: 'Moment', desc: g.note }));
+      const cover = imgsG[0];
+      const coverEl = React.createElement(this.LoadingImg, { src: cover, alt: g.title, imgStyle: { objectFit: 'cover', filter: 'grayscale(0.25) contrast(1.05)' } });
+      return { ...g, image: cover, coverEl, count: imgsG.length, countLabel: imgsG.length + (imgsG.length === 1 ? ' photo' : ' photos'), open: () => this.openLightbox(shots, 0) };
+    });
+
+    // ----- skill detail card -----
+    const skillDefs = {
+      // Programming languages
+      'Python': 'My main language for AI, computer vision and scripting — from model code to the glue logic running on edge devices.',
+      'C': 'Low-level systems and microcontroller work, where tight control over memory and timing matters.',
+      'C++': 'Performance-critical logic and embedded firmware, including Arduino and robotics control loops.',
+      'Java': 'Object-oriented application development and my go-to for data-structures & algorithms practice.',
+      'Kotlin': 'Native Android development — the companion app for my Smart Switch (LEO) hub.',
+      'JavaScript': 'Interactive web front-ends and the live dashboards for my IoT projects.',
+      'C#': 'General-purpose application development and tooling.',
+      // Web & frameworks
+      'React.js': 'Component-based dashboards and UIs — including the live AquaNode tank monitor and this portfolio.',
+      'Node.js': 'Server-side JavaScript for APIs and real-time backends.',
+      'Flask': 'Lightweight Python web services and REST endpoints for ML demos.',
+      'Bootstrap': 'Responsive layout scaffolding for putting web UIs together quickly.',
+      'REST APIs': 'Designing and consuming HTTP APIs to connect devices, services and front-ends.',
+      'HTML/CSS': 'Hand-built, responsive interfaces with a strong eye for layout and motion.',
+      // Embedded & IoT
+      'ROS 2': 'Robot middleware for control, messaging and simulation — which I teach to MakerSpace members.',
+      'Arduino': 'Rapid microcontroller prototyping for motors, sensors and robotics builds.',
+      'ESP32 (C3/S3)': 'Wi-Fi/BLE microcontrollers at the heart of my smart-home and sensor nodes.',
+      'Raspberry Pi': 'On-board Linux compute for the vision and speech in my robots.',
+      'Jetson Nano': 'GPU edge computing for running ML models directly on-device.',
+      'FreeRTOS': 'Real-time task scheduling on microcontrollers for responsive, reliable firmware.',
+      'PlatformIO': 'Embedded build and dependency tooling across multiple boards.',
+      'MQTT': 'Lightweight pub/sub messaging — the backbone of my local-first smart-home hub.',
+      'Ubuntu': 'My primary Linux environment for development and robotics.',
+      // AI / ML / Vision
+      'TensorFlow': 'Building and training neural networks for classification and detection tasks.',
+      'PyTorch': 'Deep-learning experiments and quick model prototyping.',
+      'OpenCV': 'Real-time computer vision — face detection, tracking and image processing in my robots.',
+      'Scikit-learn': 'Classical ML models, pipelines and evaluation.',
+      'NumPy': 'Numerical computing and array math underpinning my ML work.',
+      'Pandas': 'Data wrangling, cleaning and analysis.',
+      'LangChain': 'Orchestrating LLM-powered workflows and tools.',
+      'Whisper AI': 'On-device speech recognition powering my interactive humanoid.',
+      // Methodologies (capabilities)
+      'Leadership': 'I lead robotics builds at the MakerSpace and co-organise hackathons and expos — keeping teams aligned and moving toward a working result.',
+      'Agile': 'I work in short, iterative cycles — build, test, refine — to ship dependable prototypes quickly.',
+      'Mentorship': 'I have mentored 50+ members on programming, debugging and ROS 2, helping them go from an idea to a working build.',
+      'Problem-Solving': 'I enjoy breaking hard, ambiguous problems into solvable pieces — especially where hardware meets software.',
+      'Team Collaboration': 'I thrive in hands-on, collaborative settings where ideas are shared freely and challenges are tackled together.',
+      // Spoken languages
+      'English (India)': 'Professional working proficiency — my primary language for documentation, presentations and collaboration.',
+      'Hindi': 'Fluent — comfortable in both everyday and professional conversation.',
+      'Himachali (Native)': 'My mother tongue, from Himachal Pradesh.',
+    };
+    const skillKindMap = {
+      'PROGRAMMING LANGUAGES': 'Programming language',
+      'WEB & FRAMEWORKS': 'Web & framework',
+      'EMBEDDED & IoT': 'Embedded · IoT',
+      'AI · ML · VISION': 'AI · ML · Vision',
+      'METHODOLOGIES': 'Capability',
+      'SPOKEN LANGUAGES': 'Spoken language',
+    };
+    const skillAlias = { 'react.js': 'react', 'whisper ai': 'whisper', 'esp32 (c3/s3)': 'esp32', 'rest apis': 'rest', 'html/css': 'html' };
+    const skillNorm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const skillMatch = (label) => {
+      const base = skillAlias[label.toLowerCase()] || skillNorm(label);
+      if (!base) return [];
+      return projects
+        .filter((p) => (p.tech || []).some((t) => { const nt = skillNorm(t); return nt && (nt.includes(base) || base.includes(nt)); }))
+        .map((p) => p.title);
+    };
+    const sk = this.state.skill;
+    const openG = sk ? sk.group : null;
+    const openI = sk ? sk.item : null;
+    const anyGroupOpen = !!openG;
+    const skillGroups = skills.map((g) => {
+      const isCap = g.title === 'METHODOLOGIES' || g.title === 'SPOKEN LANGUAGES';
+      const gOpen = g.title === openG;
+      // When a category is open, one item is always selected for the detail pane —
+      // the one the user clicked, or the first item by default.
+      const selectedLabel = gOpen ? (g.items.indexOf(openI) >= 0 ? openI : g.items[0]) : null;
+      const selWhere = (gOpen && !isCap) ? skillMatch(selectedLabel) : [];
+      return {
+        title: g.title,
+        count: g.items.length + (g.items.length === 1 ? ' item' : ' items'),
+        open: gOpen,
+        sign: gOpen ? '–' : '+',
+        headBg: gOpen ? 'rgba(235,167,80,0.10)' : 'transparent',
+        headColor: gOpen ? '#eaa64f' : '#d8d0c3',
+        wrapDisplay: (anyGroupOpen && !gOpen) ? 'none' : 'block',
+        onToggle: () => this.toggleSkillGroup(g.title),
+        // detail pane (right card) reflects the selected item
+        detailKind: skillKindMap[g.title] || 'Skill',
+        detailLabel: selectedLabel || '',
+        detailDef: selectedLabel ? (skillDefs[selectedLabel] || '') : '',
+        detailWhere: selWhere,
+        detailHasWhere: selWhere.length > 0,
+        detailNoWhere: gOpen && !isCap && selWhere.length === 0,
+        items: g.items.map((label) => {
+          const sel = gOpen && label === selectedLabel;
+          return {
+            label,
+            rowBg: sel ? 'rgba(235,167,80,0.14)' : 'transparent',
+            labelColor: sel ? '#f2ede3' : '#c0b8ab',
+            arrowOpacity: sel ? '1' : '0',
+            onSelect: () => this.selectSkillItem(g.title, label),
+          };
+        }),
+      };
     });
 
     // lightbox view values
     const lb = this.state.lb;
     const lbCur = lb ? lb.list[lb.i] : null;
-    const lbImgEl = lbCur ? React.createElement('img', { src: lbCur.src, alt: lbCur.title || '', style: { maxWidth: '100%', maxHeight: '78vh', width: 'auto', height: 'auto', objectFit: 'contain', borderRadius: '12px', boxShadow: '0 30px 80px -30px rgba(0,0,0,0.9)', display: 'block', margin: '0 auto' } }) : null;
+    const lbImgEl = lbCur ? React.createElement('img', { src: lbCur.src, alt: lbCur.title || '', style: { maxWidth: '100%', maxHeight: '60vh', width: 'auto', height: 'auto', objectFit: 'contain', display: 'block', margin: '0 auto' } }) : null;
+
+    // Collect every photo URL so the background warmer can fetch them all after first paint.
+    const _warmUrls = [];
+    projects.forEach((p) => { (p.images || []).forEach((s) => _warmUrls.push(s)); if (p.image) _warmUrls.push(p.image); });
+    certImages.forEach((c) => _warmUrls.push(c.image));
+    galleryRaw.forEach((g) => (g.images || []).forEach((s) => _warmUrls.push(s)));
+    tools.forEach((t) => _warmUrls.push(t.logo));
+    this._allImgUrls = Array.from(new Set(_warmUrls));
 
     const githubUrl = 'https://github.com/CodeSamhita';
     const linkedinUrl = 'https://www.linkedin.com/in/aditya-sharma-8679802b3';
@@ -1200,18 +1588,31 @@ class Component extends DCLogic {
       navMenu,
       toggleNav: () => this.setState((s) => ({ navOpen: !s.navOpen })),
       closeNav: () => this.setState({ navOpen: false }),
-      navLinks, stats, skills, toolsLoop,
+      navLinks, stats, skills: skillsView, toolsLoop,
       filters, filteredProjects,
       experience, education, highlights, certs, certImages: certImagesEl, gallery,
       lbOpen: !!lb,
       lbImgEl,
       lbTitle: lbCur ? lbCur.title : '',
+      lbCat: lbCur ? (lbCur.cat || 'Photo') : '',
+      lbDate: lbCur ? (lbCur.date || '') : '',
+      lbHasDate: !!(lbCur && lbCur.date),
+      lbDesc: lbCur ? (lbCur.desc || '') : '',
+      lbHasDesc: !!(lbCur && lbCur.desc),
+      lbTech: lbCur && lbCur.tech ? lbCur.tech : [],
+      lbHasTech: !!(lbCur && lbCur.tech && lbCur.tech.length),
       lbCounter: lb ? (lb.i + 1) + ' / ' + lb.list.length : '',
       lbMulti: lb ? lb.list.length > 1 : false,
       lbClose: () => this.closeLightbox(),
       lbPrev: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.lbStep(-1); },
       lbNext: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.lbStep(1); },
       lbStop: (e) => { if (e && e.stopPropagation) e.stopPropagation(); },
+      skillOpen: !!sk,
+      skillGroups,
+      anyGroupOpen,
+      skillHeading: anyGroupOpen ? openG : 'Tap a category, then any item',
+      backToCategories: () => this.setState({ skill: { group: null, item: null } }),
+      closeSkill: () => this.closeSkill(),
       sendLabel: this.state.sent ? 'Sent ✓' : 'Send message',
       onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
     };
