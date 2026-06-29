@@ -1,1936 +1,549 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="./support.js"></script>
-</head>
-
-<body>
-  <x-dc>
-    <helmet>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet">
-      <style>
-        * {
-          box-sizing: border-box;
-        }
-
-        html {
-          scroll-behavior: smooth;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Aditya Sharma — Loading Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d0a06;
+            --ink: #f7f2e9;
+            --amber: #eaa64f;
+            --terra: #d98a6b;
+            --card: #1c1813;
         }
 
         body {
-          margin: 0;
-          background: #13100c;
-          color: #f2ede3;
-          font-family: 'Space Grotesk', sans-serif;
-          -webkit-font-smoothing: antialiased;
-          overflow-x: hidden;
+            font-family: 'Bricolage Grotesque', sans-serif;
+            background: var(--bg);
+            overflow: hidden;
+            color: var(--ink);
         }
 
-        ::selection {
-          background: #eaa64f;
-          color: #13100c;
+        /* --- Ambient warm background --- */
+        .ambient-background {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            overflow: hidden;
+            background-color: var(--bg);
         }
 
-        input,
-        textarea,
-        button {
-          font-family: inherit;
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.4;
+            animation: float 20s infinite alternate ease-in-out;
         }
 
-        a {
-          color: inherit;
-          text-decoration: none;
+        .orb-primary {
+            width: 600px;
+            height: 600px;
+            top: -10%;
+            right: -10%;
+            background: radial-gradient(circle, #eaa64f 0%, transparent 70%);
         }
 
-        @keyframes blink {
-
-          0%,
-          49% {
-            opacity: 1
-          }
-
-          50%,
-          100% {
-            opacity: 0
-          }
+        .orb-secondary {
+            width: 500px;
+            height: 500px;
+            bottom: -5%;
+            left: -10%;
+            background: radial-gradient(circle, #d98a6b 0%, transparent 70%);
+            animation-delay: -5s;
         }
 
-        @keyframes marquee {
-          from {
-            transform: translateX(0);
-          }
+        .orb-accent {
+            width: 400px;
+            height: 400px;
+            top: 40%;
+            left: 40%;
+            background: radial-gradient(circle, #f0c07a 0%, transparent 70%);
+            opacity: 0.18;
+            animation-delay: -10s;
+        }
 
-          to {
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+
+        /* --- Main Content --- */
+        #main-content {
+            opacity: 0;
+            transition: opacity 1s ease;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        #main-content.loaded {
+            opacity: 1;
+        }
+
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: transparent;
+        }
+
+        .card-float {
+            animation: float-card 6s ease-in-out infinite;
+            transition: transform 0.4s ease-out;
+        }
+
+        @keyframes float-card {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .profile-pulse {
+            animation: pulse-glow 3s infinite alternate;
+            border-color: var(--amber);
+        }
+
+        @keyframes pulse-glow {
+            from { box-shadow: 0 0 10px rgba(235, 167, 80, 0.4), 0 0 20px rgba(235,167,80,0.8); }
+            to { box-shadow: 0 0 20px rgba(235, 167, 80, 0.6), 0 0 40px rgba(235,167,80,0.9); }
+        }
+
+        /* --- Icon Animations --- */
+        @keyframes wave-jump {
+            0% { transform: translateY(0); }
+            20% { transform: translateY(-15px); }
+            40% { transform: translateY(0); }
+            100% { transform: translateY(0); }
+        }
+
+        .social-icon {
+            animation: wave-jump 2.5s ease-in-out infinite;
+            transition: transform 0.2s ease;
+        }
+
+        .social-icon:nth-child(1) { animation-delay: 0s; }
+        .social-icon:nth-child(2) { animation-delay: 0.2s; }
+        .social-icon:nth-child(3) { animation-delay: 0.4s; }
+        .social-icon:nth-child(4) { animation-delay: 0.6s; }
+        .social-icon:nth-child(5) { animation-delay: 0.8s; }
+
+        .social-icon:hover {
+            animation: none;
+            transform: translateY(0) scale(1.1);
+        }
+
+        /* --- Loading bar --- */
+        .load-track {
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            overflow: hidden;
+        }
+
+        .load-fill {
+            height: 100%;
+            width: 0%;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--terra), var(--amber));
+            box-shadow: 0 0 14px rgba(235,167,80,0.55);
+            transition: width 0.35s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .mono {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .serif {
+            font-family: 'Fraunces', serif;
+        }
+
+        .enter-btn[disabled] {
+            cursor: progress;
+            opacity: 0.8;
+        }
+
+        .spinner {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid rgba(235,167,80,0.3);
+            border-top-color: var(--amber);
+            animation: spin 0.7s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* --- Share Toast --- */
+        #share-toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
             transform: translateX(-50%);
-          }
-        }
-
-        @keyframes pulse {
-          0% {
-            box-shadow: 0 0 0 0 rgba(235, 167, 80, 0.5);
-          }
-
-          70% {
-            box-shadow: 0 0 0 7px rgba(235, 167, 80, 0);
-          }
-
-          100% {
-            box-shadow: 0 0 0 0 rgba(235, 167, 80, 0);
-          }
-        }
-
-        @keyframes floaty {
-
-          0%,
-          100% {
-            transform: translateY(0);
-          }
-
-          50% {
-            transform: translateY(-8px);
-          }
-        }
-
-        @keyframes auroraA {
-
-          0%,
-          100% {
-            transform: translate(0, 0) scale(1);
-          }
-
-          33% {
-            transform: translate(46px, -34px) scale(1.12);
-          }
-
-          66% {
-            transform: translate(-32px, 24px) scale(0.94);
-          }
-        }
-
-        @keyframes auroraB {
-
-          0%,
-          100% {
-            transform: translate(0, 0) scale(1);
-          }
-
-          50% {
-            transform: translate(-54px, 32px) scale(1.14);
-          }
-        }
-
-        @keyframes gridDrift {
-          from {
-            background-position: 0 0, 0 0;
-          }
-
-          to {
-            background-position: 64px 64px, 64px 64px;
-          }
-        }
-
-        @keyframes dropdownIn {
-          from {
+            background-color: rgba(28, 24, 19, 0.95);
+            border: 1px solid rgba(235, 167, 80, 0.35);
+            color: var(--ink);
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            z-index: 100;
             opacity: 0;
-            transform: translateY(-8px) scale(0.96);
-          }
-
-          to {
-            opacity: 1;
-            transform: none;
-          }
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
 
-        @keyframes fadeIn {
-          from {
+        #share-toast.show { opacity: 1; visibility: visible; }
+
+        #main-content::-webkit-scrollbar { width: 8px; }
+        #main-content::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1); }
+        #main-content::-webkit-scrollbar-thumb { background: rgba(235, 167, 80, 0.3); border-radius: 4px; }
+        #main-content::-webkit-scrollbar-thumb:hover { background: rgba(235, 167, 80, 0.6); }
+
+        #preload-frame {
+            position: fixed;
+            width: 1px;
+            height: 1px;
             opacity: 0;
-          }
-
-          to {
-            opacity: 1;
-          }
+            pointer-events: none;
+            border: 0;
+            left: -9999px;
         }
-
-        @keyframes scaleIn {
-          from {
-            opacity: 0;
-            transform: scale(0.96) translateY(8px);
-          }
-
-          to {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-          }
-        }
-
-        [data-skillcard] [data-sktag] {
-          transition: transform .3s cubic-bezier(.2, .8, .2, 1), border-color .3s, color .3s;
-        }
-
-        [data-skillcard]:hover [data-sktag] {
-          transform: translateY(-4px);
-          border-color: rgba(235, 167, 80, 0.45);
-          color: #f2ede3;
-        }
-
-        [data-skillcard]:hover [data-sktag]:nth-child(2) {
-          transition-delay: .03s;
-        }
-
-        [data-skillcard]:hover [data-sktag]:nth-child(3) {
-          transition-delay: .06s;
-        }
-
-        [data-skillcard]:hover [data-sktag]:nth-child(4) {
-          transition-delay: .09s;
-        }
-
-        [data-skillcard]:hover [data-sktag]:nth-child(5) {
-          transition-delay: .12s;
-        }
-
-        [data-skillcard]:hover [data-sktag]:nth-child(6) {
-          transition-delay: .15s;
-        }
-
-        [data-skillcard] [data-sktitle] {
-          transition: color .3s, letter-spacing .3s;
-        }
-
-        [data-skillcard]:hover [data-sktitle] {
-          color: #f5c98a;
-          letter-spacing: 1px;
-        }
-
-        @media (max-width: 980px) {
-          [data-journey] {
-            grid-template-columns: 1fr 1fr !important;
-          }
-        }
-
-        @media (max-width: 880px) {
-          [data-nav-desktop] {
-            display: none !important;
-          }
-
-          [data-nav-toggle] {
-            display: flex !important;
-          }
-
-          [data-split] {
-            grid-template-columns: 1fr !important;
-          }
-
-          [data-contact] {
-            grid-template-columns: 1fr !important;
-          }
-
-          [data-portrait] {
-            display: none !important;
-          }
-
-          [data-mobile-avatar] {
-            display: block !important;
-          }
-
-          [data-hero-main],
-          [data-hero-aside],
-          [data-namerow] {
-            display: contents !important;
-          }
-        }
-
-        /* tablet / mid-width: photo + stats paired, name + cube paired, rest full-width */
-        @media (min-width: 561px) and (max-width: 880px) {
-          [data-hero] {
-            display: grid !important;
-            grid-template-columns: clamp(160px, 26vw, 204px) 1fr !important;
-            grid-template-areas: "photo stats" "name cube" "badge badge" "typed typed" "intro intro" "meta meta" "social social" "cta cta" !important;
-            gap: clamp(16px, 2.4vw, 26px) clamp(18px, 3vw, 30px) !important;
-            align-items: center !important;
-          }
-
-          [data-mobile-avatar] {
-            grid-area: photo;
-            width: 100% !important;
-            height: auto !important;
-            max-width: 204px;
-            aspect-ratio: 1 / 1;
-            border-radius: clamp(16px, 2vw, 22px) !important;
-            align-self: start;
-          }
-
-          [data-hero-namebox] {
-            grid-area: name;
-          }
-
-          [data-stats] {
-            grid-area: stats;
-            max-width: none !important;
-            width: 100%;
-            align-self: start;
-          }
-
-          [data-cube-wrap] {
-            grid-area: cube;
-            justify-self: center;
-            align-self: center;
-            margin: 0 0 14px !important;
-          }
-
-          [data-hero-avail] {
-            grid-area: badge;
-            margin: 2px 0 0 !important;
-          }
-
-          [data-hero-typed] {
-            grid-area: typed;
-            margin: 0 !important;
-          }
-
-          [data-hero-intro] {
-            grid-area: intro;
-            max-width: 62ch !important;
-            margin: 0 !important;
-          }
-
-          [data-hero-meta] {
-            grid-area: meta;
-            margin: 2px 0 0 !important;
-          }
-
-          [data-hero-socials] {
-            grid-area: social;
-            margin: 4px 0 0 !important;
-          }
-
-          [data-hero-cta] {
-            grid-area: cta;
-            margin: 4px 0 0 !important;
-          }
-        }
-
-        /* phone: single column — photo, name, info, socials, stats + cube, buttons */
-        @media (max-width: 560px) {
-          [data-hero] {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: flex-start !important;
-            gap: 16px !important;
-          }
-
-          [data-mobile-avatar] {
-            width: clamp(120px, 38vw, 150px) !important;
-            height: clamp(120px, 38vw, 150px) !important;
-            border-radius: 18px !important;
-            order: 1;
-          }
-
-          [data-hero-namebox] {
-            order: 2;
-          }
-
-          [data-hero-avail] {
-            order: 3;
-            margin: 0 !important;
-          }
-
-          [data-hero-typed] {
-            order: 4;
-            margin: 0 !important;
-            width: 100%;
-          }
-
-          [data-hero-intro] {
-            order: 5;
-            margin: 0 !important;
-            max-width: 100% !important;
-          }
-
-          [data-hero-meta] {
-            order: 6;
-            margin: 2px 0 0 !important;
-          }
-
-          [data-hero-socials] {
-            order: 7;
-            margin: 4px 0 0 !important;
-            align-self: flex-start !important;
-          }
-
-          [data-stats] {
-            order: 8;
-            max-width: 340px !important;
-            width: 100%;
-            margin: 4px 0 0 !important;
-          }
-
-          [data-cube-wrap] {
-            order: 9;
-            align-self: flex-start !important;
-            margin: 10px 0 18px 6px !important;
-          }
-
-          [data-hero-cta] {
-            order: 10;
-            margin: 6px 0 0 !important;
-          }
-
-          [data-journey] {
-            grid-template-columns: 1fr !important;
-          }
-
-          [data-hero] h1 {
-            font-size: clamp(40px, 12vw, 52px) !important;
-          }
-        }
-      </style>
-    </helmet>
-
-    <div data-scale-root style="position: relative; min-height: 100vh;">
-
-      <div data-progress
-        style="position: fixed; top: 0; left: 0; height: 2px; width: 100%; transform: scaleX(0); transform-origin: left; background: linear-gradient(90deg, #eaa64f, #d98a6b); z-index: 60; pointer-events: none;">
-      </div>
-
-      <!-- always-on animated background -->
-      <div data-aurora aria-hidden="true"
-        style="position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;">
-        <div
-          style="position: absolute; width: 540px; height: 540px; left: 4%; top: 6%; border-radius: 50%; background: radial-gradient(circle, rgba(235,167,80,0.16), transparent 70%); filter: blur(34px); animation: auroraA 19s ease-in-out infinite;">
-        </div>
-        <div
-          style="position: absolute; width: 500px; height: 500px; right: 2%; top: 34%; border-radius: 50%; background: radial-gradient(circle, rgba(217,138,107,0.15), transparent 70%); filter: blur(38px); animation: auroraB 24s ease-in-out infinite;">
-        </div>
-        <div
-          style="position: absolute; width: 460px; height: 460px; left: 38%; bottom: -10%; border-radius: 50%; background: radial-gradient(circle, rgba(120,150,205,0.10), transparent 70%); filter: blur(40px); animation: auroraA 28s ease-in-out infinite reverse;">
-        </div>
-      </div>
-
-      <sc-if value="{{ gridLines }}" hint-placeholder-val="{{ true }}">
-        <div data-grid aria-hidden="true"
-          style="position: fixed; inset: 0; pointer-events: none; z-index: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 75%); animation: gridDrift 40s linear infinite;">
-        </div>
-      </sc-if>
-
-      <div data-glow aria-hidden="true"
-        style="position: fixed; top: -240px; left: 50%; transform: translateX(-50%); width: min(960px, 120vw); height: 760px; pointer-events: none; z-index: 0; background: radial-gradient(closest-side, rgba(235,167,80,0.16), rgba(217,138,107,0.06) 52%, transparent 78%);">
-      </div>
-
-      <!-- ===== FLOATING HEADER ===== -->
-      <header
-        style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; justify-content: center; padding: 14px clamp(12px, 3vw, 20px); pointer-events: none;">
-        <div
-          style="pointer-events: auto; width: 100%; max-width: 1080px; display: flex; align-items: center; justify-content: space-between; padding: 9px 12px 9px 16px; background: rgba(20,17,13,0.64); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; box-shadow: 0 16px 40px -22px rgba(0,0,0,0.75);">
-          <a onClick="{{ goHome }}" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
-            <span
-              style="display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid #eaa64f; color: #eaa64f; font-weight: 700; font-size: clamp(12.5px, 1.4vw, 14px); letter-spacing: 0.5px; border-radius: 9px;">AS</span>
-            <span
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #a89e8d; letter-spacing: 1px;">aditya.dev</span>
-          </a>
-          <nav data-nav-desktop style="display: flex; align-items: center; gap: 4px;">
-            <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="6">
-              <a onClick="{{ link.go }}"
-                style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); letter-spacing: 0.2px; cursor: pointer; padding: 7px 12px; border-radius: 8px; transition: color 0.25s, background 0.25s; color: {{ link.color }}; background: {{ link.bg }};">{{
-                link.label }}</a>
-            </sc-for>
-            <a href="Resume.dc.html"
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); padding: 8px 15px; margin-left: 6px; border: 1px solid #eaa64f; color: #eaa64f; cursor: pointer; transition: background 0.2s, color 0.2s; border-radius: 8px;"
-              style-hover="background: #eaa64f; color: #13100c;">Resume</a>
-          </nav>
-          <button data-nav-toggle onClick="{{ toggleMenu }}"
-            style="display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px;">
-            <span style="width: 22px; height: 2px; background: #f2ede3; display: block;"></span>
-            <span style="width: 22px; height: 2px; background: #f2ede3; display: block;"></span>
-            <span style="width: 22px; height: 2px; background: #f2ede3; display: block;"></span>
-          </button>
-        </div>
-      </header>
-
-      <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-        <div
-          style="position: fixed; inset: 0; z-index: 49; background: rgba(20,17,13,0.97); backdrop-filter: blur(8px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;">
-          <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="6">
-            <a onClick="{{ link.go }}"
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(18px, 2.6vw, 22px); cursor: pointer; color: {{ link.color }};">{{
-              link.label }}</a>
-          </sc-for>
-          <a href="Resume.dc.html"
-            style="margin-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(14px, 1.5vw, 16px); padding: 11px 24px; border: 1px solid #eaa64f; color: #eaa64f; border-radius: 9px;">Resume
-            ↗</a>
-        </div>
-      </sc-if>
-
-      <main style="position: relative; z-index: 1;">
-
-        <!-- ===== HERO ===== -->
-        <section id="home"
-          style="max-width: 1200px; margin: 0 auto; padding: clamp(112px, 17vw, 150px) clamp(20px, 5vw, 32px) clamp(56px, 9vw, 90px);">
-          <div data-hero
-            style="display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(min(42%, 300px), 0.85fr); gap: clamp(28px, 4vw, 56px); align-items: center;">
-            <div data-hero-main>
-              <div data-namerow style="display: flex; align-items: center; gap: 18px; margin-bottom: 16px;">
-                <img data-mobile-avatar src="assets/profile.jpg" alt="Aditya Sharma"
-                  style="display: none; width: 72px; height: 72px; border-radius: 16px; object-fit: cover; filter: grayscale(1) contrast(1.05); border: 1px solid rgba(235,167,80,0.4); flex-shrink: 0;">
-                <div data-hero-namebox>
-                  <p
-                    style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(12px, 1vw, 14px); color: #eaa64f; margin: 0 0 8px; letter-spacing: 1px;">
-                    Hey! I'm</p>
-                  <h1
-                    style="font-size: clamp(46px, 7vw, 92px); line-height: 0.98; font-weight: 700; margin: 0; letter-spacing: -2px;">
-                    Aditya<br>Sharma</h1>
-                </div>
-              </div>
-              <sc-if value="{{ showAvailability }}" hint-placeholder-val="{{ true }}">
-                <div data-hero-avail
-                  style="display: inline-flex; align-items: center; gap: 9px; padding: 7px 14px; border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; margin-bottom: 22px;">
-                  <span
-                    style="width: 8px; height: 8px; border-radius: 50%; background: #eaa64f; animation: pulse 2s infinite;"></span>
-                  <span
-                    style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #c0b8ab; letter-spacing: 0.4px;">Open
-                    to opportunities · 2026</span>
-                </div>
-              </sc-if>
-              <div data-hero-typed
-                style="font-size: clamp(20px, 3vw, 34px); font-weight: 500; color: #f2ede3; margin-bottom: 20px; min-height: 1.2em;">
-                {{ typed }}<span style="color: #eaa64f; animation: blink 1.1s step-end infinite;">_</span></div>
-              <p data-hero-intro
-                style="max-width: 52ch; font-size: clamp(15px, 0.6vw + 12px, 18px); line-height: 1.65; color: #c0b8ab; margin: 0 0 30px;">
-                Hey — I'm Aditya. I build at the intersection of <span style="color: #f2ede3;">code and hardware</span>:
-                embedded systems, robotics, AI and 3D design. Pull up a chair and take a look around.</p>
-              <div data-hero-cta style="display: flex; flex-wrap: wrap; gap: 14px;">
-                <div style="position: relative;">
-                  <button onClick="{{ toggleNav }}"
-                    style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; background: #eaa64f; color: #13100c; font-weight: 600; font-size: clamp(13.5px, 1.4vw, 15px); cursor: pointer; transition: transform 0.2s; border-radius: 9px; border: none;"
-                    style-hover="transform: translateY(-2px);">Take a look around <span
-                      style="display: inline-block; transition: transform 0.28s; transform: rotate({{ navCaret }});">▾</span></button>
-                  <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
-                    <div onClick="{{ closeNav }}" style="position: fixed; inset: 0; z-index: 30;"></div>
-                    <div
-                      style="position: absolute; top: calc(100% + 10px); left: 0; z-index: 31; min-width: 230px; background: rgba(28,24,19,0.98); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 8px; box-shadow: 0 24px 48px -20px rgba(0,0,0,0.85); animation: dropdownIn 0.28s cubic-bezier(.2,.8,.2,1);">
-                      <p
-                        style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); color: #897f6f; letter-spacing: 1px; margin: 4px 10px 8px;">
-                        WHERE TO?</p>
-                      <sc-for list="{{ navMenu }}" as="m" hint-placeholder-count="5">
-                        <a onClick="{{ m.go }}"
-                          style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 14px; border-radius: 8px; cursor: pointer; font-size: clamp(13.5px, 1.4vw, 15px); color: #f2ede3; transition: background 0.18s;"
-                          style-hover="background: rgba(235,167,80,0.14);"><span>{{ m.label }}</span><span
-                            style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #897f6f;">{{
-                            m.tag }}</span></a>
-                      </sc-for>
-                    </div>
-                  </sc-if>
-                </div>
-                <a href="Resume.dc.html"
-                  style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; border: 1px solid rgba(255,255,255,0.18); color: #f2ede3; font-weight: 500; font-size: clamp(13.5px, 1.4vw, 15px); cursor: pointer; transition: border-color 0.2s; border-radius: 9px;"
-                  style-hover="border-color: #eaa64f;">Resume ↗</a>
-              </div>
-              <div data-hero-meta
-                style="margin-top: 36px; display: flex; flex-direction: column; gap: 6px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #a89e8d;">
-                <span><span style="color: #eaa64f;">→</span> B.Tech CSE · Presidency University · 2023 – 2026 (Lateral
-                  entry)</span>
-                <span><span style="color: #eaa64f;">→</span> Bengaluru, Karnataka, India</span>
-              </div>
-            </div>
-
-            <div data-hero-aside
-              style="display: flex; flex-direction: column; align-items: center; gap: 26px; width: 100%;">
-              <div data-portrait ref="{{ tiltRef }}"
-                style="position: relative; width: 100%; max-width: min(340px, 80vw); animation: floaty 6.5s ease-in-out infinite; will-change: transform;">
-                <div aria-hidden="true"
-                  style="position: absolute; inset: -10px; border-radius: 20px; background: linear-gradient(150deg, rgba(235,167,80,0.5), rgba(217,138,107,0.15) 55%, transparent); filter: blur(2px);">
-                </div>
-                <div
-                  style="position: relative; border-radius: 16px; overflow: hidden; border: 1px solid rgba(235,167,80,0.35); box-shadow: 0 30px 60px -24px rgba(0,0,0,0.7);">
-                  <img src="assets/profile.jpg" alt="Aditya Sharma"
-                    style="display: block; width: 100%; aspect-ratio: 1/1; object-fit: cover; filter: grayscale(1) contrast(1.04);">
-                  <div aria-hidden="true"
-                    style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(19,16,12,0.55)); pointer-events: none;">
-                  </div>
-                  <div
-                    style="position: absolute; left: 14px; bottom: 12px; display: flex; align-items: center; gap: 8px;">
-                    <span
-                      style="width: 8px; height: 8px; border-radius: 50%; background: #eaa64f; animation: pulse 2s infinite;"></span>
-                    <span
-                      style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #f2ede3; letter-spacing: 0.5px;">building
-                      in Bengaluru</span>
-                  </div>
-                </div>
-              </div>
-
-              <div data-hero-socials style="display: flex; gap: 10px;">
-                <a href="{{ githubUrl }}" target="_blank" rel="noopener" aria-label="GitHub"
-                  style="width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,0.14); border-radius: 11px; color: #c0b8ab; transition: all 0.2s;"
-                  style-hover="border-color: #f2ede3; color: #f2ede3; transform: translateY(-2px);"><svg
-                    viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                  </svg></a>
-                <a href="{{ linkedinUrl }}" target="_blank" rel="noopener" aria-label="LinkedIn"
-                  style="width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,0.14); border-radius: 11px; color: #c0b8ab; transition: all 0.2s;"
-                  style-hover="border-color: #4a9fe0; color: #4a9fe0; transform: translateY(-2px);"><svg
-                    viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
-                  </svg></a>
-                <a href="{{ instagramUrl }}" target="_blank" rel="noopener" aria-label="Instagram"
-                  style="width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,0.14); border-radius: 11px; color: #c0b8ab; transition: all 0.2s;"
-                  style-hover="border-color: #e1668a; color: #e1668a; transform: translateY(-2px);"><svg
-                    viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                  </svg></a>
-                <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" aria-label="WhatsApp"
-                  style="width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,0.14); border-radius: 11px; color: #c0b8ab; transition: all 0.2s;"
-                  style-hover="border-color: #46cc63; color: #46cc63; transform: translateY(-2px);"><svg
-                    viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413" />
-                  </svg></a>
-              </div>
-
-              <div data-stats
-                style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); width: 100%; max-width: 340px; border-radius: 14px; overflow: hidden;">
-                <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
-                  <div style="background: #1c1813; padding: 18px 16px;">
-                    <div style="font-size: clamp(24px, 4vw, 30px); font-weight: 700; color: #eaa64f;">{{ s.num }}</div>
-                    <div
-                      style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #a89e8d; margin-top: 2px;">
-                      {{ s.label }}</div>
-                  </div>
-                </sc-for>
-              </div>
-
-              <!-- interactive cube (off the photo) -->
-              <div data-cube-wrap ref="{{ cubeRef }}"
-                style="position: relative; width: 118px; height: 118px; perspective: 620px; cursor: grab; touch-action: none; user-select: none; margin: 8px 0 16px;">
-                <div data-cube
-                  style="position: absolute; inset: 0; transform-style: preserve-3d; transform: translateZ(-43px) rotateX(-16deg) rotateY(28deg);">
-                  <div
-                    style="position: absolute; width: 86px; height: 86px; left: 16px; top: 16px; border: 1px solid #eaa64f; background: rgba(235,167,80,0.12); display: grid; place-items: center; font-family: 'IBM Plex Mono', monospace; color: #eaa64f; font-size: clamp(10px, 1.1vw, 11px); transform: rotateY(0deg) translateZ(43px);">
-                    &lt;dev/&gt;</div>
-                  <div
-                    style="position: absolute; width: 86px; height: 86px; left: 16px; top: 16px; border: 1px solid rgba(255,255,255,0.25); background: rgba(28,24,19,0.9); display: grid; place-items: center; font-family: 'IBM Plex Mono', monospace; color: #c0b8ab; font-size: clamp(9px, 1.1vw, 10px); transform: rotateY(90deg) translateZ(43px);">
-                    robotics</div>
-                  <div
-                    style="position: absolute; width: 86px; height: 86px; left: 16px; top: 16px; border: 1px solid rgba(255,255,255,0.25); background: rgba(28,24,19,0.9); display: grid; place-items: center; font-family: 'IBM Plex Mono', monospace; color: #c0b8ab; font-size: clamp(9px, 1.1vw, 10px); transform: rotateY(180deg) translateZ(43px);">
-                    AI / ML</div>
-                  <div
-                    style="position: absolute; width: 86px; height: 86px; left: 16px; top: 16px; border: 1px solid rgba(255,255,255,0.25); background: rgba(28,24,19,0.9); display: grid; place-items: center; font-family: 'IBM Plex Mono', monospace; color: #c0b8ab; font-size: clamp(9px, 1.1vw, 10px); transform: rotateY(-90deg) translateZ(43px);">
-                    embedded</div>
-                  <div
-                    style="position: absolute; width: 86px; height: 86px; left: 16px; top: 16px; border: 1px solid #eaa64f; background: rgba(235,167,80,0.16); display: grid; place-items: center; font-family: 'IBM Plex Mono', monospace; color: #eaa64f; font-size: clamp(12.5px, 1.4vw, 14px); font-weight: 600; transform: rotateX(90deg) translateZ(43px);">
-                    AS</div>
-                  <div
-                    style="position: absolute; width: 86px; height: 86px; left: 16px; top: 16px; border: 1px solid rgba(255,255,255,0.25); background: rgba(28,24,19,0.9); display: grid; place-items: center; font-family: 'IBM Plex Mono', monospace; color: #c0b8ab; font-size: clamp(9px, 1.1vw, 10px); transform: rotateX(-90deg) translateZ(43px);">
-                    3D print</div>
-                </div>
-                <span
-                  style="position: absolute; bottom: -16px; left: 50%; transform: translateX(-50%); font-family: 'IBM Plex Mono', monospace; font-size: clamp(8px, 1vw, 9px); color: #897f6f; letter-spacing: 1px; white-space: nowrap;">✦
-                  drag to spin</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ===== ABOUT ===== -->
-        <section id="about"
-          style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 9vw, 90px) clamp(20px, 5vw, 32px);">
-          <div data-reveal style="opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s;">
-            <p
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 8px;">
-              01 — Profile</p>
-            <h2 style="font-size: clamp(34px, 5vw, 52px); font-weight: 700; margin: 0 0 40px; letter-spacing: -1px;">
-              About Me</h2>
-          </div>
-          <div data-split style="display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(28px, 4vw, 48px);">
-            <div data-reveal
-              style="opacity: 0; transform: translateY(24px); transition: opacity 0.7s 0.05s, transform 0.7s 0.05s; display: flex; flex-direction: column; gap: clamp(16px, 2vw, 20px); font-size: clamp(14px, 0.5vw + 12px, 16px); line-height: 1.7; color: #c0b8ab;">
-              <p style="margin: 0;">As a Computer Science student with a deep interest in intelligent systems, I work at
-                the intersection of code and hardware. Using platforms like <span style="color: #f2ede3;">Raspberry Pi,
-                  ESP32, Arduino and Jetson Nano</span>, I build end-to-end solutions that combine embedded computing
-                with real-time decision-making.</p>
-              <p style="margin: 0;">My foundation extends into the core of computing — data structures, algorithms,
-                operating systems, networks and software architecture. I've explored AI and NLP through speech
-                recognition, classification and text analysis, and I experiment with deploying lightweight models on
-                edge devices.</p>
-              <p style="margin: 0;">I thrive in practical, collaborative environments where ideas are exchanged freely,
-                challenges are tackled together, and learning happens through doing.</p>
-              <div
-                style="margin-top: 8px; padding: 20px 22px; border-left: 2px solid #eaa64f; background: rgba(235,167,80,0.05); border-radius: 0 10px 10px 0;">
-                <p style="margin: 0; font-size: clamp(16px, 0.6vw + 13px, 19px); color: #f2ede3; font-weight: 500;">"I
-                  don't just build things to work — I build them to matter."</p>
-              </div>
-            </div>
-            <div data-reveal
-              style="opacity: 0; transform: translateY(24px); transition: opacity 0.7s 0.1s, transform 0.7s 0.1s; display: flex; flex-direction: column; gap: 16px;">
-              <div
-                style="border: 1px solid rgba(255,255,255,0.08); background: #1c1813; border-radius: 12px; padding: 22px;">
-                <p
-                  style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #eaa64f; margin: 0 0 8px; letter-spacing: 1px;">
-                  HARDWARE INTEGRATION</p>
-                <p style="margin: 0; font-size: clamp(13px, 0.4vw + 11px, 14.5px); line-height: 1.6; color: #c0b8ab;">
-                  Syncing servo motion to live audio with Whisper AI; designing systems that run offline with
-                  low-latency responsiveness.</p>
-              </div>
-              <div
-                style="border: 1px solid rgba(255,255,255,0.08); background: #1c1813; border-radius: 12px; padding: 22px;">
-                <p
-                  style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #eaa64f; margin: 0 0 8px; letter-spacing: 1px;">
-                  SYSTEMS PROGRAMMING</p>
-                <p style="margin: 0; font-size: clamp(13px, 0.4vw + 11px, 14.5px); line-height: 1.6; color: #c0b8ab;">
-                  Comfortable with system-level programming on Linux, optimizing at the OS layer, and working with APIs
-                  and multithreading.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ===== SKILLS ===== -->
-        <section id="skills"
-          style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 9vw, 90px) clamp(20px, 5vw, 32px);">
-          <div data-reveal style="opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s;">
-            <p
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 8px;">
-              02 — Capabilities</p>
-            <h2 style="font-size: clamp(34px, 5vw, 52px); font-weight: 700; margin: 0 0 40px; letter-spacing: -1px;">
-              Skills &amp; Tools</h2>
-          </div>
-          <div
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 16px;">
-            <sc-for list="{{ skills }}" as="g" hint-placeholder-count="6">
-              <div data-reveal
-                style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; display: flex;">
-                <div data-skillcard
-                  style="flex: 1; background: #1c1813; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 24px 22px; transition: transform 0.28s cubic-bezier(.2,.8,.2,1), box-shadow 0.28s, border-color 0.28s, background 0.28s;"
-                  style-hover="transform: translateY(-8px); border-color: rgba(235,167,80,0.5); background: #221d16; box-shadow: 0 22px 40px -22px rgba(0,0,0,0.8);">
-                  <p data-sktitle
-                    style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #eaa64f; margin: 0 0 16px; letter-spacing: 0.5px;">
-                    {{ g.title }}</p>
-                  <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                    <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="5">
-                      <span data-sktag
-                        style="font-size: clamp(11.5px, 1.3vw, 13px); padding: 6px 11px; border: 1px solid rgba(255,255,255,0.12); color: #d8d0c3; background: rgba(255,255,255,0.02); border-radius: 7px;">{{
-                        it }}</span>
-                    </sc-for>
-                  </div>
-                </div>
-              </div>
-            </sc-for>
-          </div>
-          <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 12px;">
-            <div
-              style="overflow: hidden; padding: 4px 0; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);">
-              <div style="display: flex; width: max-content; gap: 14px; animation: marquee 30s linear infinite;">
-                <sc-for list="{{ toolsLoop }}" as="t" hint-placeholder-count="0">
-                  <div
-                    style="display: flex; align-items: center; gap: 10px; padding: 9px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; background: rgba(255,255,255,0.03); white-space: nowrap;">
-                    {{ t.logoEl }}
-                    <span
-                      style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(12.5px, 1.4vw, 14px); color: #c0b8ab;">{{
-                      t.name }}</span>
-                  </div>
-                </sc-for>
-              </div>
-            </div>
-            <div
-              style="overflow: hidden; padding: 4px 0; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);">
-              <div
-                style="display: flex; width: max-content; gap: 14px; animation: marquee 34s linear infinite reverse;">
-                <sc-for list="{{ toolsLoop }}" as="t" hint-placeholder-count="0">
-                  <div
-                    style="display: flex; align-items: center; gap: 10px; padding: 9px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; background: rgba(255,255,255,0.03); white-space: nowrap;">
-                    {{ t.logoEl }}
-                    <span
-                      style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(12.5px, 1.4vw, 14px); color: #c0b8ab;">{{
-                      t.name }}</span>
-                  </div>
-                </sc-for>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ===== WORK ===== -->
-        <section id="work"
-          style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 9vw, 90px) clamp(20px, 5vw, 32px);">
-          <div data-reveal style="opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s;">
-            <p
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 8px;">
-              03 — Selected Work</p>
-            <h2 style="font-size: clamp(34px, 5vw, 52px); font-weight: 700; margin: 0 0 14px; letter-spacing: -1px;">
-              Things I've Built</h2>
-            <p
-              style="max-width: 56ch; font-size: clamp(14px, 0.5vw + 12px, 16px); line-height: 1.6; color: #c0b8ab; margin: 0 0 28px;">
-              A mix of embedded systems, robotics and full-stack builds — each shipped end to end.</p>
-          </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px;">
-            <sc-for list="{{ filters }}" as="f" hint-placeholder-count="6">
-              <button onClick="{{ f.on }}"
-                style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); padding: 8px 16px; cursor: pointer; transition: all 0.2s; border-radius: 7px; background: {{ f.bg }}; color: {{ f.color }}; border: 1px solid {{ f.border }};">{{
-                f.label }}</button>
-            </sc-for>
-          </div>
-          <div
-            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 20px;">
-            <sc-for list="{{ filteredProjects }}" as="p" hint-placeholder-count="6">
-              <div data-reveal
-                style="opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s;">
-                <div onClick="{{ p.open }}"
-                  style="border: 1px solid rgba(255,255,255,0.08); background: #1c1813; overflow: hidden; border-radius: 14px; display: flex; flex-direction: column; height: 100%; cursor: pointer; transition: transform 0.28s cubic-bezier(.2,.8,.2,1), border-color 0.28s, box-shadow 0.28s;"
-                  style-hover="transform: translateY(-6px); border-color: rgba(235,167,80,0.5); box-shadow: 0 24px 44px -24px rgba(0,0,0,0.8);">
-                  <div
-                    style="height: 168px; position: relative; background-color: #251e17; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center;">
-                    <sc-if value="{{ p.hasImage }}" hint-placeholder-val="{{ false }}">
-                      <img src="{{ p.currentImage }}" alt="{{ p.title }}"
-                        style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.2) contrast(1.05); transition: filter 0.3s, transform 0.3s; pointer-events: none;"
-                        style-hover="filter: grayscale(0) contrast(1.05); transform: scale(1.025);">
-                    </sc-if>
-                    <sc-if value="{{ !p.hasImage }}" hint-placeholder-val="{{ true }}">
-                      <div
-                        style="position: absolute; inset: 0; background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0 10px, transparent 10px 20px); display: grid; place-items: center; width: 100%; height: 100%;">
-                        <span
-                          style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #897f6f; letter-spacing: 0.5px;">[
-                          {{ p.shot }} ]</span>
-                      </div>
-                    </sc-if>
-                    <span
-                      style="position: absolute; top: 12px; left: 12px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 4px 9px; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.1); color: #eaa64f; letter-spacing: 0.5px; border-radius: 5px; backdrop-filter: blur(4px); z-index: 2;">{{
-                      p.cat }}</span>
-
-                    <!-- carousel arrows overlay -->
-                    <sc-if value="{{ p.hasMultipleImages }}" hint-placeholder-val="{{ false }}">
-                      <button onClick="{{ p.prev }}"
-                        style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.12); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(4px); transition: all 0.2s; padding: 0; outline: none;"
-                        style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
-                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                      </button>
-                      <button onClick="{{ p.next }}"
-                        style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.12); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(4px); transition: all 0.2s; padding: 0; outline: none;"
-                        style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
-                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                      </button>
-                      <div
-                        style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 4;">
-                        <sc-for list="{{ p.dots }}" as="dot" hint-placeholder-count="3">
-                          <span
-                            style="width: 5px; height: 5px; border-radius: 50%; background: {{ dot.bg }}; transform: {{ dot.scale }}; transition: all 0.25s;"></span>
-                        </sc-for>
-                      </div>
-                    </sc-if>
-                  </div>
-                  <div style="padding: 20px 22px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
-                    <h3 style="font-size: clamp(16.5px, 1.8vw, 19px); font-weight: 600; margin: 0; line-height: 1.25;">
-                      {{ p.title }}</h3>
-                    <p
-                      style="margin: 0; font-size: clamp(13px, 0.4vw + 11px, 14.5px); line-height: 1.6; color: #c0b8ab; flex: 1;">
-                      {{ p.desc }}</p>
-                    <sc-if value="{{ p.hasHighlight }}" hint-placeholder-val="{{ false }}">
-                      <p
-                        style="margin: 0; font-size: clamp(11px, 1.3vw, 12.5px); line-height: 1.5; color: #eaa64f; display: flex; gap: 7px;">
-                        <span>★</span><span>{{ p.highlight }}</span></p>
-                    </sc-if>
-                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                      <sc-for list="{{ p.tech }}" as="t" hint-placeholder-count="4">
-                        <span
-                          style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); padding: 4px 8px; color: #a89e8d; border: 1px solid rgba(255,255,255,0.1); border-radius: 5px;">{{
-                          t }}</span>
-                      </sc-for>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </sc-for>
-          </div>
-        </section>
-
-        <!-- ===== JOURNEY ===== -->
-        <section id="journey"
-          style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 9vw, 90px) clamp(20px, 5vw, 32px);">
-          <div data-reveal style="opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s;">
-            <p
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 8px;">
-              04 — Experience</p>
-            <h2 style="font-size: clamp(34px, 5vw, 52px); font-weight: 700; margin: 0 0 40px; letter-spacing: -1px;">
-              Experience, Education &amp; Recognition</h2>
-          </div>
-
-          <div data-reveal
-            style="opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s; margin: 0 0 36px;">
-            <p
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #eaa64f; margin: 0 0 18px; letter-spacing: 0.5px;">
-              EXPERIENCE &amp; TRAINING</p>
-            <div
-              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px;">
-              <sc-for list="{{ experience }}" as="x" hint-placeholder-count="3">
-                <div
-                  style="background: #1c1813; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 20px 22px; display: flex; flex-direction: column; gap: 8px; transition: transform 0.28s cubic-bezier(.2,.8,.2,1), border-color 0.28s; height: 100%;"
-                  style-hover="transform: translateY(-5px); border-color: rgba(235,167,80,0.45);">
-                  <div
-                    style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
-                    <p style="margin: 0; font-size: clamp(13.5px, 1.4vw, 15px); font-weight: 600; line-height: 1.3;">{{
-                      x.role }}</p>
-                    <span
-                      style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #eaa64f; white-space: nowrap;">{{
-                      x.period }}</span>
-                  </div>
-                  <p style="margin: 0; font-size: clamp(11.5px, 1.3vw, 13px); color: #c0b8ab;">{{ x.org }}</p>
-                  <p style="margin: 0; font-size: clamp(11.5px, 1.3vw, 13px); line-height: 1.55; color: #a89e8d;">{{
-                    x.point }}</p>
-                </div>
-              </sc-for>
-            </div>
-          </div>
-
-          <div data-journey
-            style="display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.5vw, 24px);">
-            <div data-reveal style="opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s;">
-              <p
-                style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #eaa64f; margin: 0 0 18px; letter-spacing: 0.5px;">
-                EDUCATION</p>
-              <div style="display: flex; flex-direction: column; gap: 18px;">
-                <sc-for list="{{ education }}" as="e" hint-placeholder-count="2">
-                  <div style="border-left: 2px solid rgba(235,167,80,0.4); padding-left: 16px;">
-                    <p
-                      style="margin: 0 0 4px; font-size: clamp(13.5px, 1.4vw, 15px); font-weight: 600; line-height: 1.35;">
-                      {{ e.title }}</p>
-                    <p style="margin: 0 0 4px; font-size: clamp(11.5px, 1.3vw, 13px); color: #c0b8ab;">{{ e.place }}</p>
-                    <p
-                      style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #a89e8d;">
-                      {{ e.span }}</p>
-                  </div>
-                </sc-for>
-              </div>
-            </div>
-            <div data-reveal
-              style="opacity: 0; transform: translateY(24px); transition: opacity 0.6s 0.06s, transform 0.6s 0.06s;">
-              <p
-                style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #eaa64f; margin: 0 0 18px; letter-spacing: 0.5px;">
-                HIGHLIGHTS</p>
-              <div style="display: flex; flex-direction: column; gap: 12px;">
-                <sc-for list="{{ highlights }}" as="h" hint-placeholder-count="4">
-                  <div
-                    style="display: flex; gap: 10px; font-size: clamp(12.5px, 1.4vw, 14px); line-height: 1.5; color: #d8d0c3;">
-                    <span style="color: #eaa64f; flex-shrink: 0;">◆</span><span>{{ h }}</span>
-                  </div>
-                </sc-for>
-              </div>
-            </div>
-            <div data-reveal
-              style="opacity: 0; transform: translateY(24px); transition: opacity 0.6s 0.12s, transform 0.6s 0.12s;">
-              <p
-                style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #eaa64f; margin: 0 0 18px; letter-spacing: 0.5px;">
-                CERTIFICATIONS</p>
-              <div style="display: flex; flex-direction: column; gap: 12px;">
-                <sc-for list="{{ certs }}" as="c" hint-placeholder-count="5">
-                  <div
-                    style="display: flex; gap: 10px; font-size: clamp(12.5px, 1.4vw, 14px); line-height: 1.5; color: #d8d0c3;">
-                    <span style="color: #a89e8d; flex-shrink: 0;">›</span><span>{{ c }}</span>
-                  </div>
-                </sc-for>
-              </div>
-            </div>
-          </div>
-
-          <!-- certificate image spots -->
-          <div data-reveal
-            style="opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s; margin: 56px 0 22px; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;">
-            <h3 style="font-size: clamp(20px, 3vw, 26px); font-weight: 700; margin: 0; letter-spacing: -0.5px;">
-              Certificates</h3>
-            <span
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #a89e8d;">a
-              spot to drop certificate scans</span>
-          </div>
-          <div
-            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 16px;">
-            <sc-for list="{{ certImages }}" as="c" hint-placeholder-count="5">
-              <a onClick="{{ c.open }}" data-reveal
-                style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; aspect-ratio: 1.4/1; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; background: #1c1813; display: flex; flex-direction: column; justify-content: space-between; padding: 16px; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s; overflow: hidden; position: relative; cursor: pointer; text-decoration: none; color: inherit;"
-                style-hover="border-color: rgba(235,167,80,0.5); transform: translateY(-4px); box-shadow: 0 12px 24px -10px rgba(0,0,0,0.65);">
-                <sc-if value="{{ c.hasImg }}" hint-placeholder-val="{{ false }}">
-                  <img src="{{ c.img }}" alt="{{ c.name }}"
-                    style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.35) contrast(1.1) grayscale(0.25); z-index: 0; transition: transform 0.3s, filter 0.3s; pointer-events: none;"
-                    style-hover="transform: scale(1.03); filter: brightness(0.65) contrast(1.1) grayscale(0);">
-                </sc-if>
-                <sc-if value="{{ !c.hasImg }}" hint-placeholder-val="{{ true }}">
-                  <div
-                    style="position: absolute; inset: 0; border: 1px dashed rgba(235,167,80,0.3); border-radius: 12px; background: rgba(235,167,80,0.02); z-index: 0;">
-                  </div>
-                </sc-if>
-
-                <div
-                  style="position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%;">
-                  <sc-if value="{{ c.hasImg }}" hint-placeholder-val="{{ false }}">
-                    <span
-                      style="align-self: flex-start; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); color: #eaa64f; border: 1px solid rgba(235,167,80,0.4); background: rgba(20,17,13,0.78); backdrop-filter: blur(4px); border-radius: 6px; padding: 3px 8px;">view
-                      scan ✦</span>
-                  </sc-if>
-                  <sc-if value="{{ !c.hasImg }}" hint-placeholder-val="{{ true }}">
-                    <span
-                      style="align-self: flex-start; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #eaa64f; border: 1px solid rgba(235,167,80,0.4); border-radius: 6px; padding: 4px 9px;">＋
-                      add image</span>
-                  </sc-if>
-                  <div>
-                    <p
-                      style="margin: 0; font-size: clamp(12.5px, 1.4vw, 14px); font-weight: 600; line-height: 1.3; text-shadow: 0 2px 4px rgba(0,0,0,0.85);">
-                      {{ c.name }}</p>
-                    <p
-                      style="margin: 4px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #c0b8ab; text-shadow: 0 1px 3px rgba(0,0,0,0.85);">
-                      {{ c.issuer }}</p>
-                  </div>
-                </div>
-              </a>
-            </sc-for>
-          </div>
-        </section>
-
-        <!-- ===== MILESTONES / GALLERY ===== -->
-        <section id="gallery"
-          style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 9vw, 90px) clamp(20px, 5vw, 32px) 0;">
-          <div data-reveal
-            style="opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s; margin: 0 0 24px;">
-            <p
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 8px;">
-              05 — Beyond the Build</p>
-            <h3 style="font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin: 0; letter-spacing: -1px;">Milestones
-              &amp; Moments</h3>
-            <span
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #a89e8d;">visits,
-              expos &amp; recognition — not the projects, the journey around them</span>
-            <div style="margin-top: 18px;"><a href="Gallery.dc.html"
-                style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; padding: 9px 16px; border: 1px solid rgba(235,167,80,0.4); border-radius: 9px; transition: all 0.2s;"
-                style-hover="background: #eaa64f; color: #13100c;">View full gallery →</a></div>
-          </div>
-          <div
-            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 16px;">
-            <sc-for list="{{ gallery }}" as="a" hint-placeholder-count="6">
-              <div onClick="{{ a.open }}" data-reveal
-                style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; aspect-ratio: 4/3; position: relative; background-color: #251e17; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; justify-content: flex-end; padding: 16px; overflow: hidden; border-radius: 14px; cursor: pointer; transition: border-color 0.25s, transform 0.3s cubic-bezier(.2,.8,.2,1);"
-                style-hover="border-color: rgba(235,167,80,0.45); transform: translateY(-4px);">
-                <sc-if value="{{ a.hasImage }}" hint-placeholder-val="{{ false }}">
-                  <img src="{{ a.currentImage }}" alt="{{ a.title }}"
-                    style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.2) contrast(1.05); z-index: 0; transition: transform 0.3s; pointer-events: none;"
-                    style-hover="transform: scale(1.04); filter: grayscale(0) contrast(1.05);">
-                </sc-if>
-                <sc-if value="{{ !a.hasImage }}" hint-placeholder-val="{{ true }}">
-                  <div
-                    style="position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 9px, transparent 9px 18px); z-index: 0;">
-                  </div>
-                </sc-if>
-
-                <!-- gradient overlay for text readability -->
-                <div aria-hidden="true"
-                  style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(19,16,12,0.85) 90%); z-index: 1; pointer-events: none;">
-                </div>
-
-                <span
-                  style="position: absolute; top: 12px; right: 12px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 3px 8px; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.1); color: #eaa64f; border-radius: 5px; z-index: 2; backdrop-filter: blur(4px);">{{
-                  a.count }} photos</span>
-                <p
-                  style="margin: 0; font-size: clamp(13.5px, 1.4vw, 15px); font-weight: 600; z-index: 2; text-shadow: 0 1px 3px rgba(0,0,0,0.85);">
-                  {{ a.title }}</p>
-                <p
-                  style="margin: 4px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #c0b8ab; z-index: 2; text-shadow: 0 1px 2px rgba(0,0,0,0.85);">
-                  view album ✦</p>
-
-                <!-- carousel arrows overlay -->
-                <sc-if value="{{ a.hasMultipleImages }}" hint-placeholder-val="{{ false }}">
-                  <button onClick="{{ a.prev }}"
-                    style="position: absolute; left: 8px; top: 35%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.12); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(4px); transition: all 0.2s; padding: 0; outline: none;"
-                    style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                  </button>
-                  <button onClick="{{ a.next }}"
-                    style="position: absolute; right: 8px; top: 35%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: rgba(20,17,13,0.72); border: 1px solid rgba(255,255,255,0.12); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(4px); transition: all 0.2s; padding: 0; outline: none;"
-                    style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                  </button>
-                  <div
-                    style="position: absolute; bottom: 44px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 4;">
-                    <sc-for list="{{ a.dots }}" as="dot" hint-placeholder-count="3">
-                      <span
-                        style="width: 5px; height: 5px; border-radius: 50%; background: {{ dot.bg }}; transform: {{ dot.scale }}; transition: all 0.25s;"></span>
-                    </sc-for>
-                  </div>
-                </sc-if>
-              </div>
-            </sc-for>
-          </div>
-        </section>
-
-        <!-- ===== CONTACT ===== -->
-        <section id="contact"
-          style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 9vw, 90px) clamp(20px, 5vw, 32px) 60px;">
-          <div data-reveal style="opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s;">
-            <p
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 8px;">
-              06 — Contact</p>
-            <h2 style="font-size: clamp(34px, 5vw, 52px); font-weight: 700; margin: 0 0 14px; letter-spacing: -1px;">Get
-              In Touch</h2>
-            <p
-              style="max-width: 56ch; font-size: clamp(14px, 0.5vw + 12px, 16px); line-height: 1.6; color: #c0b8ab; margin: 0 0 40px;">
-              Have a project in mind or just want to say hello? Drop a line — I'll get back as soon as I can.</p>
-          </div>
-          <div data-contact style="display: grid; grid-template-columns: 0.95fr 1.05fr; gap: clamp(28px, 3.5vw, 40px);">
-            <div data-reveal
-              style="opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s; display: flex; flex-direction: column; gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); height: fit-content; border-radius: 14px; overflow: hidden;">
-              <a href="mailto:adisharma102000@gmail.com"
-                style="background: #1c1813; padding: 18px 20px; display: flex; align-items: center; gap: 14px; transition: background 0.2s;"
-                style-hover="background: #251e17;">
-                <span
-                  style="width: 38px; height: 38px; flex-shrink: 0; display: grid; place-items: center; border-radius: 9px; background: rgba(234,67,53,0.14); color: #ef6f63;"><svg
-                    viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                  </svg></span>
-                <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0;"><span
-                    style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #a89e8d; letter-spacing: 0.5px;">EMAIL</span><span
-                    style="font-size: clamp(12.5px, 1.4vw, 14px); color: #f2ede3; overflow: hidden; text-overflow: ellipsis;">adisharma102000@gmail.com</span></span>
-              </a>
-              <a href="{{ whatsappUrl }}" target="_blank" rel="noopener"
-                style="background: #1c1813; padding: 18px 20px; display: flex; align-items: center; gap: 14px; transition: background 0.2s;"
-                style-hover="background: #251e17;">
-                <span
-                  style="width: 38px; height: 38px; flex-shrink: 0; display: grid; place-items: center; border-radius: 9px; background: rgba(70,204,99,0.14); color: #46cc63;"><svg
-                    viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413" />
-                  </svg></span>
-                <span style="display: flex; flex-direction: column; gap: 2px;"><span
-                    style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #a89e8d; letter-spacing: 0.5px;">WHATSAPP</span><span
-                    style="font-size: clamp(12.5px, 1.4vw, 14px); color: #f2ede3;">+91 63633 50665</span></span>
-              </a>
-              <a href="{{ githubUrl }}" target="_blank" rel="noopener"
-                style="background: #1c1813; padding: 18px 20px; display: flex; align-items: center; gap: 14px; transition: background 0.2s;"
-                style-hover="background: #251e17;">
-                <span
-                  style="width: 38px; height: 38px; flex-shrink: 0; display: grid; place-items: center; border-radius: 9px; background: rgba(255,255,255,0.08); color: #f2ede3;"><svg
-                    viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                  </svg></span>
-                <span style="display: flex; flex-direction: column; gap: 2px;"><span
-                    style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #a89e8d; letter-spacing: 0.5px;">GITHUB</span><span
-                    style="font-size: clamp(12.5px, 1.4vw, 14px); color: #f2ede3;">@CodeSamhita</span></span>
-              </a>
-              <a href="{{ linkedinUrl }}" target="_blank" rel="noopener"
-                style="background: #1c1813; padding: 18px 20px; display: flex; align-items: center; gap: 14px; transition: background 0.2s;"
-                style-hover="background: #251e17;">
-                <span
-                  style="width: 38px; height: 38px; flex-shrink: 0; display: grid; place-items: center; border-radius: 9px; background: rgba(74,159,224,0.14); color: #4a9fe0;"><svg
-                    viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
-                  </svg></span>
-                <span style="display: flex; flex-direction: column; gap: 2px;"><span
-                    style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #a89e8d; letter-spacing: 0.5px;">LINKEDIN</span><span
-                    style="font-size: clamp(12.5px, 1.4vw, 14px); color: #f2ede3;">Connect with me</span></span>
-              </a>
-              <a href="{{ instagramUrl }}" target="_blank" rel="noopener"
-                style="background: #1c1813; padding: 18px 20px; display: flex; align-items: center; gap: 14px; transition: background 0.2s;"
-                style-hover="background: #251e17;">
-                <span
-                  style="width: 38px; height: 38px; flex-shrink: 0; display: grid; place-items: center; border-radius: 9px; background: rgba(225,102,138,0.14); color: #e1668a;"><svg
-                    viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                  </svg></span>
-                <span style="display: flex; flex-direction: column; gap: 2px;"><span
-                    style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #a89e8d; letter-spacing: 0.5px;">INSTAGRAM</span><span
-                    style="font-size: clamp(12.5px, 1.4vw, 14px); color: #f2ede3;">@sanatan.simha</span></span>
-              </a>
-            </div>
-            <form onSubmit="{{ onSubmit }}" data-reveal
-              style="opacity: 0; transform: translateY(24px); transition: opacity 0.6s 0.08s, transform 0.6s 0.08s; display: flex; flex-direction: column; gap: 14px;">
-              <input required placeholder="Your name"
-                style="background: #1c1813; border: 1px solid rgba(255,255,255,0.12); color: #f2ede3; padding: 14px 16px; font-size: clamp(13.5px, 1.4vw, 15px); border-radius: 9px; outline: none;"
-                style-focus="border-color: #eaa64f;">
-              <input required type="email" placeholder="Your email"
-                style="background: #1c1813; border: 1px solid rgba(255,255,255,0.12); color: #f2ede3; padding: 14px 16px; font-size: clamp(13.5px, 1.4vw, 15px); border-radius: 9px; outline: none;"
-                style-focus="border-color: #eaa64f;">
-              <textarea required placeholder="Message" rows="5"
-                style="background: #1c1813; border: 1px solid rgba(255,255,255,0.12); color: #f2ede3; padding: 14px 16px; font-size: clamp(13.5px, 1.4vw, 15px); border-radius: 9px; outline: none; resize: vertical; font-family: inherit;"
-                style-focus="border-color: #eaa64f;"></textarea>
-              <button type="submit"
-                style="align-self: flex-start; padding: 14px 30px; background: #eaa64f; color: #13100c; font-weight: 600; font-size: clamp(13.5px, 1.4vw, 15px); border: none; cursor: pointer; transition: transform 0.2s; border-radius: 9px;"
-                style-hover="transform: translateY(-2px);">{{ sendLabel }}</button>
-            </form>
-          </div>
-        </section>
-
-        <!-- ===== FOOTER ===== -->
-        <footer style="border-top: 1px solid rgba(255,255,255,0.08); margin-top: 40px;">
-          <div
-            style="max-width: 1200px; margin: 0 auto; padding: 28px clamp(20px, 5vw, 32px); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
-            <span
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #897f6f;">©
-              2026 Aditya Sharma — my own effort, with a little help from AI.</span>
-            <span
-              style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #897f6f;">Bengaluru,
-              IN · +91 63633 50665</span>
-          </div>
-        </footer>
-
-        <!-- ===== CERTIFICATE MODAL POPUP ===== -->
-        <sc-if value="{{ activeCertImage }}" hint-placeholder-val="{{ false }}">
-          <div onClick="{{ closeCertPopup }}"
-            style="position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(19, 16, 12, 0.85); backdrop-filter: blur(12px); animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;">
-            <div onClick="{{ stopProp }}"
-              style="position: relative; max-width: 900px; width: 100%; max-height: calc(100vh - 120px); background: #1c1813; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; box-shadow: 0 32px 64px -16px rgba(0,0,0,0.85); overflow: hidden; display: flex; flex-direction: column; animation: scaleIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;">
-              <!-- Header -->
-              <div
-                style="display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); background: rgba(20,17,13,0.5);">
-                <div>
-                  <h4
-                    style="margin: 0; font-size: clamp(14px, 1.5vw, 17px); font-weight: 700; color: #f2ede3; letter-spacing: -0.3px;">
-                    {{ activeCertImage.name }}</h4>
-                  <span
-                    style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(10.5px, 1.2vw, 12px); color: #a89e8d;">{{
-                    activeCertImage.issuer }}</span>
-                </div>
-                <button onClick="{{ closeCertPopup }}"
-                  style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: #c0b8ab; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; transition: all 0.2s; outline: none;"
-                  style-hover="background: rgba(255,255,255,0.12); color: #f2ede3; transform: scale(1.05);">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </button>
-              </div>
-              <!-- Image Body -->
-              <div
-                style="flex: 1; overflow-y: auto; display: flex; align-items: center; justify-content: center; padding: clamp(12px, 3vw, 24px); background: #13100c;">
-                <img src="{{ activeCertImage.img }}" alt="{{ activeCertImage.name }}"
-                  style="max-width: 100%; max-height: calc(100vh - 240px); object-fit: contain; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); user-select: none;">
-              </div>
-            </div>
-          </div>
-        </sc-if>
-
-        <!-- ===== PROJECT DETAIL MODAL POPUP ===== -->
-        <sc-if value="{{ activeProject }}" hint-placeholder-val="{{ false }}">
-          <div onClick="{{ closeProjectPopup }}"
-            style="position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(19, 16, 12, 0.85); backdrop-filter: blur(12px); animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;">
-            <div onClick="{{ stopProp }}"
-              style="position: relative; max-width: 800px; width: 100%; max-height: calc(100vh - 80px); background: #1c1813; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; box-shadow: 0 32px 64px -16px rgba(0,0,0,0.85); overflow: hidden; display: flex; flex-direction: column; animation: scaleIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;">
-              <!-- Header -->
-              <div
-                style="display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); background: rgba(20,17,13,0.5);">
-                <div>
-                  <span
-                    style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 3px 8px; background: rgba(235,167,80,0.14); border: 1px solid rgba(235,167,80,0.25); color: #eaa64f; border-radius: 5px; letter-spacing: 0.5px;">{{
-                    activeProject.cat }}</span>
-                  <h4
-                    style="margin: 6px 0 0; font-size: clamp(16px, 1.8vw, 20px); font-weight: 700; color: #f2ede3; letter-spacing: -0.3px;">
-                    {{ activeProject.title }}</h4>
-                </div>
-                <button onClick="{{ closeProjectPopup }}"
-                  style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: #c0b8ab; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; transition: all 0.2s; outline: none;"
-                  style-hover="background: rgba(255,255,255,0.12); color: #f2ede3; transform: scale(1.05);">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </button>
-              </div>
-              <!-- Body -->
-              <div style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; background: #13100c;">
-                <!-- Modal Image Slider -->
-                <sc-if value="{{ activeProject.hasImage }}" hint-placeholder-val="{{ false }}">
-                  <div
-                    style="height: 320px; position: relative; background-color: #1c1813; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.06);">
-                    <img src="{{ activeProject.currentImage }}" alt="{{ activeProject.title }}"
-                      style="width: 100%; height: 100%; object-fit: contain; user-select: none;">
-                    <!-- arrows -->
-                    <sc-if value="{{ activeProject.hasMultipleImages }}" hint-placeholder-val="{{ false }}">
-                      <button onClick="{{ activeProject.prev }}"
-                        style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; background: rgba(20,17,13,0.85); border: 1px solid rgba(255,255,255,0.15); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(8px); transition: all 0.2s; padding: 0; outline: none;"
-                        style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
-                          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                      </button>
-                      <button onClick="{{ activeProject.next }}"
-                        style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; background: rgba(20,17,13,0.85); border: 1px solid rgba(255,255,255,0.15); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(8px); transition: all 0.2s; padding: 0; outline: none;"
-                        style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
-                          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                      </button>
-                      <div
-                        style="position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 4; background: rgba(20,17,13,0.64); padding: 4px 10px; border-radius: 20px; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.05);">
-                        <sc-for list="{{ activeProject.dots }}" as="dot" hint-placeholder-count="3">
-                          <span
-                            style="width: 6px; height: 6px; border-radius: 50%; background: {{ dot.bg }}; transform: {{ dot.scale }}; transition: all 0.25s;"></span>
-                        </sc-for>
-                      </div>
-                    </sc-if>
-                  </div>
-                </sc-if>
-                <!-- Details content -->
-                <div style="padding: 24px; display: flex; flex-direction: column; gap: 16px;">
-                  <p style="margin: 0; font-size: clamp(14px, 1.5vw, 16px); line-height: 1.6; color: #c0b8ab;">{{
-                    activeProject.desc }}</p>
-
-                  <sc-if value="{{ activeProject.hasHighlight }}" hint-placeholder-val="{{ false }}">
-                    <div
-                      style="display: flex; gap: 10px; padding: 12px 16px; background: rgba(235,167,80,0.06); border: 1px solid rgba(235,167,80,0.18); border-radius: 10px; font-size: clamp(12.5px, 1.3vw, 14px); line-height: 1.5; color: #eaa64f;">
-                      <span style="flex-shrink: 0;">★</span>
-                      <span>{{ activeProject.highlight }}</span>
-                    </div>
-                  </sc-if>
-
-                  <div>
-                    <p
-                      style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(10px, 1.1vw, 11px); color: #897f6f; letter-spacing: 0.5px;">
-                      TECHNOLOGIES USED</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                      <sc-for list="{{ activeProject.tech }}" as="t" hint-placeholder-count="4">
-                        <span
-                          style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11px, 1.2vw, 12px); padding: 5px 10px; color: #f2ede3; background: #1c1813; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px;">{{
-                          t }}</span>
-                      </sc-for>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </sc-if>
-
-        <!-- ===== GALLERY ALBUM DETAIL MODAL POPUP ===== -->
-        <sc-if value="{{ activeGalleryAlbum }}" hint-placeholder-val="{{ false }}">
-          <div onClick="{{ closeGalleryPopup }}"
-            style="position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(19, 16, 12, 0.85); backdrop-filter: blur(12px); animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;">
-            <div onClick="{{ stopProp }}"
-              style="position: relative; max-width: 800px; width: 100%; max-height: calc(100vh - 80px); background: #1c1813; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; box-shadow: 0 32px 64px -16px rgba(0,0,0,0.85); overflow: hidden; display: flex; flex-direction: column; animation: scaleIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;">
-              <!-- Header -->
-              <div
-                style="display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); background: rgba(20,17,13,0.5);">
-                <div>
-                  <span
-                    style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(9px, 1.1vw, 10px); padding: 3px 8px; background: rgba(235,167,80,0.14); border: 1px solid rgba(235,167,80,0.25); color: #eaa64f; border-radius: 5px; letter-spacing: 0.5px;">LAB
-                    MOMENTS</span>
-                  <h4
-                    style="margin: 6px 0 0; font-size: clamp(16px, 1.8vw, 20px); font-weight: 700; color: #f2ede3; letter-spacing: -0.3px;">
-                    {{ activeGalleryAlbum.title }}</h4>
-                </div>
-                <button onClick="{{ closeGalleryPopup }}"
-                  style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: #c0b8ab; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; transition: all 0.2s; outline: none;"
-                  style-hover="background: rgba(255,255,255,0.12); color: #f2ede3; transform: scale(1.05);">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </button>
-              </div>
-              <!-- Body -->
-              <div style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; background: #13100c;">
-                <!-- Modal Image Slider -->
-                <sc-if value="{{ activeGalleryAlbum.hasImage }}" hint-placeholder-val="{{ false }}">
-                  <div
-                    style="height: clamp(300px, 50vh, 480px); position: relative; background-color: #1c1813; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.06);">
-                    <img src="{{ activeGalleryAlbum.currentImage }}" alt="{{ activeGalleryAlbum.title }}"
-                      style="width: 100%; height: 100%; object-fit: contain; user-select: none;">
-                    <!-- arrows -->
-                    <sc-if value="{{ activeGalleryAlbum.hasMultipleImages }}" hint-placeholder-val="{{ false }}">
-                      <button onClick="{{ activeGalleryAlbum.prev }}"
-                        style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; background: rgba(20,17,13,0.85); border: 1px solid rgba(255,255,255,0.15); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(8px); transition: all 0.2s; padding: 0; outline: none;"
-                        style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
-                          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                      </button>
-                      <button onClick="{{ activeGalleryAlbum.next }}"
-                        style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; background: rgba(20,17,13,0.85); border: 1px solid rgba(255,255,255,0.15); color: #eaa64f; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 5; backdrop-filter: blur(8px); transition: all 0.2s; padding: 0; outline: none;"
-                        style-hover="background: #eaa64f; color: #13100c; border-color: #eaa64f; transform: translateY(-50%) scale(1.08);">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
-                          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                      </button>
-                      <div
-                        style="position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 4; background: rgba(20,17,13,0.64); padding: 4px 10px; border-radius: 20px; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.05);">
-                        <sc-for list="{{ activeGalleryAlbum.dots }}" as="dot" hint-placeholder-count="3">
-                          <span
-                            style="width: 6px; height: 6px; border-radius: 50%; background: {{ dot.bg }}; transform: {{ dot.scale }}; transition: all 0.25s;"></span>
-                        </sc-for>
-                      </div>
-                    </sc-if>
-                  </div>
-                </sc-if>
-              </div>
-            </div>
-          </div>
-        </sc-if>
-
-      </main>
+    </style>
+</head>
+
+<body>
+
+    <!-- Ambient warm background -->
+    <div class="ambient-background" aria-hidden="true">
+        <div class="glow-orb orb-primary"></div>
+        <div class="glow-orb orb-secondary"></div>
+        <div class="glow-orb orb-accent"></div>
     </div>
-  </x-dc>
-  <script type="text/x-dc" data-dc-script
-    data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;showAvailability&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;gridLines&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Background&quot;}}">
-class Component extends DCLogic {
-  state = { active: 'home', menuOpen: false, navOpen: false, filter: 'All', sent: false, typed: '', activeCertImage: null, activeProject: null, activeGalleryAlbum: null, projectImageIndexes: {}, galleryImageIndexes: {} };
 
-  constructor(props) {
-    super(props);
-    this.tiltRef = React.createRef();
-    this.cubeRef = React.createRef();
-    this._cleanups = [];
-    this._roles = ['A Full Stack Developer.', 'An Innovator.', 'A Hardware Enthusiast.', 'A Problem Solver.'];
-    this._slideshowTimers = [];
-    this.projects = [
-      { title: 'Autonomous RoboDog', cat: 'Robotics', shot: 'security quadruped', desc: 'A security quadruped that detects and follows a recognised face in real time using on-board computer vision.', highlight: 'Basis of the IEEE NQComp-2026 research paper (MIT Manipal).', tech: ['Python', 'OpenCV', 'Face Recognition', 'Embedded'], images: ['assets/gallery/Project/Robo Dog - Robotics/IMG_20250918_164037.jpg', 'assets/gallery/Project/Robo Dog - Robotics/IMG_20250918_164108.jpg', 'assets/gallery/Project/Robo Dog - Robotics/Screenshot 2025-11-02 151530.png'] },
-      { title: 'Interactive Humanoid', cat: 'AI', shot: 'humanoid bust', desc: 'An interactive humanoid that listens, understands and replies with real-time, lip-synced speech.', highlight: 'Real-time speech recognition with lip-synced response.', tech: ['Raspberry Pi', 'Whisper', 'OpenCV', 'TTS'], images: ['assets/gallery/Project/Humonoid - Robotics/20251010_170740.jpg', 'assets/gallery/Project/Humonoid - Robotics/20251112_152204.jpg', 'assets/gallery/Project/Humonoid - Robotics/20251118_171630.jpg', 'assets/gallery/Project/Humonoid - Robotics/IMG_20250822_233600.jpg'] },
-      { title: 'Smart Switch — LEO', cat: 'IoT', shot: 'local-first hub', desc: 'A local-first smart-home switch and hub with its own MQTT broker, web dashboard and a companion Android app. Runs entirely on your network — no cloud.', highlight: 'Fully offline — its own broker, mDNS clustering and a glassmorphic app.', tech: ['ESP32-S3', 'FreeRTOS', 'MQTT', 'Kotlin'], images: ['assets/gallery/Project/Smart Switch - IOT/IMG_20260623_212231.jpg'] },
-      { title: 'Smart Tank Monitor — AquaNode', cat: 'IoT', shot: 'water-level sensor', desc: 'A Wi-Fi water-tank monitor — ultrasonic level sensing, a live dashboard, colour LED status and push alerts, with on-device logging.', highlight: 'Live dashboard updated in real time over Server-Sent Events.', tech: ['ESP32-C3', 'Ultrasonic', 'SSE', 'React'], images: ['assets/gallery/Project/Smart tank - IOT/IMG_20260515_043412.jpg', 'assets/gallery/Project/Smart tank - IOT/IMG_20260515_111504.jpg', 'assets/gallery/Project/Smart tank - IOT/IMG_20260623_212209.jpg', 'assets/gallery/Project/Smart tank - IOT/IMG_20241014_221137.jpg'] },
-      { title: 'AI-Driven Smart Traffic Management', cat: 'AI', shot: 'traffic vision feed', desc: 'A computer-vision system that detects traffic flow and optimises signal timing to ease congestion.', highlight: '', tech: ['Python', 'OpenCV', 'Computer Vision'], images: ['assets/gallery/Project/AI driven smart traffi analysis system - AI-Automation/IMG_20260428_140703.jpg', 'assets/gallery/Project/AI driven smart traffi analysis system - AI-Automation/Screenshot 2026-03-28 152532.png', 'assets/gallery/Project/AI driven smart traffi analysis system - AI-Automation/Screenshot-2026-03-28-152522.png'] },
-      { title: 'WALL-E Build', cat: 'Robotics', shot: 'animatronic build', desc: 'A WALL-E–inspired animatronic build with motion and personality, presented at the Innovative Project Expo.', highlight: '', tech: ['Arduino', 'Servos', '3D Printing'], images: ['assets/gallery/Project/Wall-E - ROBOTICS/1744954817634.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/Project Expo Orientation.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_20241216_161123.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_2760.JPG', 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_2761.JPG', 'assets/gallery/Project/Wall-E - ROBOTICS/0A2A1514.JPG'] },
-      { title: 'Path Finder Bot', cat: 'Robotics', shot: 'obstacle avoider', desc: 'An obstacle-avoiding robot that works out a route around barriers in real time.', highlight: '', tech: ['Arduino', 'Ultrasonic', 'Robotics'], images: ['assets/gallery/Project/Path finder bot - Security-robotics/Path finder bot.jpg', 'assets/gallery/Project/Path finder bot - Security-robotics/IMG_20250729_165030.jpg'] },
-      { title: 'Line Follower Bot', cat: 'Robotics', shot: 'track follower', desc: 'An autonomous robot that follows a marked track using IR sensors and a tuned control loop.', highlight: '', tech: ['Arduino', 'IR Sensors', 'Control Loop'], images: [] },
-      { title: 'Smart Traffic System', cat: 'IoT', shot: 'adaptive signals', desc: 'A model traffic-control system that adapts signal timing to live road conditions using sensors.', highlight: '', tech: ['Arduino', 'Sensors', 'Embedded C'], images: ['assets/gallery/Project/Smart Traffic System (Hardware) - Automation/IMG_20220823_162440.jpg', 'assets/gallery/Project/Smart Traffic System (Hardware) - Automation/IMG_20220823_163903.jpg', 'assets/gallery/Project/Smart Traffic System (Hardware) - Automation/IMG_20220823_164336.jpg', 'assets/gallery/Project/Smart Traffic System (Hardware) - Automation/IMG_20220823_164838.jpg'] },
-      { title: 'Maker Space Sign Board', cat: 'Hardware', shot: 'addressable LEDs', desc: 'A programmable LED sign board built for the campus Maker Space, with addressable lighting effects.', highlight: '', tech: ['ESP32', 'WLED', 'NeoPixel'], images: ['assets/gallery/Project/Wled - IOT/IMG_20241028_082845.jpg', 'assets/gallery/Project/Wled - IOT/IMG_20241014_221153.jpg', 'assets/gallery/Project/Wled - IOT/IMG_20250102_033107.jpg'] },
-      { title: 'Cyber Attack Demonstration', cat: 'Security', shot: 'attack & defence', desc: 'An educational demonstration of common attack techniques and their defences, built to teach safe security practices.', highlight: '', tech: ['Security', 'Networking', 'Linux', 'Python'], images: ['assets/gallery/Project/Cyber Attack Demonstration - Security/IMG_6827 2.jpg', 'assets/gallery/Project/Cyber Attack Demonstration - Security/IMG_6828 4.jpg', 'assets/gallery/Project/Cyber Attack Demonstration - Security/P_20220113_165046.jpg'] },
-    ];
-    this.gallery = [
-      { title: 'EnVision 2025 · IITM Research Park', count: 7, images: ['assets/gallery/Moments/Envision IITM/IMG_20250130_130729.jpg', 'assets/gallery/Moments/Envision IITM/IMG_1700.jpeg', 'assets/gallery/Moments/Envision IITM/IMG_20250130_120154_1.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250130_130857.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250130_132715.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250131_120523.jpg', 'assets/gallery/Moments/Envision IITM/IMG_20250131_122241.jpg'] },
-      { title: 'Best Innovator & Ambassador Meet', count: 2, images: ['assets/gallery/Moments/Best Innovator & Ambassador/Best Innovator.jpg', 'assets/gallery/Moments/Best Innovator & Ambassador/Ambasdor meet.jpg'] },
-      { title: 'Anveshan — South Zone', count: 4, images: ['assets/gallery/Moments/Anveshan/Anveshan.jpg', 'assets/gallery/Moments/Anveshan/IMG_20250221_142419.jpg', 'assets/gallery/Moments/Anveshan/IMG_20250221_143953.jpg', 'assets/gallery/Moments/Anveshan/IMG_20250221_144424.jpg'] },
-      { title: 'Student Project Expo 2024', count: 3, images: ['assets/gallery/Project/Wall-E - ROBOTICS/Project Expo Orientation.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_20241216_161123.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/0A2A1514.JPG'] },
-      { title: 'MakerSpace Build Sessions', count: 4, images: ['assets/gallery/Project/Wall-E - ROBOTICS/IMG_2760.JPG', 'assets/gallery/Project/Wall-E - ROBOTICS/IMG_2761.JPG', 'assets/gallery/Project/Wall-E - ROBOTICS/1744954817634.jpg', 'assets/gallery/Project/Wall-E - ROBOTICS/DSC03312.JPG'] },
-      { title: 'Tech Fests & Demos', count: 3, images: ['assets/gallery/Moments/AWS/IMG_20220726_165740.jpg', 'assets/gallery/Moments/AWS/IMG_20220727_161055.jpg', 'assets/gallery/Moments/AWS/IMG_20220727_164420.jpg'] },
-    ];
-  }
+    <!-- Main Content Wrapper -->
+    <div id="main-content">
+        <canvas id="particle-canvas"></canvas>
+        <div id="tilt-card"
+            class="w-full max-w-md mx-auto rounded-2xl shadow-2xl overflow-hidden card-float my-8"
+            style="background: rgba(28,24,19,0.55); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 30px 60px -24px rgba(0,0,0,0.7);">
+            <div class="p-8 sm:p-10 text-center">
+                <img class="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto mb-5 border-4 profile-pulse"
+                    src="../assets/profile.jpg" alt="Profile Picture"
+                    onerror="this.onerror=null;this.src='https://placehold.co/200x200/0d0a06/eaa64f?text=AS';">
 
-  navTo(id) {
-    const el = document.getElementById(id);
-    if (el) {
-      const y = el.getBoundingClientRect().top + window.scrollY - 80;
-      this.smoothScrollTo(y);
-    }
-    this.setState({ menuOpen: false });
-  }
+                <h1 class="serif text-3xl sm:text-4xl font-medium mb-1" style="color: var(--ink); letter-spacing: -0.01em;">
+                    Aditya Sharma</h1>
+                <p class="mono text-sm sm:text-base mb-6" style="color: var(--amber); letter-spacing: 1px;">Creative Coder &amp; Innovator</p>
 
-  smoothScrollTo(targetY) {
-    if (this._scrollRaf) cancelAnimationFrame(this._scrollRaf);
-    const startY = window.scrollY;
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    const dest = Math.max(0, Math.min(targetY, max));
-    const dist = dest - startY;
-    if (Math.abs(dist) < 2) return;
-    const dur = Math.min(1100, Math.max(480, Math.abs(dist) * 0.6));
-    const t0 = performance.now();
-    const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
-    const step = (now) => {
-      const p = Math.min(1, (now - t0) / dur);
-      window.scrollTo(0, startY + dist * ease(p));
-      if (p < 1) this._scrollRaf = requestAnimationFrame(step);
-    };
-    this._scrollRaf = requestAnimationFrame(step);
-  }
+                <div class="rounded-lg px-2 py-3 mt-8" style="background: rgba(13,10,6,0.55); border: 1px solid rgba(255,255,255,0.08);">
+                    <h3 class="mono text-xs tracking-wider uppercase" style="color: #a89e8d;">
+                        Quick Connect &middot; click to contact
+                    </h3>
+                    <div class="flex justify-center items-center space-x-6 mt-4 opacity-90">
+                        <a href="https://www.linkedin.com/in/aditya-sharma-profile" title="LinkedIn"
+                            class="social-icon text-[#0077b5] transition-all"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg></a>
+                        <a href="https://wa.me/916363350665?text=Hello%20Aditya,%20I'm%20reaching%20out%20from%20your%20portfolio%20page."
+                            title="WhatsApp" class="social-icon text-[#25d366] transition-all"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.902-.539-5.57-1.502L.057 24zM7.327 21.16l.494.297c1.492.896 3.23.142 4.595.142 5.465 0 9.908-4.444 9.908-9.908s-4.444-9.908-9.908-9.908c-5.465 0-9.908 4.444-9.908 9.908 0 2.021.607 3.926 1.719 5.574l.32.484-1.059 3.865 3.956-1.04zM12.273 14.12l-1.612-2.043c-.418-.529-.117-.834.188-1.111.262-.24.438-.297.588-.529.15-.232.15-.418.105-.588-.045-.17-.465-1.112-1.059-2.648-.594-1.536-1.188-1.29-1.662-1.32-.422-.023-.902-.045-1.375.211-.529.256-1.004.834-1.004 1.968s.375 3.488 1.53 4.842c1.154 1.354 2.443 3.03 5.207 4.536 2.764 1.506 3.646 1.205 4.23 1.057.582-.15 1.809-.747 2.066-1.492.256-.747.256-1.383.188-1.536-.068-.15-.465-.24-.947-.465z" />
+                            </svg></a>
+                        <a href="https://github.com/CodeSamhita" title="GitHub"
+                            class="social-icon transition-all" style="color: var(--ink);"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.852 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" />
+                            </svg></a>
+                        <a href="https://x.com/Aditya85946983?t=5cYQMowlU6HTMXjzK6CZcg&s=09" title="X"
+                            class="social-icon transition-all" style="color: var(--ink);"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg></a>
+                        <a href="https://www.instagram.com/visionary_adi?igsh=MjI4Z2N3MzZxYnFk" title="Instagram"
+                            class="social-icon transition-all"><svg class="w-7 h-7" viewBox="0 0 24 24" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#f09433" />
+                                        <stop offset="25%" stop-color="#e6683c" />
+                                        <stop offset="50%" stop-color="#dc2743" />
+                                        <stop offset="75%" stop-color="#cc2366" />
+                                        <stop offset="100%" stop-color="#bc1888" />
+                                    </linearGradient>
+                                </defs>
+                                <path fill="url(#ig-grad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z" />
+                            </svg></a>
+                    </div>
+                </div>
 
-  componentDidMount() {
-    const FLUID = 'cubic-bezier(.22,1,.36,1)';
-    const revealEls = [...document.querySelectorAll('[data-reveal]')];
-    revealEls.forEach((el) => {
-      el.style.transition = 'opacity 1s ' + FLUID + ', transform 1s ' + FLUID + ', filter 1s ' + FLUID;
-      el.style.filter = 'blur(7px)';
-      el.style.willChange = 'opacity, transform, filter';
-    });
+                <!-- Loading status -->
+                <div class="mt-8 text-left">
+                    <div class="flex items-center justify-between mb-2">
+                        <span id="load-status" class="mono text-xs" style="color: #c0b8ab; letter-spacing: 0.5px;">Initializing&hellip;</span>
+                        <span id="load-pct" class="mono text-xs" style="color: var(--amber);">0%</span>
+                    </div>
+                    <div class="load-track">
+                        <div id="load-fill" class="load-fill"></div>
+                    </div>
+                </div>
 
-    this._reveal = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          const el = e.target;
-          // stagger within the element's group of revealing siblings
-          const sibs = el.parentElement ? [...el.parentElement.querySelectorAll(':scope > [data-reveal]')] : [el];
-          const idx = Math.max(0, sibs.indexOf(el));
-          el.style.transitionDelay = Math.min(idx * 90, 360) + 'ms';
-          el.style.opacity = '1';
-          el.style.transform = 'none';
-          el.style.filter = 'none';
-          setTimeout(() => { el.style.willChange = 'auto'; }, 1100);
-          this._reveal.unobserve(el);
+                <div class="space-y-4 mt-6">
+                    <a id="enter-btn" href="../Aditya Sharma - Portfolio.dc.html"
+                        class="enter-btn block w-full font-semibold py-6 px-6 rounded-lg transition-all duration-300"
+                        style="background: rgba(235,167,80,0.14); border: 1px solid rgba(235,167,80,0.4); color: var(--amber); pointer-events: none;"
+                        aria-disabled="true">
+                        <span class="spinner"></span>
+                        <span id="enter-label" class="ml-2 align-middle">Preparing your experience&hellip;</span>
+                    </a>
+
+                    <button id="share-button"
+                        class="block w-full font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+                        style="background: transparent; border: 1px solid rgba(255,255,255,0.18); color: #c0b8ab;">
+                        Share this Page
+                    </button>
+                </div>
+            </div>
+
+            <footer class="text-center py-4 px-6 relative z-10" style="background: rgba(13,10,6,0.85); border-top: 1px solid rgba(255,255,255,0.06);">
+                <p class="mono text-xs mb-2" style="color: #897f6f;">Loading the live portfolio &amp; latest projects into the system.</p>
+                <p class="text-sm font-medium" style="color: #a89e8d;">&copy; 2026 Aditya Sharma. All Rights Reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Hidden frame that actually preloads the portfolio + its assets/data -->
+    <iframe id="preload-frame" title="preloading portfolio" aria-hidden="true"></iframe>
+
+    <!-- Share Confirmation Toast -->
+    <div id="share-toast">Link Copied Successfully!</div>
+
+    <script>
+        // ===== Destination =====
+        const PORTFOLIO_URL = "../Aditya Sharma - Portfolio.dc.html";
+        const MIN_SPLASH_MS = 1600;   // keep the loved splash on screen at least this long
+        const SAFETY_MS = 14000;      // hand off anyway if loading stalls
+
+        // ===== Particle background =====
+        let canvas, ctx, particles, mouse;
+
+        class Particle {
+            constructor(x, y, dx, dy, size, color) {
+                this.x = x; this.y = y; this.directionX = dx; this.directionY = dy; this.size = size; this.color = color;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+            update() {
+                if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
+                if (this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
+                if (mouse.x && mouse.y) {
+                    let dx = mouse.x - this.x, dy = mouse.y - this.y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < mouse.radius + this.size) {
+                        if (mouse.x < this.x && this.x < canvas.width - this.size * 10) this.x += 3;
+                        if (mouse.x > this.x && this.x > this.size * 10) this.x -= 3;
+                        if (mouse.y < this.y && this.y < canvas.height - this.size * 10) this.y += 3;
+                        if (mouse.y > this.y && this.y > this.size * 10) this.y -= 3;
+                    }
+                }
+                this.x += this.directionX; this.y += this.directionY; this.draw();
+            }
         }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
-    revealEls.forEach((el) => this._reveal.observe(el));
 
-    const ids = ['home', 'about', 'skills', 'work', 'journey', 'gallery', 'contact'];
-    this._spy = new IntersectionObserver((entries) => {
-      entries.forEach((e) => { if (e.isIntersecting) this.setState({ active: e.target.id }); });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    ids.forEach((id) => { const s = document.getElementById(id); if (s) this._spy.observe(s); });
-
-    this.setupTilt();
-    this.setupCube();
-    this.startTyping();
-
-    this._onScroll = () => {
-      const h = document.documentElement;
-      const max = h.scrollHeight - h.clientHeight;
-      const p = max > 0 ? Math.min(1, h.scrollTop / max) : 0;
-      const bar = document.querySelector('[data-progress]');
-      if (bar) bar.style.transform = 'scaleX(' + p + ')';
-      const glow = document.querySelector('[data-glow]');
-      if (glow) glow.style.transform = 'translateX(-50%) translateY(' + (h.scrollTop * -0.18) + 'px)';
-    };
-    window.addEventListener('scroll', this._onScroll, { passive: true });
-    this._onScroll();
-
-    this._onKeyDown = (e) => {
-      if (e.key === 'Escape') this.setState({ activeCertImage: null, activeProject: null, activeGalleryAlbum: null });
-    };
-    window.addEventListener('keydown', this._onKeyDown);
-
-    this.startProjectSlideshow();
-  }
-
-  componentWillUnmount() {
-    if (this._reveal) this._reveal.disconnect();
-    if (this._spy) this._spy.disconnect();
-    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
-    if (this._onKeyDown) window.removeEventListener('keydown', this._onKeyDown);
-    if (this._slideshowTimers) this._slideshowTimers.forEach(clearTimeout);
-    if (this._typeTimer) clearTimeout(this._typeTimer);
-    if (this._raf) cancelAnimationFrame(this._raf);
-    if (this._scrollRaf) cancelAnimationFrame(this._scrollRaf);
-    this._cleanups.forEach((fn) => fn());
-  }
-
-  startProjectSlideshow() {
-    // 1. Projects auto-slideshow
-    const multiImgProjects = this.projects.filter((p) => p.images && p.images.length > 1);
-    multiImgProjects.forEach((p) => {
-      const cycle = () => {
-        if (!this.state.activeProject && !this.state.activeCertImage && !this.state.activeGalleryAlbum) {
-          const idx = this.state.projectImageIndexes[p.title] || 0;
-          const nextIdx = (idx + 1) % p.images.length;
-          this.setState((s) => ({
-            projectImageIndexes: { ...s.projectImageIndexes, [p.title]: nextIdx }
-          }));
+        function initParticles() {
+            particles = [];
+            let n = (canvas.height * canvas.width) / 9000;
+            for (let i = 0; i < n; i++) {
+                let size = (Math.random() * 2) + 1;
+                let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                particles.push(new Particle(x, y, (Math.random() * .4) - .2, (Math.random() * .4) - .2, size, 'rgba(235, 167, 80, 0.4)'));
+            }
         }
-        const delay = 4000 + Math.random() * 3500;
-        const timer = setTimeout(cycle, delay);
-        this._slideshowTimers.push(timer);
-      };
-      const initialDelay = 2000 + Math.random() * 4000;
-      const timer = setTimeout(cycle, initialDelay);
-      this._slideshowTimers.push(timer);
-    });
 
-    // 2. Gallery auto-slideshow
-    const multiImgGallery = this.gallery.filter((g) => g.images && g.images.length > 1);
-    multiImgGallery.forEach((g) => {
-      const cycle = () => {
-        if (!this.state.activeProject && !this.state.activeCertImage && !this.state.activeGalleryAlbum) {
-          const idx = this.state.galleryImageIndexes[g.title] || 0;
-          const nextIdx = (idx + 1) % g.images.length;
-          this.setState((s) => ({
-            galleryImageIndexes: { ...s.galleryImageIndexes, [g.title]: nextIdx }
-          }));
+        function connectParticles() {
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a; b < particles.length; b++) {
+                    let d = ((particles[a].x - particles[b].x) ** 2) + ((particles[a].y - particles[b].y) ** 2);
+                    if (d < (canvas.width / 7) * (canvas.height / 7)) {
+                        let o = 1 - (d / 20000);
+                        ctx.strokeStyle = `rgba(235, 167, 80, ${o * 0.3})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[a].x, particles[a].y);
+                        ctx.lineTo(particles[b].x, particles[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
         }
-        const delay = 4500 + Math.random() * 3500;
-        const timer = setTimeout(cycle, delay);
-        this._slideshowTimers.push(timer);
-      };
-      const initialDelay = 3000 + Math.random() * 4000;
-      const timer = setTimeout(cycle, initialDelay);
-      this._slideshowTimers.push(timer);
-    });
-  }
 
-  startTyping() {
-    let ri = 0, ci = 0, deleting = false;
-    const tick = () => {
-      const word = this._roles[ri];
-      if (!deleting) {
-        ci++;
-        this.setState({ typed: word.slice(0, ci) });
-        if (ci === word.length) { deleting = true; this._typeTimer = setTimeout(tick, 1500); return; }
-        this._typeTimer = setTimeout(tick, 70);
-      } else {
-        ci--;
-        this.setState({ typed: word.slice(0, ci) });
-        if (ci === 0) { deleting = false; ri = (ri + 1) % this._roles.length; this._typeTimer = setTimeout(tick, 320); return; }
-        this._typeTimer = setTimeout(tick, 35);
-      }
-    };
-    this._typeTimer = setTimeout(tick, 600);
-  }
+        function animateParticles() {
+            requestAnimationFrame(animateParticles);
+            ctx.clearRect(0, 0, innerWidth, innerHeight);
+            for (let i = 0; i < particles.length; i++) particles[i].update();
+            connectParticles();
+        }
 
-  setupTilt() {
-    const wrap = this.tiltRef.current;
-    if (!wrap) return;
-    let raf = null;
-    const onMove = (e) => {
-      const r = wrap.getBoundingClientRect();
-      const px = (e.clientX - r.left) / r.width - 0.5;
-      const py = (e.clientY - r.top) / r.height - 0.5;
-      if (raf) cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        wrap.style.transform = 'perspective(900px) rotateY(' + (px * 10) + 'deg) rotateX(' + (-py * 10) + 'deg) scale(1.02)';
-      });
-    };
-    const onLeave = () => { wrap.style.transform = ''; };
-    wrap.addEventListener('pointermove', onMove);
-    wrap.addEventListener('pointerleave', onLeave);
-    this._cleanups.push(() => {
-      wrap.removeEventListener('pointermove', onMove);
-      wrap.removeEventListener('pointerleave', onLeave);
-    });
-  }
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            initParticles();
+        }
 
-  setupCube() {
-    const scene = this.cubeRef.current;
-    if (!scene) return;
-    const cube = scene.querySelector('[data-cube]');
-    if (!cube) return;
-    let rx = -16, ry = 28, vy = 0.35, vx = 0;
-    let dragging = false, lx = 0, ly = 0;
-    const apply = () => { cube.style.transform = 'translateZ(-43px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)'; };
+        // ===== Loading / handoff orchestration =====
+        const startTime = Date.now();
+        let progress = 0;
+        let portfolioReady = false;
+        let handedOff = false;
 
-    const down = (e) => { dragging = true; lx = e.clientX; ly = e.clientY; vx = 0; vy = 0; scene.style.cursor = 'grabbing'; try { scene.setPointerCapture(e.pointerId); } catch (err) {} };
-    const move = (e) => {
-      if (!dragging) return;
-      const dx = e.clientX - lx, dy = e.clientY - ly;
-      ry += dx * 0.5; rx -= dy * 0.5;
-      vy = dx * 0.14; vx = -dy * 0.14;
-      lx = e.clientX; ly = e.clientY;
-    };
-    const up = () => { dragging = false; scene.style.cursor = 'grab'; };
+        const fill = () => document.getElementById('load-fill');
+        const pct = () => document.getElementById('load-pct');
+        const statusEl = () => document.getElementById('load-status');
 
-    scene.addEventListener('pointerdown', down);
-    scene.addEventListener('pointermove', move);
-    scene.addEventListener('pointerup', up);
-    scene.addEventListener('pointercancel', up);
+        const STAGES = [
+            "Connecting\u2026",
+            "Fetching profile & projects\u2026",
+            "Loading imagery\u2026",
+            "Preparing animations\u2026",
+            "Almost ready\u2026"
+        ];
 
-    const loop = () => {
-      if (!dragging) {
-        ry += vy; rx += vx;
-        vx *= 0.94;
-        vy = vy * 0.94 + 0.35 * 0.06;
-        rx += (-16 - rx) * 0.01;
-      }
-      apply();
-      this._raf = requestAnimationFrame(loop);
-    };
-    loop();
+        function setProgress(p, label) {
+            progress = Math.max(progress, Math.min(p, 100));
+            if (fill()) fill().style.width = progress + '%';
+            if (pct()) pct().textContent = Math.round(progress) + '%';
+            if (label && statusEl()) statusEl().textContent = label;
+        }
 
-    this._cleanups.push(() => {
-      scene.removeEventListener('pointerdown', down);
-      scene.removeEventListener('pointermove', move);
-      scene.removeEventListener('pointerup', up);
-      scene.removeEventListener('pointercancel', up);
-    });
-  }
+        // Smoothly creep the bar while the real frame loads, capped at 90% until ready.
+        let creepTimer = setInterval(() => {
+            if (portfolioReady) return;
+            const cap = 90;
+            if (progress < cap) {
+                const step = progress < 60 ? 2.2 : 0.7;
+                const next = Math.min(progress + Math.random() * step, cap);
+                const stage = STAGES[Math.min(Math.floor(next / 20), STAGES.length - 1)];
+                setProgress(next, stage);
+            }
+        }, 220);
 
-  renderVals() {
-    const active = this.state.active;
-    const filter = this.state.filter;
+        function finishLoad() {
+            if (portfolioReady) return;
+            portfolioReady = true;
+            clearInterval(creepTimer);
+            setProgress(100, "Ready");
 
-    const navLinks = [
-      { id: 'home', label: 'Home' }, { id: 'about', label: 'About' },
-      { id: 'skills', label: 'Skills' }, { id: 'work', label: 'Work' },
-      { id: 'journey', label: 'Journey' }, { id: 'contact', label: 'Contact' },
-    ].map((l) => ({
-      ...l,
-      color: active === l.id ? '#eaa64f' : '#a89e8d',
-      bg: active === l.id ? 'rgba(235,167,80,0.14)' : 'transparent',
-      go: () => this.navTo(l.id),
-    }));
+            const btn = document.getElementById('enter-btn');
+            const label = document.getElementById('enter-label');
+            const spin = btn.querySelector('.spinner');
+            if (spin) spin.style.display = 'none';
+            label.textContent = 'Enter Portfolio \u2192';
+            btn.style.pointerEvents = 'auto';
+            btn.removeAttribute('aria-disabled');
+            btn.style.background = 'rgba(235,167,80,0.22)';
+            btn.style.boxShadow = '0 0 25px rgba(235,167,80,0.3)';
 
-    const stats = [
-      { num: '25+', label: 'Projects' },
-      { num: '50+', label: 'Students mentored' },
-      { num: '1', label: 'IEEE paper' },
-      { num: '4+', label: 'Years building' },
-    ];
+            // Honour minimum splash time, then hand off automatically.
+            const elapsed = Date.now() - startTime;
+            const wait = Math.max(MIN_SPLASH_MS - elapsed, 650);
+            setTimeout(handoff, wait);
+        }
 
-    const navMenu = [
-      { id: 'about', label: 'About', tag: '01' },
-      { id: 'skills', label: 'Skills', tag: '02' },
-      { id: 'work', label: 'Work', tag: '03' },
-      { id: 'journey', label: 'Journey', tag: '04' },
-      { id: 'contact', label: 'Contact', tag: '05' },
-    ].map((m) => ({ ...m, go: () => { this.setState({ navOpen: false }); this.navTo(m.id); } }));
+        function handoff() {
+            if (handedOff) return;
+            handedOff = true;
+            const mc = document.getElementById('main-content');
+            mc.style.transition = 'opacity 0.6s ease';
+            mc.style.opacity = '0';
+            setTimeout(() => { window.location.href = PORTFOLIO_URL; }, 600);
+        }
 
-    const skills = [
-      { title: 'PROGRAMMING LANGUAGES', items: ['Python', 'C', 'C++', 'Java', 'Kotlin', 'JavaScript', 'C#'] },
-      { title: 'WEB & FRAMEWORKS', items: ['React.js', 'Node.js', 'Flask', 'Bootstrap', 'REST APIs', 'HTML/CSS'] },
-      { title: 'EMBEDDED & IoT', items: ['ROS 2', 'Arduino', 'ESP32 (C3/S3)', 'Raspberry Pi', 'Jetson Nano', 'FreeRTOS', 'PlatformIO', 'MQTT', 'Ubuntu'] },
-      { title: 'AI · ML · VISION', items: ['TensorFlow', 'PyTorch', 'OpenCV', 'Scikit-learn', 'NumPy', 'Pandas', 'LangChain', 'Whisper AI'] },
-      { title: 'METHODOLOGIES', items: ['Leadership', 'Agile', 'Mentorship', 'Problem-Solving', 'Team Collaboration'] },
-      { title: 'SPOKEN LANGUAGES', items: ['English (India)', 'Hindi', 'Himachali (Native)'] },
-    ];
+        window.onload = () => {
+            const mainContent = document.getElementById('main-content');
+            const tiltCard = document.getElementById('tilt-card');
+            const shareButton = document.getElementById('share-button');
+            const shareToast = document.getElementById('share-toast');
+            const frame = document.getElementById('preload-frame');
 
-    const di = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/';
-    const tools = [
-      { name: 'VS Code', logo: di + 'vscode/vscode-original.svg' },
-      { name: 'Git', logo: di + 'git/git-original.svg' },
-      { name: 'Python', logo: di + 'python/python-original.svg' },
-      { name: 'C++', logo: di + 'cplusplus/cplusplus-original.svg' },
-      { name: 'Linux', logo: di + 'linux/linux-original.svg' },
-      { name: 'Ubuntu', logo: di + 'ubuntu/ubuntu-plain.svg' },
-      { name: 'Raspberry Pi', logo: di + 'raspberrypi/raspberrypi-original.svg' },
-      { name: 'Arduino', logo: di + 'arduino/arduino-original.svg' },
-      { name: 'TensorFlow', logo: di + 'tensorflow/tensorflow-original.svg' },
-      { name: 'OpenCV', logo: di + 'opencv/opencv-original.svg' },
-    ];
-    const toolsWithEl = tools.map((t) => ({ ...t, logoEl: React.createElement('img', { src: t.logo, alt: '', style: { width: 22, height: 22, display: 'block' } }) }));
-    const toolsLoop = toolsWithEl.concat(toolsWithEl);
+            canvas = document.getElementById('particle-canvas');
+            ctx = canvas.getContext('2d');
+            mouse = { x: null, y: null, radius: 150 };
 
-    const projects = this.projects;
+            mainContent.classList.add('loaded');
+            setProgress(8, STAGES[0]);
 
-    const cats = ['All', 'Robotics', 'AI', 'IoT', 'Hardware', 'Security'];
-    const filters = cats.map((c) => {
-      const on = filter === c;
-      return {
-        label: c,
-        bg: on ? '#eaa64f' : 'transparent',
-        color: on ? '#13100c' : '#c0b8ab',
-        border: on ? '#eaa64f' : 'rgba(255,255,255,0.14)',
-        on: () => this.setState({ filter: c }),
-      };
-    });
+            // Kick off the real preload: load the portfolio (and everything it pulls in) in a hidden frame.
+            // When the frame's load event fires, the portfolio document + its subresources are cached.
+            frame.addEventListener('load', () => {
+                // Give the portfolio's own scripts a moment to fetch data/fonts, then finish.
+                setTimeout(finishLoad, 500);
+            });
+            frame.addEventListener('error', finishLoad);
+            try {
+                frame.src = PORTFOLIO_URL;
+            } catch (e) {
+                finishLoad();
+            }
 
-    const filteredProjects = (filter === 'All' ? projects : projects.filter((p) => p.cat === filter))
-      .map((p) => {
-        const pImages = p.images || [];
-        const activeIdx = this.state.projectImageIndexes[p.title] || 0;
-        const currentImage = pImages[activeIdx] || '';
-        return {
-          ...p,
-          currentImage,
-          hasHighlight: !!p.highlight,
-          hasImage: pImages.length > 0,
-          hasMultipleImages: pImages.length > 1,
-          open: () => this.setState({ activeProject: p }),
-          prev: (e) => {
-            if (e) { e.preventDefault(); e.stopPropagation(); }
-            if (pImages.length <= 1) return;
-            const prevIdx = (activeIdx - 1 + pImages.length) % pImages.length;
-            this.setState((s) => ({ projectImageIndexes: { ...s.projectImageIndexes, [p.title]: prevIdx } }));
-          },
-          next: (e) => {
-            if (e) { e.preventDefault(); e.stopPropagation(); }
-            if (pImages.length <= 1) return;
-            const nextIdx = (activeIdx + 1) % pImages.length;
-            this.setState((s) => ({ projectImageIndexes: { ...s.projectImageIndexes, [p.title]: nextIdx } }));
-          },
-          dots: pImages.map((img, i) => ({
-            index: i,
-            isActive: i === activeIdx,
-            bg: i === activeIdx ? '#eaa64f' : 'rgba(255,255,255,0.3)',
-            scale: i === activeIdx ? 'scale(1.25)' : 'scale(1)',
-          })),
+            // Safety net so the user is never stuck.
+            setTimeout(() => { if (!portfolioReady) finishLoad(); }, SAFETY_MS);
+
+            // Tilt interaction
+            tiltCard.addEventListener('mousemove', (e) => {
+                const { left, top, width, height } = tiltCard.getBoundingClientRect();
+                const x = e.clientX - left - width / 2;
+                const y = e.clientY - top - height / 2;
+                tiltCard.style.transform = `perspective(1500px) rotateX(${(y / height) * -20}deg) rotateY(${(x / width) * 20}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+            tiltCard.addEventListener('mouseleave', () => {
+                tiltCard.style.transform = 'perspective(1500px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+            });
+
+            // Share button
+            shareButton.addEventListener('click', async () => {
+                const shareData = {
+                    title: 'Aditya Sharma - Portfolio',
+                    text: 'Check out Aditya Sharma\'s portfolio!',
+                    url: window.location.href
+                };
+                if (navigator.share) {
+                    try { await navigator.share(shareData); } catch (err) { /* cancelled */ }
+                } else {
+                    const ta = document.createElement('textarea');
+                    ta.value = window.location.href;
+                    document.body.appendChild(ta);
+                    ta.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(ta);
+                    shareToast.classList.add('show');
+                    setTimeout(() => shareToast.classList.remove('show'), 2000);
+                }
+            });
+
+            window.addEventListener('mousemove', (e) => { mouse.x = e.x; mouse.y = e.y; });
+            window.addEventListener('mouseout', () => { mouse.x = null; mouse.y = null; });
+            window.addEventListener('resize', resizeCanvas);
+
+            resizeCanvas();
+            animateParticles();
         };
-      });
-
-    const experience = [
-      { role: 'Robotics Developer & Mentor', org: 'Build Club MakerSpace, Presidency University', period: 'Jul 2024 — Present', point: 'Lead robotics builds and mentor 50+ members on programming, debugging and ROS 2 control frameworks; co-organised InnovateX 3.0, a 24-hour hardware hackathon.' },
-      { role: 'Final-Semester Internship', org: 'B.Tech Capstone Internship, Presidency University', period: '2026', point: 'Eight-credit internship credited toward the degree (Grade O), applying full-stack and embedded skills on a real-world project.' },
-      { role: 'Machine Learning Intern', org: 'KnowX Innovations, Bengaluru', period: 'Sep 2022', point: 'Built and tested a Sign-Language Detection System using custom ML pipelines and computer-vision datasets.' },
-      { role: 'In-Plant Training — Python', org: 'KnowX Innovations, Bengaluru', period: 'May 2022', point: 'Completed hands-on Python training and applied it across small embedded-software exercises.' },
-    ];
-
-    const education = [
-      { title: 'B.Tech in Computer Science & Engineering', place: 'Presidency University, Bengaluru · Lateral entry · CGPA 7.70', span: '2023 — 2026' },
-      { title: 'Diploma in Computer Science & Engineering', place: 'RR Polytechnic, Bengaluru · Second Class', span: '2018 — 2022' },
-    ];
-    const highlights = [
-      'Best Mentor — Presidency University, for the WALL-E project at the 5th Innovative Project Expo 2024.',
-      'Student Project Expo 2024 — WALL-E selected in the Top 25 of 450 projects.',
-      'IEEE NQComp-2026 — co-authored & presented a paper at MIT Manipal (MAHE).',
-      'Anveshan 2024 (South Zone) — robotics research, Presidency University.',
-      "Inventra'25 — Capstone Project Expo, Presidency School of CSE.",
-      'TekBiz@SJP 2022 — 1st Prize, Treasure Hunt (state-level college fest).',
-    ];
-    const certs = [
-      'Complete Front-End Web Development — Udemy (2025)',
-      'Data Visualization Techniques — Infosys Springboard (2025)',
-      '30 Days of Python — Udemy',
-      'Machine Learning with Python — SimpliLearn SkillUP',
-      'Problem Solving & DSA using Java — CodeChef',
-      'Introduction to ROS 2 & Robotic Simulation',
-      'AWS Workshop — Brainovision (2022)',
-      'Cyber Security, Hands-On — RRIMS (2021)',
-    ];
-    const rawCertImages = [
-      { name: 'Best Mentor Certificate', issuer: 'Presidency University (Innovative Project Expo 2024)', img: 'assets/gallery/Certificates/Apprieciation/Best-Mentor-Certificate.png' },
-      { name: 'Full-Stack Web Development', issuer: 'Udemy Bootcamp', img: 'assets/gallery/Certificates/Course/front-end.png' },
-      { name: 'Data Visualization Techniques', issuer: 'Infosys Springboard', img: 'assets/gallery/Certificates/Course/Data-Visualization-Techniques.png' },
-      { name: 'AWS Certificate Workshop', issuer: 'Brainovision', img: 'assets/gallery/Certificates/Course/AWS-Certificate.png' },
-      { name: 'Anveshan 2024 Research', issuer: 'Presidency University (South Zone)', img: 'assets/gallery/Certificates/Participation/Anveshan-2024-Certificate.png' },
-      { name: 'Envision IITM Research Park', issuer: 'IIT Madras', img: 'assets/gallery/Certificates/Participation/Envision-Certification.png' },
-      { name: 'Python & Application Dev', issuer: 'Red Tron Technologies', img: 'assets/gallery/Certificates/Course/Python-and-Application-Devlopment-Red TronCertificate.png' },
-      { name: 'Hands-on Cyber Security', issuer: 'RRIMS', img: 'assets/gallery/Certificates/Apprieciation/Cyber-Security.png' },
-      { name: 'In-Plant training — Python', issuer: 'KnowX Innovations', img: 'assets/gallery/Certificates/Career/In-plant-training-certificate.png' },
-    ];
-    const certImages = rawCertImages.map((c) => ({
-      ...c,
-      hasImg: !!c.img,
-      open: () => this.setState({ activeCertImage: c })
-    }));
-
-    const gallery = this.gallery.map((g) => {
-      const gImages = g.images || [];
-      const activeIdx = this.state.galleryImageIndexes[g.title] || 0;
-      const currentImage = gImages[activeIdx] || '';
-      return {
-        ...g,
-        currentImage,
-        hasImage: gImages.length > 0,
-        hasMultipleImages: gImages.length > 1,
-        open: () => this.setState({ activeGalleryAlbum: g }),
-        prev: (e) => {
-          if (e) { e.preventDefault(); e.stopPropagation(); }
-          if (gImages.length <= 1) return;
-          const prevIdx = (activeIdx - 1 + gImages.length) % gImages.length;
-          this.setState((s) => ({ galleryImageIndexes: { ...s.galleryImageIndexes, [g.title]: prevIdx } }));
-        },
-        next: (e) => {
-          if (e) { e.preventDefault(); e.stopPropagation(); }
-          if (gImages.length <= 1) return;
-          const nextIdx = (activeIdx + 1) % gImages.length;
-          this.setState((s) => ({ galleryImageIndexes: { ...s.galleryImageIndexes, [g.title]: nextIdx } }));
-        },
-        dots: gImages.map((img, i) => ({
-          index: i,
-          isActive: i === activeIdx,
-          bg: i === activeIdx ? '#eaa64f' : 'rgba(255,255,255,0.3)',
-          scale: i === activeIdx ? 'scale(1.25)' : 'scale(1)',
-        })),
-      };
-    });
-
-    const githubUrl = 'https://github.com/CodeSamhita';
-    const linkedinUrl = 'https://www.linkedin.com/in/aditya-sharma-8679802b3';
-    const instagramUrl = 'https://www.instagram.com/sanatan.simha/';
-    const whatsappUrl = "https://wa.me/916363350665?text=Hello%20Aditya,%20I'm%20reaching%20out%20from%20your%20portfolio.";
-
-    const activeProject = this.state.activeProject ? (() => {
-      const p = this.projects.find((pr) => pr.title === this.state.activeProject.title);
-      if (!p) return null;
-      const pImages = p.images || [];
-      const activeIdx = this.state.projectImageIndexes[p.title] || 0;
-      const currentImage = pImages[activeIdx] || '';
-      return {
-        ...p,
-        currentImage,
-        hasHighlight: !!p.highlight,
-        hasImage: pImages.length > 0,
-        hasMultipleImages: pImages.length > 1,
-        prev: (e) => {
-          if (e) { e.preventDefault(); e.stopPropagation(); }
-          if (pImages.length <= 1) return;
-          const prevIdx = (activeIdx - 1 + pImages.length) % pImages.length;
-          this.setState((s) => ({ projectImageIndexes: { ...s.projectImageIndexes, [p.title]: prevIdx } }));
-        },
-        next: (e) => {
-          if (e) { e.preventDefault(); e.stopPropagation(); }
-          if (pImages.length <= 1) return;
-          const nextIdx = (activeIdx + 1) % pImages.length;
-          this.setState((s) => ({ projectImageIndexes: { ...s.projectImageIndexes, [p.title]: nextIdx } }));
-        },
-        dots: pImages.map((img, i) => ({
-          index: i,
-          isActive: i === activeIdx,
-          bg: i === activeIdx ? '#eaa64f' : 'rgba(255,255,255,0.3)',
-          scale: i === activeIdx ? 'scale(1.25)' : 'scale(1)',
-        })),
-      };
-    })() : null;
-
-    const activeGalleryAlbum = this.state.activeGalleryAlbum ? (() => {
-      const g = this.gallery.find((gr) => gr.title === this.state.activeGalleryAlbum.title);
-      if (!g) return null;
-      const gImages = g.images || [];
-      const activeIdx = this.state.galleryImageIndexes[g.title] || 0;
-      const currentImage = gImages[activeIdx] || '';
-      return {
-        ...g,
-        currentImage,
-        hasImage: gImages.length > 0,
-        hasMultipleImages: gImages.length > 1,
-        prev: (e) => {
-          if (e) { e.preventDefault(); e.stopPropagation(); }
-          if (gImages.length <= 1) return;
-          const prevIdx = (activeIdx - 1 + gImages.length) % gImages.length;
-          this.setState((s) => ({ galleryImageIndexes: { ...s.galleryImageIndexes, [g.title]: prevIdx } }));
-        },
-        next: (e) => {
-          if (e) { e.preventDefault(); e.stopPropagation(); }
-          if (gImages.length <= 1) return;
-          const nextIdx = (activeIdx + 1) % gImages.length;
-          this.setState((s) => ({ galleryImageIndexes: { ...s.galleryImageIndexes, [g.title]: nextIdx } }));
-        },
-        dots: gImages.map((img, i) => ({
-          index: i,
-          isActive: i === activeIdx,
-          bg: i === activeIdx ? '#eaa64f' : 'rgba(255,255,255,0.3)',
-          scale: i === activeIdx ? 'scale(1.25)' : 'scale(1)',
-        })),
-      };
-    })() : null;
-
-    return {
-      typed: this.state.typed,
-      tiltRef: this.tiltRef,
-      cubeRef: this.cubeRef,
-      githubUrl, linkedinUrl, instagramUrl, whatsappUrl,
-      gridLines: this.props.gridLines ?? true,
-      showAvailability: this.props.showAvailability ?? true,
-      menuOpen: this.state.menuOpen,
-      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
-      goHome: () => this.navTo('home'),
-      goWork: () => this.navTo('work'),
-      navOpen: this.state.navOpen,
-      navCaret: this.state.navOpen ? '180deg' : '0deg',
-      navMenu,
-      toggleNav: () => this.setState((s) => ({ navOpen: !s.navOpen })),
-      closeNav: () => this.setState({ navOpen: false }),
-      navLinks, stats, skills, toolsLoop,
-      filters, filteredProjects,
-      experience, education, highlights, certs, certImages, gallery,
-      sendLabel: this.state.sent ? 'Sent ✓' : 'Send message',
-      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
-      activeCertImage: this.state.activeCertImage,
-      closeCertPopup: () => this.setState({ activeCertImage: null }),
-      activeProject,
-      closeProjectPopup: () => this.setState({ activeProject: null }),
-      activeGalleryAlbum,
-      closeGalleryPopup: () => this.setState({ activeGalleryAlbum: null }),
-      stopProp: (e) => e.stopPropagation(),
-    };
-  }
-}
-</script>
+    </script>
 </body>
 
 </html>

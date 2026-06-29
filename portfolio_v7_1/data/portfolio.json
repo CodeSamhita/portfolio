@@ -1,0 +1,543 @@
+{
+  "roles": [
+    "A Full Stack Developer.",
+    "An Innovator.",
+    "A Hardware Enthusiast.",
+    "A Problem Solver."
+  ],
+  "stats": [
+    {
+      "num": "25+",
+      "label": "Projects"
+    },
+    {
+      "num": "50+",
+      "label": "Students mentored"
+    },
+    {
+      "num": "1",
+      "label": "IEEE paper"
+    },
+    {
+      "num": "4+",
+      "label": "Years building"
+    }
+  ],
+  "contact": {
+    "githubUrl": "https://github.com/CodeSamhita",
+    "linkedinUrl": "https://www.linkedin.com/in/aditya-sharma-8679802b3",
+    "instagramUrl": "https://www.instagram.com/sanatan.simha/",
+    "whatsappUrl": "https://wa.me/916363350665?text=Hello%20Aditya,%20I'm%20reaching%20out%20from%20your%20portfolio."
+  },
+  "skills": [
+    {
+      "title": "PROGRAMMING LANGUAGES",
+      "items": [
+        "Python",
+        "C",
+        "C++",
+        "Java",
+        "Kotlin",
+        "JavaScript",
+        "C#"
+      ]
+    },
+    {
+      "title": "WEB & FRAMEWORKS",
+      "items": [
+        "React.js",
+        "Node.js",
+        "Flask",
+        "Bootstrap",
+        "REST APIs",
+        "HTML/CSS"
+      ]
+    },
+    {
+      "title": "EMBEDDED & IoT",
+      "items": [
+        "ROS 2",
+        "Arduino",
+        "ESP32 (C3/S3)",
+        "Raspberry Pi",
+        "Jetson Nano",
+        "FreeRTOS",
+        "PlatformIO",
+        "MQTT",
+        "Ubuntu"
+      ]
+    },
+    {
+      "title": "AI · ML · VISION",
+      "items": [
+        "TensorFlow",
+        "PyTorch",
+        "OpenCV",
+        "Scikit-learn",
+        "NumPy",
+        "Pandas",
+        "LangChain",
+        "Whisper AI"
+      ]
+    },
+    {
+      "title": "METHODOLOGIES",
+      "items": [
+        "Leadership",
+        "Agile",
+        "Mentorship",
+        "Problem-Solving",
+        "Team Collaboration"
+      ]
+    },
+    {
+      "title": "SPOKEN LANGUAGES",
+      "items": [
+        "English (India)",
+        "Hindi",
+        "Himachali (Native)"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "VS Code",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+    },
+    {
+      "name": "Git",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+    },
+    {
+      "name": "Python",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+    },
+    {
+      "name": "C++",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+    },
+    {
+      "name": "Linux",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+    },
+    {
+      "name": "Ubuntu",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"
+    },
+    {
+      "name": "Raspberry Pi",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg"
+    },
+    {
+      "name": "Arduino",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg"
+    },
+    {
+      "name": "TensorFlow",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+    },
+    {
+      "name": "OpenCV",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Autonomous RoboDog",
+      "cat": "Robotics",
+      "date": "2025-09",
+      "shot": "security quadruped",
+      "images": [
+        "assets/projects/robodog/1.jpg",
+        "assets/projects/robodog/2.jpg",
+        "assets/projects/robodog/3.png"
+      ],
+      "desc": "A security quadruped that detects and follows a recognised face in real time using on-board computer vision.",
+      "highlight": "Basis of the IEEE NQComp-2026 research paper (MIT Manipal).",
+      "tech": [
+        "Python",
+        "OpenCV",
+        "Face Recognition",
+        "Embedded"
+      ]
+    },
+    {
+      "title": "Interactive Humanoid",
+      "cat": "Robotics",
+      "date": "2025-12",
+      "shot": "humanoid bust",
+      "images": [
+        "assets/projects/humanoid/1.jpg",
+        "assets/projects/humanoid/2.jpg",
+        "assets/projects/humanoid/3.jpg",
+        "assets/projects/humanoid/4.jpg",
+        "assets/projects/humanoid/5.jpg"
+      ],
+      "desc": "An interactive humanoid that listens, understands and replies with real-time, lip-synced speech.",
+      "highlight": "Real-time speech recognition with lip-synced response.",
+      "tech": [
+        "Raspberry Pi",
+        "Whisper",
+        "OpenCV",
+        "TTS"
+      ]
+    },
+    {
+      "title": "Smart Switch — LEO",
+      "cat": "IoT",
+      "date": "2026-06",
+      "shot": "local-first hub",
+      "images": [
+        "assets/projects/smart-switch/1.jpg"
+      ],
+      "desc": "A local-first smart-home switch and hub with its own MQTT broker, web dashboard and a companion Android app. Runs entirely on your network — no cloud.",
+      "highlight": "Fully offline — its own broker, mDNS clustering and a glassmorphic app.",
+      "tech": [
+        "ESP32-S3",
+        "FreeRTOS",
+        "MQTT",
+        "Kotlin"
+      ]
+    },
+    {
+      "title": "Smart Tank Monitor — AquaNode",
+      "cat": "IoT",
+      "date": "2026-05",
+      "shot": "water-level sensor",
+      "images": [
+        "assets/projects/smart-tank/1.jpg",
+        "assets/projects/smart-tank/2.jpg",
+        "assets/projects/smart-tank/3.jpg",
+        "assets/projects/smart-tank/4.jpg"
+      ],
+      "desc": "A Wi-Fi water-tank monitor — ultrasonic level sensing, a live dashboard, colour LED status and push alerts, with on-device logging.",
+      "highlight": "Live dashboard updated in real time over Server-Sent Events.",
+      "tech": [
+        "ESP32-C3",
+        "Ultrasonic",
+        "SSE",
+        "React"
+      ]
+    },
+    {
+      "title": "AI-Driven Smart Traffic Management",
+      "cat": "AI",
+      "date": "2026-04",
+      "shot": "traffic vision feed",
+      "images": [
+        "assets/projects/ai-traffic/1.png",
+        "assets/projects/ai-traffic/2.jpg",
+        "assets/projects/ai-traffic/3.png",
+        "assets/projects/ai-traffic/4.png"
+      ],
+      "desc": "A computer-vision system that detects traffic flow and optimises signal timing to ease congestion.",
+      "highlight": "",
+      "tech": [
+        "Python",
+        "OpenCV",
+        "Computer Vision"
+      ]
+    },
+    {
+      "title": "WALL-E Build",
+      "cat": "Robotics",
+      "date": "2024-12",
+      "shot": "animatronic build",
+      "images": [
+        "assets/projects/walle/1.jpg",
+        "assets/projects/walle/2.jpg",
+        "assets/projects/walle/3.jpg",
+        "assets/projects/walle/4.jpg",
+        "assets/projects/walle/5.jpg"
+      ],
+      "desc": "A WALL-E–inspired animatronic build with motion and personality, presented at the Innovative Project Expo.",
+      "highlight": "",
+      "tech": [
+        "Arduino",
+        "Servos",
+        "3D Printing"
+      ]
+    },
+    {
+      "title": "Path Finder Bot",
+      "cat": "Robotics",
+      "date": "2025-07",
+      "shot": "obstacle avoider",
+      "images": [
+        "assets/projects/pathfinder/1.jpg",
+        "assets/projects/pathfinder/2.jpg"
+      ],
+      "desc": "An obstacle-avoiding robot that works out a route around barriers in real time.",
+      "highlight": "",
+      "tech": [
+        "Arduino",
+        "Ultrasonic",
+        "Robotics"
+      ]
+    },
+    {
+      "title": "Line Follower Bot",
+      "cat": "Robotics",
+      "date": "2025-03",
+      "shot": "track follower",
+      "desc": "An autonomous robot that follows a marked track using IR sensors and a tuned control loop.",
+      "highlight": "",
+      "tech": [
+        "Arduino",
+        "IR Sensors",
+        "Control Loop"
+      ]
+    },
+    {
+      "title": "Smart Traffic System",
+      "cat": "Automation",
+      "date": "2022-08",
+      "shot": "adaptive signals",
+      "images": [
+        "assets/projects/smart-traffic/1.jpg",
+        "assets/projects/smart-traffic/2.jpg",
+        "assets/projects/smart-traffic/3.jpg",
+        "assets/projects/smart-traffic/4.jpg"
+      ],
+      "desc": "A model traffic-control system that adapts signal timing to live road conditions using sensors.",
+      "highlight": "",
+      "tech": [
+        "Arduino",
+        "Sensors",
+        "Embedded C"
+      ]
+    },
+    {
+      "title": "WLED Sign Board",
+      "cat": "IoT",
+      "date": "2024-10",
+      "shot": "addressable LEDs",
+      "images": [
+        "assets/projects/wled/1.jpg",
+        "assets/projects/wled/2.jpg",
+        "assets/projects/wled/3.jpg"
+      ],
+      "desc": "A programmable LED sign board built for the campus Maker Space, with addressable lighting effects.",
+      "highlight": "",
+      "tech": [
+        "ESP32",
+        "WLED",
+        "NeoPixel"
+      ]
+    },
+    {
+      "title": "Cyber Attack Demonstration",
+      "cat": "Security",
+      "date": "2022-01",
+      "shot": "attack & defence",
+      "images": [
+        "assets/projects/cyber/1.jpg",
+        "assets/projects/cyber/2.jpg",
+        "assets/projects/cyber/3.jpg"
+      ],
+      "desc": "An educational demonstration of common attack techniques and their defences, built to teach safe security practices.",
+      "highlight": "",
+      "tech": [
+        "Security",
+        "Networking",
+        "Linux",
+        "Python"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Robotics Developer & Mentor",
+      "org": "Build Club MakerSpace, Presidency University",
+      "period": "Jul 2024 — Present",
+      "point": "Lead robotics builds and mentor 50+ members on programming, debugging and ROS 2 control frameworks; co-organised InnovateX 3.0, a 24-hour hardware hackathon."
+    },
+    {
+      "role": "Capstone Project (7th Semester)",
+      "org": "B.Tech Major Project, Presidency University",
+      "period": "2025",
+      "point": "Eight-credit final-year project (Grade O), applying full-stack and embedded skills on a real-world build."
+    },
+    {
+      "role": "Machine Learning Intern",
+      "org": "KnowX Innovations, Bengaluru",
+      "period": "Sep 2022",
+      "point": "Built and tested a Sign-Language Detection System using custom ML pipelines and computer-vision datasets."
+    },
+    {
+      "role": "In-Plant Training — Python",
+      "org": "KnowX Innovations, Bengaluru",
+      "period": "May 2022",
+      "point": "Completed hands-on Python training and applied it across small embedded-software exercises."
+    }
+  ],
+  "education": [
+    {
+      "title": "B.Tech in Computer Science & Engineering",
+      "place": "Presidency University, Bengaluru · Lateral entry · CGPA 7.70",
+      "span": "2023 — 2026"
+    },
+    {
+      "title": "Diploma in Computer Science & Engineering",
+      "place": "RR Polytechnic, Bengaluru · Second Class",
+      "span": "2018 — 2022"
+    }
+  ],
+  "highlights": [
+    "Best Mentor — Presidency University, for the WALL-E project at the 5th Innovative Project Expo 2024.",
+    "Student Project Expo 2024 — WALL-E selected in the Top 25 of 450 projects.",
+    "IEEE NQComp-2026 — co-authored & presented a paper at MIT Manipal (MAHE).",
+    "Anveshan 2024 (South Zone) — robotics research, Presidency University.",
+    "Inventra'25 — Capstone Project Expo, Presidency School of CSE.",
+    "TekBiz@SJP 2022 — 1st Prize, Treasure Hunt (state-level college fest)."
+  ],
+  "certs": [
+    "Complete Front-End Web Development — Udemy (2025)",
+    "Data Visualization Techniques — Infosys Springboard (2025)",
+    "30 Days of Python — Udemy",
+    "Machine Learning with Python — SimpliLearn SkillUP",
+    "Problem Solving & DSA using Java — CodeChef",
+    "Introduction to ROS 2 & Robotic Simulation",
+    "AWS Workshop — Brainovision (2022)",
+    "Cyber Security, Hands-On — RRIMS (2021)"
+  ],
+  "certImages": [
+    {
+      "name": "IEEE NQComp-2026",
+      "issuer": "RoboDog Research Paper · MIT Manipal",
+      "image": "assets/certs/ieee-robodog.png"
+    },
+    {
+      "name": "Best Mentor",
+      "issuer": "Presidency University",
+      "image": "assets/certs/best-mentor.png"
+    },
+    {
+      "name": "Inventra’25",
+      "issuer": "Capstone Project Expo",
+      "image": "assets/certs/inventra25.png"
+    },
+    {
+      "name": "Front-End Web Development",
+      "issuer": "Udemy",
+      "image": "assets/certs/front-end.png"
+    },
+    {
+      "name": "Data Visualization Techniques",
+      "issuer": "Infosys Springboard",
+      "image": "assets/certs/data-viz.png"
+    },
+    {
+      "name": "AWS Workshop",
+      "issuer": "Brainovision",
+      "image": "assets/certs/aws.png"
+    },
+    {
+      "name": "Python & Application Development",
+      "issuer": "Course Certificate",
+      "image": "assets/certs/python.png"
+    },
+    {
+      "name": "Ethical Hacking",
+      "issuer": "Footprints & Counter-Measures",
+      "image": "assets/certs/ethical-hacking.png"
+    }
+  ],
+  "skillDefs": {
+    "Python": "My main language for AI, computer vision and scripting — from model code to the glue logic running on edge devices.",
+    "C": "Low-level systems and microcontroller work, where tight control over memory and timing matters.",
+    "C++": "Performance-critical logic and embedded firmware, including Arduino and robotics control loops.",
+    "Java": "Object-oriented application development and my go-to for data-structures & algorithms practice.",
+    "Kotlin": "Native Android development — the companion app for my Smart Switch (LEO) hub.",
+    "JavaScript": "Interactive web front-ends and the live dashboards for my IoT projects.",
+    "C#": "General-purpose application development and tooling.",
+    "React.js": "Component-based dashboards and UIs — including the live AquaNode tank monitor and this portfolio.",
+    "Node.js": "Server-side JavaScript for APIs and real-time backends.",
+    "Flask": "Lightweight Python web services and REST endpoints for ML demos.",
+    "Bootstrap": "Responsive layout scaffolding for putting web UIs together quickly.",
+    "REST APIs": "Designing and consuming HTTP APIs to connect devices, services and front-ends.",
+    "HTML/CSS": "Hand-built, responsive interfaces with a strong eye for layout and motion.",
+    "ROS 2": "Robot middleware for control, messaging and simulation — which I teach to MakerSpace members.",
+    "Arduino": "Rapid microcontroller prototyping for motors, sensors and robotics builds.",
+    "ESP32 (C3/S3)": "Wi-Fi/BLE microcontrollers at the heart of my smart-home and sensor nodes.",
+    "Raspberry Pi": "On-board Linux compute for the vision and speech in my robots.",
+    "Jetson Nano": "GPU edge computing for running ML models directly on-device.",
+    "FreeRTOS": "Real-time task scheduling on microcontrollers for responsive, reliable firmware.",
+    "PlatformIO": "Embedded build and dependency tooling across multiple boards.",
+    "MQTT": "Lightweight pub/sub messaging — the backbone of my local-first smart-home hub.",
+    "Ubuntu": "My primary Linux environment for development and robotics.",
+    "TensorFlow": "Building and training neural networks for classification and detection tasks.",
+    "PyTorch": "Deep-learning experiments and quick model prototyping.",
+    "OpenCV": "Real-time computer vision — face detection, tracking and image processing in my robots.",
+    "Scikit-learn": "Classical ML models, pipelines and evaluation.",
+    "NumPy": "Numerical computing and array math underpinning my ML work.",
+    "Pandas": "Data wrangling, cleaning and analysis.",
+    "LangChain": "Orchestrating LLM-powered workflows and tools.",
+    "Whisper AI": "On-device speech recognition powering my interactive humanoid.",
+    "Leadership": "I lead robotics builds at the MakerSpace and co-organise hackathons and expos — keeping teams aligned and moving toward a working result.",
+    "Agile": "I work in short, iterative cycles — build, test, refine — to ship dependable prototypes quickly.",
+    "Mentorship": "I have mentored 50+ members on programming, debugging and ROS 2, helping them go from an idea to a working build.",
+    "Problem-Solving": "I enjoy breaking hard, ambiguous problems into solvable pieces — especially where hardware meets software.",
+    "Team Collaboration": "I thrive in hands-on, collaborative settings where ideas are shared freely and challenges are tackled together.",
+    "English (India)": "Professional working proficiency — my primary language for documentation, presentations and collaboration.",
+    "Hindi": "Fluent — comfortable in both everyday and professional conversation.",
+    "Himachali (Native)": "My mother tongue, from Himachal Pradesh."
+  },
+  "galleryRaw": [
+    {
+      "title": "EnVision 2025 · IITM Research Park",
+      "note": "Innovation visit and project demos at the IITM Research Park, Chennai.",
+      "images": [
+        "assets/gallery/Moments/Envision IITM/IMG_20250130_130729.jpg",
+        "assets/gallery/Moments/Envision IITM/IMG_20250130_120154_1.jpg",
+        "assets/gallery/Moments/Envision IITM/IMG_20250130_130857.jpg",
+        "assets/gallery/Moments/Envision IITM/IMG_20250130_132715.jpg",
+        "assets/gallery/Moments/Envision IITM/IMG_20250131_120523.jpg",
+        "assets/gallery/Moments/Envision IITM/IMG_20250131_122241.jpg",
+        "assets/gallery/Moments/Envision IITM/IMG_1700.jpeg"
+      ]
+    },
+    {
+      "title": "Best Innovator & Ambassador Meet",
+      "note": "Recognition for mentoring and building at the MakerSpace.",
+      "images": [
+        "assets/gallery/Moments/Best Innovator & Ambassador/Best Innovator.jpg",
+        "assets/gallery/Moments/Best Innovator & Ambassador/Ambasdor meet.jpg"
+      ]
+    },
+    {
+      "title": "Anveshan — South Zone",
+      "note": "Represented Presidency University for robotics research at the South Zone meet.",
+      "images": [
+        "assets/gallery/Moments/Anveshan/Anveshan.jpg",
+        "assets/gallery/Moments/Anveshan/IMG_20250221_142419.jpg",
+        "assets/gallery/Moments/Anveshan/IMG_20250221_143953.jpg",
+        "assets/gallery/Moments/Anveshan/IMG_20250221_144424.jpg"
+      ]
+    },
+    {
+      "title": "Student Project Expo 2024",
+      "note": "WALL-E selected in the Top 25 of 450 projects at the expo.",
+      "images": [
+        "assets/gallery/Project/Wall-E - ROBOTICS/Project Expo Orientation.jpg"
+      ]
+    },
+    {
+      "title": "MakerSpace Build Sessions",
+      "note": "From frame and wiring to a moving animatronic — late nights at the lab.",
+      "images": [
+        "assets/gallery/Project/Wall-E - ROBOTICS/1744954817634.jpg",
+        "assets/gallery/Project/Wall-E - ROBOTICS/IMG_2761.JPG"
+      ]
+    },
+    {
+      "title": "Tech Fests & Demos",
+      "note": "Booths, talks and live demonstrations across campus tech fests.",
+      "images": [
+        "assets/gallery/Moments/AWS/IMG_20220726_165740.jpg",
+        "assets/gallery/Moments/AWS/IMG_20220727_161055.jpg",
+        "assets/gallery/Moments/AWS/IMG_20220727_164420.jpg"
+      ]
+    }
+  ]
+}
