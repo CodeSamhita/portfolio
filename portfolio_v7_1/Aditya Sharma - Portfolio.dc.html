@@ -10,7 +10,7 @@
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@500;600;700&family=Spectral:wght@500;600;700&family=Syne:wght@600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -19,6 +19,11 @@
   html { overflow-x: clip; max-width: 100%; }
   body { margin: 0; background: #0d0a06; color: #f7f2e9; font-family: 'Bricolage Grotesque', sans-serif; -webkit-font-smoothing: antialiased; overflow-x: clip; max-width: 100%; }
   h1, h2 { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.01em; }
+  /* all section titles share one font (Fraunces); only weight/size set per use */
+  #about h2, #skills h2, #journey h2, #work h2, #contact h2 { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.01em; font-style: normal; }
+  /* key-phrase highlight — emphasis via bold + italic */
+  .hl { color: #f7f2e9; font-weight: 700; font-style: italic; }
+  .hl-amber { color: #eaa64f; font-weight: 700; font-style: italic; }
   ::selection { background: #eaa64f; color: #13100c; }
   input, textarea, button { font-family: inherit; }
   a { color: inherit; text-decoration: none; }
@@ -382,7 +387,7 @@
       "title": "Line Follower Bot",
       "cat": "Robotics",
       "date": "2025-03",
-      "shot": "track follower",
+      "shot": "line-follower bot photo",
       "desc": "An autonomous robot that follows a marked track using IR sensors and a tuned control loop.",
       "highlight": "",
       "tech": [
@@ -733,7 +738,7 @@
             </div>
           </sc-if>
           <div data-hero-typed style="font-family: 'Fraunces', serif; font-size: clamp(22px, 3.2vw, 38px); font-weight: 500; color: #f2ede3; margin-bottom: 20px; min-height: 1.2em;"><span data-typed-text></span><span style="color: #eaa64f; animation: blink 1.1s step-end infinite;">_</span></div>
-          <p data-hero-intro style="max-width: 52ch; font-size: clamp(15px, 0.6vw + 12px, 18px); line-height: 1.65; color: #c0b8ab; margin: 0 0 30px;">Hey — I'm Aditya. I build at the intersection of <span style="color: #f2ede3;">code and hardware</span>: embedded systems, robotics, AI and 3D design. Pull up a chair and take a look around.</p>
+          <p data-hero-intro style="max-width: 52ch; font-size: clamp(15px, 0.6vw + 12px, 18px); line-height: 1.65; color: #c0b8ab; margin: 0 0 30px;">Hey — I'm Aditya. I build at the intersection of <span class="hl">code and hardware</span>: embedded systems, robotics, AI and 3D design. Pull up a chair and take a look around.</p>
           <div data-hero-cta style="display: flex; flex-wrap: wrap; gap: 14px;">
             <div style="position: relative;">
               <button onClick="{{ toggleNav }}" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; background: #eaa64f; color: #13100c; font-weight: 600; font-size: clamp(13.5px, 1.4vw, 15px); cursor: pointer; transition: transform 0.2s; border-radius: 9px; border: none;" style-hover="transform: translateY(-2px);">Take a look around <span style="display: inline-block; transition: transform 0.28s; transform: rotate({{ navCaret }});">▾</span></button>
@@ -788,7 +793,7 @@
     </section>
 
     <!-- ===== ABOUT ===== -->
-    <section id="about" style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 9vw, 90px) clamp(20px, 5vw, 32px);">
+    <section id="about" data-reveal="open" style="position: relative; z-index: 1; max-width: 1120px; margin: 0 auto clamp(28px, 4vw, 44px); padding: clamp(40px, 5vw, 60px) clamp(26px, 4vw, 48px); background: #15110b; border: 1px solid rgba(255,255,255,0.07); border-radius: 24px; box-shadow: 0 28px 66px -38px rgba(0,0,0,0.9);">
       <div data-reveal="left" style="">
         <p style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 8px;">01 — Profile</p>
         <h2 style="font-size: clamp(34px, 5vw, 52px); font-weight: 700; margin: 0 0 40px; letter-spacing: -1px;">About Me</h2>
@@ -799,7 +804,7 @@
           <p style="margin: 0;">My foundation extends into the core of computing — data structures, algorithms, operating systems, networks and software architecture. I've explored AI and NLP through speech recognition, classification and text analysis, and I experiment with deploying lightweight models on edge devices.</p>
           <p style="margin: 0;">I thrive in practical, collaborative environments where ideas are exchanged freely, challenges are tackled together, and learning happens through doing.</p>
           <div style="margin-top: 8px; padding: 20px 22px; border-left: 2px solid #eaa64f; background: rgba(235,167,80,0.05); border-radius: 0 10px 10px 0;">
-            <p style="margin: 0; font-size: clamp(16px, 0.6vw + 13px, 19px); color: #f2ede3; font-weight: 500;">"I don't just build things to work — I build them to matter."</p>
+            <p style="margin: 0; font-size: clamp(16px, 0.6vw + 13px, 19px); color: #f2ede3; font-weight: 500;">"I don't just build things to work — I build them to <span class="hl-amber">matter</span>."</p>
           </div>
         </div>
         <div data-reveal style="display: flex; flex-direction: column; gap: 16px;">
@@ -816,7 +821,7 @@
     </section>
 
     <!-- ===== SKILLS ===== -->
-    <section id="skills" style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 9vw, 90px) clamp(20px, 5vw, 32px);">
+    <section id="skills" data-reveal="open" style="position: relative; z-index: 1; max-width: 1120px; margin: 0 auto clamp(28px, 4vw, 44px); padding: clamp(40px, 5vw, 60px) clamp(26px, 4vw, 48px); background: #15110b; border: 1px solid rgba(255,255,255,0.07); border-radius: 24px; box-shadow: 0 28px 66px -38px rgba(0,0,0,0.9);">
       <div data-reveal="right" style="">
         <p style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 8px;">02 — Capabilities</p>
         <h2 style="font-size: clamp(34px, 5vw, 52px); font-weight: 700; margin: 0 0 40px; letter-spacing: -1px;">Skills &amp; Tools</h2>
@@ -860,7 +865,7 @@
     </section>
 
     <!-- ===== JOURNEY ===== -->
-    <section id="journey" style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 9vw, 90px) clamp(20px, 5vw, 32px);">
+    <section id="journey" data-reveal="open" style="position: relative; z-index: 1; max-width: 1120px; margin: 0 auto clamp(28px, 4vw, 44px); padding: clamp(40px, 5vw, 60px) clamp(26px, 4vw, 48px); background: #15110b; border: 1px solid rgba(255,255,255,0.07); border-radius: 24px; box-shadow: 0 28px 66px -38px rgba(0,0,0,0.9);">
       <div data-reveal="zoom" style="">
         <p style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 8px;">03 — Experience</p>
         <h2 style="font-size: clamp(34px, 5vw, 52px); font-weight: 700; margin: 0 0 40px; letter-spacing: -1px;">Experience, Education &amp; Recognition</h2>
@@ -939,7 +944,7 @@
     </section>
 
     <!-- ===== WORK ===== -->
-    <section id="work" style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 9vw, 90px) clamp(20px, 5vw, 32px);">
+    <section id="work" data-reveal="open" style="position: relative; z-index: 1; max-width: 1120px; margin: 0 auto clamp(28px, 4vw, 44px); padding: clamp(40px, 5vw, 60px) clamp(26px, 4vw, 48px); background: #15110b; border: 1px solid rgba(255,255,255,0.07); border-radius: 24px; box-shadow: 0 28px 66px -38px rgba(0,0,0,0.9);">
       <div data-reveal="rise" style="">
         <p style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 8px;">04 — Selected Work</p>
         <h2 style="font-size: clamp(34px, 5vw, 52px); font-weight: 700; margin: 0 0 14px; letter-spacing: -1px;">Things I've Built</h2>
@@ -1006,7 +1011,7 @@
     </section>
 
     <!-- ===== CONTACT ===== -->
-    <section id="contact" style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 9vw, 90px) clamp(20px, 5vw, 32px) 60px;">
+    <section id="contact" data-reveal="open" style="position: relative; z-index: 1; max-width: 1120px; margin: 0 auto clamp(40px, 6vw, 64px); padding: clamp(40px, 5vw, 60px) clamp(26px, 4vw, 48px); background: #15110b; border: 1px solid rgba(255,255,255,0.07); border-radius: 24px; box-shadow: 0 28px 66px -38px rgba(0,0,0,0.9);">
       <div data-reveal="tilt" style="">
         <p style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11.5px, 1.3vw, 13px); color: #eaa64f; letter-spacing: 1px; margin: 0 0 8px;">06 — Contact</p>
         <h2 style="font-size: clamp(34px, 5vw, 52px); font-weight: 700; margin: 0 0 14px; letter-spacing: -1px;">Get In Touch</h2>
@@ -1478,16 +1483,19 @@ class Component extends DCLogic {
 
     this._reveal = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
+        const el = e.target;
         if (e.isIntersecting) {
-          const el = e.target;
           el.style.opacity = '1';
           el.style.transform = 'none';
           el.style.filter = 'none';
-          setTimeout(() => { el.style.willChange = 'auto'; }, 900);
-          this._reveal.unobserve(el);
+        } else if (el._revHidden) {
+          // replay: reset to hidden state so it animates again next time it enters
+          el.style.opacity = '0';
+          el.style.transform = el._revHidden.transform;
+          el.style.filter = el._revHidden.filter;
         }
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+    }, { threshold: 0.12, rootMargin: '0px 0px -24% 0px' });
     this.observeReveals();
 
     this._spyIds = ['home', 'about', 'skills', 'journey', 'work', 'moments', 'contact'];
@@ -1723,32 +1731,37 @@ class Component extends DCLogic {
       rise:  'translateY(64px)',
       blur:  'translateY(12px)',
       tilt:  'perspective(1100px) rotateX(15deg) translateY(34px)',
+      open:  'perspective(1400px) translateY(46px) scale(0.945)',
     };
-    const BLURS = { up: 'blur(6px)', left: 'blur(4px)', right: 'blur(4px)', zoom: 'blur(7px)', rise: 'blur(2px)', blur: 'blur(18px)', tilt: 'blur(6px)' };
+    const BLURS = { up: 'blur(6px)', left: 'blur(4px)', right: 'blur(4px)', zoom: 'blur(7px)', rise: 'blur(2px)', blur: 'blur(18px)', tilt: 'blur(6px)', open: 'blur(3px)' };
     const vh = window.innerHeight || document.documentElement.clientHeight;
     document.querySelectorAll('[data-reveal]').forEach((el) => {
       if (el._revInit) return;
       el._revInit = true;
       const variant = el.getAttribute('data-reveal') || 'up';
       const delay = el.getAttribute('data-reveal-delay');
-      const dur = (variant === 'tilt' || variant === 'rise') ? '.88s' : '.7s';
+      const dur = (variant === 'tilt' || variant === 'rise' || variant === 'open') ? '.88s' : '.7s';
       el.style.transition = 'opacity ' + dur + ' ' + FLUID + ', transform ' + dur + ' ' + FLUID + ', filter ' + dur + ' ' + FLUID;
       if (delay) el.style.transitionDelay = delay + 'ms';
-      if (variant === 'tilt' || variant === 'zoom') el.style.transformOrigin = 'center top';
+      if (variant === 'tilt' || variant === 'zoom' || variant === 'open') el.style.transformOrigin = 'center top';
       const r = el.getBoundingClientRect();
       const onScreen = r.top < vh * 0.98 && r.bottom > 0;
       // immediate = post-mount re-render (e.g. filter click): never hide, just show
+      const hiddenTransform = VARIANTS[variant] || VARIANTS.up;
+      const hiddenFilter = BLURS[variant] || 'blur(6px)';
+      el._revHidden = { transform: hiddenTransform, filter: hiddenFilter };
+      el.style.willChange = 'opacity, transform, filter';
       if (immediate || onScreen) {
         el.style.opacity = '1';
         el.style.transform = 'none';
         el.style.filter = 'none';
       } else {
         el.style.opacity = '0';
-        el.style.transform = VARIANTS[variant] || VARIANTS.up;
-        el.style.filter = BLURS[variant] || 'blur(6px)';
-        el.style.willChange = 'opacity, transform, filter';
-        this._reveal.observe(el);
+        el.style.transform = hiddenTransform;
+        el.style.filter = hiddenFilter;
       }
+      // keep observing so the reveal replays every time the element enters/leaves
+      if (!immediate) this._reveal.observe(el);
     });
   }
 
